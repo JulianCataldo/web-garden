@@ -1,0 +1,27 @@
+---
+// FIXME: node module proper resolution
+import './node_modules/tippy.js/dist/tippy.css';
+import './style.scss';
+---
+
+<script>
+  import tippy from 'tippy.js';
+
+  const elements = document.querySelectorAll('[title]');
+
+  // console.log({ elements });
+  for (let i = 0, len = elements.length; i < len; i++) {
+    const element = elements[i];
+    const options = {
+      content: element.getAttribute('title'),
+      // theme: 'myTheme',
+      maxWidth: 'none',
+      delay: [0, 150],
+    };
+    if (element.getAttribute('data-tooltip-placement')) {
+      options.placement = element.getAttribute('data-tooltip-placement');
+    }
+    tippy(element, options);
+    element.setAttribute('title', '');
+  }
+</script>
