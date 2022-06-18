@@ -1,0 +1,33 @@
+---
+export interface Props {
+  max?: number;
+}
+
+const props = Astro.props as Props;
+
+if (!props.max) {
+  props.max = 8;
+}
+---
+
+<script define:vars={{ max: props.max }}>
+  const prefetchList = [];
+
+  document.addEventListener('mouseover', (e) => {
+    if (e.target.tagName === 'A' && prefetchList.length < max) {
+      const url = e.target.getAttribute('href');
+
+      if (url.startsWith('/')) {
+        if (prefetchList.includes(url) === false) {
+          console.log(`prefetching url ${url}`);
+          const link = document.createElement('link');
+          link.rel = 'prefetch';
+          link.as = 'document';
+          link.href = url;
+          document.head.appendChild(link);
+          prefetchList.push(url);
+        }
+      }
+    }
+  });
+</script>
