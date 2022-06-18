@@ -1,0 +1,113 @@
+---
+export interface Props {
+  transitionSpeed?: number;
+  color?: string;
+  zIndex?: number;
+}
+
+const props = Astro.props as Props;
+
+if (!props.transitionSpeed) {
+  props.transitionSpeed = 500;
+}
+if (!props.color) {
+  props.color = 'white';
+}
+---
+
+<div id='app-transition-overlay'></div>
+
+<script is:inline>
+  // Critical
+  (() => {
+    console.log('Transition [Overlay] inited.');
+    const overlay = document.getElementById('app-transition-overlay');
+    overlay.classList.add('is-visible');
+
+    function show() {
+      overlay.classList.add('is-loaded');
+      setTimeout(() => {
+        overlay.classList.remove('is-visible');
+      }, 2);
+    }
+    // Safari shim for page history instant cache
+    window.addEventListener('pageshow', (e) => e.persisted && show());
+    window.addEventListener('load', () => show());
+  })();
+</script>
+
+<script>
+  // BUG: import are still finicky with Astro. SFC are more robust.
+  // import './client.ts';
+
+  const overlay = document.getElementById('app-transition-overlay');
+
+  // BUG:
+  // define:vars={{ speed: props.transitionSpeed }}
+  // IS NOT WORKING
+
+  // WORKAROUND:
+  const style = window.getComputedStyle(overlay);
+  const speed = parseInt(style.getPropertyValue('--speed').replace('ms'), 10);
+  const color = style.getPropertyValue('--color');
+  // WORKAROUND
+
+  const links = document.getElementsByTagName('a');
+
+  // TODO: refactor using iterations instead of for loop
+  for (let i = 0, len = links.length; i < len; i++) {
+    const href = links[i].getAttribute('href');
+    const link = links[i];
+    const isNotHash = link.getAttribute('href')[0] !== '#';
+    const isNotTargetBlank = link.getAttribute('target') !== '_blank';
+
+    if (isNotHash && isNotTargetBlank) {
+      // eslint-disable-next-line no-loop-func
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        link.classList.add('has-been-clicked');
+
+        setTimeout(() => link.classList.remove('has-been-clicked'), speed * 2);
+        overlay.classList.toggle('is-visible');
+
+        document.body.setAttribute('data-is-top', 'true');
+
+        setTimeout(() => {
+          window.location = href;
+        }, speed);
+      });
+    }
+  }
+
+  console.log({ speed, color, links });
+</script>
+
+<style
+  define:vars={{
+    color: props.color,
+    speed: `${props.transitionSpeed}ms`,
+  }}
+>
+  /* @import './style.scss'; */
+
+  #app-transition-overlay {
+    background: var(--color, white);
+    position: fixed;
+    top: var(--app-navigation-height, 0);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 99;
+  }
+
+  #app-transition-overlay.is-visible {
+    opacity: 1;
+  }
+
+  #app-transition-overlay.is-loaded {
+    transition: opacity var(--speed, 500ms);
+  }
+</style>
