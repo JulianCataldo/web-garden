@@ -13,6 +13,9 @@ if (!props.transitionSpeed) {
 if (!props.color) {
   props.color = 'white';
 }
+if (!props.zIndex) {
+  props.zIndex = 99;
+}
 ---
 
 <div id='app-transition-overlay'></div>
@@ -48,8 +51,9 @@ if (!props.color) {
 
   // WORKAROUND:
   const style = window.getComputedStyle(overlay);
-  const speed = parseInt(style.getPropertyValue('--speed').replace('ms'), 10);
-  const color = style.getPropertyValue('--color');
+  const speed =
+    parseInt(style.getPropertyValue('--speed').replace('ms'), 10) || 500;
+  const color = style.getPropertyValue('--color') || 'white';
   // WORKAROUND
 
   const links = document.getElementsByTagName('a');
@@ -87,6 +91,7 @@ if (!props.color) {
   define:vars={{
     color: props.color,
     speed: `${props.transitionSpeed}ms`,
+    'z-index': props.zIndex,
   }}
 >
   /* @import './style.scss'; */
@@ -100,7 +105,7 @@ if (!props.color) {
     height: 100%;
     opacity: 0;
     pointer-events: none;
-    z-index: 99;
+    z-index: var(--z-index, 99);
   }
 
   #app-transition-overlay.is-visible {
