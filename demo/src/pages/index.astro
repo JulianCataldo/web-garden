@@ -10,6 +10,7 @@ import Card from '../components/Card.astro';
 			Check out the <code>src/pages</code> directory to get started.<br/>
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
 		</p> -->
+    <a href='#' title='Hello!' data-tooltip-placement='left'>Tooltip left</a>
     <ul role='list' class='link-card-grid'>
       <Card href='/page-a' title='Page A' body='Go to page A' />
       <Card href='/page-b' title='Page B' body='Go to page B' />
@@ -20,6 +21,9 @@ import Card from '../components/Card.astro';
       <!-- <Card href="https://astro.build/themes/" title="Themes" body="Explore a galaxy of community-built starter themes." />  -->
       <!-- <Card href="https://astro.build/chat/" title="Chat" body="Come say hi to our amazing Discord community. ❤️" /> -->
     </ul>
+    <a href='#' title='Hello!' data-tooltip-placement='bottom'>
+      Tooltip bottom
+    </a>
   </main>
 </Layout>
 

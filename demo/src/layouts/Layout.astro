@@ -1,6 +1,7 @@
 ---
 import TransitionOverlay from '@jc/astro-transition/Overlay/TransitionOverlay.astro';
 import Prefetch from '@jc/astro-prefetch/Prefetch.astro';
+import Tooltips from '@jc/astro-tooltips/Tooltips.astro';
 import './style.global.scss';
 
 export interface Props {
@@ -17,6 +18,9 @@ const { title } = Astro.props as Props;
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' type='image/x-icon' href='/favicon.ico' />
     <title>{title}</title>
+    <!--  -->
+    <Tooltips />
+    <!--  -->
   </head>
   <body>
     <!--  -->

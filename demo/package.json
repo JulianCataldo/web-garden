@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@jc/astro-prefetch": "link:../app/Prefetch",
+    "@jc/astro-tooltips": "link:../app/Tooltips",
     "@jc/astro-transition": "link:../app/Transition"
   }
 }
