@@ -1,0 +1,12 @@
+{
+  "name": "@jc/astro",
+  "version": "1.0.0",
+  "description": "An Astro components and configurations collection",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Julian Cataldo",
+  "license": "ISC"
+}
