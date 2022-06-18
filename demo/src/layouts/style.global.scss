@@ -19,22 +19,28 @@ body {
   margin: 0;
 }
 
-:global(h1) {
+h1 {
   font-size: var(--font-size-xl);
 }
 
-:global(h2) {
+h2 {
   font-size: var(--font-size-lg);
 }
 
-:global(code) {
+code {
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
-:global(.link-card-grid) {
+.link-card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
   gap: 1rem;
   padding: 0;
+}
+
+main {
+  margin: auto;
+  padding: 1em;
+  max-width: 60ch;
 }

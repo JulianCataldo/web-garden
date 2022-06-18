@@ -1,5 +1,7 @@
 ---
 import TransitionOverlay from '@jc/astro-transition/Overlay/TransitionOverlay.astro';
+import Prefetch from '@jc/astro-prefetch/Prefetch.astro';
+import './style.global.scss';
 
 export interface Props {
   title: string;
@@ -15,13 +17,12 @@ const { title } = Astro.props as Props;
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' type='image/x-icon' href='/favicon.ico' />
     <title>{title}</title>
-    <style lang='scss'>
-      @import './style.scss';
-    </style>
   </head>
   <body>
     <!--  -->
-    <TransitionOverlay transitionSpeed={1000} color='red' zIndex={99} />
+    <TransitionOverlay speed={1000} color='red' zIndex={99} />
+    <!--  -->
+    <Prefetch max={3} />
     <!--  -->
 
     <slot></slot>

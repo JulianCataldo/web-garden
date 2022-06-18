@@ -1,10 +1,12 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@jc/astro-prefetch': link:../app/Prefetch
   '@jc/astro-transition': link:../app/Transition
   astro: ^1.0.0-beta.47
 
 dependencies:
+  '@jc/astro-prefetch': link:../app/Prefetch
   '@jc/astro-transition': link:../app/Transition
 
 devDependencies:
