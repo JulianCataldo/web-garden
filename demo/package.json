@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "astro": "^1.0.0-beta.47"
+  },
+  "dependencies": {
+    "@jc/astro-transition": "link:../app/Transition"
   }
 }

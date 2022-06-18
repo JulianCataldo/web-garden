@@ -10,6 +10,15 @@
     // Enable stricter transpilation for better output.
     "isolatedModules": true,
     // Add type definitions for our Vite runtime.
-    "types": ["vite/client"]
+    "types": ["vite/client"],
+
+    "allowJs": true,
+    "noEmit": true,
+
+    "baseUrl": "."
+
+    // "paths": {
+    //   "@jc/astro-transition/*": ["../app/Transition/*"]
+    // }
   }
 }
