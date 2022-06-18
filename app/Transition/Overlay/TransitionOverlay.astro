@@ -1,14 +1,14 @@
 ---
 export interface Props {
-  transitionSpeed?: number;
+  speed?: number;
   color?: string;
   zIndex?: number;
 }
 
 const props = Astro.props as Props;
 
-if (!props.transitionSpeed) {
-  props.transitionSpeed = 500;
+if (!props.speed) {
+  props.speed = 500;
 }
 if (!props.color) {
   props.color = 'white';
@@ -46,7 +46,7 @@ if (!props.zIndex) {
   const overlay = document.getElementById('app-transition-overlay');
 
   // BUG:
-  // define:vars={{ speed: props.transitionSpeed }}
+  // define:vars={{ speed: props.speed }}
   // IS NOT WORKING
 
   // WORKAROUND:
@@ -90,7 +90,7 @@ if (!props.zIndex) {
 <style
   define:vars={{
     color: props.color,
-    speed: `${props.transitionSpeed}ms`,
+    speed: `${props.speed}ms`,
     'z-index': props.zIndex,
   }}
 >
