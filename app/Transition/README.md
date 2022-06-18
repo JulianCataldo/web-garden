@@ -10,7 +10,7 @@ import TransitionOverlay from '@jc/astro-transition/Overlay/TransitionOverlay.as
 ```jsx
 
   <body>
-    <!-- put just after body tag -->
+    <!-- place component just after body tag -->
 
     <TransitionOverlay transitionSpeed={500} color="white" zIndex={99} />
 
