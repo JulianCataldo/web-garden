@@ -11,6 +11,7 @@ Focus is on common web patterns and progressive enhancements.
   - [URLs prefetching](#urls-prefetching)
   - [Tooltips](#tooltips)
   - [SEO](#seo)
+  - [Scroll observer](#scroll-observer)
 - [Components](#components)
 - [Astro demo website](#astro-demo-website)
 - [Tooling configurations](#tooling-configurations)
@@ -54,6 +55,14 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 ## SEO
 
 **📦  [See component instructions](./app/SEO/README.md)**
+
+## Scroll observer
+
+https://user-images.githubusercontent.com/603498/174468167-4f3cdbe3-ec90-49f6-8c51-d6028605c7d6.mp4
+
+---
+
+**📦  [See component instructions](./app/Scroll/Observer/README.md)**
 
 # Components
 
