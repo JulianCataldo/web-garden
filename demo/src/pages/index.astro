@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import LongText from '../components/LongText.astro';
 ---
 
 <Layout title='Welcome to Astro.'>
@@ -24,6 +25,11 @@ import Card from '../components/Card.astro';
     <a href='#' title='Hello!' data-tooltip-placement='bottom'>
       Tooltip bottom
     </a>
+
+    <LongText />
+    <LongText />
+    <LongText />
+    <LongText />
   </main>
 </Layout>
 
@@ -71,5 +77,9 @@ import Card from '../components/Card.astro';
     border: 0.1em solid var(--color-border);
     border-radius: 4px;
     padding: 0.15em 0.25em;
+  }
+
+  .long-text {
+    width: 31rem;
   }
 </style>

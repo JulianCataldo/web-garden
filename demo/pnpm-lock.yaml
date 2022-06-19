@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@julian_cataldo/astro-prefetch': link:../app/Prefetch
+  '@julian_cataldo/astro-scroll-observer': link:../app/Scroll/Observer
   '@julian_cataldo/astro-seo': link:../app/SEO
   '@julian_cataldo/astro-tooltips': link:../app/Tooltips
   '@julian_cataldo/astro-transition': link:../app/Transition
@@ -9,6 +10,7 @@ specifiers:
 
 dependencies:
   '@julian_cataldo/astro-prefetch': link:../app/Prefetch
+  '@julian_cataldo/astro-scroll-observer': link:../app/Scroll/Observer
   '@julian_cataldo/astro-seo': link:../app/SEO
   '@julian_cataldo/astro-tooltips': link:../app/Tooltips
   '@julian_cataldo/astro-transition': link:../app/Transition

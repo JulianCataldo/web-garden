@@ -3,6 +3,7 @@ import TransitionOverlay from '@julian_cataldo/astro-transition/Overlay/Transiti
 import Prefetch from '@julian_cataldo/astro-prefetch/Prefetch.astro';
 import Tooltips from '@julian_cataldo/astro-tooltips/Tooltips.astro';
 import SEO from '@julian_cataldo/astro-seo/SEO.astro';
+import ScrollObserver from '@julian_cataldo/astro-scroll-observer/ScrollObserver.astro';
 
 import './style.global.scss';
 
@@ -23,11 +24,6 @@ const { title } = Astro.props as Props;
     <!--  -->
     <Tooltips />
     <!--  -->
-  </head>
-  <body>
-    <!--  -->
-    <TransitionOverlay speed={1000} color='red' zIndex={99} />
-    <!--  -->
     <Prefetch max={3} />
     <!--  -->
     <SEO
@@ -37,7 +33,64 @@ const { title } = Astro.props as Props;
       siteName={'Le Website'}
     />
     <!--  -->
+    <ScrollObserver />
+    <!--  -->
+  </head>
+  <body>
+    <!--  -->
+    <TransitionOverlay speed={1000} color='red' zIndex={99} />
+    <!--  -->
+    <nav>
+      My Navbar | Some | Link | Foo | Bar | Omelette | Bilbao | ℹ️&nbsp;&nbsp;
+    </nav>
 
     <slot></slot>
+
+    <style lang='scss'>
+      nav {
+        position: fixed;
+        z-index: 101;
+        top: 0;
+        padding: 2rem;
+        width: 100%;
+        background-color: darkslategrey;
+        color: beige;
+        &::after {
+          font-weight: 700;
+        }
+      }
+      :global(main) {
+        margin-top: 5rem;
+      }
+    </style>
+    <style lang='scss' is:global>
+      nav {
+        opacity: 0;
+        transform: translateY(-100%);
+        transition: all 1s;
+
+        [data-is-scrolling-up='true'] & {
+          opacity: 1;
+          transform: translateY(0);
+          &::after {
+            content: 'Is scrolling up…';
+          }
+        }
+        [data-is-top='true'] & {
+          opacity: 1;
+          transform: translateY(0);
+          &::after {
+            content: 'Is top';
+          }
+        }
+        [data-is-bottom='true'] & {
+          opacity: 1;
+          transform: translateY(0);
+          &::after {
+            content: 'Is bottom';
+          }
+        }
+      }
+    </style>
   </body>
 </html>
