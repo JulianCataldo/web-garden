@@ -34,3 +34,7 @@ https://user-images.githubusercontent.com/603498/174424456-edce69a7-adef-4e59-b2
 ---
 
 [Live website demo documentation](../../demo)
+
+---
+
+🔗  [JulianCataldo.com](https://www.juliancataldo.com/)
