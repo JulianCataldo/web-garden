@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@julian_cataldo/astro-base': link:../app/Base
   '@julian_cataldo/astro-prefetch': link:../app/Prefetch
   '@julian_cataldo/astro-scroll-observer': link:../app/Scroll/Observer
   '@julian_cataldo/astro-seo': link:../app/SEO
@@ -9,6 +10,7 @@ specifiers:
   astro: ^1.0.0-beta.47
 
 dependencies:
+  '@julian_cataldo/astro-base': link:../app/Base
   '@julian_cataldo/astro-prefetch': link:../app/Prefetch
   '@julian_cataldo/astro-scroll-observer': link:../app/Scroll/Observer
   '@julian_cataldo/astro-seo': link:../app/SEO

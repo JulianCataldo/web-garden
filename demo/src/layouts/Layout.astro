@@ -4,23 +4,23 @@ import Prefetch from '@julian_cataldo/astro-prefetch/Prefetch.astro';
 import Tooltips from '@julian_cataldo/astro-tooltips/Tooltips.astro';
 import SEO from '@julian_cataldo/astro-seo/SEO.astro';
 import ScrollObserver from '@julian_cataldo/astro-scroll-observer/ScrollObserver.astro';
+import Base from '@julian_cataldo/astro-base/Base.astro';
 
 import './style.global.scss';
 
 export interface Props {
   title: string;
 }
-
-const { title } = Astro.props as Props;
 ---
 
-<!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/x-icon' href='/favicon.ico' />
-    <title>{title}</title>
+<Base
+  lang='es'
+  htmlClasses={['some-class', 'doby-doba']}
+  htmlId={'the-id'}
+  bodyClasses={['other-class', 'dabadi-dabada']}
+  bodyId={'much-id'}
+>
+  <Fragment slot='head'>
     <!--  -->
     <Tooltips />
     <!--  -->
@@ -35,8 +35,9 @@ const { title } = Astro.props as Props;
     <!--  -->
     <ScrollObserver />
     <!--  -->
-  </head>
-  <body>
+  </Fragment>
+
+  <Fragment slot='body'>
     <!--  -->
     <TransitionOverlay speed={1000} color='red' zIndex={99} />
     <!--  -->
@@ -45,52 +46,52 @@ const { title } = Astro.props as Props;
     </nav>
 
     <slot></slot>
+  </Fragment>
+</Base>
 
-    <style lang='scss'>
-      nav {
-        position: fixed;
-        z-index: 101;
-        top: 0;
-        padding: 2rem;
-        width: 100%;
-        background-color: darkslategrey;
-        color: beige;
-        &::after {
-          font-weight: 700;
-        }
-      }
-      :global(main) {
-        margin-top: 5rem;
-      }
-    </style>
-    <style lang='scss' is:global>
-      nav {
-        opacity: 0;
-        transform: translateY(-100%);
-        transition: all 1s;
+<style lang='scss'>
+  nav {
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    padding: 2rem;
+    width: 100%;
+    background-color: darkslategrey;
+    color: beige;
+    &::after {
+      font-weight: 700;
+    }
+  }
+  :global(main) {
+    margin-top: 5rem;
+  }
+</style>
+<style lang='scss' is:global>
+  nav {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 1s;
 
-        [data-is-scrolling-up='true'] & {
-          opacity: 1;
-          transform: translateY(0);
-          &::after {
-            content: 'Is scrolling up…';
-          }
-        }
-        [data-is-top='true'] & {
-          opacity: 1;
-          transform: translateY(0);
-          &::after {
-            content: 'Is top';
-          }
-        }
-        [data-is-bottom='true'] & {
-          opacity: 1;
-          transform: translateY(0);
-          &::after {
-            content: 'Is bottom';
-          }
-        }
+    [data-is-scrolling-up='true'] & {
+      opacity: 1;
+      transform: translateY(0);
+      &::after {
+        content: 'Is scrolling up…';
       }
-    </style>
-  </body>
-</html>
+    }
+    [data-is-top='true'] & {
+      opacity: 1;
+      transform: translateY(0);
+      &::after {
+        content: 'Is top';
+      }
+    }
+    [data-is-bottom='true'] & {
+      opacity: 1;
+      transform: translateY(0);
+      &::after {
+        content: 'Is bottom';
+      }
+    }
+  }
+</style>
