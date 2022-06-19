@@ -21,9 +21,9 @@ function scrollHandler() {
   }
   // console.log({ accumulation, delta });
 
-  document.body.setAttribute('data-is-scrolling-up', isScrollingUp);
-  document.body.setAttribute('data-is-bottom', isBottom);
-  document.body.setAttribute('data-is-top', isTop);
+  document.body.setAttribute('data-is-scrolling-up', '' + isScrollingUp);
+  document.body.setAttribute('data-is-bottom', '' + isBottom);
+  document.body.setAttribute('data-is-top', '' + isTop);
 
   prevPos = pos;
   // console.log({ pos });
@@ -31,11 +31,11 @@ function scrollHandler() {
 
 document.addEventListener(
   'scroll',
-  throttle((event) => scrollHandler(), 100),
+  throttle(() => scrollHandler(), 100),
   { passive: true },
 );
 
-window.addEventListener('load', (event) => {
+window.addEventListener('load', () => {
   // console.log({ event });
   const windowHeight = window.innerHeight;
   const documentHeight = document.body.getBoundingClientRect().height;
