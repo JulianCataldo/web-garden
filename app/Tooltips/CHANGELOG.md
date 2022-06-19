@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.3](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-tooltips@0.10.2...@julian_cataldo/astro-tooltips@0.10.3) (2022-06-19)
+
+
+### Bug Fixes
+
+* unneeded scss import, crash ([5c6c2b0](https://github.com/JulianCataldo/astro/commit/5c6c2b0a02782e661a959991c881547f7a1d9591))
+
+
+
 ## [0.10.2](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-tooltips@0.10.1...@julian_cataldo/astro-tooltips@0.10.2) (2022-06-19)
 
 **Note:** Version bump only for package @julian_cataldo/astro-tooltips
