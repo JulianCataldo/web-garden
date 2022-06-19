@@ -5,12 +5,15 @@ taking advantage of Astro strengths as much as possible.
 
 Focus is on common web patterns and progressive enhancements.
 
+---
+
 - [Astro components and configurations collection](#astro-components-and-configurations-collection)
 - [Application-level components](#application-level-components)
   - [Full page transition](#full-page-transition)
   - [URLs prefetching](#urls-prefetching)
   - [Tooltips](#tooltips)
   - [SEO](#seo)
+  - [Base app document enclosure](#base-app-document-enclosure)
   - [Scroll observer](#scroll-observer)
 - [Components](#components)
 - [Astro demo website](#astro-demo-website)
@@ -55,6 +58,10 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 ## SEO
 
 **📦  [See component instructions](./app/SEO/README.md)**
+
+## Base app document enclosure
+
+**📦  [See component instructions](./app/Base/README.md)**
 
 ## Scroll observer
 
