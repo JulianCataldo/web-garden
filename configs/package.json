@@ -1,0 +1,39 @@
+{
+  "name": "@julian_cataldo/astro-configs",
+  "version": "0.9.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianCataldo/astro",
+    "directory": "configs"
+  },
+  "scripts": {
+    "gather": "./gather.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "astro",
+    "boilerplate",
+    "app",
+    "project",
+    "base",
+    "configs",
+    "prettier",
+    "eslint",
+    "stylelint",
+    "typescript",
+    "editorconfig",
+    "vscode",
+    "react",
+    "vue",
+    "vanilla",
+    "javascript"
+  ],
+  "author": "",
+  "license": "ISC"
+}
