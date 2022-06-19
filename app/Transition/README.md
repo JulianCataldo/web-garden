@@ -1,5 +1,9 @@
 # Astro — Full page transition overlay
 
+## Demo
+
+https://user-images.githubusercontent.com/603498/174424456-edce69a7-adef-4e59-b2d8-cfc22414b8a4.mp4
+
 ## Installation
 
 ```sh
@@ -26,10 +30,6 @@ import TransitionOverlay from '@julian_cataldo/astro-transition/Overlay/Transiti
   </body>
 
 ```
-
-# Demo
-
-https://user-images.githubusercontent.com/603498/174424456-edce69a7-adef-4e59-b2d8-cfc22414b8a4.mp4
 
 ---
 

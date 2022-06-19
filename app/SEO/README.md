@@ -1,4 +1,4 @@
-# Astro — Tooltips
+# Astro — SEO
 
 Bare minimum SEO meta tags to make most social networks and Google engine happy.
 
