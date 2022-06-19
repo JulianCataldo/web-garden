@@ -28,7 +28,6 @@ import Base from '@julian_cataldo/astro-base/Base.astro';
 >
   <Fragment slot='head'>
     <!-- Put things in HEAD tag  -->
-
     <style is:inline>
       .some-class {
         color: red;
@@ -51,6 +50,18 @@ import Base from '@julian_cataldo/astro-base/Base.astro';
 ```html
 <html lang="es" class="some-class doby-doba js" id="the-id">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script>
+      // CRITICAL
+      // Add 'js' class to HTML tag if JavaScript is enabled
+      (() => {
+        const root = document.getElementsByTagName('html')[0];
+        root.classList.add('js');
+      })();
+    </script>
+
     <style is:inline>
       .some-class {
         color: red;
