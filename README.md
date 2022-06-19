@@ -1,16 +1,16 @@
-# @jc/astro
+# Astro components and configurations collection
 
-An Astro components and configurations collection
+Here lies some re-usable components, taking advantage of Astro strengths.
 
-- [@jc/astro](#jcastro)
+- [Astro components and configurations collection](#astro-components-and-configurations-collection)
 - [Application-level components](#application-level-components)
   - [Full page transition](#full-page-transition)
   - [URLs prefetching](#urls-prefetching)
   - [Tooltips](#tooltips)
-- [To do](#to-do)
-  - [Tooling](#tooling)
 - [Components](#components)
 - [Astro demo website](#astro-demo-website)
+- [To do](#to-do)
+  - [Tooling](#tooling)
 
 # Application-level components
 
@@ -38,13 +38,6 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 
 **📦  [See component](./app/Tooltips/README.md)**
 
-# To do
-
-## Tooling
-
-- [ ] Prettier settings in `.astro` files
-  - [ ] Print width 80
-
 # Components
 
 …
@@ -52,6 +45,13 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 # Astro demo website
 
 [Live website demo documentation](../../demo) where you can test all components above.
+
+# To do
+
+## Tooling
+
+- [ ] Prettier settings in `.astro` files
+  - [ ] Print width 80
 
 ---
 
