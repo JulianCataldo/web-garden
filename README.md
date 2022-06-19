@@ -10,6 +10,7 @@ Focus is on common web patterns and progressive enhancements.
   - [Full page transition](#full-page-transition)
   - [URLs prefetching](#urls-prefetching)
   - [Tooltips](#tooltips)
+  - [SEO](#seo)
 - [Components](#components)
 - [Astro demo website](#astro-demo-website)
 - [Tooling configurations](#tooling-configurations)
@@ -49,6 +50,10 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 ---
 
 **📦  [See component instructions](./app/Tooltips/README.md)**
+
+## SEO
+
+**📦  [See component instructions](./app/SEO/README.md)**
 
 # Components
 
