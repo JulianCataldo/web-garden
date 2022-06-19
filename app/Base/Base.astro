@@ -1,0 +1,50 @@
+---
+export interface Props {
+  lang?: string;
+  htmlClasses?: string[];
+  bodyClasses?: string[];
+  htmlId?: string;
+  bodyId?: string;
+}
+
+const props = Astro.props as Props;
+
+if (!props.lang) {
+  props.lang = 'en';
+}
+if (!props.htmlClasses) {
+  props.htmlClasses = [];
+}
+if (!props.bodyClasses) {
+  props.bodyClasses = [];
+}
+if (!props.htmlId) {
+  props.htmlId = null;
+}
+if (!props.bodyId) {
+  props.bodyId = null;
+}
+---
+
+<!DOCTYPE html>
+<html lang={props.lang} class:list={[...props.htmlClasses]} id={props.htmlId}>
+  <head>
+    <script is:inline>
+      // CRITICAL
+      // Add 'js' class to HTML tag if JavaScript is enabled
+      (() => {
+        const root = document.getElementsByTagName('html')[0];
+        root.classList.add('js');
+      })();
+    </script>
+
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+
+    <slot name='head'></slot>
+  </head>
+
+  <body class:list={[...props.bodyClasses]} id={props.bodyId}>
+    <slot name='body'></slot>
+  </body>
+</html>
