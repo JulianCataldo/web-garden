@@ -1,6 +1,6 @@
 {
   "name": "@julian_cataldo/astro-seo",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -26,6 +26,5 @@
     "seo"
   ],
   "author": "",
-  "license": "ISC",
-  "dependencies": {}
+  "license": "ISC"
 }
