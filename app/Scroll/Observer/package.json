@@ -1,0 +1,38 @@
+{
+  "name": "@julian_cataldo/astro-scroll-observer",
+  "version": "0.9.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianCataldo/astro",
+    "directory": "app/Scroll/Observer"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "astro",
+    "astro-component",
+    "scroll",
+    "observer",
+    "html",
+    "viewport",
+    "css",
+    "toggle",
+    "scrolling",
+    "position",
+    "document",
+    "watch",
+    "window"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  }
+}
