@@ -1,3 +1,13 @@
+# Demo website
+
+With all current repository components demonstrated.
+
+---
+
+> Original Astro documentation for basic example project below
+
+---
+
 # Welcome to [Astro](https://astro.build)
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
