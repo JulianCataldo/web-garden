@@ -32,6 +32,7 @@ for full implementation demo.
     - [VSCode](#vscode-3)
   - […To do](#to-do)
 - [To dos](#to-dos)
+- [Tests](#tests)
 
 # Application-level components
 
@@ -330,7 +331,13 @@ In your `settings.json`:
 
 # To dos
 
-- [ ] Tests
+- [ ] Finish tests
+
+# Tests
+
+- [ ] App/Base
+- [ ] App/Prefetch
+- [ ] …
 
 ---
 

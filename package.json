@@ -5,9 +5,11 @@
   "main": "index.ts",
   "private": true,
   "scripts": {
-    "version": "pnpm lerna version --conventional-commits",
+    "version": "pnpm cypress:run && pnpm lerna version --conventional-commits",
     "publish": "pnpm lerna publish from-git",
     "prepare": "husky install",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "keywords": [],
@@ -21,6 +23,7 @@
     "@typescript-eslint/parser": "^5.28.0",
     "astro": "1.0.0-beta.47",
     "astro-eslint-parser": "^0.2.2",
+    "cypress": "^10.1.0",
     "eslint": "^8.17.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
