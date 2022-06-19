@@ -1,8 +1,9 @@
 {
-  "name": "@jc/astro",
+  "name": "@julian_cataldo/astro",
   "version": "1.0.0",
   "description": "An Astro components and configurations collection",
   "main": "index.ts",
+  "private": true,
   "scripts": {
     "prepare": "husky install",
     "test": "echo \"Error: no test specified\" && exit 0"
@@ -45,6 +46,7 @@
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
     "husky": "^8.0.1",
+    "lerna": "^5.1.4",
     "typescript": "^4.7.4"
   }
 }
