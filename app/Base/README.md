@@ -48,6 +48,7 @@ import Base from '@julian_cataldo/astro-base/Base.astro';
 ## Result
 
 ```html
+<!DOCTYPE html>
 <html lang="es" class="some-class doby-doba js" id="the-id">
   <head>
     <meta charset="UTF-8" />
