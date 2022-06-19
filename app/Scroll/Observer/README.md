@@ -16,7 +16,7 @@ pnpm i @julian_cataldo/astro-scroll-observer
 
 ```ts
 ---
-import ScrollObserver from '@julian_cataldo/astro-scroll-observer/Scroll/Observer.astro';
+import ScrollObserver from '@julian_cataldo/astro-scroll-observer/ScrollObserver.astro';
 // ...
 ---
 ```
