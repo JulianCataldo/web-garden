@@ -1,15 +1,17 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@jc/astro-prefetch': link:../app/Prefetch
-  '@jc/astro-tooltips': link:../app/Tooltips
-  '@jc/astro-transition': link:../app/Transition
+  '@julian_cataldo/astro-prefetch': link:../app/Prefetch
+  '@julian_cataldo/astro-seo': link:../app/SEO
+  '@julian_cataldo/astro-tooltips': link:../app/Tooltips
+  '@julian_cataldo/astro-transition': link:../app/Transition
   astro: ^1.0.0-beta.47
 
 dependencies:
-  '@jc/astro-prefetch': link:../app/Prefetch
-  '@jc/astro-tooltips': link:../app/Tooltips
-  '@jc/astro-transition': link:../app/Transition
+  '@julian_cataldo/astro-prefetch': link:../app/Prefetch
+  '@julian_cataldo/astro-seo': link:../app/SEO
+  '@julian_cataldo/astro-tooltips': link:../app/Tooltips
+  '@julian_cataldo/astro-transition': link:../app/Transition
 
 devDependencies:
   astro: 1.0.0-beta.47

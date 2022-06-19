@@ -1,5 +1,5 @@
 {
-  "name": "@jc/astro-demo",
+  "name": "@julian_cataldo/astro-demo",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -12,8 +12,9 @@
     "astro": "^1.0.0-beta.47"
   },
   "dependencies": {
-    "@jc/astro-prefetch": "link:../app/Prefetch",
-    "@jc/astro-tooltips": "link:../app/Tooltips",
-    "@jc/astro-transition": "link:../app/Transition"
+    "@julian_cataldo/astro-prefetch": "link:../app/Prefetch",
+    "@julian_cataldo/astro-tooltips": "link:../app/Tooltips",
+    "@julian_cataldo/astro-transition": "link:../app/Transition",
+    "@julian_cataldo/astro-seo": "link:../app/SEO"
   }
 }
