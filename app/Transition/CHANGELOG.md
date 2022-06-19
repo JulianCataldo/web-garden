@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.7](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-transition@0.10.6...@julian_cataldo/astro-transition@0.10.7) (2022-06-19)
+
+**Note:** Version bump only for package @julian_cataldo/astro-transition
+
+
+
+
+
 ## [0.10.6](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-transition@0.10.5...@julian_cataldo/astro-transition@0.10.6) (2022-06-19)
 
 **Note:** Version bump only for package @julian_cataldo/astro-transition
