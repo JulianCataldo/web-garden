@@ -1,5 +1,9 @@
 # Astro — Full page transition overlay
 
+```sh
+pnpm i @julian_cataldo/astro-transition
+```
+
 ```ts
 ---
 import TransitionOverlay from '@jc/astro-transition/Overlay/TransitionOverlay.astro';
@@ -25,4 +29,4 @@ https://user-images.githubusercontent.com/603498/174424456-edce69a7-adef-4e59-b2
 
 ---
 
-[Live website demo documentation](../../demo/README.md)
+[Live website demo documentation](../../demo)
