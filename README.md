@@ -32,7 +32,7 @@ https://user-images.githubusercontent.com/603498/174424456-edce69a7-adef-4e59-b2
 
 ---
 
-**📦  [See component](./app/Transition/README.md)**
+**📦  [See component instructions](./app/Transition/README.md)**
 
 ## URLs prefetching
 
@@ -40,7 +40,7 @@ https://user-images.githubusercontent.com/603498/174425991-7151f1b1-0192-4508-8e
 
 ---
 
-**📦  [See component](./app/Prefetch/README.md)**
+**📦  [See component instructions](./app/Prefetch/README.md)**
 
 ## Tooltips
 
@@ -48,7 +48,7 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 
 ---
 
-**📦  [See component](./app/Tooltips/README.md)**
+**📦  [See component instructions](./app/Tooltips/README.md)**
 
 # Components
 
