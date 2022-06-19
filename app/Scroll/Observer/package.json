@@ -1,6 +1,6 @@
 {
   "name": "@julian_cataldo/astro-scroll-observer",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "description": "",
   "main": "index.js",
   "type": "module",
