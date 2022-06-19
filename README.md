@@ -31,6 +31,7 @@ for full implementation demo.
   - [Stylelint](#stylelint)
     - [VSCode](#vscode-3)
   - […To do](#to-do)
+- [To dos](#to-dos)
 
 # Application-level components
 
@@ -326,6 +327,10 @@ In your `settings.json`:
 - [ ] Prettier settings in `.astro` files
   - [ ] Print width 80
 - [ ] Init root package for config distribution
+
+# To dos
+
+- [ ] Tests
 
 ---
 
