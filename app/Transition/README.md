@@ -1,5 +1,8 @@
 # Astro — Full page transition overlay
 
+This component relies on the good old browser router, still, it will give to
+your website an SPA feel, without all the JS overhead.
+
 ## Demo
 
 https://user-images.githubusercontent.com/603498/174424456-edce69a7-adef-4e59-b2d8-cfc22414b8a4.mp4
@@ -33,6 +36,9 @@ import TransitionOverlay from '@julian_cataldo/astro-transition/Overlay/Transiti
 ---
 
 [Live website demo documentation](../../demo)
+
+See [./demo/src/layouts/Layout.astro](demo/src/layouts/Layout.astro)
+for full implementation demo.
 
 ---
 
