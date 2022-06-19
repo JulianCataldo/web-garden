@@ -1,18 +1,20 @@
 ---
-import scroll from './styles/scroll.css?raw';
+import scrollSmooth from './styles/scroll-smooth.css?raw';
 import fontSmoothing from './styles/font-smoothing.css?raw';
 import borderBox from './styles/border-box.css?raw';
 import bodyMargin from './styles/body-margin.css?raw';
 import svg from './styles/svg.css?raw';
 import fontSystem from './styles/font-system.css?raw';
+import scrollBarKeep from './styles/scrollbar-keep.css?raw';
 
 export interface Props {
-  scroll?: boolean;
-  fontSmoothing?: boolean;
-  borderBox?: boolean;
   bodyMargin?: boolean;
-  svg?: boolean;
+  fontSmoothing?: boolean;
   fontSystem?: boolean;
+  scrollSmooth?: boolean;
+  borderBox?: boolean;
+  svg?: boolean;
+  scrollBarKeep?: boolean;
 }
 const props = Astro.props as Props;
 
@@ -20,9 +22,10 @@ const rawStylesCSS = [
   props.bodyMargin === false ? null : bodyMargin,
   props.fontSmoothing === false ? null : fontSmoothing,
   props.fontSystem === false ? null : fontSystem,
-  props.scroll === false ? null : scroll,
+  props.scrollSmooth === false ? null : scrollSmooth,
   props.borderBox === false ? null : borderBox,
   props.svg === false ? null : svg,
+  props.scrollBarKeep === false ? null : scrollBarKeep,
 ].join('\n');
 ---
 
