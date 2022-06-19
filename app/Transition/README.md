@@ -20,7 +20,7 @@ import TransitionOverlay from '@julian_cataldo/astro-transition/Overlay/Transiti
   <body>
     <!-- place component just after opening BODY tag (mandatory) -->
 
-    <TransitionOverlay transitionSpeed={500} color="white" zIndex={99} />
+    <TransitionOverlay speed={500} color="white" zIndex={99} />
 
     <!-- … -->
   </body>
