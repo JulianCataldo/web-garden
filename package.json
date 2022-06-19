@@ -5,6 +5,8 @@
   "main": "index.ts",
   "private": true,
   "scripts": {
+    "version": "pnpm lerna version --conventional-commits",
+    "publish": "pnpm lerna publish from-git",
     "prepare": "husky install",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
