@@ -18,7 +18,7 @@ import SEO from '@julian_cataldo/astro-seo/SEO.astro';
 ```
 
 ```tsx
-
+<!-- … -->
   <head>
     <!-- place component inside HEAD tag -->
 
@@ -31,7 +31,7 @@ import SEO from '@julian_cataldo/astro-seo/SEO.astro';
 
     <!-- … -->
   </head>
-
+<!-- … -->
 ```
 
 # Result
