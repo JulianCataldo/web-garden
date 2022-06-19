@@ -23,10 +23,10 @@ import SEO from '@julian_cataldo/astro-seo/SEO.astro';
     <!-- place component inside HEAD tag -->
 
     <SEO
-      image={image}
-      title={title}
-      description={description}
-      siteName={siteName}
+      image={'/some_image_url-preferably_absolute.jpg'}
+      title={'Le cool title'}
+      description={'Le insightful description'}
+      siteName={'Le Website'}
     />
 
     <!-- … -->
