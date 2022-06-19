@@ -1,5 +1,13 @@
 # Astro — URLs prefetching on hover
 
+## Installation
+
+```sh
+pnpm i @julian_cataldo/astro-prefetch
+```
+
+## Usage
+
 ```ts
 ---
 import Prefetch from '@jc/astro-prefetch/Prefetch.astro';
@@ -25,4 +33,4 @@ https://user-images.githubusercontent.com/603498/174425991-7151f1b1-0192-4508-8e
 
 ---
 
-[Live website demo documentation](../../demo/README.md)
+[Live website demo documentation](../../demo)

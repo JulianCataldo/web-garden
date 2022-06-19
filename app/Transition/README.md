@@ -1,8 +1,12 @@
 # Astro — Full page transition overlay
 
+## Installation
+
 ```sh
 pnpm i @julian_cataldo/astro-transition
 ```
+
+## Usage
 
 ```ts
 ---

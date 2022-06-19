@@ -1,7 +1,15 @@
-# Astro — URLs prefetching on hover
+# Astro — Tooltips
 
 Progressively enhanced.  
 This component globally override regular `title` attributes on all links with [Tippy.js](https://atomiks.github.io/tippyjs/) tooltips.
+
+## Installation
+
+```sh
+pnpm i @julian_cataldo/astro-tooltips
+```
+
+## Usage
 
 ```ts
 ---
@@ -48,4 +56,4 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 
 ---
 
-[Live website demo documentation](../../demo/README.md)
+[Live website demo documentation](../../demo)
