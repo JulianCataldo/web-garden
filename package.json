@@ -10,7 +10,7 @@
     "prepare": "husky install",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "echo \"Skipping: no pre-commit test specified\" && exit 0"
   },
   "keywords": [],
   "author": "Julian Cataldo",
