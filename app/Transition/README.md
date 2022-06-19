@@ -10,7 +10,7 @@ pnpm i @julian_cataldo/astro-transition
 
 ```ts
 ---
-import TransitionOverlay from '@jc/astro-transition/Overlay/TransitionOverlay.astro';
+import TransitionOverlay from '@julian_cataldo/astro-transition/Overlay/TransitionOverlay.astro';
 // ...
 ---
 ```
@@ -18,7 +18,7 @@ import TransitionOverlay from '@jc/astro-transition/Overlay/TransitionOverlay.as
 ```jsx
 
   <body>
-    <!-- place component just after body tag -->
+    <!-- place component just after opening BODY tag (mandatory) -->
 
     <TransitionOverlay transitionSpeed={500} color="white" zIndex={99} />
 

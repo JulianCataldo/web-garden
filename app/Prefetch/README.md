@@ -10,20 +10,20 @@ pnpm i @julian_cataldo/astro-prefetch
 
 ```ts
 ---
-import Prefetch from '@jc/astro-prefetch/Prefetch.astro';
+import Prefetch from '@julian_cataldo/astro-prefetch/Prefetch.astro';
 // ...
 ---
 ```
 
 ```jsx
 
-  <body>
-    <!-- place component just after body tag -->
+  <head>
+    <!-- place component inside HEAD tag -->
 
     <Prefetch max={8} />
 
     <!-- … -->
-  </body>
+  </head>
 
 ```
 

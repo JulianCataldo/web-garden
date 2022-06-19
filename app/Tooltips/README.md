@@ -13,7 +13,7 @@ pnpm i @julian_cataldo/astro-tooltips
 
 ```ts
 ---
-import Tooltips from '@jc/astro-tooltips/Tooltips.astro';
+import Tooltips from '@julian_cataldo/astro-tooltips/Tooltips.astro';
 // ...
 ---
 ```
@@ -21,7 +21,7 @@ import Tooltips from '@jc/astro-tooltips/Tooltips.astro';
 ```tsx
 
   <head>
-    <!-- … -->
+    <!-- place component inside HEAD tag -->
 
     <Tooltips />
 
