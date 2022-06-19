@@ -56,7 +56,7 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 
 # Astro demo website
 
-[Live website demo documentation](../../demo/README.md) where you can test all components above.
+[Live website demo documentation](./demo/README.md) where you can test all components above.
 
 # Tooling configurations
 
