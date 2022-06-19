@@ -1,0 +1,29 @@
+{
+  "name": "@julian_cataldo/astro-analytics",
+  "version": "0.9.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianCataldo/astro",
+    "directory": "app/Analytics"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "astro",
+    "astro-component",
+    "google",
+    "analytics",
+    "snippet",
+    "ga4",
+    "javascript"
+  ],
+  "author": "",
+  "license": "ISC"
+}
