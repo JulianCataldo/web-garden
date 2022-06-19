@@ -1,6 +1,6 @@
 # Astro — Scroll observer
 
-Viewport scroll position watcher which bind data attributes to `body` for CSS usage.
+Viewport scroll position watcher which binds data attributes to `body` for further CSS usage.
 
 ## Demo
 
