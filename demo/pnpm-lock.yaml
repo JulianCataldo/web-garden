@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@julian_cataldo/astro-base': link:../app/Base
   '@julian_cataldo/astro-prefetch': link:../app/Prefetch
+  '@julian_cataldo/astro-resets': link:../app/Resets
   '@julian_cataldo/astro-scroll-observer': link:../app/Scroll/Observer
   '@julian_cataldo/astro-seo': link:../app/SEO
   '@julian_cataldo/astro-tooltips': link:../app/Tooltips
@@ -12,6 +13,7 @@ specifiers:
 dependencies:
   '@julian_cataldo/astro-base': link:../app/Base
   '@julian_cataldo/astro-prefetch': link:../app/Prefetch
+  '@julian_cataldo/astro-resets': link:../app/Resets
   '@julian_cataldo/astro-scroll-observer': link:../app/Scroll/Observer
   '@julian_cataldo/astro-seo': link:../app/SEO
   '@julian_cataldo/astro-tooltips': link:../app/Tooltips
