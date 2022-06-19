@@ -10,27 +10,27 @@ pnpm i @julian_cataldo/astro-seo
 
 ## Usage
 
-```ts
+```astro
 ---
 import SEO from '@julian_cataldo/astro-seo/SEO.astro';
 // ...
 ---
 ```
 
-```tsx
+```astro
 <!-- … -->
-  <head>
-    <!-- place component inside HEAD tag -->
+<head>
+  <!-- place component inside HEAD tag -->
 
-    <SEO
-      image={'/some_image_url-preferably_absolute.jpg'}
-      title={'Le cool title'}
-      description={'Le insightful description'}
-      siteName={'Le Website'}
-    />
+  <SEO
+    image={'/some_image_url-preferably_absolute.jpg'}
+    title={'Le cool title'}
+    description={'Le insightful description'}
+    siteName={'Le Website'}
+  />
 
-    <!-- … -->
-  </head>
+  <!-- … -->
+</head>
 <!-- … -->
 ```
 

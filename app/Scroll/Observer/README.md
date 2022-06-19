@@ -14,22 +14,22 @@ pnpm i @julian_cataldo/astro-scroll-observer
 
 ## Usage
 
-```ts
+```astro
 ---
 import ScrollObserver from '@julian_cataldo/astro-scroll-observer/ScrollObserver.astro';
 // ...
 ---
 ```
 
-```tsx
+```astro
 <!-- … -->
-  <head>
-    <!-- place component inside HEAD tag -->
+<head>
+  <!-- place component inside HEAD tag -->
 
-    <ScrollObserver />
+  <ScrollObserver />
 
-    <!-- … -->
-  </head>
+  <!-- … -->
+</head>
 <!-- … -->
 ```
 

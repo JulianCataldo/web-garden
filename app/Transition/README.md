@@ -12,23 +12,22 @@ pnpm i @julian_cataldo/astro-transition
 
 ## Usage
 
-```ts
+```astro
 ---
 import TransitionOverlay from '@julian_cataldo/astro-transition/Overlay/TransitionOverlay.astro';
-// ...
+// …
 ---
 ```
 
-```jsx
+```astro
+<!-- … -->
+<body>
+  <!-- place component just after opening BODY tag (mandatory) -->
 
-  <body>
-    <!-- place component just after opening BODY tag (mandatory) -->
+  <TransitionOverlay speed={500} color='white' zIndex={99} />
 
-    <TransitionOverlay speed={500} color="white" zIndex={99} />
-
-    <!-- … -->
-  </body>
-
+  <!-- … -->
+</body>
 ```
 
 ---

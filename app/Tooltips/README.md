@@ -15,23 +15,22 @@ pnpm i @julian_cataldo/astro-tooltips
 
 ## Usage
 
-```ts
+```astro
 ---
 import Tooltips from '@julian_cataldo/astro-tooltips/Tooltips.astro';
 // ...
 ---
 ```
 
-```tsx
+```astro
+<!-- … -->
+<head>
+  <!-- place component inside HEAD tag -->
 
-  <head>
-    <!-- place component inside HEAD tag -->
+  <Tooltips />
 
-    <Tooltips />
-
-    <!-- … -->
-  </head>
-
+  <!-- … -->
+</head>
 ```
 
 ```tsx
