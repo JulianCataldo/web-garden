@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import LongText from '../components/LongText.astro';
+
+import MediaMap from '@julian_cataldo/astro-media-map/MediaMap.astro';
 ---
 
 <Layout title='Welcome to Astro.'>
@@ -25,6 +27,17 @@ import LongText from '../components/LongText.astro';
     <a href='#' title='Hello!' data-tooltip-placement='bottom'>
       Tooltip bottom
     </a>
+
+    <div class='map-demo'>
+      <MediaMap
+        x={43.389636}
+        y={5.3964332}
+        z={11}
+        width={'25rem'}
+        height={'25rem'}
+        hideAttribs={false}
+      />
+    </div>
 
     <LongText />
     <LongText />
@@ -81,5 +94,9 @@ import LongText from '../components/LongText.astro';
 
   .long-text {
     width: 31rem;
+  }
+
+  .map-demo {
+    margin: 4rem 2rem;
   }
 </style>
