@@ -93,7 +93,7 @@ Cypress e2e:
 - [ ] App/Resets
 - [ ] App/Scroll
 - [ ] App/SEO
-- [ ] App/Tooltips
+- [x] App/Tooltips
 - [ ] App/Transition
 - [ ] …
 
