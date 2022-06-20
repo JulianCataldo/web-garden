@@ -11,20 +11,20 @@ for full implementation demo.
 ---
 
 - [Astro components and configurations collection](#astro-components-and-configurations-collection)
-- [Application-level components](#application-level-components)
+- [📦  Application-level components](#application-level-components)
   - [Full page transition](#full-page-transition)
   - [URLs prefetching](#urls-prefetching)
   - [Tooltips](#tooltips)
   - [SEO](#seo)
   - [Base app document enclosure](#base-app-document-enclosure)
   - [Scroll observer](#scroll-observer)
-- [Components](#components)
-- [Astro demo website](#astro-demo-website)
-- [Tooling configurations](#tooling-configurations)
-- [To dos](#to-dos)
-- [Tests](#tests)
+- [📦  Components](#components)
+- [👀  Astro demo website](#astro-demo-website)
+- [⚙️  Tooling configurations](#️tooling-configurations)
+- [🚧  To dos](#to-dos)
+- [✅  Tests](#tests)
 
-# Application-level components
+# 📦  Application-level components
 
 ## Full page transition
 
@@ -66,23 +66,23 @@ https://user-images.githubusercontent.com/603498/174468167-4f3cdbe3-ec90-49f6-8c
 
 **📦  [See component instructions](./app/Scroll/Observer)**
 
-# Components
+# 📦  Components
 
 …
 
-# Astro demo website
+# 👀  Astro demo website
 
 [Live website demo documentation](./demo) where you can test all components above.
 
-# Tooling configurations
+# ⚙️  Tooling configurations
 
 [📖  See documentation](./configs).
 
-# To dos
+# 🚧  To dos
 
-- [ ] Finish tests
+- [ ] …
 
-# Tests
+# ✅  Tests
 
 Cypress e2e:
 
