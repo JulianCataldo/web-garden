@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@julian_cataldo/astro-base': link:../app/Base
+  '@julian_cataldo/astro-lightbox': link:../app/Lightbox
   '@julian_cataldo/astro-media-map': link:../components/Media/Map
   '@julian_cataldo/astro-prefetch': link:../app/Prefetch
   '@julian_cataldo/astro-resets': link:../app/Resets
@@ -13,6 +14,7 @@ specifiers:
 
 dependencies:
   '@julian_cataldo/astro-base': link:../app/Base
+  '@julian_cataldo/astro-lightbox': link:../app/Lightbox
   '@julian_cataldo/astro-media-map': link:../components/Media/Map
   '@julian_cataldo/astro-prefetch': link:../app/Prefetch
   '@julian_cataldo/astro-resets': link:../app/Resets

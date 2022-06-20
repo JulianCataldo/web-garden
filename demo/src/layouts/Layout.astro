@@ -6,6 +6,7 @@ import SEO from '@julian_cataldo/astro-seo/SEO.astro';
 import ScrollObserver from '@julian_cataldo/astro-scroll-observer/ScrollObserver.astro';
 import Base from '@julian_cataldo/astro-base/Base.astro';
 import Resets from '@julian_cataldo/astro-resets/Resets.astro';
+import Lightbox from '@julian_cataldo/astro-lightbox/Lightbox.astro';
 
 import './style.global.scss';
 
@@ -39,6 +40,8 @@ export interface Props {
     <!--  -->
     <Resets />
     <!--  -->
+    <Lightbox />
+    <!--  -->
   </Fragment>
 
   <Fragment slot='body'>
@@ -66,8 +69,10 @@ export interface Props {
       font-weight: 700;
     }
   }
-  :global(main) {
-    margin-top: 5rem;
+  :global(main::before) {
+    content: '';
+    height: 6rem;
+    display: block;
   }
 </style>
 <style lang='scss' is:global>

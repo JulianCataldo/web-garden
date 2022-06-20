@@ -1,9 +1,10 @@
 ---
+import MediaMap from '@julian_cataldo/astro-media-map/MediaMap.astro';
+
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import LongText from '../components/LongText.astro';
-
-import MediaMap from '@julian_cataldo/astro-media-map/MediaMap.astro';
+import Image from '../components/Image.astro';
 ---
 
 <Layout title='Welcome to Astro.'>
@@ -37,6 +38,10 @@ import MediaMap from '@julian_cataldo/astro-media-map/MediaMap.astro';
         height={'25rem'}
         attribution={true}
       />
+    </div>
+
+    <div class='some-wrapper' data-lightbox='true'>
+      <Image />
     </div>
 
     <LongText />
