@@ -25,6 +25,7 @@ import Base from '@julian_cataldo/astro-base/Base.astro';
   htmlId={'the-id'}
   bodyClasses={['other-class', 'dabadi-dabada']}
   bodyId={'much-id'}
+  jsEnabledClass={false}
 >
   <Fragment slot='head'>
     <!-- Put things in HEAD tag  -->

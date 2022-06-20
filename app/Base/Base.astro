@@ -5,8 +5,8 @@ export interface Props {
   bodyClasses?: string[];
   htmlId?: string;
   bodyId?: string;
+  jsEnabledClass?: boolean;
 }
-
 const props = Astro.props as Props;
 
 if (!props.lang) {
@@ -24,18 +24,23 @@ if (!props.htmlId) {
 if (!props.bodyId) {
   props.bodyId = null;
 }
+if (props.jsEnabledClass === undefined) {
+  props.jsEnabledClass = true;
+}
 ---
 
 <!DOCTYPE html>
 <html lang={props.lang} class:list={[...props.htmlClasses]} id={props.htmlId}>
   <head>
-    <script is:inline>
+    <script define:vars={{ enabled: props.jsEnabledClass }} is:inline>
       // CRITICAL
       // Add 'js' class to HTML tag if JavaScript is enabled
-      (() => {
-        const root = document.getElementsByTagName('html')[0];
-        root.classList.add('js');
-      })();
+      if (enabled) {
+        (() => {
+          const root = document.getElementsByTagName('html')[0];
+          root.classList.add('js');
+        })();
+      }
     </script>
 
     <meta charset='UTF-8' />
