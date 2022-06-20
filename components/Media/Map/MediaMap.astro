@@ -2,9 +2,11 @@
 export interface Props {
   x: number;
   y: number;
+  z?: number;
+
   height: string;
   width?: string;
-  z?: number;
+
   hideAttribs?: boolean;
 }
 const props = Astro.props as Props;
