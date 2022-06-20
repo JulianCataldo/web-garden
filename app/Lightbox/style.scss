@@ -1,0 +1,42 @@
+.app-lightbox {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  // TODO: map color to API
+  background-color: var(--bg-color, hsl(0, 0%, 0%, 0.85));
+  cursor: zoom-out;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s;
+
+  &.is-active {
+    opacity: 1;
+    pointer-events: initial;
+  }
+}
+
+:global([data-lightbox]) {
+  cursor: zoom-in;
+}
+
+.portal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // TODO: map speed to API
+  transition: opacity 0.35s, transform 0.35s;
+  transform: scale(0.2);
+  :global(img) {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+  }
+
+  .is-active & {
+    transform: scale(1);
+  }
+}
