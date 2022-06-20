@@ -1,4 +1,4 @@
-# Astro — Base app document enclosure
+# Astro — Base document enclosure
 
 Provide sensible defaults for HTML base document.  
 The goal is to reduce boilerplate when using multiple layouts in Astro projects.

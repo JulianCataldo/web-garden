@@ -16,13 +16,15 @@ for full implementation demo.
   - [URLs prefetching](#urls-prefetching)
   - [Tooltips](#tooltips)
   - [SEO](#seo)
-  - [Base app document enclosure](#base-app-document-enclosure)
+  - [Base document enclosure](#base-document-enclosure)
   - [Scroll observer](#scroll-observer)
 - [📦  Components](#components)
 - [👀  Astro demo website](#astro-demo-website)
 - [⚙️  Tooling configurations](#️tooling-configurations)
 - [🚧  To dos](#to-dos)
 - [✅  Tests](#tests)
+
+---
 
 # 📦  Application-level components
 
@@ -54,7 +56,7 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 
 **📦  [See component instructions](./app/SEO)**
 
-## Base app document enclosure
+## Base document enclosure
 
 **📦  [See component instructions](./app/Base)**
 

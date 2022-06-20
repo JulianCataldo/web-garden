@@ -1,7 +1,7 @@
 # Astro — Scroll observer
 
-Viewport scroll position watcher which binds data attributes to `body` for further CSS usage.
-Scroll event is properly throttled.
+Viewport scroll position watcher which binds data attributes to `body` for further CSS usage.  
+JS scroll event is properly throttled for performance economy.
 
 Three areas are handled : Top, Bottom, and everything in between.  
 Some margins are applied on these.
