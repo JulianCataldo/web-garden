@@ -7,7 +7,7 @@ export interface Props {
   height: string;
   width?: string;
 
-  hideAttribs?: boolean;
+  attribution?: boolean;
 }
 const props = Astro.props as Props;
 
@@ -17,14 +17,14 @@ if (!props.z) {
 if (!props.width) {
   props.width = '100%';
 }
-if (!props.hideAttribs) {
-  props.hideAttribs = false;
+if (props.attribution === undefined) {
+  props.attribution = true;
 }
 ---
 
 <div
-  id='map'
   style={`width: ${props.width}; height: ${props.height}`}
+  id='map'
   data-x={props.x}
   data-y={props.y}
   data-z={props.z}
@@ -59,7 +59,7 @@ if (!props.hideAttribs) {
 <style
   lang='scss'
   is:global
-  define:vars={{ display: props.hideAttribs ? 'none' : 'initial' }}
+  define:vars={{ display: props.attribution ? 'initial' : 'none' }}
 >
   @import 'leaflet';
 

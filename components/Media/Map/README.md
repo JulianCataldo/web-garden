@@ -32,7 +32,7 @@ import MediaMap from '@julian_cataldo/astro-media-map/MediaMap.astro';
     z={11}
     width={'25rem'}
     height={'25rem'}
-    hideAttribs={false}
+    attribution={false}
   />
 
   <!-- … -->
