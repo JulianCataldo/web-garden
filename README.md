@@ -91,7 +91,7 @@ Cypress e2e:
 - [x] App/Base
 - [x] App/Prefetch
 - [ ] App/Resets
-- [ ] App/Scroll
+- [x] App/Scroll/Observer
 - [ ] App/SEO
 - [x] App/Tooltips
 - [ ] App/Transition
