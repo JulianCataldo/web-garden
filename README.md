@@ -5,7 +5,7 @@ taking advantage of Astro strengths as much as possible.
 
 Focus is on common web patterns and progressive enhancements.
 
-See [./demo/src/layouts/Layout.astro](demo/src/layouts/Layout.astro)
+See [/demo/src/layouts/Layout.astro](demo/src/layouts/Layout.astro)
 for full implementation demo.
 
 ---
