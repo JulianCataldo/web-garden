@@ -32,7 +32,7 @@ https://user-images.githubusercontent.com/603498/174424456-edce69a7-adef-4e59-b2
 
 ---
 
-**📦  [See component instructions](./app/Transition/README.md)**
+**📦  [See component instructions](./app/Transition)**
 
 ## URLs prefetching
 
@@ -40,7 +40,7 @@ https://user-images.githubusercontent.com/603498/174425991-7151f1b1-0192-4508-8e
 
 ---
 
-**📦  [See component instructions](./app/Prefetch/README.md)**
+**📦  [See component instructions](./app/Prefetch)**
 
 ## Tooltips
 
@@ -48,15 +48,15 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 
 ---
 
-**📦  [See component instructions](./app/Tooltips/README.md)**
+**📦  [See component instructions](./app/Tooltips)**
 
 ## SEO
 
-**📦  [See component instructions](./app/SEO/README.md)**
+**📦  [See component instructions](./app/SEO)**
 
 ## Base app document enclosure
 
-**📦  [See component instructions](./app/Base/README.md)**
+**📦  [See component instructions](./app/Base)**
 
 ## Scroll observer
 
@@ -64,7 +64,7 @@ https://user-images.githubusercontent.com/603498/174468167-4f3cdbe3-ec90-49f6-8c
 
 ---
 
-**📦  [See component instructions](./app/Scroll/Observer/README.md)**
+**📦  [See component instructions](./app/Scroll/Observer)**
 
 # Components
 
@@ -72,11 +72,11 @@ https://user-images.githubusercontent.com/603498/174468167-4f3cdbe3-ec90-49f6-8c
 
 # Astro demo website
 
-[Live website demo documentation](./demo/README.md) where you can test all components above.
+[Live website demo documentation](./demo) where you can test all components above.
 
 # Tooling configurations
 
-[📖  See documentation](./configs/README.md).
+[📖  See documentation](./configs).
 
 # To dos
 
