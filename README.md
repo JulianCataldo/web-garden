@@ -106,7 +106,7 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 
 Cypress:
 
-- [ ] configs
+- [ ] Configs
 - [ ] App/Analytics
 - [x] App/Base
 - [x] App/Prefetch
@@ -115,6 +115,7 @@ Cypress:
 - [ ] App/SEO
 - [x] App/Tooltips
 - [x] App/Transition
+- [ ] Components/Media/Map
 - [ ] …
 
 ---
