@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.0](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-base@0.10.4...@julian_cataldo/astro-base@0.11.0) (2022-06-20)
+
+
+### Features
+
+* option for js detection ([929faca](https://github.com/JulianCataldo/astro/commit/929faca72a7a51d458cd33674dd977caaf799b9f))
+
+
+
 ## [0.10.4](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-base@0.10.3...@julian_cataldo/astro-base@0.10.4) (2022-06-20)
 
 **Note:** Version bump only for package @julian_cataldo/astro-base
