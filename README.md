@@ -21,6 +21,7 @@ for full implementation demo.
   - [SEO — \[astro-seo\]](#seo--astro-seo)
   - [Traffic analysis — \[astro-analytics\]](#traffic-analysis--astro-analytics)
 - [📦  Components](#components)
+  - [Media map embed — \[astro-media-map\]](#media-map-embed--astro-media-map)
 - [👀  Astro demo website](#astro-demo-website)
 - [⚙️  Tooling configurations — \[astro-configs\]](#️tooling-configurations--astro-configs)
 - [🚧  To dos](#to-dos)
@@ -80,7 +81,11 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 
 # 📦  Components
 
-…
+## Media map embed — \[astro-media-map\]
+
+![](./docs/component-media-map.png)
+
+**📦  [See component instructions](./components/Media/Map)**
 
 # 👀  Astro demo website
 
