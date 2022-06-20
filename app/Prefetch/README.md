@@ -1,5 +1,14 @@
 # Astro — URLs prefetching on hover
 
+This component capture mouse hovering on links with internal URLs.  
+Then, it will prefetch the HTML document beforehand.
+
+The goal is to make further page loading snappier.  
+It's useful with SSG but also with SSR in certain scenarios.
+
+It plays well with this page transition component:  
+[@julian_cataldo/astro-transition](https://github.com/JulianCataldo/astro/tree/master/app/Transition)
+
 ## Demo
 
 https://user-images.githubusercontent.com/603498/174425991-7151f1b1-0192-4508-8e6c-3e0d8eabed0d.mp4
