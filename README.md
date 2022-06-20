@@ -119,8 +119,8 @@ Cypress:
 - [ ] App/SEO
 - [x] App/Tooltips
 - [x] App/Transition
+- [ ] App/Lightbox
 - [x] Components/Media/Map
-- [ ] Components/Lightbox
 - [ ] …
 
 ---
