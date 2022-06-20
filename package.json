@@ -5,8 +5,9 @@
   "main": "index.ts",
   "private": true,
   "scripts": {
-    "version": "pnpm cypress:run && pnpm lerna version --conventional-commits",
+    "version": "pnpm demo && pnpm cypress:run && pnpm lerna version --conventional-commits",
     "publish": "pnpm lerna publish from-git",
+    "demo": "curl -s http://localhost:2424/ > /dev/null || (cd demo && pnpm dev)",
     "prepare": "husky install",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",

@@ -1,6 +1,6 @@
 describe('App — <Prefetch>', () => {
   it('Open demo', () => {
-    cy.visit('http://localhost:3000/');
+    cy.visit('http://localhost:2424/');
   });
 
   it('Check for 3 on 4 Link tags', () => {
