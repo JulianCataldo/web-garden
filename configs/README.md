@@ -9,6 +9,7 @@ Here lies some re-usable tooling settings.
 ---
 
 - [Astro configurations collection](#astro-configurations-collection)
+- [Installation](#installation)
 - [Tooling configurations](#tooling-configurations)
   - [VSCode](#vscode)
     - [Typescript](#typescript)
@@ -21,12 +22,16 @@ Here lies some re-usable tooling settings.
     - [VSCode](#vscode-3)
   - […To do](#to-do)
 
-# Tooling configurations
+# Installation
 
-
+```sh
+pnpm i @julian_cataldo/astro-configs
+```
 
 All these extracts can be found in root directory inside `package.json`,
 linters config files…
+
+# Tooling configurations
 
 ## VSCode
 
@@ -263,7 +268,10 @@ In your `settings.json`:
 
 - [ ] Prettier settings in `.astro` files
   - [ ] Print width 80
+  - [ ] Nested code, even less correct settings
 - [ ] Init root package for config distribution
+- [ ] Fix broken ESLint in Astro file  
+      Doc: https://github.com/ota-meshi/eslint-plugin-astro
 
 ---
 
