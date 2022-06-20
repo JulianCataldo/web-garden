@@ -1,0 +1,13 @@
+lockfileVersion: 5.4
+
+specifiers:
+  leaflet: ^1.8.0
+
+dependencies:
+  leaflet: 1.8.0
+
+packages:
+
+  /leaflet/1.8.0:
+    resolution: {integrity: sha512-gwhMjFCQiYs3x/Sf+d49f10ERXaEFCPr+nVTryhAW8DWbMGqJqt9G4XuIaHmFW08zYvhgdzqXGr8AlW8v8dQkA==}
+    dev: false

@@ -1,0 +1,36 @@
+{
+  "name": "@julian_cataldo/astro-media-map",
+  "version": "0.9.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianCataldo/astro",
+    "directory": "components/Media/Map"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "astro",
+    "astro-component",
+    "leaflet",
+    "map",
+    "media",
+    "openstreetmap",
+    "maptiler",
+    "native",
+    "interactive",
+    "vanilla",
+    "javascript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "leaflet": "^1.8.0"
+  }
+}

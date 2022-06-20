@@ -1,0 +1,67 @@
+---
+export interface Props {
+  x: number;
+  y: number;
+  height: string;
+  width?: string;
+  z?: number;
+  hideAttribs?: boolean;
+}
+const props = Astro.props as Props;
+
+if (!props.z) {
+  props.z = 8;
+}
+if (!props.width) {
+  props.width = '100%';
+}
+if (!props.hideAttribs) {
+  props.hideAttribs = false;
+}
+---
+
+<div
+  id='map'
+  style={`width: ${props.width}; height: ${props.height}`}
+  data-x={props.x}
+  data-y={props.y}
+  data-z={props.z}
+>
+</div>
+
+<script>
+  import Leaflet from 'leaflet';
+  // ONE MAP PER PAGE (for now)
+  const mapElem = document.getElementById('map');
+
+  if (mapElem) {
+    const map = Leaflet.map('map', {
+      center: [mapElem.getAttribute('data-x'), mapElem.getAttribute('data-y')],
+      zoom: mapElem.getAttribute('data-z') || 14,
+      scrollWheelZoom: false,
+    });
+
+    // FUTURE OPTION : Choose map tiles provider
+    // const mapAccessToken = `import.meta.env.PUBLIC_MAP_TILER_ACCESS_TOKEN`;
+    // const mapId = 'topographique';
+    // const mapImgFormat = 'png';
+    // const url = `https://api.maptiler.com/maps/${mapId}/256/{z}/{x}/{y}{r}.${mapImgFormat}?key=${mapAccessToken}`;
+    // const url = 'http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png';
+    const url = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png';
+
+    const layer = new Leaflet.TileLayer(url);
+    map.addLayer(layer);
+  }
+</script>
+
+<style
+  lang='scss'
+  is:global
+  define:vars={{ display: props.hideAttribs ? 'none' : 'initial' }}
+>
+  @import 'leaflet';
+
+  .leaflet-control-attribution {
+    display: var(--display, 'initial');
+  }
+</style>
