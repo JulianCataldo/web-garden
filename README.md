@@ -84,8 +84,17 @@ https://user-images.githubusercontent.com/603498/174468167-4f3cdbe3-ec90-49f6-8c
 
 # Tests
 
-- [ ] App/Base
-- [ ] App/Prefetch
+Cypress e2e:
+
+- [ ] configs
+- [ ] App/Analytics
+- [x] App/Base
+- [x] App/Prefetch
+- [ ] App/Resets
+- [ ] App/Scroll
+- [ ] App/SEO
+- [ ] App/Tooltips
+- [ ] App/Transition
 - [ ] …
 
 ---
