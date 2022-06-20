@@ -34,6 +34,9 @@ import Prefetch from '@julian_cataldo/astro-prefetch/Prefetch.astro';
 
 [Live website demo documentation](../../demo)
 
+See [./demo/src/layouts/Layout.astro](../../demo/src/layouts/Layout.astro)
+for full implementation demo.
+
 ---
 
 🔗  [JulianCataldo.com](https://www.juliancataldo.com/)
