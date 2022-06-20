@@ -48,7 +48,7 @@ Removes body margin.
 
 ## Font smoothing
 
-Cross-browser grayscale font-smoothing
+Cross-browser grayscale font-smoothing.
 
 ## Font system
 
@@ -56,7 +56,7 @@ Apply default system font instead of Times, before loading custom web-font or ke
 
 ## Scroll smooth
 
-Ensure smooth CSS scrolling.
+Ensure smooth CSS scrolling.  
 Native only, no polyfill for older Safari etc.
 
 ## Border box
@@ -65,7 +65,7 @@ Consistent border box for all elements.
 
 ## Svg
 
-Maximize canvas.
+Maximize canvas.  
 Set color as default text color.
 
 ## Scroll bar keep

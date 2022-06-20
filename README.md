@@ -96,7 +96,7 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 
 # ✅  Tests
 
-Cypress e2e:
+Cypress:
 
 - [ ] configs
 - [ ] App/Analytics
