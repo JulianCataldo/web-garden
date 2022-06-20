@@ -12,15 +12,17 @@ for full implementation demo.
 
 - [Astro components and configurations collection](#astro-components-and-configurations-collection)
 - [📦  Application-level components](#application-level-components)
-  - [Full page transition](#full-page-transition)
-  - [URLs prefetching](#urls-prefetching)
-  - [Tooltips](#tooltips)
-  - [SEO](#seo)
-  - [Base document enclosure](#base-document-enclosure)
-  - [Scroll observer](#scroll-observer)
+  - [Base document enclosure — \[astro-base\]](#base-document-enclosure--astro-base)
+  - [CSS Resets — \[astro-resets\]](#css-resets--astro-resets)
+  - [Full page transition — \[astro-transition\]](#full-page-transition--astro-transition)
+  - [Scroll observer — \[astro-scroll-observer\]](#scroll-observer--astro-scroll-observer)
+  - [URLs prefetching — \[astro-prefetch\]](#urls-prefetching--astro-prefetch)
+  - [Tooltips — \[astro-tooltips\]](#tooltips--astro-tooltips)
+  - [SEO — \[astro-seo\]](#seo--astro-seo)
+  - [Traffic analysis — \[astro-analytics\]](#traffic-analysis--astro-analytics)
 - [📦  Components](#components)
 - [👀  Astro demo website](#astro-demo-website)
-- [⚙️  Tooling configurations](#️tooling-configurations)
+- [⚙️  Tooling configurations — \[astro-configs\]](#️tooling-configurations--astro-configs)
 - [🚧  To dos](#to-dos)
 - [✅  Tests](#tests)
 
@@ -28,7 +30,15 @@ for full implementation demo.
 
 # 📦  Application-level components
 
-## Full page transition
+## Base document enclosure — \[astro-base\]
+
+**📦  [See component instructions](./app/Base)**
+
+## CSS Resets — \[astro-resets\]
+
+**📦  [See component instructions](./app/Resets)**
+
+## Full page transition — \[astro-transition\]
 
 https://user-images.githubusercontent.com/603498/174424456-edce69a7-adef-4e59-b2d8-cfc22414b8a4.mp4
 
@@ -36,7 +46,15 @@ https://user-images.githubusercontent.com/603498/174424456-edce69a7-adef-4e59-b2
 
 **📦  [See component instructions](./app/Transition)**
 
-## URLs prefetching
+## Scroll observer — \[astro-scroll-observer\]
+
+https://user-images.githubusercontent.com/603498/174468167-4f3cdbe3-ec90-49f6-8c51-d6028605c7d6.mp4
+
+---
+
+**📦  [See component instructions](./app/Scroll/Observer)**
+
+## URLs prefetching — \[astro-prefetch\]
 
 https://user-images.githubusercontent.com/603498/174425991-7151f1b1-0192-4508-8e6c-3e0d8eabed0d.mp4
 
@@ -44,7 +62,7 @@ https://user-images.githubusercontent.com/603498/174425991-7151f1b1-0192-4508-8e
 
 **📦  [See component instructions](./app/Prefetch)**
 
-## Tooltips
+## Tooltips — \[astro-tooltips\]
 
 https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-8297-e71f21ad62f5.mp4
 
@@ -52,21 +70,13 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 
 **📦  [See component instructions](./app/Tooltips)**
 
-## SEO
+## SEO — \[astro-seo\]
 
 **📦  [See component instructions](./app/SEO)**
 
-## Base document enclosure
+## Traffic analysis — \[astro-analytics\]
 
-**📦  [See component instructions](./app/Base)**
-
-## Scroll observer
-
-https://user-images.githubusercontent.com/603498/174468167-4f3cdbe3-ec90-49f6-8c51-d6028605c7d6.mp4
-
----
-
-**📦  [See component instructions](./app/Scroll/Observer)**
+**📦  [See component instructions](./app/Analytics)**
 
 # 📦  Components
 
@@ -76,7 +86,7 @@ https://user-images.githubusercontent.com/603498/174468167-4f3cdbe3-ec90-49f6-8c
 
 [Live website demo documentation](./demo) where you can test all components above.
 
-# ⚙️  Tooling configurations
+# ⚙️  Tooling configurations — \[astro-configs\]
 
 [📖  See documentation](./configs).
 
