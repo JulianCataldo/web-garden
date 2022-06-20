@@ -2,7 +2,7 @@
   "name": "@julian_cataldo/astro",
   "version": "1.0.0",
   "description": "An Astro components and configurations collection",
-  "main": "index.ts",
+  "main": "index.js",
   "private": true,
   "scripts": {
     "version": "pnpm demo && pnpm cypress:run && pnpm lerna version --conventional-commits",
