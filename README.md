@@ -109,7 +109,7 @@ Cypress:
 - [x] App/Scroll/Observer
 - [ ] App/SEO
 - [x] App/Tooltips
-- [ ] App/Transition
+- [x] App/Transition
 - [ ] …
 
 ---
