@@ -8,7 +8,7 @@ All settings are applied by default. Individual rule can be disabled.
 ## Installation
 
 ```sh
-pnpm i @julian_cataldo/astro-seo
+pnpm i @julian_cataldo/astro-resets
 ```
 
 ## Usage
