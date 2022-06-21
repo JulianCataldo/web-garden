@@ -23,11 +23,12 @@ Tools:
 - Commitlint
 - VS Code
 
+---
+
 > **Warning**  
 > 🚧  Work in progress  
 > Might break often.
 
----
 
 - [Astro configurations collection](#astro-configurations-collection)
 - [Installation](#installation)
