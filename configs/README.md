@@ -2,6 +2,27 @@
 
 Here lies some re-usable tooling settings.
 
+Languages:
+
+- JS
+- TS
+- Astro
+- Vue
+- JSX
+- TSX
+- SCSS
+- CSS
+
+Tools:
+
+- Prettier
+- ESlint
+- Stylelint
+- Editorconfig
+- Typescript
+- Commitlint
+- VS Code
+
 > **Warning**  
 > 🚧  Work in progress  
 > Might break often.
