@@ -8,12 +8,19 @@ import fontSystem from './styles/font-system.css?raw';
 import scrollBarKeep from './styles/scrollbar-keep.css?raw';
 
 export interface Props {
+  /** Removes body margin */
   bodyMargin?: boolean;
+  /** Coherent font smoothing */
   fontSmoothing?: boolean;
+  /** Ensure system font as default fallback */
   fontSystem?: boolean;
+  /** Default to native smooth scrolling */
   scrollSmooth?: boolean;
+  /** Better box handling */
   borderBox?: boolean;
+  /** Apply current text color and maximize canvas */
   svg?: boolean;
+  /** Show scrollbar consistently, avoiding layout shifts */
   scrollBarKeep?: boolean;
 }
 const props = Astro.props as Props;

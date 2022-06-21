@@ -1,12 +1,17 @@
 ---
 export interface Props {
+  /** Longitude */
   x: number;
+  /** Latitude */
   y: number;
+  /** Default zoom level: 10 */
   z?: number;
 
   height: string;
+  /** Default: '100%' */
   width?: string;
 
+  /** Default: true */
   attribution?: boolean;
 }
 const props = Astro.props as Props;
