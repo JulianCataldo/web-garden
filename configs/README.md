@@ -3,7 +3,7 @@
 Here lies some re-usable tooling settings.
 
 > **Warning**  
-> Work in progress
+> 🚧  Work in progress  
 > Might break often.
 
 ---

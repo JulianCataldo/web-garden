@@ -8,10 +8,10 @@ Simple lightbox component.
 pnpm i @julian_cataldo/astro-lightbox
 ``` -->
 
-## Usage
+> **Warning**  
+> 🚧  Work in progress
 
-> **Note**  
-> Only **one** map per page for now
+## Usage
 
 ```astro
 ---
