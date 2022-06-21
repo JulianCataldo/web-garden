@@ -27,6 +27,8 @@ for full implementation demo.
 - [⚙️  Tooling configurations — \[astro-configs\]](#️tooling-configurations--astro-configs)
 - [🚧  To dos](#to-dos)
 - [✅  Tests](#tests)
+- [🧑‍🚀  Development](#development)
+  - [Commands](#commands)
 
 ---
 
@@ -126,6 +128,32 @@ Cypress:
 ---
 
 - [ ] Configs
+
+# 🧑‍🚀  Development
+
+## Commands
+
+```zsh
+# Scripts located in root ./package.json
+
+# Launch implementations demo website
+pnpm demo
+
+# Cypress: Open dev GUI
+pnpm cypress:open
+
+# Cypress: Run test suite
+pnpm cypress:run
+
+# 1. Cypress test suite
+# 2. Packages bump based on commits
+# 3. Tagging releases
+# 4. Git push
+pnpm version
+
+# Publish updated packages on NPM public registry
+pnpm publish
+```
 
 ---
 
