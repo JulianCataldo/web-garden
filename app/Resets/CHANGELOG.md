@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.3](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-resets@0.10.2...@julian_cataldo/astro-resets@0.10.3) (2022-06-21)
+
+
+### Bug Fixes
+
+* disable svg reset ([d6c7b9d](https://github.com/JulianCataldo/astro/commit/d6c7b9df189b3b1ffcb306c1e1306e4de78fe303))
+
+
+
 ## [0.10.2](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-resets@0.10.1...@julian_cataldo/astro-resets@0.10.2) (2022-06-20)
 
 **Note:** Version bump only for package @julian_cataldo/astro-resets
