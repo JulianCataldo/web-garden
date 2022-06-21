@@ -5,11 +5,11 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "version": "pnpm demo && pnpm cypress:run && pnpm lerna version --conventional-commits",
+    "version": "pnpm cypress:run && pnpm lerna version --conventional-commits",
     "publish": "pnpm lerna publish from-git",
     "demo": "curl -s http://localhost:2424/ > /dev/null || (cd demo && pnpm dev)",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
+    "cypress:open": "pnpm demo & cypress open",
+    "cypress:run": "pnpm demo & cypress run",
     "test": "echo \"Skipping: no pre-commit test specified\" && exit 0",
     "prepare": "husky install"
   },
