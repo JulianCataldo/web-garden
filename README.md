@@ -18,11 +18,11 @@ for full implementation demo.
   - [Scroll observer — \[astro-scroll-observer\]](#scroll-observer--astro-scroll-observer)
   - [URLs prefetching — \[astro-prefetch\]](#urls-prefetching--astro-prefetch)
   - [Tooltips — \[astro-tooltips\]](#tooltips--astro-tooltips)
+  - [Lightbox — \[astro-lightbox\]](#lightbox--astro-lightbox)
   - [SEO — \[astro-seo\]](#seo--astro-seo)
   - [Traffic analysis — \[astro-analytics\]](#traffic-analysis--astro-analytics)
 - [📦  Components](#components)
   - [Media map embed — \[astro-media-map\]](#media-map-embed--astro-media-map)
-  - [Lightbox — \[astro-lightbox\]](#lightbox--astro-lightbox)
 - [👀  Astro demo website](#astro-demo-website)
 - [⚙️  Tooling configurations — \[astro-configs\]](#️tooling-configurations--astro-configs)
 - [🚧  To dos](#to-dos)
@@ -74,6 +74,10 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 
 **📦  [See component instructions](./app/Tooltips)**
 
+## Lightbox — \[astro-lightbox\]
+
+**📦  [See component instructions](./app/Lightbox)**
+
 ## SEO — \[astro-seo\]
 
 **📦  [See component instructions](./app/SEO)**
@@ -89,10 +93,6 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 ![](./docs/component-media-map.png)
 
 **📦  [See component instructions](./components/Media/Map)**
-
-## Lightbox — \[astro-lightbox\]
-
-**📦  [See component instructions](./app/Lightbox)**
 
 # 👀  Astro demo website
 
