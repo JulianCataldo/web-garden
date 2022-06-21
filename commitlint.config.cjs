@@ -6,4 +6,6 @@
     refactor | revert | style | test
 */
 
-module.exports = { extends: ['@commitlint/config-conventional'] };
+module.exports = {
+  extends: ['@julian_cataldo/astro-configs/commitlint.config.cjs'],
+};

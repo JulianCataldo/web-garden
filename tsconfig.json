@@ -16,7 +16,7 @@
     "jsx": "preserve", // Resolve Vue linting import bug
 
     "allowJs": true,
-    "noEmit": true,
+    "noEmit": true, // When `tsc` is for typechecking only, not for compilation
 
     "noImplicitAny": true,
 

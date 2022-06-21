@@ -1,9 +1,16 @@
+#!/bin/sh
+
+# Here, we gather config files from root repo that cannot be extended by design
+
 cd ../
 
 cp .editorconfig \
-.eslintrc.cjs \
-.prettierrc.cjs \
-.stylelintrc.cjs \
-commitlint.config.cjs \
-tsconfig.json \
 ./configs
+
+# These are extended
+
+# commitlint.config.cjs \
+# tsconfig.json \
+# .eslintrc.cjs \
+# .prettierrc.cjs \
+# .stylelintrc.cjs \
