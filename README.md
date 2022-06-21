@@ -109,6 +109,10 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
        to  
        `import Tooltips from '@julian_cataldo/astro-tooltips';`
 
+---
+
+- [ ] Fully working tooling environment
+
 # ✅  Tests
 
 Cypress:
@@ -124,10 +128,6 @@ Cypress:
 - [ ] App/Lightbox
 - [x] Components/Media/Map
 - [ ] …
-
----
-
-- [ ] Configs
 
 # 🧑‍🚀  Development
 
