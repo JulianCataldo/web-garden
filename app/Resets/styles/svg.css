@@ -1,5 +1,6 @@
 svg {
-  fill: currentColor;
-  height: 100%;
-  width: 100%;
+  /* Disabled because of side-effects */
+  /* fill: currentColor; */
+  /* height: 100%; */
+  /* width: 100%; */
 }

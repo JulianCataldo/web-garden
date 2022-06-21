@@ -3,7 +3,7 @@ import scrollSmooth from './styles/scroll-smooth.css?raw';
 import fontSmoothing from './styles/font-smoothing.css?raw';
 import borderBox from './styles/border-box.css?raw';
 import bodyMargin from './styles/body-margin.css?raw';
-import svg from './styles/svg.css?raw';
+// import svg from './styles/svg.css?raw';
 import fontSystem from './styles/font-system.css?raw';
 import scrollBarKeep from './styles/scrollbar-keep.css?raw';
 
@@ -19,7 +19,8 @@ export interface Props {
   /** Better box handling */
   borderBox?: boolean;
   /** Apply current text color and maximize canvas */
-  svg?: boolean;
+  // DISABLED
+  // svg?: boolean;
   /** Show scrollbar consistently, avoiding layout shifts */
   scrollBarKeep?: boolean;
 }
@@ -31,7 +32,7 @@ const rawStylesCSS = [
   props.fontSystem === false ? null : fontSystem,
   props.scrollSmooth === false ? null : scrollSmooth,
   props.borderBox === false ? null : borderBox,
-  props.svg === false ? null : svg,
+  // props.svg === false ? null : svg,
   props.scrollBarKeep === false ? null : scrollBarKeep,
 ].join('\n');
 ---

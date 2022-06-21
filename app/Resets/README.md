@@ -80,10 +80,10 @@ Native only, no polyfill for older Safari etc.
 
 Consistent border box for all elements.
 
-## Svg
+<!-- ## Svg
 
-Maximize canvas.  
-Set color as default text color.
+Maximize canvas.
+Set color as default text color. -->
 
 ## Scroll bar keep
 
