@@ -29,6 +29,7 @@ Tools:
 > 🚧  Work in progress  
 > Might break often.
 
+---
 
 - [Astro configurations collection](#astro-configurations-collection)
 - [Installation](#installation)
@@ -43,6 +44,8 @@ Tools:
   - [Stylelint](#stylelint)
     - [VSCode](#vscode-3)
   - […To do](#to-do)
+
+---
 
 # Installation
 
