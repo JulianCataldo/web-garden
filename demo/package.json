@@ -20,6 +20,7 @@
     "@julian_cataldo/astro-scroll-observer": "link:../app/Scroll/Observer",
     "@julian_cataldo/astro-seo": "link:../app/SEO",
     "@julian_cataldo/astro-tooltips": "link:../app/Tooltips",
-    "@julian_cataldo/astro-transition": "link:../app/Transition"
+    "@julian_cataldo/astro-transition": "link:../app/Transition",
+    "sass": "^1.52.3"
   }
 }
