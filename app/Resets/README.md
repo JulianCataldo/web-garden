@@ -40,6 +40,23 @@ import Resets from '@julian_cataldo/astro-resets/Resets.astro';
 <!-- … -->
 ```
 
+# Suggestions
+
+It is assumed that CSS resetting is an highly opinionated topic.  
+This component takes these stances about it:
+
+- Must not aggressively override beneficial defaults
+- Must make user experience better
+- Must avoid side-effects
+- Must be clear about what is affected
+- Might be used to level-out browser inconsistencies
+- Might be used to offer next gen. features
+- Should be used in last resort
+- Must be re-evaluated / removed regularly while browsers evolve
+
+That being said, **don't hesitate to share your handy little resets**
+in issues.
+
 # Rules
 
 ## Body margin
@@ -73,6 +90,10 @@ Set color as default text color.
 Always show browser scrollbar.  
 This is to prevent annoying layout jump when you navigate to a page which
 doesn't scroll, or when you open a lightbox/modal etc.
+
+# To do
+
+- [ ] Find a more practical way to handle CSS snippets files and their import
 
 ---
 
