@@ -83,6 +83,25 @@ import Base from '@julian_cataldo/astro-base/Base.astro';
 The `js` class is added to HTML tag, critically.
 That way, you can handle CSS for users with or without JS enabled.
 
+# API
+
+```ts
+export interface Props {
+  /** Default: 'en' */
+  lang?: string;
+  /** Default: [] (no classes) */
+  htmlClasses?: string[];
+  /** Default: [] (no classes) */
+  bodyClasses?: string[];
+  /** Default: null */
+  htmlId?: string;
+  /** Default: null */
+  bodyId?: string;
+  /** Provides early JS detection. Default: true */
+  jsEnabledClass?: boolean;
+}
+```
+
 ---
 
 [Live website demo documentation](../../demo)

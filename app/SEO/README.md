@@ -86,6 +86,20 @@ Découvrez mes projets et mon profil professionnel.
 />
 ```
 
+# API
+
+```ts
+export interface Props {
+  /** Image URL, preferably absolute and 1200x630px */
+  image: string;
+  title: string;
+  description: string;
+  siteName: string;
+}
+```
+
+---
+
 ---
 
 [Live website demo documentation](../../demo)

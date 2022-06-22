@@ -43,6 +43,26 @@ import MediaMap from '@julian_cataldo/astro-media-map/MediaMap.astro';
 
 ![](../../../docs/component-media-map.png)
 
+# API
+
+```ts
+export interface Props {
+  /** Longitude */
+  x: number;
+  /** Latitude */
+  y: number;
+  /** Default zoom level: 10 */
+  z?: number;
+
+  height: string;
+  /** Default: '100%' */
+  width?: string;
+
+  /** Default: true */
+  attribution?: boolean;
+}
+```
+
 ## To do
 
 - [ ] Multiple maps per page

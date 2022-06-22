@@ -57,6 +57,28 @@ This component takes these stances about it:
 That being said, **don't hesitate to share your handy little resets**
 in issues.
 
+# API
+
+```ts
+/** All defaults: true */
+export interface Props {
+  /** Removes body margin */
+  bodyMargin?: boolean;
+  /** Coherent font smoothing */
+  fontSmoothing?: boolean;
+  /** Ensure system font as default fallback */
+  fontSystem?: boolean;
+  /** Default to native smooth scrolling */
+  scrollSmooth?: boolean;
+  /** Better box handling */
+  borderBox?: boolean;
+  /** Show scrollbar consistently, avoiding layout shifts */
+  scrollBarKeep?: boolean;
+}
+```
+
+---
+
 # Rules
 
 ## Body margin

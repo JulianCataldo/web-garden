@@ -39,6 +39,15 @@ import Prefetch from '@julian_cataldo/astro-prefetch/Prefetch.astro';
 </head>
 ```
 
+# API
+
+```ts
+export interface Props {
+  /** Maximum prefetched documents. Default: 8 */
+  max?: number;
+}
+```
+
 ---
 
 [Live website demo documentation](../../demo)
