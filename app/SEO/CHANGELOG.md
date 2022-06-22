@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.9](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-seo@0.10.8...@julian_cataldo/astro-seo@0.10.9) (2022-06-22)
+
+**Note:** Version bump only for package @julian_cataldo/astro-seo
+
+
+
+
+
 ## [0.10.8](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-seo@0.10.7...@julian_cataldo/astro-seo@0.10.8) (2022-06-22)
 
 **Note:** Version bump only for package @julian_cataldo/astro-seo
