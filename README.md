@@ -108,6 +108,7 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
        `import Tooltips from '@julian_cataldo/astro-tooltips/Tooltips.astro';`  
        to  
        `import Tooltips from '@julian_cataldo/astro-tooltips';`
+- [ ] Find a way to launch only necessary tests when versioning
 
 ---
 

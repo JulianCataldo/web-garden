@@ -1,4 +1,4 @@
-# Astro — Full page transition overlay
+# 🚀  Astro — Full page transition overlay
 
 This component relies on the good old browser router, still, it will give to
 your website an SPA feel, without all the JS overhead.
@@ -7,13 +7,13 @@ your website an SPA feel, without all the JS overhead.
 
 https://user-images.githubusercontent.com/603498/174424456-edce69a7-adef-4e59-b2d8-cfc22414b8a4.mp4
 
-## Installation
+## 📦  Installation
 
 ```sh
 pnpm i @julian_cataldo/astro-transition
 ```
 
-## Usage
+## 🛠  Usage
 
 ```astro
 ---
@@ -33,7 +33,7 @@ import TransitionOverlay from '@julian_cataldo/astro-transition/Overlay/Transiti
 </body>
 ```
 
-# API
+# 👨‍🏭  TypeScript API
 
 ```ts
 export interface Props {

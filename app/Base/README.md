@@ -1,15 +1,15 @@
-# Astro — Base document enclosure
+# 🚀  Astro — Base document enclosure
 
 Provide sensible defaults for HTML base document.  
 The goal is to reduce boilerplate when using multiple layouts in Astro projects.
 
-## Installation
+## 📦  Installation
 
 ```sh
 pnpm i @julian_cataldo/astro-base
 ```
 
-## Usage
+## 🛠  Usage
 
 In your layout component, for example `./src/layouts/Default.astro`:
 
@@ -46,7 +46,7 @@ import Base from '@julian_cataldo/astro-base/Base.astro';
 </Base>
 ```
 
-## Result
+## 🎉  Result
 
 ```html
 <!DOCTYPE html>
@@ -83,7 +83,7 @@ import Base from '@julian_cataldo/astro-base/Base.astro';
 The `js` class is added to HTML tag, critically.
 That way, you can handle CSS for users with or without JS enabled.
 
-# API
+# 👨‍🏭  TypeScript API
 
 ```ts
 export interface Props {

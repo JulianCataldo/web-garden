@@ -1,17 +1,17 @@
-# Astro — Resets
+# 🚀  Astro — Resets
 
 Common CSS resets in a configurable Astro component.  
 Only needed CSS is injected into critical path.
 
 All settings are applied by default. Individual rule can be disabled.
 
-## Installation
+## 📦  Installation
 
 ```sh
 pnpm i @julian_cataldo/astro-resets
 ```
 
-## Usage
+## 🛠  Usage
 
 ```astro
 ---
@@ -57,7 +57,7 @@ This component takes these stances about it:
 That being said, **don't hesitate to share your handy little resets**
 in issues.
 
-# API
+# 👨‍🏭  TypeScript API
 
 ```ts
 /** All defaults: true */

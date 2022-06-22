@@ -1,15 +1,15 @@
-# Astro — Media map embed
+# 🚀  Astro — Media map embed
 
 Embed an interactive map in your webpage.  
 Using [Leaflet.js](https://leafletjs.com) under the hood.
 
-## Installation
+## 📦  Installation
 
 ```sh
 pnpm i @julian_cataldo/astro-media-map
 ```
 
-## Usage
+## 🛠  Usage
 
 > **Note**  
 > Only **one** map per page for now
@@ -39,11 +39,11 @@ import MediaMap from '@julian_cataldo/astro-media-map/MediaMap.astro';
 </body>
 ```
 
-## Result
+## 🎉  Result
 
 ![](../../../docs/component-media-map.png)
 
-# API
+# 👨‍🏭  TypeScript API
 
 ```ts
 export interface Props {

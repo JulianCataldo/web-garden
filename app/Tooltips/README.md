@@ -1,4 +1,4 @@
-# Astro — Tooltips
+# 🚀  Astro — Tooltips
 
 Progressively enhanced.  
 This component globally override regular `title` attributes on all links with [Tippy.js](https://atomiks.github.io/tippyjs/) tooltips.
@@ -7,13 +7,13 @@ This component globally override regular `title` attributes on all links with [T
 
 https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-8297-e71f21ad62f5.mp4
 
-## Installation
+## 📦  Installation
 
 ```sh
 pnpm i @julian_cataldo/astro-tooltips
 ```
 
-## Usage
+## 🛠  Usage
 
 ```astro
 ---

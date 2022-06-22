@@ -1,14 +1,14 @@
-# Astro — SEO
+# 🚀  Astro — SEO
 
 Bare minimum SEO meta tags to make most social networks and Google engine happy.
 
-## Installation
+## 📦  Installation
 
 ```sh
 pnpm i @julian_cataldo/astro-seo
 ```
 
-## Usage
+## 🛠  Usage
 
 ```astro
 ---
@@ -86,7 +86,7 @@ Découvrez mes projets et mon profil professionnel.
 />
 ```
 
-# API
+# 👨‍🏭  TypeScript API
 
 ```ts
 export interface Props {

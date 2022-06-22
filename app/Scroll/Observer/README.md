@@ -1,4 +1,4 @@
-# Astro — Scroll observer
+# 🚀  Astro — Scroll observer
 
 Viewport scroll position watcher which binds data attributes to `body` for further CSS usage.  
 JS scroll event is properly throttled for performance economy.
@@ -12,13 +12,13 @@ Also, viewport scrollbar detection is made available.
 
 https://user-images.githubusercontent.com/603498/174468167-4f3cdbe3-ec90-49f6-8c51-d6028605c7d6.mp4
 
-## Installation
+## 📦  Installation
 
 ```sh
 pnpm i @julian_cataldo/astro-scroll-observer
 ```
 
-## Usage
+## 🛠  Usage
 
 ```astro
 ---
@@ -74,7 +74,7 @@ nav {
 }
 ```
 
-## Result
+## 🎉  Result
 
 ```html
 <!-- … -->

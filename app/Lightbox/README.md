@@ -1,8 +1,8 @@
-# Astro — Lightbox • Zoom image to fullscreen
+# 🚀  Astro — Lightbox • Zoom image to fullscreen
 
 Simple lightbox component.
 
-<!-- ## Installation
+<!-- ## 📦  Installation
 
 ```sh
 pnpm i @julian_cataldo/astro-lightbox
@@ -11,7 +11,7 @@ pnpm i @julian_cataldo/astro-lightbox
 > **Warning**  
 > 🚧  Work in progress
 
-## Usage
+## 🛠  Usage
 
 ```astro
 ---
@@ -37,7 +37,7 @@ import Lightbox from '@julian_cataldo/astro-lightbox/Lightbox.astro';
 </body>
 ```
 
-<!-- ## Result -->
+<!-- ## 🎉  Result -->
 
 <!-- ![](../../../docs/foo.png) -->
 
