@@ -5,7 +5,7 @@ describe('App — <Transition>', () => {
 
   it('Click link other page', () => {
     cy.wait(1200);
-    cy.get('[href="/page-a"]').click();
+    cy.get('[href="/page-a"]').first().click();
   });
 
   it('Overlay class is toggled', () => {
