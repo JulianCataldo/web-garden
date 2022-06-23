@@ -1,6 +1,6 @@
 {
   "name": "@julian_cataldo/astro-transition",
-  "version": "0.10.12",
+  "version": "0.10.13",
   "description": "",
   "main": "index.js",
   "type": "module",
