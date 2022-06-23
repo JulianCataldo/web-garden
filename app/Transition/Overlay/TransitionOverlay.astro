@@ -63,26 +63,43 @@ if (!props.zIndex) {
   // TODO: refactor using iterations instead of for loop
   for (let i = 0, len = links.length; i < len; i++) {
     const href = links[i].getAttribute('href');
-    const link = links[i];
-    const isNotHash = link.getAttribute('href')[0] !== '#';
-    const isNotTargetBlank = link.getAttribute('target') !== '_blank';
 
-    if (isNotHash && isNotTargetBlank) {
-      // eslint-disable-next-line no-loop-func
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
+    if (href?.length) {
+      const link = links[i];
 
-        link.classList.add('has-been-clicked');
+      const isNotHash = href[0] !== '#';
+      const isNotTargetBlank = link.getAttribute('target') !== '_blank';
+      const isNotExternal = href?.startsWith('http') === false;
+      const isNotMailTo = href?.startsWith('mailto:') === false;
+      const isNotTel = href?.startsWith('tel:') === false;
 
-        setTimeout(() => link.classList.remove('has-been-clicked'), speed * 2);
-        overlay.classList.toggle('is-visible');
+      const conditions = [
+        isNotHash,
+        isNotTargetBlank,
+        isNotExternal,
+        isNotMailTo,
+        isNotTel,
+      ];
+      if (conditions.every((c) => c === true)) {
+        // eslint-disable-next-line no-loop-func
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
 
-        document.body.setAttribute('data-is-top', 'true');
+          link.classList.add('has-been-clicked');
 
-        setTimeout(() => {
-          window.location = href;
-        }, speed);
-      });
+          setTimeout(
+            () => link.classList.remove('has-been-clicked'),
+            speed * 2,
+          );
+          overlay.classList.toggle('is-visible');
+
+          document.body.setAttribute('data-is-top', 'true');
+
+          setTimeout(() => {
+            window.location = href;
+          }, speed);
+        });
+      }
     }
   }
 
