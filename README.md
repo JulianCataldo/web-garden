@@ -126,6 +126,7 @@ Cypress:
 - [ ] App/SEO
 - [x] App/Tooltips
 - [x] App/Transition
+  - [ ] External / contact links
 - [ ] App/Lightbox
 - [x] Components/Media/Map
 - [ ] …
@@ -137,6 +138,9 @@ Cypress:
 ```zsh
 # Scripts located in root ./package.json
 
+# Bootstrap all packages dependencies
+pnpm install --recursive
+
 # Launch implementations demo website
 pnpm run demo
 
@@ -146,13 +150,14 @@ pnpm run cypress:open
 # Cypress: Run test suite
 pnpm run cypress:run
 
+# Pre-release
 # 1. Cypress test suite
 # 2. Packages bump based on commits
 # 3. Tagging releases
 # 4. Git push
 pnpm run version
 
-# Publish updated packages on NPM public registry
+# Release updated packages on NPM public registry
 pnpm run publish
 ```
 
