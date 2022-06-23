@@ -1,0 +1,83 @@
+---
+export interface Props {
+  href: string;
+  title?: string;
+  /** Whether to show external link icon or not */
+  externalHint?: boolean;
+}
+const props = Astro.props as Props;
+
+if (!props.href) {
+  props.href = '';
+}
+if (props.externalHint === undefined) {
+  props.externalHint = true;
+}
+
+const isExternal = props.href.startsWith('http');
+const isHash = props.href.startsWith('#');
+const isMail = props.href.startsWith('mailto:');
+const isTel = props.href.startsWith('tel:');
+
+let contact;
+if (isMail) {
+  contact = props.href.replace('mailto:', '');
+} else if (isTel) {
+  contact = props.href.replace('tel:', '');
+}
+---
+
+<a
+  href={contact ? '#' : props.href}
+  class:list={{
+    link: true,
+    'is-external': isExternal,
+    'is-hash': isHash,
+    'is-mail': isMail,
+    'is-tel': isTel,
+    'has-hint': isExternal ? props?.externalHint : false,
+  }}
+  data-contact={btoa(props.href)}
+  target={isExternal ? '_blank' : null}
+  rel={isExternal ? 'noopener nofollow' : null}
+>
+  <slot></slot>
+</a>
+
+<script>
+  const contactLinks = [
+    ...document.querySelectorAll('.link.is-mail'),
+    ...document.querySelectorAll('.link.is-tel'),
+  ];
+
+  contactLinks.forEach((link) => {
+    console.log(link);
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const contactHrefRaw = link.getAttribute('data-contact');
+      if (contactHrefRaw) {
+        const contactHref = atob(contactHrefRaw);
+        window.location.href = contactHref;
+      }
+    });
+  });
+</script>
+
+<style lang='scss'>
+  .link {
+    &.is-external.has-hint {
+      position: relative;
+      padding-right: 0.95em;
+    }
+
+    &.is-external.has-hint::after {
+      position: absolute;
+      right: 0em;
+      top: -0.1em;
+      transform: rotate(90deg);
+      font-size: 85%;
+      content: '⎋';
+    }
+  }
+</style>
