@@ -18,6 +18,12 @@ export interface Props {
 }
 const props = Astro.props as Props;
 
+if (props.useDevDependencies === undefined) {
+  props.useDevDependencies = true;
+}
+if (!props.depth) {
+  props.depth = 2;
+}
 if (!props.nameText) {
   props.nameText = 'Package';
 }
@@ -30,17 +36,6 @@ if (!props.licenseText) {
 if (!props.linkText) {
   props.linkText = 'URL';
 }
-if (!props.depth) {
-  props.depth = 2;
-}
-if (props.useDevDependencies === undefined) {
-  props.useDevDependencies = true;
-}
-
-const options = {
-  useDevDependencies: props.useDevDependencies,
-  depth: props.depth,
-};
 
 interface Licenses {
   name?: string;
@@ -49,6 +44,11 @@ interface Licenses {
   license?: string | undefined;
   repository?: { url: string };
 }
+
+const options = {
+  useDevDependencies: props.useDevDependencies,
+  depth: props.depth,
+};
 
 const report =
   (await licenser.reporter
@@ -68,31 +68,29 @@ const report =
     <th>{props.authorText}</th>
     <th>{props.licenseText}</th>
     <th>{props.linkText}</th>
-
-    <tbody>
-      {report.map((row) => (
-        <tr>
-          <td class="name">{row.name}</td>
-          <td class="author">
-            {typeof row.author === 'string'
-              ? row.author
-              : row?.author?.name || '-'}
-          </td>
-          <td class="license">{row.license}</td>
-          <td>
-            <a
-              class="link is-external"
-              href={row.homepage || row.repository.url}
-              target="_blank"
-              rel="noopener nofollow"
-            >
-              {row.homepage || row.repository.url}
-            </a>
-          </td>
-        </tr>
-      ))}
-    </tbody>
-
-
   </thead>
+
+  <tbody>
+    {report.map((row) => (
+      <tr>
+        <td class="name">{row.name}</td>
+        <td class="author">
+          {typeof row.author === 'string'
+            ? row.author
+            : row?.author?.name || '-'}
+        </td>
+        <td class="license">{row.license}</td>
+        <td>
+          <a
+            class="link is-external"
+            href={row.homepage || row.repository.url}
+            target="_blank"
+            rel="noopener nofollow"
+          >
+            {row.homepage || row.repository.url}
+          </a>
+        </td>
+      </tr>
+    ))}
+  </tbody>
 </table>
