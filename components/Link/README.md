@@ -7,7 +7,7 @@ This component detects external / anchor / same domain / mail / telephone
 # Features
 
 - `rel="noopener nofollow"`, `target="_blank"` and **badge** icon for external links (⎋)
-- JS-based **obfuscation** of `mailto:` and `tel:` links
+- JS-based **obfuscation** for `mailto:` and `tel:` links
 - Applying CSS classes for specific link types
 
 ## Classes

@@ -23,6 +23,7 @@ for full implementation demo.
   - [Traffic analysis — \[astro-analytics\]](#traffic-analysis--astro-analytics)
 - [📦  Components](#components)
   - [Media map embed — \[astro-media-map\]](#media-map-embed--astro-media-map)
+  - [Link, with smart optimizations — \[astro-link\]](#link-with-smart-optimizations--astro-link)
 - [👀  Astro demo website](#astro-demo-website)
 - [⚙️  Tooling configurations — \[astro-configs\]](#️tooling-configurations--astro-configs)
 - [🚧  To dos](#to-dos)
@@ -94,6 +95,10 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 
 **📦  [See component instructions](./components/Media/Map)**
 
+## Link, with smart optimizations — \[astro-link\]
+
+**📦  [See component instructions](./components/Link)**
+
 # 👀  Astro demo website
 
 [Live website demo documentation](./demo) where you can test all components above.
@@ -129,6 +134,7 @@ Cypress:
   - [ ] External / contact links
 - [ ] App/Lightbox
 - [x] Components/Media/Map
+- [ ] Components/Link
 - [ ] …
 
 # 🧑‍🚀  Development
