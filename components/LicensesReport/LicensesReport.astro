@@ -1,0 +1,98 @@
+---
+import licenser from '@wbmnky/license-report-generator';
+
+export interface Props {
+  /** Default: true */
+  useDevDependencies?: boolean;
+  /** Default: 2 */
+  depth?: number;
+
+  /** Default: 'Package' */
+  nameText?: string;
+  /** Default: 'Author' */
+  authorText?: string;
+  /** Default: 'License' */
+  licenseText?: string;
+  /** Default: 'URL' */
+  linkText?: string;
+}
+const props = Astro.props as Props;
+
+if (!props.nameText) {
+  props.nameText = 'Package';
+}
+if (!props.authorText) {
+  props.authorText = 'Author';
+}
+if (!props.licenseText) {
+  props.licenseText = 'License';
+}
+if (!props.linkText) {
+  props.linkText = 'URL';
+}
+if (!props.depth) {
+  props.depth = 2;
+}
+if (props.useDevDependencies === undefined) {
+  props.useDevDependencies = true;
+}
+
+const options = {
+  useDevDependencies: props.useDevDependencies,
+  depth: props.depth,
+};
+
+interface Licenses {
+  name?: string;
+  author?: string | { name: string } | undefined;
+  homepage?: string | undefined;
+  license?: string | undefined;
+  repository?: { url: string };
+}
+
+const report =
+  (await licenser.reporter
+    .generate(options)
+    .then((rep) => {
+      const plain = rep.plain() as { licenses: Licenses[] };
+      return plain.licenses;
+    })
+    .catch((/* error */) => {
+      // console.log(error);
+    })) || [];
+---
+
+<table class='licenses-report'>
+  <thead>
+    <th>{props.nameText}</th>
+    <th>{props.authorText}</th>
+    <th>{props.licenseText}</th>
+    <th>{props.linkText}</th>
+
+    <tbody>
+      {report.map((row) => (
+        <tr>
+          <td class="name">{row.name}</td>
+          <td class="author">
+            {typeof row.author === 'string'
+              ? row.author
+              : row?.author?.name || '-'}
+          </td>
+          <td class="license">{row.license}</td>
+          <td>
+            <a
+              class="link is-external"
+              href={row.homepage || row.repository.url}
+              target="_blank"
+              rel="noopener nofollow"
+            >
+              {row.homepage || row.repository.url}
+            </a>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+
+
+  </thead>
+</table>
