@@ -1,0 +1,12 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## 0.10.0 (2022-06-24)
+
+
+### Features
+
+* init link component ([fc2afa1](https://github.com/JulianCataldo/astro/commit/fc2afa191cd34450df1f47812339c0a5b51915f0))
+* option to disable new window external url ([0adc608](https://github.com/JulianCataldo/astro/commit/0adc6088d5dc983aa8fb92f8e61bbb7f8a2c58c1))
