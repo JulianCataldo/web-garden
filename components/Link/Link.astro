@@ -2,8 +2,10 @@
 export interface Props {
   href: string;
   title?: string;
-  /** Whether to show external link icon or not */
+  /** Whether to show external link icon or not. Default: true */
   externalHint?: boolean;
+  /** Open external link in a new tab/window. Default: true */
+  externalInNewTab?: boolean;
 }
 const props = Astro.props as Props;
 
@@ -12,6 +14,9 @@ if (!props.href) {
 }
 if (props.externalHint === undefined) {
   props.externalHint = true;
+}
+if (props.externalInNewTab === undefined) {
+  props.externalInNewTab = true;
 }
 
 const isExternal = props.href.startsWith('http');
@@ -38,7 +43,7 @@ if (isMail) {
     'has-hint': isExternal ? props?.externalHint : false,
   }}
   data-contact={btoa(props.href)}
-  target={isExternal ? '_blank' : null}
+  target={isExternal && props.externalInNewTab ? '_blank' : null}
   rel={isExternal ? 'noopener nofollow' : null}
 >
   <slot></slot>
