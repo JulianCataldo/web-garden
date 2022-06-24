@@ -91,7 +91,7 @@ nav {
 
 ---
 
-[Live website demo documentation](../../demo)
+[Live website demo documentation](../../../demo)
 
 See [/demo/src/layouts/Layout.astro](../../../demo/src/layouts/Layout.astro)
 for full implementation demo.
