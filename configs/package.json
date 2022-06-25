@@ -3,7 +3,6 @@
   "version": "0.10.3",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "publishConfig": {
     "access": "public"
   },
@@ -35,5 +34,9 @@
     "javascript"
   ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "prettier-plugin-astro": "0.1.0-next.5"
+  }
 }

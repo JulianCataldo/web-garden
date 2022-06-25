@@ -11,7 +11,7 @@
     // Enable stricter transpilation for better output.
     "isolatedModules": true,
     // Add type definitions for our Vite runtime.
-    "types": ["vite/client", "cypress", "cypress-real-events"],
+    "types": ["vite/client", "cypress", "cypress-real-events", "node"],
 
     "jsx": "preserve", // Resolve Vue linting import bug
 
