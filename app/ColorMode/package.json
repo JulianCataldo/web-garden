@@ -1,0 +1,41 @@
+{
+  "name": "@julian_cataldo/astro-color-mode",
+  "version": "0.9.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianCataldo/astro",
+    "directory": "app/ColorMode"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "astro",
+    "astro-component",
+    "color",
+    "theme",
+    "switch",
+    "toggle",
+    "dark",
+    "light",
+    "mode",
+    "progressive",
+    "no-js",
+    "scheme",
+    "native",
+    "prefers-color-scheme",
+    "javascript",
+    "vanilla"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "leaflet": "^1.8.0"
+  }
+}

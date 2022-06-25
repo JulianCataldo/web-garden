@@ -1,0 +1,22 @@
+@mixin color-mode-dark {
+  // TODO: support no JS theming
+  // @media (prefers-color-scheme: dark) {
+  //   @content;
+  // }
+
+  html[data-color-mode="dark"] &,
+  &[data-color-mode="dark"] {
+    @content;
+  }
+}
+
+@mixin color-mode-light {
+  // @media (prefers-color-scheme: light) {
+  //   @content;
+  // }
+
+  html[data-color-mode="light"] &,
+  &[data-color-mode="light"] {
+    @content;
+  }
+}

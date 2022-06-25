@@ -1,0 +1,33 @@
+---
+// Silence is _
+---
+
+<script is:inline>
+  const root = document.getElementsByTagName('html')[0];
+  const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+  let colorMode = mediaQueryDark.matches ? 'dark' : 'light';
+
+  mediaQueryDark.addEventListener('change', (event) => {
+    colorMode = event.matches ? 'dark' : 'light';
+    root.setAttribute('data-color-mode', colorMode);
+  });
+  const savedSetting = localStorage.getItem('colorMode');
+
+  root.setAttribute('data-color-mode', savedSetting || colorMode);
+</script>
+
+<script>
+  const switches = document.querySelectorAll('[data-color-mode-switch]');
+  const root = document.getElementsByTagName('html')[0];
+
+  switches.forEach((switchElem) => {
+    switchElem.addEventListener('click', () => {
+      const currentMode = root.getAttribute('data-color-mode');
+      const colorMode = currentMode === 'light' ? 'dark' : 'light';
+      root.setAttribute('data-color-mode', colorMode);
+
+      localStorage.setItem('colorMode', colorMode);
+    });
+  });
+</script>
