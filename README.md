@@ -14,6 +14,7 @@ for full implementation demo.
 - [📦  Application-level components](#application-level-components)
   - [Base document enclosure — \[astro-base\]](#base-document-enclosure--astro-base)
   - [CSS Resets — \[astro-resets\]](#css-resets--astro-resets)
+  - [Color mode, with user override — \[astro-color-mode\]](#color-mode-with-user-override--astro-color-mode)
   - [Full page transition — \[astro-transition\]](#full-page-transition--astro-transition)
   - [Scroll observer — \[astro-scroll-observer\]](#scroll-observer--astro-scroll-observer)
   - [URLs prefetching — \[astro-prefetch\]](#urls-prefetching--astro-prefetch)
@@ -43,6 +44,10 @@ for full implementation demo.
 ## CSS Resets — \[astro-resets\]
 
 **📦  [See component instructions](./app/Resets)**
+
+## Color mode, with user override — \[astro-color-mode\]
+
+**📦  [See component instructions](./app/ColorMode)**
 
 ## Full page transition — \[astro-transition\]
 
@@ -135,6 +140,7 @@ Cypress:
 - [x] App/Base
 - [x] App/Prefetch
 - [ ] App/Resets
+- [ ] App/ColorMode
 - [x] App/Scroll/Observer
 - [ ] App/SEO
 - [x] App/Tooltips
@@ -143,6 +149,7 @@ Cypress:
 - [ ] App/Lightbox
 - [x] Components/Media/Map
 - [ ] Components/Link
+- [ ] Components/LicensesReport
 - [ ] …
 
 # 🧑‍🚀  Development
