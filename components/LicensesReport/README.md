@@ -3,6 +3,9 @@
 Give credits to the awesome JS open-source community with this component.  
 It will generate a table with important informations about packages used by your project.
 
+Uses Sebastian Roming' `license-report-generator` under the hood
+(see [@wbmnky/license-report-generator](https://github.com/sebastianroming/license-report-generator)).
+
 ## 📦  Installation
 
 ```sh
@@ -36,7 +39,42 @@ import LicensesReport from '@julian_cataldo/astro-licenses-report/LicensesReport
 </body>
 ```
 
-<!-- ## 🎉  Result -->
+## 🎉  Result
+
+**Unstyled**:
+
+![](../../docs/component-licenses-report.png)
+
+```html
+<table class="licenses-report">
+  <thead>
+    <tr>
+      <th>Package</th>
+      <th>Author</th>
+      <th>License</th>
+      <th>URL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="name">@astrojs/compiler</td>
+      <td class="author">withastro</td>
+      <td class="license">MIT</td>
+      <td>
+        <a
+          class="link is-external"
+          href="https://astro.build"
+          target="_blank"
+          rel="noopener nofollow"
+        >
+          https://astro.build
+        </a>
+      </td>
+    </tr>
+    <!-- ... -->
+  </tbody>
+</table>
+```
 
 # 👨‍🏭  TypeScript API
 
