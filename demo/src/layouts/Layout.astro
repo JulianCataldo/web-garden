@@ -7,6 +7,7 @@ import ScrollObserver from '@julian_cataldo/astro-scroll-observer/ScrollObserver
 import Base from '@julian_cataldo/astro-base/Base.astro';
 import Resets from '@julian_cataldo/astro-resets/Resets.astro';
 import Lightbox from '@julian_cataldo/astro-lightbox/Lightbox.astro';
+import ColorMode from '@julian_cataldo/astro-color-mode/ColorMode.astro';
 
 import './style.global.scss';
 
@@ -42,6 +43,7 @@ export interface Props {
     <!--  -->
     <Lightbox />
     <!--  -->
+    <ColorMode />
   </Fragment>
 
   <Fragment slot='body'>
@@ -49,7 +51,11 @@ export interface Props {
     <TransitionOverlay speed={1000} color='red' zIndex={99} />
     <!--  -->
     <nav>
-      My Navbar | Some | Link | Foo | Bar | Omelette | Bilbao | ℹ️&nbsp;&nbsp;
+      My Navbar | Some | Link | Foo | Bar | Omelette | Bilbao |
+
+      <button data-color-mode-switch>Toggle COLOR MODE 💡</button>
+
+      | ℹ️&nbsp;&nbsp;
     </nav>
 
     <slot></slot>
@@ -76,6 +82,20 @@ export interface Props {
   }
 </style>
 <style lang='scss' is:global>
+  [data-color-mode-switch] {
+    all: unset;
+    background: black;
+
+    [data-color-mode='dark'] & {
+      background: white;
+      color: black;
+    }
+
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+
   nav {
     opacity: 0;
     transform: translateY(-100%);
