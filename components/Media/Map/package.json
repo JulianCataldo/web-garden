@@ -1,7 +1,7 @@
 {
   "name": "@julian_cataldo/astro-media-map",
   "version": "0.10.5",
-  "description": "",
+  "description": "Embed an interactive map in your webpage. Using Leaflet.js under the hood.",
   "main": "index.js",
   "type": "module",
   "publishConfig": {

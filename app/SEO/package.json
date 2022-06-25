@@ -1,7 +1,7 @@
 {
   "name": "@julian_cataldo/astro-seo",
   "version": "0.10.10",
-  "description": "",
+  "description": "Bare minimum SEO meta tags to make most social networks and Google engine happy.",
   "main": "index.js",
   "type": "module",
   "publishConfig": {

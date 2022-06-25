@@ -1,7 +1,7 @@
 # 🚀  Astro — Media map embed
 
 Embed an interactive map in your webpage.  
-Using [Leaflet.js](https://leafletjs.com) under the hood.
+Uses [Leaflet.js](https://leafletjs.com) under the hood.
 
 ## 📦  Installation
 
