@@ -16,7 +16,7 @@ In your layout component, for example `./src/layouts/Default.astro`:
 ```astro
 ---
 import Base from '@julian_cataldo/astro-base/Base.astro';
-// …
+// ...
 ---
 
 <!-- All properties are optional -->

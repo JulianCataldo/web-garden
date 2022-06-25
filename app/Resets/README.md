@@ -21,7 +21,7 @@ import Resets from '@julian_cataldo/astro-resets/Resets.astro';
 ```
 
 ```astro
-<!-- … -->
+<!-- ... -->
 <head>
   <!-- Place component inside HEAD tag -->
 
@@ -36,9 +36,9 @@ import Resets from '@julian_cataldo/astro-resets/Resets.astro';
     scrollBarKeep={true}
   />
 
-  <!-- … -->
+  <!-- ... -->
 </head>
-<!-- … -->
+<!-- ... -->
 ```
 
 # Suggestions

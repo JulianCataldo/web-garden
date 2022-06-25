@@ -42,7 +42,7 @@ import Link from '@julian_cataldo/astro-link/Link.astro';
 ```
 
 ```astro
-<!-- … -->
+<!-- ... -->
 <body>
   <!-- Place component inside BODY tag -->
 
@@ -55,7 +55,7 @@ import Link from '@julian_cataldo/astro-link/Link.astro';
     Some <strong>external</strong> link, loaded in current tab
   </Link>
 
-  <!-- … -->
+  <!-- ... -->
 </body>
 ```
 

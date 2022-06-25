@@ -22,7 +22,7 @@ import MediaMap from '@julian_cataldo/astro-media-map/MediaMap.astro';
 ```
 
 ```astro
-<!-- … -->
+<!-- ... -->
 <body>
   <!-- Place component inside BODY tag -->
 
@@ -35,7 +35,7 @@ import MediaMap from '@julian_cataldo/astro-media-map/MediaMap.astro';
     attribution={true}
   />
 
-  <!-- … -->
+  <!-- ... -->
 </body>
 ```
 

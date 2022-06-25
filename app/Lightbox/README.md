@@ -21,19 +21,19 @@ import Lightbox from '@julian_cataldo/astro-lightbox/Lightbox.astro';
 ```
 
 ```astro
-<!-- … -->
+<!-- ... -->
 <head>
-  <!-- … -->
+  <!-- ... -->
   <Lightbox />
 </head>
 <body>
-  <!-- … -->
+  <!-- ... -->
 
   <div class='some-wrapper' data-lightbox='true'>
     <Image />
   </div>
 
-  <!-- … -->
+  <!-- ... -->
 </body>
 ```
 

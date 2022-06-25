@@ -18,7 +18,7 @@ import SEO from '@julian_cataldo/astro-seo/SEO.astro';
 ```
 
 ```astro
-<!-- … -->
+<!-- ... -->
 <head>
   <!-- Place component inside HEAD tag -->
 
@@ -30,9 +30,9 @@ import SEO from '@julian_cataldo/astro-seo/SEO.astro';
     siteName={'Le Website'}
   />
 
-  <!-- … -->
+  <!-- ... -->
 </head>
-<!-- … -->
+<!-- ... -->
 ```
 
 # Result

@@ -23,13 +23,13 @@ import Tooltips from '@julian_cataldo/astro-tooltips/Tooltips.astro';
 ```
 
 ```astro
-<!-- … -->
+<!-- ... -->
 <head>
   <!-- Place component inside HEAD tag -->
 
   <Tooltips />
 
-  <!-- … -->
+  <!-- ... -->
 </head>
 ```
 

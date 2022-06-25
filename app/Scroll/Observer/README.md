@@ -28,22 +28,22 @@ import ScrollObserver from '@julian_cataldo/astro-scroll-observer/ScrollObserver
 ```
 
 ```astro
-<!-- … -->
+<!-- ... -->
 <head>
   <!-- Place component inside HEAD tag -->
 
   <ScrollObserver />
 
-  <!-- … -->
+  <!-- ... -->
 </head>
-<!-- … -->
+<!-- ... -->
 ```
 
 Example usage with SCSS:
 
 ```scss
 nav {
-  // …navbar styles…
+  // ...navbar styles…
   // See live demo for complete example
 
   opacity: 0;
@@ -77,16 +77,16 @@ nav {
 ## 🎉  Result
 
 ```html
-<!-- … -->
+<!-- ... -->
 <body
   data-is-scrolling-up="true|false"
   data-is-bottom="true|false"
   data-is-top="true|false"
   data-has-scroll="true|false"
 >
-  <!-- … -->
+  <!-- ... -->
 </body>
-<!-- … -->
+<!-- ... -->
 ```
 
 ---

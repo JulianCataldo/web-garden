@@ -22,7 +22,7 @@ import LicensesReport from '@julian_cataldo/astro-licenses-report/LicensesReport
 ```
 
 ```astro
-<!-- … -->
+<!-- ... -->
 <body>
   <!-- Place component inside BODY tag -->
 
@@ -36,7 +36,7 @@ import LicensesReport from '@julian_cataldo/astro-licenses-report/LicensesReport
     linkText={'URL'}
   />
 
-  <!-- … -->
+  <!-- ... -->
 </body>
 ```
 
