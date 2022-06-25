@@ -24,6 +24,7 @@ for full implementation demo.
 - [📦  Components](#components)
   - [Link, with smart optimizations — \[astro-link\]](#link-with-smart-optimizations--astro-link)
   - [Media map embed — \[astro-media-map\]](#media-map-embed--astro-media-map)
+  - [Packages licenses report generator — \[astro-licenses-report\]](#packages-licenses-report-generator--astro-licenses-report)
 - [👀  Astro demo website](#astro-demo-website)
 - [⚙️  Tooling configurations — \[astro-configs\]](#️tooling-configurations--astro-configs)
 - [🚧  To dos](#to-dos)
@@ -98,6 +99,12 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 ![](./docs/component-media-map.png)
 
 **📦  [See component instructions](./components/Media/Map)**
+
+## Packages licenses report generator — \[astro-licenses-report\]
+
+![](./docs/component-licenses-report.png)
+
+**📦  [See component instructions](./components/LicensesReport)**
 
 # 👀  Astro demo website
 
