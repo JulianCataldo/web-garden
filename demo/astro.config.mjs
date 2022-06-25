@@ -8,8 +8,7 @@ export default defineConfig({
       preprocessorOptions: {
         scss: {
           additionalData: `
-            @use "@julian_cataldo/astro-color-mode/use-mixins.scss" as *;
-            // @use "@julian_cataldo/astro-breakpoints/use-breakpoints.scss" as *;`,
+            @use "@julian_cataldo/astro-color-mode/use-mixins.scss" as *;`,
         },
       },
     },
