@@ -1,5 +1,6 @@
 ---
 import MediaMap from '@julian_cataldo/astro-media-map/MediaMap.astro';
+import Link from '@julian_cataldo/astro-link/Link.astro';
 
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
@@ -28,6 +29,44 @@ import Image from '../components/Image.astro';
     <a href='#' title='Hello!' data-tooltip-placement='bottom'>
       Tooltip bottom
     </a>
+    <hr />
+    <br />
+
+    <h2>Breakpoints</h2>
+    <div>Current : <em class='current-breakpoint'></em></div>
+
+    <h2>Links</h2>
+    <ul>
+      <li>
+        <Link href='/page-a' title='Hello!'>
+          Some <strong>internal</strong> link
+        </Link>
+      </li>
+      <li>
+        <Link href='https://www.juliancataldo.com' title='Hello!'>
+          Some <strong>external</strong> link, loaded in a new tab
+        </Link>
+      </li>
+      <li>
+        <Link
+          href='https://www.juliancataldo.com'
+          title='Hello!'
+          externalInNewTab={false}
+        >
+          Some <strong>external</strong> link, loaded in current tab
+        </Link>
+      </li>
+      <li>
+        <Link href='mailto:john.smith@bigcorp.biz' title='Hello!'>
+          Some <strong>mail</strong> link (email, telephone)
+        </Link>
+      </li>
+      <li>
+        <Link href='tel:8989898989' title='Hello!'>
+          Some <strong>telephone</strong> link (email, telephone)
+        </Link>
+      </li>
+    </ul>
 
     <div class='map-demo'>
       <MediaMap
