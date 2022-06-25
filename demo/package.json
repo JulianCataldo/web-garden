@@ -8,12 +8,13 @@
     "build": "astro build",
     "preview": "astro preview"
   },
-  "devDependencies": {
-    "astro": "^1.0.0-beta.47"
-  },
   "dependencies": {
     "@julian_cataldo/astro-base": "link:../app/Base",
+    "@julian_cataldo/astro-breakpoints": "link:../app/Breakpoints",
+    "@julian_cataldo/astro-color-mode": "link:../app/ColorMode",
+    "@julian_cataldo/astro-licenses-report": "link:../components/LicensesReport",
     "@julian_cataldo/astro-lightbox": "link:../app/Lightbox",
+    "@julian_cataldo/astro-link": "link:../components/Link",
     "@julian_cataldo/astro-media-map": "link:../components/Media/Map",
     "@julian_cataldo/astro-prefetch": "link:../app/Prefetch",
     "@julian_cataldo/astro-resets": "link:../app/Resets",
@@ -21,6 +22,7 @@
     "@julian_cataldo/astro-seo": "link:../app/SEO",
     "@julian_cataldo/astro-tooltips": "link:../app/Tooltips",
     "@julian_cataldo/astro-transition": "link:../app/Transition",
+    "astro": "1.0.0-beta.47",
     "sass": "^1.52.3"
   }
 }
