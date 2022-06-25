@@ -21,9 +21,9 @@ function scrollHandler() {
   }
   // console.log({ accumulation, delta });
 
-  document.body.setAttribute('data-is-scrolling-up', '' + isScrollingUp);
-  document.body.setAttribute('data-is-bottom', '' + isBottom);
-  document.body.setAttribute('data-is-top', '' + isTop);
+  document.body.setAttribute('data-is-scrolling-up', `${isScrollingUp}`);
+  document.body.setAttribute('data-is-bottom', `${isBottom}`);
+  document.body.setAttribute('data-is-top', `${isTop}`);
 
   prevPos = pos;
   // console.log({ pos });
