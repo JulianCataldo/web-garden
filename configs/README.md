@@ -1,27 +1,8 @@
 # Astro configurations collection
 
-Here lies some re-usable tooling settings.
-
-Languages:
-
-- JS
-- TS
-- Astro
-- Vue
-- JSX
-- TSX
-- SCSS
-- CSS
-
-Tools:
-
-- Prettier
-- ESlint
-- Stylelint
-- Editorconfig
-- Typescript
-- Commitlint
-- VS Code
+Here lies some re-usable tooling settings.  
+Languages: JS, TS, Astro, Vue, JSX, TSX, SCSS, CSS.  
+Tools: Prettier, ESlint, Stylelint, Editorconfig, Typescript, Commitlint, VS Code.
 
 ---
 
@@ -296,7 +277,7 @@ In your `settings.json`:
   - [ ] Nested code, even less correct settings
 - [ ] Init root package for config distribution
 - [ ] Fix broken ESLint in Astro file  
-      Doc: https://github.com/ota-meshi/eslint-plugin-astro
+       Doc: https://github.com/ota-meshi/eslint-plugin-astro
 
 ---
 
