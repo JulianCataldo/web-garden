@@ -62,25 +62,30 @@ const report =
     })) || [];
 ---
 
-<table class='licenses-report'>
-  <thead>
-    <th>{props.nameText}</th>
-    <th>{props.authorText}</th>
-    <th>{props.licenseText}</th>
-    <th>{props.linkText}</th>
+<table class="licenses-report">
+  <thead class="table-header">
+    <tr class="row">
+      <th class="header name">{props.nameText}</th>
+      <th class="header author">{props.authorText}</th>
+      <th class="header license">{props.licenseText}</th>
+      <th class="header link">{props.linkText}</th>
+    </tr>
   </thead>
 
-  <tbody>
+  <tbody class="table-body">
     {report.map((row) => (
-      <tr>
-        <td class="name">{row.name}</td>
-        <td class="author">
-          {typeof row.author === 'string'
+      <tr class="row">
+        <td class="column name">{row.name}</td>
+
+        <td class="column author">
+          {typeof row.author === "string"
             ? row.author
-            : row?.author?.name || '-'}
+            : row?.author?.name || "-"}
         </td>
-        <td class="license">{row.license}</td>
-        <td>
+
+        <td class="column license">{row.license}</td>
+
+        <td class="column link">
           <a
             class="link is-external"
             href={row.homepage || row.repository.url}
