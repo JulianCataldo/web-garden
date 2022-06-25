@@ -6,17 +6,25 @@ This component detects external / anchor / same domain / mail / telephone
 
 # Features
 
-- `rel="noopener nofollow"`, `target="_blank"` and **badge** icon for external links (⎋)
+- External links
+  - **Badge** icon as a hint for users (⎋)
+  - `rel="noopener nofollow"` for search engines optimization
+  - `target="_blank"` for opening link in a new tab
 - JS-based **obfuscation** for `mailto:` and `tel:` links
 - Applying CSS classes for specific link types
 
+Some of these features can be disabled if needed.
+
 ## Classes
 
+- `link`
 - `is-external`
 - `is-hash`
 - `is-mail`
 - `is-tel`
 - `has-hint`
+
+You can then style these globally with `:global(.link.is-mail)` for example.
 
 ## 📦  Installation
 
