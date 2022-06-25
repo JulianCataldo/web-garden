@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-  "private": false,
   "publishConfig": {
     "access": "public"
+  },
+  "homepage": "https://www.juliancataldo.com",
+  "bugs": {
+    "url": "https://github.com/JulianCataldo/astro/issues"
   },
   "repository": {
     "type": "git",
