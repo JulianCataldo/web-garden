@@ -48,20 +48,24 @@ import LicensesReport from '@julian_cataldo/astro-licenses-report/LicensesReport
 
 ```html
 <table class="licenses-report">
-  <thead>
-    <tr>
-      <th>Package</th>
-      <th>Author</th>
-      <th>License</th>
-      <th>URL</th>
+  <thead class="table-header">
+    <tr class="row">
+      <th class="header name">Package</th>
+      <th class="header author">Author</th>
+      <th class="header license">License</th>
+      <th class="header link">URL</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <td class="name">@astrojs/compiler</td>
-      <td class="author">withastro</td>
-      <td class="license">MIT</td>
-      <td>
+
+  <tbody class="table-body">
+    <tr class="row">
+      <td class="column name">@astrojs/compiler</td>
+
+      <td class="column author">withastro</td>
+
+      <td class="column license">MIT</td>
+
+      <td class="column link">
         <a
           class="link is-external"
           href="https://astro.build"
@@ -72,6 +76,7 @@ import LicensesReport from '@julian_cataldo/astro-licenses-report/LicensesReport
         </a>
       </td>
     </tr>
+
     <!-- ... -->
   </tbody>
 </table>
