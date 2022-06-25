@@ -22,8 +22,8 @@ for full implementation demo.
   - [SEO — \[astro-seo\]](#seo--astro-seo)
   - [Traffic analysis — \[astro-analytics\]](#traffic-analysis--astro-analytics)
 - [📦  Components](#components)
-  - [Media map embed — \[astro-media-map\]](#media-map-embed--astro-media-map)
   - [Link, with smart optimizations — \[astro-link\]](#link-with-smart-optimizations--astro-link)
+  - [Media map embed — \[astro-media-map\]](#media-map-embed--astro-media-map)
 - [👀  Astro demo website](#astro-demo-website)
 - [⚙️  Tooling configurations — \[astro-configs\]](#️tooling-configurations--astro-configs)
 - [🚧  To dos](#to-dos)
@@ -89,15 +89,15 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 
 # 📦  Components
 
+## Link, with smart optimizations — \[astro-link\]
+
+**📦  [See component instructions](./components/Link)**
+
 ## Media map embed — \[astro-media-map\]
 
 ![](./docs/component-media-map.png)
 
 **📦  [See component instructions](./components/Media/Map)**
-
-## Link, with smart optimizations — \[astro-link\]
-
-**📦  [See component instructions](./components/Link)**
 
 # 👀  Astro demo website
 
@@ -114,6 +114,7 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
        to  
        `import Tooltips from '@julian_cataldo/astro-tooltips';`
 - [ ] Find a way to launch only necessary tests when versioning
+- [ ] Implement dev / prod mode for debugging outputs
 
 ---
 
