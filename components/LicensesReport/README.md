@@ -106,7 +106,7 @@ export interface Props {
 
 [Live website demo documentation](../../demo)
 
-See [/demo/src/layouts/Layout.astro](../../demo/src/layouts/Layout.astro)
+See [/demo/src/pages/index.astro](../../demo/src/pages/index.astro)
 for full implementation demo.
 
 ---
