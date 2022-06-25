@@ -1,6 +1,6 @@
 {
   "name": "@julian_cataldo/astro-resets",
-  "version": "0.10.5",
+  "version": "0.10.6",
   "description": "Common CSS resets in a configurable Astro component. Only needed CSS is injected into critical path.",
   "main": "index.js",
   "type": "module",

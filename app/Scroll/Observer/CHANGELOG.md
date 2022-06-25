@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.10](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-scroll-observer@0.10.9...@julian_cataldo/astro-scroll-observer@0.10.10) (2022-06-25)
+
+
+### Bug Fixes
+
+* prefer template strings ([8c552ee](https://github.com/JulianCataldo/astro/commit/8c552eeb01b379e67d8033480df09c9afc51d54c))
+
+
+
 ## [0.10.9](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-scroll-observer@0.10.8...@julian_cataldo/astro-scroll-observer@0.10.9) (2022-06-24)
 
 **Note:** Version bump only for package @julian_cataldo/astro-scroll-observer

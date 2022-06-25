@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.6](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-resets@0.10.5...@julian_cataldo/astro-resets@0.10.6) (2022-06-25)
+
+**Note:** Version bump only for package @julian_cataldo/astro-resets
+
+
+
+
+
 ## [0.10.5](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-resets@0.10.4...@julian_cataldo/astro-resets@0.10.5) (2022-06-22)
 
 **Note:** Version bump only for package @julian_cataldo/astro-resets

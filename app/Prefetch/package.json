@@ -1,6 +1,6 @@
 {
   "name": "@julian_cataldo/astro-prefetch",
-  "version": "0.10.10",
+  "version": "0.10.11",
   "description": "This component capture mouse hovering on links with internal URLs. Then, it will prefetch the HTML document beforehand.",
   "main": "index.js",
   "type": "module",
