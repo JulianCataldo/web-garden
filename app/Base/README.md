@@ -19,6 +19,7 @@ import Base from '@julian_cataldo/astro-base/Base.astro';
 // …
 ---
 
+<!-- All properties are optional -->
 <Base
   lang='es'
   htmlClasses={['some-class', 'doby-doba']}
@@ -28,7 +29,7 @@ import Base from '@julian_cataldo/astro-base/Base.astro';
   jsEnabledClass={false}
 >
   <Fragment slot='head'>
-    <!-- Put things in HEAD tag  -->
+    <!-- Things injected in HEAD -->
     <style is:inline>
       .some-class {
         color: red;
@@ -37,7 +38,7 @@ import Base from '@julian_cataldo/astro-base/Base.astro';
   </Fragment>
 
   <Fragment slot='body'>
-    <!-- Put things in BODY tag  -->
+    <!-- Things injected inside BODY -->
     <nav>My navbar</nav>
 
     <!-- Page content slot  -->
@@ -74,7 +75,7 @@ import Base from '@julian_cataldo/astro-base/Base.astro';
   <body class="other-class dabadi-dabada" id="much-id">
     <nav>My navbar</nav>
 
-    <!-- Page content slot  -->
+    <!-- Page content slot -->
     <div>My page content</div>
   </body>
 </html>

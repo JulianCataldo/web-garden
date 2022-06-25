@@ -31,8 +31,9 @@ import Prefetch from '@julian_cataldo/astro-prefetch/Prefetch.astro';
 ```astro
 <!-- … -->
 <head>
-  <!-- place component inside HEAD tag -->
+  <!-- Place component inside HEAD tag -->
 
+  <!-- 'max' property is optional -->
   <Prefetch max={8} />
 
   <!-- … -->

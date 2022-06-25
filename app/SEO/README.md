@@ -20,8 +20,9 @@ import SEO from '@julian_cataldo/astro-seo/SEO.astro';
 ```astro
 <!-- … -->
 <head>
-  <!-- place component inside HEAD tag -->
+  <!-- Place component inside HEAD tag -->
 
+  <!-- All properties are mandatory -->
   <SEO
     image={'/some_image_url-preferably_absolute.jpg'}
     title={'Le cool title'}

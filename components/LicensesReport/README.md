@@ -24,8 +24,9 @@ import LicensesReport from '@julian_cataldo/astro-licenses-report/LicensesReport
 ```astro
 <!-- … -->
 <body>
-  <!-- place component inside BODY tag -->
+  <!-- Place component inside BODY tag -->
 
+  <!-- All properties are optional -->
   <LicensesReport
     useDevDependencies={true}
     depth={2}
