@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.0](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-configs@0.10.3...@julian_cataldo/astro-configs@0.11.0) (2022-06-25)
+
+
+### Features
+
+* convert commitlint config to typescript ([76bfead](https://github.com/JulianCataldo/astro/commit/76bfead3deaeb26106e1a61cc4fc807303859c1a))
+
+
+
 ## [0.10.3](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-configs@0.10.2...@julian_cataldo/astro-configs@0.10.3) (2022-06-24)
 
 **Note:** Version bump only for package @julian_cataldo/astro-configs
