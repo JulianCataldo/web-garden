@@ -74,8 +74,6 @@ export default defineConfig({
         scss: {
           additionalData: `
             @use "@julian_cataldo/astro-color-mode/use-mixins.scss" as *;
-            // @use...
-            // ...
             `,
         },
       },
