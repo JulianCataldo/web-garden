@@ -1,6 +1,7 @@
 # Demo website
 
-With all current repository components demonstrated.
+This is a kitchen sink,  
+with all current repository components demonstrated.
 
 ---
 

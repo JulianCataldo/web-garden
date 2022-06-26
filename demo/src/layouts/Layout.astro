@@ -8,6 +8,7 @@ import Base from '@julian_cataldo/astro-base/Base.astro';
 import Resets from '@julian_cataldo/astro-resets/Resets.astro';
 import Lightbox from '@julian_cataldo/astro-lightbox/Lightbox.astro';
 import ColorMode from '@julian_cataldo/astro-color-mode/ColorMode.astro';
+import Breakpoints from '@julian_cataldo/astro-breakpoints/Breakpoints.astro';
 
 import './style.global.scss';
 
@@ -44,9 +45,19 @@ export interface Props {
     <Lightbox />
     <!--  -->
     <ColorMode />
+    <!--  -->
   </Fragment>
 
   <Fragment slot='body'>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <Breakpoints />
+    <!--  -->
     <!--  -->
     <TransitionOverlay speed={1000} color='red' zIndex={99} />
     <!--  -->

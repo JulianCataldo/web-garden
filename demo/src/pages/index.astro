@@ -27,7 +27,9 @@ import Image from '../components/Image.astro';
     <br />
 
     <h2>Breakpoints</h2>
-    <div>Current : <em class='current-breakpoint'></em></div>
+    ℹ️  <em>Resize window!</em>
+    <div>Current : <strong><em class='current-breakpoint'></em></strong></div>
+    <textarea id='bp-output'></textarea>
 
     <h2>Links</h2>
     <ul>
@@ -85,7 +87,73 @@ import Image from '../components/Image.astro';
   </main>
 </Layout>
 
-<style>
+<script>
+  import useBreakpoints from '@julian_cataldo/astro-breakpoints/use-breakpoints.ts';
+
+  const bpOutput = document.getElementById('bp-output');
+  const randomWords = [
+    'Tokyo',
+    'Austin',
+    'Paris',
+    'Ankara',
+    'Trifouilly-les-Oies',
+    'Bangkok',
+    'Mexico',
+    'Dresde',
+    'Marseille',
+  ];
+  function outputCurrentBp(currentBp) {
+    const index = Math.floor(Math.random() * randomWords.length);
+    const rWord = randomWords[index];
+    bpOutput.value = `${currentBp} - ${rWord}\n${bpOutput.value}`;
+    console.log({ currentBp });
+  }
+  const currentBp = useBreakpoints(outputCurrentBp);
+</script>
+
+<style lang='scss'>
+  #bp-output {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    height: 7rem;
+    width: 15rem;
+  }
+
+  .current-breakpoint {
+    font-size: 200%;
+
+    @include breakpoint(xs) {
+      &::before {
+        content: 'Extra Small';
+      }
+    }
+    @include breakpoint(sm) {
+      &::before {
+        content: 'Small';
+      }
+    }
+    @include breakpoint(md) {
+      &::before {
+        content: 'Medium';
+      }
+    }
+    @include breakpoint(lg) {
+      &::before {
+        content: 'Large';
+      }
+    }
+    @include breakpoint(xl) {
+      &::before {
+        content: 'Extra Large';
+      }
+    }
+    @include breakpoint(xxl) {
+      &::before {
+        content: 'Extra Extra Large';
+      }
+    }
+  }
+
   :root {
     --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
   }
@@ -110,6 +178,7 @@ import Image from '../components/Image.astro';
     100% {
       background-position-y: 0%;
     }
+
     50% {
       background-position-y: 80%;
     }
