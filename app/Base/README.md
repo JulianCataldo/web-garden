@@ -81,8 +81,9 @@ import Base from '@julian_cataldo/astro-base/Base.astro';
 </html>
 ```
 
-The `js` class is added to HTML tag, critically.
-That way, you can handle CSS for users with or without JS enabled.
+The `js` class is added to HTML tag, critically.  
+That way, you can handle CSS for users with or without JS enabled
+with **`.js &`** / **`:not(.js) &`** SCSS selectors.
 
 # 👨‍🏭  TypeScript API
 
