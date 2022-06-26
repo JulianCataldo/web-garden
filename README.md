@@ -5,8 +5,13 @@ taking advantage of Astro strengths as much as possible.
 
 Focus is on common web patterns and progressive enhancements.
 
-See [/demo/src/layouts/Layout.astro](demo/src/layouts/Layout.astro)
+See [./demo/src/layouts/Layout.astro](./demo/src/layouts/Layout.astro) and [./demo/src/pages/index.astro](./demo/src/pages/index.astro)
 for full implementation demo.
+
+> **Note**  
+> Astro is still in Beta, so is this collection.  
+> Components API might change a bit, though not drastically.  
+> Thanks for you understanding ✌️.
 
 ---
 
@@ -32,6 +37,7 @@ for full implementation demo.
 - [✅  Tests](#tests)
 - [🧑‍🚀  Development](#development)
   - [Commands](#commands)
+  - [🦾  Contribute](#contribute)
 
 ---
 
@@ -121,7 +127,7 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 
 # 🚧  To dos
 
-- [ ] Fix default package import  
+- [ ] Fix default package import when possible, as client side JS breaks for now  
        `import Tooltips from '@julian_cataldo/astro-tooltips/Tooltips.astro';`  
        to  
        `import Tooltips from '@julian_cataldo/astro-tooltips';`
@@ -181,6 +187,12 @@ pnpm run version
 # Release updated packages on NPM public registry
 pnpm run publish
 ```
+
+## 🦾  Contribute
+
+Any remark, feature or pull request can be done is this GitHub repository and issues tracker.  
+Committing is linted following [conventional commits conventions](http://conventionalcommits.org).  
+This allows an easy and automatic versioning, change-logging, and NPM publishing workflow.
 
 ---
 
