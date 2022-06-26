@@ -8,7 +8,7 @@ export default defineConfig({
       preprocessorOptions: {
         scss: {
           additionalData: `
-            @use "@julian_cataldo/astro-color-mode/use-mixins.scss" as *;`,
+            @use "@julian_cataldo/astro-color-mode/use-color-mode.scss" as *;
         },
       },
     },
