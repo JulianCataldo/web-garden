@@ -2,7 +2,7 @@
 
 Provides system or user-defined color scheme preference, with a toggle mechanism.  
 Settings are persisted, component is progressively enhanced and flash of mis-styled content avoided.  
-Also, it will provide an easier way to target theme with CSS / SCSS / JS.
+Also, this provides an easier way to target theme with CSS selector / SCSS mixins / JS DOM selector.
 
 > **Warning**  
 > 🚧  Work in progress
