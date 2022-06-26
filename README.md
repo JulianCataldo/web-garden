@@ -152,6 +152,7 @@ Cypress:
 - [x] App/Base
 - [x] App/Prefetch
 - [ ] App/Resets
+- [ ] App/Breakpoints
 - [ ] App/ColorMode
 - [x] App/Scroll/Observer
 - [ ] App/SEO
