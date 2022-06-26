@@ -94,7 +94,9 @@ export default defineConfig({
 
 ## To do
 
-- [ ] Full native `@media` query support for SCSS mixin
+- [ ] Full native `@media` query support for SCSS mixins
+- [ ] SCSS mixins demo usage
+- [ ] Thorough demo video for all user scenarios
 
 ---
 
