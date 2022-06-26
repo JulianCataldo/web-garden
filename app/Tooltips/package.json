@@ -7,7 +7,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://www.juliancataldo.com",
+  "author": "Julian Cataldo",
+  "homepage": "https://github.com/JulianCataldo/astro/tree/master/app/Tooltips",
   "bugs": {
     "url": "https://github.com/JulianCataldo/astro/issues"
   },
@@ -29,7 +30,6 @@
     "javascript",
     "links"
   ],
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "tippy.js": "^6.3.7"

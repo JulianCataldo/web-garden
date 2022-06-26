@@ -7,7 +7,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://www.juliancataldo.com",
+  "author": "Julian Cataldo",
+  "homepage": "https://github.com/JulianCataldo/astro/tree/master/app/Prefetch",
   "bugs": {
     "url": "https://github.com/JulianCataldo/astro/issues"
   },
@@ -28,6 +29,5 @@
     "javascript",
     "links"
   ],
-  "author": "",
   "license": "ISC"
 }

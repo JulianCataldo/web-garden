@@ -6,7 +6,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://www.juliancataldo.com",
+  "author": "Julian Cataldo",
+  "homepage": "https://github.com/JulianCataldo/astro/tree/master/configs",
   "bugs": {
     "url": "https://github.com/JulianCataldo/astro/issues"
   },
@@ -37,7 +38,6 @@
     "vanilla",
     "javascript"
   ],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.0.0",

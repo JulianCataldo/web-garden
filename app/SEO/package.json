@@ -7,7 +7,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://www.juliancataldo.com",
+  "author": "Julian Cataldo",
+  "homepage": "https://github.com/JulianCataldo/astro/tree/master/app/SEO",
   "bugs": {
     "url": "https://github.com/JulianCataldo/astro/issues"
   },
@@ -29,6 +30,5 @@
     "html",
     "seo"
   ],
-  "author": "",
   "license": "ISC"
 }

@@ -7,7 +7,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://www.juliancataldo.com",
+  "author": "Julian Cataldo",
+  "homepage": "https://github.com/JulianCataldo/astro/tree/master/app/Lightbox",
   "bugs": {
     "url": "https://github.com/JulianCataldo/astro/issues"
   },
@@ -32,6 +33,5 @@
     "vanilla",
     "javascript"
   ],
-  "author": "",
   "license": "ISC"
 }

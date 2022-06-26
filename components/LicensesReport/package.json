@@ -7,7 +7,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://www.juliancataldo.com",
+  "author": "Julian Cataldo",
+  "homepage": "https://github.com/JulianCataldo/astro/tree/master/components/LicensesReport",
   "bugs": {
     "url": "https://github.com/JulianCataldo/astro/issues"
   },
@@ -34,7 +35,6 @@
     "developer",
     "credits"
   ],
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "@wbmnky/license-report-generator": "^2.1.3"

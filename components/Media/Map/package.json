@@ -7,7 +7,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://www.juliancataldo.com",
+  "author": "Julian Cataldo",
+  "homepage": "https://github.com/JulianCataldo/astro/tree/master/components/Media/Map",
   "bugs": {
     "url": "https://github.com/JulianCataldo/astro/issues"
   },
@@ -32,7 +33,6 @@
     "vanilla",
     "javascript"
   ],
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "leaflet": "^1.8.0"
