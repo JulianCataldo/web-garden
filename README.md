@@ -22,6 +22,7 @@ for full implementation demo.
   - [Color mode, with user override — \[astro-color-mode\]](#color-mode-with-user-override--astro-color-mode)
   - [Full page transition — \[astro-transition\]](#full-page-transition--astro-transition)
   - [Scroll observer — \[astro-scroll-observer\]](#scroll-observer--astro-scroll-observer)
+  - [Breakpoints handlers with (S)CSS / DOM / JS — \[astro-breakpoints\]](#breakpoints-handlers-with-scss--dom--js--astro-breakpoints)
   - [URLs prefetching — \[astro-prefetch\]](#urls-prefetching--astro-prefetch)
   - [Tooltips — \[astro-tooltips\]](#tooltips--astro-tooltips)
   - [Lightbox — \[astro-lightbox\]](#lightbox--astro-lightbox)
@@ -70,6 +71,10 @@ https://user-images.githubusercontent.com/603498/174468167-4f3cdbe3-ec90-49f6-8c
 ---
 
 **📦  [See component instructions](./app/Scroll/Observer)**
+
+## Breakpoints handlers with (S)CSS / DOM / JS — \[astro-breakpoints\]
+
+**📦  [See component instructions](./app/Breakpoints)**
 
 ## URLs prefetching — \[astro-prefetch\]
 
