@@ -1,7 +1,7 @@
 # 🚀  Astro — Color mode, with user override
 
 Provides system or user-defined color scheme preference, with a toggle mechanism.  
-Settings are persisted, component is progressively enhanced and flash of unstyled content avoided.  
+Settings are persisted, component is progressively enhanced and flash of mis-styled content avoided.  
 Also, it will provide an easier way to target theme with CSS / SCSS / JS.
 
 > **Warning**  
