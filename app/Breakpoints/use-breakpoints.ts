@@ -13,11 +13,13 @@ function getCurrentBreakpoint() {
 }
 
 export default function useBreakpoints(onUpdateCallback: (bp: string) => void) {
+  const currentBp = getCurrentBreakpoint();
   if (onUpdateCallback) {
+    onUpdateCallback(currentBp);
     window.addEventListener(
       `resize`,
       throttle(() => onUpdateCallback(getCurrentBreakpoint()), 100),
     );
   }
-  return getCurrentBreakpoint();
+  return currentBp;
 }
