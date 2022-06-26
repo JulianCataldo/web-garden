@@ -15,6 +15,7 @@ SCSS mixin, JS hook and a DOM data attribute, all share the same responsive scal
 [Live website demo documentation](../../demo)
 
 See [/demo/src/layouts/Layout.astro](../../demo/src/layouts/Layout.astro)
+and [/demo/src/pages/index.astro](../../demo/src/pages/index.astro)
 for full implementation demo.
 
 ---

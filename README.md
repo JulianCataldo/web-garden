@@ -197,7 +197,7 @@ pnpm run publish
 
 ## 🦾  Contribute
 
-Any remark, feature or pull request can be done is this GitHub repository and issues tracker.  
+Any remark, feature or pull request can be done in this GitHub repository and issues tracker.  
 Committing is linted following [conventional commits conventions](http://conventionalcommits.org).  
 This allows an easy and automatic versioning, change-logging, and NPM publishing workflow.
 
