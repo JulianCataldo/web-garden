@@ -1,0 +1,52 @@
+---
+// Silence is _
+---
+
+<div data-breakpoint-css></div>
+
+<script is:inline>
+  // CRITICAL
+  function assignCurrentBreakpointToRoot() {
+    const cssPlaceholder = document.querySelector('[data-breakpoint-css]');
+    const currentBreakpoint = window
+      .getComputedStyle(cssPlaceholder, ':before')
+      .getPropertyValue('content')
+      .replace(/"/g, '');
+
+    const root = document.getElementsByTagName('html')[0];
+    root.setAttribute('data-breakpoint', currentBreakpoint || 'md');
+  }
+  assignCurrentBreakpointToRoot();
+</script>
+
+<script>
+  const root = document.getElementsByTagName('html')[0];
+  window.addEventListener(`resize`, () => {
+    const cssPlaceholder = document.querySelector('[data-breakpoint-css]');
+    const currentBreakpoint = window
+      .getComputedStyle(cssPlaceholder, ':before')
+      .getPropertyValue('content')
+      .replace(/"/g, '');
+
+    root.setAttribute('data-breakpoint', currentBreakpoint || 'md');
+  });
+</script>
+
+<style lang='scss' is:global>
+  [data-breakpoint-css] {
+    display: none;
+
+    &::before {
+      // Default
+      content: 'xs';
+    }
+
+    @each $breakpoint, $key in $breakpoints {
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        &::before {
+          content: '#{$breakpoint}';
+        }
+      }
+    }
+  }
+</style>
