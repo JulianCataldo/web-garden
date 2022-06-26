@@ -3,18 +3,21 @@
 ---
 
 <script is:inline>
-  const root = document.getElementsByTagName('html')[0];
-  const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)');
+  function assignCurrentColorModeToRoot() {
+    const root = document.getElementsByTagName('html')[0];
+    const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)');
 
-  let colorMode = mediaQueryDark.matches ? 'dark' : 'light';
+    let colorMode = mediaQueryDark.matches ? 'dark' : 'light';
 
-  mediaQueryDark.addEventListener('change', (event) => {
-    colorMode = event.matches ? 'dark' : 'light';
-    root.setAttribute('data-color-mode', colorMode);
-  });
-  const savedSetting = localStorage.getItem('colorMode');
+    mediaQueryDark.addEventListener('change', (event) => {
+      colorMode = event.matches ? 'dark' : 'light';
+      root.setAttribute('data-color-mode', colorMode);
+    });
+    const savedSetting = localStorage.getItem('colorMode');
 
-  root.setAttribute('data-color-mode', savedSetting || colorMode);
+    root.setAttribute('data-color-mode', savedSetting || colorMode);
+  }
+  assignCurrentColorModeToRoot();
 </script>
 
 <script>
