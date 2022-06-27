@@ -72,6 +72,50 @@ import Link from '@julian_cataldo/astro-link/Link.astro';
 </a>
 ```
 
+## 🎨  Styling
+
+As all component in this collection, you are responsible to bring style to them.  
+This will give you maximum freedom, still you can prevent most of potential styles leaking when needed.
+
+Of course, as links are ubiquitous in any website, it's totally valid to style them globally with `is:global`.
+
+---
+
+Semi-scoped styles inside parent (it won't effect upstream, only downstream):
+
+```astro
+<style lang='scss'>
+  .my-parent-with-custom-links {
+    // Use `:global` as a localized escape hatch:
+
+    & :global(.link) {
+      font-weight: 700;
+      color: green;
+    }
+    & :global(.link.is-tel) {
+      background: yellow;
+    }
+    & :global(.link.is-mail) {
+      color: red;
+    }
+  }
+</style>
+```
+
+-**OR**-
+
+Global styles (in your layout component, for example):
+
+```astro
+<style lang='scss' is:global>
+  a.link {
+    font-weight: 700;
+    color: green;
+  }
+  // ...
+</style>
+```
+
 # 👨‍🏭  TypeScript API
 
 ```ts
