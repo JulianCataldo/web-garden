@@ -19,10 +19,10 @@ export interface Props {
   externalInNewTab?: boolean;
 }
 const props = { ...Astro.props } as Props;
-
+/* ———————————————————————————————————————————— Typeguards + Fallbacks —————— */
 if (typeof props.href !== 'string') {
   props.href = '#';
-  console.warn('> href is wrong');
+  console.warn('> Missing `href` property for <Link>');
 }
 if (typeof props.title !== 'string') {
   props.title = null;
@@ -33,6 +33,7 @@ if (typeof props.externalHint !== 'boolean') {
 if (typeof props.externalInNewTab !== 'boolean') {
   props.externalInNewTab = true;
 }
+/* —————————————————————————————————————————————————————————————————————————— */
 
 /* Link type(s) */
 const isExternal = props.href.startsWith('http');
