@@ -1,4 +1,4 @@
-# Astro components and configurations collection
+# 🚀  Astro components and configurations collection
 
 Here lies some re-usable components and tooling settings,
 taking advantage of Astro strengths as much as possible.
@@ -15,7 +15,7 @@ for full implementation demo.
 
 ---
 
-- [Astro components and configurations collection](#astro-components-and-configurations-collection)
+- [🚀  Astro components and configurations collection](#astro-components-and-configurations-collection)
 - [📦  Application-level components](#application-level-components)
   - [Base document enclosure — \[astro-base\]](#base-document-enclosure--astro-base)
   - [CSS Resets — \[astro-resets\]](#css-resets--astro-resets)
@@ -32,6 +32,12 @@ for full implementation demo.
   - [Link, with smart optimizations — \[astro-link\]](#link-with-smart-optimizations--astro-link)
   - [Media map embed — \[astro-media-map\]](#media-map-embed--astro-media-map)
   - [Packages licenses report generator — \[astro-licenses-report\]](#packages-licenses-report-generator--astro-licenses-report)
+- [🚀  External projects](#external-projects)
+  - [Components](#components-1)
+    - [SVG icon from external providers — \[astro-icon\]](#svg-icon-from-external-providers--astro-icon)
+    - [Lazy loaded responsive image — \[astro-imagetools\]](#lazy-loaded-responsive-image--astro-imagetools)
+    - [Embed Youtube / Twitter media — \[astro-embed\]](#embed-youtube--twitter-media--astro-embed)
+    - [Sitemap generation — \[astro-sitemap\]](#sitemap-generation--astro-sitemap)
 - [👀  Astro demo website](#astro-demo-website)
 - [⚙️  Tooling configurations — \[astro-configs\]](#️tooling-configurations--astro-configs)
 - [🚧  To dos](#to-dos)
@@ -121,6 +127,26 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 ![](./docs/component-licenses-report.png)
 
 **📦  [See component instructions](./components/LicensesReport)**
+
+# 🚀  External projects
+
+## Components
+
+### SVG icon from external providers — \[astro-icon\]
+
+**📦  [See component instructions](https://github.com/RafidMuhymin/astro-imagetools)**
+
+### Lazy loaded responsive image — \[astro-imagetools\]
+
+**📦  [See component instructions](https://github.com/natemoo-re/astro-icon)**
+
+### Embed Youtube / Twitter media — \[astro-embed\]
+
+**📦  [See component instructions](https://github.com/astro-community/astro-embed)**
+
+### Sitemap generation — \[astro-sitemap\]
+
+**📦  [See component instructions](https://github.com/withastro/astro)**
 
 # 👀  Astro demo website
 
