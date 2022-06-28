@@ -4,9 +4,13 @@ import throttle from 'lodash-es/throttle';
 let prevPos = 0;
 let isScrollingUp = false;
 
-document.body.setAttribute('data-is-scrolling-up', 'false');
-document.body.setAttribute('data-is-bottom', 'false');
-document.body.setAttribute('data-is-top', 'true');
+function flip(attr: string, state: boolean) {
+  document.body.setAttribute(`data-${attr}`, `${state}`);
+}
+
+flip('is-scrolling-up', false);
+flip('is-bottom', false);
+flip('is-top', true);
 
 function scrollHandler() {
   const pos = window.scrollY;
@@ -21,9 +25,9 @@ function scrollHandler() {
   }
   // console.log({ accumulation, delta });
 
-  document.body.setAttribute('data-is-scrolling-up', `${isScrollingUp}`);
-  document.body.setAttribute('data-is-bottom', `${isBottom}`);
-  document.body.setAttribute('data-is-top', `${isTop}`);
+  flip('is-scrolling-up', isScrollingUp);
+  flip('is-bottom', isBottom);
+  flip('is-top', isTop);
 
   prevPos = pos;
   // console.log({ pos });
@@ -42,8 +46,8 @@ window.addEventListener('load', () => {
   // console.log({ documentHeight, windowHeight });
 
   if (documentHeight / windowHeight > 2) {
-    document.body.setAttribute('data-has-scroll', 'true');
+    flip('has-scroll', true);
   } else {
-    document.body.setAttribute('data-has-scroll', 'false');
+    flip('has-scroll', false);
   }
 });
