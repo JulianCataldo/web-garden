@@ -22,6 +22,7 @@
     "@julian_cataldo/astro-seo": "link:../app/SEO",
     "@julian_cataldo/astro-tooltips": "link:../app/Tooltips",
     "@julian_cataldo/astro-transition": "link:../app/Transition",
+    "@wbmnky/license-report-generator": "^2.1.3",
     "astro": "1.0.0-beta.47",
     "sass": "^1.52.3"
   }
