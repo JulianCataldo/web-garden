@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.0](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-media-map@0.10.7...@julian_cataldo/astro-media-map@0.11.0) (2022-06-28)
+
+
+### Features
+
+* better defaults for media map ([e198a36](https://github.com/JulianCataldo/astro/commit/e198a364989e5d8571d1357b3331d4ae2ce9dee6))
+* better defaults properties ([cc55aec](https://github.com/JulianCataldo/astro/commit/cc55aecd0ea8051ab268c391cb5a28372d7ca896))
+
+
+
 ## [0.10.7](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-media-map@0.10.6...@julian_cataldo/astro-media-map@0.10.7) (2022-06-26)
 
 **Note:** Version bump only for package @julian_cataldo/astro-media-map

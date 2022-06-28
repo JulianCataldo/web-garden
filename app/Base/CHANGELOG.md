@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.0](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-base@0.11.5...@julian_cataldo/astro-base@0.12.0) (2022-06-28)
+
+
+### Features
+
+* better defaults for app base ([ba9ee93](https://github.com/JulianCataldo/astro/commit/ba9ee93167d59ac805b07ee34573b262b428be7a))
+* better defaults properties ([cc55aec](https://github.com/JulianCataldo/astro/commit/cc55aecd0ea8051ab268c391cb5a28372d7ca896))
+
+
+
 ## [0.11.5](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-base@0.11.4...@julian_cataldo/astro-base@0.11.5) (2022-06-26)
 
 **Note:** Version bump only for package @julian_cataldo/astro-base

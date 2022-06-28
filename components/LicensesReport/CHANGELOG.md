@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.0](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-licenses-report@0.11.1...@julian_cataldo/astro-licenses-report@0.12.0) (2022-06-28)
+
+
+### Features
+
+* better defaults for licenses report ([09e1e42](https://github.com/JulianCataldo/astro/commit/09e1e42609bbd082f3dec43f0a19ebbdd0b537b7))
+
+
+
 ## [0.11.1](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-licenses-report@0.11.0...@julian_cataldo/astro-licenses-report@0.11.1) (2022-06-26)
 
 **Note:** Version bump only for package @julian_cataldo/astro-licenses-report

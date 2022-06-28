@@ -1,6 +1,6 @@
 {
   "name": "@julian_cataldo/astro-transition",
-  "version": "0.10.15",
+  "version": "0.11.0",
   "description": "This component relies on the good old browser router, still, it will give to your website an SPA feel, without all the JS overhead.",
   "main": "index.js",
   "type": "module",

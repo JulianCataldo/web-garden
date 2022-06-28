@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.12](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-tooltips@0.10.11...@julian_cataldo/astro-tooltips@0.10.12) (2022-06-28)
+
+
+### Bug Fixes
+
+* extract client for typescript support ([d983140](https://github.com/JulianCataldo/astro/commit/d9831405ec37d33cb7e05a6506c4cae13b7d3121))
+* must move scss to global import ([39b0c55](https://github.com/JulianCataldo/astro/commit/39b0c552010401752896a07112d988e335cfcf5a))
+* proper typings ([adaf993](https://github.com/JulianCataldo/astro/commit/adaf993274058dcd3697ac54c8d24df291c31708))
+
+
+
 ## [0.10.11](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-tooltips@0.10.10...@julian_cataldo/astro-tooltips@0.10.11) (2022-06-26)
 
 **Note:** Version bump only for package @julian_cataldo/astro-tooltips

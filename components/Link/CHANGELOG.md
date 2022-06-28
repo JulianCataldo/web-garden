@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.0](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-link@0.10.4...@julian_cataldo/astro-link@0.11.0) (2022-06-28)
+
+
+### Features
+
+* better defaults for link ([2c370d9](https://github.com/JulianCataldo/astro/commit/2c370d944ce577e5480a07108e81a078bc3200b5))
+* better defaults properties ([cc55aec](https://github.com/JulianCataldo/astro/commit/cc55aecd0ea8051ab268c391cb5a28372d7ca896))
+
+
+### Bug Fixes
+
+* missing title attribute ([921f38c](https://github.com/JulianCataldo/astro/commit/921f38c88f7e41695ff0a6ba6f25cbe29103205c))
+
+
+
 ## [0.10.4](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-link@0.10.3...@julian_cataldo/astro-link@0.10.4) (2022-06-26)
 
 **Note:** Version bump only for package @julian_cataldo/astro-link
