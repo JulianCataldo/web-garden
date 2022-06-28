@@ -99,84 +99,12 @@ import Image from '../components/Image.astro';
 </Layout>
 
 <script>
-  import useBreakpoints from '@julian_cataldo/astro-breakpoints/use-breakpoints.ts';
-
-  const bpOutput = document.getElementById('bp-output');
-  const randomWords = [
-    'Tokyo',
-    'Austin',
-    'Paris',
-    'Ankara',
-    'Trifouilly-les-Oies',
-    'Bangkok',
-    'Mexico',
-    'Dresde',
-    'Marseille',
-  ];
-  function outputCurrentBp(currentBp) {
-    const index = Math.floor(Math.random() * randomWords.length);
-    const rWord = randomWords[index];
-    bpOutput.value = `${currentBp} - ${rWord}\n${bpOutput.value}`;
-    console.log({ currentBp });
-  }
-  const currentBp = useBreakpoints(outputCurrentBp);
+  import '../snippets/breakpoints.ts';
 </script>
 
 <style lang='scss'>
-  .my-parent-with-custom-links {
-    & :global(.link) {
-      font-weight: 700;
-      color: green;
-    }
-    & :global(.link.is-tel) {
-      background: yellow;
-    }
-    & :global(.link.is-mail) {
-      color: red;
-    }
-  }
-
-  #bp-output {
-    margin: 0.5rem;
-    padding: 0.5rem;
-    height: 7rem;
-    width: 15rem;
-  }
-
-  .current-breakpoint {
-    font-size: 200%;
-
-    @include breakpoint(xs) {
-      &::before {
-        content: 'Extra Small';
-      }
-    }
-    @include breakpoint(sm) {
-      &::before {
-        content: 'Small';
-      }
-    }
-    @include breakpoint(md) {
-      &::before {
-        content: 'Medium';
-      }
-    }
-    @include breakpoint(lg) {
-      &::before {
-        content: 'Large';
-      }
-    }
-    @include breakpoint(xl) {
-      &::before {
-        content: 'Extra Large';
-      }
-    }
-    @include breakpoint(xxl) {
-      &::before {
-        content: 'Extra Extra Large';
-      }
-    }
-  }
+  @import '../snippets/link-custom.scss';
+  @import '../snippets/breakpoints.scss';
 
   :root {
     --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
