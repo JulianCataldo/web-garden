@@ -43,5 +43,7 @@
   },
 
   "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "astro"],
-  "stylelint.snippet": ["css", "less", "postcss", "scss", "vue", "astro"]
+  "stylelint.snippet": ["css", "less", "postcss", "scss", "vue", "astro"],
+
+  "files.associations": { "*.json": "jsonc" }
 }
