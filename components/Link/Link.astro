@@ -1,29 +1,46 @@
 ---
 export interface Props {
   href: string;
-  title?: string;
-  /** Whether to show external link icon or not. Default: true */
+  /**
+   * **Default**: `null`
+   * */
+  title?: string | null;
+  /**
+   * Whether to show external link icon or not.
+   *
+   * **Default**: `true`
+   * */
   externalHint?: boolean;
-  /** Open external link in a new tab/window. Default: true */
+  /**
+   * Open external link in a new tab/window.
+   *
+   * **Default**: `true`
+   * */
   externalInNewTab?: boolean;
 }
-const props = Astro.props as Props;
+const props = { ...Astro.props } as Props;
 
-if (!props.href) {
-  props.href = '';
+if (typeof props.href !== 'string') {
+  props.href = '#';
+  console.warn('> href is wrong');
 }
-if (props.externalHint === undefined) {
+if (typeof props.title !== 'string') {
+  props.title = null;
+}
+if (typeof props.externalHint !== 'boolean') {
   props.externalHint = true;
 }
-if (props.externalInNewTab === undefined) {
+if (typeof props.externalInNewTab !== 'boolean') {
   props.externalInNewTab = true;
 }
 
+/* Link type(s) */
 const isExternal = props.href.startsWith('http');
 const isHash = props.href.startsWith('#');
 const isMail = props.href.startsWith('mailto:');
 const isTel = props.href.startsWith('tel:');
 
+/* Pre-process contact links */
 let contact;
 if (isMail) {
   contact = props.href.replace('mailto:', '');
@@ -34,7 +51,7 @@ if (isMail) {
 
 <a
   href={contact ? '#' : props.href}
-  title={props.title}
+  title={props.title === '' ? undefined : props.title}
   class:list={{
     link: true,
     'is-external': isExternal,
