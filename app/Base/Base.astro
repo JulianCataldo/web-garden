@@ -1,16 +1,18 @@
 ---
 export interface Props {
-  /** Default: 'en' */
+  /** **Default**: `'en'` */
   lang?: string;
-  /** Default: [] (no classes) */
+  /** **Default**: `[]` (no classes) */
   htmlClasses?: string[];
-  /** Default: [] (no classes) */
+  /** **Default**: `[]` (no classes) */
   bodyClasses?: string[];
-  /** Default: null */
+  /** **Default**: `null` (no id) */
   htmlId?: string;
-  /** Default: null */
+  /** **Default**: `null` (no id) */
   bodyId?: string;
-  /** Provides early JS detection. Default: true */
+  /** **Default**: `true`  
+   * Provides early JS detection for further CSS use
+   * by adding `js` class critically to HTML element. */
   jsEnabledClass?: boolean;
 }
 const props = Astro.props as Props;
