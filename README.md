@@ -188,6 +188,7 @@ Cypress:
 - [ ] App/Lightbox
 - [x] Components/Media/Map
 - [ ] Components/Link
+  - [ ] External / contact links
 - [ ] Components/LicensesReport
 - [ ] …
 
