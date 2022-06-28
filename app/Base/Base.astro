@@ -29,7 +29,7 @@ export interface Props {
   jsEnabledClass?: boolean;
 }
 const props = { ...Astro.props } as Props;
-
+/* ———————————————————————————————————————————— Typeguards + Fallbacks —————— */
 if (typeof props.lang !== 'string') {
   props.lang = 'en';
 }
@@ -48,6 +48,7 @@ if (typeof props.bodyId !== 'string') {
 if (typeof props.jsEnabledClass !== 'boolean') {
   props.jsEnabledClass = true;
 }
+/* —————————————————————————————————————————————————————————————————————————— */
 ---
 
 <!DOCTYPE html>

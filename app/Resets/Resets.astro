@@ -9,23 +9,38 @@ import scrollBarKeep from './styles/scrollbar-keep.css?raw';
 
 /** All defaults: true */
 export interface Props {
-  /** Removes body margin */
+  /**
+   * Removes body margin
+   * */
   bodyMargin?: boolean;
-  /** Coherent font smoothing */
+  /**
+   * Coherent font smoothing
+   * */
   fontSmoothing?: boolean;
-  /** Ensure system font as default fallback */
+  /**
+   * Ensure system font as default fallback
+   * */
   fontSystem?: boolean;
-  /** Default to native smooth scrolling */
+  /**
+   * Default to native smooth scrolling
+   * */
   scrollSmooth?: boolean;
-  /** Better box handling */
+  /**
+   * Better box handling
+   * */
   borderBox?: boolean;
-  /** Apply current text color and maximize canvas */
+  /**
+   * Show scrollbar consistently, avoiding layout shifts
+   * */
+  scrollBarKeep?: boolean;
+
+  /**
+   * Apply current text color and maximize canvas
+   * */
   // DISABLED
   // svg?: boolean;
-  /** Show scrollbar consistently, avoiding layout shifts */
-  scrollBarKeep?: boolean;
 }
-const props = Astro.props as Props;
+const props = { ...Astro.props } as Props;
 
 const rawStylesCSS = [
   props.bodyMargin === false ? null : bodyMargin,

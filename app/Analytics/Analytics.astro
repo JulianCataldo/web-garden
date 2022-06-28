@@ -1,15 +1,20 @@
 ---
 export interface Props {
-  /** Google Analytics 4 ID. */
+  /**
+   * Google Analytics 4 ID.
+   * */
   id: string;
 }
-const props = Astro.props as Props;
+const props = { ...Astro.props } as Props;
+if (typeof props.id !== 'string') {
+  props.id = 'XXXXXXXXXXXXXXXX';
+}
 
 const url = `https://www.googletagmanager.com/gtag/js?id=${props.id}`;
 ---
 
 <script async src={url} is:inline>
-
+  // _
 </script>
 
 <script is:inline define:vars={{ id: props.id }}>

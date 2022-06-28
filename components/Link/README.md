@@ -47,7 +47,7 @@ import Link from '@julian_cataldo/astro-link/Link.astro';
   <!-- Place component inside BODY tag -->
 
   <Link
-    href={'https://www.juliancataldo.com' /* required */}
+    href={'https://www.juliancataldo.com' /* Required */}
     title={'Bonjour !'}
     externalHint={false}
     externalInNewTab={true}

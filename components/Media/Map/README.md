@@ -27,10 +27,10 @@ import MediaMap from '@julian_cataldo/astro-media-map/MediaMap.astro';
   <!-- Place component inside BODY tag -->
 
   <MediaMap
-    x={43.389636 /* required */}
-    y={5.3964332 /* required */}
+    x={43.389636 /* Required */}
+    y={5.3964332 /* Required */}
     z={11}
-    height={'25rem' /* required */}
+    height={'25rem' /* Required */}
     width={'25rem'}
     attribution={true}
   />

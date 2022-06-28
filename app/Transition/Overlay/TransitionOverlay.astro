@@ -1,23 +1,30 @@
 ---
 export interface Props {
-  /** Default: 500 (milliseconds) */
+  /**
+   * **Default**: `500` (milliseconds)
+   * */
   speed?: number;
-  /** Default: 'white' (any CSS notation can be used) */
+  /**
+   * **Default**: `'white'` (CSS color unit)
+   * */
   color?: string;
-  /** Default: 99 */
+  /**
+   * **Default**: `99`
+   * */
   zIndex?: number;
 }
-const props = Astro.props as Props;
-
-if (!props.speed) {
+const props = { ...Astro.props } as Props;
+/* ———————————————————————————————————————————— Typeguards + Fallbacks —————— */
+if (typeof props.speed !== 'number') {
   props.speed = 500;
 }
-if (!props.color) {
+if (typeof props.color !== 'string') {
   props.color = 'white';
 }
-if (!props.zIndex) {
+if (typeof props.zIndex !== 'number') {
   props.zIndex = 99;
 }
+/* —————————————————————————————————————————————————————————————————————————— */
 ---
 
 <div id='app-transition-overlay'></div>

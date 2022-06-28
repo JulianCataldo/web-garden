@@ -32,7 +32,6 @@ import Resets from '@julian_cataldo/astro-resets/Resets.astro';
     fontSystem={true}
     scrollSmooth={true}
     borderBox={true}
-    svg={true}
     scrollBarKeep={true}
   />
 

@@ -80,11 +80,11 @@ import Image from '../components/Image.astro';
 
     <div class='map-demo'>
       <MediaMap
-        x={43.389636}
-        y={5.3964332}
+        x={43.389636 /* Required */}
+        y={5.3964332 /* Required */}
         z={11}
+        height={'25rem' /* Required */}
         width={'25rem'}
-        height={'25rem'}
         attribution={true}
       />
     </div>
@@ -93,7 +93,15 @@ import Image from '../components/Image.astro';
       <Image />
     </div>
 
-    <LicensesReport />
+    <!-- All properties are optional -->
+    <LicensesReport
+      useDevDependencies={true}
+      depth={2}
+      nameText={'Nom'}
+      authorText={'Auteur'}
+      licenseText={'License'}
+      linkText={'URL'}
+    />
 
     <LongText />
     <LongText />

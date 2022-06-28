@@ -1,12 +1,42 @@
 ---
 export interface Props {
-  /** Image URL, preferably absolute and 1200x630px */
+  /**
+   * Image URL, preferably absolute and 1200x630px  \
+   * Used for social networks…
+   * */
   image: string;
+  /**
+   * Used for window / tab title, search engines results, social networks…
+   * */
   title: string;
+  /**
+   * Used for search engines results, social networks…
+   * */
   description: string;
+  /**
+   * Used for Discord, PWA…
+   * */
   siteName: string;
 }
 const props = Astro.props as Props;
+/* ———————————————————————————————————————————— Typeguards + Fallbacks —————— */
+if (typeof props.image !== 'string') {
+  props.image = '';
+  console.warn('> Missing `image` property for <SEO>');
+}
+if (typeof props.title !== 'string') {
+  props.title = 'Untitled';
+  console.warn('> Missing `title` property for <SEO>');
+}
+if (typeof props.description !== 'string') {
+  props.description = '-> Website <-';
+  console.warn('> Missing `description` property for <SEO>');
+}
+if (typeof props.siteName !== 'string') {
+  props.siteName = '• Website •';
+  console.warn('> Missing `siteName` property for <SEO>');
+}
+/* —————————————————————————————————————————————————————————————————————————— */
 ---
 
 <!-- SEO -->

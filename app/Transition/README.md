@@ -38,11 +38,17 @@ import TransitionOverlay from '@julian_cataldo/astro-transition/Overlay/Transiti
 
 ```ts
 export interface Props {
-  /** Default: 500 (milliseconds) */
+  /**
+   * **Default**: `500` (milliseconds)
+   * */
   speed?: number;
-  /** Default: 'white' (any CSS notation can be used) */
+  /**
+   * **Default**: `'white'` (CSS color unit)
+   * */
   color?: string;
-  /** Default: 99 */
+  /**
+   * **Default**: `99`
+   * */
   zIndex?: number;
 }
 ```

@@ -1,11 +1,15 @@
 ---
 export interface Props {
-  /** Maximum prefetched documents. Default: 8 */
+  /**
+   * Maximum prefetched documents.
+   *
+   * **Default**: 8
+   * */
   max?: number;
 }
-const props = Astro.props as Props;
+const props = { ...Astro.props } as Props;
 
-if (!props.max) {
+if (typeof props.max !== 'number') {
   props.max = 8;
 }
 ---
