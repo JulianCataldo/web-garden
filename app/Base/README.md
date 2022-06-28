@@ -21,12 +21,12 @@ import Base from '@julian_cataldo/astro-base/Base.astro';
 
 <!-- All properties are optional -->
 <Base
-  lang='es'
+  lang={'es'}
   htmlClasses={['some-class', 'doby-doba']}
   htmlId={'the-id'}
   bodyClasses={['other-class', 'dabadi-dabada']}
   bodyId={'much-id'}
-  jsEnabledClass={false}
+  jsEnabledClass={true}
 >
   <Fragment slot='head'>
     <!-- Things injected in HEAD -->
@@ -89,17 +89,19 @@ with **`.js &`** / **`:not(.js) &`** SCSS selectors.
 
 ```ts
 export interface Props {
-  /** Default: 'en' */
+  /** **Default**: `'en'` */
   lang?: string;
-  /** Default: [] (no classes) */
+  /** **Default**: `[]` (no classes) */
   htmlClasses?: string[];
-  /** Default: [] (no classes) */
+  /** **Default**: `[]` (no classes) */
   bodyClasses?: string[];
-  /** Default: null */
+  /** **Default**: `null` (no id) */
   htmlId?: string;
-  /** Default: null */
+  /** **Default**: `null` (no id) */
   bodyId?: string;
-  /** Provides early JS detection. Default: true */
+  /** **Default**: `true`
+   * Provides early JS detection for further CSS use
+   * by adding `js` class critically to HTML element. */
   jsEnabledClass?: boolean;
 }
 ```
