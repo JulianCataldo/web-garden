@@ -34,44 +34,47 @@ import Image from '../components/Image.astro';
     <h2>Links</h2>
     <ul>
       <li>
-        <Link href='/page-a' title='Hello!'>
+        <Link href='/page-a' title='Internal route…'>
           Some <strong>internal</strong> link
         </Link>
       </li>
       <li>
-        <Link href='https://www.juliancataldo.com' title='Hello!'>
+        <Link href='https://www.juliancataldo.com' title='External, bye…'>
           Some <strong>external</strong> link, loaded in a new tab
         </Link>
       </li>
       <li>
         <Link
           href='https://www.juliancataldo.com'
-          title='Hello!'
+          title='External, in this window'
           externalInNewTab={false}
         >
           Some <strong>external</strong> link, loaded in current tab
         </Link>
       </li>
       <li>
-        <Link href='mailto:john.smith@bigcorp.biz' title='Hello!'>
+        <Link href='mailto:john.smith@bigcorp.biz' title='Contact me!'>
           Some <strong>mail</strong> link (email, telephone)
         </Link>
       </li>
       <li>
-        <Link href='tel:8989898989' title='Hello!'>
+        <Link href='tel:8989898989' title='Phone me!'>
           Some <strong>telephone</strong> link (email, telephone)
         </Link>
       </li>
       <li class='my-parent-with-custom-links'>
-        <Link href='http://perdu.com' title='Hello!'>
+        <Link href='http://perdu.com' title={"I'm lost…"}>
           1. Some <strong>custom</strong> link!
         </Link>
         <br />
-        <Link href='mailto:john.smith@bigcorp.biz' title='Hello!'
+        <Link
+          href={'mailto:john.smith@bigcorp.biz'}
+          title={'Mail!'}
+          class='custom-class'
           >2. Another…
         </Link>
         <br />
-        <Link href='tel:8989898989' title='Hello!'>3. Another one………</Link>
+        <Link href='tel:8989898989' title='Tel!'>3. Another one………</Link>
       </li>
     </ul>
 
