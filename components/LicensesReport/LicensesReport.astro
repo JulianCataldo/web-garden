@@ -2,40 +2,53 @@
 import licenser from '@wbmnky/license-report-generator';
 
 export interface Props {
-  /** Default: true */
-  useDevDependencies?: boolean;
-  /** Default: 2 */
+  /**
+   * **Default**: `2`
+   * */
   depth?: number;
-
-  /** Default: 'Package' */
+  /**
+   * **Default**: `true`
+   * */
+  useDevDependencies?: boolean;
+  /* ————————————————————————————— */
+  /**
+   * **Default**: `'Package'`
+   * */
   nameText?: string;
-  /** Default: 'Author' */
+  /**
+   * **Default**: `'Author'`
+   * */
   authorText?: string;
-  /** Default: 'License' */
+  /**
+   * **Default**: `'License'`
+   * */
   licenseText?: string;
-  /** Default: 'URL' */
+  /**
+   * **Default**: `'URL'`
+   * */
   linkText?: string;
 }
-const props = Astro.props as Props;
-
-if (props.useDevDependencies === undefined) {
-  props.useDevDependencies = true;
-}
-if (!props.depth) {
+const props = {...Astro.props} as Props;
+/* ———————————————————————————————————————————— Typeguards + Fallbacks —————— */
+if (typeof props.depth !== 'number') {
   props.depth = 2;
 }
-if (!props.nameText) {
+if (typeof props.useDevDependencies !== 'boolean') {
+  props.useDevDependencies = true;
+}
+if (typeof props.nameText !== 'string') {
   props.nameText = 'Package';
 }
-if (!props.authorText) {
+if (typeof props.authorText !== 'string') {
   props.authorText = 'Author';
 }
-if (!props.licenseText) {
+if (typeof props.licenseText !== 'string') {
   props.licenseText = 'License';
 }
-if (!props.linkText) {
+if (typeof props.linkText !== 'string') {
   props.linkText = 'URL';
 }
+/* —————————————————————————————————————————————————————————————————————————— */
 
 interface Licenses {
   name?: string;
