@@ -1,28 +1,57 @@
 ---
 export interface Props {
-  /** Longitude */
+  /**
+   * Longitude
+   * */
   x: number;
-  /** Latitude */
+  /**
+   * Latitude
+   * */
   y: number;
-  /** Default zoom level: 10 */
+  /**
+   * Zoom level
+   *
+   * **Default**: `10`
+   * */
   z?: number;
 
+  /**
+   * CSS Unit
+   * */
   height: string;
-  /** Default: '100%' */
+  /**
+   * CSS Unit
+   *
+   * **Default**: `'100%'`
+   * */
   width?: string;
 
-  /** Default: true */
+  /**
+   * **Default**: `true`
+   * */
   attribution?: boolean;
 }
-const props = Astro.props as Props;
+const props = { ...Astro.props } as Props;
 
-if (!props.z) {
-  props.z = 8;
+if (typeof props.x !== 'number') {
+  props.x = 10;
+  console.warn('> Missing `x` property for <MediaMap>');
 }
-if (!props.width) {
+if (typeof props.y !== 'number') {
+  props.y = 10;
+  console.warn('> Missing `y` property for <MediaMap>');
+}
+if (typeof props.z !== 'number') {
+  props.z = 10;
+}
+if (typeof props.height !== 'string') {
+  props.height = '12rem';
+  console.warn('> Missing `height` property for <MediaMap>');
+}
+if (typeof props.width !== 'string') {
   props.width = '100%';
 }
-if (props.attribution === undefined) {
+if (typeof props.attribution !== 'boolean') {
   props.attribution = true;
 }
 ---
