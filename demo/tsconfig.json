@@ -15,7 +15,9 @@
     "allowJs": true,
     "noEmit": true,
 
-    "baseUrl": "."
+    "baseUrl": ".",
+
+    "noImplicitAny": true
 
     // "paths": {
     //   "@julian_cataldo/astro-transition/*": ["../app/Transition/*"]
