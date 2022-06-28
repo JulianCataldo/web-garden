@@ -6,7 +6,7 @@ import SEO from '@julian_cataldo/astro-seo/SEO.astro';
 import ScrollObserver from '@julian_cataldo/astro-scroll-observer/ScrollObserver.astro';
 import Base from '@julian_cataldo/astro-base/Base.astro';
 import Resets from '@julian_cataldo/astro-resets/Resets.astro';
-import Lightbox from '@julian_cataldo/astro-lightbox/Lightbox.astro';
+import LightBox from '@julian_cataldo/astro-lightbox/LightBox.astro';
 import ColorMode from '@julian_cataldo/astro-color-mode/ColorMode.astro';
 import Breakpoints from '@julian_cataldo/astro-breakpoints/Breakpoints.astro';
 
@@ -42,7 +42,7 @@ export interface Props {
     <!--  -->
     <Resets />
     <!--  -->
-    <Lightbox />
+    <LightBox />
     <!--  -->
     <ColorMode />
     <!--  -->
@@ -82,10 +82,12 @@ export interface Props {
     width: 100%;
     background-color: darkslategrey;
     color: beige;
+
     &::after {
       font-weight: 700;
     }
   }
+
   :global(main::before) {
     content: '';
     height: 6rem;
@@ -115,20 +117,25 @@ export interface Props {
     [data-is-scrolling-up='true'] & {
       opacity: 1;
       transform: translateY(0);
+
       &::after {
         content: 'Is scrolling up…';
       }
     }
+
     [data-is-top='true'] & {
       opacity: 1;
       transform: translateY(0);
+
       &::after {
         content: 'Is top';
       }
     }
+
     [data-is-bottom='true'] & {
       opacity: 1;
       transform: translateY(0);
+
       &::after {
         content: 'Is bottom';
       }
