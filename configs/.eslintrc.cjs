@@ -16,8 +16,11 @@ module.exports = {
     // 'plugin:prettier/recommended',
   ],
 
+  plugins: ['eslint-plugin-tsdoc'],
+
   rules: {
     'no-restricted-syntax': 0,
+    'tsdoc/syntax': 'warn',
     // 'import/extensions': ['error', 'always'],
     // 'prettier/prettier': ['error'],
   },

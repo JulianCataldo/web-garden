@@ -42,6 +42,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-tsdoc": "^0.2.16",
     "eslint-plugin-vue": "^9.1.1",
     "husky": "^8.0.1",
     "lerna": "^5.1.4",
