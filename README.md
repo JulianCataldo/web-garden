@@ -134,11 +134,11 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 
 ### SVG icon from external providers — \[astro-icon\]
 
-**📦  [See component instructions](https://github.com/RafidMuhymin/astro-imagetools)**
+**📦  [See component instructions](https://github.com/natemoo-re/astro-icon)**
 
 ### Lazy loaded responsive image — \[astro-imagetools\]
 
-**📦  [See component instructions](https://github.com/natemoo-re/astro-icon)**
+**📦  [See component instructions](https://github.com/RafidMuhymin/astro-imagetools)**
 
 ### Embed Youtube / Twitter media — \[astro-embed\]
 
@@ -146,7 +146,7 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 
 ### Sitemap generation — \[astro-sitemap\]
 
-**📦  [See component instructions](https://github.com/withastro/astro)**
+**📦  [See component instructions](https://github.com/withastro/astro/tree/main/packages/integrations/sitemap)**
 
 # 👀  Astro demo website
 
