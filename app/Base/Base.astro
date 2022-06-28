@@ -1,38 +1,51 @@
 ---
 export interface Props {
-  /** **Default**: `'en'` */
+  /**
+   * **Default**: `'en'` (English)
+   * */
   lang?: string;
-  /** **Default**: `[]` (no classes) */
+  /**
+   * **Default**: `[]` (no classes)
+   * */
   htmlClasses?: string[];
-  /** **Default**: `[]` (no classes) */
+  /**
+   * **Default**: `[]` (no classes)
+   * */
   bodyClasses?: string[];
-  /** **Default**: `null` (no id) */
+  /**
+   * **Default**: `null` (no id)
+   * */
   htmlId?: string;
-  /** **Default**: `null` (no id) */
+  /**
+   * **Default**: `null` (no id)
+   * */
   bodyId?: string;
-  /** **Default**: `true`  
+  /**
    * Provides early JS detection for further CSS use
-   * by adding `js` class critically to HTML element. */
+   * by adding `js` class critically to HTML element.
+   *
+   * **Default**: `true`
+   * */
   jsEnabledClass?: boolean;
 }
-const props = Astro.props as Props;
+const props = { ...Astro.props } as Props;
 
-if (!props.lang) {
+if (typeof props.lang !== 'string') {
   props.lang = 'en';
 }
-if (!props.htmlClasses) {
+if (!Array.isArray(props.htmlClasses)) {
   props.htmlClasses = [];
 }
-if (!props.bodyClasses) {
+if (!Array.isArray(props.bodyClasses)) {
   props.bodyClasses = [];
 }
-if (!props.htmlId) {
+if (typeof props.htmlId !== 'string') {
   props.htmlId = null;
 }
-if (!props.bodyId) {
+if (typeof props.bodyId !== 'string') {
   props.bodyId = null;
 }
-if (props.jsEnabledClass === undefined) {
+if (typeof props.jsEnabledClass !== 'boolean') {
   props.jsEnabledClass = true;
 }
 ---
