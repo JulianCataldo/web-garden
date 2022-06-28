@@ -49,16 +49,16 @@ In your `settings.json`:
 
 Extensions: `astro-build.astro-vscode`
 
-```json
+```jsonc
 {
-  …
+  // ...
   "editor.formatOnPaste": true|false,
   "editor.formatOnType": true|false,
   "editor.formatOnSave": true|false,
   "editor.codeActionsOnSave": {
     "source.fixAll": true|false
   }
-  …
+  // ...
 }
 ```
 
@@ -68,7 +68,7 @@ In your `settings.json`:
 
 ```json
 {
-  …
+  // ...
   "typescript.inlayHints.parameterNames.enabled": "all"
 }
 ```
@@ -109,15 +109,14 @@ In your `tsconfig.json`:
 In `package.json`:
 
 ```json
-
 {
-  …
+  // ...
   "scripts": {
-    …
+    // ...
     "lint:js": "eslint . --fix"
   },
   "devDependencies": {
-    …
+    // ...
     "@types/eslint": "^8.4.2",
     "@typescript-eslint/eslint-plugin": "^5.27.0",
     "@typescript-eslint/parser": "^5.27.0",
@@ -136,11 +135,9 @@ In `package.json`:
     "eslint-plugin-vue": "^9.1.0"
   },
   "eslintConfig": {
-    "extends": [
-      "./node_modules/@julian_cataldo/astro-configs/.eslintrc.cjs"
-    ]
-  },
-  …
+    "extends": ["./node_modules/@julian_cataldo/astro-configs/.eslintrc.cjs"]
+  }
+  // ...
 }
 ```
 
@@ -152,7 +149,7 @@ In your `settings.json`:
 
 ```json
 {
-  …
+  // ...
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -169,19 +166,19 @@ In `package.json`:
 
 ```json
 {
-  …
+  // ...
   "scripts": {
-    …
+    // ...
     "format": "prettier -w ./src ./src/**/*.astro"
   },
   "devDependencies": {
-    …
+    // ...
     "@types/prettier": "^2.6.3",
     "prettier": "^2.6.2",
     "prettier-plugin-astro": "^0.0.12"
   }
   "prettier": "./node_modules/@julian_cataldo/astro-configs/.prettierrc.cjs",
-  …
+  // ...
 }
 ```
 
@@ -231,13 +228,13 @@ In `package.json`:
 
 ```json
 {
-  …
+  // ...
   "scripts": {
-    …
+    // ...
     "lint:style": "stylelint ./src/**/*.vue ./src/**/*.scss ./src/**/*.astro --fix"
   },
   "devDependencies": {
-    …
+    // ...
     "postcss-html": "^1.4.1",
     "@types/stylelint": "^14.0.0",
     "stylelint": "^14.8.5",
@@ -248,11 +245,9 @@ In `package.json`:
     "stylelint-config-standard-scss": "^4.0.0"
   },
   "stylelint": {
-    "extends": [
-      "./node_modules/@julian_cataldo/astro-configs/.stylelintrc.cjs"
-    ]
-  },
-  …
+    "extends": ["./node_modules/@julian_cataldo/astro-configs/.stylelintrc.cjs"]
+  }
+  // ...
 }
 ```
 
@@ -264,7 +259,7 @@ In your `settings.json`:
 
 ```json
 {
-  …
+  // ...
   "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "astro"],
   "stylelint.snippet": ["css", "less", "postcss", "scss", "vue", "astro"]
 }
