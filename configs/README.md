@@ -66,7 +66,7 @@ Extensions: `astro-build.astro-vscode`
 
 In your `settings.json`:
 
-```json
+```jsonc
 {
   // ...
   "typescript.inlayHints.parameterNames.enabled": "all"
@@ -75,7 +75,7 @@ In your `settings.json`:
 
 In your `tsconfig.json`:
 
-```json
+```jsonc
 {
   // "include": ["./src"],
   "compilerOptions": {
@@ -108,7 +108,7 @@ In your `tsconfig.json`:
 
 In `package.json`:
 
-```json
+```jsonc
 {
   // ...
   "scripts": {
@@ -147,7 +147,7 @@ Extension: `dbaeumer.vscode-eslint`
 
 In your `settings.json`:
 
-```json
+```jsonc
 {
   // ...
   "eslint.validate": [
@@ -164,7 +164,7 @@ In your `settings.json`:
 
 In `package.json`:
 
-```json
+```jsonc
 {
   // ...
   "scripts": {
@@ -192,7 +192,7 @@ Extensions: `esbenp.prettier-vscode`, `editorconfig.editorconfig`
 
 In your `settings.json`:
 
-```json
+```jsonc
 {
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -226,7 +226,7 @@ In your `settings.json`:
 
 In `package.json`:
 
-```json
+```jsonc
 {
   // ...
   "scripts": {
@@ -257,7 +257,7 @@ Extension: `stylelint.vscode-stylelint`
 
 In your `settings.json`:
 
-```json
+```jsonc
 {
   // ...
   "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "astro"],
