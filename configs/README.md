@@ -177,8 +177,8 @@ In `package.json`:
     "@types/prettier": "^2.6.3",
     "prettier": "^2.6.2",
     "prettier-plugin-astro": "^0.0.12"
-  }
-  "prettier": "./node_modules/@julian_cataldo/astro-configs/.prettierrc.cjs",
+  },
+  "prettier": "./node_modules/@julian_cataldo/astro-configs/.prettierrc.cjs"
   // ...
 }
 ```
