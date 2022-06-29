@@ -132,6 +132,7 @@ In `package.json`:
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.5.0",
+    "eslint-plugin-tsdoc": "^0.2.16",
     "eslint-plugin-vue": "^9.1.0"
   },
   "eslintConfig": {
