@@ -152,7 +152,11 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 
 # 👀  Astro demo website
 
-[Live website demo documentation](./demo) where you can test all components above.
+Go to 🎭  **[\[ LIVE DEMO WEBSITE \]](https://juliancataldo.github.io/astro/)** (deployed on GitHub Pages).
+
+---
+
+[Live demo website documentation](./demo) where you can test all components above.
 
 # ⚙️  Tooling configurations — \[astro-configs\]
 
