@@ -26,7 +26,6 @@ jobs:
           version: 7.1.7
 
       - name: Install dependencies
-        working-directory: ./demo
         run: pnpm install --recursive
 
       - name: Build Astro
