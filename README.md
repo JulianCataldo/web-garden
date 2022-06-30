@@ -8,7 +8,7 @@ Focus is on common web patterns and progressive enhancements.
 See [./demo/src/layouts/Layout.astro](./demo/src/layouts/Layout.astro) and [./demo/src/pages/index.astro](./demo/src/pages/index.astro)
 for full implementation demo.
 
-Go to 🎭  **[\[ LIVE WEBSITE DEMO \]](https://juliancataldo.github.io/astro/)** (deployed on GitHub Pages).
+Go to 🎭  **[\[ LIVE DEMO WEBSITE \]](https://juliancataldo.github.io/astro/)** (deployed on GitHub Pages).
 
 > **Note**  
 > Astro is still in Beta, so is this collection.  
