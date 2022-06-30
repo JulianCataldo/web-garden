@@ -12,6 +12,7 @@ This component detects external / anchor / same domain / mail / telephone
   - `target="_blank"` for opening link in a new tab
 - JS-based **obfuscation** for `mailto:` and `tel:` links
 - Applying CSS classes for specific link types
+- Internal links: auto prefix URLs with 'BASE_URL'
 
 Some of these features can be disabled if needed.
 

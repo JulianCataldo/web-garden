@@ -14,7 +14,7 @@ export default defineConfig({
   server: { port: 2424, host: false },
 
   site: 'https://juliancataldo.github.io',
-  base: 'astro',
+  base: '/astro',
 
   vite: {
     css: {

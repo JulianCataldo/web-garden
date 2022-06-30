@@ -41,17 +41,33 @@ const isHash = props.href.startsWith('#');
 const isMail = props.href.startsWith('mailto:');
 const isTel = props.href.startsWith('tel:');
 
-/* Pre-process contact links */
+/* Get contact link data */
 let contact;
 if (isMail) {
   contact = props.href.replace('mailto:', '');
 } else if (isTel) {
   contact = props.href.replace('tel:', '');
 }
+
+/* Pre-process `href` */
+let parsedUrl = props.href;
+if (isExternal === false) {
+  const basePrefix = import.meta.env.BASE_URL;
+  /* Join relative paths */
+  parsedUrl = [...basePrefix.split('/'), ...props.href.split('/')]
+    .filter((e) => e !== '')
+    .join('/');
+  /* Prefix with root relative */
+  parsedUrl = `/${parsedUrl}`;
+}
+/* Hide contact link  `href` */
+if (contact) {
+  parsedUrl = '#';
+}
 ---
 
 <a
-  href={contact ? '#' : props.href}
+  href={parsedUrl}
   title={props.title === '' ? undefined : props.title}
   class:list={{
     link: true,
