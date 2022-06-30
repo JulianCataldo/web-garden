@@ -12,6 +12,10 @@ const breakpoints = {
 // https://astro.build/config
 export default defineConfig({
   server: { port: 2424, host: false },
+
+  site: 'https://juliancataldo.github.io',
+  base: 'astro',
+
   vite: {
     css: {
       preprocessorOptions: {
