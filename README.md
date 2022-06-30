@@ -8,6 +8,8 @@ Focus is on common web patterns and progressive enhancements.
 See [./demo/src/layouts/Layout.astro](./demo/src/layouts/Layout.astro) and [./demo/src/pages/index.astro](./demo/src/pages/index.astro)
 for full implementation demo.
 
+Go to 🎭  **[\[ LIVE WEBSITE DEMO \]](https://juliancataldo.github.io/astro/)** (deployed on GitHub Pages).
+
 > **Note**  
 > Astro is still in Beta, so is this collection.  
 > Components API might change a bit, though not drastically.  
@@ -165,6 +167,7 @@ https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-82
 - [ ] Find a way to launch only necessary tests when versioning
 - [ ] Implement dev / prod mode for debugging outputs
 - [ ] Tidy up demo website
+- [ ] Evaluate PNPM workspaces + tools for replacing Lerna version/publish?
 
 ---
 
