@@ -129,6 +129,10 @@ export interface Props {
 }
 ```
 
+## To do
+
+- [ ] Support Astro `base` option for prefixing `href`s.
+
 ---
 
 [Live website demo documentation](../../demo)
