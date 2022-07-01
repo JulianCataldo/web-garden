@@ -51,7 +51,7 @@ if (isMail) {
 
 /* Pre-process `href` */
 let parsedUrl = props.href;
-if (isExternal === false) {
+if (isExternal === false && isHash === false) {
   const basePrefix = import.meta.env.BASE_URL;
   /* Join relative paths */
   parsedUrl = [...basePrefix.split('/'), ...props.href.split('/')]
