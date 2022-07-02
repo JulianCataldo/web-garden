@@ -60,7 +60,7 @@
     "vite": "^2.9.12"
   },
   "engines": {
-    "node": "17.9",
+    "node": "17",
     "pnpm": "7"
   },
   "packageManager": "pnpm@7.0.0"
