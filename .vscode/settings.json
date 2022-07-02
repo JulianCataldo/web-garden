@@ -1,4 +1,5 @@
 {
+  /* VSCode */
   "editor.formatOnPaste": false,
   "editor.formatOnType": false,
   "editor.formatOnSave": true,
@@ -6,8 +7,10 @@
     "source.fixAll": false
   },
 
+  /* Typescript */
   "typescript.inlayHints.parameterNames.enabled": "all",
 
+  /* ESLint */
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -16,6 +19,7 @@
     "typescriptreact"
   ],
 
+  /* Prettier */
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -42,8 +46,13 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
+  /* Stylelint */
   "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "astro"],
   "stylelint.snippet": ["css", "less", "postcss", "scss", "vue", "astro"],
 
+  /* SCSS IntelliSense */
+  "scss.showErrors": true,
+
+  /* JSON with comments */
   "files.associations": { "*.json": "jsonc" }
 }
