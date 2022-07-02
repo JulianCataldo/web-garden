@@ -4,9 +4,13 @@
 
     "stylelint.vscode-stylelint",
 
+    "mrmlnc.vscode-scss",
+
     "dbaeumer.vscode-eslint",
 
     "esbenp.prettier-vscode",
-    "editorconfig.editorconfig"
+    "editorconfig.editorconfig",
+
+    "DavidAnson.vscode-markdownlint"
   ]
 }
