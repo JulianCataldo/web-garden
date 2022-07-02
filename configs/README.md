@@ -24,6 +24,10 @@ Tools: Prettier, ESlint, Stylelint, Editorconfig, Typescript, Commitlint, VS Cod
     - [VSCode](#vscode-2)
   - [Stylelint](#stylelint)
     - [VSCode](#vscode-3)
+  - [SCSS](#scss)
+    - [VSCode](#vscode-4)
+  - [Markdown](#markdown)
+    - [VSCode](#vscode-5)
   - […To do](#to-do)
 
 ---
@@ -265,6 +269,24 @@ In your `settings.json`:
   "stylelint.snippet": ["css", "less", "postcss", "scss", "vue", "astro"]
 }
 ```
+
+## SCSS
+
+### VSCode
+
+Extensions:
+
+- SCSS IntelliSense / `mrmlnc.vscode-scss`  
+  Advanced autocompletion and refactoring support for SCSS
+
+## Markdown
+
+### VSCode
+
+Extensions:
+
+- markdownlint / `DavidAnson.vscode-markdownlint`  
+  Markdown linting and style checking for Visual Studio Code
 
 ## …To do
 
