@@ -1,25 +1,14 @@
 ---
-export interface Props {
-  /**
-   * **Default**: `500` (milliseconds)
-   * */
-  speed?: number;
-  /**
-   * **Default**: `'white'` (CSS color unit)
-   * */
-  color?: string;
-  /**
-   * **Default**: `99`
-   * */
-  zIndex?: number;
-}
+import type { Props as BaseProps } from './Props';
+
+export interface Props extends BaseProps {}
 const props = { ...Astro.props } as Props;
 /* ———————————————————————————————————————————— Typeguards + Fallbacks —————— */
 if (typeof props.speed !== 'number') {
   props.speed = 500;
 }
 if (typeof props.color !== 'string') {
-  props.color = 'white';
+  props.color = null;
 }
 if (typeof props.zIndex !== 'number') {
   props.zIndex = 99;
@@ -115,7 +104,7 @@ if (typeof props.zIndex !== 'number') {
 
 <style
   define:vars={{
-    color: props.color,
+    // jsColor: props.color,
     speed: `${props.speed}ms`,
     'z-index': props.zIndex,
   }}
