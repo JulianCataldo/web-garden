@@ -1,0 +1,105 @@
+.main-content > .navigation {
+  inset: 0;
+  position: sticky;
+  height: 85vh;
+
+  h1 {
+    display: inline-block;
+    margin: 0.5rem 2.5rem -1.2rem 0rem;
+    padding: 1.5rem 6.5rem 2.7rem 1.5rem;
+    border-top-right-radius: 99rem;
+    transition: opacity 0.2s;
+    font-weight: 300;
+
+    @include scroll-is($going-up: true) {
+      opacity: 0;
+    }
+    @include scroll-is($bottom: true) {
+      opacity: 0;
+    }
+
+    @include theme(default, light) {
+      color: $rosewood;
+      background: color.adjust($lavender-blush, $lightness: 10%, $alpha: -0.1);
+    }
+    @include theme(default, dark) {
+      color: $lavender-blush;
+      background: color.adjust($raisin-black, $lightness: 3%, $alpha: -0.2);
+    }
+  }
+
+  &::after {
+    border-radius: 1rem;
+    transition: opacity 0.3s;
+    position: absolute;
+    content: "";
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    top: calc(10vh + 0.5rem);
+    left: 0;
+    z-index: 1;
+
+    @include theme(default, light) {
+      box-shadow: -1px 1px 5px
+          color.adjust($raisin-black, $lightness: 5%, $alpha: -0.7) inset,
+        -1px 1px 13px color.adjust($rosewood, $lightness: 5%, $alpha: -0.6) inset;
+    }
+    @include theme(default, dark) {
+      box-shadow: -1px 1px 5px
+          color.adjust($lavender-blush, $lightness: -5%, $alpha: -0.8) inset,
+        -1px 1px 13px color.adjust($rosewood, $lightness: -5%, $alpha: -0.6) inset;
+    }
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  & .links-tree {
+    // margin-top: 12rem;
+    padding: 1.5rem 0 4rem 0rem;
+    border-radius: 1rem;
+    flex-basis: 33rem;
+    min-width: 22rem;
+    max-width: 32rem;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+
+    $offset: 3rem;
+    // transparent,
+    // white calc($offset),
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      white calc(100% - $offset),
+      transparent
+    );
+    position: relative;
+
+    @include theme(default, light) {
+      background-color: color.adjust($lavender-blush, $lightness: 3%);
+      // transition: box-shadow 0.3s;
+      // box-shadow: -1px 1px 2px
+      //   color.adjust($raisin-black, $lightness: 5%, $alpha: -0.8) inset;
+
+      // &:hover {
+      //   box-shadow: -1px 1px 5px
+      //     color.adjust($raisin-black, $lightness: 5%, $alpha: -0.4) inset;
+      // }
+    }
+    @include theme(default, dark) {
+      background-color: color.adjust($raisin-black, $lightness: 3%);
+      // box-shadow: -1px 1px 2px
+      //   color.adjust($lavender-blush, $lightness: -5%, $alpha: -0.8) inset;
+
+      // &:hover {
+      //   box-shadow: -1px 1px 5px
+      //     color.adjust($lavender-blush, $lightness: -5%, $alpha: -0.4) inset;
+      // }
+    }
+  }
+}

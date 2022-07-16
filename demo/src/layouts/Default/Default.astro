@@ -1,0 +1,137 @@
+---
+import SEO from '@julian_cataldo/astro-seo/SEO.astro';
+import Base from '@julian_cataldo/astro-base/Base.astro';
+// import Resets from '@julian_cataldo/astro-resets/Resets.astro';
+// import LightBox from '@julian_cataldo/astro-lightbox/LightBox.astro';
+import Prefetch from '@julian_cataldo/astro-prefetch/Prefetch.astro';
+import Tooltips from '@julian_cataldo/astro-tooltips/Tooltips.astro';
+import ColorMode from '@julian_cataldo/astro-color-mode/ColorMode.astro';
+// import Breakpoints from '@julian_cataldo/astro-breakpoints/Breakpoints.astro';
+import ScrollObserver from '@julian_cataldo/astro-scroll-observer/ScrollObserver.astro';
+import TransitionOverlay from '@julian_cataldo/astro-transition/Overlay/TransitionOverlay.astro';
+/* ·········································································· */
+import Icon from 'astro-icon';
+import Link from '@julian_cataldo/astro-link/Link.astro';
+import Landing from 'src/modules/Landing/Landing.astro';
+import NavigationBar from 'src/components/NavigationBar/NavigationBar.astro';
+/* ·········································································· */
+import '@fontsource/exo-2/variable.css';
+import '@fontsource/exo-2/variable-italic.css';
+// import revalia from './fonts/revalia.css?raw';
+// import exo from './fonts/exo.css?raw';
+// import exo2var from '@fontsource/exo-2/variable.css?raw';
+// import exo2varItalic from '@fontsource/exo-2/variable-italic.css?raw';
+/* —————————————————————————————————————————————————————————————————————————— */
+import { description } from 'content/packages/package.json';
+/* —————————————————————————————————————————————————————————————————————————— */
+
+export interface Props {
+  titles: { main: string; sub?: string };
+  description: string;
+  actions?: { title: string; href: string }[];
+}
+const props = { ...Astro.props } as Props;
+/* ············································ Typeguards + Fallbacks ······ */
+if (typeof props?.titles?.main !== 'string') {
+  props.titles.main = '';
+}
+
+/* —————————————————————————————————————————————————————————————————————————— */
+
+const comboTitle = `${props.titles.main} — ${props.titles.sub}`;
+---
+
+<Base
+  htmlExtraAttributes={{
+    'data-theme': 'default',
+    'data-test': 'scrollObserver-rootDoc',
+  }}
+  htmlId={'test-dummy'}
+  bodyClasses={['test-dummy-1', 'test-dummy-2']}
+  htmlClasses={['test-dummy-1', 'test-dummy-2']}
+>
+  <Fragment slot='head'>
+    <SEO
+      image={'https://code.juliancataldo.com/android-chrome-512x512.jpg'}
+      title={comboTitle}
+      description={props.description || description}
+      siteName={"Julian's Web Garden"}
+    />
+
+    <Tooltips />
+
+    <Prefetch max={3} />
+
+    <ColorMode />
+
+    <ScrollObserver />
+
+    <!-- <Resets /> -->
+
+    <!-- <LightBox /> -->
+
+    <!-- Fonts -->
+    <!-- <style is:inline set:html={[exo2var, exo2varItalic].join(' ')}>
+      // Placeholder
+    </style> -->
+    <!-- <style is:inline set:html={[revalia, exo].join(' ')}>
+      // Placeholder 
+    </style> -->
+  </Fragment>
+
+  <Fragment slot='body'>
+    <!-- <Breakpoints /> -->
+    <TransitionOverlay speed={500} zIndex={99} />
+    <!--—————————————————————————————————————————————————————————————————————-->
+
+    <NavigationBar />
+
+    <header>
+      <Landing
+        title={props.titles.main}
+        description={props.titles.sub}
+        actions={props.actions}
+      />
+    </header>
+
+    <main>
+      <slot></slot>
+    </main>
+
+    <footer class='main-footer'>
+      <Link href='#' class='back-to-top unstyled'>
+        <Icon name='mdi:arrow-up' size='3rem' />
+        Back to top
+      </Link>
+
+      <div class='author'>
+        <span>2022,&nbsp;</span>
+        <Link
+          aria-label={"Julian Cataldo' website"}
+          href='https://www.juliancataldo.com'
+          class='unstyled'
+        >
+          <span aria-hidden='true'>Julian Cataldo</span>
+        </Link>
+      </div>
+    </footer>
+
+    <Link href='#' class='back-to-top-float unstyled'>
+      <Icon name='mdi:arrow-up' size='3rem' />
+    </Link>
+  </Fragment>
+</Base>
+
+<style lang='scss' is:global>
+  @import './Default.global';
+</style>
+
+<script>
+  import './Default.client.ts';
+</script>
+
+<!-- <style lang='scss'>
+  // @import '@fontsource/exo-2/variable.css';
+  // Contains ONLY variable weights and no other axes.
+  // @import '@fontsource/exo-2/variable-italic.css'; // Italic variant.
+</style> -->

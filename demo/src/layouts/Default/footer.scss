@@ -1,0 +1,47 @@
+.main-footer {
+  display: flex;
+  width: 100%;
+
+  .link {
+    text-decoration: none;
+  }
+
+  @include theme(default) {
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2rem;
+    margin-top: 10rem;
+  }
+  @include theme(default, light) {
+    &,
+    .link {
+      color: $lavender-blush;
+    }
+
+    .link {
+      color: $fiery-rose;
+
+      &:hover {
+        color: $lavender-blush;
+      }
+    }
+
+    background-color: color.adjust($raisin-black, $alpha: -0.2);
+  }
+  @include theme(default, dark) {
+    &,
+    .link {
+      color: $lavender-blush;
+    }
+
+    .link {
+      color: $lavender-blush;
+
+      &:hover {
+        color: $fiery-rose;
+      }
+    }
+
+    background-color: color.adjust($raisin-black, $alpha: -0.2);
+  }
+}

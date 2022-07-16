@@ -1,0 +1,80 @@
+.back-to-top {
+  display: inline-flex;
+  width: 14rem;
+  height: 1em;
+  align-items: center;
+  margin-right: 5rem;
+}
+
+.back-to-top-float {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem 1rem 0rem 1rem;
+  transition: opacity 0.21s, transform 0.21s;
+  transition-delay: 0s;
+
+  @include scroll-is($bottom: true) {
+    opacity: 0;
+    transform: translateX(100%);
+    transition-delay: 0.7s;
+  }
+  @include scroll-is($top: true) {
+    opacity: 0;
+    transform: translateX(100%);
+    transition-delay: 0.7s;
+  }
+  @include scroll-is($going-up: false) {
+    opacity: 0;
+    transform: translateX(100%);
+    transition-delay: 0.7s;
+  }
+
+  position: fixed;
+  right: 0rem;
+  bottom: 9rem;
+
+  @include theme(default) {
+    padding: 0.5rem;
+  }
+  @include theme(default, light) {
+    &,
+    .link {
+      color: color.adjust($rosewood, $alpha: -0.2);
+    }
+
+    background-color: color.adjust(
+      $lavender-blush,
+      $lightness: 4%,
+      $alpha: -0.3
+    );
+
+    &:hover {
+      background-color: color.adjust(
+        $lavender-blush,
+        $lightness: -8%,
+        $alpha: -0.3
+      );
+    }
+  }
+  @include theme(default, dark) {
+    &,
+    .link {
+      color: color.adjust($lavender-blush, $lightness: 2%, $alpha: -0.1);
+    }
+
+    background-color: color.adjust(
+      $raisin-black,
+      $lightness: -7%,
+      $alpha: -0.3
+    );
+
+    &:hover {
+      background-color: color.adjust(
+        $raisin-black,
+        $lightness: 12%,
+        $alpha: -0.3
+      );
+    }
+  }
+}

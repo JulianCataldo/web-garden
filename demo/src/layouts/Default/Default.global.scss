@@ -1,0 +1,60 @@
+@import "@julian_cataldo/astro-resets/styles";
+/* —————————————————————————————————————————————————————————————————————————— */
+@import "src/themes/a11y";
+@import "src/themes/default";
+// @import 'src/themes/hacker';
+/* —————————————————————————————————————————————————————————————————————————— */
+@import "./article-body";
+@import "./body-background";
+@import "./content-navigation";
+@import "./back-to-top";
+@import "./footer";
+/* —————————————————————————————————————————————————————————————————————————— */
+
+.main-content {
+  margin-top: 10rem;
+  isolation: isolate;
+  display: flex;
+}
+
+.main-content > .article {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+
+  .wrapper {
+    max-width: 53em;
+  }
+}
+
+.main-content > .content {
+  padding: 1.5rem 0 1.5rem 0rem;
+}
+
+/* —————————————————————————————————————————————————————————————————————————— */
+
+// [data-feature-flag] {
+//   display: none !important;
+// }
+
+// @import "./scrollbar.scss";
+
+// [data-theme="default"] [data-color-mode="dark"] {
+//   @include default-font-color(dark);
+// }
+
+// [data-theme="default"] [data-color-mode="light"] {
+//   @include default-font-color(light);
+// }
+
+// [data-clipboard-target] {
+//   cursor: copy;
+
+//   &[data-clipboard-was-copied="true"] {
+//     cursor: default;
+//   }
+// }
+
+// #app-transition-overlay {
+//   --color: #{$lavender-blush};
+// }

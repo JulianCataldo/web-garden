@@ -1,0 +1,81 @@
+body {
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 280vh;
+    // z-index: -1;
+
+    @include theme(default, light) {
+      background: linear-gradient(
+        to bottom,
+        color.adjust($lavender-blush, $saturation: 80%, $lightness: -4%)
+          calc(75rem - 30vw),
+        color.adjust($rosewood, $saturation: -10%, $lightness: -4%)
+          calc(86rem - 30vw),
+        $lavender-blush 200vh
+      );
+      // color.adjust($rosewood, $saturation: -60%, $lightness: 14%) 100%
+    }
+    @include theme(default, dark) {
+      background: linear-gradient(
+        to bottom,
+        color.adjust($rosewood, $saturation: 30%) calc(75rem - 30vw)
+          calc(75rem - 30vw),
+        color.adjust($rosewood, $saturation: -10%, $lightness: -4%)
+          calc(86rem - 30vw),
+        $raisin-black 200vh
+      );
+      // color.adjust($rosewood, $saturation: -60%, $lightness: 14%) 100%
+    }
+  }
+
+  position: relative;
+
+  &::after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    top: calc(100% - 20%);
+    left: 0;
+    width: 100%;
+    height: 20%;
+
+    @include theme(default, light) {
+      // color.adjust($lavender-blush, $saturation: 80%, $lightness: -4%)
+      //   calc(75rem - 30vw),
+      // color.adjust($rosewood, $saturation: -10%, $lightness: -4%)
+      //   calc(86rem - 30vw),
+      // $lavender-blush 280vh
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        color.adjust($rosewood, $saturation: -60%, $lightness: 14%) 100%
+      );
+    }
+    @include theme(default, dark) {
+      // color.adjust($lavender-blush, $saturation: 80%, $lightness: -4%)
+      //   calc(75rem - 30vw),
+      // color.adjust($rosewood, $saturation: -10%, $lightness: -4%)
+      //   calc(86rem - 30vw),
+      // $lavender-blush 280vh
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        color.adjust($rosewood, $saturation: -40%, $lightness: -10%) 100%
+      );
+    }
+  }
+  // @include theme(default, dark) {
+  //   background: linear-gradient(
+  //     to bottom,
+  //     color.adjust($rosewood, $saturation: 30%) calc(75rem - 30vw),
+  //     color.adjust($rosewood, $saturation: -10%, $lightness: -4%)
+  //       calc(86rem - 30vw),
+  //     $raisin-black 280vh,
+  //     color.adjust($rosewood, $saturation: -40%, $lightness: -4%) 100%
+  //   );
+  // }
+}
