@@ -10,14 +10,14 @@ SCSS mixin, JS hook and a DOM data attribute, all share the same responsive scal
 
 - [ ] Full documentation
 
+<div class="git-footer">
+
 ---
 
-[Live website demo documentation](../../demo)
-
-See [/demo/src/layouts/Layout.astro](../../demo/src/layouts/Layout.astro)
-and [/demo/src/pages/index.astro](../../demo/src/pages/index.astro)
-for full implementation demo.
+[LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](https://code.juliancataldo.com/)
 
 ---
 
 🔗  [JulianCataldo.com](https://www.juliancataldo.com/)
+
+</div>

@@ -13,14 +13,14 @@
       .getPropertyValue('content')
       .replace(/"/g, '');
 
-    const root = document.getElementsByTagName('html')[0];
+    const root = document.documentElement;
     root.setAttribute('data-breakpoint', currentBreakpoint || 'md');
   }
   assignCurrentBreakpointToRoot();
 </script>
 
 <script>
-  const root = document.getElementsByTagName('html')[0];
+  const root = document.documentElement;
   window.addEventListener(`resize`, () => {
     const cssPlaceholder = document.querySelector('[data-breakpoint-css]');
     const currentBreakpoint = window
