@@ -1,0 +1,43 @@
+---
+// Silence is _
+---
+
+<span>Hover links below!</span>
+
+<ul>
+  <li>
+    <a href='/components' title='/components' data-test='prefetch-link_1'
+      >/components
+    </a>
+  </li>
+  <li>
+    <a href='/configs' title='/configs' data-test='prefetch-link_2'>/configs</a>
+  </li>
+  <li>
+    <a
+      href='/component/astro-prefetch'
+      title='/component/astro-prefetch'
+      data-test='prefetch-link_3'
+      >/component/astro-prefetch
+    </a>
+  </li>
+  <li>
+    <a
+      href='/component/astro-media-map'
+      title='/component/astro-media-map'
+      data-test='prefetch-link_4'
+      >/component/astro-media-map
+    </a>
+  </li>
+  <hr />
+
+  Now, you can <strong>open your developer tools</strong> and look for <strong
+    ><code
+      >&lt;link&nbsp;rel="prefetch"&nbsp;as="document"&nbsp;href="..."&gt;
+    </code>
+  </strong> elements appended <strong
+    >inside&nbsp;<code>&lt;head&gt;</code>
+  </strong> element.
+  <hr />
+  <em>Current limit: 4.</em>
+</ul>

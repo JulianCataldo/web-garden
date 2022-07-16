@@ -1,0 +1,56 @@
+---
+import LicensesReport from '@julian_cataldo/astro-licenses-report/LicensesReport.astro';
+
+// import MyLicensesReport from '../Polymorph/MyLicensesReport/MyLicensesReport.astro';
+---
+
+<div class='demo-wrapper'>
+  <LicensesReport
+    useDev={true}
+    depth={2}
+    nameText={'Nom'}
+    authorText={'Auteur'}
+    licenseText={'License'}
+    linkText={'URL'}
+    data-testid='licenses-report'
+  />
+</div>
+
+<style lang='scss'>
+  .demo-wrapper {
+    max-width: calc(100vw - 50rem);
+    overflow-y: scroll;
+    overflow-x: auto;
+    max-height: 40vh;
+
+    :global(.licenses-report) {
+      .tr {
+        display: flex;
+      }
+
+      .td,
+      .th {
+        word-break: break-all;
+        overflow: hidden;
+
+        padding: 0.3334em;
+
+        &:nth-child(1) {
+          width: 23%;
+        }
+
+        &:nth-child(2) {
+          width: 23%;
+        }
+
+        &:nth-child(3) {
+          width: 9%;
+        }
+
+        &:nth-child(4) {
+          width: 45%;
+        }
+      }
+    }
+  }
+</style>

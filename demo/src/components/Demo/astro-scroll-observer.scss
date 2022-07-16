@@ -1,0 +1,46 @@
+input {
+  width: 4rem;
+  height: 4rem;
+}
+
+.demo-scroll-observer {
+  z-index: 50;
+
+  @include theme(default) {
+    width: 25rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: $fiery-rose;
+  }
+  @include theme(default, light) {
+  }
+  @include theme(default, dark) {
+  }
+
+  @include theme(hacker) {
+  }
+
+  .toggle:checked ~ & {
+    bottom: 0;
+    right: 0;
+    position: fixed;
+  }
+
+  @include scroll-is($going-up: true) {
+    .current-scroll-position::after {
+      content: "Is scrolling up…";
+    }
+  }
+
+  @include scroll-is($top: true) {
+    .current-scroll-position::after {
+      content: "Is top";
+    }
+  }
+
+  @include scroll-is($bottom: true) {
+    .current-scroll-position::after {
+      content: "Is bottom";
+    }
+  }
+}
