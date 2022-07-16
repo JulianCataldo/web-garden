@@ -1,12 +1,7 @@
 ---
-export interface Props {
-  /**
-   * Maximum prefetched documents.
-   *
-   * **Default**: 8
-   * */
-  max?: number;
-}
+import type { Props as BaseProps } from './Props';
+
+export interface Props extends BaseProps {}
 const props = { ...Astro.props } as Props;
 
 if (typeof props.max !== 'number') {
