@@ -4,7 +4,7 @@ describe('App — <Tooltips>', () => {
   });
 
   it('Hover link', () => {
-    cy.get('[data-tooltip-placement="left"]').first().realHover();
+    cy.get('[href="/tooling"]').first().realHover();
   });
 
   it('Check for Tippy existence and correct placement', () => {
