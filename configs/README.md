@@ -12,6 +12,8 @@ Tools: Prettier, ESlint, Stylelint, Editorconfig, Typescript, Commitlint, VS Cod
 
 ---
 
+<div class="git-toc">
+
 - [Astro configurations collection](#astro-configurations-collection)
 - [Installation](#installation)
 - [Tooling configurations](#tooling-configurations)
@@ -31,6 +33,8 @@ Tools: Prettier, ESlint, Stylelint, Editorconfig, Typescript, Commitlint, VS Cod
   - […To do](#to-do)
 
 ---
+
+</div>
 
 # Installation
 
@@ -241,7 +245,6 @@ In `package.json`:
   "devDependencies": {
     // ...
     "postcss-html": "^1.4.1",
-    "@types/stylelint": "^14.0.0",
     "stylelint": "^14.8.5",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-recommended-scss": "^6.0.0",
@@ -295,8 +298,16 @@ Extensions:
   - [ ] Nested code, even less correct settings
 - [ ] Init root package for config distribution
 - [ ] Fix broken ESLint in Astro file  
-       Doc: https://github.com/ota-meshi/eslint-plugin-astro
+       Doc: \<https://github.com/ota-meshi/eslint-plugin-astro\>
+
+<div class="git-footer">
+
+---
+
+[LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](https://code.juliancataldo.com/)
 
 ---
 
 🔗  [JulianCataldo.com](https://www.juliancataldo.com/)
+
+</div>
