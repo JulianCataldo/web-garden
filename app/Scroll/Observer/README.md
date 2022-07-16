@@ -8,9 +8,9 @@ Some margins are applied on these.
 
 Also, viewport scrollbar detection is made available.
 
-## Demo
+<!-- ## Demo
 
-https://user-images.githubusercontent.com/603498/174468167-4f3cdbe3-ec90-49f6-8c51-d6028605c7d6.mp4
+https://user-images.githubusercontent.com/603498/174468167-4f3cdbe3-ec90-49f6-8c51-d6028605c7d6.mp4 -->
 
 ## 📦  Installation
 
@@ -89,13 +89,14 @@ nav {
 <!-- ... -->
 ```
 
+<div class="git-footer">
+
 ---
 
-[Live website demo documentation](../../../demo)
-
-See [/demo/src/layouts/Layout.astro](../../../demo/src/layouts/Layout.astro)
-for full implementation demo.
+[LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](https://code.juliancataldo.com/)
 
 ---
 
 🔗  [JulianCataldo.com](https://www.juliancataldo.com/)
+
+</div>
