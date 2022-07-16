@@ -1,0 +1,43 @@
+.button {
+  // align-items: center;
+  // display: flex;
+  // margin: 0 0.5rem 0 1rem;
+
+  // @include theme(hacker) {
+  //   display: none;
+  // }
+}
+
+.icon {
+  @include theme(default) {
+  }
+  @include theme(default, light) {
+    // color: $rosewood;
+  }
+  @include theme(default, dark) {
+    // color: $lavender-blush;
+  }
+  // @include theme(hacker) {
+  //   width: 2rem;
+  //   height: 2rem;
+  //   color: lightgreen;
+  // }
+}
+
+.sun {
+  @include theme(default, dark, $scoped: true) {
+    display: initial;
+  }
+  @include theme(default, light, $scoped: true) {
+    display: none;
+  }
+}
+
+.moon {
+  @include theme(default, dark, $scoped: true) {
+    display: none;
+  }
+  @include theme(default, light, $scoped: true) {
+    display: initial;
+  }
+}
