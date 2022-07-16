@@ -1,0 +1,64 @@
+.navigation-bar {
+  position: fixed;
+  z-index: 101;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: calc(0.5vh + 0.1rem) 2vw 0 2vw;
+  user-select: none;
+
+  .spacer {
+    flex-grow: 1;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    li {
+      margin: 0.25rem 1.5vw;
+
+      &:first-of-type() {
+        margin: 0.25rem 1.5vw 0.25rem 0;
+      }
+
+      &:last-of-type() {
+        margin: 0.25rem 0 0.25rem 1.5vw;
+      }
+    }
+  }
+
+  /* ———————————————————————————————————————————————————————————————————————— */
+
+  :global(.js) & {
+    transition: opacity 0.33s, transform 0.33s;
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  :global([data-is-top="true"]) & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  :global([data-is-bottom="true"]) & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  :global([data-is-scrolling-up="true"]) & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+// .nav-text {
+//   padding-top: 0.17rem;
+// }

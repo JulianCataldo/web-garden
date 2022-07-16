@@ -1,0 +1,51 @@
+---
+import Icon from 'astro-icon';
+import Link from '@julian_cataldo/astro-link/Link.astro';
+
+import ColorModeSwitcher from '../ColorModeSwitcher/ColorModeSwitcher.astro';
+// import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher.astro';
+// import Search from '../Search/Search';
+
+const menuLinks = [
+  { href: '/', text: 'Home', icon: 'system-uicons:home-door' },
+  { href: '/components', text: 'Components', icon: 'system-uicons:box' },
+  { href: '/configs', text: 'Tooling', icon: 'system-uicons:settings' },
+  // { href: '/snippets', text: 'Snippets', icon: 'system-uicons:document-stack' },
+];
+---
+
+<nav
+  class='navigation-bar'
+  aria-label='Global menu'
+  data-test='scrollObserver-navbar'
+>
+  <ul class='nav-part components'>
+    {menuLinks.map((link) => (
+      <li>
+        <Link class="button unstyled" href={link.href}>
+          <Icon name={link.icon} class="icon" size="2rem" aria-hidden="true" />
+          <div class="nav-text">{link.text}</div>
+        </Link>
+      </li>
+    ))}
+    <li class='spacer' role='none'></li>
+
+    <!-- <li class='search'>
+      <div data-feature-flag='search' hidden>
+        <Search client:load />
+      </div>
+    </li> -->
+
+    <!-- <li data-feature-flag='theme-switcher' hidden>
+      <ThemeSwitcher />
+    </li> -->
+
+    <li>
+      <ColorModeSwitcher />
+    </li>
+  </ul>
+</nav>
+
+<style lang='scss'>
+  @import './NavigationBar.scss';
+</style>
