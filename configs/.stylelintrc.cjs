@@ -7,10 +7,10 @@ module.exports = {
     'stylelint-config-prettier',
   ],
   overrides: [
-    {
-      files: ['*.astro', '**/*.astro'],
-      customSyntax: 'postcss-html',
-    },
+    // {
+    //   files: ['*.astro', '**/*.astro'],
+    //   customSyntax: 'postcss-html',
+    // },
     {
       files: ['*.vue', '**/*.vue'],
       extends: [
@@ -22,6 +22,7 @@ module.exports = {
   ],
   rules: {
     'comment-empty-line-before': null,
+    // Shorthand units make things hard to read and change
     'shorthand-property-no-redundant-values': null,
     'scss/double-slash-comment-empty-line-before': null,
     'color-function-notation': null,
