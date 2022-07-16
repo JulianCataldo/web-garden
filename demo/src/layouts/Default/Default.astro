@@ -14,6 +14,7 @@ import Icon from 'astro-icon';
 import Link from '@julian_cataldo/astro-link/Link.astro';
 import Landing from 'src/modules/Landing/Landing.astro';
 import NavigationBar from 'src/components/NavigationBar/NavigationBar.astro';
+import Favicons from 'src/components/Favicons.astro';
 /* ·········································································· */
 import '@fontsource/exo-2/variable.css';
 import '@fontsource/exo-2/variable-italic.css';
@@ -77,6 +78,8 @@ const comboTitle = `${props.titles.main} — ${props.titles.sub}`;
     <!-- <style is:inline set:html={[revalia, exo].join(' ')}>
       // Placeholder 
     </style> -->
+
+    <Favicons />
   </Fragment>
 
   <Fragment slot='body'>
