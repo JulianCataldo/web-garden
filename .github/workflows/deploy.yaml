@@ -21,14 +21,15 @@ jobs:
         with:
           node-version: 17
 
-      - uses: pnpm/action-setup@v2.2.2
+      - name: Setup PNPM 7
+        uses: pnpm/action-setup@v2.2.2
         with:
           version: 7.1.7
 
       - name: Install dependencies
         run: pnpm install --recursive
 
-      - name: Build Astro
+      - name: Build Astro Website
         working-directory: ./demo
         run: pnpm run build
 
