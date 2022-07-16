@@ -4,13 +4,11 @@ import throttle from 'lodash-es/throttle';
 let prevPos = 0;
 let isScrollingUp = false;
 
-function flip(attr: string, state: boolean) {
-  document.body.setAttribute(`data-${attr}`, `${state}`);
-}
+const root = document.documentElement;
 
-flip('is-scrolling-up', false);
-flip('is-bottom', false);
-flip('is-top', true);
+function flip(attr: string, state: boolean) {
+  root.setAttribute(`data-${attr}`, `${state}`);
+}
 
 function scrollHandler() {
   const pos = window.scrollY;

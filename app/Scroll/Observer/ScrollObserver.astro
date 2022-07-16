@@ -2,6 +2,18 @@
 // Silence is golden
 ---
 
+<script is:inline>
+  const root = document.documentElement;
+
+  function flip(attr, state) {
+    root.setAttribute(`data-${attr}`, `${state}`);
+  }
+
+  flip('is-scrolling-up', false);
+  flip('is-bottom', false);
+  flip('is-top', true);
+</script>
+
 <script>
   import './client.ts';
 </script>
