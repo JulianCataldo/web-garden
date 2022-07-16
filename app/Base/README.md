@@ -29,7 +29,7 @@ import Base from '@julian_cataldo/astro-base/Base.astro';
   jsEnabledClass={true}
 >
   <Fragment slot='head'>
-    <!-- Things injected in HEAD -->
+    <!-- Things you can inject in HEAD -->
     <style is:inline>
       .some-class {
         color: red;
@@ -38,10 +38,10 @@ import Base from '@julian_cataldo/astro-base/Base.astro';
   </Fragment>
 
   <Fragment slot='body'>
-    <!-- Things injected inside BODY -->
+    <!-- Things you can inject in BODY -->
     <nav>My navbar</nav>
 
-    <!-- Page content slot  -->
+    <!-- Your page content slot  -->
     <slot></slot>
   </Fragment>
 </Base>
@@ -60,7 +60,7 @@ import Base from '@julian_cataldo/astro-base/Base.astro';
       // CRITICAL
       // Add 'js' class to HTML tag if JavaScript is enabled
       (() => {
-        const root = document.getElementsByTagName('html')[0];
+        const root = document.documentElement;
         root.classList.add('js');
       })();
     </script>
@@ -85,47 +85,14 @@ The `js` class is added to HTML tag, critically.
 That way, you can handle CSS for users with or without JS enabled
 with **`.js &`** / **`:not(.js) &`** SCSS selectors.
 
-# 👨‍🏭  TypeScript API
-
-```ts
-export interface Props {
-  /**
-   * **Default**: `'en'` (English)
-   * */
-  lang?: string;
-  /**
-   * **Default**: `[]` (no classes)
-   * */
-  htmlClasses?: string[];
-  /**
-   * **Default**: `[]` (no classes)
-   * */
-  bodyClasses?: string[];
-  /**
-   * **Default**: `null` (no id)
-   * */
-  htmlId?: string;
-  /**
-   * **Default**: `null` (no id)
-   * */
-  bodyId?: string;
-  /**
-   * Provides early JS detection for further CSS use
-   * by adding `js` class critically to HTML element.
-   *
-   * **Default**: `true`
-   * */
-  jsEnabledClass?: boolean;
-}
-```
+<div class="git-footer">
 
 ---
 
-[Live website demo documentation](../../demo)
-
-See [/demo/src/layouts/Layout.astro](../../demo/src/layouts/Layout.astro)
-for full implementation demo.
+[LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](https://code.juliancataldo.com/)
 
 ---
 
 🔗  [JulianCataldo.com](https://www.juliancataldo.com/)
+
+</div>
