@@ -13,7 +13,7 @@ jobs:
       contents: write
 
     steps:
-      - name: Check out your repository using git
+      - name: Check out Git repository
         uses: actions/checkout@v2
 
       - name: Use Node.js 17
@@ -26,7 +26,7 @@ jobs:
         with:
           version: 7.1.7
 
-      - name: Install dependencies
+      - name: Install Node dependencies
         run: pnpm install --recursive
 
       - name: Build Astro Website
