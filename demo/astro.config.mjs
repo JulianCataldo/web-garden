@@ -5,6 +5,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://code.juliancataldo.com',
+
   server: {
     port: 2424,
     host: false,
