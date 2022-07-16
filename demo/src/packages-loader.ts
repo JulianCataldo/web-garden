@@ -84,7 +84,7 @@ export async function structureAllPackages(
 
       const dir = packages[index].pJson.repository.directory;
       packages[index].typescriptProps = await fs
-        .readFile(`./content/packages/${dir}/Props.ts`, 'utf8')
+        .readFile(`../${dir}/Props.ts`, 'utf8')
         .catch((e) => {
           console.log(e);
           return null;

@@ -5,10 +5,18 @@
 
 # So using this script as a work-around for now.
 
-rsync -av --prune-empty-dirs ../docs content/packages
 
-rsync -av --prune-empty-dirs --include '*/' --include 'Props.ts' --exclude '*' .. content/packages
-rsync -av --prune-empty-dirs --include '*/' --include 'README.md' --exclude '*' .. content/packages
-rsync -av --prune-empty-dirs --include '*/' --include 'package.json' --exclude '*' .. content/packages
+# cp /
 
-rsync -av --prune-empty-dirs --include '*/' --include '*.mp4' --exclude '*' ../cypress/videos/app/ ./public/assets/videos/tests
+# rsync -av --prune-empty-dirs ../docs content/packages
+
+# rsync -av --prune-empty-dirs --include '*/' --include 'Props.ts' --exclude '*' .. content/packages
+# rsync -av --prune-empty-dirs --include '*/' --include '*/*/' --include '*/*/*/' --include 'README.md' --exclude '*' .. content/packages
+# rsync -av --prune-empty-dirs --include '*/' --include 'package.json' --exclude '*' .. content/packages
+
+
+
+rsync -av --prune-empty-dirs --delete-after --include '*/' --include '*.mp4' --exclude '*' ../cypress/videos/ ./public/assets/videos/tests
+
+
+find .. -iname 'README.md' -maxdepth 3 | rsync -av --files-from=- .. content/packages/

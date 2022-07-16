@@ -6,8 +6,8 @@ import { structureAllPackages } from 'src/packages-loader';
 
 const rootPackage = (
   await structureAllPackages(
-    await Astro.glob('/content/packages/package.json'),
-    await Astro.glob('/content/packages/README.md'),
+    await Astro.glob('../../../package.json'),
+    await Astro.glob('../../../README.md'),
   )
 ).pop();
 

@@ -6,7 +6,7 @@ import LinksTree from 'src/components/LinksTree/LinksTree.astro';
 import { structureAllPackages } from 'src/packages-loader';
 
 const packages = await structureAllPackages(
-  await Astro.glob('/content/packages/{app,components}/{*/,*/*/}package.json'),
+  await Astro.glob('../../../{app,components}/{*/,*/*/}package.json'),
   await Astro.glob('/content/packages/{app,components}/{*/,*/*/}README.md'),
 );
 

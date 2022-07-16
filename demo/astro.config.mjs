@@ -18,6 +18,13 @@ export default defineConfig({
   ],
 
   vite: {
+    // Using `gather-content.sh` for now
+    // server: {
+    //   fs: {
+    //     allow: ['..'],
+    //   },
+    // },
+
     /* astro-icon */
     ssr: {
       external: ['svgo'],
@@ -53,12 +60,7 @@ export default defineConfig({
 //   xl: '1200px',
 //   xxl: '1840px',
 // };
-// Using `gather-content.sh` for now
-// server: {
-//   fs: {
-//     allow: ['..'],
-//   },
-// },
+
 // @use "@julian_cataldo/astro-breakpoints/use-breakpoints.scss" as * with (
 //   $breakpoints: (
 //     "xs": ${breakpoints.xs},

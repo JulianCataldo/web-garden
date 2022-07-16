@@ -7,7 +7,7 @@ import { structureAllPackages } from 'src/packages-loader';
 const { params } = Astro;
 
 const packages = await structureAllPackages(
-  await Astro.glob('/content/packages/{app,components}/{*/,*/*/}package.json'),
+  await Astro.glob('../../../../{app,components}/{*/,*/*/}package.json'),
   await Astro.glob('/content/packages/{app,components}/{*/,*/*/}README.md'),
   false,
 );
@@ -19,9 +19,7 @@ const thePackage = packages
 
 export async function getStaticPaths() {
   const packagesForRoutes = await structureAllPackages(
-    await Astro.glob(
-      '/content/packages/{app,components}/{*/,*/*/}package.json',
-    ),
+    await Astro.glob('../../../../{app,components}/{*/,*/*/}package.json'),
     await Astro.glob('/content/packages/{app,components}/{*/,*/*/}README.md'),
   );
   return packagesForRoutes.map((pkg) => ({
