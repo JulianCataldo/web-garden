@@ -4,7 +4,7 @@
 
 <script is:inline>
   function assignCurrentColorModeToRoot() {
-    const root = document.getElementsByTagName('html')[0];
+    const root = document.documentElement;
     const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)');
 
     let colorMode = mediaQueryDark.matches ? 'dark' : 'light';
@@ -22,7 +22,7 @@
 
 <script>
   const switches = document.querySelectorAll('[data-color-mode-switch]');
-  const root = document.getElementsByTagName('html')[0];
+  const root = document.documentElement;
 
   switches.forEach((switchElem) => {
     switchElem.addEventListener('click', () => {
