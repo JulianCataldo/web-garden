@@ -82,33 +82,14 @@ import LicensesReport from '@julian_cataldo/astro-licenses-report/LicensesReport
 </table>
 ```
 
-# 👨‍🏭  TypeScript API
-
-```ts
-export interface Props {
-  /** Default: true */
-  useDevDependencies?: boolean;
-  /** Default: 2 */
-  depth?: number;
-
-  /** Default: 'Package' */
-  nameText?: string;
-  /** Default: 'Author' */
-  authorText?: string;
-  /** Default: 'License' */
-  licenseText?: string;
-  /** Default: 'URL' */
-  linkText?: string;
-}
-```
+<div class="git-footer">
 
 ---
 
-[Live website demo documentation](../../demo)
-
-See [/demo/src/pages/index.astro](../../demo/src/pages/index.astro)
-for full implementation demo.
+[LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](https://code.juliancataldo.com/)
 
 ---
 
 🔗  [JulianCataldo.com](https://www.juliancataldo.com/)
+
+</div>

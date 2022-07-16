@@ -1,53 +1,36 @@
 ---
 import licenser from '@wbmnky/license-report-generator';
+import type { Props as baseProps } from './Props';
 
-export interface Props {
-  /**
-   * **Default**: `2`
-   * */
-  depth?: number;
-  /**
-   * **Default**: `true`
-   * */
-  useDevDependencies?: boolean;
-  /* ————————————————————————————— */
-  /**
-   * **Default**: `'Package'`
-   * */
-  nameText?: string;
-  /**
-   * **Default**: `'Author'`
-   * */
-  authorText?: string;
-  /**
-   * **Default**: `'License'`
-   * */
-  licenseText?: string;
-  /**
-   * **Default**: `'URL'`
-   * */
-  linkText?: string;
-}
-const props = {...Astro.props} as Props;
+export interface Props extends baseProps {}
+const props = { ...Astro.props } as Props;
 /* ———————————————————————————————————————————— Typeguards + Fallbacks —————— */
-if (typeof props.depth !== 'number') {
-  props.depth = 2;
-}
-if (typeof props.useDevDependencies !== 'boolean') {
-  props.useDevDependencies = true;
-}
-if (typeof props.nameText !== 'string') {
-  props.nameText = 'Package';
-}
-if (typeof props.authorText !== 'string') {
-  props.authorText = 'Author';
-}
-if (typeof props.licenseText !== 'string') {
-  props.licenseText = 'License';
-}
-if (typeof props.linkText !== 'string') {
-  props.linkText = 'URL';
-}
+const internalProps: string[] = [];
+
+if (typeof props.depth !== 'number') props.depth = 2;
+internalProps.push('depth');
+
+if (typeof props.useDev !== 'boolean') props.useDev = true;
+internalProps.push('useDev');
+
+if (typeof props.nameText !== 'string') props.nameText = 'Package';
+internalProps.push('nameText');
+
+if (typeof props.authorText !== 'string') props.authorText = 'Author';
+internalProps.push('authorText');
+
+if (typeof props.licenseText !== 'string') props.licenseText = 'License';
+internalProps.push('licenseText');
+
+if (typeof props.linkText !== 'string') props.linkText = 'URL';
+internalProps.push('linkText');
+/* ············································ Extra HTML attributes ······· */
+const extraAttrs: { [key: string]: string } = {};
+Object.entries(props).forEach(([key, val]) => {
+  if (internalProps.includes(key) === false) {
+    extraAttrs[key] = `${val as string}`;
+  }
+});
 /* —————————————————————————————————————————————————————————————————————————— */
 
 interface Licenses {
@@ -59,7 +42,7 @@ interface Licenses {
 }
 
 const options = {
-  useDevDependencies: props.useDevDependencies,
+  useDev: props.useDev,
   depth: props.depth,
 };
 
