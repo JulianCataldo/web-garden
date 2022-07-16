@@ -36,5 +36,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
+          script: |
+            echo 'code.juliancataldo.com' > ./build/CNAME && gh-pages -d build"
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./demo/dist
