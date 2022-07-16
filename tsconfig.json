@@ -1,5 +1,4 @@
 {
-  // "include": ["./src"],
   "compilerOptions": {
     // Enable top-level await, and other modern ESM features.
     "target": "ESNext",
@@ -10,8 +9,14 @@
     "resolveJsonModule": true,
     // Enable stricter transpilation for better output.
     "isolatedModules": true,
-    // Add type definitions for our Vite runtime.
-    "types": ["vite/client", "cypress", "cypress-real-events", "node"],
+    "types": [
+      // Add type definitions for our Vite runtime.
+      "astro/client",
+      "cypress",
+      "cypress-real-events",
+      "@testing-library/cypress",
+      "node"
+    ],
 
     "jsx": "preserve", // Resolve Vue linting import bug
 
@@ -20,7 +25,9 @@
 
     "noImplicitAny": true,
 
-    "baseUrl": ".",
+    "baseUrl": "./demo",
     "paths": {}
+
+    // "allowSyntheticDefaultImports": true
   }
 }
