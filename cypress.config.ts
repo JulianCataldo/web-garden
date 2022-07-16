@@ -5,6 +5,8 @@ export default defineConfig({
   chromeWebSecurity: false,
 
   e2e: {
+    viewportWidth: 1280,
+    viewportHeight: 960,
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
