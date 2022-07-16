@@ -1,0 +1,39 @@
+@mixin scroll-is($top: null, $bottom: null, $going-up: null, $scoped: false) {
+  $selector: "";
+
+  @if $top {
+    $selector: "#{$selector}[data-is-top=true]";
+  }
+  @if $bottom {
+    $selector: "#{$selector}[data-is-bottom=true]";
+  }
+  @if $going-up {
+    $selector: "#{$selector}[data-is-scrolling-up=true]";
+  }
+  @if $top == false {
+    $selector: "#{$selector}[data-is-top=false]";
+  }
+  @if $bottom == false {
+    $selector: "#{$selector}[data-is-bottom=false]";
+  }
+  @if $going-up == false {
+    $selector: "#{$selector}[data-is-scrolling-up=false]";
+  }
+
+  @if $scoped == true {
+    $selector: "#{$selector}[data-is-scrolling-up=false]";
+    @at-root :global(#{$selector}) & {
+      @content;
+    }
+  } @else {
+    @at-root #{$selector} & {
+      @content;
+    }
+  }
+}
+
+@mixin has-scroll() {
+  @at-root :global([data-has-scroll="true"]) & {
+    @content;
+  }
+}
