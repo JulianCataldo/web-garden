@@ -40,12 +40,6 @@ import LicensesReport from '@julian_cataldo/astro-licenses-report/LicensesReport
 </body>
 ```
 
-## 🎉  Result
-
-**Unstyled**:
-
-![](../../docs/component-licenses-report.png)
-
 ```html
 <table class="licenses-report">
   <thead class="table-header">

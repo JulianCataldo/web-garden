@@ -90,8 +90,6 @@ export default defineConfig({
 </html>
 ```
 
-<!-- ![](../../../docs/component-media-map.png) -->
-
 ## To do
 
 - [ ] Full JS independant `@media` query support for SCSS mixins

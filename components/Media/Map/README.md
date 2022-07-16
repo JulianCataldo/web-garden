@@ -39,10 +39,6 @@ import MediaMap from '@julian_cataldo/astro-media-map/MediaMap.astro';
 </body>
 ```
 
-## 🎉  Result
-
-![](../../../docs/component-media-map.png)
-
 ## To do
 
 - [ ] Multiple maps per page

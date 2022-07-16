@@ -35,10 +35,6 @@ import SEO from '@julian_cataldo/astro-seo/SEO.astro';
 <!-- ... -->
 ```
 
-# Result
-
-![Social share preview](../../docs/app-seo.png)
-
 ---
 
 In `<head>`:
