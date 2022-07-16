@@ -10,17 +10,19 @@
     // Enable stricter transpilation for better output.
     "isolatedModules": true,
     // Add type definitions for our Vite runtime.
-    "types": ["vite/client"],
+    "types": ["astro/client"],
 
     "allowJs": true,
     "noEmit": true,
 
     "baseUrl": ".",
 
-    "noImplicitAny": true
+    "noImplicitAny": true,
 
-    // "paths": {
-    //   "@julian_cataldo/astro-transition/*": ["../app/Transition/*"]
-    // }
+    "paths": {
+      // "@layouts/*": ["./src/layouts/*"]
+    },
+
+    "allowSyntheticDefaultImports": true
   }
 }
