@@ -35,6 +35,10 @@ export interface Props {
    * **Default**: `true`
    * */
   jsEnabledClass?: boolean;
+  /**
+   * **Default**: `null`
+   * */
+  redirectTo?: string | null;
 }
 const props = { ...Astro.props } as Props;
 /* ———————————————————————————————————————————— Typeguards + Fallbacks —————— */
@@ -81,6 +85,10 @@ if (typeof props.jsEnabledClass !== 'boolean') props.redirectTo = null;
 
   <meta charset='UTF-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1' />
+
+  {props.redirectTo && (
+    <meta http-equiv="refresh" content={`0; url=/components`} />
+  )}
 
   <slot name='head'></slot>
 
