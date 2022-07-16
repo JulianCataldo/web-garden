@@ -1,181 +1,77 @@
-# 🚀  Astro components and configurations collection
+# 🚀  Julian's Web Garden
 
 Here lies some re-usable components and tooling settings,
 taking advantage of Astro strengths as much as possible.
 
 Focus is on common web patterns and progressive enhancements.
 
-See [./demo/src/layouts/Layout.astro](./demo/src/layouts/Layout.astro) and [./demo/src/pages/index.astro](./demo/src/pages/index.astro)
-for full implementation demo.
-
-Go to 🎭  **[\[ LIVE DEMO WEBSITE \]](https://juliancataldo.github.io/astro/)** (deployed on GitHub Pages).
-
 > **Note**  
 > Astro is still in Beta, so is this collection.  
 > Components API might change a bit, though not drastically.  
 > Thanks for you understanding ✌️.
 
+## 🤷🏼‍♂️  Philosophy
+
+We've all been to the point of throwing valuable code when adopting new
+shiny website frameworks.  
+Thanks to "island architecture" practices, we can establish standard and
+future-proof, commonly used, generic patterns, using the web holy trinity of languages : **HTML** / **CSS** and **JavaScript**.  
+That way, we can sprinkle advanced JS widgets as we like, with trendy UI framework, while
+things like global application utilities remain stable over time.
+
+Vanilla means future-proofing our code, but it also bring the benefit of
+minuscule file sizes compared to "all-or-nothing" UI frameworks.
+
 ---
 
-- [🚀  Astro components and configurations collection](#astro-components-and-configurations-collection)
-- [📦  Application-level components](#application-level-components)
-  - [Base document enclosure — \[astro-base\]](#base-document-enclosure--astro-base)
-  - [CSS Resets — \[astro-resets\]](#css-resets--astro-resets)
-  - [Color mode, with user override — \[astro-color-mode\]](#color-mode-with-user-override--astro-color-mode)
-  - [Full page transition — \[astro-transition\]](#full-page-transition--astro-transition)
-  - [Scroll observer — \[astro-scroll-observer\]](#scroll-observer--astro-scroll-observer)
-  - [Breakpoints handlers with (S)CSS / DOM / JS — \[astro-breakpoints\]](#breakpoints-handlers-with-scss--dom--js--astro-breakpoints)
-  - [URLs prefetching — \[astro-prefetch\]](#urls-prefetching--astro-prefetch)
-  - [Tooltips — \[astro-tooltips\]](#tooltips--astro-tooltips)
-  - [Lightbox — \[astro-lightbox\]](#lightbox--astro-lightbox)
-  - [SEO — \[astro-seo\]](#seo--astro-seo)
-  - [Traffic analysis — \[astro-analytics\]](#traffic-analysis--astro-analytics)
-- [📦  Components](#components)
-  - [Link, with smart optimizations — \[astro-link\]](#link-with-smart-optimizations--astro-link)
-  - [Media map embed — \[astro-media-map\]](#media-map-embed--astro-media-map)
-  - [Packages licenses report generator — \[astro-licenses-report\]](#packages-licenses-report-generator--astro-licenses-report)
-- [🚀  External projects](#external-projects)
-  - [Components](#components-1)
-    - [SVG icon from external providers — \[astro-icon\]](#svg-icon-from-external-providers--astro-icon)
-    - [Lazy loaded responsive image — \[astro-imagetools\]](#lazy-loaded-responsive-image--astro-imagetools)
-    - [Embed Youtube / Twitter media — \[astro-embed\]](#embed-youtube--twitter-media--astro-embed)
-    - [Sitemap generation — \[astro-sitemap\]](#sitemap-generation--astro-sitemap)
-- [👀  Astro demo website](#astro-demo-website)
-- [⚙️  Tooling configurations — \[astro-configs\]](#️tooling-configurations--astro-configs)
-- [🚧  To dos](#to-dos)
+<div class="git-toc">
+
+- [🚀  Julian's Web Garden](#julians-web-garden)
+  - [🤷🏼‍♂️  Philosophy](#️philosophy)
+- [🔗  Quick links](#quick-links)
+  - [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋ ](#live-demo--documentation-website)
+  - [📖  Website source code](#website-source-code)
+  - [📦  Application-level components ](#application-level-components-)
+  - [📦  Components](#components)
+  - [🛠  Tooling configurations](#tooling-configurations)
 - [✅  Tests](#tests)
+- [🚧  To dos](#to-dos)
+- [🧫  Experimenting](#experimenting)
 - [🧑‍🚀  Development](#development)
-  - [Commands](#commands)
+  - [🏁  Commands](#commands)
   - [🦾  Contribute](#contribute)
 
 ---
 
-# 📦  Application-level components
+</div>
 
-## Base document enclosure — \[astro-base\]
+# 🔗  Quick links
 
-**📦  [See component instructions](./app/Base)**
+## [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋ ](https://code.juliancataldo.com/)
 
-## CSS Resets — \[astro-resets\]
+_[Deployed on `code.juliancataldo.com`](https://code.juliancataldo.com/) automatically (GitHub Pages)._
 
-**📦  [See component instructions](./app/Resets)**
+## [📖  Website source code](https://github.com/JulianCataldo/astro/tree/master/demo)
 
-## Color mode, with user override — \[astro-color-mode\]
-
-**📦  [See component instructions](./app/ColorMode)**
-
-## Full page transition — \[astro-transition\]
-
-https://user-images.githubusercontent.com/603498/174424456-edce69a7-adef-4e59-b2d8-cfc22414b8a4.mp4
+See [default layout](demo/src/layouts/Default/Default.astro) and [home page](./demo/src/pages/index.astro)
+for live implementation examples.
 
 ---
 
-**📦  [See component instructions](./app/Transition)**
+## [📦  Application-level components ](./app)
 
-## Scroll observer — \[astro-scroll-observer\]
+[These are global components](./app) which enhance or augment browser behavior and style,
+while providing useful utilities to developers, website-wide.
 
-https://user-images.githubusercontent.com/603498/174468167-4f3cdbe3-ec90-49f6-8c51-d6028605c7d6.mp4
+## [📦  Components](./components)
 
----
+Generic [extendables components](./components).
 
-**📦  [See component instructions](./app/Scroll/Observer)**
+## [🛠  Tooling configurations](./configs)
 
-## Breakpoints handlers with (S)CSS / DOM / JS — \[astro-breakpoints\]
-
-**📦  [See component instructions](./app/Breakpoints)**
-
-## URLs prefetching — \[astro-prefetch\]
-
-https://user-images.githubusercontent.com/603498/174425991-7151f1b1-0192-4508-8e6c-3e0d8eabed0d.mp4
-
----
-
-**📦  [See component instructions](./app/Prefetch)**
-
-## Tooltips — \[astro-tooltips\]
-
-https://user-images.githubusercontent.com/603498/174427470-cd84028c-4f2f-41d0-8297-e71f21ad62f5.mp4
-
----
-
-**📦  [See component instructions](./app/Tooltips)**
-
-## Lightbox — \[astro-lightbox\]
-
-**📦  [See component instructions](./app/Lightbox)**
-
-## SEO — \[astro-seo\]
-
-**📦  [See component instructions](./app/SEO)**
-
-## Traffic analysis — \[astro-analytics\]
-
-**📦  [See component instructions](./app/Analytics)**
-
-# 📦  Components
-
-## Link, with smart optimizations — \[astro-link\]
-
-**📦  [See component instructions](./components/Link)**
-
-## Media map embed — \[astro-media-map\]
-
-![](./docs/component-media-map.png)
-
-**📦  [See component instructions](./components/Media/Map)**
-
-## Packages licenses report generator — \[astro-licenses-report\]
-
-![](./docs/component-licenses-report.png)
-
-**📦  [See component instructions](./components/LicensesReport)**
-
-# 🚀  External projects
-
-## Components
-
-### SVG icon from external providers — \[astro-icon\]
-
-**📦  [See component instructions](https://github.com/natemoo-re/astro-icon)**
-
-### Lazy loaded responsive image — \[astro-imagetools\]
-
-**📦  [See component instructions](https://github.com/RafidMuhymin/astro-imagetools)**
-
-### Embed Youtube / Twitter media — \[astro-embed\]
-
-**📦  [See component instructions](https://github.com/astro-community/astro-embed)**
-
-### Sitemap generation — \[astro-sitemap\]
-
-**📦  [See component instructions](https://github.com/withastro/astro/tree/main/packages/integrations/sitemap)**
-
-# 👀  Astro demo website
-
-Go to 🎭  **[\[ LIVE DEMO WEBSITE \]](https://juliancataldo.github.io/astro/)** (deployed on GitHub Pages).
-
----
-
-[Live demo website documentation](./demo) where you can test all components above.
-
-# ⚙️  Tooling configurations — \[astro-configs\]
-
-[📖  See documentation](./configs).
-
-# 🚧  To dos
-
-- [ ] Fix default package import when possible, as client side JS breaks for now  
-       `import Tooltips from '@julian_cataldo/astro-tooltips/Tooltips.astro';`  
-       to  
-       `import Tooltips from '@julian_cataldo/astro-tooltips';`
-- [ ] Find a way to launch only necessary tests when versioning
-- [ ] Implement dev / prod mode for debugging outputs
-- [ ] Tidy up demo website
-- [ ] Evaluate PNPM workspaces + tools for replacing Lerna version/publish?
-
----
-
-- [ ] Fully working tooling environment
+[A useful collection](./configs) for JavaScript developers.  
+Features ESLint, Prettier, Stylelint, Commitlint…  
+For Astro, React, Vue, SCSS, TS…
 
 # ✅  Tests
 
@@ -183,7 +79,8 @@ Cypress:
 
 - [ ] App/Analytics
 - [x] App/Base
-- [x] App/Prefetch
+- [ ] App/Prefetch
+  - Broken: `realHover` [issue](https://github.com/dmtrKovalenko/cypress-real-events/issues/247)
 - [ ] App/Resets
 - [ ] App/Breakpoints
 - [ ] App/ColorMode
@@ -199,9 +96,29 @@ Cypress:
 - [ ] Components/LicensesReport
 - [ ] …
 
+# 🚧  To dos
+
+- [ ] Fix default package import when possible, as client side JS breaks for now  
+       `import Tooltips from '@julian_cataldo/astro-tooltips/Tooltips.astro';`  
+       to  
+       `import Tooltips from '@julian_cataldo/astro-tooltips';`
+- [ ] Find a way to launch only necessary tests when versioning
+- [ ] Implement dev / prod mode for debugging outputs
+- [x] Rehaul demo website
+- [ ] Evaluate PNPM workspaces + tools for replacing Lerna version/publish?
+
+# 🧫  Experimenting
+
+- Website full theme switcher, in addition to color dark / light variants.
+- Feature flag manager
+- Copy to clipboard
+- Algolia search
+  <!-- - Easy fonts integration -->
+  <!-- - Easy iconify integration -->
+
 # 🧑‍🚀  Development
 
-## Commands
+## 🏁  Commands
 
 ```zsh
 # Scripts located in root ./package.json
@@ -235,6 +152,14 @@ Any remark, feature or pull request can be done in this GitHub repository and is
 Committing is linted following [conventional commits conventions](http://conventionalcommits.org).  
 This allows an easy and automatic versioning, change-logging, and NPM publishing workflow.
 
+<div class="git-footer">
+
+---
+
+[LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](https://code.juliancataldo.com/)
+
 ---
 
 🔗  [JulianCataldo.com](https://www.juliancataldo.com/)
+
+</div>
