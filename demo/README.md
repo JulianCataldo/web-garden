@@ -1,12 +1,13 @@
-# Demo website
+# Web Garden — Live demo + Documentation — Source code
 
-This is a kitchen sink,  
-with all current repository components demonstrated.
+<div class="git-footer">
 
 ---
 
-Go to 🎭  **[\[ LIVE DEMO WEBSITE \]](https://juliancataldo.github.io/astro/)** (deployed on GitHub Pages).
+[LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](https://code.juliancataldo.com/)
 
 ---
 
 🔗  [JulianCataldo.com](https://www.juliancataldo.com/)
+
+</div>
