@@ -52,8 +52,9 @@ const comboTitle = `${props.titles.main} — ${props.titles.sub}`;
   htmlClasses={['test-dummy-1', 'test-dummy-2']}
 >
   <Fragment slot='head'>
+    <!-- TODO: Dev / Prod mode for SEO image poster -->
     <SEO
-      image={'https://code.juliancataldo.com/android-chrome-512x512.jpg'}
+      image={'https://code.juliancataldo.com/poster.png'}
       title={comboTitle}
       description={props.description || description}
       siteName={"Julian's Web Garden"}
