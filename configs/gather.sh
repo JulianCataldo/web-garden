@@ -5,6 +5,7 @@
 cd ../
 
 cp .editorconfig \
+.vscode \
 ./configs
 
 # These are extended
