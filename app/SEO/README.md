@@ -87,25 +87,14 @@ Découvrez mes projets et mon profil professionnel.
 />
 ```
 
-# 👨‍🏭  TypeScript API
-
-```ts
-export interface Props {
-  /** Image URL, preferably absolute and 1200x630px */
-  image: string;
-  title: string;
-  description: string;
-  siteName: string;
-}
-```
+<div class="git-footer">
 
 ---
 
-[Live website demo documentation](../../demo)
-
-See [/demo/src/layouts/Layout.astro](../../demo/src/layouts/Layout.astro)
-for full implementation demo.
+[LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](https://code.juliancataldo.com/)
 
 ---
 
 🔗  [JulianCataldo.com](https://www.juliancataldo.com/)
+
+</div>
