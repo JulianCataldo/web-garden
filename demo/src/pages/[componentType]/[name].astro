@@ -1,0 +1,66 @@
+---
+import Layout from 'src/layouts/Default/Default.astro';
+import LinksTree from 'src/components/LinksTree/LinksTree.astro';
+import SinglePackage from 'src/modules/Single/Package/SinglePackage.astro';
+import { structureAllPackages } from 'src/packages-loader';
+
+const { params } = Astro;
+
+const packages = await structureAllPackages(
+  await Astro.glob('/content/packages/{app,components}/{*/,*/*/}package.json'),
+  await Astro.glob('/content/packages/{app,components}/{*/,*/*/}README.md'),
+  false,
+);
+const thePackage = packages
+  .filter(
+    (pkg) => pkg.pJson.name.replace('@julian_cataldo/', '') === params.name,
+  )
+  .pop();
+
+export async function getStaticPaths() {
+  const packagesForRoutes = await structureAllPackages(
+    await Astro.glob(
+      '/content/packages/{app,components}/{*/,*/*/}package.json',
+    ),
+    await Astro.glob('/content/packages/{app,components}/{*/,*/*/}README.md'),
+  );
+  return packagesForRoutes.map((pkg) => ({
+    params: {
+      componentType: 'component',
+      name: pkg.pJson.name.replace('@julian_cataldo/', ''),
+    },
+  }));
+}
+
+const titles = {
+  main: thePackage.readme.mainTitle.text,
+  sub: thePackage.pJson.description,
+};
+
+const tableOfContentHeaders = packages.map((e) => e.readme.mainTitle);
+const actions = [{ title: 'Quick start', href: '#doc' }];
+if (thePackage.hasDemo) {
+  actions.push({ title: 'Live demo', href: '#live-demo' });
+}
+if (thePackage.video) {
+  actions.push({ title: 'Test / Demo video', href: '#test-video' });
+}
+if (thePackage.typescriptProps) {
+  actions.push({ title: 'Typescript API', href: '#ts-api' });
+}
+---
+
+<Layout titles={titles} actions={actions}>
+  <article class='main-content'>
+    <div class='navigation'>
+      <h1>Component</h1>
+      <LinksTree links={tableOfContentHeaders} anchorMode={false} />
+    </div>
+
+    <div class='content article'>
+      <div class='wrapper'>
+        <SinglePackage content={thePackage} />
+      </div>
+    </div>
+  </article>
+</Layout>

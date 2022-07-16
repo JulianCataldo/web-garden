@@ -1,0 +1,55 @@
+---
+import Layout from 'src/layouts/Default/Default.astro';
+import LinksTree from 'src/components/LinksTree/LinksTree.astro';
+
+import { structureAllPackages } from 'src/packages-loader';
+
+const configPackage = (
+  await structureAllPackages(
+    await Astro.glob('/content/packages/configs/package.json'),
+    await Astro.glob('/content/packages/configs/README.md'),
+  )
+).pop();
+
+const titles = {
+  main: 'Developers tools',
+  sub: "Serious tooling for serious dev's",
+};
+---
+
+<Layout titles={titles}>
+  <article class='main-content'>
+    <div class='navigation'>
+      <h1>Tooling</h1>
+      <LinksTree links={configPackage.readme.headers} anchorMode={true} />
+    </div>
+
+    <div class='content article article-body'>
+      <div class='wrapper'>
+        <configPackage.readme.Content />
+      </div>
+    </div>
+  </article>
+</Layout>
+
+<!-- <style lang='scss'>
+  article {
+    @include theme(default) {
+      padding: 3rem;
+      margin: 3rem;
+    }
+
+    //   @include theme(default, light) {
+    //     @include default-card(light);
+    //   }
+    //   @include theme(default, dark) {
+    //     @include default-card(dark);
+    //   }
+
+    //   @include theme(hacker) {
+    //     padding: 2rem;
+    //     margin: 2rem;
+    //     @include hacker-card;
+    //   }
+  }
+</style> -->

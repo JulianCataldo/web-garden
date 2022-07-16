@@ -1,173 +1,46 @@
 ---
-import MediaMap from '@julian_cataldo/astro-media-map/MediaMap.astro';
-import Link from '@julian_cataldo/astro-link/Link.astro';
-import LicensesReport from '@julian_cataldo/astro-licenses-report/LicensesReport.astro';
+import Layout from 'src/layouts/Default/Default.astro';
+import LinksTree from 'src/components/LinksTree/LinksTree.astro';
 
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import LongText from '../components/LongText.astro';
-import Image from '../components/Image.astro';
+import { structureAllPackages } from 'src/packages-loader';
+
+const rootPackage = (
+  await structureAllPackages(
+    await Astro.glob('/content/packages/package.json'),
+    await Astro.glob('/content/packages/README.md'),
+  )
+).pop();
+
+const titles = {
+  main: "Julian's Web Garden",
+  sub: rootPackage.pJson.description,
+};
+
+const actions = [
+  {
+    title: 'Repository',
+    href: 'https://github.com/JulianCataldo/astro',
+    icon: 'mdi:github',
+  },
+  {
+    title: 'Documentation',
+    href: '#julians-web-garden',
+    icon: 'system-uicons:book-text',
+  },
+];
 ---
 
-<Layout title='Welcome to Astro.'>
-  <main>
-    <h1>Welcome to <span class='text-gradient'>Astro</span></h1>
-    <!-- <p class="instructions"></p> -->
-    <a href='#' title='Hello!' data-tooltip-placement='left'>Tooltip left</a>
-    <ul role='list' class='link-card-grid'>
-      <Card href='/page-a' title='Page A' body='Go to page A' />
-      <Card href='/page-b' title='Page B' body='Go to page B' />
-      <Card href='/page-c' title='Page C' body='Go to page C' />
-      <Card href='/page-d' title='Page D' body='Go to page D' />
-    </ul>
-    <a href='#' title='Hello!' data-tooltip-placement='bottom'>
-      Tooltip bottom
-    </a>
-    <hr />
-    <br />
-
-    <h2>Breakpoints</h2>
-    ℹ️&nbsp;&nbsp;<em>Resize window!</em>
-    <div>Current : <strong><em class='current-breakpoint'></em></strong></div>
-    <textarea id='bp-output'></textarea>
-
-    <h2>Links</h2>
-    <ul>
-      <li>
-        <Link href='/page-a' title='Internal route…'>
-          Some <strong>internal</strong> link
-        </Link>
-      </li>
-      <li>
-        <Link href='https://www.juliancataldo.com' title='External, bye…'>
-          Some <strong>external</strong> link, loaded in a new tab
-        </Link>
-      </li>
-      <li>
-        <Link
-          href='https://www.juliancataldo.com'
-          title='External, in this window'
-          externalInNewTab={false}
-        >
-          Some <strong>external</strong> link, loaded in current tab
-        </Link>
-      </li>
-      <li>
-        <Link href='mailto:john.smith@bigcorp.biz' title='Contact me!'>
-          Some <strong>mail</strong> link (email, telephone)
-        </Link>
-      </li>
-      <li>
-        <Link href='tel:8989898989' title='Phone me!'>
-          Some <strong>telephone</strong> link (email, telephone)
-        </Link>
-      </li>
-      <li class='my-parent-with-custom-links'>
-        <Link href='http://perdu.com' title={"I'm lost…"}>
-          1. Some <strong>custom</strong> link!
-        </Link>
-        <br />
-        <Link
-          href={'mailto:john.smith@bigcorp.biz'}
-          title={'Mail!'}
-          class='custom-class'
-          >2. Another…
-        </Link>
-        <br />
-        <Link href='tel:8989898989' title='Tel!'>3. Another one………</Link>
-      </li>
-    </ul>
-
-    <div class='map-demo'>
-      <MediaMap
-        x={43.389636 /* Required */}
-        y={5.3964332 /* Required */}
-        z={11}
-        height={'25rem' /* Required */}
-        width={'25rem'}
-        attribution={true}
-      />
+<Layout titles={titles} actions={actions}>
+  <article class='main-content'>
+    <div class='navigation'>
+      <h1>Web garden</h1>
+      <LinksTree links={rootPackage.readme.headers} anchorMode={true} />
     </div>
 
-    <div class='some-wrapper' data-lightbox='true'>
-      <Image />
+    <div class='content article'>
+      <div class='wrapper article-body'>
+        <rootPackage.readme.Content />
+      </div>
     </div>
-
-    <!-- All properties are optional -->
-    <LicensesReport
-      useDevDependencies={true}
-      depth={2}
-      nameText={'Nom'}
-      authorText={'Auteur'}
-      licenseText={'License'}
-      linkText={'URL'}
-    />
-
-    <LongText />
-    <LongText />
-    <LongText />
-  </main>
+  </article>
 </Layout>
-
-<script>
-  import '../snippets/breakpoints.ts';
-</script>
-
-<style lang='scss'>
-  @import '../snippets/link-custom.scss';
-  @import '../snippets/breakpoints.scss';
-
-  :root {
-    --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-  }
-
-  h1 {
-    margin: 2rem 0;
-  }
-
-  .text-gradient {
-    font-weight: 900;
-    background-image: var(--astro-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 100% 200%;
-    background-position-y: 100%;
-    border-radius: 0.4rem;
-    animation: pulse 4s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-    0%,
-    100% {
-      background-position-y: 0%;
-    }
-
-    50% {
-      background-position-y: 80%;
-    }
-  }
-
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    background: #4f39fa;
-    padding: 1rem;
-    border-radius: 0.4rem;
-    color: var(--color-bg);
-  }
-
-  .instructions code {
-    font-size: 0.875em;
-    border: 0.1em solid var(--color-border);
-    border-radius: 4px;
-    padding: 0.15em 0.25em;
-  }
-
-  .long-text {
-    width: 31rem;
-  }
-
-  .map-demo {
-    margin: 4rem 2rem;
-  }
-</style>
