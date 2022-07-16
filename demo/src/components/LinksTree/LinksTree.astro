@@ -1,0 +1,32 @@
+---
+import type { MarkdownHeader } from '@astrojs/markdown-remark';
+import Link from '@julian_cataldo/astro-link/Link.astro';
+
+// eslint-disable-next-line no-undef
+interface Props extends astroHTML.JSX.HTMLAttributes {
+  links: MarkdownHeader[];
+  anchorMode?: boolean;
+}
+const { links = [], anchorMode = false, ...extraAttrs } = Astro.props as Props;
+---
+
+<nav class='links-tree' {...extraAttrs}>
+  <ul>
+    {links.map((link) => {
+      const title = link.text.replace('🚀  Astro — ', '')
+      const href = anchorMode ? `#${link.slug}` : `/component/${link.slug}`
+
+      return (
+        <li class:list={`depth-${link.depth}`}>
+          <Link href={href} class="link unstyled">
+            {title}
+          </Link>
+        </li>
+      )
+    })}
+  </ul>
+</nav>
+
+<style lang='scss'>
+  @import './LinksTree.scss';
+</style>
