@@ -1,6 +1,21 @@
+content/packages
+
+public/assets/videos
+
 # build output
 dist/
 .output/
+
+graphics
+
+# *.png
+# *.jpg
+# *.psd
+# *.ai
+# *.tx
+# *.c4d
+# *.gi2
+# *.xml
 
 # dependencies
 node_modules/
