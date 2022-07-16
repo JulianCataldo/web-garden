@@ -58,40 +58,61 @@ const report =
     })) || [];
 ---
 
-<table class="licenses-report">
-  <thead class="table-header">
-    <tr class="row">
-      <th class="header name">{props.nameText}</th>
-      <th class="header author">{props.authorText}</th>
-      <th class="header license">{props.licenseText}</th>
-      <th class="header link">{props.linkText}</th>
-    </tr>
-  </thead>
+<div
+  class:list={[
+    'table',
+    'licenses-report',
+    props.class,
+    //  props.customRootClass
+  ]}
+  role='table'
+  {...extraAttrs}
+>
+  <div class:list={['thead', props.class]} role='rowgroup'>
+    <div class:list={['tr', props.class]} role='row'>
+      <div class:list={['th', props.class]} role='columnheader'>
+        {props.nameText}
+      </div>
+      <div class:list={['th', props.class]} role='columnheader'>
+        {props.authorText}
+      </div>
+      <div class:list={['th', props.class]} role='columnheader'>
+        {props.licenseText}
+      </div>
+      <div class:list={['th', props.class]} role='columnheader'>
+        {props.linkText}
+      </div>
+    </div>
+  </div>
 
-  <tbody class="table-body">
+  <div class:list={['tbody', props.class]} role='rowgroup'>
     {report.map((row) => (
-      <tr class="row">
-        <td class="column name">{row.name}</td>
+      <div class:list={['tr', props.class]} role="row">
+        <div class:list={['td', props.class]} role="cell">
+          {row.name}
+        </div>
 
-        <td class="column author">
-          {typeof row.author === "string"
+        <div class:list={['td', props.class]} role="cell">
+          {typeof row.author === 'string'
             ? row.author
-            : row?.author?.name || "-"}
-        </td>
+            : row?.author?.name || '-'}
+        </div>
 
-        <td class="column license">{row.license}</td>
+        <div class:list={['td', props.class]} role="cell">
+          {row.license}
+        </div>
 
-        <td class="column link">
+        <div class:list={['td', props.class]} role="cell">
           <a
-            class="link is-external"
+            class:list="[is-external]"
             href={row.homepage || row.repository.url}
             target="_blank"
             rel="noopener nofollow"
           >
             {row.homepage || row.repository.url}
           </a>
-        </td>
-      </tr>
+        </div>
+      </div>
     ))}
-  </tbody>
-</table>
+  </div>
+</div>
