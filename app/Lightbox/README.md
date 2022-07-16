@@ -2,11 +2,11 @@
 
 Simple lightbox component.
 
-<!-- ## 📦  Installation
+## 📦  Installation
 
 ```sh
 pnpm i @julian_cataldo/astro-lightbox
-``` -->
+```
 
 > **Warning**  
 > 🚧  Work in progress
@@ -37,21 +37,14 @@ import Lightbox from '@julian_cataldo/astro-lightbox/Lightbox.astro';
 </body>
 ```
 
-<!-- ## 🎉  Result -->
-
-<!-- ![](../../../docs/foo.png) -->
-
-<!-- ## To do -->
-
-<!-- - [ ]  -->
+<div class="git-footer">
 
 ---
 
-[Live website demo documentation](../demo)
-
-See [/demo/src/layouts/Layout.astro](../../demo/src/layouts/Layout.astro)
-for full implementation demo.
+[LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](https://code.juliancataldo.com/)
 
 ---
 
 🔗  [JulianCataldo.com](https://www.juliancataldo.com/)
+
+</div>
