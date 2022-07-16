@@ -33,10 +33,13 @@ jobs:
         working-directory: ./demo
         run: pnpm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - uses: actions/github-script@v6
         with:
           script: |
             echo 'code.juliancataldo.com' > ./build/CNAME && gh-pages -d build"
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./demo/dist
