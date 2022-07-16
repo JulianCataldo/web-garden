@@ -133,14 +133,16 @@ export interface Props {
 ## To do
 
 - [ ] Support Astro `base` option for prefixing `href`s.
+- [ ] Proper support for opening link in new tab (ctrl/cmd/middle-mouse + click)
+
+<div class="git-footer">
 
 ---
 
-[Live website demo documentation](../../demo)
-
-See [/demo/src/pages/index.astro](../../demo/src/pages/index.astro)
-for full implementation demo.
+[LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](https://code.juliancataldo.com/)
 
 ---
 
 🔗  [JulianCataldo.com](https://www.juliancataldo.com/)
+
+</div>

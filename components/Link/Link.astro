@@ -1,38 +1,24 @@
 ---
-export interface Props {
-  href: string;
-  /**
-   * **Default**: `null`
-   * */
-  title?: string | null;
-  /**
-   * Whether to show external link icon or not.
-   *
-   * **Default**: `true`
-   * */
-  externalHint?: boolean;
-  /**
-   * Open external link in a new tab/window.
-   *
-   * **Default**: `true`
-   * */
-  externalInNewTab?: boolean;
-}
+import type { Props as BaseProps } from './Props';
+
+export interface Props extends BaseProps {}
 const props = { ...Astro.props } as Props;
 /* ———————————————————————————————————————————— Typeguards + Fallbacks —————— */
-if (typeof props.href !== 'string') {
-  props.href = '#';
-  console.warn('> Missing `href` property for <Link>');
-}
-if (typeof props.title !== 'string') {
-  props.title = null;
-}
-if (typeof props.externalHint !== 'boolean') {
-  props.externalHint = true;
-}
-if (typeof props.externalInNewTab !== 'boolean') {
-  props.externalInNewTab = true;
-}
+const internalProps: string[] = [];
+
+if (typeof props.href !== 'string') props.href = '#';
+internalProps.push('href');
+if (typeof props.title !== 'string') props.title = null;
+internalProps.push('title');
+if (typeof props.externalInNewTab !== 'boolean') props.externalInNewTab = true;
+internalProps.push('externalInNewTab');
+/* ············································ Extra HTML attributes ······· */
+const extraAttrs: { [key: string]: string } = {};
+Object.entries(props).forEach(([key, val]) => {
+  if (internalProps.includes(key) === false) {
+    extraAttrs[key] = `${val as string}`;
+  }
+});
 /* —————————————————————————————————————————————————————————————————————————— */
 
 /* Link type(s) */
@@ -60,26 +46,33 @@ if (isExternal === false && isHash === false) {
   /* Prefix with root relative */
   parsedUrl = `/${parsedUrl}`;
 }
-/* Hide contact link  `href` */
+
+let dataContact = null;
 if (contact) {
+  /* Hide contact link `href` */
   parsedUrl = '#';
+  /* Inject contact data */
+  dataContact = btoa(props.href);
 }
 ---
 
 <a
   href={parsedUrl}
   title={props.title === '' ? undefined : props.title}
-  class:list={{
-    link: true,
-    'is-external': isExternal,
-    'is-hash': isHash,
-    'is-mail': isMail,
-    'is-tel': isTel,
-    'has-hint': isExternal ? props?.externalHint : false,
-  }}
-  data-contact={btoa(props.href)}
+  class:list={[
+    'link',
+    {
+      'is-external': isExternal,
+      'is-hash': isHash,
+      'is-mail': isMail,
+      'is-tel': isTel,
+    },
+    props.class,
+  ]}
+  data-contact={dataContact}
   target={isExternal && props.externalInNewTab ? '_blank' : null}
   rel={isExternal ? 'noopener nofollow' : null}
+  {...extraAttrs}
 >
   <slot></slot>
 </a>
@@ -90,8 +83,9 @@ if (contact) {
     ...document.querySelectorAll('.link.is-tel'),
   ];
 
+  // TODO: refactor to global event listener
   contactLinks.forEach((link) => {
-    console.log(link);
+    // console.log(link);
     link.addEventListener('click', (e) => {
       e.preventDefault();
 
@@ -103,21 +97,3 @@ if (contact) {
     });
   });
 </script>
-
-<style lang='scss'>
-  .link {
-    &.is-external.has-hint {
-      position: relative;
-      padding-right: 0.95em;
-    }
-
-    &.is-external.has-hint::after {
-      position: absolute;
-      right: 0em;
-      top: -0.1em;
-      transform: rotate(90deg);
-      font-size: 85%;
-      content: '⎋';
-    }
-  }
-</style>
