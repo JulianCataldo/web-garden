@@ -1,16 +1,30 @@
 {
   "recommendations": [
-    "astro-build.astro-vscode",
-
-    "stylelint.vscode-stylelint",
-
-    "mrmlnc.vscode-scss",
-
+    /* —————————————————————————————————— Linting JS/TS/JSX/Vue… ———————————— */
     "dbaeumer.vscode-eslint",
 
+    /* —————————————————————————————————— Astro ————————————————————————————— */
+    "astro-build.astro-vscode",
+
+    /* —————————————————————————————————— Vue 2/3 ——————————————————————————— */
+    "Vue.volar",
+
+    /* —————————————————————————————————— Formatting / Styling (all) ———————— */
     "esbenp.prettier-vscode",
     "editorconfig.editorconfig",
 
+    /* —————————————————————————————————— SCSS —————————————————————————————— */
+    "stylelint.vscode-stylelint",
+
+    "mrmlnc.vscode-scss",
+    "pranaygp.vscode-css-peek",
+
+    /* —————————————————————————————————— Comments —————————————————————————— */
+    "aaron-bond.better-comments",
+    "Gruntfuggly.todo-tree",
+    "wayou.vscode-todo-highlight",
+
+    /* —————————————————————————————————— Misc. ————————————————————————————— */
     "DavidAnson.vscode-markdownlint"
   ]
 }

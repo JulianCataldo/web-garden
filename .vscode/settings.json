@@ -1,5 +1,6 @@
 {
-  /* VSCode */
+  /* —————————————————————————————— VSCode —————————————————————————————————— */
+
   "editor.formatOnPaste": false,
   "editor.formatOnType": false,
   "editor.formatOnSave": true,
@@ -7,10 +8,10 @@
     "source.fixAll": false
   },
 
-  /* Typescript */
+  /* —————————————————————————————— Typescript —————————————————————————————— */
   "typescript.inlayHints.parameterNames.enabled": "all",
 
-  /* ESLint */
+  /* —————————————————————————————— ESLint —————————————————————————————————— */
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -19,15 +20,12 @@
     "typescriptreact"
   ],
 
-  /* Prettier */
+  /* —————————————————————————————— Prettier ———————————————————————————————— */
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "prettier.documentSelectors": ["**/*.astro"],
   "[astro]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
@@ -39,20 +37,42 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 
-  /* Stylelint */
-  "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "astro"],
-  "stylelint.snippet": ["css", "less", "postcss", "scss", "vue", "astro"],
+  /* —————————————————————————————— Stylelint ——————————————————————————————— */
+  "stylelint.validate": ["css", "less", "postcss", "scss", "vue" /* "astro" */],
+  "stylelint.snippet": ["css", "less", "postcss", "scss", "vue" /* "astro" */],
 
   /* SCSS IntelliSense */
   "scss.showErrors": true,
 
+  /* —————————————————————————————— CSS Peek —————————————————————————————————*/
+  "cssPeek.peekFromLanguages": [
+    "html",
+    "astro",
+    "vue",
+    "md",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+
+  /* —————————————————————————————— Misc. ——————————————————————————————————— */
   /* JSON with comments */
-  "files.associations": { "*.json": "jsonc" }
+  "files.associations": { "*.json": "jsonc" },
+
+  /* `wayou.vscode-todo-highlight` does this already */
+  "todo-tree.highlights.enabled": false
 }
