@@ -43,37 +43,18 @@ import MediaMap from '@julian_cataldo/astro-media-map/MediaMap.astro';
 
 ![](../../../docs/component-media-map.png)
 
-# 👨‍🏭  TypeScript API
-
-```ts
-export interface Props {
-  /** Longitude */
-  x: number;
-  /** Latitude */
-  y: number;
-  /** Default zoom level: 10 */
-  z?: number;
-
-  height: string;
-  /** Default: '100%' */
-  width?: string;
-
-  /** Default: true */
-  attribution?: boolean;
-}
-```
-
 ## To do
 
 - [ ] Multiple maps per page
 
+<div class="git-footer">
+
 ---
 
-[Live website demo documentation](../../../../demo)
-
-See [/demo/src/pages/index.astro](../../../demo/src/pages/index.astro)
-for full implementation demo.
+[LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](https://code.juliancataldo.com/)
 
 ---
 
 🔗  [JulianCataldo.com](https://www.juliancataldo.com/)
+
+</div>

@@ -57,6 +57,7 @@ This component takes these stances about it:
 That being said, **don't hesitate to share your handy little resets**
 in issues.
 
+<!--
 # 👨‍🏭  TypeScript API
 
 ```ts
@@ -77,7 +78,7 @@ export interface Props {
 }
 ```
 
----
+--- -->
 
 # Rules
 
@@ -117,13 +118,14 @@ doesn't scroll, or when you open a lightbox/modal etc.
 
 - [ ] Find a more practical way to handle CSS snippets files and their import
 
+<div class="git-footer">
+
 ---
 
-[Live website demo documentation](../../demo)
-
-See [/demo/src/layouts/Layout.astro](../../demo/src/layouts/Layout.astro)
-for full implementation demo.
+[LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](https://code.juliancataldo.com/)
 
 ---
 
 🔗  [JulianCataldo.com](https://www.juliancataldo.com/)
+
+</div>
