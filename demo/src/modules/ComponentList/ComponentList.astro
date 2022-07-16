@@ -1,0 +1,90 @@
+---
+import { Icon } from 'astro-icon';
+
+// import IconAccessibility from '~icons/system-uicons:clipboard-copy?raw';
+
+// import DemoLinks from '../../components/Demo/DemoLinks.astro';
+// import DemoLicensesReport from '../../components/Demo/DemoLicensesReport.astro';
+
+import Button from 'src/components/Button/Button.astro';
+import DemoLoader from 'src/components/Demo/DemoLoader.astro';
+// import MyLink from 'src/components/Polymorph/MyLink/MyLink.astro';
+import { Package } from 'src/packages-loader';
+// import DemoBreakpoints from '../../components/Demo/astro-breakpoints.astro';
+
+interface Props {
+  packages: Package[];
+}
+const props = Astro.props as Props;
+/* Typeguards + Fallback */
+if (Array.isArray(props.packages) === false) {
+  props.packages = [];
+}
+
+// const demos = await Promise.all(
+//   props.packages.map(async (pkg) => {
+//     const name = pkg.pJson.name.replace('@julian_cataldo/', '');
+
+//     const demo = await import(`../../components/Demo/${name}.astro`)
+//       .then((e) => e.default)
+//       .catch((e) => {
+//         console.log(e);
+//       });
+//     return demo;
+//   }),
+// );
+---
+
+<!-- <div class='container'> -->{props.packages.map((pkg, index) => {
+  const name = pkg.pJson.name.replace('@julian_cataldo/', '')
+  const url = `/component/${name}`
+
+  console.log()
+  // const Demo = demos[index]
+
+  // {Demo && <Demo />}
+  const id = `cb-${index}`
+  return (
+    <article id={pkg.readme.mainTitle.slug} class="article-body package">
+      <header>
+        <h1>{pkg.readme.mainTitle.text}</h1>
+      </header>
+      <div class="description">{pkg.pJson.description}</div>
+
+      {pkg.hasDemo && (
+        <section class="demo-section">
+          <h2>
+            <Icon name="system-uicons:hand" size={'1em'} class="icon" />
+            <span>Demonstration</span>
+          </h2>
+          <div class="demo">
+            <DemoLoader name={name} />
+          </div>
+        </section>
+      )}
+
+      <hr />
+
+      <footer class="actions">
+        <Button href={url}>See full documentation</Button>
+        <div class="package-install">
+          <code class="install-command" id={id}>
+            pnpm i {pkg.pJson.name}
+          </code>
+          <div
+            data-clipboard-target={`#${id}`}
+            title="Copy to clipboard"
+            data-tooltip-placement="right"
+          >
+            <Icon name="system-uicons:clipboard-copy" size="2rem" />
+          </div>
+        </div>
+      </footer>
+    </article>
+  )
+})}
+<!-- </div> -->
+<!-- <DemoBreakpoints />  -->
+<style lang='scss'>
+  @import './ComponentList.scss';
+</style>

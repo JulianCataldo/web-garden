@@ -1,0 +1,173 @@
+.package-install {
+  display: flex;
+  align-items: center;
+}
+
+[data-clipboard-target] {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  @include theme(default) {
+    width: 3rem;
+    padding: 0.4rem;
+    margin: 0.4rem;
+  }
+  @include theme(default, light) {
+    // _
+  }
+  @include theme(default, dark) {
+    // _
+  }
+
+  @include theme(hacker) {
+    width: 2.5rem;
+    padding: 0.2rem;
+    margin: 0.2rem;
+  }
+}
+
+.install-command {
+  display: inline-block;
+
+  @include theme(default, $scoped: true) {
+    padding: 1rem;
+    color: $lavender-blush;
+    background: $raisin-black;
+    border-radius: 0.5rem;
+  }
+  @include theme(default, light) {
+    // _
+  }
+  @include theme(default, dark) {
+    // _
+  }
+
+  // @include theme(hacker) {
+  //   // _
+  // }
+}
+
+.demo-section {
+  margin: 2rem 0rem;
+
+  h2 {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      margin-right: 0.5em;
+    }
+
+    @include theme(default, $scoped: true) {
+      padding: 1rem 1rem;
+      margin: 0;
+    }
+  }
+
+  @include theme(default, light, $scoped: true) {
+    box-shadow: 2px 2px 6px color.adjust($raisin-black, $alpha: -0.8) inset;
+  }
+  @include theme(default, dark, $scoped: true) {
+    box-shadow: 2px 2px 6px color.adjust($lavender-blush, $alpha: -0.8) inset;
+  }
+}
+
+.demo {
+  @include theme(default, $scoped: true) {
+    padding: 2vw 2vw;
+  }
+}
+
+.actions {
+  display: flex;
+
+  & > * {
+    margin: 0 4rem;
+  }
+
+  .button {
+    margin-bottom: 0 !important;
+  }
+}
+
+// &:active {
+//   background: $rosewood;
+// }
+
+// &[data-clipboard-was-copied="true"] {
+//   color: $raisin-black;
+//   background: $fiery-rose;
+// }
+
+// footer {
+//   display: flex;
+//   margin-top: 2rem;
+//   padding: 0 2rem;
+//   justify-content: space-between;
+//   font-weight: 700;
+// }
+
+// section {
+//   @include theme(default) {
+//     padding: 3rem;
+//     margin-bottom: 3rem;
+
+//     &:last-of-type {
+//       margin: 0;
+//     }
+
+//     :global(:is(h1, h2, h3, h4, h5)) {
+//       &:first-of-type {
+//         margin: 0 0 3rem 0;
+//       }
+
+//       margin: 3rem 0;
+//     }
+//   }
+//   @include theme(default, light) {
+//     // @include default-card(light);
+//   }
+//   @include theme(default, dark) {
+//     // @include default-card(dark);
+//   }
+
+//   @include theme(hacker) {
+//     padding: 2rem;
+//     margin: 2rem;
+//     @include hacker-card;
+//   }
+// }
+
+// .demo {
+//   @include theme(default) {
+//     padding: 3rem;
+//     margin: 3rem;
+//   }
+//   @include theme(default, light) {
+//     // @include default-card(light);
+//   }
+//   @include theme(default, dark) {
+//     // @include default-card(dark);
+//   }
+
+//   @include theme(hacker) {
+//     padding: 2rem;
+//     margin: 2rem;
+//     @include hacker-card;
+//   }
+// }
+
+// .description {
+//   @include theme(default) {
+//     margin: 3rem 0;
+//   }
+//   @include theme(default, light) {
+//   }
+//   @include theme(default, dark) {
+//   }
+
+//   @include theme(hacker) {
+//     margin: 2.5rem 0;
+//   }
+// }

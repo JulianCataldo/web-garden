@@ -1,0 +1,63 @@
+---
+import DemoLoader from 'src/components/Demo/DemoLoader.astro';
+// import RichText from 'src/components/RichText/RichText.astro';
+import type { Package } from 'src/packages-loader';
+import { Code } from 'astro/components';
+// import MyLink from 'src/components/Polymorph/MyLink/MyLink.astro';
+
+interface Props {
+  content: Package;
+}
+const props = Astro.props as Props;
+/* Typeguards + Fallback */
+if (typeof props?.content?.readme?.Content !== 'function') {
+  props.content = null;
+}
+
+// console.log(props.content);
+---
+
+<div class='single-package'>  
+  {props.content ? (
+    <>
+      <section id="doc" class="package-section article-body">
+        <props.content.readme.Content />
+      </section>
+
+      {props.content.hasDemo && (
+        <section id="live-demo" class="package-section article-body">
+          <h2>Component live demo</h2>
+
+          <DemoLoader name={props.content.shortname} />
+        </section>
+      )}
+      
+      {props.content.video && (
+        <section id="test-video" class="package-section article-body">
+          <h2>Test x Demo : Video</h2>
+
+          <div>
+            <video width="100%" height="100%" controls autoplay loop>
+              <source src={props.content.video} type="video/mp4" />
+            </video>
+          </div>
+        </section>
+      )}
+
+      {props.content.typescriptProps && (
+        <section id="ts-api" class="package-section article-body">
+      
+          <h2>TypeScript API</h2>
+          <Code code={props.content.typescriptProps} lang="tsx"/>
+    
+        </section>
+      )}
+    </>
+  ) : (
+    <div>Empty content — No README.md found</div>
+  )}
+</div>
+<!-- 
+<style lang='scss'>
+  @import './style.scss';
+</style> -->

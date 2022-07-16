@@ -1,0 +1,86 @@
+---
+import { Picture } from 'astro-imagetools/components';
+import Link from '@julian_cataldo/astro-link/Link.astro';
+import tree from 'content/tree.txt?raw';
+import Icon from 'astro-icon';
+
+interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
+  title: string;
+  description: string;
+  actions?: { title: string; href: string; icon?: string }[];
+}
+const props = Astro.props as Props;
+/* ———————————————————————————————————————————— Typeguards + Fallbacks —————— */
+if (typeof props.title !== 'string') props.title = '';
+if (typeof props.description !== 'string') props.description = null;
+if (Array.isArray(props.actions) === false) props.actions = null;
+/* —————————————————————————————————————————————————— */
+
+const treeCode = `git clone \\
+ssh://solar.sys/🌍 \\
+new-planet
+🚀${tree}
+
+⌛️ Finito!
+`;
+---
+
+<div class='landing'>
+  <div class='layer-1'>
+    <div class='particles-wrapper'>
+      <div id='tsparticles'></div>
+    </div>
+  </div>
+
+  <div class='img-background'>
+    <Picture
+      src='/graphics/exports/spatial-scene10.png'
+      alt=''
+      layout={'fullWidth'}
+      sizes='100vw'
+      formatOptions={{
+        png: {
+          quality: 100,
+        },
+        webp: {
+          quality: 100,
+        },
+      }}
+    />
+  </div>
+
+  <div class='tree'>
+    <pre class='code'><code data-content={treeCode} /></pre>
+  </div>
+
+  <div class='titles'>
+    <h1>{props.title}</h1>
+    <hr />
+
+    <p class='description'>{props.description}</p>
+
+    {props.actions && (
+      <footer class="actions">
+        <hr />
+        {props.actions.map((action) => (
+          <Link class="button unstyled" href={action.href}>
+            {action.icon && (
+              <Icon name={action.icon} size={'2em'} class="icon" />
+            )}
+            <span>{action.title}</span>
+          </Link>
+        ))}
+      </footer>
+    )}
+  </div>
+
+  <div class='vignette'></div>
+</div>
+
+<script>
+  import './Landing.client.ts';
+</script>
+
+<style lang='scss'>
+  @import './Landing.scss';
+</style>

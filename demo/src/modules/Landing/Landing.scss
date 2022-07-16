@@ -1,0 +1,300 @@
+.landing {
+  @include theme(default) {
+    @include font-color-dark;
+  }
+
+  @include theme(hacker) {
+  }
+}
+
+h1 {
+  font-weight: 800;
+  // font-size: 300%;
+}
+
+.layer-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  z-index: 0;
+  position: relative;
+}
+
+.titles {
+  position: absolute;
+  top: calc(13rem + 5vw);
+  left: calc(100% - 75vw);
+  max-width: 40rem;
+  z-index: 2;
+  // height: 130vh;
+  // width: 100vw;
+  // @include theme(default, light, $scoped: true) {
+  // background-color: color.adjust($lavender-blush, $alpha: -0.3);
+  // }
+  @include font-color-light;
+  // @include theme(default, dark, $scoped: true) {
+
+  padding: 2rem 3rem;
+
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    transform: skewX(4deg);
+    background-color: color.adjust($rosewood, $lightness: -12%, $alpha: -0.3);
+    box-shadow: 3px 3px 10px
+      color.adjust(hsl(218, 74%, 27%), $lightness: -12%, $alpha: -0.5);
+    border-radius: 0.5rem;
+  }
+
+  p {
+    margin: 2rem 0 0 0;
+  }
+}
+
+.particles-wrapper {
+  position: absolute;
+  height: 130vh;
+  width: 100vw;
+  z-index: -1;
+  -webkit-mask-image: linear-gradient(
+    -184deg,
+    white calc(45rem - 30vw),
+    transparent calc(100% - 10rem)
+  );
+}
+
+.description {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.overlay {
+  z-index: 1;
+}
+
+#tsparticles {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s;
+
+  &[data-is-loaded] {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(75vh);
+  }
+
+  2% {
+    opacity: 0.7;
+  }
+
+  11% {
+    opacity: 1;
+  }
+
+  12% {
+    opacity: 0.3;
+  }
+
+  13% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  31% {
+    opacity: 0.3;
+  }
+
+  32% {
+    opacity: 1;
+  }
+
+  99% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+.tree {
+  @include theme(default, light, $scoped: true) {
+    color: color.adjust($red-pigment, $lightness: 30%);
+  }
+  @include theme(default, dark, $scoped: true) {
+    color: color.adjust($red-pigment, $lightness: 20%);
+  }
+
+  top: 7rem;
+  // width: 30rem;
+  left: 1.5vw;
+  position: absolute;
+  height: 100vh;
+  overflow: hidden;
+  // mix-blend-mode: normal;
+  // pointer-events: none;
+  filter: saturate(60%);
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 1rem,
+    black 40vh,
+    black calc(100% - 50vh),
+    transparent calc(100%)
+  );
+
+  .code {
+    animation-name: slide-up;
+    // animation-direction: ;
+    // animation-duration: 52.0761s;
+    animation-duration: 120s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+}
+
+code {
+  text-shadow: 0px 0px 6px $raisin-black;
+
+  &::before {
+    content: attr(data-content);
+  }
+}
+// :global(.asciinema-theme-asciinema)
+// :global(.asciinema-theme-asciinema .asciinema-terminal) {
+// background-color: transparent !important;
+// background-color: transparent; /* terminal background color */
+// border-color: black;
+// border: none;
+// text-shadow: 0px 0px 7px black;
+// }
+
+.img-background {
+  position: absolute;
+  width: 100%;
+  top: calc(35rem - 30vw);
+  height: 100vh;
+  z-index: 0;
+
+  :global(img) {
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 2rem,
+      black 8rem,
+      black calc(100% - 13rem),
+      transparent calc(100% - 1rem)
+    );
+  }
+
+  @include theme(hacker) {
+    filter: sepia() hue-rotate(80deg);
+  }
+}
+
+.vignette {
+  position: absolute;
+  top: 0;
+  height: 110vh;
+  width: 100%;
+  z-index: 2;
+  pointer-events: none;
+
+  @include theme(default, light, $scoped: true) {
+    mix-blend-mode: lighten;
+    background: radial-gradient(
+      ellipse,
+      transparent 35%,
+      color.adjust($rosewood, $alpha: -0.5)
+    );
+  }
+  @include theme(default, dark, $scoped: true) {
+    mix-blend-mode: darken;
+    background: radial-gradient(
+      ellipse,
+      transparent 35%,
+      color.adjust($lavender-blush, $alpha: -0.5)
+    );
+  }
+  // mix-blend-mode: exclusion;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 2rem,
+    black 8rem,
+    black calc(100% - 17rem),
+    transparent calc(100% - 1rem)
+  );
+}
+
+.button {
+  display: inline-block;
+  cursor: pointer;
+
+  @include theme(default) {
+    display: inline-block;
+    border: 3px solid;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+  // @include theme(default, light) {
+  //   color: $raisin-black;
+  //   background-color: color.adjust($raisin-black, $alpha: -0.5);
+  //   border-color: color.adjust($raisin-black, $alpha: -0.5);
+
+  //   &:hover {
+  //     color: $fiery-rose;
+  //   }
+  // }
+  // @include theme(default, dark) {
+  color: $lavender-blush;
+  border-color: color.adjust($lavender-blush, $alpha: -0.5);
+  // }
+
+  @include theme(hacker) {
+    padding: 1rem;
+    font-weight: 700;
+    border: 3px solid lightgreen;
+    color: green;
+    border-color: color.adjust($lavender-blush, $alpha: -0.5);
+
+    &:hover {
+      color: lightgreen;
+    }
+  }
+}
+
+.actions {
+  margin-top: 2.25rem;
+  display: flex;
+  justify-content: flex-end;
+
+  & > * {
+    margin: 0 1rem;
+
+    &:first-child() {
+      margin: 0 1rem 0 0;
+    }
+
+    &:last-child() {
+      margin: 0 0 0 1rem;
+    }
+  }
+}
