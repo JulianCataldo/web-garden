@@ -5,6 +5,11 @@ module.exports = {
     'import/resolver': {
       typescript: {}, // this loads <rootdir>/tsconfig.json to eslint
     },
+    // 'import/resolver': {
+    //   node: {
+    //     extensions: ['.js', '.jsx', '.ts', '.tsx', '.astro'],
+    //   },
+    // },
   },
   env: {
     node: true,
@@ -14,6 +19,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     // 'plugin:prettier/recommended',
+    // 'plugin:import/typescript',
   ],
 
   plugins: ['eslint-plugin-tsdoc'],
@@ -47,6 +53,7 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-named-as-default-member': 'off',
         'import/no-named-as-default': 'off',
+        'import/prefer-default-export': 'off',
         'import/no-extraneous-dependencies': 'off',
       },
     },
