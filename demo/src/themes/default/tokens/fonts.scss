@@ -1,0 +1,20 @@
+@mixin font-size-baseline {
+  font-size: calc(0.1vw + 18px);
+}
+
+@mixin font-family-standard {
+  font-family: "Exo 2Variable", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
+}
+// @mixin font-family-special {
+//   font-family: "Exo 2Variable", "Gill Sans", "Gill Sans MT", Calibri,
+//     "Trebuchet MS", sans-serif;
+// }
+
+@mixin font-color-light {
+  color: $lavender-blush;
+}
+
+@mixin font-color-dark {
+  color: $raisin-black;
+}

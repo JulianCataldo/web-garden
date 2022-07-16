@@ -1,0 +1,67 @@
+body {
+  @include theme(default) {
+    @include font-family-standard;
+    @include font-size-baseline;
+  }
+  @include theme(default, light) {
+    @include font-color-dark;
+  }
+  @include theme(default, dark) {
+    @include font-color-light;
+  }
+}
+
+/* ———————————————————————————————————————————— Headings ———————————————————— */
+
+// :is(h1, h2, h3, h4, h5) {
+// }
+
+/* ———————————————————————————————————————————— Default link ———————————————— */
+
+.link:not(.unstyled, .button),
+.article-body a:not(.unstyled, .button) {
+  @include theme(default) {
+    text-decoration: none;
+    border-bottom: 2px dotted color.adjust($fiery-rose, $alpha: -0.6);
+    border-radius: 0.5em;
+  }
+  @include theme(default, light) {
+    color: color.adjust($fiery-rose, $lightness: -50%);
+    text-shadow: 0.06em 0.06em 0.1rem color.adjust($fiery-rose, $alpha: -0.8);
+
+    &:hover {
+      color: color.adjust($fiery-rose, $lightness: -30%);
+    }
+  }
+  @include theme(default, dark) {
+    color: color.adjust($fiery-rose, $lightness: 25%);
+    text-shadow: 0.07em 0.07em 0.1rem
+      color.adjust($raisin-black, $lightness: -10%);
+
+    &:hover {
+      color: color.adjust($fiery-rose, $lightness: 10%);
+    }
+  }
+}
+
+/* ············································ Special links ··············· */
+
+// _
+
+/* ———————————————————————————————————————————— Separators —————————————————— */
+
+hr {
+  @include theme(default) {
+    border: none;
+    border-top: 1px dashed color.adjust($red-pigment, $alpha: -0.7);
+    margin: 1rem 0;
+  }
+  @include theme(default, light) {
+  }
+  @include theme(default, dark) {
+  }
+
+  // @include theme(hacker) {
+  //   // _
+  // }
+}

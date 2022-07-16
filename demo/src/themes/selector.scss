@@ -1,0 +1,30 @@
+@use "sass:color";
+
+@mixin theme($name, $mode: null, $scoped: false) {
+  @if $mode {
+    @media (prefers-color-scheme: '#{$mode}') {
+      :global([data-theme="#{$name}"]) & {
+        @content;
+      }
+    }
+    @if $scoped {
+      @at-root :global([data-theme="#{$name}"][data-color-mode="#{$mode}"]) & {
+        @content;
+      }
+    } @else {
+      @at-root [data-theme="#{$name}"][data-color-mode="#{$mode}"] & {
+        @content;
+      }
+    }
+  } @else {
+    @if $scoped {
+      @at-root :global([data-theme="#{$name}"]) & {
+        @content;
+      }
+    } @else {
+      @at-root [data-theme="#{$name}"] & {
+        @content;
+      }
+    }
+  }
+}

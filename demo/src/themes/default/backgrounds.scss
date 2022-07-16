@@ -1,0 +1,8 @@
+body {
+  @include theme(default, light) {
+    background-color: $lavender-blush;
+  }
+  @include theme(default, dark) {
+    background-color: $raisin-black;
+  }
+}

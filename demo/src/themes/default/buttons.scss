@@ -1,0 +1,93 @@
+.navigation-bar .button,
+.demo-color-mode .button,
+.article-body .button {
+  @include theme(default) {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-variant: small-caps;
+    font-weight: 700;
+    font-size: 1.33rem;
+    padding: 0.6667rem 0.75rem;
+    padding-right: 1rem;
+    border-radius: 0.25rem;
+
+    .icon {
+      margin-right: 0.5rem;
+    }
+  }
+  @include theme(default, light) {
+    color: color.adjust($rosewood, $alpha: -0.1);
+    background-color: color.adjust($lavender-blush, $alpha: -0.03);
+    box-shadow: 2px 2px 12px color.adjust($fiery-rose, $alpha: -0.5),
+      2px 2px 2px color.adjust($raisin-black, $alpha: -0.8) inset;
+
+    &:hover {
+      color: color.adjust($raisin-black, $alpha: 0);
+      background-color: color.adjust($red-pigment, $lightness: 30%);
+    }
+
+    &:active {
+      background-color: color.adjust($red-pigment, $lightness: 10%);
+      transform: translateY(1px);
+    }
+  }
+  @include theme(default, dark) {
+    color: color.adjust($lavender-blush, $alpha: -0.03);
+    background-color: color.adjust($rosewood, $lightness: -10%, $alpha: -0.05);
+    box-shadow: 2px 2px 12px color.adjust($fiery-rose, $alpha: -0.4),
+      2px 2px 2px color.adjust($raisin-black, $alpha: -0.8) inset;
+
+    &:hover {
+      color: color.adjust($lavender-blush, $alpha: 0);
+      background-color: color.adjust($fiery-rose, $alpha: -0.5);
+    }
+
+    &:active {
+      background-color: color.adjust($fiery-rose, $alpha: -0.5);
+      transform: translateY(1px);
+    }
+  }
+}
+
+.landing > .titles .button {
+  @include theme(default) {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-variant: small-caps;
+    font-weight: 700;
+    font-size: 1.33rem;
+    padding: 0.6667rem 0.75rem;
+    padding-right: 1rem;
+    border-radius: 0.25rem;
+
+    .icon {
+      margin-right: 0.5rem;
+    }
+
+    color: color.adjust($lavender-blush, $alpha: -0.03);
+    border: 3px solid color.adjust($lavender-blush, $alpha: -0.33);
+    box-shadow: 2px 2px 12px color.adjust($fiery-rose, $alpha: -0.5),
+      2px 2px 2px color.adjust($raisin-black, $alpha: -0.8) inset;
+
+    &:hover {
+      background-color: color.adjust(
+        $raisin-black,
+        $lightness: -10%,
+        $alpha: -0.43
+      );
+    }
+
+    &:active {
+      background-color: color.adjust(
+        $raisin-black,
+        $lightness: 10%,
+        $alpha: -0.33
+      );
+      transform: translateY(1px);
+    }
+  }
+}

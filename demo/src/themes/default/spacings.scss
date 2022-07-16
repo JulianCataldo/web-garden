@@ -1,0 +1,22 @@
+[data-theme="default"] {
+  .main-content > .article > .wrapper,
+  .content > .package {
+    padding: 3rem;
+  }
+
+  .main-content > .content {
+    margin: 0 2vw;
+  }
+
+  .content > .package {
+    margin: 2vw;
+
+    &:first-child {
+      margin-top: 0rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0rem;
+    }
+  }
+}
