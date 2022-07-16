@@ -28,6 +28,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: ./demo
+        run: pnpm install --recursive
 
       - name: Build Astro Website
         working-directory: ./demo
