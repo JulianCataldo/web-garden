@@ -1,45 +1,7 @@
 ---
-export interface Props {
-  /**
-   * **Default**: `'en'` (English)
-   * */
-  lang?: string;
-  /**
-   * **Default**: `[]` (no classes)
-   * */
-  htmlClasses?: string[];
-  /**
-   * **Default**: `[]` (no classes)
-   * */
-  bodyClasses?: string[];
-  /**
-   * **Default**: `[]` (no attributes)
-   * */
-  htmlExtraAttributes?: { [key: string]: string };
-  /**
-   * **Default**: `[]` (no attributes)
-   * */
-  bodyExtraAttributes?: { [key: string]: string };
-  /**
-   * **Default**: `null` (no id)
-   * */
-  htmlId?: string;
-  /**
-   * **Default**: `null` (no id)
-   * */
-  bodyId?: string;
-  /**
-   * Provides early JS detection for further CSS use
-   * by adding `js` class critically to HTML element.
-   *
-   * **Default**: `true`
-   * */
-  jsEnabledClass?: boolean;
-  /**
-   * **Default**: `null`
-   * */
-  redirectTo?: string | null;
-}
+import type { Props as baseProps } from './Props';
+
+export interface Props extends baseProps {}
 const props = { ...Astro.props } as Props;
 /* ———————————————————————————————————————————— Typeguards + Fallbacks —————— */
 if (typeof props.lang !== 'string') props.lang = 'en';
@@ -61,7 +23,6 @@ if (typeof props.bodyId !== 'string') props.bodyId = null;
 if (typeof props.jsEnabledClass !== 'boolean') props.jsEnabledClass = true;
 
 if (typeof props.jsEnabledClass !== 'boolean') props.redirectTo = null;
-
 /* —————————————————————————————————————————————————————————————————————————— */
 ---
 

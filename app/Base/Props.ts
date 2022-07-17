@@ -36,4 +36,8 @@ export interface Props {
    * **Default**: `true`
    * */
   jsEnabledClass?: boolean;
+  /**
+   * **Default**: `null`
+   * */
+  redirectTo?: string | null;
 }
