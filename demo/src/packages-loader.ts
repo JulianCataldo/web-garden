@@ -106,15 +106,18 @@ export async function structureAllPackages(
 
       /* ———————————————————————————————————————————————————————————————————— */
 
-      const propsJson = `../content/packages/${dir}/Props.json`;
+      const propsJson = `content/packages/${dir}/Props.json`;
       console.log({ propsJson });
-      packages[index].api = await import(propsJson)
-        .then(({ default: def }) => {
-          // console.log(def);
-          return def;
+      packages[index].api = await fs
+        .readFile(propsJson, 'utf-8')
+        .then((file) => {
+          // console.log({ file });
+          console.log('Props found', dir);
+          return JSON.parse(file);
         })
-        .catch((e) => {
-          // console.log(e);
+        .catch((error) => {
+          // console.log({ error });
+          console.log('No props', dir);
           return null;
         });
       // console.log(packages[index].api);
