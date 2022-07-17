@@ -1,3 +1,5 @@
+type htmlAttrs = { [key: string]: string };
+
 export interface Props {
   /**
    * **Default**: `'en'` (English)
@@ -14,11 +16,11 @@ export interface Props {
   /**
    * **Default**: `[]` (no attributes)
    * */
-  htmlExtraAttributes?: { [key: string]: string };
+  htmlExtraAttributes?: htmlAttrs;
   /**
    * **Default**: `[]` (no attributes)
    * */
-  bodyExtraAttributes?: { [key: string]: string };
+  bodyExtraAttributes?: htmlAttrs;
   /**
    * **Default**: `null` (no id)
    * */

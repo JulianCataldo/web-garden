@@ -1,29 +1,27 @@
 ---
 import DemoLoader from 'src/components/Demo/DemoLoader.astro';
-// import RichText from 'src/components/RichText/RichText.astro';
 import type { Package } from 'src/packages-loader';
-import { Code } from 'astro/components';
-// import MyLink from 'src/components/Polymorph/MyLink/MyLink.astro';
+// BUG: THIS BREAK (https://github.com/withastro/prettier-plugin-astro/issues/232)
+// import { Code } from '___/components';
+import Table from 'src/components/Table/Table.astro';
 
 interface Props {
   content: Package;
 }
 const props = Astro.props as Props;
-/* Typeguards + Fallback */
+/* ———————————————————————————————————————————— Typeguards + Fallbacks —————— */
 if (typeof props?.content?.readme?.Content !== 'function') {
   props.content = null;
 }
+/* —————————————————————————————————————————————————————————————————————————— */
 
-// console.log(props.content);
+// FIXME: correct astro type for MD content
+const ReadMe = props.content.readme.Content;
 ---
 
-<div class='single-package'>  
+<div class='single-package'>
   {props.content ? (
     <>
-      <section id="doc" class="package-section article-body">
-        <props.content.readme.Content />
-      </section>
-
       {props.content.hasDemo && (
         <section id="live-demo" class="package-section article-body">
           <h2>Component live demo</h2>
@@ -31,7 +29,7 @@ if (typeof props?.content?.readme?.Content !== 'function') {
           <DemoLoader name={props.content.shortname} />
         </section>
       )}
-      
+
       {props.content.video && (
         <section id="test-video" class="package-section article-body">
           <h2>Test x Demo : Video</h2>
@@ -44,20 +42,40 @@ if (typeof props?.content?.readme?.Content !== 'function') {
         </section>
       )}
 
-      {props.content.typescriptProps && (
+      {ReadMe && (
+        <section id="doc" class="package-section article-body">
+          <ReadMe />
+        </section>
+      )}
+
+      {props.content.api && (
+        <section id="ts-api" class="package-section article-body">
+          <h2>TypeScript API</h2>
+
+          {props.content.api.extends && (
+            <p>
+              Extends: <code>{props.content.api.extends}</code>
+            </p>
+          )}
+
+          <Table data={props.content.api.properties} class="api-props" />
+        </section>
+      )}
+
+      {/* props.content.typescriptProps && (
         <section id="ts-api" class="package-section article-body">
       
           <h2>TypeScript API</h2>
           <Code code={props.content.typescriptProps} lang="tsx"/>
     
         </section>
-      )}
+      ) */}
     </>
   ) : (
     <div>Empty content — No README.md found</div>
   )}
 </div>
-<!-- 
+
 <style lang='scss'>
-  @import './style.scss';
-</style> -->
+  @import './SinglePackage.scss';
+</style>

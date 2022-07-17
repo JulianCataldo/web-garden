@@ -1,0 +1,70 @@
+.single-package {
+  section {
+    // margin: 2.5rem 0;
+
+    // &:first-of-type,
+    // &:last-of-type {
+    //   margin: 0;
+    // }
+
+    @include theme(default) {
+      // _
+    }
+
+    @include theme(default, light) {
+      // _
+    }
+    @include theme(default, dark) {
+      // _
+    }
+
+    @include theme(hacker) {
+      // _
+    }
+  }
+}
+
+.api-props {
+  font-family: monospace;
+
+  @include theme(default, light, $scoped: true) {
+    color: $rosewood;
+  }
+  @include theme(default, dark, $scoped: true) {
+    color: color.adjust($fiery-rose, $lightness: 20%);
+  }
+
+  .th {
+    font-weight: 700;
+    padding: 1rem 0.5em;
+    background: color.adjust($fiery-rose, $alpha: -0.8);
+    margin-bottom: 1rem;
+  }
+
+  .td {
+    padding: 0.5em;
+    border-right: 1px solid color.adjust($fiery-rose, $alpha: -0.7);
+
+    &:last-of-type {
+      border-right: none;
+    }
+  }
+
+  .col-name {
+    --width: 30%;
+
+    font-weight: 700;
+  }
+
+  .col-type {
+    --width: 25%;
+  }
+
+  .col-required {
+    --width: 15%;
+  }
+
+  .col-default {
+    --width: 30%;
+  }
+}

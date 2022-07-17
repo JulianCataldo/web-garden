@@ -18,10 +18,23 @@ interface Readme {
   headers: MarkdownHeader[] | null;
   Content: AstroComponentFactory | null;
 }
+
+export interface APIProps {
+  name?: string;
+  type?: string;
+  required?: boolean;
+  default?: string;
+}
+interface API {
+  extends?: null | string;
+  properties?: APIProps[] | null;
+}
+
 export interface Package {
   pJson: PJson;
   readme: Readme;
   typescriptProps: string | null;
+  api: API;
   video: string | null;
   shortname: string | null;
   hasDemo: boolean;
@@ -48,6 +61,7 @@ export async function structureAllPackages(
         Content: null,
       },
       typescriptProps: null,
+      api: null,
       video: null,
       shortname: null,
       hasDemo: false,
@@ -72,7 +86,7 @@ export async function structureAllPackages(
         Content: readme.Content,
       };
 
-      // ———————————————————————————————————————————————————————————————————————
+      /* ———————————————————————————————————————————————————————————————————— */
 
       const shortname = packages[index].pJson.name.replace(
         '@julian_cataldo/',
@@ -80,17 +94,32 @@ export async function structureAllPackages(
       );
       packages[index].shortname = shortname;
 
-      // ———————————————————————————————————————————————————————————————————————
+      /* ———————————————————————————————————————————————————————————————————— */
 
       const dir = packages[index].pJson.repository.directory;
-      packages[index].typescriptProps = await fs
-        .readFile(`../${dir}/Props.ts`, 'utf8')
+      // packages[index].typescriptProps = await fs
+      //   .readFile(`../${dir}/Props.ts`, 'utf8')
+      //   .catch((e) => {
+      //     // console.log(e);
+      //     return null;
+      //   });
+
+      /* ———————————————————————————————————————————————————————————————————— */
+
+      const propsJson = `../content/packages/${dir}/Props.json`;
+      console.log({ propsJson });
+      packages[index].api = await import(propsJson)
+        .then(({ default: def }) => {
+          // console.log(def);
+          return def;
+        })
         .catch((e) => {
-          console.log(e);
+          // console.log(e);
           return null;
         });
+      // console.log(packages[index].api);
 
-      // ———————————————————————————————————————————————————————————————————————
+      /* ———————————————————————————————————————————————————————————————————— */
 
       const videoName = packages[index].pJson.name
         .replace('@julian_cataldo/', '')
@@ -99,12 +128,12 @@ export async function structureAllPackages(
       /* In Public folder */
       const videoPath = `/assets/videos/tests/*-${videoName}.cy.ts.mp4`;
       const video = await (await glob(`./public/${videoPath}`)).pop();
-      console.log({ videoPath, video, videoName });
+      // console.log({ videoPath, video, videoName });
       if (video) {
         packages[index].video = video.replace('./public', '');
       }
 
-      // ———————————————————————————————————————————————————————————————————————
+      /* ———————————————————————————————————————————————————————————————————— */
 
       const demoPath = `./src/components/Demo/${shortname}.astro`;
       const hasDemo = existsSync(demoPath);

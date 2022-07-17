@@ -26,8 +26,4 @@ export interface Props extends astroHTML.JSX.TableHTMLAttributes {
    * **Default**: `'URL'`
    * */
   linkText?: string;
-  /**
-   * **Default**: `'licenses-report'`
-   * */
-  // customRootClass?: string;
 }
