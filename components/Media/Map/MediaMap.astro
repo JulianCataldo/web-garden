@@ -1,61 +1,30 @@
 ---
-export interface Props {
-  /* ————————————————————————————— */
-  /**
-   * Longitude
-   * */
-  x: number;
-  /**
-   * Latitude
-   * */
-  y: number;
-  /**
-   * Zoom level
-   *
-   * **Default**: `10`
-   * */
-  z?: number;
-  /* ————————————————————————————— */
-  /**
-   * CSS Unit
-   * */
-  height: string;
-  /**
-   * CSS Unit
-   *
-   * **Default**: `'100%'`
-   * */
-  width?: string;
-  /* ————————————————————————————— */
-  /**
-   * **Default**: `true`
-   * */
-  attribution?: boolean;
-  /* ————————————————————————————— */
-}
+import type { Props as baseProps } from './Props';
+
+export interface Props extends baseProps {}
 const props = { ...Astro.props } as Props;
 /* ———————————————————————————————————————————— Typeguards + Fallbacks —————— */
-if (typeof props.x !== 'number') {
-  props.x = 10;
-  console.warn('> Missing `x` property for <MediaMap>');
-}
-if (typeof props.y !== 'number') {
-  props.y = 10;
-  console.warn('> Missing `y` property for <MediaMap>');
-}
-if (typeof props.z !== 'number') {
-  props.z = 10;
-}
-if (typeof props.height !== 'string') {
-  props.height = '12rem';
-  console.warn('> Missing `height` property for <MediaMap>');
-}
-if (typeof props.width !== 'string') {
-  props.width = '100%';
-}
-if (typeof props.attribution !== 'boolean') {
-  props.attribution = true;
-}
+const internalProps: string[] = [];
+
+if (typeof props.x !== 'number') props.x = 10;
+internalProps.push('x');
+if (typeof props.y !== 'number') props.y = 10;
+internalProps.push('y');
+if (typeof props.z !== 'number') props.z = 10;
+internalProps.push('z');
+if (typeof props.height !== 'string') props.height = '12rem';
+internalProps.push('height');
+if (typeof props.width !== 'string') props.width = '100%';
+internalProps.push('width');
+if (typeof props.attribution !== 'boolean') props.attribution = true;
+internalProps.push('attribution');
+/* ············································ Extra HTML attributes ······· */
+const extraAttrs: { [key: string]: string } = {};
+Object.entries(props).forEach(([key, val]) => {
+  if (internalProps.includes(key) === false) {
+    extraAttrs[key] = `${val as string}`;
+  }
+});
 /* —————————————————————————————————————————————————————————————————————————— */
 ---
 
@@ -65,6 +34,7 @@ if (typeof props.attribution !== 'boolean') {
   data-x={props.x}
   data-y={props.y}
   data-z={props.z}
+  {...extraAttrs}
 >
 </div>
 
@@ -98,8 +68,7 @@ if (typeof props.attribution !== 'boolean') {
   is:global
   define:vars={{ display: props.attribution ? 'initial' : 'none' }}
 >
-  @import 'leaflet';
-
+  /* @import 'leaflet'; */
   .leaflet-control-attribution {
     display: var(--display, 'initial');
   }
