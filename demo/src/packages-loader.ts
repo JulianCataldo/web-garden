@@ -14,9 +14,9 @@ interface PJson {
   };
   version: string;
 }
-interface Readme {
-  mainTitle: MarkdownHeader;
-  headers: MarkdownHeader[] | null;
+interface mdFile {
+  mainTitle?: MarkdownHeader;
+  headers?: MarkdownHeader[] | null;
   Content: AstroComponentFactory | null;
 }
 
@@ -32,24 +32,26 @@ interface API {
 }
 
 export interface Package {
-  pJson: PJson;
-  readme: Readme;
+  pJson: PJson | null;
+  readme: mdFile | null;
+  changelog: mdFile | null;
   typescriptProps: string | null;
-  api: API;
+  api: API | null;
   video: string | null;
   shortname: string | null;
   hasDemo: boolean;
 }
 
-// eslint-disable-next-line import/prefer-default-export
-export async function structureAllPackages(
-  pJsons: PJson[],
-  readmes: MarkdownInstance<unknown>[],
-  anchorMode = true,
-) {
+interface Props {
+  pJsons: PJson[];
+  readmes: MarkdownInstance<unknown>[];
+  changelogs: MarkdownInstance<unknown>[] | null;
+  anchorMode: boolean;
+}
+export async function structureAllPackages(props: Props): Promise<Package[]> {
   const packages: Package[] = [];
 
-  pJsons.forEach((pJson: PJson) => {
+  props.pJsons.forEach((pJson: PJson) => {
     packages.push({
       pJson: {
         name: pJson.name,
@@ -62,23 +64,26 @@ export async function structureAllPackages(
         headers: null,
         Content: null,
       },
+      changelog: {
+        mainTitle: { text: '', slug: '', depth: 0 },
+        headers: null,
+        Content: null,
+      },
       typescriptProps: null,
       api: null,
       video: null,
       shortname: null,
       hasDemo: false,
     });
-    // console.log(pJson.name);
   });
 
   await Promise.all(
-    readmes.map(async (readme, index) => {
+    props.readmes.map(async (readme, index) => {
       const headers = await readme.getHeaders();
-      // console.log(readme.file);
 
       packages[index].readme = {
         mainTitle: {
-          slug: anchorMode
+          slug: props.anchorMode
             ? headers[0].slug
             : packages[index].pJson.name.replace('@julian_cataldo/', ''),
           text: headers[0].text,
@@ -87,6 +92,16 @@ export async function structureAllPackages(
         headers,
         Content: readme.Content,
       };
+
+      /* ———————————————————————————————————————— Changelog ————————————————— */
+
+      props.changelogs?.map((changelogFile) => {
+        if (changelogFile.file.replace('CHANGELOG', 'README') === readme.file) {
+          packages[index].changelog = {
+            Content: changelogFile.Content,
+          };
+        }
+      });
 
       /* ———————————————————————————————————————————————————————————————————— */
 
@@ -99,30 +114,22 @@ export async function structureAllPackages(
       /* ———————————————————————————————————————————————————————————————————— */
 
       const dir = packages[index].pJson.repository.directory;
+
+      // Old way
       // packages[index].typescriptProps = await fs
       //   .readFile(`../${dir}/Props.ts`, 'utf8')
       //   .catch((e) => {
-      //     // console.log(e);
       //     return null;
       //   });
 
-      /* ———————————————————————————————————————————————————————————————————— */
+      /* ———————————————————————————————————————— TS API ———————————————————— */
 
       const propsJson = `content/packages/${dir}/Props.json`;
-      // console.log({ propsJson });
+
       packages[index].api = await fs
         .readFile(propsJson, 'utf-8')
-        .then((file) => {
-          // console.log({ file });
-          // console.log('Props found', dir);
-          return JSON.parse(file);
-        })
-        .catch((error) => {
-          // console.log({ error });
-          // console.log('No props', dir);
-          return null;
-        });
-      // console.log(packages[index].api);
+        .then((file) => JSON.parse(file))
+        .catch(() => null);
 
       /* ———————————————————————————————————————————————————————————————————— */
 
@@ -133,16 +140,14 @@ export async function structureAllPackages(
       /* In Public folder */
       const videoPath = `/assets/videos/tests/*-${videoName}.cy.ts.mp4`;
       const video = await (await glob(`./public/${videoPath}`)).pop();
-      // console.log({ videoPath, video, videoName });
       if (video) {
         packages[index].video = video.replace('./public', '');
       }
 
-      /* ———————————————————————————————————————————————————————————————————— */
+      /* ———————————————————————————————————————— Live demo ————————————————— */
 
       const demoPath = `./src/components/Demo/${shortname}.astro`;
       const hasDemo = existsSync(demoPath);
-      // console.log({ demoPath });
       if (hasDemo) {
         packages[index].hasDemo = true;
       }

@@ -52,7 +52,7 @@ const ReadMe = props?.content?.readme?.Content;
         <section id="ts-api" class="package-section article-body">
           <h2>TypeScript API</h2>
 
-          {props.content.api.extends && (
+          {props.content.api?.extends && (
             <p>
               Extends: <code>{props.content.api.extends}</code>
             </p>
@@ -61,6 +61,26 @@ const ReadMe = props?.content?.readme?.Content;
           <hr />
 
           <Table data={props.content.api.properties} class="api-props" />
+        </section>
+      )}
+
+      {props.content.changelog && (
+        <section id="changelog" class="package-section article-body">
+          <h2>Changelog</h2>
+
+          <input type="checkbox" id="toggle-changelog" />
+
+          <hr />
+
+          <props.content.changelog.Content />
+
+          <div class="invert">
+            <strong class="suspension ">...</strong>
+            <hr />
+            <label for="toggle-changelog" class="button button-expand ">
+              Expand full history
+            </label>
+          </div>
         </section>
       )}
 

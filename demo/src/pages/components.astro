@@ -5,10 +5,16 @@ import LinksTree from 'src/components/LinksTree/LinksTree.astro';
 
 import { structureAllPackages } from 'src/packages-loader';
 
-const packages = await structureAllPackages(
-  await Astro.glob('../../../{app,components}/{*/,*/*/}package.json'),
-  await Astro.glob('/content/packages/{app,components}/{*/,*/*/}README.md'),
-);
+const packages = await structureAllPackages({
+  pJsons: await Astro.glob('../../../{app,components}/{*/,*/*/}package.json'),
+  readmes: await Astro.glob(
+    '/content/packages/{app,components}/{*/,*/*/}README.md',
+  ),
+  changelogs: await Astro.glob(
+    '/content/packages/{app,components}/{*/,*/*/}CHANGELOG.md',
+  ),
+  anchorMode: false,
+});
 
 const titles = {
   main: 'Components collection',

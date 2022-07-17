@@ -68,3 +68,41 @@
     --width: 30%;
   }
 }
+
+.button-expand {
+}
+
+#toggle-changelog {
+  $all-after: "~ :global(ul:nth-of-type(1) ~ *:not(.invert))";
+
+  display: none;
+
+  #{$all-after} {
+    display: none;
+  }
+
+  &:checked #{$all-after} {
+    display: inherit;
+  }
+
+  &:checked ~ .invert {
+    display: none;
+  }
+
+  &:checked ~ .button-expand {
+    background-color: color.adjust($fiery-rose, $alpha: -0.5);
+  }
+}
+
+#changelog {
+  // Commit guidelines intro, force new line
+  :global(p:first-of-type) {
+    white-space: pre-wrap;
+  }
+
+  // Hide main title (already here)
+  /* stylelint-disable-next-line no-descending-specificity */
+  :global(h1) {
+    display: none;
+  }
+}

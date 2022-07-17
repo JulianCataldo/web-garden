@@ -6,11 +6,19 @@ import { structureAllPackages } from 'src/packages-loader';
 
 const { params } = Astro;
 
-const packages = await structureAllPackages(
-  await Astro.glob('../../../../{app,components}/{*/,*/*/}package.json'),
-  await Astro.glob('/content/packages/{app,components}/{*/,*/*/}README.md'),
-  false,
-);
+const packages = await structureAllPackages({
+  pJsons: await Astro.glob(
+    '../../../../{app,components}/{*/,*/*/}package.json',
+  ),
+  readmes: await Astro.glob(
+    '/content/packages/{app,components}/{*/,*/*/}README.md',
+  ),
+  changelogs: await Astro.glob(
+    '/content/packages/{app,components}/{*/,*/*/}CHANGELOG.md',
+  ),
+  anchorMode: false,
+});
+
 const thePackage = packages
   .filter(
     (pkg) => pkg.pJson.name.replace('@julian_cataldo/', '') === params.name,
@@ -18,10 +26,16 @@ const thePackage = packages
   .pop();
 
 export async function getStaticPaths() {
-  const packagesForRoutes = await structureAllPackages(
-    await Astro.glob('../../../../{app,components}/{*/,*/*/}package.json'),
-    await Astro.glob('/content/packages/{app,components}/{*/,*/*/}README.md'),
-  );
+  const packagesForRoutes = await structureAllPackages({
+    pJsons: await Astro.glob(
+      '../../../../{app,components}/{*/,*/*/}package.json',
+    ),
+    readmes: await Astro.glob(
+      '/content/packages/{app,components}/{*/,*/*/}README.md',
+    ),
+    changelogs: null,
+    anchorMode: null,
+  });
   return packagesForRoutes.map((pkg) => ({
     params: {
       componentType: 'component',
