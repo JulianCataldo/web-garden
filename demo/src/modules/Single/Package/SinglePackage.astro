@@ -16,7 +16,7 @@ if (typeof props?.content?.readme?.Content !== 'function') {
 /* —————————————————————————————————————————————————————————————————————————— */
 
 // FIXME: correct astro type for MD content
-const ReadMe = props.content.readme.Content;
+const ReadMe = props?.content?.readme?.Content;
 ---
 
 <div class='single-package'>
