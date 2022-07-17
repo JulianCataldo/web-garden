@@ -1,5 +1,6 @@
 [data-theme="default"] {
-  .main-content > .article > .wrapper,
+  .main-content > .article > .wrapper.article-body,
+  .main-content .package-section,
   .content > .package {
     padding: 3rem;
   }
@@ -8,7 +9,8 @@
     margin: 0 2vw;
   }
 
-  .content > .package {
+  .content > .package,
+  .main-content .single-package .package-section {
     margin: 2vw;
 
     &:first-child {

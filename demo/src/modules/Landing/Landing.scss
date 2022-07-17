@@ -25,8 +25,8 @@ h1 {
 
 .titles {
   position: absolute;
-  top: calc(13rem + 5vw);
-  left: calc(100% - 75vw);
+  top: calc(6rem + 6vw);
+  left: calc(100% - 75vw - 5rem);
   max-width: 40rem;
   z-index: 2;
   // height: 130vh;
@@ -282,19 +282,21 @@ code {
 }
 
 .actions {
-  margin-top: 2.25rem;
+  margin-top: 1.25rem;
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: center;
 
   & > * {
-    margin: 0 1rem;
+    margin: 0.8rem 0.8rem;
 
-    &:first-child() {
-      margin: 0 1rem 0 0;
-    }
+    // &:first-child() {
+    //   margin: 0 1rem 0 0;
+    // }
 
-    &:last-child() {
-      margin: 0 0 0 1rem;
-    }
+    // &:last-child() {
+    //   margin: 0 0 0 1rem;
+    // }
   }
 }

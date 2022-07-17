@@ -1,7 +1,7 @@
 /* ——————————————————————————— Box 1 ————————————————————————— */
 .content > .table-of-contents,
-.main-content > .article > .wrapper,
-// .main-content > .package-section,
+.main-content > .article > .wrapper.article-body,
+.main-content .package-section,
 .content > .package {
   // color: $raisin-black;
   border-radius: 1rem;

@@ -6,12 +6,14 @@
   }
 
   & :first-child {
+    // margin-top: 0;
     margin-top: 0;
   }
+  // margin-bottom: -2.5em;
 
-  // & :last-child {
-  //   margin-bottom: 0;
-  // }
+  & :last-child {
+    margin-bottom: 0em;
+  }
 
   & *:is(h1, h2, h3, h4, h5) {
     margin: 3rem 0;
@@ -41,7 +43,8 @@
     }
   }
 
-  :not(pre) > code {
+  :not(pre) > code,
+  & > *:not(pre) > code {
     display: inline-block;
     border-radius: 0.25em;
     font-size: calc(100% - 0.2em);
@@ -113,7 +116,7 @@
         content: "\27B2";
 
         @include theme(default, light) {
-          color: $rosewood;
+          color: color.adjust($rosewood, $lightness: 15%, $alpha: -0.5);
         }
         @include theme(default, dark) {
           color: color.adjust($fiery-rose, $lightness: 2%);
