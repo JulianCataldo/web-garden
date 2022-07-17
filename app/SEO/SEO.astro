@@ -6,7 +6,7 @@ const props = { ...Astro.props } as Props;
 
 /* ———————————————————————————————————————————— Typeguards + Fallbacks —————— */
 if (typeof props.image !== 'string') {
-  props.image = '';
+  props.image = '/poster.jpg';
   console.warn('> Missing `image` property for <SEO>');
 }
 if (typeof props.title !== 'string') {
@@ -14,7 +14,7 @@ if (typeof props.title !== 'string') {
   console.warn('> Missing `title` property for <SEO>');
 }
 if (typeof props.description !== 'string') {
-  props.description = '-> Website <-';
+  props.description = '- Website -';
   console.warn('> Missing `description` property for <SEO>');
 }
 if (typeof props.siteName !== 'string') {
