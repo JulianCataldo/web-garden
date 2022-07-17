@@ -17,17 +17,17 @@
   @include scroll-is($bottom: true) {
     opacity: 0;
     transform: translateX(100%);
-    transition-delay: 0.7s;
+    transition-delay: 0.2s;
   }
   @include scroll-is($top: true) {
     opacity: 0;
     transform: translateX(100%);
-    transition-delay: 0.7s;
+    transition-delay: 0.2s;
   }
   @include scroll-is($going-up: false) {
     opacity: 0;
     transform: translateX(100%);
-    transition-delay: 0.7s;
+    transition-delay: 0.2s;
   }
 
   position: fixed;
