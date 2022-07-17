@@ -1,7 +1,7 @@
 {
   "name": "@julian_cataldo/astro-configs",
   "version": "0.11.2",
-  "description": "Here lies some re-usable tooling settings. Languages: JS, TS, Astro, Vue, JSX, TSX, SCSS, CSS. Tools: Prettier, ESlint, Stylelint, Editorconfig, Typescript, Commitlint, VS Code.",
+  "description": "Here lies some re-usable tooling settings. Languages: JS, TS, Astro, Vue, JSX, TSX, SCSS, CSS. Tools: Prettier, ESlint, Stylelint, Editorconfig, TypeScript, Commitlint, VS Code.",
   "main": "index.js",
   "publishConfig": {
     "access": "public"

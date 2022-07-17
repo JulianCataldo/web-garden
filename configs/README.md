@@ -2,7 +2,7 @@
 
 Here lies some re-usable tooling settings.  
 Languages: JS, TS, Astro, Vue, JSX, TSX, SCSS, CSS.  
-Tools: Prettier, ESlint, Stylelint, Editorconfig, Typescript, Commitlint, VS Code.
+Tools: Prettier, ESlint, Stylelint, Editorconfig, TypeScript, Commitlint, VS Code.
 
 ---
 
@@ -18,7 +18,7 @@ Tools: Prettier, ESlint, Stylelint, Editorconfig, Typescript, Commitlint, VS Cod
 - [Installation](#installation)
 - [Tooling configurations](#tooling-configurations)
   - [VSCode](#vscode)
-    - [Typescript](#typescript)
+    - [TypeScript](#typescript)
   - [ESLint](#eslint)
     - [VSCode](#vscode-1)
   - [Prettier](#prettier)
@@ -70,7 +70,7 @@ Extensions: `astro-build.astro-vscode`
 }
 ```
 
-### Typescript
+### TypeScript
 
 In your `settings.json`:
 
