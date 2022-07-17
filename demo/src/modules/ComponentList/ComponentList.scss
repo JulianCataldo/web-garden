@@ -8,15 +8,15 @@
   align-items: center;
   cursor: pointer;
 
-  @include theme(default) {
-    width: 3rem;
+  @include theme(default, $scoped: true) {
     padding: 0.4rem;
     margin: 0.4rem;
   }
-  @include theme(default, light) {
+
+  @include theme(default, light, $scoped: true) {
     // _
   }
-  @include theme(default, dark) {
+  @include theme(default, dark, $scoped: true) {
     // _
   }
 
@@ -24,6 +24,18 @@
     width: 2.5rem;
     padding: 0.2rem;
     margin: 0.2rem;
+  }
+}
+
+.cb-icon {
+  @include theme(default, $scoped: true) {
+    margin-left: 1rem;
+  }
+  @include theme(default, light, $scoped: true) {
+    // _
+  }
+  @include theme(default, dark, $scoped: true) {
+    // _
   }
 }
 
@@ -81,6 +93,7 @@
 
 .actions {
   display: flex;
+  margin-top: 2rem;
 
   & > * {
     margin: 0 4rem;

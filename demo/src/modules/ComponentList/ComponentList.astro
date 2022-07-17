@@ -21,10 +21,10 @@ if (Array.isArray(props.packages) === false) {
   const id = `cb-${index}`
   return (
     <article id={pkg.readme.mainTitle.slug} class="article-body package">
+      <h1>{pkg.readme.mainTitle.text}</h1>
       <header>
-        <h1>{pkg.readme.mainTitle.text}</h1>
+        <p class="description">{pkg.pJson.description}</p>
       </header>
-      <div class="description">{pkg.pJson.description}</div>
 
       {pkg.hasDemo && (
         <section class="demo-section">
@@ -53,7 +53,11 @@ if (Array.isArray(props.packages) === false) {
             title="Copy to clipboard"
             data-tooltip-placement="right"
           >
-            <Icon name="system-uicons:clipboard-copy" size="2rem" />
+            <Icon
+              name="system-uicons:clipboard-copy"
+              size="2.5rem"
+              class="cb-icon"
+            />
           </div>
         </div>
       </footer>
