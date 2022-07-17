@@ -49,7 +49,7 @@ const comboTitle = `${props.titles.main} — ${props.titles.sub}`;
   }}
   htmlId={'test-dummy'}
   bodyClasses={['test-dummy-1', 'test-dummy-2']}
-  htmlClasses={['test-dummy-1', 'test-dummy-2']}
+  htmlClasses={['test-dummy-1', 'test-dummy-2', `mode-${import.meta.env.MODE}`]}
 >
   <Fragment slot='head'>
     <!-- TODO: Dev / Prod mode for SEO image poster -->
