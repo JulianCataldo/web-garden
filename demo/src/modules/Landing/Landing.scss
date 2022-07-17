@@ -4,6 +4,7 @@
   }
 
   @include theme(hacker) {
+    // _
   }
 }
 
@@ -37,9 +38,9 @@ h1 {
   @include font-color-light;
   // @include theme(default, dark, $scoped: true) {
 
-  padding: 2rem 3rem;
+  padding: 2rem 4rem 2rem 3rem;
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -291,12 +292,12 @@ code {
   & > * {
     margin: 0.8rem 0.8rem;
 
-    // &:first-child() {
-    //   margin: 0 1rem 0 0;
-    // }
+    &:first-child {
+      margin: 0 1rem 0 0;
+    }
 
-    // &:last-child() {
-    //   margin: 0 0 0 1rem;
-    // }
+    &:last-child {
+      margin: 0 0 0 1rem;
+    }
   }
 }

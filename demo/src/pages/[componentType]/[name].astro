@@ -50,6 +50,10 @@ if (thePackage.pJson.repository.directory && thePackage.pJson.repository.url) {
   const url = `${thePackage.pJson.repository.url}/tree/master/${thePackage.pJson.repository.directory}`;
   actions.push({ title: 'Source', href: url });
 }
+if (thePackage.pJson.name) {
+  const url = `https://www.npmjs.com/package/${thePackage.pJson.name}`;
+  actions.push({ title: 'Package', href: url });
+}
 // if (thePackage.typescriptProps) {
 //   actions.push({ title: 'TypeScript API', href: '#ts-api' });
 // }
