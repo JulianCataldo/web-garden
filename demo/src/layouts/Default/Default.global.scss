@@ -27,17 +27,42 @@
   }
 }
 
-.main-content > .content {
-  padding: 1.5rem 0 1.5rem 0rem;
+[data-theme="default"] {
+  .main-content > .content {
+    margin: 0 2vw;
+
+    &.article > .wrapper.article-body,
+    .package-section,
+    .package {
+      padding: 3rem;
+    }
+
+    .package,
+    .package-section {
+      margin: 2vw;
+
+      &:first-child {
+        margin-top: 0rem;
+      }
+
+      &:last-child {
+        margin-bottom: 0rem;
+      }
+    }
+  }
 }
+
+/* —————————————————————————————————————————————————————————————————————————— */
+
+// #app-transition-overlay {
+//   --color: #{$lavender-blush};
+// }
 
 /* —————————————————————————————————————————————————————————————————————————— */
 
 // [data-feature-flag] {
 //   display: none !important;
 // }
-
-// @import "./scrollbar.scss";
 
 // [data-theme="default"] [data-color-mode="dark"] {
 //   @include default-font-color(dark);
@@ -53,8 +78,4 @@
 //   &[data-clipboard-was-copied="true"] {
 //     cursor: default;
 //   }
-// }
-
-// #app-transition-overlay {
-//   --color: #{$lavender-blush};
 // }
