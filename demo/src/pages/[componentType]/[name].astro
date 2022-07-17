@@ -46,12 +46,19 @@ if (thePackage.video) {
 if (thePackage.api) {
   actions.push({ title: 'Typescript API', href: '#ts-api' });
 }
+if (thePackage.pJson.repository.directory && thePackage.pJson.repository.url) {
+  const url = `${thePackage.pJson.repository.url}/tree/master/${thePackage.pJson.repository.directory}`;
+  actions.push({ title: 'Source', href: url });
+}
+// if (thePackage.typescriptProps) {
+//   actions.push({ title: 'Typescript API', href: '#ts-api' });
+// }
 ---
 
 <Layout titles={titles} actions={actions}>
   <article class='main-content'>
     <div class='navigation'>
-      <h1>Component</h1>
+      <h1>Components</h1>
       <LinksTree links={tableOfContentHeaders} anchorMode={false} />
     </div>
 
