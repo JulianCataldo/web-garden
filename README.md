@@ -113,6 +113,7 @@ Cypress:
 - Feature flag manager
 - Copy to clipboard
 - Algolia search
+- SSR Mermaid
   <!-- - Easy fonts integration -->
   <!-- - Easy iconify integration -->
 
