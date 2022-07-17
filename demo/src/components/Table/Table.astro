@@ -1,0 +1,90 @@
+---
+import type { Props as baseProps } from './Props';
+
+export interface Props extends baseProps {}
+const props = { ...Astro.props } as Props;
+/* ———————————————————————————————————————————— Typeguards + Fallbacks —————— */
+// const internalProps: string[] = [];
+
+// if (typeof props.depth !== 'number') props.depth = 2;
+// internalProps.push('depth');
+
+// if (typeof props.useDev !== 'boolean') props.useDev = true;
+// internalProps.push('useDev');
+
+// if (typeof props.nameText !== 'string') props.nameText = 'Package';
+// internalProps.push('nameText');
+
+// if (typeof props.authorText !== 'string') props.authorText = 'Author';
+// internalProps.push('authorText');
+
+// if (typeof props.licenseText !== 'string') props.licenseText = 'License';
+// internalProps.push('licenseText');
+
+// if (typeof props.linkText !== 'string') props.linkText = 'URL';
+// internalProps.push('linkText');
+/* ············································ Extra HTML attributes ······· */
+const extraAttrs: { [key: string]: string } = {};
+// Object.entries(props).forEach(([key, val]) => {
+//   if (internalProps.includes(key) === false) {
+//     extraAttrs[key] = `${val as string}`;
+//   }
+// });
+/* —————————————————————————————————————————————————————————————————————————— */
+
+interface Data {}
+const headers = Object.entries(props.data[0]);
+// const rows = Object.entries(props.data)
+---
+
+<div
+  class:list={[
+    'table',
+    props.class,
+    //  props.customRootClass
+  ]}
+  role='table'
+  {...extraAttrs}
+>
+  <div class:list={['thead', props.class]} role='rowgroup'>
+    <div class:list={['tr', props.class]} role='row'>
+      {headers.map(([index]) => (
+        <div
+          class:list={['th', `col-${index}`, props.class]}
+          role="columnheader"
+        >
+          {index}
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div class:list={['tbody', props.class]} role='rowgroup'>
+    {props.data.map((row) => (
+      <div class:list={['tr', props.class]} role="row">
+        {Object.entries(row).map(([colIndex, colValue]) => (
+          <div class:list={['td', `col-${colIndex}`, props.class]} role="cell">
+            {`${colValue}`}
+          </div>
+        ))}
+      </div>
+    ))}
+  </div>
+</div>
+
+<style lang='scss' define:vars={{ colCount: headers.length }}>
+  .table:not(.unstyled) {
+    width: 100%;
+    .tr {
+      display: flex;
+    }
+
+    .td,
+    .th {
+      word-break: break-all;
+      overflow: hidden;
+
+      width: var(--width, calc(100% / var(--colCount)));
+    }
+  }
+</style>
