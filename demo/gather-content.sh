@@ -20,3 +20,5 @@ rsync -av --prune-empty-dirs --delete-after --include '*/' --include '*.mp4' --e
 
 
 find .. -iname 'README.md' -maxdepth 3 | rsync -av --files-from=- .. content/packages/
+
+node src/props-extractor.mjs
