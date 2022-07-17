@@ -18,7 +18,7 @@ if (typeof props.max !== 'number') {
 
       if (url.startsWith('/')) {
         if (prefetchList.includes(url) === false) {
-          console.log(`prefetching url ${url}`);
+          // console.log(`prefetching url ${url}`);
           const link = document.createElement('link');
           link.rel = 'prefetch';
           link.as = 'document';
