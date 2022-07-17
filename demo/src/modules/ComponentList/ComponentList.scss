@@ -93,14 +93,26 @@
 
 .actions {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   margin-top: 2rem;
+  justify-content: space-between;
 
   & > * {
-    margin: 0 4rem;
+    margin: 0 1.5rem;
   }
 
   .button {
     margin-bottom: 0 !important;
+  }
+
+  .version {
+    .icon {
+      margin-right: 1rem;
+    }
+
+    display: flex;
+    align-items: center;
   }
 }
 

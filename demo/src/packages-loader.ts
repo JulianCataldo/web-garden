@@ -12,6 +12,7 @@ interface PJson {
     url: string;
     directory: string;
   };
+  version: string;
 }
 interface Readme {
   mainTitle: MarkdownHeader;
@@ -54,6 +55,7 @@ export async function structureAllPackages(
         name: pJson.name,
         description: pJson.description,
         repository: pJson.repository,
+        version: pJson.version,
       },
       readme: {
         mainTitle: { text: '', slug: '', depth: 0 },
