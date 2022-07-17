@@ -117,19 +117,6 @@ Global styles (in your layout component, for example):
 </style>
 ```
 
-# 👨‍🏭  TypeScript API
-
-```ts
-export interface Props {
-  href: string;
-  title?: string;
-  /** Whether to show external link icon or not. Default: true */
-  externalHint?: boolean;
-  /** Open external link in a new tab/window. Default: true */
-  externalInNewTab?: boolean;
-}
-```
-
 ## To do
 
 - [ ] Support Astro `base` option for prefixing `href`s.
