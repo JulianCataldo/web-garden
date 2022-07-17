@@ -12,6 +12,7 @@
     "@astrojs/react": "^0.4.1",
     "@docsearch/react": "3",
     "@fontsource/exo-2": "^4.5.8",
+    "@julian_cataldo/astro": "link:..",
     "@julian_cataldo/astro-base": "link:../app/Base",
     "@julian_cataldo/astro-breakpoints": "link:../app/Breakpoints",
     "@julian_cataldo/astro-color-mode": "link:../app/ColorMode",
