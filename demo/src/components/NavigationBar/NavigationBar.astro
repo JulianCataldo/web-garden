@@ -21,7 +21,7 @@ const menuLinks = [
 >
   <ul class='nav-part components'>
     {menuLinks.map((link) => (
-      <li>
+      <li class="menu-button">
         <Link class="button unstyled" href={link.href}>
           <Icon name={link.icon} class="icon" size="2rem" aria-hidden="true" />
           <div class="nav-text">{link.text}</div>
@@ -40,7 +40,7 @@ const menuLinks = [
       <ThemeSwitcher />
     </li> -->
 
-    <li>
+    <li class='menu-button'>
       <ColorModeSwitcher />
     </li>
   </ul>

@@ -31,26 +31,45 @@
   }
 
   /* ———————————————————————————————————————————————————————————————————————— */
+}
 
+.menu-button {
   :global(.js) & {
-    transition: opacity 0.33s, transform 0.33s;
+    transition: opacity 0.23s, transform 0.23s;
     opacity: 0;
     transform: translateY(-100%);
+
+    &:nth-of-type(1) {
+      transition-delay: 0s;
+    }
+
+    &:nth-of-type(2) {
+      transition-delay: 0.05s;
+    }
+
+    &:nth-of-type(3) {
+      transition-delay: 0.1s;
+    }
   }
 
-  :global([data-is-top="true"]) & {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  :global([data-is-bottom="true"]) & {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
+  :global([data-is-top="true"]) &,
+  :global([data-is-bottom="true"]) &,
   :global([data-is-scrolling-up="true"]) & {
     opacity: 1;
     transform: translateY(0);
+    transition: opacity 0.33s, transform 0.33s;
+
+    &:nth-of-type(1) {
+      transition-delay: 0.1s;
+    }
+
+    &:nth-of-type(2) {
+      transition-delay: 0.05s;
+    }
+
+    &:nth-of-type(3) {
+      transition-delay: 0s;
+    }
   }
 }
 
