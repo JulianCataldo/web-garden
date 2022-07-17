@@ -66,7 +66,7 @@ export async function structureAllPackages(
       shortname: null,
       hasDemo: false,
     });
-    console.log(pJson.name);
+    // console.log(pJson.name);
   });
 
   await Promise.all(
@@ -107,17 +107,17 @@ export async function structureAllPackages(
       /* ———————————————————————————————————————————————————————————————————— */
 
       const propsJson = `content/packages/${dir}/Props.json`;
-      console.log({ propsJson });
+      // console.log({ propsJson });
       packages[index].api = await fs
         .readFile(propsJson, 'utf-8')
         .then((file) => {
           // console.log({ file });
-          console.log('Props found', dir);
+          // console.log('Props found', dir);
           return JSON.parse(file);
         })
         .catch((error) => {
           // console.log({ error });
-          console.log('No props', dir);
+          // console.log('No props', dir);
           return null;
         });
       // console.log(packages[index].api);

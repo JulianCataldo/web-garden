@@ -2,7 +2,7 @@ import { highlight } from 'cypress-highlight';
 
 describe('App — <ScrollObserver>', () => {
   const asHuman = Cypress.env('AS_HUMAN') === true;
-  console.log(asHuman ? 'As human' : 'As robot');
+  // console.log(asHuman ? 'As human' : 'As robot');
 
   it('Open demo', () => {
     cy.visit('http://localhost:2424/');

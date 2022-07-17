@@ -28,7 +28,7 @@ function extract(file) {
       required,
       ...allProperties[key],
     };
-    console.log({ p: propG[1], p2: propG[2], required });
+    // console.log({ p: propG[1], p2: propG[2], required });
   });
   // console.log({ allProperties });
 
@@ -43,10 +43,10 @@ function extract(file) {
 
 async function collectFiles() {
   const files = await glob('../{app,components}/**/Props.ts');
-  console.log({ files });
+  // console.log({ files });
 
   files.forEach(async (file) => {
-    console.log({ extracting: file });
+    // console.log({ extracting: file });
     const inputFile = await fs.readFile(file, 'utf-8');
 
     // console.log({ inputFile });
@@ -65,10 +65,10 @@ async function collectFiles() {
 
     try {
       await fs.writeFile(destPath, jsonOutput, (e) => {
-        console.log(e);
+        // console.log(e);
       });
     } catch (e) {
-      console.log(e);
+      // console.log(e);
     }
   });
 }

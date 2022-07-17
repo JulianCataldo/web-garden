@@ -18,8 +18,8 @@ function outputCurrentBp(currentBp: string) {
   const rWord = randomWords[index];
 
   bpOutput.value = `${currentBp} - ${rWord}\n${bpOutput.value}`;
-  console.log({ currentBp });
+  // console.log({ currentBp });
 }
 
 const currentBp = useBreakpoints(outputCurrentBp);
-console.log({ initialCurrentBp: currentBp });
+// console.log({ initialCurrentBp: currentBp });
