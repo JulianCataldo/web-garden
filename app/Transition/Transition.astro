@@ -7,8 +7,8 @@ const props = { ...Astro.props } as Props;
 if (typeof props.speed !== 'number') {
   props.speed = 500;
 }
-if (typeof props.color !== 'string') {
-  props.color = null;
+if (typeof props.background !== 'string') {
+  props.background = null;
 }
 if (typeof props.zIndex !== 'number') {
   props.zIndex = 99;
@@ -43,22 +43,22 @@ if (typeof props.zIndex !== 'number') {
 
 <style
   define:vars={{
-    // jsColor: props.color,
-    speed: `${props.speed}ms`,
-    'z-index': props.zIndex,
+    'app-transition-overlay-prop-background': props.background,
+    'app-transition-overlay-prop-speed': `${props.speed}ms`,
+    'app-transition-overlay-prop-z-index': props.zIndex,
   }}
   lang='scss'
 >
   #app-transition-overlay {
-    background: var(--color, hsl(0, 0%, 100%));
+    background: var(--app-transition-overlay-prop-background, hsl(0, 0%, 100%));
     position: fixed;
-    top: var(--app-navigation-height, 0);
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     opacity: 0;
     pointer-events: none;
-    z-index: var(--z-index, 99);
+    z-index: var(--app-transition-overlay-prop-z-index, 99);
   }
 
   #app-transition-overlay.is-visible {
@@ -66,6 +66,6 @@ if (typeof props.zIndex !== 'number') {
   }
 
   #app-transition-overlay.is-loaded {
-    transition: opacity var(--speed, 500ms);
+    transition: opacity var(--app-transition-overlay-prop-speed, 500ms);
   }
 </style>
