@@ -1,9 +1,11 @@
 .back-to-top {
   display: inline-flex;
-  width: 14rem;
   height: 1em;
   align-items: center;
-  margin-right: 5rem;
+
+  .icon {
+    margin-right: 0.5rem;
+  }
 }
 
 .back-to-top-float {
@@ -38,6 +40,8 @@
     padding: 0.5rem;
   }
   @include theme(default, light) {
+    box-shadow: -2px 2px 4px color.adjust($rosewood, $alpha: -0.9);
+
     &,
     .link {
       color: color.adjust($rosewood, $alpha: -0.2);
@@ -58,6 +62,8 @@
     }
   }
   @include theme(default, dark) {
+    box-shadow: -2px 2px 4px color.adjust($lavender-blush, $alpha: -0.85);
+
     &,
     .link {
       color: color.adjust($lavender-blush, $lightness: 2%, $alpha: -0.1);

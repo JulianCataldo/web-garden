@@ -1,6 +1,11 @@
 .main-footer {
   display: flex;
   width: 100%;
+  box-shadow: 2px -2px 10px color.adjust($lavender-blush, $alpha: -0.8);
+
+  & > * {
+    margin: 0 2rem;
+  }
 
   .link {
     text-decoration: none;
@@ -35,7 +40,7 @@
     }
 
     .link {
-      color: $lavender-blush;
+      color: color.adjust($fiery-rose, $lightness: 5%);
 
       &:hover {
         color: $fiery-rose;
