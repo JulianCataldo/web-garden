@@ -14,10 +14,10 @@ specifiers:
   '@julian_cataldo/astro-licenses-report': link:../components/LicensesReport
   '@julian_cataldo/astro-lightbox': link:../app/Lightbox
   '@julian_cataldo/astro-link': link:../components/Link
-  '@julian_cataldo/astro-media-map': link:../components/Media/Map
+  '@julian_cataldo/astro-media-map': link:../components/MediaMap
   '@julian_cataldo/astro-prefetch': link:../app/Prefetch
   '@julian_cataldo/astro-resets': link:../app/Resets
-  '@julian_cataldo/astro-scroll-observer': link:../app/Scroll/Observer
+  '@julian_cataldo/astro-scroll-observer': link:../app/ScrollObserver
   '@julian_cataldo/astro-seo': link:../app/SEO
   '@julian_cataldo/astro-tooltips': link:../app/Tooltips
   '@julian_cataldo/astro-transition': link:../app/Transition
@@ -31,6 +31,7 @@ specifiers:
   glob: ^8.0.3
   glob-promise: ^4.2.2
   heroicons: ^1.0.6
+  leaflet: ^1.8.0
   mermaid.cli: ^0.5.1
   react: ^18.2.0
   react-dom: ^18.2.0
@@ -51,10 +52,10 @@ dependencies:
   '@julian_cataldo/astro-licenses-report': link:../components/LicensesReport
   '@julian_cataldo/astro-lightbox': link:../app/Lightbox
   '@julian_cataldo/astro-link': link:../components/Link
-  '@julian_cataldo/astro-media-map': link:../components/Media/Map
+  '@julian_cataldo/astro-media-map': link:../components/MediaMap
   '@julian_cataldo/astro-prefetch': link:../app/Prefetch
   '@julian_cataldo/astro-resets': link:../app/Resets
-  '@julian_cataldo/astro-scroll-observer': link:../app/Scroll/Observer
+  '@julian_cataldo/astro-scroll-observer': link:../app/ScrollObserver
   '@julian_cataldo/astro-seo': link:../app/SEO
   '@julian_cataldo/astro-tooltips': link:../app/Tooltips
   '@julian_cataldo/astro-transition': link:../app/Transition
@@ -68,6 +69,7 @@ dependencies:
   glob: 8.0.3
   glob-promise: 4.2.2_glob@8.0.3
   heroicons: 1.0.6
+  leaflet: 1.8.0
   mermaid.cli: 0.5.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -3297,6 +3299,10 @@ packages:
   /kolorist/1.5.1:
     resolution: {integrity: sha512-lxpCM3HTvquGxKGzHeknB/sUjuVoUElLlfYnXZT73K8geR9jQbroGlSCFBax9/0mpGoD3kzcMLnOlGQPJJNyqQ==}
     dev: true
+
+  /leaflet/1.8.0:
+    resolution: {integrity: sha512-gwhMjFCQiYs3x/Sf+d49f10ERXaEFCPr+nVTryhAW8DWbMGqJqt9G4XuIaHmFW08zYvhgdzqXGr8AlW8v8dQkA==}
+    dev: false
 
   /lilconfig/2.0.5:
     resolution: {integrity: sha512-xaYmXZtTHPAw5m+xLN8ab9C+3a8YmV3asNSPOATITbtwrfbwaLJj8h66H1WMIpALCkqsIzK3h7oQ+PdX+LQ9Eg==}
