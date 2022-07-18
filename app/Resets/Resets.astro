@@ -2,17 +2,21 @@
 import scrollSmooth from './styles/scroll-smooth.css?raw';
 import fontSmoothing from './styles/font-smoothing.css?raw';
 import borderBox from './styles/border-box.css?raw';
-import bodyMargin from './styles/body-margin.css?raw';
+import removeAllMargins from './styles/remove-all-margins.css?raw';
 // import svg from './styles/svg.css?raw';
 import fontSystem from './styles/font-system.css?raw';
 import scrollBarKeep from './styles/scrollbar-keep.css?raw';
+import breakWords from './styles/break-words.css?raw';
+import consistentFont from './styles/consistent-font.css?raw';
+import unstyleNavList from './styles/unstyle-nav-list.css?raw';
+import accessibleLineHeight from './styles/accessible-line-height.css?raw';
 
 /** All defaults: true */
 export interface Props {
   /**
-   * Removes body margin
+   * Removes all default margins
    * */
-  bodyMargin?: boolean;
+  removeAllMargins?: boolean;
   /**
    * Coherent font smoothing
    * */
@@ -26,14 +30,29 @@ export interface Props {
    * */
   scrollSmooth?: boolean;
   /**
-   * Better box handling
+   * Use a more-intuitive box-sizing model
    * */
   borderBox?: boolean;
   /**
    * Show scrollbar consistently, avoiding layout shifts
    * */
   scrollBarKeep?: boolean;
-
+  /**
+   * Avoid text overflows
+   * */
+  breakWords?: boolean;
+  /**
+   * Remove built-in form typography styles
+   * */
+  consistentFont?: boolean;
+  /**
+   * Remove padding and bullets for <ul> lists nested in <nav>
+   * */
+  unstyleNavList?: boolean;
+  /**
+   * Remove padding and bullets for <ul> lists nested in <nav>
+   * */
+  accessibleLineHeight?: boolean;
   /**
    * Apply current text color and maximize canvas
    * */
@@ -43,13 +62,17 @@ export interface Props {
 const props = { ...Astro.props } as Props;
 
 const rawStylesCSS = [
-  props.bodyMargin === false ? null : bodyMargin,
+  props.removeAllMargins === false ? null : removeAllMargins,
   props.fontSmoothing === false ? null : fontSmoothing,
   props.fontSystem === false ? null : fontSystem,
   props.scrollSmooth === false ? null : scrollSmooth,
   props.borderBox === false ? null : borderBox,
   // props.svg === false ? null : svg,
   props.scrollBarKeep === false ? null : scrollBarKeep,
+  props.breakWords === false ? null : breakWords,
+  props.consistentFont === false ? null : consistentFont,
+  props.unstyleNavList === false ? null : unstyleNavList,
+  props.accessibleLineHeight === false ? null : accessibleLineHeight,
 ].join('\n');
 ---
 
