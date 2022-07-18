@@ -49,6 +49,8 @@
     border-radius: 0.25em;
     font-size: calc(100% - 0.2em);
     padding: 0.15em 0.5em 0.1em 0.5em;
+    position: relative;
+    top: -0.05em;
 
     @include theme(default, light) {
       color: $raisin-black;
