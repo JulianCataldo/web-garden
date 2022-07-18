@@ -27,21 +27,18 @@ if (typeof props.siteName !== 'string') {
 <!-- SEO -->
 <meta name='mobile-web-app-capable' content='yes' />
 
-<meta name='og:type' property='og:type' content='website' />
+<meta property='og:type' content='website' />
 
-<meta name='og:site_name' property='og:site_name' content={props.siteName} />
 <meta name='apple-mobile-web-app-title' content={props.siteName} />
 
+<meta property='og:site_name' content={props.siteName} />
 <title>{props.title}</title>
-<meta name='og:title' property='og:title' content={props.title} />
+<meta property='og:title' content={props.title} />
 
-<meta name='twitter:card' content={props.image} />
-<meta name='og:image' property='og:image' content={props.image} />
+<meta property='og:image' content={props.image} />
 
-<meta
-  name='og:description'
-  property='og:description'
-  content={props.description}
+<meta name='twitter:card' content={'summary_large_image'} />
+
+<meta name='description' property='og:description' content={props.description}
 />
-<meta name='description' content={props.description} />
 <!-- /SEO -->
