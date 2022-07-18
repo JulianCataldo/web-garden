@@ -4,10 +4,7 @@ export interface Props {
    * */
   speed?: number;
   /**
-   * **Default**: `'white'` (CSS color unit)
-   *
-   * Or you can style overlay color with:
-   * `:global(#app-transition-overlay) { --color: white; }`
+   * **Default**: `'hsl(0, 0%, 100%)'` (CSS color unit)
    * */
   color?: string;
   /**
