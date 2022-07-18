@@ -2,10 +2,14 @@ export interface Props extends astroHTML.JSX.HTMLAttributes {
   /* ————————————————————————————— */
   /**
    * Longitude
+   *
+   * **Default**: `43.389636`
    * */
   x: number;
   /**
    * Latitude
+   *
+   * **Default**: `5.3964332`
    * */
   y: number;
   /**
@@ -16,7 +20,9 @@ export interface Props extends astroHTML.JSX.HTMLAttributes {
   z?: number;
   /* ————————————————————————————— */
   /**
-   * CSS Unit
+   * CSS Unit (fixed, no relative unit)
+   *
+   * **Default**: `'12rem'`
    * */
   height: string;
   /**

@@ -6,7 +6,7 @@ Uses [Leaflet.js](https://leafletjs.com) under the hood.
 ## 📦  Installation
 
 ```sh
-pnpm i @julian_cataldo/astro-media-map
+pnpm i @julian_cataldo/astro-media-map leaflet
 ```
 
 ## 🛠  Usage

@@ -6,9 +6,9 @@ const props = { ...Astro.props } as Props;
 /* ———————————————————————————————————————————— Typeguards + Fallbacks —————— */
 const internalProps: string[] = [];
 
-if (typeof props.x !== 'number') props.x = 10;
+if (typeof props.x !== 'number') props.x = 43.389636;
 internalProps.push('x');
-if (typeof props.y !== 'number') props.y = 10;
+if (typeof props.y !== 'number') props.y = 5.3964332;
 internalProps.push('y');
 if (typeof props.z !== 'number') props.z = 10;
 internalProps.push('z');
@@ -68,7 +68,7 @@ Object.entries(props).forEach(([key, val]) => {
   is:global
   define:vars={{ display: props.attribution ? 'initial' : 'none' }}
 >
-  /* @import 'leaflet'; */
+  @import 'leaflet';
   .leaflet-control-attribution {
     display: var(--display, 'initial');
   }
