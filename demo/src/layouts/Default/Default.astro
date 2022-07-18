@@ -18,10 +18,7 @@ import Favicons from 'src/components/Favicons.astro';
 /* ·········································································· */
 import '@fontsource/exo-2/variable.css';
 import '@fontsource/exo-2/variable-italic.css';
-// import revalia from './fonts/revalia.css?raw';
-// import exo from './fonts/exo.css?raw';
-// import exo2var from '@fontsource/exo-2/variable.css?raw';
-// import exo2varItalic from '@fontsource/exo-2/variable-italic.css?raw';
+
 /* —————————————————————————————————————————————————————————————————————————— */
 import { description } from '@julian_cataldo/astro/package.json';
 import { dependencies } from 'package.json';
@@ -41,7 +38,6 @@ if (typeof props?.titles?.main !== 'string') {
 /* —————————————————————————————————————————————————————————————————————————— */
 
 const comboTitle = `${props.titles.main} — ${props.titles.sub}`;
-// NOTE: this thing is not official, just an experiment
 const generator = `astro-${dependencies.astro}`;
 ---
 
@@ -63,9 +59,12 @@ const generator = `astro-${dependencies.astro}`;
       siteName={"Julian's Web Garden"}
     />
 
-    <meta name='generator' content={generator} />
+    <!-- Extras -->
     <meta name='author' content='Julian Cataldo' />
     <meta name='copyright' content='ISC' />
+    <!-- NOTE: this thing is not official, just an experiment -->
+    <meta name='generator' content={generator} />
+    <!-- /Extras -->
 
     <Tooltips />
 
@@ -75,23 +74,18 @@ const generator = `astro-${dependencies.astro}`;
 
     <ScrollObserver />
 
+    <!-- FIXME: Disabled, breaks on vite build -->
     <!-- <Resets /> -->
 
+    <!-- TODO: integration -->
     <!-- <LightBox /> -->
-
-    <!-- Fonts -->
-    <!-- <style is:inline set:html={[exo2var, exo2varItalic].join(' ')}>
-      // Placeholder
-    </style> -->
-    <!-- <style is:inline set:html={[revalia, exo].join(' ')}>
-      // Placeholder 
-    </style> -->
-
     <Favicons />
   </Fragment>
 
   <Fragment slot='body'>
+    <!-- TODO: integration -->
     <!-- <Breakpoints /> -->
+
     <Transition speed={500} zIndex={99} background={'var(--app-overlay-color)'}
     />
     <!--—————————————————————————————————————————————————————————————————————-->
@@ -147,9 +141,3 @@ const generator = `astro-${dependencies.astro}`;
 <script>
   import './Default.client.ts';
 </script>
-
-<!-- <style lang='scss'>
-  // @import '@fontsource/exo-2/variable.css';
-  // Contains ONLY variable weights and no other axes.
-  // @import '@fontsource/exo-2/variable-italic.css'; // Italic variant.
-</style> -->
