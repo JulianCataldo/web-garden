@@ -28,7 +28,7 @@ import { description } from '@julian_cataldo/astro/package.json';
 
 export interface Props {
   titles: { main: string; sub?: string };
-  description: string;
+  description?: string;
   actions?: { title: string; href: string }[];
 }
 const props = { ...Astro.props } as Props;
