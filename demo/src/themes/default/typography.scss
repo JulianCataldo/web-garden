@@ -42,6 +42,20 @@ body {
       color: color.adjust($fiery-rose, $lightness: 10%);
     }
   }
+
+  &.is-external {
+    position: relative;
+    padding-right: 0.95em;
+  }
+
+  &.is-external::after {
+    position: absolute;
+    right: 0em;
+    top: -0.1em;
+    transform: rotate(90deg);
+    font-size: 85%;
+    content: "⎋";
+  }
 }
 
 /* ············································ Special links ··············· */
