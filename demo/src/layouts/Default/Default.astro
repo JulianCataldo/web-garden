@@ -8,7 +8,7 @@ import Tooltips from '@julian_cataldo/astro-tooltips/Tooltips.astro';
 import ColorMode from '@julian_cataldo/astro-color-mode/ColorMode.astro';
 // import Breakpoints from '@julian_cataldo/astro-breakpoints/Breakpoints.astro';
 import ScrollObserver from '@julian_cataldo/astro-scroll-observer/ScrollObserver.astro';
-import TransitionOverlay from '@julian_cataldo/astro-transition/Overlay/TransitionOverlay.astro';
+import Transition from '@julian_cataldo/astro-transition/Transition.astro';
 /* ·········································································· */
 import Icon from 'astro-icon';
 import Link from '@julian_cataldo/astro-link/Link.astro';
@@ -24,6 +24,7 @@ import '@fontsource/exo-2/variable-italic.css';
 // import exo2varItalic from '@fontsource/exo-2/variable-italic.css?raw';
 /* —————————————————————————————————————————————————————————————————————————— */
 import { description } from '@julian_cataldo/astro/package.json';
+import { dependencies } from 'package.json';
 /* —————————————————————————————————————————————————————————————————————————— */
 
 export interface Props {
@@ -40,6 +41,8 @@ if (typeof props?.titles?.main !== 'string') {
 /* —————————————————————————————————————————————————————————————————————————— */
 
 const comboTitle = `${props.titles.main} — ${props.titles.sub}`;
+// NOTE: this thing is not official, just an experiment
+const generator = `astro-${dependencies.astro}`;
 ---
 
 <Base
@@ -59,6 +62,10 @@ const comboTitle = `${props.titles.main} — ${props.titles.sub}`;
       description={props.description || description}
       siteName={"Julian's Web Garden"}
     />
+
+    <meta name='generator' content={generator} />
+    <meta name='author' content='Julian Cataldo' />
+    <meta name='copyright' content='ISC' />
 
     <Tooltips />
 
@@ -85,7 +92,7 @@ const comboTitle = `${props.titles.main} — ${props.titles.sub}`;
 
   <Fragment slot='body'>
     <!-- <Breakpoints /> -->
-    <TransitionOverlay speed={500} zIndex={99} />
+    <Transition speed={500} zIndex={99} />
     <!--—————————————————————————————————————————————————————————————————————-->
 
     <NavigationBar />
@@ -104,9 +111,11 @@ const comboTitle = `${props.titles.main} — ${props.titles.sub}`;
 
     <footer class='main-footer'>
       <Link href='#' class='back-to-top unstyled'>
-        <Icon name='mdi:arrow-up' size='3rem' />
+        <Icon name='mdi:arrow-up' size='3rem' class='icon' />
         Back to top
       </Link>
+
+      <div>|</div>
 
       <div class='author'>
         <span>2022,&nbsp;</span>
@@ -118,6 +127,10 @@ const comboTitle = `${props.titles.main} — ${props.titles.sub}`;
           <span aria-hidden='true'>Julian Cataldo</span>
         </Link>
       </div>
+
+      <div>|</div>
+
+      <div>Built with <Link href='https://astro.build'>Astro</Link></div>
     </footer>
 
     <Link href='#' class='back-to-top-float unstyled'>
