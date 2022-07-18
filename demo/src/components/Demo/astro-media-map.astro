@@ -1,12 +1,22 @@
 ---
-// import MediaMap from '@julian_cataldo/astro-media-map/MediaMap.astro';
+import MediaMap from '@julian_cataldo/astro-media-map/MediaMap.astro';
 ---
 
-<!-- <MediaMap
+<MediaMap
   x={43.389636 /* Required */}
   y={5.3964332 /* Required */}
   z={11}
   height={'25rem' /* Required */}
   width={'25rem'}
   attribution={true}
-/> -->
+  aria-label='Demonstration for geographic map embed'
+  data-tooltip-placement='bottom'
+/>
+
+<hr />
+
+<p>
+  You can extend this HTML element with generic attributes like <code
+    >aria-label
+  </code>…
+</p>

@@ -5,24 +5,39 @@ import LicensesReport from '@julian_cataldo/astro-licenses-report/LicensesReport
 ---
 
 <div class='demo-wrapper'>
-  <LicensesReport
-    useDev={true}
-    depth={2}
-    nameText={'Nom'}
-    authorText={'Auteur'}
-    licenseText={'License'}
-    linkText={'URL'}
-    data-testid='licenses-report'
-    class='licenses-report'
-  />
+  <p>
+    Comes unstyled.
+    <br />
+    This component is easily stylable, and fully accessible.
+  </p>
+
+  <hr />
+  <span>
+    Dependencies of the current website you are visiting (depth is set to 1):
+  </span>
+
+  <div class='table-wrapper'>
+    <LicensesReport
+      useDev={true}
+      depth={1}
+      nameText={'Nom'}
+      authorText={'Auteur'}
+      licenseText={'License'}
+      linkText={'URL'}
+      data-testid='licenses-report'
+      class='licenses-report'
+    />
+  </div>
 </div>
 
 <style lang='scss'>
-  .demo-wrapper {
+  .table-wrapper {
     max-width: calc(100vw - 50rem);
     overflow-y: scroll;
     overflow-x: auto;
     max-height: 40vh;
+
+    margin-top: 3rem;
 
     .licenses-report {
       .tr {

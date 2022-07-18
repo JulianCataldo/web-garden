@@ -1,57 +1,48 @@
 ---
 import Link from '@julian_cataldo/astro-link/Link.astro';
-// import MyLink from '../Polymorph/MyLink/MyLink.astro';
 ---
 
-<h2>Demo</h2>
 <ul>
   <li>
-    <Link href='/page-a' title='Internal route…'>
-      Some <strong>internal</strong> link
-    </Link>
-  </li>
-  <li>
-    <Link href='https://www.juliancataldo.com' title='External, bye…'>
-      Some <strong>external</strong> link, loaded in a new tab
+    <Link data-tooltip-placement='right' href='/page-a' title='Internal route…'>
+      Some <strong>internal</strong> website page link
     </Link>
   </li>
   <li>
     <Link
+      data-tooltip-placement='right'
+      href='https://www.juliancataldo.com'
+      title='External, bye…'
+    >
+      Some <strong>external</strong> link, loaded in a new tab, SEO optimized
+    </Link>
+  </li>
+  <li>
+    <Link
+      data-tooltip-placement='right'
       href='https://www.juliancataldo.com'
       title='External, in this window'
       externalInNewTab={false}
     >
-      Some <strong>external</strong> link, loaded in current tab
+      Some <strong>external</strong> link, loaded in current tab, SEO optimized
     </Link>
   </li>
   <li>
-    <Link href='mailto:john.smith@bigcorp.biz' title='Contact me!'>
-      Some <strong>mail</strong> link (email, telephone)
-    </Link>
-  </li>
-  <li>
-    <Link href='tel:8989898989' title='Phone me!'>
-      Some <strong>telephone</strong> link (email, telephone)
-    </Link>
-  </li>
-  <!-- <li class='my-parent-with-custom-links'>
-    <Link href='http://perdu.com' title={"I'm lost…"}>
-      1. Some <strong>custom class</strong> link!
-    </Link>
-    <br />
-    <Link href={'mailto:john.smith@bigcorp.biz'} title={'Mail!'}
-      >2. Another…
-    </Link>
-    <br />
-    <Link href='tel:8989898989' title='Tel!'>3. Another one………</Link>
-  </li> -->
-  <!--<li>
-     <MyLink
-      href='http://perdu.com'
-      title={'Extend with your own component'}
-      data-testid='demoLinks-Polymorphic-1'
+    <Link
+      data-tooltip-placement='right'
+      href='mailto:john.smith@bigcorp.biz'
+      title='Contact me!'
     >
-      1. Some <strong>custom</strong> link!
-    </MyLink>
-  </li> -->
+      Some JS-obfuscated <strong>mail</strong> link
+    </Link>
+  </li>
+  <li>
+    <Link
+      data-tooltip-placement='right'
+      href='tel:8989898989'
+      title='Phone me!'
+    >
+      Some JS-obfuscated <strong>telephone</strong> link
+    </Link>
+  </li>
 </ul>
