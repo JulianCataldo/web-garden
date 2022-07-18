@@ -22,3 +22,5 @@ rsync -av --prune-empty-dirs --delete-after --include '*/' --include '*.mp4' --e
 find .. -iname '*.md' -maxdepth 3 | rsync -av --files-from=- .. content/packages/
 
 node src/props-extractor.mjs
+
+git ls-tree -r --name-only HEAD | tree --fromfile > content/tree.txt
