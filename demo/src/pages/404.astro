@@ -1,0 +1,21 @@
+---
+import Layout from 'src/layouts/Default/Default.astro';
+
+const titles = {
+  main: "Julian's Web Garden",
+  sub: 'Page not found!',
+};
+---
+
+<Layout titles={titles}>
+  <article class='main-content'>
+    <h1>404 error, page not found!</h1>
+  </article>
+</Layout>
+
+<style lang='scss'>
+  h1 {
+    width: 100%;
+    text-align: center;
+  }
+</style>
