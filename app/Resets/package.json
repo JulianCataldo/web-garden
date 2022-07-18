@@ -8,7 +8,7 @@
     "access": "public"
   },
   "author": "Julian Cataldo",
-  "homepage": "https://github.com/JulianCataldo/astro/tree/master/app/Resets",
+  "homepage": "https://code.juliancataldo.com/component/astro-resets",
   "bugs": {
     "url": "https://github.com/JulianCataldo/astro/issues"
   },
@@ -17,6 +17,7 @@
     "url": "https://github.com/JulianCataldo/astro",
     "directory": "app/Resets"
   },
+  "style": "index.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -4,6 +4,7 @@
   "description": "Building blocks for making progressive and future-proof websites.\nComponents collection features Astro, HTML, SCSS, JS, TS…\nConfigurations features ESLint, Prettier, Stylelint…",
   "main": "index.js",
   "private": true,
+  "homepage": "https://code.juliancataldo.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/JulianCataldo/astro",
