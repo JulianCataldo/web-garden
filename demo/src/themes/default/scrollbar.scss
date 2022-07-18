@@ -1,31 +1,107 @@
-[data-theme="default"] {
+/* LIGHT */
+/* ———————————————————————————————————————————————————————————————————————— */
+
+[data-theme="default"][data-color-mode="light"] {
   ::-webkit-scrollbar {
     width: 1rem;
     height: 1rem;
   }
-  /* ------------------------------------------------ */
+
   ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 0.5rem color.adjust($lavender-blush, $lightness: 10%);
+    background: linear-gradient(
+      color.adjust($lavender-blush, $lightness: 5%),
+      color.adjust($lavender-blush, $lightness: -20%, $saturation: -20%)
+    );
+    box-shadow: inset 0 0 0.3rem color.adjust($lavender-blush, $lightness: -10%);
   }
 
   ::-webkit-scrollbar-thumb {
     border-radius: 1rem;
+    border: 1px solid
+      color.adjust($lavender-blush, $lightness: -30%, $alpha: -0.4);
     background: linear-gradient(
-      color.adjust($lavender-blush, $lightness: -10%),
-      color.adjust($lavender-blush, $lightness: 10%)
+      color.adjust($lavender-blush, $lightness: 0%),
+      color.adjust($lavender-blush, $lightness: -10%)
     );
-    box-shadow: inset -0.08rem -0.08rem 0.2rem hsla(0, 0%, 20%, 1),
-      inset 0.08rem 0.08rem 0.2rem hsla(0, 0%, 100%, 1),
-      0.08rem 0.08rem 0.2rem hsla(0, 0%, 40%, 1);
+    box-shadow: inset -0.08rem -0.08rem 0.1rem
+        color.adjust($raisin-black, $lightness: 20%, $alpha: -0.4),
+      inset 0.08rem 0.08rem 0.2rem
+        color.adjust($lavender-blush, $lightness: 10%, $alpha: -0.4),
+      0.08rem 0.08rem 0.2rem
+        color.adjust($raisin-black, $lightness: 10%, $alpha: -0.7);
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(hsla(0, 0%, 60%, 1), hsla(0, 0%, 40%, 1));
+    background: linear-gradient(
+      color.adjust($fiery-rose, $lightness: 10%),
+      color.adjust($red-pigment, $lightness: 20%)
+    );
   }
 
   ::-webkit-scrollbar-thumb:active {
-    background: linear-gradient(hsla(0, 0%, 80%, 1), hsla(0, 0%, 60%, 1));
-    box-shadow: inset 0.08rem 0.08rem 0.2rem hsla(0, 0%, 20%, 1),
-      inset -0.08rem -0.08rem 0.2rem hsla(0, 0%, 100%, 1);
+    background: linear-gradient(
+      color.adjust($lavender-blush, $lightness: -10%),
+      color.adjust($lavender-blush, $lightness: 0%)
+    );
+    box-shadow: inset -0.08rem -0.08rem 0.1rem
+        color.adjust($raisin-black, $lightness: -10%, $alpha: -0.2),
+      inset 0.08rem 0.08rem 0.2rem
+        color.adjust($lavender-blush, $lightness: -10%, $alpha: -0.2);
+  }
+}
+
+/* DARK */
+/* ———————————————————————————————————————————————————————————————————————— */
+
+[data-theme="default"][data-color-mode="dark"] {
+  ::-webkit-scrollbar {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: linear-gradient(
+      color.adjust($raisin-black, $lightness: 6%),
+      color.adjust($raisin-black, $lightness: -16%, $saturation: -20%)
+    );
+    box-shadow: inset 0 0 0.3rem color.adjust($raisin-black, $lightness: 10%);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    border: 1px solid color.adjust($rosewood, $lightness: 1%, $alpha: -0.2);
+    background: linear-gradient(
+      color.adjust($rosewood, $lightness: 3%, $saturation: -75%),
+      color.adjust($rosewood, $lightness: -9%)
+    );
+    box-shadow: inset -0.08rem -0.08rem 0.1rem
+        color.adjust(
+          $fiery-rose,
+          $lightness: -30%,
+          $alpha: -0.4,
+          $saturation: -60%
+        ),
+      inset 0.08rem 0.08rem 0.2rem
+        color.adjust($raisin-black, $lightness: 5%, $alpha: -0.4),
+      0.08rem 0.08rem 0.2rem
+        color.adjust($lavender-blush, $lightness: -5%, $alpha: -0.7);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+      color.adjust($fiery-rose, $lightness: -40%),
+      color.adjust($red-pigment, $lightness: -40%)
+    );
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(
+      color.adjust($raisin-black, $lightness: 5%),
+      color.adjust($raisin-black, $lightness: 10%)
+    );
+    box-shadow: inset -0.08rem -0.08rem 0.1rem
+        color.adjust($lavender-blush, $lightness: -30%, $alpha: -0.4),
+      inset 0.08rem 0.08rem 0.2rem
+        color.adjust($raisin-black, $lightness: 0%, $alpha: -0.2);
   }
 }
