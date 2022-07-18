@@ -50,23 +50,44 @@ const titles = {
 };
 
 const tableOfContentHeaders = packages.map((e) => e.readme.mainTitle);
-const actions = [{ title: 'Quick start', href: '#doc' }];
+const actions = [
+  { title: 'Quick start', href: '#doc', icon: 'system-uicons:flag' },
+];
 if (thePackage.hasDemo) {
-  actions.push({ title: 'Live demo', href: '#live-demo' });
+  actions.push({
+    title: 'Live demo',
+    href: '#live-demo',
+    icon: 'system-uicons:hand',
+  });
 }
 if (thePackage.video) {
-  actions.push({ title: 'Test / Demo video', href: '#test-video' });
+  actions.push({
+    title: 'Test / Demo video',
+    href: '#test-video',
+    icon: 'system-uicons:play-button',
+  });
 }
 if (thePackage.api) {
-  actions.push({ title: 'TypeScript API', href: '#ts-api' });
+  actions.push({
+    title: 'TypeScript API',
+    href: '#ts-api',
+    icon: 'mdi:language-typescript',
+  });
+}
+if (thePackage.changelog) {
+  actions.push({
+    title: 'Change log',
+    href: '#changelog',
+    icon: 'system-uicons:flip-view',
+  });
 }
 if (thePackage.pJson.repository.directory && thePackage.pJson.repository.url) {
   const url = `${thePackage.pJson.repository.url}/tree/master/${thePackage.pJson.repository.directory}`;
-  actions.push({ title: 'Source', href: url });
+  actions.push({ title: 'Source', href: url, icon: 'mdi:github' });
 }
 if (thePackage.pJson.name) {
   const url = `https://www.npmjs.com/package/${thePackage.pJson.name}`;
-  actions.push({ title: 'Package', href: url });
+  actions.push({ title: 'Package', href: url, icon: 'mdi:npm' });
 }
 // if (thePackage.typescriptProps) {
 //   actions.push({ title: 'TypeScript API', href: '#ts-api' });
