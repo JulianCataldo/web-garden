@@ -34,11 +34,15 @@ if (typeof props.siteName !== 'string') {
 <meta property='og:site_name' content={props.siteName} />
 <title>{props.title}</title>
 <meta property='og:title' content={props.title} />
+<meta name='twitter:title' content={props.title} />
 
 <meta property='og:image' content={props.image} />
+<meta property='og:image:alt' content={props.description} />
+<meta name='twitter:image:src' content={props.image} />
 
 <meta name='twitter:card' content={'summary_large_image'} />
 
 <meta name='description' property='og:description' content={props.description}
 />
+<meta name='twitter:description' content={props.description} />
 <!-- /SEO -->
