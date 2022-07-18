@@ -6,7 +6,7 @@ import Base from '@julian_cataldo/astro-base/Base.astro';
 import Prefetch from '@julian_cataldo/astro-prefetch/Prefetch.astro';
 import Tooltips from '@julian_cataldo/astro-tooltips/Tooltips.astro';
 import ColorMode from '@julian_cataldo/astro-color-mode/ColorMode.astro';
-// import Breakpoints from '@julian_cataldo/astro-breakpoints/Breakpoints.astro';
+import Breakpoints from '@julian_cataldo/astro-breakpoints/Breakpoints.astro';
 import ScrollObserver from '@julian_cataldo/astro-scroll-observer/ScrollObserver.astro';
 import Transition from '@julian_cataldo/astro-transition/Transition.astro';
 /* ·········································································· */
@@ -83,8 +83,7 @@ const generator = `astro-${dependencies.astro}`;
   </Fragment>
 
   <Fragment slot='body'>
-    <!-- TODO: integration -->
-    <!-- <Breakpoints /> -->
+    <Breakpoints />
 
     <Transition speed={500} zIndex={99} background={'var(--app-overlay-color)'}
     />
