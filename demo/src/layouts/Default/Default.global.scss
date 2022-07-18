@@ -54,9 +54,18 @@
 
 /* —————————————————————————————————————————————————————————————————————————— */
 
-// #app-transition-overlay {
-//   --color: #{$lavender-blush};
-// }
+body {
+  @include theme(default, light) {
+    --app-overlay-color: #{color.adjust(
+        $lavender-blush,
+        $lightness: - 7%,
+        $saturation: - 17%
+      )};
+  }
+  @include theme(default, dark) {
+    --app-overlay-color: #{$raisin-black};
+  }
+}
 
 /* —————————————————————————————————————————————————————————————————————————— */
 
