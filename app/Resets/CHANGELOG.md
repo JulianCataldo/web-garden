@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.0](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-resets@0.11.0...@julian_cataldo/astro-resets@0.12.0) (2022-07-18)
+
+
+### Features
+
+* add new css resets ([666e776](https://github.com/JulianCataldo/astro/commit/666e776e060110cdc24e09fa91e3591bb4e96ce4))
+* update app resets styles ([364dedd](https://github.com/JulianCataldo/astro/commit/364deddef1b42f7f665f457c1a8b93552124e364))
+
+
+
 ## [0.11.0](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-resets@0.10.7...@julian_cataldo/astro-resets@0.11.0) (2022-06-28)
 
 

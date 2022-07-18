@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.0](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-licenses-report@0.12.0...@julian_cataldo/astro-licenses-report@0.13.0) (2022-07-18)
+
+
+### Features
+
+* ts properties extractor for docs ([9a8e65e](https://github.com/JulianCataldo/astro/commit/9a8e65ed1b11f5ab70596fad34bd839cb41ee7dc))
+
+
+
 ## [0.12.0](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-licenses-report@0.11.1...@julian_cataldo/astro-licenses-report@0.12.0) (2022-06-28)
 
 

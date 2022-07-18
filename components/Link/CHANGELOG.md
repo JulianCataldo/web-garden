@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.0](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-link@0.11.0...@julian_cataldo/astro-link@0.12.0) (2022-07-18)
+
+
+### Features
+
+* support astro base url setting via env ([12ce9ae](https://github.com/JulianCataldo/astro/commit/12ce9ae07253eafe90ed06ca57e090ad1e1d8ee4))
+
+
+### Bug Fixes
+
+* remove slash prefix for hash href ([a8cc89b](https://github.com/JulianCataldo/astro/commit/a8cc89bf26a3640095829089cba65b29d363a4b5))
+
+
+
 ## [0.11.0](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-link@0.10.4...@julian_cataldo/astro-link@0.11.0) (2022-06-28)
 
 

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.13](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-tooltips@0.10.12...@julian_cataldo/astro-tooltips@0.10.13) (2022-07-18)
+
+
+### Bug Fixes
+
+* move css to frontmatter ([386fb9d](https://github.com/JulianCataldo/astro/commit/386fb9d970fd3013b2509c3c508b3b59a6b9cb5a))
+
+
+
 ## [0.10.12](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-tooltips@0.10.11...@julian_cataldo/astro-tooltips@0.10.12) (2022-06-28)
 
 

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.0](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-base@0.12.0...@julian_cataldo/astro-base@0.13.0) (2022-07-18)
+
+
+### Features
+
+* add redirection mechanism ([21f8856](https://github.com/JulianCataldo/astro/commit/21f8856395d6f8f0b5f88ade6d06d32c078f2b1b))
+* ts properties extractor for docs ([9a8e65e](https://github.com/JulianCataldo/astro/commit/9a8e65ed1b11f5ab70596fad34bd839cb41ee7dc))
+
+
+
 ## [0.12.0](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-base@0.11.5...@julian_cataldo/astro-base@0.12.0) (2022-06-28)
 
 

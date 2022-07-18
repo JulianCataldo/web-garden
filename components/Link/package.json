@@ -1,6 +1,6 @@
 {
   "name": "@julian_cataldo/astro-link",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "description": "Supercharge your links. This component detects external / anchor / same domain / mail / telephone `href`, and apply optimizations accordingly.",
   "main": "index.js",
   "type": "module",

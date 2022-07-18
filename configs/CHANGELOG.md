@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.3](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-configs@0.11.2...@julian_cataldo/astro-configs@0.11.3) (2022-07-18)
+
+
+### Bug Fixes
+
+* typo typescript ([7d5be3c](https://github.com/JulianCataldo/astro/commit/7d5be3c5c2b977f1a3682ad8c8f1f26f83770564))
+
+
+
 ## [0.11.2](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-configs@0.11.1...@julian_cataldo/astro-configs@0.11.2) (2022-06-28)
 
 **Note:** Version bump only for package @julian_cataldo/astro-configs

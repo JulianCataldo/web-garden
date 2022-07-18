@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.0](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-color-mode@0.10.3...@julian_cataldo/astro-color-mode@0.11.0) (2022-07-18)
+
+
+### Features
+
+* generic color mode mixin ([fb39fb0](https://github.com/JulianCataldo/astro/commit/fb39fb0711441ecb8187321ebdeed1c5a8c69c3e))
+
+
+
 ## [0.10.3](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-color-mode@0.10.2...@julian_cataldo/astro-color-mode@0.10.3) (2022-06-28)
 
 

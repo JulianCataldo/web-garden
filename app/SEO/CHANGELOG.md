@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.0](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-seo@0.11.0...@julian_cataldo/astro-seo@0.12.0) (2022-07-18)
+
+
+### Features
+
+* add default values for seo ([3e785e9](https://github.com/JulianCataldo/astro/commit/3e785e9217892d5966d97fbaed908c360c0315bb))
+* ts properties extractor for docs ([9a8e65e](https://github.com/JulianCataldo/astro/commit/9a8e65ed1b11f5ab70596fad34bd839cb41ee7dc))
+
+
+
 ## [0.11.0](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-seo@0.10.12...@julian_cataldo/astro-seo@0.11.0) (2022-06-28)
 
 

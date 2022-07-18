@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.0](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-prefetch@0.11.0...@julian_cataldo/astro-prefetch@0.12.0) (2022-07-18)
+
+
+### Features
+
+* ts properties extractor for docs ([9a8e65e](https://github.com/JulianCataldo/astro/commit/9a8e65ed1b11f5ab70596fad34bd839cb41ee7dc))
+
+
+### Bug Fixes
+
+* remove console ([aaba04e](https://github.com/JulianCataldo/astro/commit/aaba04eb4c654ba52c881e03925b085be8bb0702))
+
+
+
 ## [0.11.0](https://github.com/JulianCataldo/astro/compare/@julian_cataldo/astro-prefetch@0.10.12...@julian_cataldo/astro-prefetch@0.11.0) (2022-06-28)
 
 
