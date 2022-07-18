@@ -5,15 +5,15 @@
     display: none;
   }
 
-  :last-child {
+  & *:is(h1, h2, h3, h4, h5) {
+    margin: 1.5em 0;
+  }
+
+  & > :last-child {
     margin-bottom: 0;
   }
 
-  & *:is(h1, h2, h3, h4, h5) {
-    margin: 3rem 0;
-  }
-
-  :first-child,
+  & > :first-child,
   // NOTE: script/css injection breaks first-child on build
   :is(link, script) + * {
     margin-top: 0;
@@ -24,13 +24,13 @@
   }
 
   p {
-    margin: 1rem;
+    margin: 1em;
   }
 
   pre {
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    margin: 2rem 0;
+    border-radius: 0.5em;
+    padding: 1.5em;
+    margin: 2em 0;
     font-size: 95%;
 
     @include theme(default, light) {
@@ -65,25 +65,25 @@
   }
 
   blockquote {
-    margin: 2.5rem 0;
-    padding: 1rem;
+    margin: 2.5em 0;
+    padding: 1em;
     background-color: color.adjust($fiery-rose, $alpha: -0.9);
-    border-radius: 0.25rem;
+    border-radius: 0.25em;
 
     p:first-of-type {
-      margin-top: 0.45rem;
+      margin-top: 0.45em;
     }
 
     p:last-of-type {
-      margin-bottom: 0.65rem;
+      margin-bottom: 0.65em;
     }
 
     strong:first-of-type {
       display: inline-block;
       width: 100%;
       border-bottom: 1px solid color.adjust($rosewood, $alpha: -0.8);
-      padding-bottom: 0.2rem;
-      margin-bottom: 1rem;
+      padding-bottom: 0.2em;
+      margin-bottom: 1em;
 
       @include theme(default, light) {
         color: $rosewood;
@@ -99,8 +99,12 @@
   }
 
   ul {
-    margin: 1em;
-    padding: 1em;
+    margin: 1em 1em;
+    padding: 0 1em;
+
+    & + p {
+      margin-top: 3em;
+    }
 
     li {
       margin: 1em 0;
