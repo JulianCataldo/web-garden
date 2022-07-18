@@ -104,7 +104,7 @@
     margin: 1em 1em;
     padding: 0 1em;
 
-    & + p {
+    & + :is(p) {
       margin-top: 3em;
     }
 
