@@ -136,11 +136,10 @@ pnpm run cypress:open
 # Cypress: Run test suite
 pnpm run cypress:run
 
-# Pre-release
-# 1. Cypress test suite
-# 2. Packages bump based on commits
-# 3. Tagging releases
-# 4. Git push
+# Pre-release, does:
+# 1. Packages bump based on commits
+# 2. Tagging releases
+# 3. Git push
 pnpm run version
 
 # Release updated packages on NPM public registry
