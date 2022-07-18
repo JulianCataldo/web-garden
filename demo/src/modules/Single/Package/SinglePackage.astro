@@ -22,6 +22,17 @@ const ReadMe = props?.content?.readme?.Content;
 <div class='single-package'>
   {props.content ? (
     <>
+      {props.content.pJson?.keywords.length && (
+        <section class="keywords">
+          <h2>Keywords:</h2>
+          <ul class="keywords-list">
+            {props.content.pJson.keywords.map((keyword) => (
+              <li class="keyword">{keyword}</li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       {props.content.hasDemo && (
         <section id="live-demo" class="package-section article-body">
           <h2>Component live demo</h2>
@@ -29,7 +40,6 @@ const ReadMe = props?.content?.readme?.Content;
           <DemoLoader name={props.content.shortname} />
         </section>
       )}
-
       {props.content.video && (
         <section id="test-video" class="package-section article-body">
           <h2>Test x Demo : Video</h2>
@@ -41,13 +51,11 @@ const ReadMe = props?.content?.readme?.Content;
           </div>
         </section>
       )}
-
       {ReadMe && (
         <section id="doc" class="package-section article-body">
           <ReadMe />
         </section>
       )}
-
       {props.content.api && (
         <section id="ts-api" class="package-section article-body">
           <h2>TypeScript API</h2>
@@ -63,7 +71,6 @@ const ReadMe = props?.content?.readme?.Content;
           <Table data={props.content.api.properties} class="api-props" />
         </section>
       )}
-
       {props.content.changelog && (
         <section id="changelog" class="package-section article-body">
           <h2>Changelog</h2>
@@ -81,7 +88,6 @@ const ReadMe = props?.content?.readme?.Content;
           </div>
         </section>
       )}
-
       {/* props.content.typescriptProps && (
         <section id="ts-api" class="package-section article-body">
       

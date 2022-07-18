@@ -1,19 +1,40 @@
 /* ——————————————————————————— Box 1 ————————————————————————— */
 .content > .table-of-contents,
 .main-content > .article > .wrapper.article-body,
-.main-content .package-section,
+.main-content .package-section.article-body,
 .content > .package {
   border-radius: 1rem;
 
   @include theme(default, light) {
     background: color.adjust($lavender-blush, $lightness: 2%);
-    border: 4px solid color.adjust($lavender-blush, $lightness: -30%);
-    box-shadow: 4px 4px 10px color.adjust($red-pigment, $alpha: -0.5);
+    border: 4px solid color.adjust($lavender-blush, $lightness: -11%);
+    box-shadow: 4px 4px 10px color.adjust($red-pigment, $alpha: -0.85);
   }
 
   @include theme(default, dark) {
     background: color.adjust($raisin-black, $lightness: 4%, $saturation: 2%);
-    border: 4px solid color.adjust($raisin-black, $lightness: -5%);
+    border: 4px solid color.adjust($rosewood, $lightness: -12%);
+    box-shadow: 4px 4px 10px color.adjust($rosewood, $alpha: -0.7);
+  }
+}
+
+/* ——————————————————————————— Pill 1 ————————————————————————— */
+
+.main-content .single-package .keywords-list .keyword {
+  border-radius: 5em;
+  padding: 0.3em 0.9em;
+
+  @include theme(default, light) {
+    color: $rosewood;
+    background: color.adjust($lavender-blush, $lightness: 2%);
+    border: 1px solid color.adjust($lavender-blush, $lightness: -30%);
+    box-shadow: 4px 4px 10px color.adjust($red-pigment, $alpha: -0.5);
+  }
+
+  @include theme(default, dark) {
+    color: color.adjust($fiery-rose, $lightness: 12%);
+    background: color.adjust($raisin-black, $lightness: 4%, $saturation: 2%);
+    border: 1px solid color.adjust($raisin-black, $lightness: -5%);
     box-shadow: 4px 4px 10px color.adjust($lavender-blush, $alpha: -0.8);
   }
 }

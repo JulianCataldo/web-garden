@@ -13,6 +13,7 @@ interface PJson {
     directory: string;
   };
   version: string;
+  keywords: string[];
 }
 interface mdFile {
   mainTitle?: MarkdownHeader;
@@ -58,6 +59,7 @@ export async function structureAllPackages(props: Props): Promise<Package[]> {
         description: pJson.description,
         repository: pJson.repository,
         version: pJson.version,
+        keywords: pJson.keywords,
       },
       readme: {
         mainTitle: { text: '', slug: '', depth: 0 },

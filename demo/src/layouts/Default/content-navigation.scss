@@ -10,6 +10,8 @@
     border-top-right-radius: 99rem;
     transition: opacity 0.2s;
     font-weight: 300;
+    font-size: 2rem;
+    height: 7rem;
 
     @include scroll-is($going-up: true) {
       opacity: 0;
@@ -20,11 +22,13 @@
 
     @include theme(default, light) {
       color: $rosewood;
-      background: color.adjust($lavender-blush, $lightness: 10%, $alpha: -0.1);
+      background: color.adjust($lavender-blush, $lightness: 7%, $alpha: -0.1);
+      box-shadow: 4px 4px 10px color.adjust($red-pigment, $alpha: -0.7);
     }
     @include theme(default, dark) {
       color: $lavender-blush;
       background: color.adjust($raisin-black, $lightness: 3%, $alpha: -0.2);
+      box-shadow: 4px 4px 10px color.adjust($lavender-blush, $alpha: -0.8);
     }
   }
 
@@ -37,7 +41,7 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
-    top: calc(10vh + 0.5rem);
+    top: calc(15vh - 3.1rem);
     left: 0;
     z-index: 1;
 
@@ -49,7 +53,7 @@
     @include theme(default, dark) {
       box-shadow: -1px 1px 5px
           color.adjust($lavender-blush, $lightness: -5%, $alpha: -0.8) inset,
-        -1px 1px 13px color.adjust($rosewood, $lightness: -5%, $alpha: -0.6) inset;
+        -1px 1px 13px color.adjust($rosewood, $lightness: 10%, $alpha: -0.6) inset;
     }
   }
 
