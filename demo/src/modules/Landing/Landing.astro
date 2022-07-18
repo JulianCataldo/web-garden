@@ -14,7 +14,7 @@ const props = Astro.props as Props;
 if (typeof props.title !== 'string') props.title = '';
 if (typeof props.description !== 'string') props.description = null;
 if (Array.isArray(props.actions) === false) props.actions = null;
-/* —————————————————————————————————————————————————— */
+/* —————————————————————————————————————————————————————————————————————————— */
 
 const treeCode = `git clone \\
 ssh://solar.sys/🌍 \\
@@ -26,8 +26,8 @@ new-planet
 ---
 
 <div class='landing'>
-  <div class='layer-1'>
-    <div class='particles-wrapper'>
+  <div class='particles-wrapper'>
+    <div class='particles'>
       <div id='tsparticles'></div>
     </div>
   </div>
@@ -53,7 +53,7 @@ new-planet
     <pre class='code'><code data-content={treeCode} /></pre>
   </div>
 
-  <div class='titles'>
+  <div class='hero'>
     <h1>{props.title}</h1>
     <hr />
 
