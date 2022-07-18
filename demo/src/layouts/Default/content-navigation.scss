@@ -60,7 +60,6 @@
   }
 
   & .links-tree {
-    // margin-top: 12rem;
     padding: 1.5rem 0 4rem 0rem;
     border-radius: 1rem;
     flex-basis: 33rem;
@@ -71,8 +70,6 @@
     overflow-y: scroll;
 
     $offset: 3rem;
-    // transparent,
-    // white calc($offset),
     -webkit-mask-image: linear-gradient(
       to bottom,
       white calc(100% - $offset),
@@ -82,24 +79,9 @@
 
     @include theme(default, light) {
       background-color: color.adjust($lavender-blush, $lightness: 3%);
-      // transition: box-shadow 0.3s;
-      // box-shadow: -1px 1px 2px
-      //   color.adjust($raisin-black, $lightness: 5%, $alpha: -0.8) inset;
-
-      // &:hover {
-      //   box-shadow: -1px 1px 5px
-      //     color.adjust($raisin-black, $lightness: 5%, $alpha: -0.4) inset;
-      // }
     }
     @include theme(default, dark) {
       background-color: color.adjust($raisin-black, $lightness: 3%);
-      // box-shadow: -1px 1px 2px
-      //   color.adjust($lavender-blush, $lightness: -5%, $alpha: -0.8) inset;
-
-      // &:hover {
-      //   box-shadow: -1px 1px 5px
-      //     color.adjust($lavender-blush, $lightness: -5%, $alpha: -0.4) inset;
-      // }
     }
   }
 }

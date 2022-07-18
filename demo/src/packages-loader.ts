@@ -75,6 +75,8 @@ export async function structureAllPackages(props: Props): Promise<Package[]> {
       shortname: null,
       hasDemo: false,
     });
+
+    console.log(pJson.name);
   });
 
   await Promise.all(

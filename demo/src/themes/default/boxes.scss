@@ -3,7 +3,6 @@
 .main-content > .article > .wrapper.article-body,
 .main-content .package-section,
 .content > .package {
-  // color: $raisin-black;
   border-radius: 1rem;
 
   @include theme(default, light) {
@@ -13,7 +12,6 @@
   }
 
   @include theme(default, dark) {
-    // color: $lavender-blush;
     background: color.adjust($raisin-black, $lightness: 4%, $saturation: 2%);
     border: 4px solid color.adjust($raisin-black, $lightness: -5%);
     box-shadow: 4px 4px 10px color.adjust($lavender-blush, $alpha: -0.8);
