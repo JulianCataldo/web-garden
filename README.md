@@ -47,9 +47,15 @@ minuscule file sizes compared to "all-or-nothing" UI frameworks.
 
 # 🔗  Quick links
 
+<div class="git-web-garden-link">
+
 ## [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋ ](https://code.juliancataldo.com/)
 
+[![Live demo website](https://code.juliancataldo.com/poster.png)](https://code.juliancataldo.com)
+
 _[Deployed on `code.juliancataldo.com`](https://code.juliancataldo.com/) automatically (GitHub Pages)._
+
+</div>
 
 ## [📖  Website source code](https://github.com/JulianCataldo/astro/tree/master/demo)
 

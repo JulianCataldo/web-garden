@@ -1,7 +1,8 @@
 .article-body {
   /* Hide Git repo README toc */
   .git-toc,
-  .git-footer {
+  .git-footer,
+  .git-web-garden-link {
     display: none;
   }
 
