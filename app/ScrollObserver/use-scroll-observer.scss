@@ -2,7 +2,7 @@
 
 @function g($enclosed, $scoped) {
   @if $scoped {
-    @return ":g([data-is-#{$enclosed}]) &";
+    @return ":global([data-is-#{$enclosed}]) &";
   } @else {
     @return "[data-is-#{$enclosed}] &";
   }
