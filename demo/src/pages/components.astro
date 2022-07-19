@@ -1,7 +1,7 @@
 ---
 import Layout from 'src/layouts/Default/Default.astro';
 import ComponentList from 'src/modules/ComponentList/ComponentList.astro';
-import LinksTree from 'src/components/LinksTree/LinksTree.astro';
+import PageNavigation from 'src/components/PageNavigation/PageNavigation.astro';
 
 import { structureAllPackages } from 'src/packages-loader';
 
@@ -26,10 +26,11 @@ const tableOfContentHeaders = packages.map((e) => e.readme.mainTitle);
 
 <Layout titles={titles}>
   <div class='main-content'>
-    <div class='navigation'>
-      <h1>Components</h1>
-      <LinksTree links={tableOfContentHeaders} anchorMode={true} />
-    </div>
+    <PageNavigation
+      title='Components'
+      links={tableOfContentHeaders}
+      anchorMode={true}
+    />
 
     <div class='content'>
       <ComponentList packages={packages} />

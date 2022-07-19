@@ -1,6 +1,6 @@
 ---
 import Layout from 'src/layouts/Default/Default.astro';
-import LinksTree from 'src/components/LinksTree/LinksTree.astro';
+import PageNavigation from 'src/components/PageNavigation/PageNavigation.astro';
 
 import { structureAllPackages } from 'src/packages-loader';
 
@@ -38,10 +38,11 @@ const actions = [
 
 <Layout titles={titles} actions={actions}>
   <article class='main-content'>
-    <div class='navigation'>
-      <h1>Web garden</h1>
-      <LinksTree links={rootPackage.readme.headers} anchorMode={true} />
-    </div>
+    <PageNavigation
+      title='Web garden'
+      links={rootPackage.readme.headers}
+      anchorMode={false}
+    />
 
     <div class='content article'>
       <div class='wrapper article-body'>

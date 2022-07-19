@@ -1,6 +1,7 @@
 .navigation-bar .button,
 .demo-color-mode .button,
-.article-body .button {
+.article-body .button,
+.main-content > .navigation > .nav-header > .button-expand {
   @include theme(default) {
     display: inline-flex;
     align-items: center;

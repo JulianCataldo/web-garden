@@ -1,0 +1,20 @@
+---
+import Icon from 'astro-icon';
+import LinksTree from 'src/components/LinksTree/LinksTree.astro';
+
+const props = { ...Astro.props };
+---
+
+<div class='navigation'>
+  <header class='nav-header'>
+    <h1>{props.title}</h1>
+    <hr />
+    <label for='toggle-toc' class='button button-expand'>
+      <Icon name='system-uicons:chevron-down-circle' size={'2rem'} class='icon'
+      />
+      Expand index
+    </label>
+  </header>
+  <input type='checkbox' id='toggle-toc' />
+  <LinksTree links={props.links} anchorMode={props.anchorMode} />
+</div>
