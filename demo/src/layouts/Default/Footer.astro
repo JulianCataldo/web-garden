@@ -1,0 +1,32 @@
+---
+import Link from '@julian_cataldo/astro-link/Link.astro';
+import Icon from 'astro-icon';
+---
+
+<footer class='main-footer'>
+  <Link href='#' class='back-to-top unstyled'>
+    <Icon name='mdi:arrow-up' size='3rem' class='icon' />
+    Back to top
+  </Link>
+
+  <div>|</div>
+
+  <div class='author'>
+    <span>2022,&nbsp;</span>
+    <Link
+      aria-label={"Julian Cataldo' website"}
+      href='https://www.juliancataldo.com'
+      class='unstyled'
+    >
+      <span aria-hidden='true'>Julian Cataldo</span>
+    </Link>
+  </div>
+
+  <div>|</div>
+
+  <div>Built with <Link href='https://astro.build'>Astro</Link></div>
+</footer>
+
+<Link href='#' class='back-to-top-float unstyled'>
+  <Icon name='mdi:arrow-up' size='3rem' />
+</Link>

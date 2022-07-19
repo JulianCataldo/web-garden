@@ -14,7 +14,7 @@ import Icon from 'astro-icon';
 import Link from '@julian_cataldo/astro-link/Link.astro';
 import Landing from 'src/modules/Landing/Landing.astro';
 import NavigationBar from 'src/components/NavigationBar/NavigationBar.astro';
-import Favicons from 'src/components/Favicons.astro';
+import Footer from './Footer.astro';
 /* ·········································································· */
 import '@fontsource/exo-2/variable.css';
 import '@fontsource/exo-2/variable-italic.css';
@@ -103,35 +103,7 @@ const generator = `astro-${dependencies.astro}`;
       <slot></slot>
     </main>
 
-    <footer class='main-footer'>
-      <Link href='#' class='back-to-top unstyled'>
-        <Icon name='mdi:arrow-up' size='3rem' class='icon' />
-        Back to top
-      </Link>
-
-      <div>|</div>
-
-      <div class='author'>
-        <span>2022,&nbsp;</span>
-        <Link
-          aria-label={"Julian Cataldo' website"}
-          href='https://www.juliancataldo.com'
-          class='unstyled'
-        >
-          <span aria-hidden='true'>Julian Cataldo</span>
-        </Link>
-      </div>
-
-      <div>|</div>
-
-      <div>Built with <Link href='https://astro.build'>Astro</Link></div>
-    </footer>
-
-    <Link href='#' class='back-to-top-float unstyled'>
-      <Icon name='mdi:arrow-up' size='3rem' />
-    </Link>
-  </Fragment>
-</Base>
+    <Footer />
 
 <style lang='scss' is:global>
   @import './Default.global';
