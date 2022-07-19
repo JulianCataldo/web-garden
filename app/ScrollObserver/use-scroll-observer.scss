@@ -1,39 +1,49 @@
-@mixin scroll-is($top: null, $bottom: null, $going-up: null, $scoped: false) {
-  $selector: "";
+@use "sass:list";
 
-  @if $top {
-    $selector: "#{$selector}[data-is-top=true]";
-  }
-  @if $bottom {
-    $selector: "#{$selector}[data-is-bottom=true]";
-  }
-  @if $going-up {
-    $selector: "#{$selector}[data-is-scrolling-up=true]";
-  }
-  @if $top == false {
-    $selector: "#{$selector}[data-is-top=false]";
-  }
-  @if $bottom == false {
-    $selector: "#{$selector}[data-is-bottom=false]";
-  }
-  @if $going-up == false {
-    $selector: "#{$selector}[data-is-scrolling-up=false]";
-  }
-
-  @if $scoped == true {
-    $selector: "#{$selector}[data-is-scrolling-up=false]";
-    @at-root :global(#{$selector}) & {
-      @content;
-    }
+@function g($enclosed, $scoped) {
+  @if $scoped {
+    @return ":g([data-is-#{$enclosed}]) &";
   } @else {
-    @at-root #{$selector} & {
-      @content;
-    }
+    @return "[data-is-#{$enclosed}] &";
   }
 }
 
-@mixin has-scroll() {
-  @at-root :global([data-has-scroll="true"]) & {
+@mixin scroll-is($top: null, $bottom: null, $going-up: null, $scoped: false) {
+  $sels: ();
+
+  @if $top {
+    $sels: list.append($sels, g("top=true", $scoped), comma);
+  }
+  @if $bottom {
+    $sels: list.append($sels, g("bottom=true", $scoped), comma);
+  }
+  @if $going-up {
+    $sels: list.append($sels, g("scrolling-up=true", $scoped), comma);
+  }
+
+  @if $top == false {
+    $sels: list.append($sels, g("top=false", $scoped), comma);
+  }
+  @if $bottom == false {
+    $sels: list.append($sels, g("bottom=false", $scoped), comma);
+  }
+  @if $going-up == false {
+    $sels: list.append($sels, g("scrolling-up=false", $scoped), comma);
+  }
+
+  @at-root #{$sels} {
     @content;
+  }
+}
+
+@mixin has-scroll($scoped: false) {
+  @if $scoped {
+    @at-root :global([data-has-scroll="true"]) & {
+      @content;
+    }
+  } @else {
+    @at-root [data-has-scroll="true"] & {
+      @content;
+    }
   }
 }
