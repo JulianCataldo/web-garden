@@ -1,0 +1,54 @@
+---
+import type { Props as baseProps } from './Props';
+
+export interface Props extends baseProps {}
+const props = { ...Astro.props } as Props;
+/* ———————————————————————————————————————————— Typeguards + Fallbacks —————— */
+const internalProps: string[] = ['class:list'];
+
+if (typeof props.jsEnabledClass !== 'boolean') props.jsEnabledClass = true;
+internalProps.push('jsEnabledClass');
+if (typeof props.redirectTo !== 'boolean') props.redirectTo = null;
+internalProps.push('redirectTo');
+/* ·········································································· */
+const extraAttrs: { [key: string]: string } = {};
+Object.entries(props).forEach(([key, val]) => {
+  if (internalProps.includes(key) === false) {
+    extraAttrs[key] = `${val as string}`;
+  }
+});
+/* —————————————————————————————————————————————————————————————————————————— */
+---
+
+<!DOCTYPE html>
+<html {...extraAttrs} class:list={props['class:list']}>
+  <head>
+    <script define:vars={{ enabled: props.jsEnabledClass }} is:inline>
+      // CRITICAL
+      // This add 'js' class to HTML tag if JavaScript is enabled on browser
+      if (enabled) {
+        (() => {
+          const root = document.documentElement;
+          root.classList.add('js');
+        })();
+      }
+    </script>
+
+    <meta charset='UTF-8' />
+
+    <meta name='mobile-web-app-capable' content='yes' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+
+    {props.redirectTo && (
+      <meta http-equiv="refresh" content={`0; url=/components`} />
+    )}
+
+    <slot name='head'></slot>
+  </head>
+
+  <slot name='body'>
+    {props.redirectTo && <div>Redirecting to: {props.redirectTo}</div>}
+  </slot>
+
+
+</html>
