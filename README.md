@@ -29,9 +29,9 @@ minuscule file sizes compared to "all-or-nothing" UI frameworks.
 - [🚀  Julian's Web Garden](#julians-web-garden)
   - [🤷🏼‍♂️  Philosophy](#️philosophy)
 - [🔗  Quick links](#quick-links)
-  - [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋ ](#live-demo--documentation-website)
+  - [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](#live-demo--documentation-website)
   - [📖  Website source code](#website-source-code)
-  - [📦  Application-level components ](#application-level-components-)
+  - [📦  Application-level components](#application-level-components)
   - [📦  Components](#components)
   - [🛠  Tooling configurations](#tooling-configurations)
 - [✅  Tests](#tests)
@@ -39,7 +39,12 @@ minuscule file sizes compared to "all-or-nothing" UI frameworks.
 - [🧫  Experimenting](#experimenting)
 - [🧑‍🚀  Development](#development)
   - [🏁  Commands](#commands)
-  - [🦾  Contribute](#contribute)
+- [🦾  Contribute](#contribute)
+  - [Conventions](#conventions)
+    - [Issue](#issue)
+    - [Branching](#branching)
+    - [Committing](#committing)
+    - [Pull request](#pull-request)
 
 ---
 
@@ -49,13 +54,9 @@ minuscule file sizes compared to "all-or-nothing" UI frameworks.
 
 <div class="git-web-garden-link">
 
-## [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋ ](https://code.juliancataldo.com/)
-
-[![Live demo website](https://code.juliancataldo.com/poster.png)](https://code.juliancataldo.com)
+## [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](https://code.juliancataldo.com/)
 
 _[Deployed on `code.juliancataldo.com`](https://code.juliancataldo.com/) automatically (GitHub Pages)._
-
-</div>
 
 ## [📖  Website source code](https://github.com/JulianCataldo/astro/tree/master/demo)
 
@@ -64,7 +65,7 @@ for live implementation examples.
 
 ---
 
-## [📦  Application-level components ](./app)
+## [📦  Application-level components](./app)
 
 [These are global components](./app) which enhance or augment browser behavior and style,
 while providing useful utilities to developers, website-wide.
@@ -152,21 +153,56 @@ pnpm run version
 pnpm run publish
 ```
 
-## 🦾  Contribute
+# 🦾  Contribute
 
-Any remark, feature or pull request can be done in this GitHub repository and issues tracker.  
+Any remark, feature or pull request can be done in this GitHub repository and issues tracker.
+
+## Conventions
+
+### Issue
+
+> Subject, sentence cased  
+> Label: `type`.
+
+ex.: My new component  
+GitHub issues label: \[feature\]
+
+### Branching
+
+**Create branch from issue**.
+
+> `{subject-kebab-cased}/{type}/{issueNumber}`
+
+ex.:  
+`my-new-component/feat/123`
+
+### Committing
+
 Committing is linted following [conventional commits conventions](http://conventionalcommits.org).  
 This allows an easy and automatic versioning, change-logging, and NPM publishing workflow.
+
+ex.:
+
+- `feat: my new sub-feature`
+- `docs: some doc for this sub-feature`
+
+### Pull request
+
+_(Auto-generated titles)_
+
+Mono-commit:
+
+> `docs: adding one-shot docs`
+
+Multi-commits:
+
+> My new component/feat/123
 
 <div class="git-footer">
 
 ---
 
-## [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](https://code.juliancataldo.com/)
-
-[![Live demo website](https://code.juliancataldo.com/poster.png)](https://code.juliancataldo.com)
-
-**_[`code.juliancataldo.com`](https://code.juliancataldo.com/)_**
+[LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](https://code.juliancataldo.com/)
 
 ---
 
