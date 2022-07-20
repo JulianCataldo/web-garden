@@ -1,6 +1,6 @@
 ---
-import SEO from '@julian_cataldo/astro-seo/SEO.astro';
-import Base from '@julian_cataldo/astro-base/Base.astro';
+import Document from '@julian_cataldo/astro-base/Document.astro';
+import Body from '@julian_cataldo/astro-base/Body.astro';
 // import Resets from '@julian_cataldo/astro-resets/Resets.astro';
 // import LightBox from '@julian_cataldo/astro-lightbox/LightBox.astro';
 import Breakpoints from '@julian_cataldo/astro-breakpoints/Breakpoints.astro';
@@ -28,20 +28,27 @@ if (typeof props?.titles?.main !== 'string') {
 /* —————————————————————————————————————————————————————————————————————————— */
 ---
 
-<Base
-  htmlExtraAttributes={{
-    'data-theme': 'default',
-    'data-test': 'scrollObserver-rootDoc',
-  }}
-  htmlId={'test-dummy'}
-  bodyClasses={['test-dummy-1', 'test-dummy-2']}
-  htmlClasses={['test-dummy-1', 'test-dummy-2', `mode-${import.meta.env.MODE}`]}
+<Document
+  id='test-base-rootDoc'
+  data-theme='default'
+  lang='en'
+  class:list={[
+    `mode-${import.meta.env.MODE}`,
+    'test-base-rootDoc-1',
+    'test-base-rootDoc-2',
+  ]}
+  data-test='scrollObserver-rootDoc base-rootDoc'
 >
   <Fragment slot='head'>
     <Head titles={props.titles} />
   </Fragment>
 
-  <Fragment slot='body'>
+  <Body
+    id='test-base-body'
+    slot='body'
+    class:list={['test-base-body-1', 'test-base-body-2']}
+    data-test='base-body'
+  >
     <Breakpoints />
 
     <Transition speed={500} zIndex={99} background={'var(--app-overlay-color)'}
@@ -63,6 +70,8 @@ if (typeof props?.titles?.main !== 'string') {
     </main>
 
     <Footer />
+  </Body>
+</Document>
 
 <style lang='scss' is:global>
   @import './Default.global';
