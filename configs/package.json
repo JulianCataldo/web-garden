@@ -9,11 +9,11 @@
   "author": "Julian Cataldo",
   "homepage": "https://code.juliancataldo.com/configs",
   "bugs": {
-    "url": "https://github.com/JulianCataldo/astro/issues"
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JulianCataldo/astro",
+    "url": "https://github.com/JulianCataldo/web-garden",
     "directory": "configs"
   },
   "scripts": {

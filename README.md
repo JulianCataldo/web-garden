@@ -58,7 +58,7 @@ minuscule file sizes compared to "all-or-nothing" UI frameworks.
 
 _[Deployed on `code.juliancataldo.com`](https://code.juliancataldo.com/) automatically (GitHub Pages)._
 
-## [📖  Website source code](https://github.com/JulianCataldo/astro/tree/master/demo)
+## [📖  Website source code](https://github.com/JulianCataldo/web-garden/tree/master/demo)
 
 See [default layout](demo/src/layouts/Default/Default.astro) and [home page](./demo/src/pages/index.astro)
 for live implementation examples.
