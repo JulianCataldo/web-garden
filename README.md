@@ -39,12 +39,6 @@ minuscule file sizes compared to "all-or-nothing" UI frameworks.
 - [🧫  Experimenting](#experimenting)
 - [🧑‍🚀  Development](#development)
   - [🏁  Commands](#commands)
-- [🦾  Contribute](#contribute)
-  - [Conventions](#conventions)
-    - [Issue](#issue)
-    - [Branching](#branching)
-    - [Committing](#committing)
-    - [Pull request](#pull-request)
 
 ---
 
@@ -56,7 +50,11 @@ minuscule file sizes compared to "all-or-nothing" UI frameworks.
 
 ## [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](https://code.juliancataldo.com/)
 
+[![Live demo website](https://code.juliancataldo.com/poster.png)](https://code.juliancataldo.com)
+
 _[Deployed on `code.juliancataldo.com`](https://code.juliancataldo.com/) automatically (GitHub Pages)._
+
+</div>
 
 ## [📖  Website source code](https://github.com/JulianCataldo/web-garden/tree/master/demo)
 
@@ -152,51 +150,6 @@ pnpm run version
 # Release updated packages on NPM public registry
 pnpm run publish
 ```
-
-# 🦾  Contribute
-
-Any remark, feature or pull request can be done in this GitHub repository and issues tracker.
-
-## Conventions
-
-### Issue
-
-> Subject, sentence cased  
-> Label: `type`.
-
-ex.: My new component  
-GitHub issues label: \[feature\]
-
-### Branching
-
-**Create branch from issue**.
-
-> `{subject-kebab-cased}/{type}/{issueNumber}`
-
-ex.:  
-`my-new-component/feat/123`
-
-### Committing
-
-Committing is linted following [conventional commits conventions](http://conventionalcommits.org).  
-This allows an easy and automatic versioning, change-logging, and NPM publishing workflow.
-
-ex.:
-
-- `feat: my new sub-feature`
-- `docs: some doc for this sub-feature`
-
-### Pull request
-
-_(Auto-generated titles)_
-
-Mono-commit:
-
-> `docs: adding one-shot docs`
-
-Multi-commits:
-
-> My new component/feat/123
 
 <div class="git-footer">
 
