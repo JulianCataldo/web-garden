@@ -15,11 +15,14 @@ jobs:
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Use Node.js 17
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: 17
+          node-version: "17.x"
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Setup PNPM 7
         uses: pnpm/action-setup@v2.2.2
@@ -38,3 +41,11 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./demo/dist
+
+      - name: Version updated package
+        run: pnpm lerna version --conventional-commits --yes
+
+      - name: Publish updated package
+        run: pnpm lerna publish from-git
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
