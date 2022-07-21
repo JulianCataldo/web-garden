@@ -7,7 +7,7 @@ The goal is to make further page loading snappier.
 It's useful with SSG but also with SSR in certain scenarios.
 
 It plays well with this page transition component:  
-[@julian_cataldo/astro-transition](https://github.com/JulianCataldo/astro/tree/master/app/Transition)
+[@julian_cataldo/astro-transition](https://github.com/JulianCataldo/web-garden/tree/master/app/Transition)
 
 <!-- ## Demo
 
