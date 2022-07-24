@@ -14,11 +14,23 @@
   :global(picture) {
     -webkit-mask-image: linear-gradient(
       to bottom,
-      transparent 2rem,
-      black 8rem,
-      black calc(100% - 13rem),
-      transparent calc(100% - 1rem)
+      transparent 1rem,
+      black 2rem,
+      black calc(100% - 2rem),
+      transparent calc(100% - 0.6rem)
     );
+  }
+
+  :global(picture) {
+    @include breakpoint(md) {
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 2rem,
+        black 8rem,
+        black calc(100% - 13rem),
+        transparent calc(100% - 1rem)
+      );
+    }
   }
 
   // @include theme(hacker) {

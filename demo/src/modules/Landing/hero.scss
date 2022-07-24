@@ -1,32 +1,39 @@
 .hero-wrapper {
   position: relative;
   z-index: 3;
-  max-width: calc(10vw + 33rem);
   // height: 100%;
   width: 100%;
   background: linear-gradient(
     to bottom,
-    color.adjust($fiery-rose, $lightness: 10%) 0%,
-    color.adjust($raisin-black, $lightness: 10%) 15rem,
-    color.adjust(hsl(218, 74%, 27%), $lightness: -14%)
+    color.adjust(hsl(218, 74%, 27%), $lightness: -25%),
+    color.adjust(hsl(218, 74%, 27%), $lightness: -15%) 15rem,
+    color.adjust(hsl(218, 74%, 27%), $lightness: -12%)
   );
-
   -webkit-mask-image: linear-gradient(
     to bottom,
     color.adjust(white, $alpha: 0) 0%,
     color.adjust(white, $alpha: 0) calc(100% - 12rem),
     color.adjust(white, $alpha: -1) 100%
   );
-
-  padding-top: 12rem;
+  padding-top: calc(15rem - 12vw);
   padding-bottom: 10rem;
   // margin-bottom: -24rem;
 
   & + * {
-    margin-top: -14rem;
+    margin-top: -35vh;
   }
 
   @include breakpoint(md) {
+    max-width: calc(10vw + 33rem);
+    padding-top: 0;
+    padding-bottom: 0;
+    background: none;
+    -webkit-mask-image: none;
+
+    & + * {
+      margin-top: inherit;
+    }
+
     padding-top: 0;
     top: 0;
     position: absolute;
@@ -44,6 +51,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  // visibility: hidden;
 }
 
 .hero {
@@ -62,7 +71,7 @@
   // outline: 5px solid cyan;
   /* ———————————————————————————————————————————————————————————————————————— */
 
-  padding: 1rem 1.25rem 1rem 1rem;
+  padding: 1rem 1.25rem 1rem 1.25rem;
   @include breakpoint(md) {
     padding: 2rem 4rem 2rem 3rem;
   }

@@ -8,6 +8,7 @@
   pointer-events: none;
   // outline: 5px solid yellow;
   // background: hsla(1, 100%, 50%, 0.5);
+
   /* ———————————————————————————————————————————————————————————————————————— */
 
   @include theme(default, light, $scoped: true) {

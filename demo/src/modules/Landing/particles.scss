@@ -14,6 +14,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  // visibility: hidden;
 }
 
 .particles {
@@ -26,9 +27,16 @@
 
   -webkit-mask-image: linear-gradient(
     -184deg,
-    white calc(15rem - 11vw),
-    transparent calc(100% - 10rem)
+    white calc(11rem - 13vw),
+    transparent calc(105% - 38vw)
   );
+  @include breakpoint(md) {
+    -webkit-mask-image: linear-gradient(
+      -184deg,
+      white calc(15rem - 11vw),
+      transparent calc(100% - 10rem)
+    );
+  }
 
   #tsparticles {
     height: 100%;
