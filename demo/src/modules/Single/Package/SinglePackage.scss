@@ -111,19 +111,26 @@
   display: flex;
   flex-wrap: wrap;
   padding: 1rem;
-  margin-top: 3rem;
   margin-bottom: 3rem;
+
+  @include breakpoint(md) {
+    margin-top: 3rem;
+  }
+
   @include breakpoint(lg) {
     margin-top: -5rem;
     margin-bottom: 6rem;
   }
 
   h2 {
-    color: $lavender-blush;
-    text-shadow: 0.09em 0.09em 0.09em color.adjust($rosewood, $alpha: -0.6);
-    margin: 1rem calc(0.4rem + 2.5vw) 1rem calc(0.4rem + 2.5vw);
+    margin: 1rem 0 1rem 0;
     @include breakpoint(md) {
-      margin: 1rem 0 0 0;
+      text-shadow: 0.09em 0.09em 0.09em color.adjust($rosewood, $alpha: -0.6);
+      color: $lavender-blush;
+    }
+
+    @include breakpoint(lg) {
+      margin: 1rem calc(0.4rem + 2.5vw) 1rem calc(0.4rem + 2.5vw);
     }
   }
 
