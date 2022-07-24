@@ -27,9 +27,6 @@
 
 .main-content > .article,
 .main-content > .content {
-  // flex-grow: 1;
-  // display: flex;
-  // justify-content: center;
   @include breakpoint(lg) {
     width: 70%;
     flex-grow: 1;
@@ -46,14 +43,9 @@
 }
 
 .main-content > .navigation {
-  // flex-basis: calc(11rem + 6vw);
-  // flex-grow: 1;
-  // min-width: 22rem;
-
   max-width: 24rem;
 
   @include breakpoint(md) {
-    // width: calc(30% - 4vw);
     max-width: 28rem;
   }
 
@@ -65,8 +57,6 @@
 
 .main-content > .content {
   margin: 0 0;
-  // flex-grow: 1;
-  // flex-basis: calc(29rem + 8vw);
   max-width: 100%;
 
   @include breakpoint(lg) {
@@ -77,28 +67,12 @@
     margin: 0 2vw;
   }
 
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: center;
-
   &.article > .wrapper.article-body,
   .package-section,
   .package {
     padding: 5vw;
     @include breakpoint(lg) {
       padding: 2em;
-    }
-  }
-
-  .package {
-    @include breakpoint(lg) {
-      // max-width: 73em;
-    }
-  }
-
-  &.article > .wrapper.article-body {
-    @include breakpoint(lg) {
-      // max-width: 53em;
     }
   }
 
@@ -168,23 +142,3 @@ input[type="checkbox"] {
 }
 
 /* —————————————————————————————————————————————————————————————————————————— */
-
-// [data-feature-flag] {
-//   display: none !important;
-// }
-
-// [data-theme="default"] [data-color-mode="dark"] {
-//   @include default-font-color(dark);
-// }
-
-// [data-theme="default"] [data-color-mode="light"] {
-//   @include default-font-color(light);
-// }
-
-// [data-clipboard-target] {
-//   cursor: copy;
-
-//   &[data-clipboard-was-copied="true"] {
-//     cursor: default;
-//   }
-// }

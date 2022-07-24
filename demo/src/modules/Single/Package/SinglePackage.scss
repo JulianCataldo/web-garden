@@ -1,29 +1,3 @@
-.single-package {
-  section {
-    // margin: 2.5rem 0;
-
-    // &:first-of-type,
-    // &:last-of-type {
-    //   margin: 0;
-    // }
-
-    @include theme(default) {
-      // _
-    }
-
-    @include theme(default, light) {
-      // _
-    }
-    @include theme(default, dark) {
-      // _
-    }
-
-    @include theme(hacker) {
-      // _
-    }
-  }
-}
-
 .api-props {
   font-family: monospace;
 

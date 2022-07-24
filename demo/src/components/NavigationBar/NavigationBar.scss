@@ -75,7 +75,6 @@
 
   :global(.js) & {
     transition: opacity 0.23s, transform 0.23s;
-    // opacity: 0;
     transform: translateY(-100%);
 
     &:nth-of-type(1) {
@@ -119,7 +118,3 @@
   display: flex;
   align-items: center;
 }
-
-// .nav-text {
-//   padding-top: 0.17rem;
-// }

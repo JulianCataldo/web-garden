@@ -1,7 +1,6 @@
 .hero-wrapper {
   position: relative;
   z-index: 3;
-  // height: 100%;
   width: 100%;
   background: linear-gradient(
     to bottom,
@@ -17,7 +16,6 @@
   );
   padding-top: calc(15rem - 12vw);
   padding-bottom: 10rem;
-  // margin-bottom: -24rem;
 
   & + * {
     margin-top: -35vh;
@@ -34,16 +32,9 @@
       margin-top: inherit;
     }
 
-    padding-top: 0;
     top: 0;
     position: absolute;
-    // top: 100%;
-    // top: 20%;
-    // left: 0;
     left: 13%;
-    //   top: calc(6rem + 6vw);
-    //   // left: calc(100% - 75vw - 5rem);
-
     height: 100vh;
     min-height: 52rem;
   }
@@ -51,8 +42,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  // visibility: hidden;
 }
 
 .hero {
@@ -61,14 +50,6 @@
   @include breakpoint(md) {
     top: -3rem;
   }
-  // // margin-top: calc(6rem + 65vh);
-  // // top: 0;
-  // top: calc((100vw / (16 / 9)) + 6vw);
-
-  // margin-top: 14rem;
-
-  // z-index: 2;
-  // outline: 5px solid cyan;
   /* ———————————————————————————————————————————————————————————————————————— */
 
   padding: 1rem 1.25rem 1rem 1.25rem;

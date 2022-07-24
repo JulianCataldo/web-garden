@@ -1,30 +1,17 @@
 // TODO: simplify this (one wrapper is not necessary)
 .particles-wrapper {
-  // height: 100vh;
-  // top: -30vw;
-  // height: calc(100vw - 35rem);
   position: absolute;
-  // height: calc(78vh + 21vw);
   height: 100%;
   width: 100%;
-  // z-index: 0;
-  // position: relative;
-  /* ———————————————————————————————————————————————————————————————————————— */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  // visibility: hidden;
 }
 
 .particles {
-  // position: absolute;
   height: 100%;
   width: 100%;
-  // width: 100vw;
-  // z-index: -1;
-  /* ———————————————————————————————————————————————————————————————————————— */
-
   -webkit-mask-image: linear-gradient(
     -184deg,
     white calc(11rem - 13vw),
