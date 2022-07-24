@@ -127,6 +127,9 @@ Cypress:
 ## 🏁  Commands
 
 ```zsh
+# Clone mono-repository
+git clone https://github.com/JulianCataldo/web-garden
+
 # Scripts located in root ./package.json
 
 # Bootstrap all packages dependencies
