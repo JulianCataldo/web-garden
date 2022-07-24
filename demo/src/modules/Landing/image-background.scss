@@ -1,11 +1,17 @@
 .img-background {
-  position: absolute;
-  width: 100%;
-  top: calc(35rem - 30vw);
-  height: 100vh;
+  // outline: 5px solid green;
+  // opacity: 0.5;
+  // position: absolute;
+  // top: calc(26rem - 26vw);
+  // width: 100%;
+  // height: 100vh;
   z-index: 0;
+  /* ———————————————————————————————————————————————————————————————————————— */
 
-  :global(img) {
+  // top: calc(26rem - 26vw);
+  // height: 100vh;
+
+  :global(picture) {
     -webkit-mask-image: linear-gradient(
       to bottom,
       transparent 2rem,
@@ -15,7 +21,7 @@
     );
   }
 
-  @include theme(hacker) {
-    filter: sepia() hue-rotate(80deg);
-  }
+  // @include theme(hacker) {
+  //   filter: sepia() hue-rotate(80deg);
+  // }
 }

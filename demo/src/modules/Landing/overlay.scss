@@ -1,17 +1,21 @@
 .vignette {
   position: absolute;
   top: 0;
-  height: 110vh;
+  // height: calc((100vw / (16 / 9)) + 6vw);
+  height: 100%;
   width: 100%;
   z-index: 2;
   pointer-events: none;
+  // outline: 5px solid yellow;
+  // background: hsla(1, 100%, 50%, 0.5);
+  /* ———————————————————————————————————————————————————————————————————————— */
 
   @include theme(default, light, $scoped: true) {
     mix-blend-mode: lighten;
     background: radial-gradient(
       ellipse,
       transparent 35%,
-      color.adjust($rosewood, $alpha: -0.5)
+      color.adjust($rosewood, $alpha: -0.2)
     );
   }
   @include theme(default, dark, $scoped: true) {
@@ -19,7 +23,7 @@
     background: radial-gradient(
       ellipse,
       transparent 35%,
-      color.adjust($lavender-blush, $alpha: -0.5)
+      color.adjust($rosewood, $alpha: -0.2, $lightness: -10%)
     );
   }
 

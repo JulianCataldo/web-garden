@@ -5,9 +5,30 @@
 @import "./image-background";
 
 .landing {
-  @include theme(default) {
-    @include font-color-dark;
-  }
+  position: relative;
+}
+
+.graphics {
+  z-index: 0;
+  // margin-top: 100vh;
+  position: relative;
+  height: calc(78vh + 21vw);
+  // max-height: 70rem;
+  display: flex;
+  align-items: flex-end;
+  // height: calc((100vw / (16 / 9)) + 6vw);
+  // padding-top: calc(32rem - 25vw);
+  // height: calc((100vw / 1.6));
+  //  + 6vw
+
+  // .spacer {
+  //   // height: calc(132rem);
+  //   height: calc(26rem - 26vw);
+  //   width: 100%;
+  //   outline: 5px solid magenta;
+  // }
+
+  // min-height: 40rem;
 
   @include theme(hacker) {
     // _

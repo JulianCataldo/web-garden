@@ -26,55 +26,59 @@ new-planet
 ---
 
 <div class='landing'>
-  <div class='particles-wrapper'>
-    <div class='particles'>
-      <div id='tsparticles'></div>
+  <div class='hero-wrapper'>
+    <div class='hero'>
+      <h1>{props.title}</h1>
+      <hr />
+      <p class='description'>{props.description}</p>
+      {props.actions && (
+        <footer class="actions">
+          <em>Jump to:</em>
+          {props.actions.map((action) => (
+            <Link class="button unstyled" href={action.href}>
+              {action.icon && (
+                <Icon name={action.icon} size={'1.5em'} class="icon" />
+              )}
+              <span>{action.title}</span>
+            </Link>
+          ))}
+        </footer>
+      )}
     </div>
   </div>
 
-  <div class='img-background'>
-    <Picture
-      src='/content/spatial-scene10.png'
-      alt=''
-      layout={'fullWidth'}
-      sizes='100vw'
-      formatOptions={{
-        png: {
-          quality: 100,
-        },
-        webp: {
-          quality: 100,
-        },
-      }}
-    />
+  <div class='graphics'>
+    <!-- <div class='spacer'></div> -->
+
+    <div class='particles-wrapper'>
+      <div class='particles'>
+        <div id='tsparticles'></div>
+      </div>
+    </div>
+
+    <div class='img-background'>
+      <Picture
+        src='/content/spatial-scene10.png'
+        alt=''
+        layout={'fullWidth'}
+        sizes='100vw'
+        formatOptions={{
+          png: {
+            quality: 100,
+          },
+          webp: {
+            quality: 100,
+          },
+        }}
+      />
+    </div>
+
+    <div class='tree'>
+      <pre class='code'><code data-content={treeCode} /></pre>
+    </div>
+
+    <div class='vignette'></div>
   </div>
-
-  <div class='tree'>
-    <pre class='code'><code data-content={treeCode} /></pre>
-  </div>
-
-  <div class='hero'>
-    <h1>{props.title}</h1>
-    <hr />
-
-    <p class='description'>{props.description}</p>
-
-    {props.actions && (
-      <footer class="actions">
-        <em>Jump to:</em>
-        {props.actions.map((action) => (
-          <Link class="button unstyled" href={action.href}>
-            {action.icon && (
-              <Icon name={action.icon} size={'1.5em'} class="icon" />
-            )}
-            <span>{action.title}</span>
-          </Link>
-        ))}
-      </footer>
-    )}
-  </div>
-
-  <div class='vignette'></div>
 </div>
 
 <script>

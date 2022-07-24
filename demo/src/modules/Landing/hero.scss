@@ -1,17 +1,49 @@
-h1 {
-  font-weight: 800;
+.hero-wrapper {
+  position: relative;
+  // top: calc(15rem - 17vw);
+  z-index: 3;
+  max-width: calc(10vw + 33rem);
+  height: 100%;
+  width: 100%;
+
+  @include breakpoint(md) {
+    top: 0;
+    position: absolute;
+    // top: 100%;
+    // top: 20%;
+    // left: 0;
+    left: 13%;
+    //   top: calc(6rem + 6vw);
+    //   // left: calc(100% - 75vw - 5rem);
+
+    height: 100vh;
+    min-height: 52rem;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero {
-  position: absolute;
-  top: calc(6rem + 6vw);
-  left: calc(100% - 75vw - 5rem);
-  max-width: 40rem;
-  z-index: 2;
+  position: relative;
+  top: -3rem;
+  // // margin-top: calc(6rem + 65vh);
+  // // top: 0;
+  // top: calc((100vw / (16 / 9)) + 6vw);
 
-  @include font-color-light;
+  // margin-top: 14rem;
+  h1 {
+    @include font-color-light;
+  }
+
+  // z-index: 2;
+  // outline: 5px solid cyan;
+  /* ———————————————————————————————————————————————————————————————————————— */
 
   padding: 2rem 4rem 2rem 3rem;
+
+  @include font-color-light;
 
   &::before {
     content: "";
@@ -25,60 +57,36 @@ h1 {
     border-radius: 0.5rem;
   }
 
+  h1 {
+    font-weight: 800;
+  }
+
   p {
     margin: 2rem 0 0 0;
   }
-}
 
-.description {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-.button {
-  display: inline-block;
-  cursor: pointer;
-
-  @include theme(default) {
-    display: inline-block;
-    border: 3px solid;
-    font-weight: 700;
-    padding: 1rem;
-    border-radius: 1rem;
+  .description {
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 
-  color: $lavender-blush;
-  border-color: color.adjust($lavender-blush, $alpha: -0.5);
+  .actions {
+    margin-top: 1.25rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
 
-  @include theme(hacker) {
-    padding: 1rem;
-    font-weight: 700;
-    border: 3px solid lightgreen;
-    color: green;
-    border-color: color.adjust($lavender-blush, $alpha: -0.5);
+    & > * {
+      margin: 0.8rem 0.8rem;
 
-    &:hover {
-      color: lightgreen;
-    }
-  }
-}
+      &:first-child {
+        margin: 0 1rem 0 0;
+      }
 
-.actions {
-  margin-top: 1.25rem;
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  align-items: center;
-
-  & > * {
-    margin: 0.8rem 0.8rem;
-
-    &:first-child {
-      margin: 0 1rem 0 0;
-    }
-
-    &:last-child {
-      margin: 0 0 0 1rem;
+      &:last-child {
+        margin: 0 0 0 1rem;
+      }
     }
   }
 }
