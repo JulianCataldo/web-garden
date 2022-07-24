@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.3.0...@julian_cataldo/astro-demo@0.4.0) (2022-07-24)
+
+
+### Features
+
+* adapt button margin for icon ([d2ff45b](https://github.com/JulianCataldo/web-garden/commit/d2ff45b9490183514998348cec0a656f82c49454))
+* add styles for demo table ([aad56dc](https://github.com/JulianCataldo/web-garden/commit/aad56dc409cf6ae1c6fe96bef5e1cd435b142b2b))
+* back to top ([4318bdf](https://github.com/JulianCataldo/web-garden/commit/4318bdf5193e6cd3f9413e50451d8e7ef489f4af))
+* better responsiveness + layout for keywords ([a8ee949](https://github.com/JulianCataldo/web-garden/commit/a8ee9495b64a32c17b4408fde531d5a2930386cf))
+* better responsiveness for article body ([b6d9da9](https://github.com/JulianCataldo/web-garden/commit/b6d9da9ebb9c7af82edc73622ac02c39a76f22cc))
+* better responsiveness for body background ([ccdc669](https://github.com/JulianCataldo/web-garden/commit/ccdc669a608371b06f9b49302b38090b786180a8))
+* better responsiveness for keywords title ([4249148](https://github.com/JulianCataldo/web-garden/commit/4249148fa75e7b9cdd68d47151984a8834e832cf))
+* better responsiveness for landing ([712d4a8](https://github.com/JulianCataldo/web-garden/commit/712d4a8a902bb58d1aaf894fae4706da1c6362e3))
+* better responsiveness for landing ([1b4d0c5](https://github.com/JulianCataldo/web-garden/commit/1b4d0c524f0958aaf4ab331ef8e4f46e0c70ec20))
+* better responsiveness for landing hero ([d289172](https://github.com/JulianCataldo/web-garden/commit/d289172ec74dbe8510e4ac23c7698b1d2bff2e6b))
+* better responsiveness for landing particles ([434e879](https://github.com/JulianCataldo/web-garden/commit/434e8796da883bf25625ebfa6809c8227a83603b))
+* better responsiveness for links tree ([6b3ed9d](https://github.com/JulianCataldo/web-garden/commit/6b3ed9d54549dff3e29e59c9ca34903ca16d452c))
+* better responsiveness for main footer ([acacf40](https://github.com/JulianCataldo/web-garden/commit/acacf4050461f3f49ffc932d1660be690eb6478b))
+* better responsiveness for site global layout ([4451ef6](https://github.com/JulianCataldo/web-garden/commit/4451ef66c5dfdc1cb8f9f36fbc253b27fe0ce95d))
+* change markdown hidden elements ([4bc65cb](https://github.com/JulianCataldo/web-garden/commit/4bc65cb11c9cec3c6c6afec72f2e9698a0bdd4cf))
+* change package icon ([53f320d](https://github.com/JulianCataldo/web-garden/commit/53f320da26f9d5dadec166dbcc5c8177a9835b85))
+* heading color + link underline radius ([ddaae4e](https://github.com/JulianCataldo/web-garden/commit/ddaae4e0608d48f96f165e53d807b853cb37a338))
+* links tree bottom fade only for desktop ([f05fa87](https://github.com/JulianCataldo/web-garden/commit/f05fa87ac6d36c5feebfcedba2920c5388e3604e))
+* modify back to top icons ([4573629](https://github.com/JulianCataldo/web-garden/commit/4573629eea1f7eec808388e51580f8aee72ef60c))
+* more responsive body background ([83924e4](https://github.com/JulianCataldo/web-garden/commit/83924e42a3f28bb71379d365f8969e5e28693b2b))
+* move package place in component list ([7e53292](https://github.com/JulianCataldo/web-garden/commit/7e532928a6345f168d3574f2b7a11c569a7a9dd9))
+
+
+### Bug Fixes
+
+* disable broken demos ([74636db](https://github.com/JulianCataldo/web-garden/commit/74636dba6dfc0cccf98c782bc7e83eecd51916ce))
+* remove unused hr for page navigation ([1a8bf70](https://github.com/JulianCataldo/web-garden/commit/1a8bf707caa80fc354a1904bcca3c3b5d7c654e6))
+
+
+
 ## [0.3.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.2.1...@julian_cataldo/astro-demo@0.3.0) (2022-07-24)
 
 

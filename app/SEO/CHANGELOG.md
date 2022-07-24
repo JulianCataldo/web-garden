@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-seo@0.12.1...@julian_cataldo/astro-seo@0.13.0) (2022-07-24)
+
+
+### Features
+
+* remove mobile web capable ([87d1c22](https://github.com/JulianCataldo/web-garden/commit/87d1c22275381be50f6ba45f2cd8f3c528da04ec))
+
+
+
 ## [0.12.1](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-seo@0.12.0...@julian_cataldo/astro-seo@0.12.1) (2022-07-24)
 
 
