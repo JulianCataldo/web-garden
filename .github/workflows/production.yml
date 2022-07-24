@@ -1,9 +1,7 @@
-name: Build and Deploy [BRANCH] to Netlify
+name: Build and Deploy [PRODUCTION] to Netlify
 on:
   push:
-    branches:
-      - '**'
-      - '!master'
+    branches: [master]
   # pull_request:
 
 jobs:
@@ -11,8 +9,7 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - name: Check out Git repository
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
       # ————————————————————————————————————————————————————————————————————————
 
@@ -35,21 +32,16 @@ jobs:
 
       # ————————————————————————————————————————————————————————————————————————
 
-      - name: Generate Netlify alias
-        shell: bash
-        run: ruby -e 'puts "::set-output name=netlify_alias::#{`git branch --show-current`.chomp.gsub(/[^a-zA-Z\d]/){"-"}.downcase}"'
-        id: get_netlify_alias
-
-      - name: Deploy to Netlify (branch)
+      - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2.3
         with:
           publish-dir: './demo/dist'
+          production-branch: master
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          alias: ${{ steps.get_netlify_alias.outputs.netlify_alias }}
+          deploy-message: 'Deploy from GitHub Actions'
           # enable-pull-request-comment: false
-          # enable-commit-comment: false
-          # enable-commit-status: false
-          github-deployment-environment: ${{ steps.get_netlify_alias.outputs.netlify_alias }}
+          # enable-commit-comment: true
+          # overwrites-pull-request-comment: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
