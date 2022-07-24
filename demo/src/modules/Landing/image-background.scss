@@ -1,21 +1,25 @@
 .img-background {
-  position: absolute;
-  width: 100%;
-  top: calc(35rem - 30vw);
-  height: 100vh;
   z-index: 0;
 
-  :global(img) {
+  :global(picture) {
     -webkit-mask-image: linear-gradient(
       to bottom,
-      transparent 2rem,
-      black 8rem,
-      black calc(100% - 13rem),
-      transparent calc(100% - 1rem)
+      transparent 1rem,
+      black 2rem,
+      black calc(100% - 2rem),
+      transparent calc(100% - 0.6rem)
     );
   }
 
-  @include theme(hacker) {
-    filter: sepia() hue-rotate(80deg);
+  :global(picture) {
+    @include breakpoint(md) {
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 2rem,
+        black 8rem,
+        black calc(100% - 13rem),
+        transparent calc(100% - 1rem)
+      );
+    }
   }
 }

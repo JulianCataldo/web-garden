@@ -13,8 +13,14 @@ body {
 
 /* ———————————————————————————————————————————— Headings ———————————————————— */
 
-// :is(h1, h2, h3, h4, h5) {
-// }
+:is(h1, h2, h3, h4, h5) {
+  @include theme(default, light) {
+    color: color.adjust($raisin-black, $lightness: 12%);
+  }
+  @include theme(default, dark) {
+    color: color.adjust($lavender-blush, $lightness: -12%);
+  }
+}
 
 /* ———————————————————————————————————————————— Default link ———————————————— */
 
@@ -23,7 +29,7 @@ body {
   @include theme(default) {
     text-decoration: none;
     border-bottom: 2px dotted color.adjust($fiery-rose, $alpha: -0.6);
-    border-radius: 0.5em;
+    border-radius: 0.25em;
   }
   @include theme(default, light) {
     color: color.adjust($fiery-rose, $lightness: -50%);
@@ -74,8 +80,4 @@ hr {
   }
   @include theme(default, dark) {
   }
-
-  // @include theme(hacker) {
-  //   // _
-  // }
 }

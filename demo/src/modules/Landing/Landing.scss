@@ -5,11 +5,13 @@
 @import "./image-background";
 
 .landing {
-  @include theme(default) {
-    @include font-color-dark;
-  }
+  position: relative;
+}
 
-  @include theme(hacker) {
-    // _
-  }
+.graphics {
+  z-index: 0;
+  position: relative;
+  height: calc(78vh + 21vw);
+  display: flex;
+  align-items: flex-end;
 }

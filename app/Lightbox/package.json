@@ -1,6 +1,6 @@
 {
   "name": "@julian_cataldo/astro-lightbox",
-  "version": "0.10.4",
+  "version": "0.10.6",
   "description": "Simple lightbox component.",
   "main": "index.js",
   "type": "module",
@@ -10,11 +10,11 @@
   "author": "Julian Cataldo",
   "homepage": "https://code.juliancataldo.com/component/astro-lightbox",
   "bugs": {
-    "url": "https://github.com/JulianCataldo/astro/issues"
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JulianCataldo/astro",
+    "url": "https://github.com/JulianCataldo/web-garden",
     "directory": "app/Lightbox"
   },
   "scripts": {

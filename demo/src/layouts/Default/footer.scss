@@ -1,10 +1,14 @@
 .main-footer {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   box-shadow: 2px -2px 10px color.adjust($lavender-blush, $alpha: -0.8);
 
   & > * {
-    margin: 0 2rem;
+    margin: 0.5rem 2vw;
+    @include breakpoint(md) {
+      margin: 0 2rem;
+    }
   }
 
   .link {
@@ -14,8 +18,8 @@
   @include theme(default) {
     align-items: center;
     justify-content: flex-end;
-    padding: 2rem;
-    margin-top: 10rem;
+    padding: calc(1vw + 1vh);
+    margin-top: calc(5vw + 5vh);
   }
   @include theme(default, light) {
     &,

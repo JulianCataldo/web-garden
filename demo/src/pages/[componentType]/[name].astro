@@ -1,6 +1,6 @@
 ---
+import PageNavigation from 'src/components/PageNavigation/PageNavigation.astro';
 import Layout from 'src/layouts/Default/Default.astro';
-import LinksTree from 'src/components/LinksTree/LinksTree.astro';
 import SinglePackage from 'src/modules/Single/Package/SinglePackage.astro';
 import { structureAllPackages } from 'src/packages-loader';
 
@@ -87,7 +87,7 @@ if (thePackage.pJson.repository.directory && thePackage.pJson.repository.url) {
 }
 if (thePackage.pJson.name) {
   const url = `https://www.npmjs.com/package/${thePackage.pJson.name}`;
-  actions.push({ title: 'Package', href: url, icon: 'mdi:npm' });
+  actions.push({ title: 'Package', href: url, icon: 'mdi:nodejs' });
 }
 // if (thePackage.typescriptProps) {
 //   actions.push({ title: 'TypeScript API', href: '#ts-api' });
@@ -96,10 +96,11 @@ if (thePackage.pJson.name) {
 
 <Layout titles={titles} actions={actions}>
   <article class='main-content'>
-    <div class='navigation'>
-      <h1>Components</h1>
-      <LinksTree links={tableOfContentHeaders} anchorMode={false} />
-    </div>
+    <PageNavigation
+      title='Components'
+      links={tableOfContentHeaders}
+      anchorMode={false}
+    />
 
     <div class='content article'>
       <div class='wrapper'>

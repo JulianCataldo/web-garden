@@ -29,9 +29,9 @@ minuscule file sizes compared to "all-or-nothing" UI frameworks.
 - [🚀  Julian's Web Garden](#julians-web-garden)
   - [🤷🏼‍♂️  Philosophy](#️philosophy)
 - [🔗  Quick links](#quick-links)
-  - [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋ ](#live-demo--documentation-website)
+  - [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](#live-demo--documentation-website)
   - [📖  Website source code](#website-source-code)
-  - [📦  Application-level components ](#application-level-components-)
+  - [📦  Application-level components](#application-level-components)
   - [📦  Components](#components)
   - [🛠  Tooling configurations](#tooling-configurations)
 - [✅  Tests](#tests)
@@ -39,7 +39,6 @@ minuscule file sizes compared to "all-or-nothing" UI frameworks.
 - [🧫  Experimenting](#experimenting)
 - [🧑‍🚀  Development](#development)
   - [🏁  Commands](#commands)
-  - [🦾  Contribute](#contribute)
 
 ---
 
@@ -47,18 +46,25 @@ minuscule file sizes compared to "all-or-nothing" UI frameworks.
 
 # 🔗  Quick links
 
-## [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋ ](https://code.juliancataldo.com/)
+<div class="git-web-garden-link">
 
-_[Deployed on `code.juliancataldo.com`](https://code.juliancataldo.com/) automatically (GitHub Pages)._
+## [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](https://code.juliancataldo.com/)
 
-## [📖  Website source code](https://github.com/JulianCataldo/astro/tree/master/demo)
+[![Live demo website](https://code.juliancataldo.com/poster.png)](https://code.juliancataldo.com)
+
+_[**Production** deployed on **`code.juliancataldo.com`**](https://code.juliancataldo.com/)._  
+_[**Develop** deployed on **`develop--web-garden.netlify.app`**](https://develop--web-garden.netlify.app)._
+
+</div>
+
+## [📖  Website source code](https://github.com/JulianCataldo/web-garden/tree/master/demo)
 
 See [default layout](demo/src/layouts/Default/Default.astro) and [home page](./demo/src/pages/index.astro)
 for live implementation examples.
 
 ---
 
-## [📦  Application-level components ](./app)
+## [📦  Application-level components](./app)
 
 [These are global components](./app) which enhance or augment browser behavior and style,
 while providing useful utilities to developers, website-wide.
@@ -106,6 +112,7 @@ Cypress:
 - [ ] Implement dev / prod mode for debugging outputs
 - [x] Rehaul demo website
 - [ ] Evaluate PNPM workspaces + tools for replacing Lerna version/publish?
+- [ ] Fix Lerna conventional commits not following breaking changes for versioning
 
 # 🧫  Experimenting
 
@@ -122,6 +129,9 @@ Cypress:
 ## 🏁  Commands
 
 ```zsh
+# Clone mono-repository
+git clone https://github.com/JulianCataldo/web-garden
+
 # Scripts located in root ./package.json
 
 # Bootstrap all packages dependencies
@@ -145,12 +155,6 @@ pnpm run version
 # Release updated packages on NPM public registry
 pnpm run publish
 ```
-
-## 🦾  Contribute
-
-Any remark, feature or pull request can be done in this GitHub repository and issues tracker.  
-Committing is linted following [conventional commits conventions](http://conventionalcommits.org).  
-This allows an easy and automatic versioning, change-logging, and NPM publishing workflow.
 
 <div class="git-footer">
 

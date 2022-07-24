@@ -1,6 +1,6 @@
 {
   "name": "@julian_cataldo/astro-configs",
-  "version": "0.11.3",
+  "version": "0.12.0",
   "description": "Here lies some re-usable tooling settings. Languages: JS, TS, Astro, Vue, JSX, TSX, SCSS, CSS. Tools: Prettier, ESlint, Stylelint, Editorconfig, TypeScript, Commitlint, VS Code.",
   "main": "index.js",
   "publishConfig": {
@@ -9,11 +9,11 @@
   "author": "Julian Cataldo",
   "homepage": "https://code.juliancataldo.com/configs",
   "bugs": {
-    "url": "https://github.com/JulianCataldo/astro/issues"
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JulianCataldo/astro",
+    "url": "https://github.com/JulianCataldo/web-garden",
     "directory": "configs"
   },
   "scripts": {

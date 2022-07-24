@@ -1,6 +1,6 @@
 {
   "name": "@julian_cataldo/astro-tooltips",
-  "version": "0.10.13",
+  "version": "0.10.14",
   "description": "Progressively enhanced. This component globally override regular `title` attributes on all links with Tippy.js tooltips.",
   "main": "index.js",
   "type": "module",
@@ -10,11 +10,11 @@
   "author": "Julian Cataldo",
   "homepage": "https://code.juliancataldo.com/component/astro-tooltips",
   "bugs": {
-    "url": "https://github.com/JulianCataldo/astro/issues"
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JulianCataldo/astro",
+    "url": "https://github.com/JulianCataldo/web-garden",
     "directory": "app/Tooltips"
   },
   "scripts": {

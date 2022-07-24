@@ -55,6 +55,10 @@ module.exports = {
         'import/no-named-as-default': 'off',
         'import/prefer-default-export': 'off',
         'import/no-extraneous-dependencies': 'off',
+        'max-lines': [
+          'error',
+          { max: 100, skipComments: true, skipBlankLines: true },
+        ],
       },
     },
     {
@@ -95,6 +99,10 @@ module.exports = {
           { argsIgnorePattern: '^_', destructuredArrayIgnorePattern: '^_' },
         ],
         '@typescript-eslint/no-non-null-assertion': 'off',
+        'max-lines': [
+          'error',
+          { max: 100, skipComments: true, skipBlankLines: true },
+        ],
       },
     },
     {

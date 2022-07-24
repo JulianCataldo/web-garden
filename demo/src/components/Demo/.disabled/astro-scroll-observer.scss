@@ -26,21 +26,21 @@ input {
     position: fixed;
   }
 
-  @include scroll-is($going-up: true) {
-    .current-scroll-position::after {
-      content: "Is scrolling up…";
-    }
-  }
+  // @include scroll-is($going-up: true) {
+  //   .current-scroll-position::after {
+  //     content: "Is scrolling up…";
+  //   }
+  // }
 
-  @include scroll-is($top: true) {
-    .current-scroll-position::after {
-      content: "Is top";
-    }
-  }
+  // @include scroll-is($top: true) {
+  //   .current-scroll-position::after {
+  //     content: "Is top";
+  //   }
+  // }
 
-  @include scroll-is($bottom: true) {
-    .current-scroll-position::after {
-      content: "Is bottom";
-    }
-  }
+  // @include scroll-is($bottom: true) {
+  //   .current-scroll-position::after {
+  //     content: "Is bottom";
+  //   }
+  // }
 }

@@ -12,42 +12,83 @@
 /* —————————————————————————————————————————————————————————————————————————— */
 
 .main-content {
-  margin-top: 10rem;
+  margin-top: -2rem;
   isolation: isolate;
-  display: flex;
-}
+  width: 100vw;
+  max-width: 100%;
 
-.main-content > .article {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-
-  .wrapper {
-    max-width: 53em;
+  @include breakpoint(lg) {
+    width: initial;
+    max-width: initial;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
-[data-theme="default"] {
-  .main-content > .content {
-    margin: 0 2vw;
+.main-content > .article,
+.main-content > .content {
+  @include breakpoint(lg) {
+    width: 70%;
+    flex-grow: 1;
+    min-width: 35rem;
+  }
 
-    &.article > .wrapper.article-body,
-    .package-section,
-    .package {
-      padding: 3rem;
+  .wrapper {
+    max-width: 100%;
+    @include breakpoint(lg) {
+      margin: 0 auto;
+      max-width: 53em;
+    }
+  }
+}
+
+.main-content > .navigation {
+  max-width: 24rem;
+
+  @include breakpoint(md) {
+    max-width: 28rem;
+  }
+
+  @include breakpoint(lg) {
+    width: calc(30% - 4vw);
+    max-width: 28rem;
+  }
+}
+
+.main-content > .content {
+  margin: 0 0;
+  max-width: 100%;
+
+  @include breakpoint(lg) {
+    max-width: initial;
+  }
+
+  @include breakpoint(md) {
+    margin: 0 2vw;
+  }
+
+  &.article > .wrapper.article-body,
+  .package-section,
+  .package {
+    padding: 5vw;
+    @include breakpoint(lg) {
+      padding: 2em;
+    }
+  }
+
+  .package,
+  .package-section {
+    margin: 2rem 0;
+    @include breakpoint(lg) {
+      margin: 2vw 0;
     }
 
-    .package,
-    .package-section {
-      margin: 2vw;
+    &:first-child {
+      margin-top: 0rem;
+    }
 
-      &:first-child {
-        margin-top: 0rem;
-      }
-
-      &:last-child {
-        margin-bottom: 0rem;
-      }
+    &:last-child {
+      margin-bottom: 0rem;
     }
   }
 }
@@ -101,23 +142,3 @@ input[type="checkbox"] {
 }
 
 /* —————————————————————————————————————————————————————————————————————————— */
-
-// [data-feature-flag] {
-//   display: none !important;
-// }
-
-// [data-theme="default"] [data-color-mode="dark"] {
-//   @include default-font-color(dark);
-// }
-
-// [data-theme="default"] [data-color-mode="light"] {
-//   @include default-font-color(light);
-// }
-
-// [data-clipboard-target] {
-//   cursor: copy;
-
-//   &[data-clipboard-was-copied="true"] {
-//     cursor: default;
-//   }
-// }

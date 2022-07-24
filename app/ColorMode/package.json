@@ -1,6 +1,6 @@
 {
   "name": "@julian_cataldo/astro-color-mode",
-  "version": "0.11.0",
+  "version": "0.11.1",
   "description": "Provides system or user-defined color scheme preference, with a toggle mechanism. Settings are persisted, component is progressively enhanced and flash of unstyled content avoided. Also, it will provide an easier way to target theme with CSS / SCSS / JS.",
   "main": "index.js",
   "type": "module",
@@ -10,11 +10,11 @@
   "author": "Julian Cataldo",
   "homepage": "https://code.juliancataldo.com/component/astro-color-mode",
   "bugs": {
-    "url": "https://github.com/JulianCataldo/astro/issues"
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JulianCataldo/astro",
+    "url": "https://github.com/JulianCataldo/web-garden",
     "directory": "app/ColorMode"
   },
   "scripts": {

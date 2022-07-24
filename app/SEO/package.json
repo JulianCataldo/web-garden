@@ -1,6 +1,6 @@
 {
   "name": "@julian_cataldo/astro-seo",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "description": "Bare minimum SEO meta tags to make most social networks and Google engine happy.",
   "main": "index.js",
   "type": "module",
@@ -10,11 +10,11 @@
   "author": "Julian Cataldo",
   "homepage": "https://code.juliancataldo.com/component/astro-seo",
   "bugs": {
-    "url": "https://github.com/JulianCataldo/astro/issues"
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JulianCataldo/astro",
+    "url": "https://github.com/JulianCataldo/web-garden",
     "directory": "app/SEO"
   },
   "scripts": {
