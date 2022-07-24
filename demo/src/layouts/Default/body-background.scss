@@ -5,27 +5,50 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 280vh;
+    height: 480vh;
+    @include breakpoint(md) {
+      height: 280vh;
+    }
 
     @include theme(default, light) {
       background: linear-gradient(
         to bottom,
         color.adjust($lavender-blush, $saturation: 80%, $lightness: -4%)
-          calc(14vh + 21vw),
+          calc(34vh + 21vw),
         color.adjust($rosewood, $saturation: -26%, $lightness: 2%)
-          calc(37vh + 36vw),
-        $lavender-blush 200vh
+          calc(150vh + 40vw),
+        $lavender-blush 284vh
       );
+      @include breakpoint(md) {
+        background: linear-gradient(
+          to bottom,
+          color.adjust($lavender-blush, $saturation: 80%, $lightness: -4%)
+            calc(14vh + 21vw),
+          color.adjust($rosewood, $saturation: -26%, $lightness: 2%)
+            calc(4rem + 79vh + 18vw),
+          $lavender-blush 200vh
+        );
+      }
     }
     @include theme(default, dark) {
       background: linear-gradient(
         to bottom,
         color.adjust($rosewood, $saturation: 30%) calc(75rem - 30vw)
-          calc(75rem - 30vw),
+          calc(34vh + 21vw),
         color.adjust($rosewood, $saturation: -10%, $lightness: -4%)
-          calc(86rem - 30vw),
-        $raisin-black 200vh
+          calc(150vh + 40vw),
+        $raisin-black 284vh
       );
+      @include breakpoint(md) {
+        background: linear-gradient(
+          to bottom,
+          color.adjust($rosewood, $saturation: 30%) calc(75rem - 30vw)
+            calc(14vh + 21vw),
+          color.adjust($rosewood, $saturation: -10%, $lightness: -4%)
+            calc(4rem + 79vh + 18vw),
+          $raisin-black 200vh
+        );
+      }
       // color.adjust($rosewood, $saturation: -60%, $lightness: 14%) 100%
     }
   }
