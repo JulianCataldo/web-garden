@@ -1,43 +1,27 @@
 .links-tree {
-  // position: sticky;
-  // width: 100%;
-  // max-height: 85vh;
-  // overflow-y: scroll;
-  // font-size: 90%;
-
-  // @include theme(default) {
-  // top: 7rem;
-  // }
-  // @include theme(default, light) {
-  //   // @include default-card(light);
-  // }
-  // @include theme(default, dark) {
-  //   // @include default-card(dark);
-  // }
-  // @include theme(hacker) {
-  //   top: 7rem;
-  //   // @include hacker-card;
-  // }
   direction: rtl;
 
   & > * {
     direction: initial;
   }
 
-  text-align: right;
+  text-align: left;
+  @include breakpoint(md) {
+    text-align: right;
+  }
 
   @include theme(default, $scoped: true) {
     font-size: 90%;
   }
-
-  // @include theme(hacker, $scoped: true) {
-  //   font-size: 85%;
-  // }
 }
 
 .link {
   width: 100%;
-  padding: 0.75em 2em 0.75em 3em;
+  padding: 0.75em 1em 0.75em 1em;
+  @include breakpoint(md) {
+    padding: 0.75em 2em 0.75em 3em;
+  }
+
   display: inline-block;
 
   @include theme(default, $scoped: true) {
@@ -46,7 +30,6 @@
   }
 
   @include theme(default, light, $scoped: true) {
-    // background-color: $lavender-blush;
     color: color.adjust($fiery-rose, $lightness: -50%);
     text-shadow: 0.06em 0.06em 0.1rem color.adjust($fiery-rose, $alpha: -0.8);
 
@@ -56,7 +39,6 @@
     }
   }
   @include theme(default, dark, $scoped: true) {
-    // background-color: $raisin-black;
     color: color.adjust($fiery-rose, $lightness: 25%);
     text-shadow: 0.07em 0.07em 0.1rem
       color.adjust($raisin-black, $lightness: -10%);
@@ -68,7 +50,6 @@
   }
 
   .depth-1 & {
-    // padding-right: 3rem;
     font-variant: small-caps;
     font-size: 115%;
     font-weight: 700;
@@ -81,7 +62,6 @@
   }
 
   .depth-2 & {
-    // padding-right: 2rem;
     font-size: 95%;
     font-weight: 700;
     border-bottom: 1px dotted color.adjust($red-pigment, $alpha: -0.8);
@@ -93,7 +73,6 @@
   }
 
   .depth-3 & {
-    // padding-right: 1rem;
     font-size: 85%;
     font-weight: 400;
     border-bottom: 1px dotted color.adjust($red-pigment, $alpha: -0.8);
