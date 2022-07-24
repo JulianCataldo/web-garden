@@ -42,9 +42,8 @@ jobs:
 
       - name: Deploy to Netlify (branch)
         uses: nwtgck/actions-netlify@v1.1
-        working-directory: ./demo
         with:
-          publish-dir: './dist'
+          publish-dir: './demo/dist'
           github-token: ${{ secrets.GITHUB_TOKEN }}
           alias: ${{ steps.get_netlify_alias.outputs.netlify_alias }}
           enable-pull-request-comment: false
