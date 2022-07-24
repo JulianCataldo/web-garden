@@ -1,6 +1,8 @@
 ---
 import Link from '@julian_cataldo/astro-link/Link.astro';
 import Icon from 'astro-icon';
+
+import { version } from 'package.json';
 ---
 
 <footer class='main-footer'>
@@ -24,7 +26,9 @@ import Icon from 'astro-icon';
 
   <div>|</div>
 
-  <div>Built with <Link href='https://astro.build'>Astro</Link></div>
+  <div>
+    v{version} — Built with <Link href='https://astro.build'>Astro</Link>
+  </div>
 </footer>
 
 <Link href='#' class='back-to-top-float unstyled'>
