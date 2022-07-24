@@ -1,7 +1,7 @@
 name: Build and Deploy [BRANCH] to Netlify
 on:
   push:
-    branches: 
+    branches:
       - '**'
       - '!master'
   # pull_request:
@@ -41,14 +41,14 @@ jobs:
         id: get_netlify_alias
 
       - name: Deploy to Netlify (branch)
-        uses: nwtgck/actions-netlify@v1.1
+        uses: nwtgck/actions-netlify@v1.2.3
         with:
           publish-dir: './demo/dist'
           github-token: ${{ secrets.GITHUB_TOKEN }}
           alias: ${{ steps.get_netlify_alias.outputs.netlify_alias }}
-          enable-pull-request-comment: false
-          enable-commit-comment: false
-          enable-commit-status: false
+          # enable-pull-request-comment: false
+          # enable-commit-comment: false
+          # enable-commit-status: false
           github-deployment-environment: ${{ steps.get_netlify_alias.outputs.netlify_alias }}
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
