@@ -13,13 +13,6 @@
     margin: 0.4rem;
   }
 
-  @include theme(default, light, $scoped: true) {
-    // _
-  }
-  @include theme(default, dark, $scoped: true) {
-    // _
-  }
-
   @include theme(hacker) {
     width: 2.5rem;
     padding: 0.2rem;
@@ -30,12 +23,6 @@
 .cb-icon {
   @include theme(default, $scoped: true) {
     margin-left: 1rem;
-  }
-  @include theme(default, light, $scoped: true) {
-    // _
-  }
-  @include theme(default, dark, $scoped: true) {
-    // _
   }
 }
 
@@ -48,16 +35,6 @@
     background: $raisin-black;
     border-radius: 0.5rem;
   }
-  @include theme(default, light) {
-    // _
-  }
-  @include theme(default, dark) {
-    // _
-  }
-
-  // @include theme(hacker) {
-  //   // _
-  // }
 }
 
 .demo-section {
@@ -95,15 +72,11 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 2rem;
-  justify-content: space-between;
+  margin-top: 0rem;
+  justify-content: flex-end;
 
   & > * {
-    margin: 0 1.5rem;
-  }
-
-  .button {
-    margin-bottom: 0 !important;
+    margin: 1.5rem 1.5rem 0 1.5rem;
   }
 
   .version {
@@ -115,84 +88,3 @@
     align-items: center;
   }
 }
-
-// &:active {
-//   background: $rosewood;
-// }
-
-// &[data-clipboard-was-copied="true"] {
-//   color: $raisin-black;
-//   background: $fiery-rose;
-// }
-
-// footer {
-//   display: flex;
-//   margin-top: 2rem;
-//   padding: 0 2rem;
-//   justify-content: space-between;
-//   font-weight: 700;
-// }
-
-// section {
-//   @include theme(default) {
-//     padding: 3rem;
-//     margin-bottom: 3rem;
-
-//     &:last-of-type {
-//       margin: 0;
-//     }
-
-//     :global(:is(h1, h2, h3, h4, h5)) {
-//       &:first-of-type {
-//         margin: 0 0 3rem 0;
-//       }
-
-//       margin: 3rem 0;
-//     }
-//   }
-//   @include theme(default, light) {
-//     // @include default-card(light);
-//   }
-//   @include theme(default, dark) {
-//     // @include default-card(dark);
-//   }
-
-//   @include theme(hacker) {
-//     padding: 2rem;
-//     margin: 2rem;
-//     @include hacker-card;
-//   }
-// }
-
-// .demo {
-//   @include theme(default) {
-//     padding: 3rem;
-//     margin: 3rem;
-//   }
-//   @include theme(default, light) {
-//     // @include default-card(light);
-//   }
-//   @include theme(default, dark) {
-//     // @include default-card(dark);
-//   }
-
-//   @include theme(hacker) {
-//     padding: 2rem;
-//     margin: 2rem;
-//     @include hacker-card;
-//   }
-// }
-
-// .description {
-//   @include theme(default) {
-//     margin: 3rem 0;
-//   }
-//   @include theme(default, light) {
-//   }
-//   @include theme(default, dark) {
-//   }
-
-//   @include theme(hacker) {
-//     margin: 2.5rem 0;
-//   }
-// }

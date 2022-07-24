@@ -30,6 +30,7 @@
   // TODO: map speed to API
   transition: opacity 0.35s, transform 0.35s;
   transform: scale(0.2);
+
   :global(img) {
     object-fit: contain;
     height: 100%;

@@ -1,34 +1,38 @@
 // TODO: simplify this (one wrapper is not necessary)
 .particles-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
-  width: 100%;
-  z-index: 0;
-  position: relative;
 }
 
 .particles {
-  position: absolute;
-  height: 130vh;
-  width: 100vw;
-  z-index: -1;
-  -webkit-mask-image: linear-gradient(
-    -184deg,
-    white calc(45rem - 30vw),
-    transparent calc(100% - 10rem)
-  );
-}
-
-#tsparticles {
   height: 100%;
   width: 100%;
-  opacity: 0;
-  transition: opacity 1s;
+  -webkit-mask-image: linear-gradient(
+    -184deg,
+    white calc(11rem - 13vw),
+    transparent calc(105% - 38vw)
+  );
+  @include breakpoint(md) {
+    -webkit-mask-image: linear-gradient(
+      -184deg,
+      white calc(15rem - 11vw),
+      transparent calc(100% - 10rem)
+    );
+  }
 
-  &[data-is-loaded] {
-    opacity: 1;
+  #tsparticles {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+
+    &[data-is-loaded] {
+      opacity: 1;
+    }
   }
 }

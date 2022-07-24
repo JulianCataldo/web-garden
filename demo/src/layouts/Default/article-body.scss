@@ -1,8 +1,7 @@
 .article-body {
   /* Hide Git repo README toc */
   .git-toc,
-  .git-footer,
-  .git-web-garden-link {
+  .git-footer {
     display: none;
   }
 
@@ -25,7 +24,10 @@
   }
 
   p {
-    margin: 1em;
+    margin: 1em 1.5vw;
+    @include breakpoint(md) {
+      margin: 1em calc(0.5em + 0.5vw);
+    }
   }
 
   pre {

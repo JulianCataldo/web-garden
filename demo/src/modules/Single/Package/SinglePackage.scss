@@ -1,29 +1,3 @@
-.single-package {
-  section {
-    // margin: 2.5rem 0;
-
-    // &:first-of-type,
-    // &:last-of-type {
-    //   margin: 0;
-    // }
-
-    @include theme(default) {
-      // _
-    }
-
-    @include theme(default, light) {
-      // _
-    }
-    @include theme(default, dark) {
-      // _
-    }
-
-    @include theme(hacker) {
-      // _
-    }
-  }
-}
-
 .api-props {
   font-family: monospace;
 
@@ -109,13 +83,29 @@
 
 .keywords {
   display: flex;
-  margin-top: -4rem;
-  margin-bottom: 6rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+  margin-bottom: 3rem;
+
+  @include breakpoint(md) {
+    margin-top: 3rem;
+  }
+
+  @include breakpoint(lg) {
+    margin-top: -5rem;
+    margin-bottom: 6rem;
+  }
 
   h2 {
-    color: $lavender-blush;
-    text-shadow: 0.09em 0.09em 0.09em color.adjust($rosewood, $alpha: -0.6);
-    margin-top: 0.5rem;
+    margin: 1rem 0 1rem 0;
+    @include breakpoint(md) {
+      text-shadow: 0.09em 0.09em 0.09em color.adjust($rosewood, $alpha: -0.6);
+      color: $lavender-blush;
+    }
+
+    @include breakpoint(lg) {
+      margin: 1rem calc(0.4rem + 2.5vw) 1rem calc(0.4rem + 2.5vw);
+    }
   }
 
   ul {

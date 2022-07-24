@@ -1,17 +1,67 @@
-h1 {
-  font-weight: 800;
+.hero-wrapper {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    color.adjust(hsl(218, 74%, 27%), $lightness: -25%),
+    color.adjust(hsl(218, 74%, 27%), $lightness: -15%) 15rem,
+    color.adjust(hsl(218, 74%, 27%), $lightness: -12%)
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    color.adjust(white, $alpha: 0) 0%,
+    color.adjust(white, $alpha: 0) calc(100% - 12rem),
+    color.adjust(white, $alpha: -1) 100%
+  );
+  padding-top: calc(15rem - 12vw);
+  padding-bottom: 10rem;
+
+  & + * {
+    margin-top: -35vh;
+  }
+
+  @include breakpoint(md) {
+    max-width: calc(10vw + 33rem);
+    padding-top: 0;
+    padding-bottom: 0;
+    background: none;
+    -webkit-mask-image: none;
+
+    & + * {
+      margin-top: inherit;
+    }
+
+    top: 0;
+    position: absolute;
+    left: 13%;
+    height: 100vh;
+    min-height: 52rem;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero {
-  position: absolute;
-  top: calc(6rem + 6vw);
-  left: calc(100% - 75vw - 5rem);
-  max-width: 40rem;
-  z-index: 2;
+  position: relative;
 
+  @include breakpoint(md) {
+    top: -3rem;
+  }
+  /* ———————————————————————————————————————————————————————————————————————— */
+
+  padding: 1rem 1.25rem 1rem 1.25rem;
+  @include breakpoint(md) {
+    padding: 2rem 4rem 2rem 3rem;
+  }
+
+  h1 {
+    font-weight: 800;
+    @include font-color-light;
+  }
   @include font-color-light;
-
-  padding: 2rem 4rem 2rem 3rem;
 
   &::before {
     content: "";
@@ -28,57 +78,31 @@ h1 {
   p {
     margin: 2rem 0 0 0;
   }
-}
 
-.description {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-.button {
-  display: inline-block;
-  cursor: pointer;
-
-  @include theme(default) {
-    display: inline-block;
-    border: 3px solid;
-    font-weight: 700;
-    padding: 1rem;
-    border-radius: 1rem;
+  .description {
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 
-  color: $lavender-blush;
-  border-color: color.adjust($lavender-blush, $alpha: -0.5);
+  .actions {
+    margin-top: 1.25rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
 
-  @include theme(hacker) {
-    padding: 1rem;
-    font-weight: 700;
-    border: 3px solid lightgreen;
-    color: green;
-    border-color: color.adjust($lavender-blush, $alpha: -0.5);
+    & > * {
+      margin: 0.8rem 0.8rem;
 
-    &:hover {
-      color: lightgreen;
-    }
-  }
-}
+      @include breakpoint(md) {
+        &:first-child {
+          margin: 0 1rem 0 0;
+        }
 
-.actions {
-  margin-top: 1.25rem;
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  align-items: center;
-
-  & > * {
-    margin: 0.8rem 0.8rem;
-
-    &:first-child {
-      margin: 0 1rem 0 0;
-    }
-
-    &:last-child {
-      margin: 0 0 0 1rem;
+        &:last-child {
+          margin: 0 0 0 1rem;
+        }
+      }
     }
   }
 }
