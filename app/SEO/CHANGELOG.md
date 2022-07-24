@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.1](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-seo@0.12.0...@julian_cataldo/astro-seo@0.12.1) (2022-07-24)
+
+
+### Bug Fixes
+
+* correct meta keywords for seo ([e61291d](https://github.com/JulianCataldo/web-garden/commit/e61291d3c4f42ceda591f0ba9358de8db5608736))
+* making twitter compatible robots happy ([8eadeea](https://github.com/JulianCataldo/web-garden/commit/8eadeea23673ef029109b308def53ec9c38e714d))
+
+
+
 ## [0.12.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-seo@0.11.0...@julian_cataldo/astro-seo@0.12.0) (2022-07-18)
 
 ### Features

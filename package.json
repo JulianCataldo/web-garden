@@ -12,7 +12,7 @@
   },
   "scripts": {
     "version": "pnpm lerna version --conventional-commits",
-    "publish": "pnpm lerna publish from-git",
+    "release": "pnpm lerna publish from-git",
     "demo": "curl -s http://localhost:2424/ > /dev/null || (cd demo && pnpm dev)",
     "cypress:open": "pnpm run demo & pnpm cypress open",
     "cypress:run": "pnpm run demo & pnpm cypress run",

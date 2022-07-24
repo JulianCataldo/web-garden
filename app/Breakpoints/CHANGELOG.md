@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.3](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-breakpoints@0.10.2...@julian_cataldo/astro-breakpoints@0.10.3) (2022-07-24)
+
+**Note:** Version bump only for package @julian_cataldo/astro-breakpoints
+
+
+
+
+
 ## [0.10.2](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-breakpoints@0.10.1...@julian_cataldo/astro-breakpoints@0.10.2) (2022-07-18)
 
 **Note:** Version bump only for package @julian_cataldo/astro-breakpoints

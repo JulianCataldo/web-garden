@@ -1,6 +1,6 @@
 {
   "name": "@julian_cataldo/astro-lightbox",
-  "version": "0.10.4",
+  "version": "0.10.5",
   "description": "Simple lightbox component.",
   "main": "index.js",
   "type": "module",

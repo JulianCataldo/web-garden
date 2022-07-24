@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.2](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-base@0.13.1...@julian_cataldo/astro-base@0.13.2) (2022-07-24)
+
+**Note:** Version bump only for package @julian_cataldo/astro-base
+
+
+
+
+
+## [0.13.1](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-base@0.13.0...@julian_cataldo/astro-base@0.13.1) (2022-07-24)
+
+**Note:** Version bump only for package @julian_cataldo/astro-base
+
+
+
+
+
 ## [0.13.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-base@0.12.0...@julian_cataldo/astro-base@0.13.0) (2022-07-18)
 
 ### Features

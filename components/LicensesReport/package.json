@@ -1,6 +1,6 @@
 {
   "name": "@julian_cataldo/astro-licenses-report",
-  "version": "0.13.0",
+  "version": "0.13.1",
   "description": "Give credits to the awesome JS open-source community with this component. It will generate a table with important informations about packages used by your project.",
   "main": "index.js",
   "type": "module",

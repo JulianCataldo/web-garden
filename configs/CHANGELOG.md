@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.11.3...@julian_cataldo/astro-configs@0.12.0) (2022-07-24)
+
+
+### Features
+
+* max line length rule customization ([3fca513](https://github.com/JulianCataldo/web-garden/commit/3fca51387019e524da800da7030b1b55c2a6784a))
+
+
+
 ## [0.11.3](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.11.2...@julian_cataldo/astro-configs@0.11.3) (2022-07-18)
 
 ### Bug Fixes
