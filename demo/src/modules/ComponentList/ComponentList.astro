@@ -44,6 +44,19 @@ if (Array.isArray(props.packages) === false) {
         <Link class="button unstyled" href={url}>
           See full documentation
         </Link>
+
+        <div class="version">
+          <Icon name="mdi:npm" size={'4rem'} class="icon" />
+          <Link
+            class="button unstyled"
+            href={`https://www.npmjs.com/package/${pkg.pJson.name}`}
+          >
+            <span class="visually-hidden">Version:</span>
+            <span aria-hidden="true">v:</span>&nbsp;
+            <strong>{pkg.pJson.version}</strong>
+          </Link>
+        </div>
+
         <div class="package-install">
           <code class="install-command" id={id}>
             pnpm i {pkg.pJson.name}
@@ -59,18 +72,6 @@ if (Array.isArray(props.packages) === false) {
               class="cb-icon"
             />
           </div>
-        </div>
-
-        <div class="version">
-          <Icon name="mdi:npm" size={'4rem'} class="icon" />
-          <Link
-            class="button unstyled"
-            href={`https://www.npmjs.com/package/${pkg.pJson.name}`}
-          >
-            <span class="visually-hidden">Version:</span>
-            <span aria-hidden="true">v:</span>&nbsp;
-            <strong>{pkg.pJson.version}</strong>
-          </Link>
         </div>
       </footer>
     </article>
