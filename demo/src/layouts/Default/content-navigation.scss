@@ -1,7 +1,12 @@
 .main-content > .navigation {
   // width: 100vw;
   // max-width: 100%;
-  margin-bottom: 5rem;
+
+  margin-bottom: 1.5rem;
+
+  @include breakpoint(md) {
+    margin-bottom: 5rem;
+  }
 
   @include breakpoint(lg) {
     margin-bottom: 0;
