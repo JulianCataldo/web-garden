@@ -13,10 +13,7 @@
     font-size: 2rem;
     height: 7rem;
 
-    @include scroll-is($going-up: true) {
-      opacity: 0;
-    }
-    @include scroll-is($bottom: true) {
+    @include scroll-is($going-up: true, $bottom: true) {
       opacity: 0;
     }
 

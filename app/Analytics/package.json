@@ -1,6 +1,6 @@
 {
   "name": "@julian_cataldo/astro-analytics",
-  "version": "0.11.1",
+  "version": "0.11.2",
   "description": "Provides Google Analytics 4 snippet injection.",
   "main": "index.js",
   "type": "module",
@@ -10,11 +10,11 @@
   "author": "Julian Cataldo",
   "homepage": "https://code.juliancataldo.com/component/astro-analytics",
   "bugs": {
-    "url": "https://github.com/JulianCataldo/astro/issues"
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JulianCataldo/astro",
+    "url": "https://github.com/JulianCataldo/web-garden",
     "directory": "app/Analytics"
   },
   "scripts": {

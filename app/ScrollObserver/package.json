@@ -1,6 +1,6 @@
 {
   "name": "@julian_cataldo/astro-scroll-observer",
-  "version": "0.10.13",
+  "version": "0.10.14",
   "description": "Viewport scroll position watcher which binds data attributes to `body` for further CSS usage.\nJS scroll event is properly throttled for performance economy.",
   "main": "index.js",
   "type": "module",
@@ -8,13 +8,13 @@
     "access": "public"
   },
   "author": "Julian Cataldo",
-  "homepage": "https://code.juliancataldo.com/component/astro-observer",
+  "homepage": "https://code.juliancataldo.com/component/astro-scroll-observer",
   "bugs": {
-    "url": "https://github.com/JulianCataldo/astro/issues"
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JulianCataldo/astro",
+    "url": "https://github.com/JulianCataldo/web-garden",
     "directory": "app/ScrollObserver"
   },
   "scripts": {

@@ -1,6 +1,6 @@
 {
   "name": "@julian_cataldo/astro-licenses-report",
-  "version": "0.13.0",
+  "version": "0.13.1",
   "description": "Give credits to the awesome JS open-source community with this component. It will generate a table with important informations about packages used by your project.",
   "main": "index.js",
   "type": "module",
@@ -10,11 +10,11 @@
   "author": "Julian Cataldo",
   "homepage": "https://code.juliancataldo.com/component/astro-licenses-report",
   "bugs": {
-    "url": "https://github.com/JulianCataldo/astro/issues"
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JulianCataldo/astro",
+    "url": "https://github.com/JulianCataldo/web-garden",
     "directory": "components/LicensesReport"
   },
   "scripts": {

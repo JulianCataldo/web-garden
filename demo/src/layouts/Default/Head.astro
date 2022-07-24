@@ -1,0 +1,52 @@
+---
+import SEO from '@julian_cataldo/astro-seo/SEO.astro';
+import Tooltips from '@julian_cataldo/astro-tooltips/Tooltips.astro';
+import ColorMode from '@julian_cataldo/astro-color-mode/ColorMode.astro';
+import Prefetch from '@julian_cataldo/astro-prefetch/Prefetch.astro';
+import ScrollObserver from '@julian_cataldo/astro-scroll-observer/ScrollObserver.astro';
+import Favicons from 'src/components/Favicons.astro';
+/* —————————————————————————————————————————————————————————————————————————— */
+import { description } from '@julian_cataldo/astro/package.json';
+import { dependencies } from 'package.json';
+/* —————————————————————————————————————————————————————————————————————————— */
+const props = { ...Astro.props };
+/* —————————————————————————————————————————————————————————————————————————— */
+const comboTitle = `${props.titles.main} | ${props.titles.sub} | ${props.titles.main}`;
+const generator = `astro-${dependencies.astro}`;
+const siteName = "Julian's Web Garden";
+---
+
+<!-- TODO: Dev / Prod mode for SEO image poster -->
+<SEO
+  image={'https://code.juliancataldo.com/poster.png'}
+  title={comboTitle}
+  description={props.description || description}
+  siteName={siteName}
+/>
+
+<!-- Extras -->
+<meta name='author' content='Julian Cataldo' />
+<meta name='copyright' content='ISC' />
+<!-- NOTE: this thing is not official, just an experiment -->
+<meta name='generator' content={generator} />
+<!-- /Extras -->
+
+<Tooltips />
+
+<!-- Disabled for dev' (no accidental triggering of a broken page) -->
+{import.meta.env.MODE === 'production' && (
+  <>
+    <Prefetch max={3} />
+  </>
+)}
+
+<ColorMode />
+
+<ScrollObserver />
+
+<!-- FIXME: Disabled, breaks on vite build -->
+<!-- <Resets /> -->
+
+<!-- TODO: integration -->
+<!-- <LightBox /> -->
+<Favicons />

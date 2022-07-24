@@ -15,18 +15,22 @@ In your layout component, for example `./src/layouts/Default.astro`:
 
 ```astro
 ---
-import Base from '@julian_cataldo/astro-base/Base.astro';
+import Document from '@julian_cataldo/astro-base/Document.astro';
+import Body from '@julian_cataldo/astro-base/Body.astro';
 // ...
 ---
 
 <!-- All properties are optional -->
-<Base
-  lang={'es'}
-  htmlClasses={['some-class', 'doby-doba']}
-  htmlId={'the-id'}
-  bodyClasses={['other-class', 'dabadi-dabada']}
-  bodyId={'much-id'}
-  jsEnabledClass={true}
+<Document
+  id='test-base-rootDoc'
+  data-theme='default'
+  lang='en'
+  class:list={[
+    `mode-${import.meta.env.MODE}`,
+    'test-base-rootDoc-1',
+    'test-base-rootDoc-2',
+  ]}
+  data-test='scrollObserver-rootDoc base-rootDoc'
 >
   <Fragment slot='head'>
     <!-- Things you can inject in HEAD -->
@@ -37,14 +41,19 @@ import Base from '@julian_cataldo/astro-base/Base.astro';
     </style>
   </Fragment>
 
-  <Fragment slot='body'>
+  <Body
+    id='test-base-body'
+    slot='body'
+    class:list={['test-base-body-1', 'test-base-body-2']}
+    data-test='base-body'
+  >
     <!-- Things you can inject in BODY -->
     <nav>My navbar</nav>
 
     <!-- Your page content slot  -->
     <slot></slot>
-  </Fragment>
-</Base>
+  </Body>
+</Document>
 ```
 
 ## 🎉  Result
@@ -89,7 +98,11 @@ with **`.js &`** / **`:not(.js) &`** SCSS selectors.
 
 ---
 
-[LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](https://code.juliancataldo.com/)
+## [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](https://code.juliancataldo.com/)
+
+[![Live demo website](https://code.juliancataldo.com/poster.png)](https://code.juliancataldo.com)
+
+**_[`code.juliancataldo.com`](https://code.juliancataldo.com/)_**
 
 ---
 

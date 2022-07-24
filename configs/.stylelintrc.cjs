@@ -45,5 +45,6 @@ module.exports = {
         ignorePseudoElements: ['v-deep'],
       },
     ],
+    'max-line-length': [100, , { ignore: ['comments'] }],
   },
 };

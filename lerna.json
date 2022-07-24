@@ -1,5 +1,12 @@
 {
-  "packages": ["app/*", "app/*/*", "configs", "components/*", "components/*/*"],
+  "packages": [
+    "demo",
+    "app/*",
+    "app/*/*",
+    "configs",
+    "components/*",
+    "components/*/*"
+  ],
   "useNx": false,
   "version": "independent",
   "command": {

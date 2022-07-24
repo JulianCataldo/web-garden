@@ -1,6 +1,6 @@
 ---
 import Layout from 'src/layouts/Default/Default.astro';
-import LinksTree from 'src/components/LinksTree/LinksTree.astro';
+import PageNavigation from 'src/components/PageNavigation/PageNavigation.astro';
 
 import { structureAllPackages } from 'src/packages-loader';
 
@@ -23,10 +23,11 @@ const titles = {
 
 <Layout titles={titles}>
   <article class='main-content'>
-    <div class='navigation'>
-      <h1>Tooling</h1>
-      <LinksTree links={configPackage.readme.headers} anchorMode={true} />
-    </div>
+    <PageNavigation
+      title='Tooling'
+      links={configPackage.readme.headers}
+      anchorMode={true}
+    />
 
     <div class='content article'>
       <div class='wrapper article-body'>
@@ -35,25 +36,3 @@ const titles = {
     </div>
   </article>
 </Layout>
-
-<!-- <style lang='scss'>
-  article {
-    @include theme(default) {
-      padding: 3rem;
-      margin: 3rem;
-    }
-
-    //   @include theme(default, light) {
-    //     @include default-card(light);
-    //   }
-    //   @include theme(default, dark) {
-    //     @include default-card(dark);
-    //   }
-
-    //   @include theme(hacker) {
-    //     padding: 2rem;
-    //     margin: 2rem;
-    //     @include hacker-card;
-    //   }
-  }
-</style> -->

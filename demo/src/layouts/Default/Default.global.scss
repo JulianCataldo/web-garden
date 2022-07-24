@@ -69,39 +69,6 @@ body {
 
 /* —————————————————————————————————————————————————————————————————————————— */
 
-input[type="checkbox"] {
-  all: unset;
-  width: 0.7em;
-  height: 0.7em;
-  display: inline-block;
-  margin: 0 0.5em;
-  margin-bottom: -0.14em;
-  border-radius: 0.15em;
-
-  @include theme(default, light) {
-    border: 0.15em solid
-      color.adjust($rosewood, $lightness: 40%, $saturation: -50%);
-
-    &:checked {
-      background: color.adjust($rosewood, $lightness: 47%, $saturation: -60%);
-      border: 0.15em solid color.adjust($lavender-blush, $alpha: -0.1);
-      box-shadow: 0px 0px 0.15em color.adjust($rosewood, $lightness: 50%);
-    }
-  }
-  @include theme(default, dark) {
-    border: 0.15em solid
-      color.adjust($rosewood, $lightness: 40%, $saturation: -50%);
-
-    &:checked {
-      background: color.adjust($rosewood, $lightness: 30%, $saturation: -60%);
-      border: 0.15em solid color.adjust($raisin-black, $alpha: -0.1);
-      box-shadow: 0px 0px 0.15em color.adjust($rosewood, $lightness: 50%);
-    }
-  }
-}
-
-/* —————————————————————————————————————————————————————————————————————————— */
-
 // [data-feature-flag] {
 //   display: none !important;
 // }
