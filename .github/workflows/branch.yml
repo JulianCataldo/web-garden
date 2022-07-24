@@ -46,9 +46,10 @@ jobs:
           publish-dir: './demo/dist'
           github-token: ${{ secrets.GITHUB_TOKEN }}
           alias: ${{ steps.get_netlify_alias.outputs.netlify_alias }}
-          # enable-pull-request-comment: false
-          # enable-commit-comment: false
-          # enable-commit-status: false
+          enable-pull-request-comment: false
+          enable-commit-comment: false
+          enable-commit-status: false
+          overwrites-pull-request-comment: false
           github-deployment-environment: ${{ steps.get_netlify_alias.outputs.netlify_alias }}
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
