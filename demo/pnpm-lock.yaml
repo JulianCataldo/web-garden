@@ -22,7 +22,6 @@ specifiers:
   '@julian_cataldo/astro-tooltips': link:../app/Tooltips
   '@julian_cataldo/astro-transition': link:../app/Transition
   '@wbmnky/license-report-generator': ^2.1.3
-  asciinema-player: ^3.0.1
   astro: 1.0.0-beta.72
   astro-icon: ^0.7.1
   astro-imagetools: ^0.6.10
@@ -60,7 +59,6 @@ dependencies:
   '@julian_cataldo/astro-tooltips': link:../app/Tooltips
   '@julian_cataldo/astro-transition': link:../app/Transition
   '@wbmnky/license-report-generator': 2.1.3
-  asciinema-player: 3.0.1
   astro: 1.0.0-beta.72_sass@1.52.3
   astro-icon: 0.7.1
   astro-imagetools: 0.6.10_astro@1.0.0-beta.72
@@ -1361,13 +1359,6 @@ packages:
 
   /asap/2.0.6:
     resolution: {integrity: sha512-BSHWgDSAiKs50o2Re8ppvp3seVHXSRM44cdSsT9FfNEUUZLOGWVCsiWaRPWM1Znn+mqZ1OfVZ3z3DWEzSp7hRA==}
-    dev: false
-
-  /asciinema-player/3.0.1:
-    resolution: {integrity: sha512-plm/C/MhOtZWysrfcT/rzxOuu8vxvvDSvF50pqZS6KpJUDmATedAhO54zktbE/g7RiaaYfzgX8xjRhlQdgISwA==}
-    dependencies:
-      '@babel/runtime': 7.18.6
-      solid-js: 1.4.7
     dev: false
 
   /assert/2.0.0:
@@ -5073,10 +5064,6 @@ packages:
       then-fs: 2.0.0
     transitivePeerDependencies:
       - supports-color
-    dev: false
-
-  /solid-js/1.4.7:
-    resolution: {integrity: sha512-u3hoe5w3xseAc/8zLwYaQVGanWXknMMQkzryNz7lOPy2ygW6DhCtfMseun4kLflRNRzrUUpTV3W5p7j2SGcHCQ==}
     dev: false
 
   /source-map-js/1.0.2:
