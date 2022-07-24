@@ -111,6 +111,7 @@ Cypress:
 - [ ] Implement dev / prod mode for debugging outputs
 - [x] Rehaul demo website
 - [ ] Evaluate PNPM workspaces + tools for replacing Lerna version/publish?
+- [ ] Fix Lerna conventional commits not following breaking changes for versioning
 
 # 🧫  Experimenting
 
