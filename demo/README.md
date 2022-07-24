@@ -12,7 +12,10 @@ Configurations features ESLint, Prettier, Stylelint…
 
 [![Live demo website](https://code.juliancataldo.com/poster.png)](https://code.juliancataldo.com)
 
-**_[`code.juliancataldo.com`](https://code.juliancataldo.com/)_**
+---
+
+_[**Production** deployed on **`code.juliancataldo.com`**](https://code.juliancataldo.com/)._  
+_[**Develop** deployed on **`develop--web-garden.netlify.app`**](https://develop--web-garden.netlify.app)._
 
 ---
 

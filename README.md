@@ -52,7 +52,8 @@ minuscule file sizes compared to "all-or-nothing" UI frameworks.
 
 [![Live demo website](https://code.juliancataldo.com/poster.png)](https://code.juliancataldo.com)
 
-_[Deployed on `code.juliancataldo.com`](https://code.juliancataldo.com/) automatically (GitHub Pages)._
+_[**Production** deployed on **`code.juliancataldo.com`**](https://code.juliancataldo.com/)._  
+_[**Develop** deployed on **`develop--web-garden.netlify.app`**](https://develop--web-garden.netlify.app)._
 
 </div>
 
