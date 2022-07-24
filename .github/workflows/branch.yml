@@ -1,9 +1,9 @@
 name: Build and Deploy [BRANCH] to Netlify
 on:
   push:
-    branches: 
-      - '*'
-      - '!master'
+    # branches: 
+    #   - '*'
+    #   - '!master'
   # pull_request:
 
 jobs:
