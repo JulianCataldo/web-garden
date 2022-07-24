@@ -117,14 +117,15 @@
       width: 100%;
       height: 100%;
       overflow-y: scroll;
-    }
 
-    $offset: 3rem;
-    -webkit-mask-image: linear-gradient(
-      to bottom,
-      white calc(100% - $offset),
-      transparent
-    );
+      $offset: 3rem;
+
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        white calc(100% - $offset),
+        transparent
+      );
+    }
 
     @include theme(default, light) {
       background-color: color.adjust($lavender-blush, $lightness: 3%);
