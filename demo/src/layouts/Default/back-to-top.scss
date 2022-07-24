@@ -9,22 +9,24 @@
 }
 
 .back-to-top-float {
+  position: fixed;
+  right: 0rem;
+  bottom: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 1rem 1rem 0rem 1rem;
   transition: opacity 0.21s, transform 0.21s;
   transition-delay: 0s;
+  @include breakpoint(md) {
+    bottom: 9rem;
+  }
 
   @include scroll-is($bottom: true, $top: true, $going-up: false) {
     opacity: 0;
     transform: translateX(100%);
     transition-delay: 0.2s;
   }
-
-  position: fixed;
-  right: 0rem;
-  bottom: 9rem;
 
   @include theme(default) {
     padding: 0.5rem;
