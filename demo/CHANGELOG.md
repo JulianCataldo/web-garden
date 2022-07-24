@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.2.1...@julian_cataldo/astro-demo@0.3.0) (2022-07-24)
+
+
+### Features
+
+* add version to footer ([c61d6bc](https://github.com/JulianCataldo/web-garden/commit/c61d6bc20764076aac412ff7fb6c387b80d507b3))
+
+
+
 ## [0.2.1](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.2.0...@julian_cataldo/astro-demo@0.2.1) (2022-07-24)
 
 **Note:** Version bump only for package @julian_cataldo/astro-demo
