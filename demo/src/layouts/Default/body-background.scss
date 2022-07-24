@@ -11,9 +11,9 @@ body {
       background: linear-gradient(
         to bottom,
         color.adjust($lavender-blush, $saturation: 80%, $lightness: -4%)
-          calc(75rem - 30vw),
-        color.adjust($rosewood, $saturation: -10%, $lightness: -4%)
-          calc(86rem - 30vw),
+          calc(14vh + 21vw),
+        color.adjust($rosewood, $saturation: -26%, $lightness: 2%)
+          calc(37vh + 36vw),
         $lavender-blush 200vh
       );
     }
