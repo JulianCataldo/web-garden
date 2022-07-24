@@ -12,42 +12,109 @@
 /* —————————————————————————————————————————————————————————————————————————— */
 
 .main-content {
-  margin-top: 10rem;
+  margin-top: -2rem;
   isolation: isolate;
-  display: flex;
-}
+  width: 100vw;
+  max-width: 100%;
 
-.main-content > .article {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-
-  .wrapper {
-    max-width: 53em;
+  @include breakpoint(lg) {
+    width: initial;
+    max-width: initial;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
-[data-theme="default"] {
-  .main-content > .content {
-    margin: 0 2vw;
+.main-content > .article,
+.main-content > .content {
+  // flex-grow: 1;
+  // display: flex;
+  // justify-content: center;
+  @include breakpoint(lg) {
+    width: 70%;
+    flex-grow: 1;
+    min-width: 35rem;
+  }
 
-    &.article > .wrapper.article-body,
-    .package-section,
-    .package {
-      padding: 3rem;
+  .wrapper {
+    max-width: 100%;
+    @include breakpoint(lg) {
+      margin: 0 auto;
+      max-width: 53em;
+    }
+  }
+}
+
+.main-content > .navigation {
+  // flex-basis: calc(11rem + 6vw);
+  // flex-grow: 1;
+  // min-width: 22rem;
+
+  max-width: 24rem;
+
+  @include breakpoint(md) {
+    // width: calc(30% - 4vw);
+    max-width: 28rem;
+  }
+
+  @include breakpoint(lg) {
+    width: calc(30% - 4vw);
+    max-width: 28rem;
+  }
+}
+
+.main-content > .content {
+  margin: 0 0;
+  // flex-grow: 1;
+  // flex-basis: calc(29rem + 8vw);
+  max-width: 100%;
+
+  @include breakpoint(lg) {
+    max-width: initial;
+  }
+
+  @include breakpoint(md) {
+    margin: 0 2vw;
+  }
+
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
+
+  &.article > .wrapper.article-body,
+  .package-section,
+  .package {
+    padding: 5vw;
+    @include breakpoint(lg) {
+      padding: 2em;
+    }
+  }
+
+  .package {
+    @include breakpoint(lg) {
+      // max-width: 73em;
+    }
+  }
+
+  &.article > .wrapper.article-body {
+    @include breakpoint(lg) {
+      // max-width: 53em;
+    }
+  }
+
+  .package,
+  .package-section {
+    margin: 2rem 0;
+    @include breakpoint(lg) {
+      margin: 2vw 0;
     }
 
-    .package,
-    .package-section {
-      margin: 2vw;
+    &:first-child {
+      margin-top: 0rem;
+    }
 
-      &:first-child {
-        margin-top: 0rem;
-      }
-
-      &:last-child {
-        margin-bottom: 0rem;
-      }
+    &:last-child {
+      margin-bottom: 0rem;
     }
   }
 }
@@ -64,6 +131,39 @@ body {
   }
   @include theme(default, dark) {
     --app-overlay-color: #{$raisin-black};
+  }
+}
+
+/* —————————————————————————————————————————————————————————————————————————— */
+
+input[type="checkbox"] {
+  all: unset;
+  width: 0.7em;
+  height: 0.7em;
+  display: inline-block;
+  margin: 0 0.5em;
+  margin-bottom: -0.14em;
+  border-radius: 0.15em;
+
+  @include theme(default, light) {
+    border: 0.15em solid
+      color.adjust($rosewood, $lightness: 40%, $saturation: -50%);
+
+    &:checked {
+      background: color.adjust($rosewood, $lightness: 47%, $saturation: -60%);
+      border: 0.15em solid color.adjust($lavender-blush, $alpha: -0.1);
+      box-shadow: 0px 0px 0.15em color.adjust($rosewood, $lightness: 50%);
+    }
+  }
+  @include theme(default, dark) {
+    border: 0.15em solid
+      color.adjust($rosewood, $lightness: 40%, $saturation: -50%);
+
+    &:checked {
+      background: color.adjust($rosewood, $lightness: 30%, $saturation: -60%);
+      border: 0.15em solid color.adjust($raisin-black, $alpha: -0.1);
+      box-shadow: 0px 0px 0.15em color.adjust($rosewood, $lightness: 50%);
+    }
   }
 }
 
