@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.4.0...@julian_cataldo/astro-demo@0.5.0) (2022-07-26)
+
+
+### Features
+
+* add analytics to demo website ([3fbf282](https://github.com/JulianCataldo/web-garden/commit/3fbf2826ed539486b758365bf8017b9f1a005f0e))
+
+
+### Bug Fixes
+
+* hotfix enormous bug, home page nav broken ([7344cd9](https://github.com/JulianCataldo/web-garden/commit/7344cd9b395030c1ab6db9edadbe2a1b154daebf))
+
+
+
 ## [0.4.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.3.0...@julian_cataldo/astro-demo@0.4.0) (2022-07-24)
 
 

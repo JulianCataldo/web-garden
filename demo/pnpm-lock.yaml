@@ -8,6 +8,7 @@ specifiers:
   '@fontsource/exo-2': ^4.5.8
   '@iconify-json/system-uicons': ^1.1.4
   '@julian_cataldo/astro': link:..
+  '@julian_cataldo/astro-analytics': link:../app/Analytics
   '@julian_cataldo/astro-base': link:../app/Base
   '@julian_cataldo/astro-breakpoints': link:../app/Breakpoints
   '@julian_cataldo/astro-color-mode': link:../app/ColorMode
@@ -45,6 +46,7 @@ dependencies:
   '@docsearch/react': 3.1.1_biqbaboplfbrettd7655fr4n2y
   '@fontsource/exo-2': 4.5.8
   '@julian_cataldo/astro': link:..
+  '@julian_cataldo/astro-analytics': link:../app/Analytics
   '@julian_cataldo/astro-base': link:../app/Base
   '@julian_cataldo/astro-breakpoints': link:../app/Breakpoints
   '@julian_cataldo/astro-color-mode': link:../app/ColorMode

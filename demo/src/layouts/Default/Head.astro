@@ -4,6 +4,8 @@ import Tooltips from '@julian_cataldo/astro-tooltips/Tooltips.astro';
 import ColorMode from '@julian_cataldo/astro-color-mode/ColorMode.astro';
 import Prefetch from '@julian_cataldo/astro-prefetch/Prefetch.astro';
 import ScrollObserver from '@julian_cataldo/astro-scroll-observer/ScrollObserver.astro';
+import Analytics from '@julian_cataldo/astro-analytics/Analytics.astro';
+/* —————————————————————————————————————————————————————————————————————————— */
 import Favicons from 'src/components/Favicons.astro';
 /* —————————————————————————————————————————————————————————————————————————— */
 import { description } from '@julian_cataldo/astro/package.json';
@@ -43,6 +45,8 @@ const siteName = "Julian's Web Garden";
 <ColorMode />
 
 <ScrollObserver />
+
+<Analytics id='G-RW3VKT4PD3' />
 
 <!-- FIXME: Disabled, breaks on vite build -->
 <!-- <Resets /> -->
