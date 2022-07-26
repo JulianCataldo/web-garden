@@ -18,11 +18,12 @@ const url = `https://www.googletagmanager.com/gtag/js?id=${props.id}`;
 </script>
 
 <script is:inline define:vars={{ id: props.id }}>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
-
-  gtag('config', props.id);
+  (() => {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', id);
+  })();
 </script>
