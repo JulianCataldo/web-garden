@@ -7,6 +7,7 @@ import AstroPrefetch from './astro-prefetch.astro';
 // import AstroScrollObserver from './astro-scroll-observer.astro';
 import AstroTooltips from './astro-tooltips.astro';
 import AstroColorMode from './astro-color-mode.astro';
+import AstroDiagram from './astro-diagram.astro';
 
 export interface Props {
   name: string;
@@ -24,6 +25,8 @@ if (typeof props.name !== 'string') {
     //   return <AstroBreakpoints />
     case 'astro-licenses-report':
       return <AstroLicensesReport />
+    case 'astro-diagram':
+      return <AstroDiagram />
     case 'astro-link':
       return <AstroLink />
     case 'astro-media-map':
