@@ -29,7 +29,10 @@ Object.entries(props).forEach(([key, val]) => {
 ---
 
 <div
-  style={`z-index: 0; width: ${props.width}; height: ${props.height}`}
+  style={`z-index: 0; width: ${props.width}; height: ${props.height}; ` +
+    `--display: ${
+      props.attribution ? 'initial' : 'none'
+    }` /* NOTE: workaround as `define:vars` isn't working */}
   id='map'
   data-x={props.x}
   data-y={props.y}
@@ -45,8 +48,11 @@ Object.entries(props).forEach(([key, val]) => {
 
   if (mapElem) {
     const map = Leaflet.map('map', {
-      center: [mapElem.getAttribute('data-x'), mapElem.getAttribute('data-y')],
-      zoom: mapElem.getAttribute('data-z') || 14,
+      center: [
+        parseFloat(mapElem.getAttribute('data-x')),
+        parseFloat(mapElem.getAttribute('data-y')),
+      ],
+      zoom: parseFloat(mapElem.getAttribute('data-z')) || 14,
       scrollWheelZoom: false,
     });
 
@@ -63,11 +69,8 @@ Object.entries(props).forEach(([key, val]) => {
   }
 </script>
 
-<style
-  lang='scss'
-  is:global
-  define:vars={{ display: props.attribution ? 'initial' : 'none' }}
->
+<!-- FIXME: `define:vars` not working in this component only -->
+<style lang='scss' is:global>
   @import 'leaflet';
   .leaflet-control-attribution {
     display: var(--display, 'initial');
