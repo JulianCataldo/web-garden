@@ -1,5 +1,8 @@
 ---
 import Document from '@julian_cataldo/astro-base/Document.astro';
+import Body from '@julian_cataldo/astro-base/Body.astro';
 ---
 
-<Document redirectTo={'/components'} />
+<Document id='test' redirectTo={'/components'}>
+  <Body id='test' slot='body'><div>Redirecting to "components"…</div></Body>
+</Document>

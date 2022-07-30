@@ -8,7 +8,7 @@ const internalProps: string[] = ['class:list'];
 
 if (typeof props.jsEnabledClass !== 'boolean') props.jsEnabledClass = true;
 internalProps.push('jsEnabledClass');
-if (typeof props.redirectTo !== 'boolean') props.redirectTo = null;
+if (typeof props.redirectTo !== 'string') props.redirectTo = null;
 internalProps.push('redirectTo');
 /* ·········································································· */
 const extraAttrs: { [key: string]: string } = {};
@@ -40,7 +40,7 @@ Object.entries(props).forEach(([key, val]) => {
     <meta name='viewport' content='width=device-width, initial-scale=1' />
 
     {props.redirectTo && (
-      <meta http-equiv="refresh" content={`0; url=/components`} />
+      <meta http-equiv="refresh" content={`0; url=${props.redirectTo}`} />
     )}
 
     <slot name='head'></slot>
