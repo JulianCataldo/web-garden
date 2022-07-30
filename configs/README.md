@@ -12,7 +12,7 @@ Tools: Prettier, ESlint, Stylelint, Editorconfig, TypeScript, Commitlint, VS Cod
 
 ---
 
-<div class="git-toc">
+<div class="git-hide">
 
 - [Astro configurations collection](#astro-configurations-collection)
 - [Installation](#installation)
