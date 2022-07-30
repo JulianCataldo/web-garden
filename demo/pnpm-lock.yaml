@@ -12,7 +12,7 @@ specifiers:
   '@julian_cataldo/astro-base': link:../app/Base
   '@julian_cataldo/astro-breakpoints': link:../app/Breakpoints
   '@julian_cataldo/astro-color-mode': link:../app/ColorMode
-  '@julian_cataldo/astro-configs': ^0.12.0
+  '@julian_cataldo/astro-configs': ^0.12.1
   '@julian_cataldo/astro-diagram': link:../components/Diagram
   '@julian_cataldo/astro-licenses-report': link:../components/LicensesReport
   '@julian_cataldo/astro-lightbox': link:../app/Lightbox
