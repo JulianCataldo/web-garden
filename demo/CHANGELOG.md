@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.5.0...@julian_cataldo/astro-demo@0.6.0) (2022-07-30)
+
+
+### Features
+
+* change site poster image ([9de7046](https://github.com/JulianCataldo/web-garden/commit/9de704630119ed6ba306bc00041e2434aebfa95e))
+* change source repo. link to `develop` branch ([de015a4](https://github.com/JulianCataldo/web-garden/commit/de015a4255bb68161b537f1a5553071b1f1e0d9f))
+* init diagram component demo ([0c05af2](https://github.com/JulianCataldo/web-garden/commit/0c05af2511bf8ec023784815fd76e7ed70558cec))
+
+
+### Bug Fixes
+
+* handle no changelog file ([a0346d0](https://github.com/JulianCataldo/web-garden/commit/a0346d04896c69e6e575cb81cd7f22ecee6109b9))
+* soft redirection, `/app` to `/component` ([55b9cc6](https://github.com/JulianCataldo/web-garden/commit/55b9cc6952ea1b2de4cf68f09d0ba783e99a7e64))
+* update css specificity after astro change ([764ae63](https://github.com/JulianCataldo/web-garden/commit/764ae6314216c85d58f66204816ed0f90c267e64))
+
+
+
 ## [0.5.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.4.0...@julian_cataldo/astro-demo@0.5.0) (2022-07-26)
 
 

@@ -1,9 +1,8 @@
 ---
-// eslint-disable-next-line no-undef
 export interface Props extends astroHTML.JSX.HTMLAttributes {}
 const props = { ...Astro.props } as Props;
 /* ———————————————————————————————————————————— Typeguards + Fallbacks —————— */
-const internalProps: string[] = ['class:list'];
+const internalProps: string[] = ['class:list', 'slot'];
 /* ·········································································· */
 const extraAttrs: { [key: string]: string } = {};
 Object.entries(props).forEach(([key, val]) => {

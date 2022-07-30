@@ -96,7 +96,7 @@
     margin-bottom: 6rem;
   }
 
-  h2 {
+  .title {
     margin: 1rem 0 1rem 0;
     @include breakpoint(md) {
       text-shadow: 0.09em 0.09em 0.09em color.adjust($rosewood, $alpha: -0.6);

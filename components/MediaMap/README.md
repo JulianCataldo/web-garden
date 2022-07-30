@@ -5,8 +5,11 @@ Uses [Leaflet.js](https://leafletjs.com) under the hood.
 
 ## 📦  Installation
 
+<!-- Should investigate peerDeps auto-install, that way, only `pnpm i [package]` will suffice -->
+
 ```sh
 pnpm i @julian_cataldo/astro-media-map leaflet
+pnpm i -D @types/leaflet
 ```
 
 ## 🛠  Usage

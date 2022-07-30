@@ -2,11 +2,11 @@
 import PageNavigation from 'src/components/PageNavigation/PageNavigation.astro';
 import Layout from 'src/layouts/Default/Default.astro';
 import SinglePackage from 'src/modules/Single/Package/SinglePackage.astro';
-import { structureAllPackages } from 'src/packages-loader';
+import loadPackages from 'src/packages-loader';
 
 const { params } = Astro;
 
-const packages = await structureAllPackages({
+const packages = await loadPackages({
   pJsons: await Astro.glob(
     '../../../../{app,components}/{*/,*/*/}package.json',
   ),
@@ -26,7 +26,7 @@ const thePackage = packages
   .pop();
 
 export async function getStaticPaths() {
-  const packagesForRoutes = await structureAllPackages({
+  const packagesForRoutes = await loadPackages({
     pJsons: await Astro.glob(
       '../../../../{app,components}/{*/,*/*/}package.json',
     ),
@@ -82,7 +82,7 @@ if (thePackage.changelog) {
   });
 }
 if (thePackage.pJson.repository.directory && thePackage.pJson.repository.url) {
-  const url = `${thePackage.pJson.repository.url}/tree/master/${thePackage.pJson.repository.directory}`;
+  const url = `${thePackage.pJson.repository.url}/tree/develop/${thePackage.pJson.repository.directory}`;
   actions.push({ title: 'Source', href: url, icon: 'mdi:github' });
 }
 if (thePackage.pJson.name) {

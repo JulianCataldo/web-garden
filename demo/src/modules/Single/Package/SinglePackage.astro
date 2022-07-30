@@ -24,7 +24,7 @@ const ReadMe = props?.content?.readme?.Content;
     <>
       {props.content.pJson?.keywords.length && (
         <section class="keywords">
-          <h2>Keywords:</h2>
+          <h2 class="title">Keywords:</h2>
           <ul class="keywords-list">
             {props.content.pJson.keywords.map((keyword) => (
               <li class="keyword">{keyword}</li>
@@ -71,7 +71,7 @@ const ReadMe = props?.content?.readme?.Content;
           <Table data={props.content.api.properties} class="api-props" />
         </section>
       )}
-      {props.content.changelog && (
+      {props.content?.changelog?.Content && (
         <section id="changelog" class="package-section article-body">
           <h2>Changelog</h2>
 

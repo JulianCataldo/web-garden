@@ -11,6 +11,7 @@ import NavigationBar from 'src/components/NavigationBar/NavigationBar.astro';
 import Footer from './Footer.astro';
 import Head from './Head.astro';
 /* ·········································································· */
+// FIXME: FOUT
 import '@fontsource/exo-2/variable.css';
 import '@fontsource/exo-2/variable-italic.css';
 /* —————————————————————————————————————————————————————————————————————————— */
@@ -45,7 +46,7 @@ if (typeof props?.titles?.main !== 'string') {
 
   <Body
     id='test-base-body'
-    slot='body'
+    slot={'body' /* NOTE: investigate why this works */}
     class:list={['test-base-body-1', 'test-base-body-2']}
     data-test='base-body'
   >

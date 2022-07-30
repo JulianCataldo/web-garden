@@ -1,0 +1,73 @@
+---
+// FIXME: random typings detection for `headless-mermaid`
+import headlessMermaid from 'headless-mermaid';
+import type mermaidAPI from 'mermaid/mermaidAPI';
+/* ·········································································· */
+import cache from './cache';
+/* —————————————————————————————————————————————————————————————————————————— */
+import type { Props as baseProps } from './Props';
+
+export interface Props extends baseProps {}
+const props = { ...Astro.props } as Props;
+export type Config = mermaidAPI.Config;
+/* ———————————————————————————————————————————— Typeguards + Fallbacks —————— */
+if (typeof props.config !== 'object') props.config = {};
+if (typeof props.code !== 'string') props.code = '';
+/* —————————————————————————————————————————————————————————————————————————— */
+
+/* We don't want to regenerate the diagram if nothing has changed */
+function generateHash(data: string) {
+  // Dark magic: https://stackoverflow.com/a/7616484/2890472
+  let hash = 0;
+  let i;
+  let chr;
+  if (data.length === 0) return hash;
+  for (i = 0; i < data.length; i += 1) {
+    chr = data.charCodeAt(i);
+    // eslint-disable-next-line no-bitwise
+    hash = (hash << 5) - hash + chr;
+    // eslint-disable-next-line no-bitwise
+    hash |= 0; // Convert to 32bit integer
+  }
+  return hash;
+}
+
+const userData = JSON.stringify({ code: props.code, config: props.config });
+const uniqueKey = generateHash(userData);
+
+if (cache[uniqueKey] === undefined) {
+  /* Render the mermaid diagram */
+  const result: string | false = await headlessMermaid
+    // NOTE: Fetching mermaid from CDN isn't ideal, should use NPM package?
+    .execute(props.code, props.config, 'mermaid.min@9.1.3')
+    .then((r) => r)
+    .catch((e) => {
+      // eslint-disable-next-line no-console
+      console.log(e);
+      return false;
+    });
+  if (result) {
+    /* Store diagram data to cache */
+    cache[uniqueKey] = { code: props.code, config: props.config, result };
+  }
+}
+---
+
+{cache[uniqueKey] && (
+  <div class="mermaid-diagram">
+    <Fragment set:html={cache[uniqueKey].result} data-test="mermaid" />
+  </div>
+)}
+
+<style>
+  .mermaid-diagram {
+    /* Necessary to avoid pixelated font rendering on macOS/Chrome, why? */
+    /* Also, why this looks awful on Safari with every settings tested? */
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+    /* Necessary for Safari, which doesn't make the SVG full width, why? */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+</style>

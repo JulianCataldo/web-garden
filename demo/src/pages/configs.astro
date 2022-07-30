@@ -2,10 +2,10 @@
 import Layout from 'src/layouts/Default/Default.astro';
 import PageNavigation from 'src/components/PageNavigation/PageNavigation.astro';
 
-import { structureAllPackages } from 'src/packages-loader';
+import loadPackages from 'src/packages-loader';
 
 const configPackage = (
-  await structureAllPackages({
+  await loadPackages({
     pJsons: await Astro.glob('../../../configs/package.json'),
     readmes: await Astro.glob('/content/packages/configs/README.md'),
     changelogs: await Astro.glob(

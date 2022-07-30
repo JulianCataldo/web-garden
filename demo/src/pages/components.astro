@@ -3,9 +3,9 @@ import Layout from 'src/layouts/Default/Default.astro';
 import ComponentList from 'src/modules/ComponentList/ComponentList.astro';
 import PageNavigation from 'src/components/PageNavigation/PageNavigation.astro';
 
-import { structureAllPackages } from 'src/packages-loader';
+import loadPackages from 'src/packages-loader';
 
-const packages = await structureAllPackages({
+const packages = await loadPackages({
   pJsons: await Astro.glob('../../../{app,components}/{*/,*/*/}package.json'),
   readmes: await Astro.glob(
     '/content/packages/{app,components}/{*/,*/*/}README.md',

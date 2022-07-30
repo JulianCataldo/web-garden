@@ -24,12 +24,14 @@ minuscule file sizes compared to "all-or-nothing" UI frameworks.
 
 ---
 
-<div class="git-toc">
+<div class="git-hide">
 
 - [🚀  Julian's Web Garden](#julians-web-garden)
   - [🤷🏼‍♂️  Philosophy](#️philosophy)
 - [🔗  Quick links](#quick-links)
   - [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](#live-demo--documentation-website)
+    - [Architecture](#architecture)
+      - [Terminology](#terminology)
   - [📖  Website source code](#website-source-code)
   - [📦  Application-level components](#application-level-components)
   - [📦  Components](#components)
@@ -46,16 +48,84 @@ minuscule file sizes compared to "all-or-nothing" UI frameworks.
 
 # 🔗  Quick links
 
-<div class="git-web-garden-link">
-
 ## [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](https://code.juliancataldo.com/)
 
+<div class="git-hide">
+
 [![Live demo website](https://code.juliancataldo.com/poster.png)](https://code.juliancataldo.com)
+
+</div>
 
 _[**Production** deployed on **`code.juliancataldo.com`**](https://code.juliancataldo.com/)._  
 _[**Develop** deployed on **`develop--web-garden.netlify.app`**](https://develop--web-garden.netlify.app)._
 
+<div class="git-hide">
+
+<!-- TODO: integrate mermaid renderer into website / or pre-render SVG -->
+
+### Architecture
+
+```mermaid
+
+flowchart TB
+
+subgraph Pages
+Home(Home)
+Etc2("...")
+end
+subgraph Components
+  subgraph Layouts
+  Default('Default')
+  Etc3("...")
+  end
+  subgraph Application
+  SEO('SEO')
+  Prefetch('Prefetch')
+  Etc("...")
+  end
+  subgraph Modules
+  Landing('Landing')
+  SinglePackage('SinglePackage')
+  Etc5("...")
+  end
+  subgraph Generic
+  Link('Link')
+  LicensesReport('LicensesReport')
+  Etc4("...")
+  end
+end
+
+Data(Data)-->Pages
+
+Application-->Layouts
+Generic-->Pages
+Modules-->Pages
+Generic-->Modules
+Generic-->Layouts
+Layouts-->Pages
+
+```
+
 </div>
+
+---
+
+#### Terminology
+
+- **Pages**: the base component entry point.  
+  All other parts (**layouts**, generic **components**, **modules**…) and data are directly or indirectly gathered from here.
+- **Layout**: Where your website shells lives. This is where you put your global navigation, footer…
+  Alternative layouts can be created like  
+  `Print`, `Compact`, `Bare`, `Blog`…
+- **App-level component**: used everywhere, anytime, for a given **layout**, which import them.  
+  E.g. Color modes handler, breakpoints handler…
+- **Component**: Ubiquitous general purpose, atomic components.  
+  E.g. icons, images, links, maps, videos…
+- **Module**: Complex set of components, forming a single purpose page view/section.  
+  E.g. `Landing`, `SinglePackage`, `ContactForm`…
+- **Data**: Local JSONs, Markdown files, remote APIs…  
+  Should be fetched from **pages**. Note that this is not a hard rule or a technical limitation with Astro as with other frameworks.  
+  Ultimately, this pattern makes data-flow easier to follow ("top -> down"), preventing spaghetti code, duplications and performance hogs.
 
 ## [📖  Website source code](https://github.com/JulianCataldo/web-garden/tree/master/demo)
 
@@ -113,6 +183,9 @@ Cypress:
 - [x] Rehaul demo website
 - [ ] Evaluate PNPM workspaces + tools for replacing Lerna version/publish?
 - [ ] Fix Lerna conventional commits not following breaking changes for versioning
+- [ ] Full no JS compatibility / fallbacks checks
+  - [ ] Fix CSS theme not loading
+- [ ] Fix flash of unstyled text (critical font loading strategy)
 
 # 🧫  Experimenting
 
