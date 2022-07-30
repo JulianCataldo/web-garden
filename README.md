@@ -125,7 +125,9 @@ Layouts-->Pages
   E.g. icons, images, links, maps, videos…
 - **Module**: Complex set of components, forming a single purpose page view/section.  
   E.g. `Landing`, `SinglePackage`, `ContactForm`…
-- **Data**: local JSONs, Markdown files, remote APIs…
+- **Data**: Local JSONs, Markdown files, remote APIs…  
+  Should be fetched from **pages**. Note that this is not a hard rule or a technical limitation with Astro as with other frameworks.  
+  Ultimately, this pattern makes data-flow easier to follow ("top -> down"), preventing spaghetti code, duplications and performance hogs.
 
 ## [📖  Website source code](https://github.com/JulianCataldo/web-garden/tree/master/demo)
 
