@@ -1,4 +1,5 @@
 ---
+// FIXME: random typings detection for `headless-mermaid`
 import headlessMermaid from 'headless-mermaid';
 import type mermaidAPI from 'mermaid/mermaidAPI';
 /* ·········································································· */
@@ -59,9 +60,14 @@ if (cache[uniqueKey] === undefined) {
 )}
 
 <style>
-  /* This is necessary to avoid pixelated font rendering on mac/chrome, why? */
   .mermaid-diagram {
+    /* Necessary to avoid pixelated font rendering on macOS/Chrome, why? */
+    /* Also, why this looks awful on Safari with every settings tested? */
     -webkit-font-smoothing: auto;
     -moz-osx-font-smoothing: auto;
+    /* Necessary for Safari, which doesn't make the SVG full width, why? */
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 </style>
