@@ -82,7 +82,7 @@ if (thePackage.changelog) {
   });
 }
 if (thePackage.pJson.repository.directory && thePackage.pJson.repository.url) {
-  const url = `${thePackage.pJson.repository.url}/tree/master/${thePackage.pJson.repository.directory}`;
+  const url = `${thePackage.pJson.repository.url}/tree/develop/${thePackage.pJson.repository.directory}`;
   actions.push({ title: 'Source', href: url, icon: 'mdi:github' });
 }
 if (thePackage.pJson.name) {
