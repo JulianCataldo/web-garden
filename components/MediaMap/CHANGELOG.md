@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.3](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-media-map@0.11.2...@julian_cataldo/astro-media-map@0.11.3) (2022-07-30)
+
+
+### Bug Fixes
+
+* workaround for `define:vars` breaking render ([c57e799](https://github.com/JulianCataldo/web-garden/commit/c57e7995cbcb990855e8c724190f0700120b6af1))
+
+
+
 ## [0.11.2](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-media-map@0.11.1...@julian_cataldo/astro-media-map@0.11.2) (2022-07-24)
 
 **Note:** Version bump only for package @julian_cataldo/astro-media-map

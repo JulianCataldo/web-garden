@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.3](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-base@0.13.2...@julian_cataldo/astro-base@0.13.3) (2022-07-30)
+
+
+### Bug Fixes
+
+* compiler bug workaround, `//` before export ([23d6614](https://github.com/JulianCataldo/web-garden/commit/23d661487d33d1748a0656c0247c08d9da161ed9))
+* remove internal slot prop from `extraAttrs` ([9069676](https://github.com/JulianCataldo/web-garden/commit/90696765c8a3b132d7299cd07390291585012170))
+* soft redirection, `/app` to `/component` ([55b9cc6](https://github.com/JulianCataldo/web-garden/commit/55b9cc6952ea1b2de4cf68f09d0ba783e99a7e64))
+
+
+
 ## [0.13.2](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-base@0.13.1...@julian_cataldo/astro-base@0.13.2) (2022-07-24)
 
 **Note:** Version bump only for package @julian_cataldo/astro-base
