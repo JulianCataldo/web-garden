@@ -69,41 +69,39 @@ _[**Develop** deployed on **`develop--web-garden.netlify.app`**](https://develop
 
 flowchart TB
 
-  subgraph Pages
-  Home(Home)
-  Etc2("...")
+subgraph Pages
+Home(Home)
+Etc2("...")
+end
+subgraph Components
+  subgraph Layouts
+  Default('Default')
+  Etc3("...")
   end
-  subgraph Components
-    subgraph Layouts
-    Default('Default')
-    Etc3("...")
-    end
-    subgraph Application
-    SEO('SEO')
-    Prefetch('Prefetch')
-    Etc("...")
-    end
-    subgraph Modules
-    Landing('Landing')
-    SinglePackage('SinglePackage')
-    Etc5("...")
-    end
-    subgraph Generic
-    Link('Link')
-    LicensesReport('LicensesReport')
-    Etc4("...")
-    end
+  subgraph Application
+  SEO('SEO')
+  Prefetch('Prefetch')
+  Etc("...")
   end
+  subgraph Modules
+  Landing('Landing')
+  SinglePackage('SinglePackage')
+  Etc5("...")
+  end
+  subgraph Generic
+  Link('Link')
+  LicensesReport('LicensesReport')
+  Etc4("...")
+  end
+end
 
+Data(Data)-->Pages
 
-Data(Data)--->Pages
-
-
-Application--->Layouts
-Generic--->Pages
+Application-->Layouts
+Generic-->Pages
 Modules-->Pages
-Generic--->Modules
-Generic--->Layouts
+Generic-->Modules
+Generic-->Layouts
 Layouts-->Pages
 
 ```
