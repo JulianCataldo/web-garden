@@ -71,7 +71,7 @@ const ReadMe = props?.content?.readme?.Content;
           <Table data={props.content.api.properties} class="api-props" />
         </section>
       )}
-      {props.content.changelog && (
+      {props.content?.changelog?.Content && (
         <section id="changelog" class="package-section article-body">
           <h2>Changelog</h2>
 
