@@ -1,56 +1,14 @@
-import type { MarkdownInstance } from 'astro';
-import type { MarkdownHeader } from '@astrojs/markdown-remark';
-import type { AstroComponentFactory } from 'astro/dist/types/runtime/server';
 import fs from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import glob from 'glob-promise';
+import type { Package, PackageLoaderProps, PJson } from './types';
 
-interface PJson {
-  name: string;
-  description: string;
-  repository: {
-    url: string;
-    directory: string;
-  };
-  version: string;
-  keywords: string[];
-}
-interface mdFile {
-  mainTitle?: MarkdownHeader;
-  headers?: MarkdownHeader[] | null;
-  Content: AstroComponentFactory | null;
-}
-
-export interface APIProps {
-  name?: string;
-  type?: string;
-  required?: boolean;
-  default?: string;
-}
-interface API {
-  extends?: null | string;
-  properties?: APIProps[] | null;
-}
-
-export interface Package {
-  pJson: PJson | null;
-  readme: mdFile | null;
-  changelog: mdFile | null;
-  typescriptProps: string | null;
-  api: API | null;
-  video: string | null;
-  shortname: string | null;
-  hasDemo: boolean;
-}
-
-interface Props {
-  pJsons: PJson[];
-  readmes: MarkdownInstance<unknown>[];
-  changelogs: MarkdownInstance<unknown>[] | null;
-  anchorMode: boolean;
-}
-export async function structureAllPackages(props: Props): Promise<Package[]> {
+export default async function loadPackages(
+  props: PackageLoaderProps,
+): Promise<Package[]> {
   const packages: Package[] = [];
+
+  /* ———————————————————————————————————————— Package.json —————————————————— */
 
   props.pJsons.forEach((pJson: PJson) => {
     packages.push({
@@ -83,7 +41,9 @@ export async function structureAllPackages(props: Props): Promise<Package[]> {
 
   await Promise.all(
     props.readmes.map(async (readme, index) => {
-      const headers = await readme.getHeaders();
+      const headers = await readme.getHeadings();
+
+      /* ———————————————————————————————————————— Readme ———————————————————— */
 
       packages[index].readme = {
         mainTitle: {
@@ -99,7 +59,7 @@ export async function structureAllPackages(props: Props): Promise<Package[]> {
 
       /* ———————————————————————————————————————— Changelog ————————————————— */
 
-      props.changelogs?.map((changelogFile) => {
+      props.changelogs?.forEach((changelogFile) => {
         if (changelogFile.file.replace('CHANGELOG', 'README') === readme.file) {
           packages[index].changelog = {
             Content: changelogFile.Content,
@@ -115,16 +75,7 @@ export async function structureAllPackages(props: Props): Promise<Package[]> {
       );
       packages[index].shortname = shortname;
 
-      /* ———————————————————————————————————————————————————————————————————— */
-
       const dir = packages[index].pJson.repository.directory;
-
-      // Old way
-      // packages[index].typescriptProps = await fs
-      //   .readFile(`../${dir}/Props.ts`, 'utf8')
-      //   .catch((e) => {
-      //     return null;
-      //   });
 
       /* ———————————————————————————————————————— TS API ———————————————————— */
 
@@ -135,7 +86,7 @@ export async function structureAllPackages(props: Props): Promise<Package[]> {
         .then((file) => JSON.parse(file))
         .catch(() => null);
 
-      /* ———————————————————————————————————————————————————————————————————— */
+      /* ———————————————————————————————————————— Video ————————————————————— */
 
       const videoName = packages[index].pJson.name
         .replace('@julian_cataldo/', '')
@@ -143,7 +94,7 @@ export async function structureAllPackages(props: Props): Promise<Package[]> {
 
       /* In Public folder */
       const videoPath = `/assets/videos/tests/*-${videoName}.cy.ts.mp4`;
-      const video = await (await glob(`./public/${videoPath}`)).pop();
+      const video = (await glob(`./public/${videoPath}`)).pop();
       if (video) {
         packages[index].video = video.replace('./public', '');
       }
