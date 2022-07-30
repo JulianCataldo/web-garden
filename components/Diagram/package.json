@@ -1,0 +1,43 @@
+{
+  "name": "@julian_cataldo/astro-diagram",
+  "version": "0.9.0",
+  "description": "Embed you Mermaid diagrams in no time inside your Astro templates. Features server-side rendering and smart caching.",
+  "main": "index.js",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Julian Cataldo",
+  "homepage": "https://code.juliancataldo.com/component/astro-diagram",
+  "bugs": {
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianCataldo/web-garden",
+    "directory": "components/Diagram"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "astro",
+    "astro-component",
+    "mermaid",
+    "diagram",
+    "gantt",
+    "flowchart",
+    "charts",
+    "ssr",
+    "puppeteer",
+    "headless"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "@wbmnky/license-report-generator": "^2.1.3",
+    "headless-mermaid": "^1.3.0"
+  },
+  "devDependencies": {
+    "@types/mermaid": "^8.2.9"
+  }
+}
