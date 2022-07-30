@@ -24,7 +24,7 @@ const ReadMe = props?.content?.readme?.Content;
     <>
       {props.content.pJson?.keywords.length && (
         <section class="keywords">
-          <h2>Keywords:</h2>
+          <h2 class="title">Keywords:</h2>
           <ul class="keywords-list">
             {props.content.pJson.keywords.map((keyword) => (
               <li class="keyword">{keyword}</li>
