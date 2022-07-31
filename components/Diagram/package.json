@@ -34,7 +34,6 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "@wbmnky/license-report-generator": "^2.1.3",
     "headless-mermaid": "^1.3.0",
     "unist-util-visit": "^4.1.0"
   },
