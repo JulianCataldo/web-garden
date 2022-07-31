@@ -1,7 +1,8 @@
 # 🚀  Astro — Diagrams with Mermaid JS 🧜🏻‍♀️
 
-Embed you Mermaid diagrams in no time inside your Astro templates. Features **server-side rendering** and **smart
-caching**.
+Embed you Mermaid diagrams in no time inside your Astro templates.  
+Features **server-side rendering** and **smart caching**.  
+Available as a stand-alone component or as an MDX plugin, replacing `mermaid` code blocks.
 
 ---
 
@@ -52,6 +53,30 @@ Alice->John: Yes... John, how are you?`;
   <!-- ... -->
 </body>
 ```
+
+### With MDX
+
+> **Warning**:  
+> This is still a work-in-progress.  
+> There is still some rendering bugs and inconsistencies.
+
+In your `astro.config.mjs`:
+
+```mjs
+import mdxMermaidPlugin from '@julian_cataldo/astro-diagram';
+// ...
+
+export default defineConfig({
+  // ...
+  integrations: [
+    mdx({ remarkPlugins: { extends: [mdxMermaidPlugin] } }),
+    // ...
+  ],
+  // ...
+});
+```
+
+Then, in your MDX, use the `mermaid` language for your code fences, exactly like you would on GitHub flavored Markdown for example.
 
 <div class="git-hide">
 
