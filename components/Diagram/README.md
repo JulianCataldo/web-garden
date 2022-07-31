@@ -44,7 +44,7 @@ Alice->John: Yes... John, how are you?`;
 ```astro
 <!-- ... -->
 <body>
-  <!-- Place component inside BODY tag -->
+  <!-- Place component inside `BODY` tag -->
 
   <Diagram config={config} code={code /* required */} />
 

@@ -33,7 +33,7 @@ import Body from '@julian_cataldo/astro-base/Body.astro';
   data-test='scrollObserver-rootDoc base-rootDoc'
 >
   <Fragment slot='head'>
-    <!-- Things you can inject in HEAD -->
+    <!-- Things you can inject in `HEAD` -->
     <style is:inline>
       .some-class {
         color: red;
@@ -47,7 +47,7 @@ import Body from '@julian_cataldo/astro-base/Body.astro';
     class:list={['test-base-body-1', 'test-base-body-2']}
     data-test='base-body'
   >
-    <!-- Things you can inject in BODY -->
+    <!-- Things you can inject in `BODY` -->
     <nav>My navbar</nav>
 
     <!-- Your page content slot  -->
@@ -67,7 +67,7 @@ import Body from '@julian_cataldo/astro-base/Body.astro';
 
     <script>
       // CRITICAL
-      // Add 'js' class to HTML tag if JavaScript is enabled
+      // Add `js` class to `HTML` tag if JavaScript is enabled
       (() => {
         const root = document.documentElement;
         root.classList.add('js');
@@ -90,7 +90,7 @@ import Body from '@julian_cataldo/astro-base/Body.astro';
 </html>
 ```
 
-The `js` class is added to HTML tag, critically.  
+The `js` class is added to `HTML` tag, critically.  
 That way, you can handle CSS for users with or without JS enabled
 with **`.js &`** / **`:not(.js) &`** SCSS selectors.
 

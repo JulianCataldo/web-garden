@@ -50,8 +50,8 @@ import ColorMode from '@julian_cataldo/astro-color-mode/ColorMode.astro';
 ```astro
 <!-- ... -->
 <body>
-  <!-- Use 'data-color-mode-switch' where you want to -->
-  <!-- toggle theme setting, on an element inside BODY tag -->
+  <!-- Use 'data-color-mode-switch' where you want to toggle theme setting, -->
+  <!-- on an element somewhere inside `BODY` tag -->
 
   <button data-color-mode-switch>Toggle COLOR MODE 💡</button>
 

@@ -30,7 +30,7 @@ import ScrollObserver from '@julian_cataldo/astro-scroll-observer/ScrollObserver
 ```astro
 <!-- ... -->
 <head>
-  <!-- Place component inside HEAD tag -->
+  <!-- Place component inside `HEAD` tag -->
 
   <ScrollObserver />
 
