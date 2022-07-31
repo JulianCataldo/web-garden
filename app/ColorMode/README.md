@@ -4,9 +4,6 @@ Provides system or user-defined color scheme preference, with a toggle mechanism
 Settings are persisted, component is progressively enhanced and flash of mis-styled content avoided.  
 Also, this provides an easier way to target theme with CSS selector / SCSS mixins / JS DOM selector.
 
-> **Warning**  
-> 🚧  Work in progress
-
 # Features
 
 - Detects user current color mode
@@ -16,10 +13,6 @@ Also, this provides an easier way to target theme with CSS selector / SCSS mixin
 - Inject saved setting **critically**, avoiding a blinding flash of mis-styled content.
 - Provides SCSS mixins for easy theme targeting
 - Supports JS / No-JS, with a fallback to user system preference
-
-> **Warning**  
-> The SCSS part is still a work in progress towards full no-JS support
-> (progressive enhancement).
 
 ## 📦  Installation
 
