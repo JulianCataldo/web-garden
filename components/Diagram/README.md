@@ -102,6 +102,7 @@ Alice->John: Yes... John, how are you?
        Unist visit: https://github.com/sjwall/mdx-mermaid/blob/main/src/mdxast-mermaid.ts
 - [ ] Fix styling and layout bugs
 - [ ] Support dark / light color mode
+- [ ] Full Typescript compliance
 
 <div class="git-footer">
 
