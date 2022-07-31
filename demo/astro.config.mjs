@@ -1,6 +1,10 @@
 import { defineConfig } from 'astro/config';
 import { astroImageTools } from 'astro-imagetools';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import sitemap from '@astrojs/sitemap';
+import mdx from '@astrojs/mdx';
+import mdxMermaidPlugin from '@julian_cataldo/astro-diagram';
+
 // import react from '@astrojs/react';
 
 // https://astro.build/config
@@ -27,11 +31,13 @@ export default defineConfig({
   integrations: [
     sitemap(),
     astroImageTools,
+    mdx({ remarkPlugins: { extends: [mdxMermaidPlugin] } }),
+
     // react(),
   ],
 
   vite: {
-    // Using `gather-content.sh` for now
+    // FIXME: Using `gather-content.sh` for now as this Vite option doesn't work
     // server: {
     //   fs: {
     //     allow: ['..'],
