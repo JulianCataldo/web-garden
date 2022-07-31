@@ -9,7 +9,7 @@ export interface Props {
    *
    * **Default**: `{}`
    * */
-  config: mermaidAPI.Config;
+  config?: mermaidAPI.Config;
   /**
    * Mermaid code
    *
