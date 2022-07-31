@@ -46,9 +46,7 @@ Alice->John: Yes... John, how are you?`;
 <body>
   <!-- Place component inside BODY tag -->
 
-  <!-- All properties are mandatory -->
-
-  <Diagram config={config} code={code} />
+  <Diagram config={config} code={code /* required */} />
 
   <!-- ... -->
 </body>
@@ -56,13 +54,13 @@ Alice->John: Yes... John, how are you?`;
 
 ### With MDX
 
-> **Warning**:  
+> **Warning**  
 > This is still a work-in-progress.  
 > There is still some rendering bugs and inconsistencies.
 
 In your `astro.config.mjs`:
 
-```mjs
+```js
 import mdxMermaidPlugin from '@julian_cataldo/astro-diagram';
 // ...
 
@@ -98,7 +96,8 @@ Alice->John: Yes... John, how are you?
 
 ## To do
 
-- [ ] Investigate Astro **MDX** integration  
+- [ ] Improve Astro **MDX** integration  
+       Refs.:  
        See https://github.com/sjwall/mdx-mermaid  
        Unist visit: https://github.com/sjwall/mdx-mermaid/blob/main/src/mdxast-mermaid.ts
 
