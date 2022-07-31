@@ -63,7 +63,7 @@ export default defineConfig({
 });
 ```
 
-Then, use it like this in your templates:
+Then, use it like this in your stylesheets:
 
 ```scss
 nav {
@@ -79,6 +79,14 @@ nav {
     opacity: 1;
     // ...
   }
+}
+```
+
+### With vanilla CSS
+
+```css
+[data-is-scrolling-up='true'][data-is-top='false'] .my-element {
+  opacity: 1;
 }
 ```
 
