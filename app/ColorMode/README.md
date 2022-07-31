@@ -75,7 +75,7 @@ export default defineConfig({
         scss: {
           additionalData: `
             @use "@julian_cataldo/astro-color-mode/use-color-mode.scss" as *;
-            `,
+          `,
         },
       },
     },
