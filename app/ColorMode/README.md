@@ -39,7 +39,7 @@ import ColorMode from '@julian_cataldo/astro-color-mode/ColorMode.astro';
 ```astro
 <!-- ... -->
 <head>
-  <!-- Place component inside HEAD tag -->
+  <!-- Place component inside `HEAD` tag -->
 
   <ColorMode />
 
@@ -59,9 +59,15 @@ import ColorMode from '@julian_cataldo/astro-color-mode/ColorMode.astro';
 </body>
 ```
 
-<!-- ```scss
+#### 🎉  Result
 
-``` -->
+```html
+<html data-color-mode="light|dark">
+  <!-- ... -->
+</html>
+```
+
+### With SCSS
 
 SCSS mixins registration in `astro.config.mjs`:
 
@@ -82,12 +88,21 @@ export default defineConfig({
 });
 ```
 
-## 🎉  Result
+Then, use it like this in your stylesheets:
 
-```html
-<html data-color-mode="light|dark">
-  <!-- ... -->
-</html>
+```scss
+span {
+  @include color-mode(light) {
+    color: black;
+    background-color: white;
+    // ...
+  }
+  @include color-mode(dark) {
+    color: white;
+    background-color: black;
+    // ...
+  }
+}
 ```
 
 ## To do
