@@ -30,7 +30,7 @@ import ScrollObserver from '@julian_cataldo/astro-scroll-observer/ScrollObserver
 ```astro
 <!-- ... -->
 <head>
-  <!-- Place component inside HEAD tag -->
+  <!-- Place component inside `HEAD` tag -->
 
   <ScrollObserver />
 
@@ -39,37 +39,45 @@ import ScrollObserver from '@julian_cataldo/astro-scroll-observer/ScrollObserver
 <!-- ... -->
 ```
 
-Example usage with SCSS:
+### With SCSS
+
+Firstly, import SCSS mixin in `astro.config.mjs`:
+
+```js
+export default defineConfig({
+  // ...
+
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: ` 
+            @use "@julian_cataldo/astro-scroll-observer/use-scroll-observer.scss" as *;
+          `,
+        },
+      },
+    },
+  },
+
+  // ...
+});
+```
+
+Then, use it like this in your templates:
 
 ```scss
 nav {
-  // ...navbar styles…
-  // See live demo for complete example
-
-  opacity: 0;
-  transform: translateY(-100%);
-  transition: all 1s;
-
-  [data-is-scrolling-up='true'] & {
-    opacity: 1;
-    transform: translateY(0);
-    &::after {
-      content: 'Is scrolling up…';
-    }
+  @include scroll-is($bottom: true, $top: true, $going-up: false) {
+    opacity: 0;
+    transform: translateX(100%);
+    // ...
   }
-  [data-is-top='true'] & {
+}
+
+.scroll-down-hint {
+  @include scroll-is($top: true) {
     opacity: 1;
-    transform: translateY(0);
-    &::after {
-      content: 'Is top';
-    }
-  }
-  [data-is-bottom='true'] & {
-    opacity: 1;
-    transform: translateY(0);
-    &::after {
-      content: 'Is bottom';
-    }
+    // ...
   }
 }
 ```
@@ -78,16 +86,20 @@ nav {
 
 ```html
 <!-- ... -->
-<body
+<html
   data-is-scrolling-up="true|false"
   data-is-bottom="true|false"
   data-is-top="true|false"
   data-has-scroll="true|false"
 >
   <!-- ... -->
-</body>
+</html>
 <!-- ... -->
 ```
+
+# To do
+
+- Create JS hook like [app/Breakpoints/use-breakpoints.ts](../Breakpoints/use-breakpoints.ts)
 
 <div class="git-footer">
 

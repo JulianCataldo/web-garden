@@ -1,0 +1,16 @@
+---
+// 1. The content prop gives access to frontmatter data
+const { content } = Astro.props;
+---
+
+<html>
+  <head>
+    <title>{content.title}</title>
+  </head>
+  <body>
+    <h1>{content.title} by {content.author}</h1>
+
+    <slot></slot>
+    <p>Written on: {content.date}</p>
+  </body>
+</html>

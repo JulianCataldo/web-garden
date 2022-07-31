@@ -44,7 +44,7 @@ import Link from '@julian_cataldo/astro-link/Link.astro';
 ```astro
 <!-- ... -->
 <body>
-  <!-- Place component inside BODY tag -->
+  <!-- Place component inside `BODY` tag -->
 
   <Link
     href={'https://www.juliancataldo.com' /* Required */}

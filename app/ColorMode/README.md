@@ -4,9 +4,6 @@ Provides system or user-defined color scheme preference, with a toggle mechanism
 Settings are persisted, component is progressively enhanced and flash of mis-styled content avoided.  
 Also, this provides an easier way to target theme with CSS selector / SCSS mixins / JS DOM selector.
 
-> **Warning**  
-> 🚧  Work in progress
-
 # Features
 
 - Detects user current color mode
@@ -16,10 +13,6 @@ Also, this provides an easier way to target theme with CSS selector / SCSS mixin
 - Inject saved setting **critically**, avoiding a blinding flash of mis-styled content.
 - Provides SCSS mixins for easy theme targeting
 - Supports JS / No-JS, with a fallback to user system preference
-
-> **Warning**  
-> The SCSS part is still a work in progress towards full no-JS support
-> (progressive enhancement).
 
 ## 📦  Installation
 
@@ -39,7 +32,7 @@ import ColorMode from '@julian_cataldo/astro-color-mode/ColorMode.astro';
 ```astro
 <!-- ... -->
 <head>
-  <!-- Place component inside HEAD tag -->
+  <!-- Place component inside `HEAD` tag -->
 
   <ColorMode />
 
@@ -47,11 +40,13 @@ import ColorMode from '@julian_cataldo/astro-color-mode/ColorMode.astro';
 </head>
 ```
 
+Use `data-color-mode-switch` where you want to toggle theme setting,
+on an any element, somewhere inside `BODY` tag:
+
 ```astro
 <!-- ... -->
 <body>
-  <!-- Use 'data-color-mode-switch' where you want to -->
-  <!-- toggle theme setting, on an element inside BODY tag -->
+  <!-- ... -->
 
   <button data-color-mode-switch>Toggle COLOR MODE 💡</button>
 
@@ -59,9 +54,15 @@ import ColorMode from '@julian_cataldo/astro-color-mode/ColorMode.astro';
 </body>
 ```
 
-<!-- ```scss
+#### 🎉  Result
 
-``` -->
+```html
+<html data-color-mode="light|dark">
+  <!-- ... -->
+</html>
+```
+
+### With SCSS
 
 SCSS mixins registration in `astro.config.mjs`:
 
@@ -74,7 +75,7 @@ export default defineConfig({
         scss: {
           additionalData: `
             @use "@julian_cataldo/astro-color-mode/use-color-mode.scss" as *;
-            `,
+          `,
         },
       },
     },
@@ -82,12 +83,21 @@ export default defineConfig({
 });
 ```
 
-## 🎉  Result
+Then, use it like this in your stylesheets:
 
-```html
-<html data-color-mode="light|dark">
-  <!-- ... -->
-</html>
+```scss
+span {
+  @include color-mode(light) {
+    color: black;
+    background-color: white;
+    // ...
+  }
+  @include color-mode(dark) {
+    color: white;
+    background-color: black;
+    // ...
+  }
+}
 ```
 
 ## To do

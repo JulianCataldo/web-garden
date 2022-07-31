@@ -23,7 +23,7 @@ import Resets from '@julian_cataldo/astro-resets/Resets.astro';
 ```astro
 <!-- ... -->
 <head>
-  <!-- Place component inside HEAD tag -->
+  <!-- Place component inside `HEAD` tag -->
 
   <!-- All properties are optional -->
   <Resets

@@ -1,8 +1,8 @@
 ---
 // FIXME: random typings detection for `headless-mermaid`
-import headlessMermaid from 'headless-mermaid';
 import type mermaidAPI from 'mermaid/mermaidAPI';
 /* ·········································································· */
+import renderDiagram from './render-diagram';
 import cache from './cache';
 /* —————————————————————————————————————————————————————————————————————————— */
 import type { Props as baseProps } from './Props';
@@ -37,18 +37,13 @@ const uniqueKey = generateHash(userData);
 
 if (cache[uniqueKey] === undefined) {
   /* Render the mermaid diagram */
-  const result: string | false = await headlessMermaid
-    // NOTE: Fetching mermaid from CDN isn't ideal, should use NPM package?
-    .execute(props.code, props.config, 'mermaid.min@9.1.3')
-    .then((r) => r)
-    .catch((e) => {
-      // eslint-disable-next-line no-console
-      console.log(e);
-      return false;
-    });
+  const result: string | false = await renderDiagram({
+    code: props.code,
+    config: props.config,
+  });
   if (result) {
     /* Store diagram data to cache */
-    cache[uniqueKey] = { code: props.code, config: props.config, result };
+    cache[uniqueKey] = result;
   }
 }
 ---

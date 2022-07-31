@@ -27,7 +27,7 @@ import MediaMap from '@julian_cataldo/astro-media-map/MediaMap.astro';
 ```astro
 <!-- ... -->
 <body>
-  <!-- Place component inside BODY tag -->
+  <!-- Place component inside `BODY` tag -->
 
   <MediaMap
     x={43.389636 /* Required */}

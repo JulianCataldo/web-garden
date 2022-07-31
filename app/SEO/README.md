@@ -20,7 +20,7 @@ import SEO from '@julian_cataldo/astro-seo/SEO.astro';
 ```astro
 <!-- ... -->
 <head>
-  <!-- Place component inside HEAD tag -->
+  <!-- Place component inside `HEAD` tag -->
 
   <!-- All properties are mandatory -->
   <SEO

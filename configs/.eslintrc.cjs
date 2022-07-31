@@ -103,6 +103,16 @@ module.exports = {
           'error',
           { max: 100, skipComments: true, skipBlankLines: true },
         ],
+        'import/extensions': [
+          'error',
+          'ignorePackages',
+          {
+            js: 'never',
+            jsx: 'never',
+            ts: 'never',
+            tsx: 'never',
+          },
+        ],
       },
     },
     {

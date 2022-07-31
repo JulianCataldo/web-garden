@@ -24,7 +24,7 @@ export interface Props {
 const props = { ...Astro.props } as Props;
 /* ············································ Typeguards + Fallbacks ······ */
 if (typeof props?.titles?.main !== 'string') {
-  props.titles.main = '';
+  props.titles = { main: '' };
 }
 /* —————————————————————————————————————————————————————————————————————————— */
 ---
