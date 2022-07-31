@@ -73,6 +73,13 @@ nav {
     // ...
   }
 }
+
+.scroll-down-hint {
+  @include scroll-is($top: true) {
+    opacity: 1;
+    // ...
+  }
+}
 ```
 
 ## 🎉  Result
