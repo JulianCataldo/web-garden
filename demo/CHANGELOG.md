@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.7.0...@julian_cataldo/astro-demo@0.7.1) (2022-07-31)
+
+
+### Bug Fixes
+
+* specificity random bug for headings ([00ea779](https://github.com/JulianCataldo/web-garden/commit/00ea7799c159000d468a4240e25ddd0ddc36c5a6))
+
+
+
 ## [0.7.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.6.0...@julian_cataldo/astro-demo@0.7.0) (2022-07-31)
 
 

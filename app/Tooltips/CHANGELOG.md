@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.15](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-tooltips@0.10.14...@julian_cataldo/astro-tooltips@0.10.15) (2022-07-31)
+
+**Note:** Version bump only for package @julian_cataldo/astro-tooltips
+
+
+
+
+
 ## [0.10.14](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-tooltips@0.10.13...@julian_cataldo/astro-tooltips@0.10.14) (2022-07-24)
 
 **Note:** Version bump only for package @julian_cataldo/astro-tooltips

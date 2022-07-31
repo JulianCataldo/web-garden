@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.1](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-diagram@0.11.0...@julian_cataldo/astro-diagram@0.11.1) (2022-07-31)
+
+
+### Bug Fixes
+
+* remove wrong dependency ([d286e6e](https://github.com/JulianCataldo/web-garden/commit/d286e6ee21676a87ac587df1419c9cde7932d9ee))
+
+
+
 ## [0.11.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-diagram@0.10.0...@julian_cataldo/astro-diagram@0.11.0) (2022-07-31)
 
 
