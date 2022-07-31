@@ -231,7 +231,7 @@ pnpm run cypress:run
 pnpm run version
 
 # Release updated packages on NPM public registry
-pnpm run publish
+pnpm run release
 ```
 
 <div class="git-footer">
