@@ -13,9 +13,9 @@ body {
 
 /* ———————————————————————————————————————————— Headings ———————————————————— */
 
-:where(h1, h2, h3, h4, h5) {
+.article-body :where(h1, h2, h3, h4, h5) {
   @include theme(default, light) {
-    color: color.adjust($raisin-black, $lightness: 12%);
+    color: color.adjust($raisin-black, $lightness: 16%);
   }
   @include theme(default, dark) {
     color: color.adjust($lavender-blush, $lightness: -1%);
