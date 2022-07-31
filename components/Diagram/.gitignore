@@ -1,2 +1,3 @@
-# TODO: auto build dist
+# TODO: auto-build Parcel dist
 !dist
+*.map
