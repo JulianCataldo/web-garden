@@ -1,0 +1,58 @@
+.licenses-report {
+  // max-width: calc(100vw - 50rem);
+  overflow-y: scroll;
+  overflow-x: auto;
+  max-height: 40vh;
+}
+
+.table {
+  .th {
+    font-weight: 600;
+    background: color.adjust($raisin-black, $alpha: -0.95);
+    font-variant: small-caps;
+    text-align: center;
+  }
+
+  .tr {
+    display: flex;
+
+    &:nth-of-type(odd) {
+    }
+
+    &:nth-of-type(even) {
+      background: color.adjust($rosewood, $alpha: -0.96);
+    }
+  }
+
+  .td,
+  .th {
+    word-break: break-all;
+    overflow: hidden;
+    padding: 0.5em;
+    border-right: 1px solid color.adjust($raisin-black, $alpha: -0.85);
+
+    &:last-of-type {
+      border-right: none;
+    }
+
+    &:nth-child(1) {
+      width: 23%;
+    }
+
+    &:nth-child(2) {
+      width: 23%;
+    }
+
+    &:nth-child(3) {
+      width: 9%;
+    }
+
+    &:nth-child(4) {
+      width: 45%;
+    }
+  }
+
+  .td {
+    font-size: 85%;
+  }
+}
