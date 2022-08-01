@@ -13,6 +13,9 @@ internalProps.push('depth');
 if (typeof props.useDev !== 'boolean') props.useDev = true;
 internalProps.push('useDev');
 
+if (typeof props.packagePath !== 'string') props.packagePath = undefined;
+internalProps.push('packagePath');
+
 if (typeof props.nameText !== 'string') props.nameText = 'Package';
 internalProps.push('nameText');
 
@@ -24,6 +27,7 @@ internalProps.push('licenseText');
 
 if (typeof props.linkText !== 'string') props.linkText = 'URL';
 internalProps.push('linkText');
+
 /* ············································ Extra HTML attributes ······· */
 const extraAttrs: { [key: string]: string } = {};
 Object.entries(props).forEach(([key, val]) => {
@@ -33,18 +37,19 @@ Object.entries(props).forEach(([key, val]) => {
 });
 /* —————————————————————————————————————————————————————————————————————————— */
 
-interface Licenses {
-  name?: string;
-  author?: string | { name: string } | undefined;
-  homepage?: string | undefined;
-  license?: string | undefined;
-  repository?: { url: string };
+interface Options {
+  useDev: boolean;
+  depth: number;
+  packagePath?: string;
 }
-
 const options = {
   useDev: props.useDev,
   depth: props.depth,
-};
+} as Options;
+if (props.packagePath) {
+  options.packagePath = props.packagePath;
+}
+
 
 const report =
   (await licenser.reporter
