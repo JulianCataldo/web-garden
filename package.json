@@ -13,7 +13,7 @@
   "scripts": {
     "version": "pnpm lerna version --conventional-commits",
     "release": "pnpm lerna publish from-git",
-    "demo": "curl -s http://localhost:2424/ > /dev/null || (cd demo && pnpm dev)",
+    "test:links": "linkinator http://localhost:2425 2>&1 | tee ./logs/broken-links.log",
     "cypress:open": "pnpm run demo & pnpm cypress open",
     "cypress:run": "pnpm run demo & pnpm cypress run",
     "test": "echo \"Skipping: no pre-commit test specified\" && exit 0",

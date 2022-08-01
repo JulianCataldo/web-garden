@@ -1,0 +1,6 @@
+{
+  "concurrency": 100,
+  "recurse": true,
+  "skip": "github",
+  "verbosity": "error"
+}
