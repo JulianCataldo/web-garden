@@ -38,6 +38,7 @@ export interface Package {
   video: string | null;
   shortname: string | null;
   hasDemo: boolean;
+  hasDependencies: boolean;
 }
 
 export interface PackageLoaderProps {

@@ -5,6 +5,8 @@ import type { Package } from 'src/types';
 // import { Code } from '___/components';
 import Table from 'src/components/Table/Table.astro';
 
+import LicensesReport from '@julian_cataldo/astro-licenses-report/LicensesReport.astro';
+
 interface Props {
   content: Package;
 }
@@ -32,7 +34,6 @@ const ReadMe = props?.content?.readme?.Content;
           </ul>
         </section>
       )}
-
       {props.content.hasDemo && (
         <section id="live-demo" class="package-section article-body">
           <h2>Component live demo</h2>
@@ -88,6 +89,19 @@ const ReadMe = props?.content?.readme?.Content;
           </div>
         </section>
       )}
+
+      {props.content.hasDependencies && (
+        <section id="changelog" class="package-section article-body">
+          <h2>Licenses</h2>
+
+          <LicensesReport
+            useDev={true}
+            depth={1}
+            packagePath={`../${props.content.pJson.repository.directory}`}
+          />
+        </section>
+      )}
+
       {/* props.content.typescriptProps && (
         <section id="ts-api" class="package-section article-body">
       
