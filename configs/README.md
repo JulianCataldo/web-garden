@@ -1,8 +1,12 @@
 # Astro configurations collection
 
 Here lies some re-usable tooling settings.  
-Languages: JS, TS, Astro, Vue, JSX, TSX, SCSS, CSS.  
+Languages: JS, TS, Astro, Vue, React, JSX, TSX, SCSS, CSS.  
 Tools: Prettier, ESlint, Stylelint, Editorconfig, TypeScript, Commitlint, VS Code.
+
+Opinions are: _use whatever is the most common in web dev' conventions_.
+
+This means aligning to Prettier defaults, air-bnb rules, etc.
 
 ---
 
@@ -31,6 +35,7 @@ Tools: Prettier, ESlint, Stylelint, Editorconfig, TypeScript, Commitlint, VS Cod
   - [Markdown](#markdown)
     - [VSCode](#vscode-5)
   - […To do](#to-do)
+  - [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](#live-demo--documentation-website)
 
 ---
 
@@ -42,8 +47,11 @@ Tools: Prettier, ESlint, Stylelint, Editorconfig, TypeScript, Commitlint, VS Cod
 pnpm i @julian_cataldo/astro-configs
 ```
 
-All these extracts can be found in root directory inside `package.json`,
-linters config files…
+[See the root package.json](../package.json) for this mono-repo.  
+Its `devDependencies` are mostly dedicated for meta-framework,
+developer's IDE experience.  
+You can cherry pick and get inspirations for your own configurations.  
+Atomic configs import is planned, as each project might not need the whole range of tools, and will make them more shareable.
 
 # Tooling configurations
 
@@ -114,6 +122,10 @@ In your `tsconfig.json`:
 
 ## ESLint
 
+[See the ESLint config file](./.eslintrc.cjs)
+
+---
+
 In `package.json`:
 
 ```jsonc
@@ -171,6 +183,10 @@ In your `settings.json`:
 
 ## Prettier
 
+[See the Prettier config file](./.prettierrc.cjs)
+
+---
+
 In `package.json`:
 
 ```jsonc
@@ -192,6 +208,10 @@ In `package.json`:
 ```
 
 ### Editorconfig
+
+[See the Editorconfig file](./.editorconfig)
+
+---
 
 Copy `./.editorconfig` in your project root.
 
@@ -232,6 +252,10 @@ In your `settings.json`:
 ```
 
 ## Stylelint
+
+[See the Stylelint config file](./.stylelintrc.cjs)
+
+---
 
 In `package.json`:
 
@@ -294,11 +318,7 @@ Extensions:
 ## …To do
 
 - [ ] Prettier settings in `.astro` files
-  - [ ] Print width 80
-  - [ ] Nested code, even less correct settings
-- [ ] Init root package for config distribution
-- [ ] Fix broken ESLint in Astro file  
-       Doc: \<https://github.com/ota-meshi/eslint-plugin-astro\>
+  - [ ] Nested code, doesn't keep defined settings
 
 <div class="git-footer">
 
