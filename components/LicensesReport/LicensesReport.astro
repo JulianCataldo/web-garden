@@ -1,6 +1,9 @@
 ---
 import licenser from '@wbmnky/license-report-generator';
-import type { Props as baseProps } from './Props';
+/* ·········································································· */
+import cache from './cache';
+/* ·········································································· */
+import type { Props as baseProps, Licenses } from './Props';
 
 export interface Props extends baseProps {}
 const props = { ...Astro.props } as Props;
@@ -50,17 +53,44 @@ if (props.packagePath) {
   options.packagePath = props.packagePath;
 }
 
+/* We don't want to regenerate the report if nothing has changed */
+function generateHash(data: string) {
+  // Dark magic: https://stackoverflow.com/a/7616484/2890472
+  let hash = 0;
+  let i;
+  let chr;
+  if (data.length === 0) return hash;
+  for (i = 0; i < data.length; i += 1) {
+    chr = data.charCodeAt(i);
+    // eslint-disable-next-line no-bitwise
+    hash = (hash << 5) - hash + chr;
+    // eslint-disable-next-line no-bitwise
+    hash |= 0; // Convert to 32bit integer
+  }
+  return hash;
+}
 
-const report =
-  (await licenser.reporter
-    .generate(options)
-    .then((rep) => {
-      const plain = rep.plain() as { licenses: Licenses[] };
-      return plain.licenses;
-    })
-    .catch((/* error */) => {
-      // console.log(error);
-    })) || [];
+const userData = JSON.stringify(options);
+const uniqueKey = `${generateHash(userData)}`;
+
+if (cache[uniqueKey] === undefined) {
+  /* Fetch dependencies */
+  const result =
+    (await licenser.reporter
+      .generate(options)
+      .then((rep) => {
+        const plain = rep.plain() as { licenses: Licenses[] };
+        return plain.licenses;
+      })
+      .catch((/* error */) => {
+        // console.log(error);
+      })) || {};
+
+  /* Store report data to cache */
+  cache[uniqueKey] = result;
+}
+
+const report = cache[uniqueKey];
 ---
 
 <div class:list={['table', props.class]} role='table' {...extraAttrs}>
@@ -82,33 +112,34 @@ const report =
   </div>
 
   <div class:list={['tbody', props.class]} role='rowgroup'>
-    {report.map((row) => (
-      <div class:list={['tr', props.class]} role="row">
-        <div class:list={['td', props.class]} role="cell">
-          {row.name}
-        </div>
+    {report.length &&
+      report.map((row) => (
+        <div class:list={['tr', props.class]} role="row">
+          <div class:list={['td', props.class]} role="cell">
+            {row.name}
+          </div>
 
-        <div class:list={['td', props.class]} role="cell">
-          {typeof row.author === 'string'
-            ? row.author
-            : row?.author?.name || '-'}
-        </div>
+          <div class:list={['td', props.class]} role="cell">
+            {typeof row.author === 'string'
+              ? row.author
+              : row?.author?.name || '-'}
+          </div>
 
-        <div class:list={['td', props.class]} role="cell">
-          {row.license}
-        </div>
+          <div class:list={['td', props.class]} role="cell">
+            {row.license}
+          </div>
 
-        <div class:list={['td', props.class]} role="cell">
-          <a
-            class:list="[is-external]"
-            href={row.homepage || row.repository.url}
-            target="_blank"
-            rel="noopener nofollow"
-          >
-            {row.homepage || row.repository.url}
-          </a>
+          <div class:list={['td', props.class]} role="cell">
+            <a
+              class:list="[is-external]"
+              href={row.homepage || row.repository.url}
+              target="_blank"
+              rel="noopener nofollow"
+            >
+              {row.homepage || row.repository.url}
+            </a>
+          </div>
         </div>
-      </div>
-    ))}
+      ))}
   </div>
 </div>
