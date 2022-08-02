@@ -1,6 +1,6 @@
 describe('App — <Base>', () => {
   it('Open demo', () => {
-    cy.visit('http://localhost:2424/');
+    cy.visit('http://localhost:2425/');
   });
 
   it('Body classes & id', () => {

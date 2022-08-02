@@ -5,7 +5,7 @@ describe('App — <ScrollObserver>', () => {
   // console.log(asHuman ? 'As human' : 'As robot');
 
   it('Open demo', () => {
-    cy.visit('http://localhost:2424/');
+    cy.visit('http://localhost:2425/');
 
     highlight('[data-test*=scrollObserver]');
   });

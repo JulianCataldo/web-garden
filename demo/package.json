@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "./gather-content.sh && astro build",
+    "build:start": "pnpm run build && pnpm serve -p 2425 ./dist",
     "preview": "astro preview"
   },
   "dependencies": {
