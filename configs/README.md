@@ -47,7 +47,8 @@ This means aligning to Prettier defaults, air-bnb rules, etc.
 pnpm i @julian_cataldo/astro-configs
 ```
 
-[See the root package.json](../package.json) for this mono-repo.  
+[See the root package.json](../package.json) for this mono-repo.
+
 Its `devDependencies` are mostly dedicated for meta-framework,
 developer's IDE experience.  
 You can cherry pick and get inspirations for your own configurations.  
