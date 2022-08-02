@@ -32,6 +32,8 @@ if (typeof props?.titles?.main !== 'string') {
 <Document
   id='test-base-rootDoc'
   data-theme='default'
+  data-color-mode={'light' /* FIXME: repair mixin for no JS support (themes/selector.scss) */}
+  data-is-top='true'
   lang='en'
   class:list={[
     `mode-${import.meta.env.MODE}`,

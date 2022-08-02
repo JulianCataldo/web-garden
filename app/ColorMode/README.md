@@ -102,6 +102,7 @@ span {
 
 ## To do
 
+- [ ] Fix no JS support (SCSS mixin…)
 - [ ] Full JS independant `@media` query support for SCSS mixins
 - [ ] SCSS mixins demo usage
 - [ ] Thorough demo video for all user scenarios
