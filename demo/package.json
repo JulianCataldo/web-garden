@@ -44,8 +44,10 @@
     "mermaid.cli": "^0.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rehype-rewrite": "^3.0.6",
     "remark-mermaid": "^0.2.0",
     "sass": "^1.52.3",
+    "serve": "^14.0.1",
     "tsparticles": "^1.43.0",
     "tsparticles-preset-stars": "1.43.1"
   },
