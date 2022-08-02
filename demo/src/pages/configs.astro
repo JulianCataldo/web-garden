@@ -19,9 +19,23 @@ const titles = {
   main: 'Developers tools',
   sub: "Serious tooling for serious dev's",
 };
+
+const actions = [
+  {
+    title: 'Source',
+    href: 'https://github.com/JulianCataldo/web-garden/tree/develop/configs',
+    icon: 'mdi:github',
+  },
+
+  {
+    title: 'Package',
+    href: `https://www.npmjs.com/package/${configPackage.pJson.name}`,
+    icon: 'mdi:nodejs',
+  },
+];
 ---
 
-<Layout titles={titles}>
+<Layout titles={titles} actions={actions}>
   <article class='main-content'>
     <PageNavigation
       title='Tooling'

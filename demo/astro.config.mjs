@@ -23,7 +23,7 @@ export default defineConfig({
   site: 'https://code.juliancataldo.com',
 
   server: {
-    port: 2424,
+    port: 2425,
     host: false,
   },
   // base: '/astro',

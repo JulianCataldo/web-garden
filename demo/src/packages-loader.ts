@@ -34,6 +34,10 @@ export default async function loadPackages(
       video: null,
       shortname: null,
       hasDemo: false,
+      hasDependencies:
+        'dependencies' in pJson ||
+        'devDependencies' in pJson ||
+        'peerDependencies' in pJson,
     });
 
     console.log(pJson.name);

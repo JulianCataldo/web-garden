@@ -1,13 +1,7 @@
 ---
-export interface Props {
-  /**
-   * Google Analytics 4 ID.
-   * */
-  id: string;
-}
 const props = { ...Astro.props } as Props;
 if (typeof props.id !== 'string') {
-  props.id = 'XXXXXXXXXXXXXXXX';
+  props.id = 'G-XXXXXXXXXX';
 }
 
 const url = `https://www.googletagmanager.com/gtag/js?id=${props.id}`;
