@@ -1,12 +1,19 @@
 # 🚀  Astro — Scroll observer
 
-Viewport scroll position watcher which binds data attributes to `html` for further CSS usage.  
-JS scroll event is properly throttled for performance economy.
+Viewport scroll **position** and **direction** watcher.  
+Binds states data attributes to `HTML` for further JS/CSS usage.  
+JS scroll event is throttled for performance economy.
 
-Three areas are handled : Top, Bottom, and everything in between.  
-Some margins are applied on these.
+Scroll states are:
 
-Also, viewport scrollbar detection is made available.
+- Which current area? **TOP**, **BOTTOM**, and everything **in-between** (with a bit of margins).
+- Is user scrolling **UP** or **DOWN**?
+- Is viewport scrollbar present (i.e. is vertical viewport overflowing)?
+
+## What for ?
+
+With this tool, you can easily hook up and animate UI components like:  
+Scroll hints, back to top button, top navigation menu bar…
 
 <!-- ## Demo
 
@@ -108,6 +115,7 @@ nav {
 # To do
 
 - Create JS hook like [app/Breakpoints/use-breakpoints.ts](../Breakpoints/use-breakpoints.ts)
+- Provide mixin option for scroll bar presence detector
 
 <div class="git-footer">
 
