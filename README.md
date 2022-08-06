@@ -134,23 +134,23 @@ Layouts-->Pages
 
 ## [📖  Website source code](https://github.com/JulianCataldo/web-garden/tree/master/demo)
 
-See [default layout](demo/src/layouts/Default/Default.astro) and [home page](./demo/src/pages/index.astro)
+See [default layout](demo/src/layouts/Default/Default.astro) and [home page](https://github.com/JulianCataldo/web-garden/blob/develop/demo/src/pages/index.astro)
 for live implementation examples.
 
 ---
 
-## [📦  Application-level components](./app)
+## [📦  Application-level components](https://github.com/JulianCataldo/web-garden/tree/develop/app)
 
-[These are global components](./app) which enhance or augment browser behavior and style,
+[These are global components](https://github.com/JulianCataldo/web-garden/tree/develop/app) which enhance or augment browser behavior and style,
 while providing useful utilities to developers, website-wide.
 
-## [📦  Components](./components)
+## [📦  Components](https://github.com/JulianCataldo/web-garden/tree/develop/components)
 
-Generic [extendables components](./components).
+Generic [extendables components](https://github.com/JulianCataldo/web-garden/tree/develop/components).
 
-## [🛠  Tooling configurations](./configs)
+## [🛠  Tooling configurations](https://github.com/JulianCataldo/web-garden/tree/develop/configs)
 
-[A useful collection](./configs) for web developers.  
+[A useful collection](https://github.com/JulianCataldo/web-garden/tree/develop/configs) for web developers.  
 Features ESLint, Prettier, Stylelint, Commitlint…  
 For Astro, React, Vue, SCSS, TS…
 

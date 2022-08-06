@@ -64,7 +64,7 @@ This means aligning to Prettier defaults, air-bnb rules, etc.
 pnpm i @julian_cataldo/astro-configs
 ```
 
-[See the root package.json](../package.json) for this mono-repo.
+[See the root package.json](https://github.com/JulianCataldo/web-garden/blob/develop/package.json) for this mono-repo.
 
 Its `devDependencies` are mostly dedicated for meta-framework,
 developer's IDE experience.
@@ -118,7 +118,7 @@ eslint-plugin-mdx
 
 ### Configuration
 
-[See this ESLint config file for inspiration](./.eslintrc.cjs)
+[See this ESLint config file for inspiration](https://github.com/JulianCataldo/web-garden/blob/develop/configs/.eslintrc.cjs)
 
 ---
 
@@ -181,7 +181,7 @@ postcss-html
 
 ### Configuration
 
-[See this Prettier config file for inspiration](./.prettierrc.cjs)
+[See this Prettier config file for inspiration](https://github.com/JulianCataldo/web-garden/blob/develop/configs/.prettierrc.cjs)
 
 ---
 
@@ -202,7 +202,7 @@ Script command in `package.json`:
 
 This is used locally with your IDE, in harmony with Prettier and for homogeneous display on GitHub etc.
 
-[See this the config file for inspiration](./.editorconfig)
+[See this the config file for inspiration](https://github.com/JulianCataldo/web-garden/blob/develop/configs/.editorconfig)
 
 ---
 
@@ -294,7 +294,7 @@ stylelint-config-prettier
 
 ### Configuration
 
-[See this Stylelint config file for inspiration](./.stylelintrc.cjs)
+[See this Stylelint config file for inspiration](https://github.com/JulianCataldo/web-garden/blob/develop/configs/.stylelintrc.cjs)
 
 ---
 
