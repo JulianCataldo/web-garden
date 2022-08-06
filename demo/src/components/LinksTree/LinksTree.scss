@@ -17,12 +17,13 @@
 
 .link {
   width: 100%;
-  padding: 0.75em 1em 0.75em 1em;
+  padding: 0.75em 1rem 0.75em 1rem;
   @include breakpoint(md) {
-    padding: 0.75em 2em 0.75em 3em;
+    padding: 0.75em 2rem 0.75em 3rem;
   }
 
   display: inline-block;
+  line-height: 115%;
 
   @include theme(default, $scoped: true) {
     text-decoration: none;
@@ -66,6 +67,7 @@
     font-weight: 700;
     border-bottom: 1px dotted color.adjust($red-pigment, $alpha: -0.8);
     border-right: 1px solid color.adjust($red-pigment, $alpha: -0.7);
+    background-color: color.adjust($red-pigment, $alpha: -0.97);
 
     &::after {
       content: "  •";
@@ -80,6 +82,17 @@
 
     &::after {
       content: "  -";
+    }
+  }
+
+  .depth-4 & {
+    font-size: 75%;
+    font-weight: 300;
+    border-bottom: 1px dotted color.adjust($red-pigment, $alpha: -0.8);
+    border-right: 1px dotted color.adjust($red-pigment, $alpha: -0.8);
+
+    &::after {
+      content: "  ·";
     }
   }
 
