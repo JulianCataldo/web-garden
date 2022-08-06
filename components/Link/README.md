@@ -49,7 +49,6 @@ import Link from '@julian_cataldo/astro-link/Link.astro';
   <Link
     href={'https://www.juliancataldo.com' /* Required */}
     title={'Bonjour !'}
-    externalHint={false}
     externalInNewTab={true}
   >
     Some <strong>external</strong> link, loaded in current tab

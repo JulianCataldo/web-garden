@@ -9,6 +9,9 @@ Available as a stand-alone component or as an MDX plugin, replacing `mermaid` co
 Uses Muhammad Muzzammil' [`headless-mermaid`](https://github.com/muhammadmuzzammil1998/headless-mermaid) under the hood.  
 And of course, the [`mermaid`](https://github.com/mermaid-js/mermaid) library.
 
+> **Warning**  
+> 🚧  Work in progress.
+
 ## 📦  Installation
 
 ```sh
@@ -56,7 +59,7 @@ Alice->John: Yes... John, how are you?`;
 
 > **Warning**  
 > This is still a work-in-progress.  
-> There is still some rendering bugs and inconsistencies.
+> Some rendering bugs and inconsistencies remain.
 
 In your `astro.config.mjs`:
 
@@ -102,7 +105,7 @@ Alice->John: Yes... John, how are you?
        Unist visit: https://github.com/sjwall/mdx-mermaid/blob/main/src/mdxast-mermaid.ts
 - [ ] Fix styling and layout bugs
 - [ ] Support dark / light color mode
-- [ ] Full Typescript compliance
+- [ ] Full TypeScript compliance
 
 <div class="git-footer">
 

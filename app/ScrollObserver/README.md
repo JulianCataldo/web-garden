@@ -2,7 +2,7 @@
 
 Viewport scroll **position** and **direction** watcher.  
 Binds states data attributes to `HTML` for further JS/CSS usage.  
-JS scroll event is throttled for performance economy.
+Scroll event is throttled for performance economy.
 
 Scroll states are:
 

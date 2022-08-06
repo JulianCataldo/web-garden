@@ -33,6 +33,7 @@ function plugin() {
           config: {},
           code: node.value,
         }).then((diagram) => diagram.result);
+
         parent.children.splice(index, 1, {
           type: 'html',
           // TODO: put CSS elsewhere
