@@ -79,7 +79,7 @@ export default defineConfig({
 
 Then, in your MDX, use the `mermaid` language for your code fences, exactly like you would on GitHub flavored Markdown for example.
 
-<div class="git-hide">
+<div class="git-only">
 
 ## 🎉  Result
 

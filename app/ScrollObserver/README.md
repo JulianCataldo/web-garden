@@ -114,7 +114,7 @@ nav {
 
 # To do
 
-- Create JS hook like [app/Breakpoints/use-breakpoints.ts](../Breakpoints/use-breakpoints.ts)
+- Create JS hook like [app/Breakpoints/use-breakpoints.ts](https://github.com/JulianCataldo/web-garden/blob/develop/app/Breakpoints/use-breakpoints.ts)
 - Provide mixin option for scroll bar presence detector
 
 <div class="git-footer">
