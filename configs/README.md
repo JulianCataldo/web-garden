@@ -1,8 +1,9 @@
-# Astro configurations collection
+# 🛠  Web developer tool belt
 
-Here lies some re-usable tooling settings.  
-Languages: JS, TS, Astro, Vue, React, JSX, TSX, SCSS, CSS.  
-Tools: Prettier, ESlint, Stylelint, Editorconfig, TypeScript, Commitlint, VS Code.
+Here lies some re-usable tooling setups, for modern, front-end oriented web development.
+
+Languages features: **JS**, **TS**, **Astro**, **Vue**, **React**, **JSX**, **TSX**, **SCSS**, **CSS**.  
+Tools: **Prettier**, **ESlint**, **Stylelint**, **Editorconfig**, **TypeScript**, **Commitlint**, **VS Code**.
 
 Opinions are: _use whatever is the most common in web dev' conventions_.
 
@@ -11,29 +12,45 @@ This means aligning to Prettier defaults, air-bnb rules, etc.
 ---
 
 > **Warning**  
-> 🚧  Work in progress  
+> 🚧  Continuous re-work,  
 > Might break often.
 
 ---
 
 <div class="git-hide">
 
-- [Astro configurations collection](#astro-configurations-collection)
-- [Installation](#installation)
-- [Tooling configurations](#tooling-configurations)
-  - [VSCode](#vscode)
-    - [TypeScript](#typescript)
+- [🛠  Web developer tool belt](#web-developer-tool-belt)
   - [ESLint](#eslint)
-    - [VSCode](#vscode-1)
+    - [Installations](#installations)
+    - [Configuration](#configuration)
+    - [VSCode](#vscode)
+      - [Extension(s)](#extensions)
+      - [Settings](#settings)
   - [Prettier](#prettier)
+    - [Installations](#installations-1)
+    - [Configuration](#configuration-1)
     - [Editorconfig](#editorconfig)
-    - [VSCode](#vscode-2)
+    - [VSCode](#vscode-1)
+      - [Extension(s)](#extensions-1)
+      - [Settings](#settings-1)
   - [Stylelint](#stylelint)
-    - [VSCode](#vscode-3)
+    - [Installations](#installations-2)
+    - [Configuration](#configuration-2)
+    - [VSCode](#vscode-2)
+      - [Extension(s)](#extensions-2)
+      - [Settings](#settings-2)
   - [SCSS](#scss)
-    - [VSCode](#vscode-4)
+    - [VSCode](#vscode-3)
+      - [Extension(s)](#extensions-3)
   - [Markdown](#markdown)
+    - [VSCode](#vscode-4)
+      - [Extension(s)](#extensions-4)
+  - [TypeScript](#typescript)
     - [VSCode](#vscode-5)
+    - [Project settings boilerplate](#project-settings-boilerplate)
+  - [VSCode](#vscode-6)
+    - [Languages](#languages)
+      - [Astro](#astro)
   - […To do](#to-do)
   - [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](#live-demo--documentation-website)
 
@@ -41,7 +58,7 @@ This means aligning to Prettier defaults, air-bnb rules, etc.
 
 </div>
 
-# Installation
+<!-- # Installation
 
 ```sh
 pnpm i @julian_cataldo/astro-configs
@@ -50,45 +67,314 @@ pnpm i @julian_cataldo/astro-configs
 [See the root package.json](../package.json) for this mono-repo.
 
 Its `devDependencies` are mostly dedicated for meta-framework,
-developer's IDE experience.  
-You can cherry pick and get inspirations for your own configurations.  
-Atomic configs import is planned, as each project might not need the whole range of tools, and will make them more shareable.
+developer's IDE experience.
+You can cherry pick and get inspirations for your own configurations.
+Atomic configs import is planned, as each project might not need the whole range of tools, and will make them more shareable. -->
 
-# Tooling configurations
+## ESLint
 
-## VSCode
+### Installations
 
-In your `settings.json`:
+```sh
+# v—————————————————————————————————— Base
+pnpm i -D \
+eslint \
+@types/eslint \
+eslint-config-airbnb-base
 
-> **Warning**  
-> Beware that auto-fixing ALL linting errors on save in `astro` files can potentially be disastrous.  
-> You should act on a case-by-case basis.
+# v—————————————————————————————————— Prettier compat.
+pnpm i -D \
+eslint-config-prettier \
+eslint-plugin-prettier
 
-Extensions: `astro-build.astro-vscode`
+# v—————————————————————————————————— TypeScript
+pnpm i -D \
+@typescript-eslint/eslint-plugin \
+@typescript-eslint/parser \
+eslint-plugin-import \
+eslint-import-resolver-typescript
+
+# v—————————————————————————————————— JSX / TSX (React)
+pnpm i -D \
+eslint-plugin-react \
+eslint-plugin-react-hooks \
+eslint-config-airbnb \
+eslint-plugin-jsx-a11y
+
+# v—————————————————————————————————— Astro
+pnpm i -D \
+astro-eslint-parser \
+eslint-plugin-astro
+
+# v—————————————————————————————————— Vue
+pnpm i -D \
+eslint-plugin-vue
+
+# v—————————————————————————————————— MDX
+pnpm i -D \
+eslint-plugin-mdx
+
+# =================================== Miscellaneous
+
+# v—————————————————————————————————— TSDoc
+pnpm i -D \
+eslint-plugin-tsdoc
+```
+
+### Configuration
+
+[See this ESLint config file for inspiration](./.eslintrc.cjs)
+
+---
+
+Script command in `package.json`:
 
 ```jsonc
 {
-  // ...
-  "editor.formatOnPaste": true|false,
-  "editor.formatOnType": true|false,
-  "editor.formatOnSave": true|false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true|false
+  // …
+  "scripts": {
+    // …
+    "lint:js": "eslint . --fix"
   }
-  // ...
+  // …
 }
 ```
 
-### TypeScript
+### VSCode
+
+#### Extension(s)
+
+```sh
+code --install-extension \
+dbaeumer.vscode-eslint
+```
+
+#### Settings
 
 In your `settings.json`:
 
 ```jsonc
 {
-  // ...
-  "typescript.inlayHints.parameterNames.enabled": "all"
+  // …
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "astro",
+    "typescript",
+    "typescriptreact",
+    "mdx"
+  ]
+  // …
 }
 ```
+
+## Prettier
+
+### Installations
+
+```sh
+# v—————————————————————————————————— Base
+pnpm i -D \
+@types/prettier \
+prettier
+
+# v—————————————————————————————————— Astro
+pnpm i -D \
+prettier-plugin-astro \
+postcss-html
+```
+
+### Configuration
+
+[See this Prettier config file for inspiration](./.prettierrc.cjs)
+
+---
+
+Script command in `package.json`:
+
+```jsonc
+{
+  // …
+  "scripts": {
+    // …
+    "format": "prettier -w ./src ./src/**/*.astro"
+  }
+  // …
+}
+```
+
+### Editorconfig
+
+This is used locally with your IDE, in harmony with Prettier and for homogeneous display on GitHub etc.
+
+[See this the config file for inspiration](./.editorconfig)
+
+---
+
+Copy `./.editorconfig` in your project root.
+
+### VSCode
+
+#### Extension(s)
+
+```sh
+code --install-extension \
+esbenp.prettier-vscode \
+editorconfig.editorconfig
+```
+
+#### Settings
+
+In your `settings.json`:
+
+```jsonc
+{
+  // …
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.documentSelectors": ["**/*.astro"],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.wordWrap": "off",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[mdx]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+  // …
+}
+```
+
+## Stylelint
+
+### Installations
+
+```sh
+# v—————————————————————————————————— Base
+pnpm i -D \
+stylelint \
+@types/stylelint \
+stylelint-config-standard \
+stylelint-config-recommended
+
+# v—————————————————————————————————— SCSS
+pnpm i -D \
+stylelint-config-standard-scss \
+stylelint-config-recommended-scss
+
+# v—————————————————————————————————— Vue
+pnpm i -D \
+stylelint-config-recommended-vue \
+postcss-html
+
+# v—————————————————————————————————— Astro
+pnpm i -D \
+postcss-html
+
+# v—————————————————————————————————— Prettier compat.
+pnpm i -D \
+stylelint-config-prettier
+```
+
+### Configuration
+
+[See this Stylelint config file for inspiration](./.stylelintrc.cjs)
+
+---
+
+Script command in `package.json`:
+
+```jsonc
+{
+  // …
+  "scripts": {
+    // …
+    "lint:style": "stylelint ./src/**/*.vue ./src/**/*.scss ./src/**/*.astro --fix"
+  }
+  // …
+}
+```
+
+### VSCode
+
+#### Extension(s)
+
+```sh
+code --install-extension \
+stylelint.vscode-stylelint
+```
+
+#### Settings
+
+In your `settings.json`:
+
+```jsonc
+{
+  // …
+  "stylelint.validate": ["css", "postcss", "scss", "vue", "astro"],
+  "stylelint.snippet": ["css", "postcss", "scss", "vue", "astro"]
+  // …
+}
+```
+
+## SCSS
+
+### VSCode
+
+#### Extension(s)
+
+- Advanced **auto-completion** and **refactoring** support for SCSS  
+  **SCSS IntelliSense**  
+  `code --install-extension mrmlnc.vscode-scss`
+
+## Markdown
+
+### VSCode
+
+#### Extension(s)
+
+- Markdown **linting** and **style checking** for Visual Studio Code  
+  **Markdownlint**  
+  `code --install-extension DavidAnson.vscode-markdownlint`
+- Markdown **frontmatter YAML** validation against **JSON-Schema**  
+  See [github.com/JulianCataldo/remark-lint-frontmatter-schema](https://github.com/JulianCataldo/remark-lint-frontmatter-schema)
+
+## TypeScript
+
+### VSCode
+
+In your `settings.json`:
+
+```jsonc
+{
+  // …
+  "typescript.inlayHints.parameterNames.enabled": "all"
+  // …
+}
+```
+
+### Project settings boilerplate
 
 In your `tsconfig.json`:
 
@@ -121,200 +407,35 @@ In your `tsconfig.json`:
 }
 ```
 
-## ESLint
-
-[See the ESLint config file](./.eslintrc.cjs)
-
----
-
-In `package.json`:
-
-```jsonc
-{
-  // ...
-  "scripts": {
-    // ...
-    "lint:js": "eslint . --fix"
-  },
-  "devDependencies": {
-    // ...
-    "@types/eslint": "^8.4.2",
-    "@typescript-eslint/eslint-plugin": "^5.27.0",
-    "@typescript-eslint/parser": "^5.27.0",
-    "astro-eslint-parser": "^0.2.2",
-    "eslint": "^8.17.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-import-resolver-typescript": "^2.7.1",
-    "eslint-plugin-astro": "^0.10.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.30.0",
-    "eslint-plugin-react-hooks": "^4.5.0",
-    "eslint-plugin-tsdoc": "^0.2.16",
-    "eslint-plugin-vue": "^9.1.0"
-  },
-  "eslintConfig": {
-    "extends": ["./node_modules/@julian_cataldo/astro-configs/.eslintrc.cjs"]
-  }
-  // ...
-}
-```
-
-### VSCode
-
-Extension: `dbaeumer.vscode-eslint`
+## VSCode
 
 In your `settings.json`:
 
-```jsonc
-{
-  // ...
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "astro",
-    "typescript",
-    "typescriptreact"
-  ]
-}
-```
-
-## Prettier
-
-[See the Prettier config file](./.prettierrc.cjs)
-
----
-
-In `package.json`:
+> **Warning**  
+> Beware that auto-fixing ALL linting errors on save can lead to unwanted results.  
+> You should act on a case-by-case basis, or review batch fixes carefully.
 
 ```jsonc
 {
-  // ...
-  "scripts": {
-    // ...
-    "format": "prettier -w ./src ./src/**/*.astro"
-  },
-  "devDependencies": {
-    // ...
-    "@types/prettier": "^2.6.3",
-    "prettier": "^2.6.2",
-    "prettier-plugin-astro": "^0.0.12"
-  },
-  "prettier": "./node_modules/@julian_cataldo/astro-configs/.prettierrc.cjs"
-  // ...
-}
-```
-
-### Editorconfig
-
-[See the Editorconfig file](./.editorconfig)
-
----
-
-Copy `./.editorconfig` in your project root.
-
-### VSCode
-
-Extensions: `esbenp.prettier-vscode`, `editorconfig.editorconfig`
-
-In your `settings.json`:
-
-```jsonc
-{
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "prettier.documentSelectors": ["**/*.astro"],
-  "[astro]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // …
+  "editor.formatOnPaste": true|false,
+  "editor.formatOnType": true|false,
+  "editor.formatOnSave": true|false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true|false
   }
+  // …
 }
 ```
 
-## Stylelint
+### Languages
 
-[See the Stylelint config file](./.stylelintrc.cjs)
+#### Astro
 
----
-
-In `package.json`:
-
-```jsonc
-{
-  // ...
-  "scripts": {
-    // ...
-    "lint:style": "stylelint ./src/**/*.vue ./src/**/*.scss ./src/**/*.astro --fix"
-  },
-  "devDependencies": {
-    // ...
-    "postcss-html": "^1.4.1",
-    "stylelint": "^14.8.5",
-    "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-recommended-scss": "^6.0.0",
-    "stylelint-config-recommended-vue": "^1.4.0",
-    "stylelint-config-standard": "^25.0.0",
-    "stylelint-config-standard-scss": "^4.0.0"
-  },
-  "stylelint": {
-    "extends": ["./node_modules/@julian_cataldo/astro-configs/.stylelintrc.cjs"]
-  }
-  // ...
-}
+```sh
+code --install-extension \
+astro-build.astro-vscode
 ```
-
-### VSCode
-
-Extension: `stylelint.vscode-stylelint`
-
-In your `settings.json`:
-
-```jsonc
-{
-  // ...
-  "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "astro"],
-  "stylelint.snippet": ["css", "less", "postcss", "scss", "vue", "astro"]
-}
-```
-
-## SCSS
-
-### VSCode
-
-Extensions:
-
-- SCSS IntelliSense / `mrmlnc.vscode-scss`  
-  Advanced autocompletion and refactoring support for SCSS
-
-## Markdown
-
-### VSCode
-
-Extensions:
-
-- markdownlint / `DavidAnson.vscode-markdownlint`  
-  Markdown linting and style checking for Visual Studio Code
 
 ## …To do
 
