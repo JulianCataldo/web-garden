@@ -92,7 +92,8 @@ pnpm i -D \
 @typescript-eslint/eslint-plugin \
 @typescript-eslint/parser \
 eslint-plugin-import \
-eslint-import-resolver-typescript
+eslint-import-resolver-typescript \
+eslint-plugin-tsdoc
 
 # v—————————————————————————————————— JSX / TSX (React)
 pnpm i -D \
@@ -113,12 +114,6 @@ eslint-plugin-vue
 # v—————————————————————————————————— MDX
 pnpm i -D \
 eslint-plugin-mdx
-
-# =================================== Miscellaneous
-
-# v—————————————————————————————————— TSDoc
-pnpm i -D \
-eslint-plugin-tsdoc
 ```
 
 ### Configuration
