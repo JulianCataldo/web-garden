@@ -47,6 +47,7 @@ specifiers:
   vite: ^2.9.12
 
 dependencies:
+  husky: 8.0.1
   linkinator: 4.0.2
 
 devDependencies:
@@ -79,7 +80,6 @@ devDependencies:
   eslint-plugin-react-hooks: 4.6.0_eslint@8.18.0
   eslint-plugin-tsdoc: 0.2.16
   eslint-plugin-vue: 9.1.1_eslint@8.18.0
-  husky: 8.0.1
   lerna: 5.1.4
   postcss: 8.4.14
   postcss-html: 1.4.1
@@ -5539,7 +5539,7 @@ packages:
     resolution: {integrity: sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==}
     engines: {node: '>=14'}
     hasBin: true
-    dev: true
+    dev: false
 
   /iconv-lite/0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}

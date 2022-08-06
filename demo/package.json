@@ -12,7 +12,6 @@
   "dependencies": {
     "@astrojs/mdx": "^0.4.0",
     "@astrojs/react": "^0.4.1",
-    "@docsearch/react": "3",
     "@fontsource/exo-2": "^4.5.8",
     "@julian_cataldo/astro": "link:..",
     "@julian_cataldo/astro-analytics": "link:../app/Analytics",
@@ -46,18 +45,18 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rehype-rewrite": "^3.0.6",
+    "remark-gfm": "^3.0.1",
     "remark-mermaid": "^0.2.0",
     "sass": "^1.52.3",
-    "serve": "^14.0.1",
     "tsparticles": "^1.43.0",
-    "tsparticles-preset-stars": "1.43.1"
+    "tsparticles-preset-stars": "1.43.1",
+    "@astrojs/sitemap": "^0.2.6",
+    "unplugin-icons": "^0.14.7",
+    "@iconify-json/system-uicons": "^1.1.4"
   },
   "devDependencies": {
-    "@astrojs/sitemap": "^0.2.6",
-    "@astrojs/tailwind": "^0.2.2",
-    "@iconify-json/system-uicons": "^1.1.4",
+    "serve": "^14.0.1",
     "@types/leaflet": "^1.7.11",
-    "@types/mermaid": "^8.2.9",
-    "unplugin-icons": "^0.14.7"
+    "@types/mermaid": "^8.2.9"
   }
 }
