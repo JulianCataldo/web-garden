@@ -24,7 +24,7 @@ minuscule file sizes compared to "all-or-nothing" UI frameworks.
 
 ---
 
-<div class="git-hide">
+<div class="git-only">
 
 - [🚀  Julian's Web Garden](#julians-web-garden)
   - [🤷🏼‍♂️  Philosophy](#️philosophy)
@@ -50,7 +50,7 @@ minuscule file sizes compared to "all-or-nothing" UI frameworks.
 
 ## [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](https://code.juliancataldo.com/)
 
-<div class="git-hide">
+<div class="git-only">
 
 [![Live demo website](https://code.juliancataldo.com/poster.png)](https://code.juliancataldo.com)
 
@@ -64,7 +64,7 @@ _[**Develop** deployed on **`develop--web-garden.netlify.app`**](https://develop
 
 Deployed on Netlify via GitHub actions.
 
-<div class="git-hide">
+<div class="git-only">
 
 <!-- TODO: integrate mermaid renderer into website / or pre-render SVG -->
 

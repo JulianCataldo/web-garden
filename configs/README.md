@@ -17,7 +17,7 @@ This means aligning to Prettier defaults, air-bnb rules, etc.
 
 ---
 
-<div class="git-hide">
+<div class="git-only">
 
 - [🛠  Web developer tool belt](#web-developer-tool-belt)
   - [ESLint](#eslint)
