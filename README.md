@@ -150,7 +150,7 @@ Generic [extendables components](./components).
 
 ## [🛠  Tooling configurations](./configs)
 
-[A useful collection](./configs) for JavaScript developers.  
+[A useful collection](./configs) for web developers.  
 Features ESLint, Prettier, Stylelint, Commitlint…  
 For Astro, React, Vue, SCSS, TS…
 
