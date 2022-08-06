@@ -1,8 +1,9 @@
-# Astro configurations collection
+# 🛠  Web developer tool belt
 
-Here lies some re-usable tooling settings.  
-Languages: JS, TS, Astro, Vue, React, JSX, TSX, SCSS, CSS.  
-Tools: Prettier, ESlint, Stylelint, Editorconfig, TypeScript, Commitlint, VS Code.
+Here lies some re-usable tooling setups, for modern, front-end oriented web development.
+
+Languages features: **JS**, **TS**, **Astro**, **Vue**, **React**, **JSX**, **TSX**, **SCSS**, **CSS**.  
+Tools: **Prettier**, **ESlint**, **Stylelint**, **Editorconfig**, **TypeScript**, **Commitlint**, **VS Code**.
 
 Opinions are: _use whatever is the most common in web dev' conventions_.
 
@@ -18,39 +19,38 @@ This means aligning to Prettier defaults, air-bnb rules, etc.
 
 <div class="git-hide">
 
-- [Astro configurations collection](#astro-configurations-collection)
-- [Tooling configurations](#tooling-configurations)
-  - [VSCode](#vscode)
-    - [Languages](#languages)
-      - [Astro](#astro)
+- [🛠  Web developer tool belt](#web-developer-tool-belt)
   - [ESLint](#eslint)
     - [Installations](#installations)
     - [Configuration](#configuration)
-    - [VSCode](#vscode-1)
-      - [Extension](#extension)
+    - [VSCode](#vscode)
+      - [Extension(s)](#extensions)
       - [Settings](#settings)
   - [Prettier](#prettier)
     - [Installations](#installations-1)
     - [Configuration](#configuration-1)
     - [Editorconfig](#editorconfig)
-    - [VSCode](#vscode-2)
-      - [Extension](#extension-1)
+    - [VSCode](#vscode-1)
+      - [Extension(s)](#extensions-1)
       - [Settings](#settings-1)
   - [Stylelint](#stylelint)
     - [Installations](#installations-2)
     - [Configuration](#configuration-2)
-    - [VSCode](#vscode-3)
-      - [Extension](#extension-2)
+    - [VSCode](#vscode-2)
+      - [Extension(s)](#extensions-2)
       - [Settings](#settings-2)
   - [SCSS](#scss)
-    - [VSCode](#vscode-4)
-      - [Extension](#extension-3)
+    - [VSCode](#vscode-3)
+      - [Extension(s)](#extensions-3)
   - [Markdown](#markdown)
-    - [VSCode](#vscode-5)
-      - [Extension](#extension-4)
+    - [VSCode](#vscode-4)
+      - [Extension(s)](#extensions-4)
   - [TypeScript](#typescript)
-    - [VSCode](#vscode-6)
+    - [VSCode](#vscode-5)
     - [Project settings boilerplate](#project-settings-boilerplate)
+  - [VSCode](#vscode-6)
+    - [Languages](#languages)
+      - [Astro](#astro)
   - […To do](#to-do)
   - [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](#live-demo--documentation-website)
 
@@ -70,38 +70,6 @@ Its `devDependencies` are mostly dedicated for meta-framework,
 developer's IDE experience.
 You can cherry pick and get inspirations for your own configurations.
 Atomic configs import is planned, as each project might not need the whole range of tools, and will make them more shareable. -->
-
-# Tooling configurations
-
-## VSCode
-
-In your `settings.json`:
-
-> **Warning**  
-> Beware that auto-fixing ALL linting errors on save can lead to unwanted results.  
-> You should act on a case-by-case basis, or review batch fixes carefully.
-
-```jsonc
-{
-  // …
-  "editor.formatOnPaste": true|false,
-  "editor.formatOnType": true|false,
-  "editor.formatOnSave": true|false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true|false
-  }
-  // …
-}
-```
-
-### Languages
-
-#### Astro
-
-```sh
-code --install-extension \
-astro-build.astro-vscode
-```
 
 ## ESLint
 
@@ -174,7 +142,7 @@ Script command in `package.json`:
 
 ### VSCode
 
-#### Extension
+#### Extension(s)
 
 ```sh
 code --install-extension \
@@ -247,7 +215,7 @@ Copy `./.editorconfig` in your project root.
 
 ### VSCode
 
-#### Extension
+#### Extension(s)
 
 ```sh
 code --install-extension \
@@ -284,6 +252,10 @@ In your `settings.json`:
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.wordWrap": "off",
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[mdx]": {
@@ -344,7 +316,7 @@ Script command in `package.json`:
 
 ### VSCode
 
-#### Extension
+#### Extension(s)
 
 ```sh
 code --install-extension \
@@ -358,8 +330,8 @@ In your `settings.json`:
 ```jsonc
 {
   // …
-  "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "astro"],
-  "stylelint.snippet": ["css", "less", "postcss", "scss", "vue", "astro"]
+  "stylelint.validate": ["css", "postcss", "scss", "vue", "astro"],
+  "stylelint.snippet": ["css", "postcss", "scss", "vue", "astro"]
   // …
 }
 ```
@@ -368,29 +340,23 @@ In your `settings.json`:
 
 ### VSCode
 
-#### Extension
+#### Extension(s)
 
-- SCSS IntelliSense / `mrmlnc.vscode-scss`  
-  Advanced autocompletion and refactoring support for SCSS
-
-```sh
-code --install-extension \
-mrmlnc.vscode-scss
-```
+- Advanced **auto-completion** and **refactoring** support for SCSS  
+  **SCSS IntelliSense**  
+  `code --install-extension mrmlnc.vscode-scss`
 
 ## Markdown
 
 ### VSCode
 
-#### Extension
+#### Extension(s)
 
-- markdownlint / `DavidAnson.vscode-markdownlint`  
-  Markdown linting and style checking for Visual Studio Code
-
-```sh
-code --install-extension \
-DavidAnson.vscode-markdownlint
-```
+- Markdown **linting** and **style checking** for Visual Studio Code  
+  **Markdownlint**  
+  `code --install-extension DavidAnson.vscode-markdownlint`
+- Markdown **frontmatter YAML** validation against **JSON-Schema**  
+  See [github.com/JulianCataldo/remark-lint-frontmatter-schema](https://github.com/JulianCataldo/remark-lint-frontmatter-schema)
 
 ## TypeScript
 
@@ -437,6 +403,36 @@ In your `tsconfig.json`:
     }
   }
 }
+```
+
+## VSCode
+
+In your `settings.json`:
+
+> **Warning**  
+> Beware that auto-fixing ALL linting errors on save can lead to unwanted results.  
+> You should act on a case-by-case basis, or review batch fixes carefully.
+
+```jsonc
+{
+  // …
+  "editor.formatOnPaste": true|false,
+  "editor.formatOnType": true|false,
+  "editor.formatOnSave": true|false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true|false
+  }
+  // …
+}
+```
+
+### Languages
+
+#### Astro
+
+```sh
+code --install-extension \
+astro-build.astro-vscode
 ```
 
 ## …To do
