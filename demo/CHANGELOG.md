@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.7.1...@julian_cataldo/astro-demo@0.8.0) (2022-08-06)
+
+
+### Features
+
+* add licenses section for single package ([0e3b067](https://github.com/JulianCataldo/web-garden/commit/0e3b0675469b25d38e26a41d09a6027b0722534c))
+* add quick links for configs ([d6513b7](https://github.com/JulianCataldo/web-garden/commit/d6513b714c70bea69312d04e9c1649ab47982b48))
+* change links tree spacings + add depth ([ba9eca8](https://github.com/JulianCataldo/web-garden/commit/ba9eca86e4665040619402ec3bc0fc6eca101a8a))
+
+
+### Bug Fixes
+
+* compact code a bit more + docs ellipses ([8936217](https://github.com/JulianCataldo/web-garden/commit/8936217aed17c3bacb900c47eb25de930986e8e2))
+* correct import for type ([0334d23](https://github.com/JulianCataldo/web-garden/commit/0334d2316ebc7bdcdb6bea7e8b1773deb76a8ec9))
+* correct section id ([8cc7990](https://github.com/JulianCataldo/web-garden/commit/8cc79904083c35bc05d83962c6492effe429e0a5))
+* diminish code font-size ([3d88515](https://github.com/JulianCataldo/web-garden/commit/3d88515ca87b8b60ce44755f389f32b69ee7bef0))
+* temporary no js fallback defaults ([3b889d1](https://github.com/JulianCataldo/web-garden/commit/3b889d1db1bedb5eaf481b0e0a65fde18477b347))
+
+
+
 ## [0.7.1](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.7.0...@julian_cataldo/astro-demo@0.7.1) (2022-07-31)
 
 

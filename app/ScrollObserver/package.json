@@ -1,6 +1,6 @@
 {
   "name": "@julian_cataldo/astro-scroll-observer",
-  "version": "0.10.17",
+  "version": "0.10.18",
   "description": "Viewport scroll position and direction watcher.\nBinds states data attributes to `HTML` for further JS/CSS usage.\nScroll event is throttled for performance economy.",
   "main": "index.js",
   "type": "module",

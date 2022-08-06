@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.3](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.12.2...@julian_cataldo/astro-configs@0.12.3) (2022-08-06)
+
+
+### Bug Fixes
+
+* compact code a bit more + docs ellipses ([8936217](https://github.com/JulianCataldo/web-garden/commit/8936217aed17c3bacb900c47eb25de930986e8e2))
+
+
+
 ## [0.12.2](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.12.1...@julian_cataldo/astro-configs@0.12.2) (2022-07-31)
 
 **Note:** Version bump only for package @julian_cataldo/astro-configs

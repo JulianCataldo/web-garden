@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.4](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-color-mode@0.11.3...@julian_cataldo/astro-color-mode@0.11.4) (2022-08-06)
+
+
+### Bug Fixes
+
+* temporary no js fallback defaults ([3b889d1](https://github.com/JulianCataldo/web-garden/commit/3b889d1db1bedb5eaf481b0e0a65fde18477b347))
+
+
+
 ## [0.11.3](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-color-mode@0.11.2...@julian_cataldo/astro-color-mode@0.11.3) (2022-07-31)
 
 **Note:** Version bump only for package @julian_cataldo/astro-color-mode

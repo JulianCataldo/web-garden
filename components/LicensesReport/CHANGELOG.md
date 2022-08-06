@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-licenses-report@0.13.3...@julian_cataldo/astro-licenses-report@0.14.0) (2022-08-06)
+
+
+### Features
+
+* add package path option + extract prop types ([be90d05](https://github.com/JulianCataldo/web-garden/commit/be90d051850d804f4b73404ae231bc2eb2b4dbdf))
+* add smart cache capability ([f0df55b](https://github.com/JulianCataldo/web-garden/commit/f0df55b5493d1e0c0c02a313e7829d2294c29383))
+
+
+
 ## [0.13.3](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-licenses-report@0.13.2...@julian_cataldo/astro-licenses-report@0.13.3) (2022-07-31)
 
 **Note:** Version bump only for package @julian_cataldo/astro-licenses-report
