@@ -13,7 +13,7 @@ specifiers:
   '@julian_cataldo/astro-base': link:../app/Base
   '@julian_cataldo/astro-breakpoints': link:../app/Breakpoints
   '@julian_cataldo/astro-color-mode': link:../app/ColorMode
-  '@julian_cataldo/astro-configs': ^0.12.2
+  '@julian_cataldo/astro-configs': link:../configs
   '@julian_cataldo/astro-diagram': link:../components/Diagram
   '@julian_cataldo/astro-licenses-report': link:../components/LicensesReport
   '@julian_cataldo/astro-lightbox': link:../app/Lightbox
@@ -59,6 +59,7 @@ dependencies:
   '@julian_cataldo/astro-base': link:../app/Base
   '@julian_cataldo/astro-breakpoints': link:../app/Breakpoints
   '@julian_cataldo/astro-color-mode': link:../app/ColorMode
+  '@julian_cataldo/astro-configs': link:../configs
   '@julian_cataldo/astro-diagram': link:../components/Diagram
   '@julian_cataldo/astro-licenses-report': link:../components/LicensesReport
   '@julian_cataldo/astro-lightbox': link:../app/Lightbox
@@ -95,7 +96,6 @@ devDependencies:
   '@astrojs/sitemap': 0.2.6
   '@astrojs/tailwind': 0.2.2
   '@iconify-json/system-uicons': 1.1.4
-  '@julian_cataldo/astro-configs': link:../configs
   '@types/leaflet': 1.7.11
   '@types/mermaid': 8.2.9
   unplugin-icons: 0.14.7
