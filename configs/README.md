@@ -229,6 +229,7 @@ In your `settings.json`:
 
 ```jsonc
 {
+  // …
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -261,6 +262,7 @@ In your `settings.json`:
   "[mdx]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
+  // …
 }
 ```
 
