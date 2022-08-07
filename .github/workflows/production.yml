@@ -18,6 +18,11 @@ jobs:
         with:
           node-version: 17
 
+      - name: Setup PNPM 7
+        uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7.1.7
+
       - name: Install Node dependencies
         # `production` to exclude dev. dependencies
         run: NODE_ENV=production pnpm install --recursive
