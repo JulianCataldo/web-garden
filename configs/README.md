@@ -202,7 +202,7 @@ Script command in `package.json`:
 
 This is used locally with your IDE, in harmony with Prettier and for homogeneous display on GitHub etc.
 
-[See this the config file for inspiration](https://github.com/JulianCataldo/web-garden/blob/develop/configs/.editorconfig)
+[See this Editorconfig file for inspiration](https://github.com/JulianCataldo/web-garden/blob/develop/configs/.editorconfig)
 
 ---
 
