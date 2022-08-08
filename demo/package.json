@@ -50,7 +50,7 @@
     "sass": "^1.52.3",
     "tsparticles": "^1.43.0",
     "tsparticles-preset-stars": "1.43.1",
-    "@astrojs/sitemap": "^0.2.6",
+    "@astrojs/sitemap": "0.3.0",
     "unplugin-icons": "^0.14.7",
     "@iconify-json/system-uicons": "^1.1.4"
   },
