@@ -3,6 +3,6 @@
  *                      See LICENSE in the project root.                       *
 /* —————————————————————————————————————————————————————————————————————————— */
 
-import ColorMode from './ColorMode.astro';
+import Base from './Breakpoints.astro';
 
-export default ColorMode;
+export default Base;
