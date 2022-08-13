@@ -70,7 +70,7 @@
     "node": "17",
     "pnpm": "7"
   },
-  "packageManager": "pnpm@7.0.0",
+  "packageManager": "pnpm@7.9.0",
   "dependencies": {
     "husky": "^8.0.1",
     "linkinator": "^4.0.2"
