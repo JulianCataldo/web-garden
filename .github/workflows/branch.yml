@@ -24,7 +24,7 @@ jobs:
       - name: Setup PNPM 7
         uses: pnpm/action-setup@v2.2.2
         with:
-          version: 7.1.7
+          version: 7.9.0
 
       - name: Install Node dependencies
         # `production` to exclude dev. dependencies
