@@ -6,13 +6,17 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "./gather-content.sh && astro build",
-    "build:start": "pnpm run build && pnpm serve -p 2425 ./dist",
+    "serve": "serve -p 2425 ./dist",
+    "build:start": "pnpm run build && pnpm run serve",
     "preview": "astro preview"
   },
   "dependencies": {
-    "@astrojs/mdx": "^0.4.0",
-    "@astrojs/react": "^0.4.1",
-    "@fontsource/exo-2": "^4.5.8",
+    "@astrojs/mdx": "^0.7.0",
+    "@astrojs/react": "^0.4.3",
+    "@astrojs/sitemap": "^0.3.0",
+    "@astropub/flow": "^0.2.2",
+    "@fontsource/exo-2": "^4.5.9",
+    "@iconify-json/system-uicons": "^1.1.4",
     "@julian_cataldo/astro": "link:..",
     "@julian_cataldo/astro-analytics": "link:../app/Analytics",
     "@julian_cataldo/astro-base": "link:../app/Base",
@@ -31,13 +35,13 @@
     "@julian_cataldo/astro-tooltips": "link:../app/Tooltips",
     "@julian_cataldo/astro-transition": "link:../app/Transition",
     "@wbmnky/license-report-generator": "^2.1.3",
-    "astro": "1.0.0-rc.3",
+    "astro": "1.0.2",
     "astro-icon": "^0.7.3",
     "astro-imagetools": "^0.6.10",
     "change-case": "^4.1.2",
     "clipboard": "^2.0.11",
     "glob": "^8.0.3",
-    "glob-promise": "^4.2.2",
+    "glob-promise": "^5.0.0",
     "headless-mermaid": "^1.3.0",
     "heroicons": "^1.0.6",
     "leaflet": "^1.8.0",
@@ -47,16 +51,14 @@
     "rehype-rewrite": "^3.0.6",
     "remark-gfm": "^3.0.1",
     "remark-mermaid": "^0.2.0",
-    "sass": "^1.52.3",
+    "sass": "^1.54.3",
     "tsparticles": "^1.43.0",
-    "tsparticles-preset-stars": "1.43.1",
-    "@astrojs/sitemap": "^0.2.6",
-    "unplugin-icons": "^0.14.7",
-    "@iconify-json/system-uicons": "^1.1.4"
+    "tsparticles-preset-stars": "^1.43.1",
+    "unplugin-icons": "^0.14.8"
   },
   "devDependencies": {
-    "serve": "^14.0.1",
     "@types/leaflet": "^1.7.11",
-    "@types/mermaid": "^8.2.9"
+    "@types/mermaid": "^8.2.9",
+    "serve": "^14.0.1"
   }
 }
