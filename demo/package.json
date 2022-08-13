@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^0.7.0",
-    "@astrojs/react": "^0.4.3",
+    "@astrojs/react": "1.0.0",
     "@astrojs/sitemap": "^0.3.0",
     "@astropub/flow": "^0.2.2",
     "@fontsource/exo-2": "^4.5.9",
