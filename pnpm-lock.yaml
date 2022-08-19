@@ -21,7 +21,7 @@ specifiers:
   eslint-config-airbnb-base: ^15.0.0
   eslint-config-prettier: ^8.5.0
   eslint-import-resolver-typescript: ^3.4.0
-  eslint-plugin-astro: ^0.16.0
+  eslint-plugin-astro: 0.17.1
   eslint-plugin-import: ^2.26.0
   eslint-plugin-jsx-a11y: ^6.6.1
   eslint-plugin-prettier: ^4.2.1
@@ -70,7 +70,7 @@ devDependencies:
   eslint-config-airbnb-base: 15.0.0_jatgrcxl4x7ywe7ak6cnjca2ae
   eslint-config-prettier: 8.5.0_eslint@8.21.0
   eslint-import-resolver-typescript: 3.4.0_jatgrcxl4x7ywe7ak6cnjca2ae
-  eslint-plugin-astro: 0.16.0_eslint@8.21.0
+  eslint-plugin-astro: 0.17.1_eslint@8.21.0
   eslint-plugin-import: 2.26.0_klqlxqqxnpnfpttri4irupweri
   eslint-plugin-jsx-a11y: 6.6.1_eslint@8.21.0
   eslint-plugin-prettier: 4.2.1_h62lvancfh4b7r6zn2dgodrh5e
@@ -2557,6 +2557,20 @@ packages:
       - supports-color
     dev: true
 
+  /astro-eslint-parser/0.5.0:
+    resolution: {integrity: sha512-XZ3ptjD/5BapRozYI4te+DfDF/IsN2z4hQC0tZjOXp3zPu1KTzoQ8mERklCVzUbjLE96lA9pXS+BxCJwc/nj9A==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    dependencies:
+      '@astrojs/compiler': 0.23.1
+      '@typescript-eslint/types': 5.32.0
+      debug: 4.3.4
+      eslint-visitor-keys: 3.3.0
+      espree: 9.3.3
+      synckit: 0.8.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /astro/1.0.2:
     resolution: {integrity: sha512-7Bmw8wGQnh/rRpybc6owYbAyr6SXKm7kX56gg82ABJbqnTQhbgOPtg8+k+KKkJekMU/gPe3LfMIh0+Ie+F9xUw==}
     engines: {node: ^14.18.0 || >=16.12.0, npm: '>=6.14.0'}
@@ -4224,14 +4238,14 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-astro/0.16.0_eslint@8.21.0:
-    resolution: {integrity: sha512-jhuXHxnAGMlmg88z2HbfizyaaEyWOnrPHMGjTZAr1qLzrcPvutDgS+yYOgtr/NJiVMdpNVocb7mFEbCBBHL8YQ==}
-    engines: {node: ^14.17.0 || >=16.0.0}
+  /eslint-plugin-astro/0.17.1_eslint@8.21.0:
+    resolution: {integrity: sha512-G2S2zAaDokH2v7O+nzcd0iFskGJ1ohANhQpsFwaAqDPyn+GolFl4zSCnoQefLZ+ONEeZkZ8Jp7Imvbo3FI3LOA==}
+    engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=7.0.0'
     dependencies:
-      '@typescript-eslint/types': 5.28.0
-      astro-eslint-parser: 0.4.5
+      '@typescript-eslint/types': 5.32.0
+      astro-eslint-parser: 0.5.0
       eslint: 8.21.0
       eslint-utils: 3.0.0_eslint@8.21.0
       postcss: 8.4.16
