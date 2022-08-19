@@ -60,6 +60,9 @@ module.exports = {
           { max: 100, skipComments: true, skipBlankLines: true },
         ],
       },
+      globals: {
+        astroHTML: 'readonly',
+      },
     },
     {
       files: ['*.vue'],
