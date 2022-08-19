@@ -48,11 +48,13 @@ if (cache[uniqueKey] === undefined) {
 }
 ---
 
-{cache[uniqueKey] && (
-  <div class="mermaid-diagram">
-    <Fragment set:html={cache[uniqueKey].result} data-test="mermaid" />
-  </div>
-)}
+{
+  cache[uniqueKey] && (
+    <div class="mermaid-diagram">
+      <Fragment set:html={cache[uniqueKey].result} data-test="mermaid" />
+    </div>
+  )
+}
 
 <style>
   .mermaid-diagram {

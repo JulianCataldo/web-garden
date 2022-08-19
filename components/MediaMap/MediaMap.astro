@@ -30,10 +30,10 @@ Object.entries(props).forEach(([key, val]) => {
 
 <div
   style={`z-index: 0; width: ${props.width}; height: ${props.height}; ` +
-    `--display: ${
-      props.attribution ? 'initial' : 'none'
-    }` /* NOTE: workaround as `define:vars` isn't working */}
-  id='map'
+  `--display: ${
+    props.attribution ? 'initial' : 'none'
+  }` /* NOTE: workaround as `define:vars` isn't working */}
+  id="map"
   data-x={props.x}
   data-y={props.y}
   data-z={props.z}
@@ -70,7 +70,7 @@ Object.entries(props).forEach(([key, val]) => {
 </script>
 
 <!-- FIXME: `define:vars` not working in this component only -->
-<style lang='scss' is:global>
+<style lang="scss" is:global>
   @import 'leaflet';
   .leaflet-control-attribution {
     display: var(--display, 'initial');

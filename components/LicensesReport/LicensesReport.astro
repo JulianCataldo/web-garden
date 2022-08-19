@@ -93,26 +93,27 @@ if (cache[uniqueKey] === undefined) {
 const report = cache[uniqueKey];
 ---
 
-<div class:list={['table', props.class]} role='table' {...extraAttrs}>
-  <div class:list={['thead', props.class]} role='rowgroup'>
-    <div class:list={['tr', props.class]} role='row'>
-      <div class:list={['th', props.class]} role='columnheader'>
+<div class:list={['table', props.class]} role="table" {...extraAttrs}>
+  <div class:list={['thead', props.class]} role="rowgroup">
+    <div class:list={['tr', props.class]} role="row">
+      <div class:list={['th', props.class]} role="columnheader">
         {props.nameText}
       </div>
-      <div class:list={['th', props.class]} role='columnheader'>
+      <div class:list={['th', props.class]} role="columnheader">
         {props.authorText}
       </div>
-      <div class:list={['th', props.class]} role='columnheader'>
+      <div class:list={['th', props.class]} role="columnheader">
         {props.licenseText}
       </div>
-      <div class:list={['th', props.class]} role='columnheader'>
+      <div class:list={['th', props.class]} role="columnheader">
         {props.linkText}
       </div>
     </div>
   </div>
 
-  <div class:list={['tbody', props.class]} role='rowgroup'>
-    {report.length &&
+  <div class:list={['tbody', props.class]} role="rowgroup">
+    {
+      report.length &&
       report.map((row) => (
         <div class:list={['tr', props.class]} role="row">
           <div class:list={['td', props.class]} role="cell">
@@ -140,6 +141,7 @@ const report = cache[uniqueKey];
             </a>
           </div>
         </div>
-      ))}
+      ))
+    }
   </div>
 </div>

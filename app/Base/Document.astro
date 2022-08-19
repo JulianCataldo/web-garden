@@ -34,19 +34,21 @@ Object.entries(props).forEach(([key, val]) => {
       }
     </script>
 
-    <meta charset='UTF-8' />
+    <meta charset="UTF-8" />
 
-    <meta name='mobile-web-app-capable' content='yes' />
-    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    {props.redirectTo && (
-      <meta http-equiv="refresh" content={`0; url=${props.redirectTo}`} />
-    )}
+    {
+      props.redirectTo && (
+        <meta http-equiv="refresh" content={`0; url=${props.redirectTo}`} />
+      )
+    }
 
-    <slot name='head'></slot>
+    <slot name="head" />
   </head>
 
-  <slot name='body'>
+  <slot name="body">
     {props.redirectTo && <div>Redirecting to: {props.redirectTo}</div>}
   </slot>
 
