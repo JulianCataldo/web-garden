@@ -40,7 +40,7 @@
   ],
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^18.6.4",
+    "@types/node": "^18.7.6",
     "prettier-plugin-astro": "0.5.0"
   }
 }
