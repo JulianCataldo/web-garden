@@ -25,14 +25,14 @@ const tableOfContentHeaders = packages.map((e) => e.readme.mainTitle);
 ---
 
 <Layout titles={titles}>
-  <div class='main-content'>
+  <div class="main-content">
     <PageNavigation
-      title='Components'
+      title="Components"
       links={tableOfContentHeaders}
       anchorMode={true}
     />
 
-    <div class='content'>
+    <div class="content">
       <ComponentList packages={packages} />
     </div>
   </div>

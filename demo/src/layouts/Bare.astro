@@ -10,7 +10,7 @@ const { content } = Astro.props;
   <body>
     <h1>{content.title} by {content.author}</h1>
 
-    <slot></slot>
+    <slot />
     <p>Written on: {content.date}</p>
   </body>
 </html>

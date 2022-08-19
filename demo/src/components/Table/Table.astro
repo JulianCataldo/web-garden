@@ -25,36 +25,43 @@ const headers = Object.entries(props.data[0]);
     props.class,
     //  props.customRootClass
   ]}
-  role='table'
+  role="table"
   {...extraAttrs}
 >
-  <div class:list={['thead', props.class]} role='rowgroup'>
-    <div class:list={['tr', props.class]} role='row'>
-      {headers.map(([index]) => (
-        <div
-          class:list={['th', `col-${index}`, props.class]}
-          role="columnheader"
-        >
-          {index}
-        </div>
-      ))}
+  <div class:list={['thead', props.class]} role="rowgroup">
+    <div class:list={['tr', props.class]} role="row">
+      {
+        headers.map(([index]) => (
+          <div
+            class:list={['th', `col-${index}`, props.class]}
+            role="columnheader"
+          >
+            {index}
+          </div>
+        ))
+      }
     </div>
   </div>
 
-  <div class:list={['tbody', props.class]} role='rowgroup'>
-    {props.data.map((row) => (
-      <div class:list={['tr', props.class]} role="row">
-        {Object.entries(row).map(([colIndex, colValue]) => (
-          <div class:list={['td', `col-${colIndex}`, props.class]} role="cell">
-            {`${colValue}`}
-          </div>
-        ))}
-      </div>
-    ))}
+  <div class:list={['tbody', props.class]} role="rowgroup">
+    {
+      props.data.map((row) => (
+        <div class:list={['tr', props.class]} role="row">
+          {Object.entries(row).map(([colIndex, colValue]) => (
+            <div
+              class:list={['td', `col-${colIndex}`, props.class]}
+              role="cell"
+            >
+              {`${colValue}`}
+            </div>
+          ))}
+        </div>
+      ))
+    }
   </div>
 </div>
 
-<style lang='scss' define:vars={{ colCount: headers.length }}>
+<style lang="scss" define:vars={{ colCount: headers.length }}>
   .table:not(.unstyled) {
     width: 100%;
     overflow-x: auto;

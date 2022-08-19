@@ -10,23 +10,25 @@ interface Props extends astroHTML.JSX.HTMLAttributes {
 const { links = [], anchorMode = false, ...extraAttrs } = Astro.props as Props;
 ---
 
-<nav class='links-tree' {...extraAttrs}>
+<nav class="links-tree" {...extraAttrs}>
   <ul>
-    {links.map((link) => {
-      const title = link.text.replace('🚀  Astro — ', '')
-      const href = anchorMode ? `#${link.slug}` : `/component/${link.slug}`
+    {
+      links.map((link) => {
+        const title = link.text.replace('🚀  Astro — ', '');
+        const href = anchorMode ? `#${link.slug}` : `/component/${link.slug}`;
 
-      return (
-        <li class:list={`depth-${link.depth}`}>
-          <Link href={href} class="link unstyled">
-            {title}
-          </Link>
-        </li>
-      )
-    })}
+        return (
+          <li class:list={`depth-${link.depth}`}>
+            <Link href={href} class="link unstyled">
+              {title}
+            </Link>
+          </li>
+        );
+      })
+    }
   </ul>
 </nav>
 
-<style lang='scss'>
+<style lang="scss">
   @import './LinksTree.scss';
 </style>
