@@ -14,6 +14,9 @@ import Head from './Head.astro';
 // FIXME: FOUT
 import '@fontsource/exo-2/variable.css';
 import '@fontsource/exo-2/variable-italic.css';
+/* ·········································································· */
+// TODO: importing globally here for HMR smoothness
+import './Default.global.scss';
 /* —————————————————————————————————————————————————————————————————————————— */
 
 export interface Props {
@@ -76,9 +79,10 @@ if (typeof props?.titles?.main !== 'string') {
   </Body>
 </Document>
 
-<style lang='scss' is:global>
+<!-- Disabled here because HMR issues -->
+<!-- <style lang="scss" is:global>
   @import './Default.global';
-</style>
+</style> -->
 
 <script>
   import './Default.client.ts';
