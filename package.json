@@ -35,7 +35,7 @@
     "@typescript-eslint/eslint-plugin": "^5.32.0",
     "@typescript-eslint/parser": "^5.32.0",
     "astro": "1.0.2",
-    "astro-eslint-parser": "^0.4.5",
+    "astro-eslint-parser": "0.5.1",
     "cypress": "^10.4.0",
     "cypress-highlight": "^1.2.0",
     "cypress-real-events": "^1.7.1",
