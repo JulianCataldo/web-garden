@@ -224,6 +224,9 @@ pnpm run cypress:open
 # Cypress: Run test suite
 pnpm run cypress:run
 
+# Linkinator: Run links checker with report
+pnpm run test:links
+
 # Pre-release, does:
 # 1. Packages bump based on commits
 # 2. Tagging releases
