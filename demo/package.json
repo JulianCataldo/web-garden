@@ -50,7 +50,6 @@
     "react-dom": "^18.2.0",
     "rehype-rewrite": "^3.0.6",
     "remark-gfm": "^3.0.1",
-    "remark-mermaid": "^0.2.0",
     "sass": "^1.54.4",
     "tsparticles": "^1.43.0",
     "tsparticles-preset-stars": "^1.43.1",
@@ -59,6 +58,7 @@
   "devDependencies": {
     "@types/leaflet": "^1.7.11",
     "@types/mermaid": "^8.2.9",
+    "astro-parcel": "^0.4.1",
     "serve": "^14.0.1"
   },
   "packageManager": "pnpm@7.9.0"
