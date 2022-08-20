@@ -99,6 +99,8 @@ Alice->John: Yes... John, how are you?
 
 ## To do
 
+- [ ] Offline / Node package import of mermaid instead of CDN (`headless-mermaid` related).
+      [See Issue #43](https://github.com/JulianCataldo/web-garden/issues/43)
 - [ ] Improve Astro **MDX** integration  
        Refs.:  
        See https://github.com/sjwall/mdx-mermaid  
