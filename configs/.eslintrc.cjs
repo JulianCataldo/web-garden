@@ -3,32 +3,21 @@
 module.exports = {
   settings: {
     'import/resolver': {
-      typescript: {}, // this loads <rootdir>/tsconfig.json to eslint
+      typescript: { project: ['tsconfig.json'] }, // this loads <rootdir>/tsconfig.json to eslint
     },
-    // 'import/resolver': {
-    //   node: {
-    //     extensions: ['.js', '.jsx', '.ts', '.tsx', '.astro'],
-    //   },
-    // },
   },
   env: {
     node: true,
     es2022: true,
     browser: true,
   },
-  extends: [
-    'eslint:recommended',
-    // 'plugin:prettier/recommended',
-    // 'plugin:import/typescript',
-  ],
+  extends: ['eslint:recommended'],
 
   plugins: ['eslint-plugin-tsdoc'],
 
   rules: {
     'no-restricted-syntax': 0,
     'tsdoc/syntax': 'warn',
-    // 'import/extensions': ['error', 'always'],
-    // 'prettier/prettier': ['error'],
   },
 
   parserOptions: {
@@ -38,12 +27,7 @@ module.exports = {
   overrides: [
     {
       files: ['*.astro'],
-      extends: [
-        // 'eslint:recommended',
-        'airbnb-base',
-        'plugin:astro/recommended',
-        'prettier',
-      ],
+      extends: ['airbnb-base', 'plugin:astro/recommended', 'prettier'],
       parser: 'astro-eslint-parser',
       parserOptions: {
         parser: '@typescript-eslint/parser',
@@ -54,6 +38,7 @@ module.exports = {
         'import/no-named-as-default-member': 'off',
         'import/no-named-as-default': 'off',
         'import/prefer-default-export': 'off',
+        'import/no-unresolved': [2, { ignore: ['@astrojs/image/components'] }],
         'import/no-extraneous-dependencies': 'off',
         'max-lines': [
           'error',
