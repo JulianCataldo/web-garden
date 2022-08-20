@@ -1,6 +1,3 @@
-// import type { Mermaid } from 'mermaid';
-// import type {merm}
-
 import type mermaidAPI from 'mermaid/mermaidAPI';
 
 interface Cache {

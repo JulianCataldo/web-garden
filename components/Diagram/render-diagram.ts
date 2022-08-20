@@ -1,10 +1,9 @@
 // TODO: Proper TypeScript rehaul for this file.
+// (headless-mermaid types broken)
 
 import headlessMermaid from 'headless-mermaid';
 /* ·········································································· */
-
 import type { Props } from './Props';
-
 /* —————————————————————————————————————————————————————————————————————————— */
 
 export default async function renderDiagram({ config, code }: Props) {
