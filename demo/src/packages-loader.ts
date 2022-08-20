@@ -16,6 +16,7 @@ export default async function loadPackages(
         name: pJson.name,
         description: pJson.description,
         repository: pJson.repository,
+        bugs: pJson.bugs,
         version: pJson.version,
         keywords: pJson.keywords,
       },
