@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.12.3...@julian_cataldo/astro-configs@0.13.0) (2022-08-20)
+
+
+### Features
+
+* add `astroHTML` global for `.astro` files ([22b3d29](https://github.com/JulianCataldo/web-garden/commit/22b3d292f778fbb2b49fe1e6e8aaf64ca8786de0))
+
+
+### Bug Fixes
+
+* clean up + add ignore missing import rule ([4b39df6](https://github.com/JulianCataldo/web-garden/commit/4b39df6cbb63b0b4c8668fcebb33d7de068eaa27))
+* docs links, relative to absolute ([4737876](https://github.com/JulianCataldo/web-garden/commit/473787617df5692cea016d2efd985cd234a96c95))
+
+
+
 ## [0.12.3](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.12.2...@julian_cataldo/astro-configs@0.12.3) (2022-08-06)
 
 

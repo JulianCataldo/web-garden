@@ -1,6 +1,6 @@
 {
   "name": "@julian_cataldo/astro-diagram",
-  "version": "0.11.2",
+  "version": "0.11.3",
   "description": "Embed you Mermaid diagrams in no time inside your Astro templates. Features server-side rendering and smart caching.",
   "main": "dist/index.js",
   "type": "module",

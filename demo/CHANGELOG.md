@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.8.0...@julian_cataldo/astro-demo@0.9.0) (2022-08-20)
+
+
+### Features
+
+* add astro version to main footer ([5c15abd](https://github.com/JulianCataldo/web-garden/commit/5c15abd8d3f4ce501b33c79df04a5f428bc6b094))
+
+
+### Bug Fixes
+
+* add import for astro version ([2103146](https://github.com/JulianCataldo/web-garden/commit/2103146de73a4fe9e9f92cee5e8ced51bd63f940))
+* correct changelog import for configs ([202d2fe](https://github.com/JulianCataldo/web-garden/commit/202d2fe95ede9b8d8adc0ab0f3bac1c0f0536fe7))
+* package typing path ([49c79ec](https://github.com/JulianCataldo/web-garden/commit/49c79ecbaabe7d3776e385703fa1afee9805fc3d))
+
+
+
 ## [0.8.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.7.1...@julian_cataldo/astro-demo@0.8.0) (2022-08-06)
 
 
