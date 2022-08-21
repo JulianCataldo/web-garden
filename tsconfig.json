@@ -28,8 +28,8 @@
     "baseUrl": "./demo",
     "paths": {},
 
-    "importsNotUsedAsValues": "error"
+    "importsNotUsedAsValues": "error",
 
-    // "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true
   }
 }
