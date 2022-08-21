@@ -29,6 +29,7 @@ Object.entries(props).forEach(([key, val]) => {
 ---
 
 <div
+  class="leaflet-map"
   style={`z-index: 0; width: ${props.width}; height: ${props.height}; ` +
   `--display: ${
     props.attribution ? 'initial' : 'none'
@@ -37,8 +38,6 @@ Object.entries(props).forEach(([key, val]) => {
   data-y={props.y}
   data-z={props.z}
   {...extraAttrs}
-  class="leaflet-map"
-  id="map"
 >
 </div>
 
