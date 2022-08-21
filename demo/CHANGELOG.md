@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.10.0...@julian_cataldo/astro-demo@0.11.0) (2022-08-21)
+
+
+### Features
+
+* support multiple leaflet map embed per page ([295ea80](https://github.com/JulianCataldo/web-garden/commit/295ea80812f39c801580d209957b37be84b568bd))
+
+
+
 ## [0.10.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.9.0...@julian_cataldo/astro-demo@0.10.0) (2022-08-21)
 
 
