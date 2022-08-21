@@ -14,9 +14,6 @@ pnpm i -D @types/leaflet
 
 ## 🛠  Usage
 
-> **Note**  
-> Only **one** map per page for now
-
 ```astro
 ---
 import MediaMap from '@julian_cataldo/astro-media-map/MediaMap.astro';
@@ -44,7 +41,8 @@ import MediaMap from '@julian_cataldo/astro-media-map/MediaMap.astro';
 
 ## To do
 
-- [ ] Multiple maps per page
+- [x] Multiple maps per page
+- [ ] SSR rendered placeholder, for when JS is unavailable
 
 <div class="git-footer">
 
