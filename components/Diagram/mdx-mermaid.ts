@@ -1,6 +1,6 @@
-// TODO: Proper TypeScript rehaul for this file.
-
 /**
+ * WIP
+ *
  * Some bits of code are from https://github.com/sjwall/mdx-mermaid
  *
  * Using Parcel to bundle this plugin because
@@ -8,6 +8,8 @@
  * (It seems that it support TS too, but it breaks some third-parties)
  *
  */
+
+// TODO: Proper TypeScript rehaul for this file.
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { visit } from 'unist-util-visit';
@@ -32,7 +34,7 @@ function plugin() {
         const html = await renderDiagram({
           config: {},
           code: node.value,
-        }).then((diagram) => diagram.result);
+        }).then((diagram) => diagram);
 
         parent.children.splice(index, 1, {
           type: 'html',

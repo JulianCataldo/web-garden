@@ -1,11 +1,5 @@
-import type mermaidAPI from 'mermaid/mermaidAPI';
-
 interface Cache {
-  [key: string]: {
-    config: mermaidAPI.Config;
-    code: string;
-    result: string;
-  };
+  [key: string]: string;
 }
 
 const cache: Cache = {};

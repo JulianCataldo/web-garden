@@ -19,7 +19,7 @@ export default async function renderDiagram({ config, code }: Props) {
     });
 
   if (result) {
-    return { code, config, result };
+    return result.svgCode;
   }
 
   return false;
