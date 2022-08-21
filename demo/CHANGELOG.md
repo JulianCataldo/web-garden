@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.9.0...@julian_cataldo/astro-demo@0.10.0) (2022-08-21)
+
+
+### Features
+
+* issue / feedback for single package view ([ee1a996](https://github.com/JulianCataldo/web-garden/commit/ee1a9963fb500e47cfd2e7533c72bd103548ed28))
+
+
+
 ## [0.9.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.8.0...@julian_cataldo/astro-demo@0.9.0) (2022-08-20)
 
 

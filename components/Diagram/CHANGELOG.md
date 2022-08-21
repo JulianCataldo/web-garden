@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-diagram@0.11.3...@julian_cataldo/astro-diagram@0.12.0) (2022-08-21)
+
+
+### Features
+
+* use node package instead of cdn [#43](https://github.com/JulianCataldo/web-garden/issues/43) ([e480f9f](https://github.com/JulianCataldo/web-garden/commit/e480f9fadb62705e174461527151002925f78858))
+
+
+
 ## [0.11.3](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-diagram@0.11.2...@julian_cataldo/astro-diagram@0.11.3) (2022-08-20)
 
 **Note:** Version bump only for package @julian_cataldo/astro-diagram
