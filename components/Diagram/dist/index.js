@@ -1,20 +1,44 @@
 import {visit as $hCgyA$visit} from "unist-util-visit";
-import $hCgyA$headlessmermaid from "headless-mermaid";
+import $hCgyA$puppeteer from "puppeteer";
+import $hCgyA$nodepath from "node:path";
+import $hCgyA$nodefspromises from "node:fs/promises";
+import {cwd as $hCgyA$cwd} from "process";
+
+
+
 
 
 
 async function $4caa44378d385ef8$export$2e2bcd8739ae039({ config: config , code: code  }) {
-    /* Render the mermaid diagram */ const result = await await (0, $hCgyA$headlessmermaid)// NOTE: Fetching mermaid from CDN isn't ideal, should use NPM package?
-    .execute(code, config, "mermaid.min@9.1.3").then((r)=>r).catch((e)=>{
-        // eslint-disable-next-line no-console
-        console.log(e);
-        return false;
+    const browser = await (0, $hCgyA$puppeteer).launch({
+        args: [
+            "--no-sandbox"
+        ]
     });
-    if (result) return {
-        code: code,
-        config: config,
-        result: result
-    };
+    const page = await browser.newPage();
+    const content = await (0, $hCgyA$nodefspromises).readFile((0, $hCgyA$nodepath).join($hCgyA$cwd(), "node_modules/mermaid/dist/mermaid.js"), "utf8");
+    await page.addScriptTag({
+        content: content
+    });
+    const result = await page.evaluate((configB, codeB)=>{
+        // FIXME: `window.mermaid` global browser stubbing
+        window.mermaid.initialize(configB);
+        try {
+            /* Render the mermaid diagram */ const svgCode = window.mermaid.mermaidAPI.render("diagram", codeB);
+            return {
+                status: "success",
+                svgCode: svgCode
+            };
+        } catch (error) {
+            return {
+                status: "error",
+                error: error,
+                message: error.message
+            };
+        }
+    }, config, code);
+    await browser.close();
+    if (result.status === "success" && typeof result.svgCode === "string") return result.svgCode;
     return false;
 }
 
@@ -43,7 +67,7 @@ function $5d4dc991ee2641c2$var$plugin() {
             const html = await (0, $4caa44378d385ef8$export$2e2bcd8739ae039)({
                 config: {},
                 code: node.value
-            }).then((diagram)=>diagram.result);
+            }).then((diagram)=>diagram);
             parent.children.splice(index, 1, {
                 type: "html",
                 // TODO: put CSS elsewhere
