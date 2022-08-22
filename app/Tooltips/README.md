@@ -33,12 +33,12 @@ import Tooltips from '@julian_cataldo/astro-tooltips/Tooltips.astro';
 
 // use the regular title attribute on A tags
 
-<a href='#' title='Hello!'>Tooltip</a>
+<a href="#" title="Hello!">Tooltip</a>
 
 
 // tooltip placement control
 
-<a href='#' title='Hello!' data-tooltip-placement='left'>Tooltip left</a>
+<a href="#" title="Hello!" data-tooltip-placement="left">Tooltip left</a>
 
 
 ```
