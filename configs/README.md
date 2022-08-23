@@ -120,6 +120,20 @@ eslint-plugin-mdx
 
 [See this ESLint config file for inspiration](https://github.com/JulianCataldo/web-garden/blob/develop/configs/.eslintrc.cjs)
 
+Or quick embed in `package.json`:
+
+```json
+{
+  // …
+  "eslintConfig": {
+    // Prevent unwanted hoisting
+    "root": true,
+    // `node_modules` seems to be needed
+    "extends": ["./node_modules/@julian_cataldo/astro-configs/.eslintrc.cjs"]
+  }
+}
+```
+
 ---
 
 Script command in `package.json`:
@@ -182,6 +196,15 @@ postcss-html
 ### Configuration
 
 [See this Prettier config file for inspiration](https://github.com/JulianCataldo/web-garden/blob/develop/configs/.prettierrc.cjs)
+
+Or quick embed in `package.json`:
+
+```json
+{
+  // …
+  "prettier": "@julian_cataldo/astro-configs/.prettierrc.cjs"
+}
+```
 
 ---
 
@@ -295,6 +318,17 @@ stylelint-config-prettier
 ### Configuration
 
 [See this Stylelint config file for inspiration](https://github.com/JulianCataldo/web-garden/blob/develop/configs/.stylelintrc.cjs)
+
+Or quick embed in `package.json`:
+
+```json
+{
+  // …
+  "stylelint": {
+    "extends": "@julian_cataldo/astro-configs/.stylelintrc.cjs"
+  }
+}
+```
 
 ---
 
