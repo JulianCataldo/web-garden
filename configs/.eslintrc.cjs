@@ -121,8 +121,17 @@ module.exports = {
       parser: '@typescript-eslint/parser',
       plugins: ['@typescript-eslint'],
       rules: {
-        'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
-        'import/extensions': ['error', 'always'],
+        // 'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
+        'import/extensions': [
+          'error',
+          'ignorePackages',
+          {
+            js: 'never',
+            jsx: 'never',
+            ts: 'never',
+            tsx: 'never',
+          },
+        ],
       },
     },
   ],
