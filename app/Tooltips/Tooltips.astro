@@ -1,8 +1,15 @@
 ---
-// TODO: custom theme support
-
 import 'tippy.js/dist/tippy.css';
+/* —————————————————————————————————————————————————————————————————————————— */
+import type { Props as baseProps } from './Props';
+
+export interface Props extends baseProps {}
+const props = { ...Astro.props } as Props;
 ---
+
+<script define:vars={{ props }}>
+  window.tooltipsOptions = { ...props };
+</script>
 
 <script>
   import './Tooltips.client.ts';
