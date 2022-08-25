@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.13.0...@julian_cataldo/astro-configs@0.14.0) (2022-08-25)
+
+
+### Features
+
+* quick embed in package.json example ([704e000](https://github.com/JulianCataldo/web-garden/commit/704e000837be92e23bb0f11ca70490577a4bf266))
+
+
+### Bug Fixes
+
+* disable eslint extension check for tsx ([b360250](https://github.com/JulianCataldo/web-garden/commit/b360250ae2ffaf8207b12a0d6f2ccd1e673828f4))
+* re-enable react extension for current file ([83d1bf2](https://github.com/JulianCataldo/web-garden/commit/83d1bf29497c85d202239d7b9cbb315706c87fa2))
+
+
+
 ## [0.13.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.12.3...@julian_cataldo/astro-configs@0.13.0) (2022-08-20)
 
 
