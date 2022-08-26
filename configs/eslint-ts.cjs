@@ -1,11 +1,12 @@
 /** @type {import("@types/eslint").Linter.Config} */
 
 module.exports = {
-  // settings: {
-  //   'import/resolver': {
-  //     typescript: { project: ['tsconfig.json'] }, // this loads <rootdir>/tsconfig.json to eslint
-  //   },
-  // },
+  settings: {
+    // This loads <rootdir>/tsconfig.json to eslint
+    'import/resolver': {
+      typescript: { project: ['./tsconfig.json'] },
+    },
+  },
   // env: {
   //   node: true,
   //   es2022: true,
