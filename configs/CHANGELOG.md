@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.16.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.15.0...@julian_cataldo/astro-configs@0.16.0) (2022-08-26)
+
+
+### Features
+
+* add prettier base preset ([afba847](https://github.com/JulianCataldo/web-garden/commit/afba8472c4b2b491fc0db6e3da65fa558297851d))
+
+
+
 ## [0.15.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.14.0...@julian_cataldo/astro-configs@0.15.0) (2022-08-26)
 
 
