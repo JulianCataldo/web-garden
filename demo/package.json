@@ -51,7 +51,7 @@
     "remark-gfm": "3.0.1",
     "sass": "1.54.4",
     "tsparticles": "1.43.0",
-    "tsparticles-preset-stars": "1.43.1",
+    "tsparticles-preset-stars": "2.2.4",
     "unplugin-icons": "0.14.8"
   },
   "devDependencies": {
