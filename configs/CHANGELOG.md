@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.16.1](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.16.0...@julian_cataldo/astro-configs@0.16.1) (2022-08-26)
+
+
+### Bug Fixes
+
+* typescript eslint resolver ([bc021da](https://github.com/JulianCataldo/web-garden/commit/bc021da89dd366e07044a903efb3c6f1887a6fd8))
+
+
+
 ## [0.16.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.15.0...@julian_cataldo/astro-configs@0.16.0) (2022-08-26)
 
 
