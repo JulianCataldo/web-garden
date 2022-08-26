@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.14.0...@julian_cataldo/astro-configs@0.15.0) (2022-08-26)
+
+
+### Features
+
+* split js + ts eslint configs + add preset ([76f0631](https://github.com/JulianCataldo/web-garden/commit/76f0631d551773ed14f139fac1209587bc83e19e))
+
+
+
 ## [0.14.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.13.0...@julian_cataldo/astro-configs@0.14.0) (2022-08-25)
 
 
