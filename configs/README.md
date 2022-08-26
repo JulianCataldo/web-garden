@@ -93,6 +93,7 @@ pnpm i -D \
 @typescript-eslint/parser \
 eslint-plugin-import \
 eslint-import-resolver-typescript \
+eslint-config-airbnb-typescript \
 eslint-plugin-tsdoc
 
 # v—————————————————————————————————— JSX / TSX (React)
