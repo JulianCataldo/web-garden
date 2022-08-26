@@ -1,49 +1,50 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@commitlint/cli': ^17.0.3
-  '@commitlint/config-conventional': ^17.0.3
-  '@commitlint/types': ^17.0.0
+  '@commitlint/cli': 17.0.3
+  '@commitlint/config-conventional': 17.0.3
+  '@commitlint/types': 17.0.0
   '@julian_cataldo/astro-configs': link:configs
-  '@testing-library/cypress': ^8.0.3
-  '@types/eslint': ^8.4.5
-  '@types/node': ^18.7.6
-  '@types/prettier': ^2.7.0
-  '@typescript-eslint/eslint-plugin': ^5.33.1
-  '@typescript-eslint/parser': ^5.33.1
+  '@testing-library/cypress': 8.0.3
+  '@types/eslint': 8.4.5
+  '@types/node': 18.7.6
+  '@types/prettier': 2.7.0
+  '@typescript-eslint/eslint-plugin': 5.33.1
+  '@typescript-eslint/parser': 5.33.1
   astro: 1.0.6
-  astro-eslint-parser: ^0.5.1
-  cypress: ^10.6.0
-  cypress-highlight: ^1.2.0
-  cypress-real-events: ^1.7.1
-  eslint: ^8.22.0
+  astro-eslint-parser: 0.5.1
+  cypress: 10.6.0
+  cypress-highlight: 1.2.0
+  cypress-real-events: 1.7.1
+  eslint: 8.22.0
   eslint-config-airbnb: 19.0.4
-  eslint-config-airbnb-base: ^15.0.0
-  eslint-config-prettier: ^8.5.0
-  eslint-import-resolver-typescript: ^3.4.2
+  eslint-config-airbnb-base: 15.0.0
+  eslint-config-airbnb-typescript: ^17.0.0
+  eslint-config-prettier: 8.5.0
+  eslint-import-resolver-typescript: 3.4.2
   eslint-plugin-astro: 0.17.1
-  eslint-plugin-import: ^2.26.0
-  eslint-plugin-jsx-a11y: ^6.6.1
-  eslint-plugin-prettier: ^4.2.1
-  eslint-plugin-react: ^7.30.1
-  eslint-plugin-react-hooks: ^4.6.0
-  eslint-plugin-tsdoc: ^0.2.16
-  eslint-plugin-vue: ^9.3.0
-  husky: ^8.0.1
-  lerna: ^5.4.3
-  linkinator: ^4.0.2
-  postcss: ^8.4.16
-  postcss-html: ^1.5.0
-  prettier: ^2.7.1
+  eslint-plugin-import: 2.26.0
+  eslint-plugin-jsx-a11y: 6.6.1
+  eslint-plugin-prettier: 4.2.1
+  eslint-plugin-react: 7.30.1
+  eslint-plugin-react-hooks: 4.6.0
+  eslint-plugin-tsdoc: 0.2.16
+  eslint-plugin-vue: 9.3.0
+  husky: 8.0.1
+  lerna: 5.4.3
+  linkinator: 4.0.2
+  postcss: 8.4.16
+  postcss-html: 1.5.0
+  prettier: 2.7.1
   prettier-plugin-astro: 0.5.0
-  stylelint: ^14.10.0
-  stylelint-config-prettier: ^9.0.3
-  stylelint-config-recommended-scss: ^7.0.0
-  stylelint-config-recommended-vue: ^1.4.0
-  stylelint-config-standard: ^27.0.0
-  stylelint-config-standard-scss: ^5.0.0
-  typescript: ^4.7.4
-  vite: ^3.0.8
+  stylelint: 14.10.0
+  stylelint-config-prettier: 9.0.3
+  stylelint-config-recommended-scss: 7.0.0
+  stylelint-config-recommended-vue: 1.4.0
+  stylelint-config-standard: 27.0.0
+  stylelint-config-standard-scss: 5.0.0
+  typescript: 4.7.4
+  vite: 3.0.8
 
 dependencies:
   husky: 8.0.1
@@ -68,6 +69,7 @@ devDependencies:
   eslint: 8.22.0
   eslint-config-airbnb: 19.0.4_p6gmk62mkdgf6va7ebrkix347q
   eslint-config-airbnb-base: 15.0.0_2iahngt3u2tkbdlu6s4gkur3pu
+  eslint-config-airbnb-typescript: 17.0.0_ndwsrvi3totxze7jnjj3sukeeq
   eslint-config-prettier: 8.5.0_eslint@8.22.0
   eslint-import-resolver-typescript: 3.4.2_2iahngt3u2tkbdlu6s4gkur3pu
   eslint-plugin-astro: 0.17.1_eslint@8.22.0
@@ -4096,6 +4098,21 @@ packages:
       object.assign: 4.1.2
       object.entries: 1.1.5
       semver: 6.3.0
+    dev: true
+
+  /eslint-config-airbnb-typescript/17.0.0_ndwsrvi3totxze7jnjj3sukeeq:
+    resolution: {integrity: sha512-elNiuzD0kPAPTXjFWg+lE24nMdHMtuxgYoD30OyMD6yrW1AhFZPAg27VX7d3tzOErw+dgJTNWfRSDqEcXb4V0g==}
+    peerDependencies:
+      '@typescript-eslint/eslint-plugin': ^5.13.0
+      '@typescript-eslint/parser': ^5.0.0
+      eslint: ^7.32.0 || ^8.2.0
+      eslint-plugin-import: ^2.25.3
+    dependencies:
+      '@typescript-eslint/eslint-plugin': 5.33.1_vsoshirnpb7xw6mr7xomgfas2i
+      '@typescript-eslint/parser': 5.33.1_4rv7y5c6xz3vfxwhbrcxxi73bq
+      eslint: 8.22.0
+      eslint-config-airbnb-base: 15.0.0_2iahngt3u2tkbdlu6s4gkur3pu
+      eslint-plugin-import: 2.26.0_s6f7spxf43rfknbsivdq2mydle
     dev: true
 
   /eslint-config-airbnb/19.0.4_p6gmk62mkdgf6va7ebrkix347q:
