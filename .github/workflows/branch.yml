@@ -16,15 +16,17 @@ jobs:
 
       # ————————————————————————————————————————————————————————————————————————
 
-      - name: Use Node.js 17
-        uses: actions/setup-node@v3
-        with:
-          node-version: 17
-
       - name: Setup PNPM 7
         uses: pnpm/action-setup@v2.2.2
         with:
           version: 7.9.0
+
+      - name: Use Node.js 'lts/gallium'
+        uses: actions/setup-node@v3
+        with:
+          node-version: lts/gallium
+          cache: 'pnpm'
+          # cache-dependency-path: '**/package-lock.json'
 
       - name: Install Node dependencies
         # `production` to exclude dev. dependencies
