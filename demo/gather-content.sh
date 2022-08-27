@@ -16,7 +16,7 @@
 
 
 
-rsync -av --prune-empty-dirs --delete-after --include '*/' --include '*.mp4' --exclude '*' ../cypress/videos/ ./public/assets/videos/tests
+# rsync -av --prune-empty-dirs --delete-after --include '*/' --include '*.mp4' --exclude '*' ../cypress/videos/ ./public/assets/videos/tests
 
 
 find .. -iname '*.md' -maxdepth 3 | rsync -av --files-from=- .. content/packages/
