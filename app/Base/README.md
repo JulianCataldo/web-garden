@@ -22,17 +22,12 @@ import Body from '@julian_cataldo/astro-base/Body.astro';
 
 <!-- All properties are optional -->
 <Document
-  id='test-base-rootDoc'
-  data-theme='default'
-  lang='en'
-  class:list={[
-    `mode-${import.meta.env.MODE}`,
-    'test-base-rootDoc-1',
-    'test-base-rootDoc-2',
-  ]}
-  data-test='scrollObserver-rootDoc base-rootDoc'
+  id="test-base-rootDoc"
+  data-theme="default"
+  lang="en"
+  class:list={[`mode-${import.meta.env.MODE}`, 'my-class-html']}
 >
-  <Fragment slot='head'>
+  <Fragment slot="head">
     <!-- Things you can inject in `HEAD` -->
     <style is:inline>
       .some-class {
@@ -41,17 +36,12 @@ import Body from '@julian_cataldo/astro-base/Body.astro';
     </style>
   </Fragment>
 
-  <Body
-    id='test-base-body'
-    slot='body'
-    class:list={['test-base-body-1', 'test-base-body-2']}
-    data-test='base-body'
-  >
+  <Body slot="body" id="my-id" class:list={['my-class-body']}>
     <!-- Things you can inject in `BODY` -->
     <nav>My navbar</nav>
 
     <!-- Your page content slot  -->
-    <slot></slot>
+    <slot />
   </Body>
 </Document>
 ```
