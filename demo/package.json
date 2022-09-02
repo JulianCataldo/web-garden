@@ -11,7 +11,7 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "@astrojs/mdx": "0.10.0",
+    "@astrojs/mdx": "0.11.1",
     "@astrojs/react": "1.0.0",
     "@astrojs/sitemap": "1.0.0",
     "@astropub/flow": "0.2.2",

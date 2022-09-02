@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@astrojs/mdx': 0.10.0
+  '@astrojs/mdx': 0.11.1
   '@astrojs/react': 1.0.0
   '@astrojs/sitemap': 1.0.0
   '@astropub/flow': 0.2.2
@@ -48,7 +48,7 @@ specifiers:
   unplugin-icons: 0.14.8
 
 dependencies:
-  '@astrojs/mdx': 0.10.0_rollup@2.78.0
+  '@astrojs/mdx': 0.11.1_rollup@2.78.0
   '@astrojs/react': 1.0.0_biqbaboplfbrettd7655fr4n2y
   '@astrojs/sitemap': 1.0.0
   '@astropub/flow': 0.2.2
@@ -198,8 +198,8 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/mdx/0.10.0_rollup@2.78.0:
-    resolution: {integrity: sha512-nQcYzjPB8p0KWyP8g/8V6Rnxd7+5/VzNP4JLvQWUFs6mo7Akq98y4i+QjOl9/k5erzikl96Uul70MS/rjBheNQ==}
+  /@astrojs/mdx/0.11.1_rollup@2.78.0:
+    resolution: {integrity: sha512-L0uUBRlfRZvXhS5rc/VIrQlHldgj7cwrSb81K3cAB2LrzqZ3QgU+GRx/mdMN95Brqkv+8x77cNmsbAwXxijeNA==}
     engines: {node: ^14.18.0 || >=16.12.0}
     dependencies:
       '@astrojs/prism': 1.0.1
@@ -209,11 +209,12 @@ packages:
       es-module-lexer: 0.10.5
       github-slugger: 1.4.0
       gray-matter: 4.0.3
+      kleur: 4.1.5
       rehype-raw: 6.1.1
       remark-frontmatter: 4.0.1
       remark-gfm: 3.0.1
       remark-smartypants: 2.0.0
-      shiki: 0.10.1
+      shiki: 0.11.1
       unist-util-visit: 4.1.0
       vfile: 5.3.4
     transitivePeerDependencies:
@@ -6674,6 +6675,14 @@ packages:
       vscode-oniguruma: 1.6.2
       vscode-textmate: 5.2.0
 
+  /shiki/0.11.1:
+    resolution: {integrity: sha512-EugY9VASFuDqOexOgXR18ZV+TbFrQHeCpEYaXamO+SZlsnT/2LxuLBX25GGtIrwaEVFXUAbUQ601SWE2rMwWHA==}
+    dependencies:
+      jsonc-parser: 3.1.0
+      vscode-oniguruma: 1.6.2
+      vscode-textmate: 6.0.0
+    dev: false
+
   /side-channel/1.0.4:
     resolution: {integrity: sha512-q5XPytqFEIKHkGdiMIrY10mvLRvnQh42/+GoBlFW3b2LXLE2xxJpZFdm94we0BaoV3RwJyGqg5wS7epxTv0Zvw==}
     dependencies:
@@ -7472,6 +7481,10 @@ packages:
 
   /vscode-textmate/5.2.0:
     resolution: {integrity: sha512-Uw5ooOQxRASHgu6C7GVvUxisKXfSgW4oFlO+aa+PAkgmH89O3CXxEEzNRNtHSqtXFTl0nAC1uYj0GMSH27uwtQ==}
+
+  /vscode-textmate/6.0.0:
+    resolution: {integrity: sha512-gu73tuZfJgu+mvCSy4UZwd2JXykjK9zAZsfmDeut5dx/1a7FeTk0XwJsSuqQn+cuMCGVbIBfl+s53X4T19DnzQ==}
+    dev: false
 
   /vscode-uri/2.1.2:
     resolution: {integrity: sha512-8TEXQxlldWAuIODdukIb+TR5s+9Ds40eSJrw+1iDDA9IFORPjMELarNQE3myz5XIkWWpdprmJjm1/SxMlWOC8A==}
