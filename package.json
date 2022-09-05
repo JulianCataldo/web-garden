@@ -71,7 +71,7 @@
     "node": ">=16",
     "pnpm": "7"
   },
-  "packageManager": "pnpm@7.9.0",
+  "packageManager": "pnpm@7.11.0",
   "dependencies": {
     "husky": "8.0.1",
     "linkinator": "4.0.2"
