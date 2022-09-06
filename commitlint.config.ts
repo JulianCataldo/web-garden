@@ -2,7 +2,7 @@
 import type { UserConfig } from '@commitlint/types';
 
 const Configuration: UserConfig = {
-  extends: ['@julian_cataldo/astro-configs/commitlint.config.ts'],
+  extends: ['@julian_cataldo/astro-configs/commitlint-base.ts'],
 };
 
 module.exports = Configuration;

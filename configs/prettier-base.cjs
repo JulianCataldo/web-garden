@@ -8,3 +8,16 @@ module.exports = {
   trailingComma: 'all',
   useTabs: false,
 };
+
+// {
+//   files: ['.*', '*.json', '*.md', '*.toml', '*.yml'],
+//   options: {
+//     useTabs: false,
+//   },
+// },
+// {
+//   files: ['**/*.css', '**/*.scss'],
+//   options: {
+//     singleQuote: false,
+//   },
+// },

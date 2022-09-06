@@ -16,7 +16,11 @@ module.exports = {
   overrides: [
     {
       files: ['*.ts', '*.mts', '*.cts'],
-      plugins: ['eslint-plugin-tsdoc', '@typescript-eslint'],
+      plugins: [
+        //
+        'eslint-plugin-tsdoc',
+        '@typescript-eslint',
+      ],
 
       parser: '@typescript-eslint/parser',
       parserOptions: {
