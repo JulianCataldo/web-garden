@@ -18,10 +18,7 @@ module.exports = {
       extends: ['airbnb-base', 'eslint:recommended', 'prettier'],
       rules: {
         // 'no-restricted-syntax': 0,
-      },
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
+        'import/prefer-default-export': 'off',
       },
     },
   ],

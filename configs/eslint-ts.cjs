@@ -55,6 +55,8 @@ module.exports = {
         ],
 
         'react/jsx-filename-extension': 'off',
+
+        'import/prefer-default-export': 'off',
         // 'import/extensions': [
         //   'error',
         //   'ignorePackages',
