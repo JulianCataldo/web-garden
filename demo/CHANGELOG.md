@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.5](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.12.4...@julian_cataldo/astro-demo@0.12.5) (2022-09-06)
+
+
+### Bug Fixes
+
+* absolute url for poster image ([a056f19](https://github.com/JulianCataldo/web-garden/commit/a056f19ed623a81a60bb59cfce0a064b462fddeb))
+* disable cypress videos syncing ([e012bb7](https://github.com/JulianCataldo/web-garden/commit/e012bb704e1ad96aa0da60c92ddb6360e7ceda50))
+
+
+
 ## [0.12.4](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.12.3...@julian_cataldo/astro-demo@0.12.4) (2022-08-26)
 
 **Note:** Version bump only for package @julian_cataldo/astro-demo

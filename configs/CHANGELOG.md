@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.17.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.16.1...@julian_cataldo/astro-configs@0.17.0) (2022-09-06)
+
+
+### Features
+
+* add stylelint ordering ([843aa0a](https://github.com/JulianCataldo/web-garden/commit/843aa0a4c4763ecf429a7065fac16073dde51092))
+* extract and divide all configs ([a269005](https://github.com/JulianCataldo/web-garden/commit/a269005d0a9f78d2744fa74e58432092a9e5495f))
+
+
+
 ## [0.16.1](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.16.0...@julian_cataldo/astro-configs@0.16.1) (2022-08-26)
 
 
