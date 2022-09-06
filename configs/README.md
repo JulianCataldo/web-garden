@@ -295,7 +295,8 @@ pnpm i -D \
 stylelint \
 @types/stylelint \
 stylelint-config-standard \
-stylelint-config-recommended
+stylelint-config-recommended \
+stylelint-config-recess-order
 
 # v—————————————————————————————————— SCSS
 pnpm i -D \
