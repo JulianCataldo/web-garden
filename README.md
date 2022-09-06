@@ -1,6 +1,6 @@
 # 🚀  Julian's Web Garden
 
-[![Astro](https://img.shields.io/badge/Astro-333333.svg?logo=astro)](http://www.typescriptlang.org/)
+[![Astro](https://img.shields.io/badge/Astro-333333.svg?logo=astro)](https://astro.build)
 [![SCSS](https://img.shields.io/badge/SCSS-333333.svg?logo=sass)](https://sass-lang.com)
 [![TypeScript](https://img.shields.io/badge/TypeScript-333333.svg?logo=typescript)](http://www.typescriptlang.org/)  
 [![ISC License](https://img.shields.io/npm/l/@julian_cataldo/remark-lint-frontmatter-schema)](./LICENSE)
