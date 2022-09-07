@@ -43,7 +43,7 @@ specifiers:
   remark-gfm: 3.0.1
   sass: 1.54.4
   serve: 14.0.1
-  tsparticles: 1.43.0
+  tsparticles: 1.43.1
   tsparticles-preset-stars: 1.43.1
   unplugin-icons: 0.14.8
 
@@ -87,7 +87,7 @@ dependencies:
   rehype-rewrite: 3.0.6
   remark-gfm: 3.0.1
   sass: 1.54.4
-  tsparticles: 1.43.0
+  tsparticles: 1.43.1
   tsparticles-preset-stars: 1.43.1
   unplugin-icons: 0.14.8_rollup@2.78.0
 
@@ -7093,12 +7093,6 @@ packages:
     resolution: {integrity: sha512-IXeX6owzouyml40QT3+ZwyCgVrWx0DiPH0rEJfXzlHqwAr2qVIeQ4xKJNYCIPeFWyE1208I8/kh4ldVSZ4sDiQ==}
     dependencies:
       tsparticles: 1.43.1
-    dev: false
-
-  /tsparticles/1.43.0:
-    resolution: {integrity: sha512-0r9hdGaImm0cxp6FraLgKUBJy03utZ2j2LaBZus6hSpPMnsP48UrJLQKmcgRRlGWeOUq6YI6WywpbSbSoA/cKA==}
-    deprecated: Version 2.x is the current version, v1 is obsolete now
-    requiresBuild: true
     dev: false
 
   /tsparticles/1.43.1:
