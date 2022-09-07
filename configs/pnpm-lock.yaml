@@ -1,11 +1,11 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@types/node': ^18.7.6
+  '@types/node': 18.7.16
   prettier-plugin-astro: 0.5.0
 
 devDependencies:
-  '@types/node': 18.7.6
+  '@types/node': 18.7.16
   prettier-plugin-astro: 0.5.0
 
 packages:
@@ -26,8 +26,8 @@ packages:
       tslib: 2.4.0
     dev: true
 
-  /@types/node/18.7.6:
-    resolution: {integrity: sha512-EdxgKRXgYsNITy5mjjXjVE/CS8YENSdhiagGrLqjG0pvA2owgJ6i4l7wy/PFZGC0B1/H20lWKN7ONVDNYDZm7A==}
+  /@types/node/18.7.16:
+    resolution: {integrity: sha512-EQHhixfu+mkqHMZl1R2Ovuvn47PUw18azMJOTwSZr9/fhzHNGXAJ0ma0dayRVchprpCj0Kc1K1xKoWaATWF1qg==}
     dev: true
 
   /cross-spawn/7.0.3:

@@ -40,8 +40,8 @@
     "unist-util-visit": "^4.1.0"
   },
   "devDependencies": {
-    "@types/mermaid": "^8.2.9",
-    "parcel": "^2.7.0"
+    "@types/mermaid": "8.2.9",
+    "parcel": "2.7.0"
   },
   "peerDependencies": {
     "mermaid": "^9.1.6"
