@@ -41,6 +41,6 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.7.6",
-    "prettier-plugin-astro": "0.5.0"
+    "prettier-plugin-astro": "0.5.4"
   }
 }
