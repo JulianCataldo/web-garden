@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.18.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.17.0...@julian_cataldo/astro-configs@0.18.0) (2022-09-07)
+
+
+### Features
+
+* disable `prefer-default-export` ([14a6ce1](https://github.com/JulianCataldo/web-garden/commit/14a6ce187372e59685dd0b999ffa1d2fad4dc8c9))
+
+
+### Bug Fixes
+
+* move to mjs for vite errors ([0da3738](https://github.com/JulianCataldo/web-garden/commit/0da37385662676fb35e049cb88903a20f36c5e8c))
+
+
+
 ## [0.17.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.16.1...@julian_cataldo/astro-configs@0.17.0) (2022-09-06)
 
 
