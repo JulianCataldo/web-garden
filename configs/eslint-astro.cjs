@@ -19,7 +19,7 @@ module.exports = {
         // Prevents "unresolved" when using "paths"
         // project: ['./tsconfig.json'],
         parser: '@typescript-eslint/parser',
-        extraFileExtensions: ['.astro'],
+        extraFileExtensions: ['.astro', '.js', '.jsx', '.ts', '.tsx'],
       },
       rules: {
         'import/no-absolute-path': 'off',
