@@ -123,7 +123,7 @@ eslint-plugin-mdx
 
 Or quick embed in `package.json`:
 
-```json
+```jsonc
 {
   // …
   "eslintConfig": {
@@ -200,7 +200,7 @@ postcss-html
 
 Or quick embed in `package.json`:
 
-```json
+```jsonc
 {
   // …
   "prettier": "@julian_cataldo/astro-configs/.prettierrc.cjs"
@@ -323,7 +323,7 @@ stylelint-config-prettier
 
 Or quick embed in `package.json`:
 
-```json
+```jsonc
 {
   // …
   "stylelint": {
