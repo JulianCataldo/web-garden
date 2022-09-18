@@ -1,17 +1,17 @@
 // TODO: simplify this (one wrapper is not necessary)
 .particles-wrapper {
   position: absolute;
-  height: 100%;
-  width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
 .particles {
-  height: 100%;
   width: 100%;
+  height: 100%;
   -webkit-mask-image: linear-gradient(
     -184deg,
     white calc(11rem - 13vw),
@@ -26,8 +26,8 @@
   }
 
   #tsparticles {
-    height: 100%;
     width: 100%;
+    height: 100%;
     opacity: 0;
     transition: opacity 1s;
 

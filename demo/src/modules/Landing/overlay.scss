@@ -1,28 +1,10 @@
 .vignette {
   position: absolute;
   top: 0;
-  height: 100%;
-  width: 100%;
   z-index: 2;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
-
-  @include theme(default, light, $scoped: true) {
-    mix-blend-mode: lighten;
-    background: radial-gradient(
-      ellipse,
-      transparent 35%,
-      color.adjust($rosewood, $alpha: -0.2)
-    );
-  }
-  @include theme(default, dark, $scoped: true) {
-    mix-blend-mode: darken;
-    background: radial-gradient(
-      ellipse,
-      transparent 35%,
-      color.adjust($rosewood, $alpha: -0.2, $lightness: -10%)
-    );
-  }
-
   -webkit-mask-image: linear-gradient(
     to bottom,
     transparent 2rem,
@@ -30,4 +12,21 @@
     black calc(100% - 17rem),
     transparent calc(100% - 1rem)
   );
+
+  @include theme(default, light, $scoped: true) {
+    background: radial-gradient(
+      ellipse,
+      transparent 35%,
+      color.adjust($rosewood, $alpha: -0.2)
+    );
+    mix-blend-mode: lighten;
+  }
+  @include theme(default, dark, $scoped: true) {
+    background: radial-gradient(
+      ellipse,
+      transparent 35%,
+      color.adjust($rosewood, $alpha: -0.2, $lightness: -10%)
+    );
+    mix-blend-mode: darken;
+  }
 }

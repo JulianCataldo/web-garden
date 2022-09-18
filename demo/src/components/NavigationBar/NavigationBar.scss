@@ -3,21 +3,20 @@
   top: 0;
   left: 0;
   z-index: 101;
-  width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
   padding: calc(0.5vh + 0.1rem) 2vw 0 2vw;
+  padding-bottom: 0.5rem;
+  pointer-events: none;
   user-select: none;
+  opacity: 0;
+  transition: opacity 0.3s;
 
   .spacer {
     flex-grow: 1;
   }
-
-  padding-bottom: 0.5rem;
-  transition: opacity 0.3s;
-  opacity: 0;
-  pointer-events: none;
 
   @include scroll-is(
     $going-up: true,
@@ -25,24 +24,24 @@
     $bottom: true,
     $scoped: true
   ) {
-    opacity: 1;
     pointer-events: inherit;
+    opacity: 1;
   }
 
   @include theme(default, light, $scoped: true) {
     background: color.adjust($lavender-blush, $alpha: -0.07);
     box-shadow: 0px 3px 4px color.adjust($raisin-black, $alpha: -0.9);
     @include breakpoint(md) {
-      box-shadow: none;
       background: none;
+      box-shadow: none;
     }
   }
   @include theme(default, dark, $scoped: true) {
     background: color.adjust($raisin-black, $alpha: -0.07);
     box-shadow: 0px 3px 4px color.adjust($lavender-blush, $alpha: -0.9);
     @include breakpoint(md) {
-      box-shadow: none;
       background: none;
+      box-shadow: none;
     }
   }
 
@@ -97,8 +96,8 @@
     $scoped: true
   ) {
     opacity: 1;
-    transform: translateY(0);
     transition: opacity 0.33s, transform 0.33s;
+    transform: translateY(0);
 
     &:nth-of-type(1) {
       transition-delay: 0.1s;

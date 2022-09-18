@@ -16,14 +16,13 @@
 }
 
 .link {
+  display: inline-block;
   width: 100%;
   padding: 0.75em 1rem 0.75em 1rem;
+  line-height: 115%;
   @include breakpoint(md) {
     padding: 0.75em 2rem 0.75em 3rem;
   }
-
-  display: inline-block;
-  line-height: 115%;
 
   @include theme(default, $scoped: true) {
     text-decoration: none;
@@ -51,56 +50,56 @@
   }
 
   .depth-1 & {
-    font-variant: small-caps;
     font-size: 115%;
     font-weight: 700;
-    border-bottom: 1px solid color.adjust($red-pigment, $alpha: -0.8);
+    font-variant: small-caps;
     border-right: 4px solid color.adjust($red-pigment, $alpha: -0.6);
+    border-bottom: 1px solid color.adjust($red-pigment, $alpha: -0.8);
 
     &::after {
-      content: "  —";
+      content: '  —';
     }
   }
 
   .depth-2 & {
     font-size: 95%;
     font-weight: 700;
-    border-bottom: 1px dotted color.adjust($red-pigment, $alpha: -0.8);
-    border-right: 1px solid color.adjust($red-pigment, $alpha: -0.7);
     background-color: color.adjust($red-pigment, $alpha: -0.97);
+    border-right: 1px solid color.adjust($red-pigment, $alpha: -0.7);
+    border-bottom: 1px dotted color.adjust($red-pigment, $alpha: -0.8);
 
     &::after {
-      content: "  •";
+      content: '  •';
     }
   }
 
   .depth-3 & {
     font-size: 85%;
     font-weight: 400;
-    border-bottom: 1px dotted color.adjust($red-pigment, $alpha: -0.8);
     border-right: 1px dotted color.adjust($red-pigment, $alpha: -0.8);
+    border-bottom: 1px dotted color.adjust($red-pigment, $alpha: -0.8);
 
     &::after {
-      content: "  -";
+      content: '  -';
     }
   }
 
   .depth-4 & {
     font-size: 75%;
     font-weight: 300;
-    border-bottom: 1px dotted color.adjust($red-pigment, $alpha: -0.8);
     border-right: 1px dotted color.adjust($red-pigment, $alpha: -0.8);
+    border-bottom: 1px dotted color.adjust($red-pigment, $alpha: -0.8);
 
     &::after {
-      content: "  ·";
+      content: '  ·';
     }
   }
 
   @include theme(default) {
     display: inline-block;
     padding: 1.5rem 1rem 0.5rem 1rem;
-    color: $rosewood;
     font-weight: 700;
+    color: $rosewood;
     text-decoration: none;
 
     &:hover {

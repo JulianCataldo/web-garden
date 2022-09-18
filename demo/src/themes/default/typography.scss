@@ -56,11 +56,11 @@ body {
 
   &.is-external::after {
     position: absolute;
-    right: 0em;
     top: -0.1em;
-    transform: rotate(90deg);
+    right: 0em;
     font-size: 85%;
-    content: "⎋";
+    content: '⎋';
+    transform: rotate(90deg);
   }
 }
 
@@ -72,9 +72,9 @@ body {
 
 hr {
   @include theme(default) {
+    margin: 1rem 0;
     border: none;
     border-top: 1px dashed color.adjust($red-pigment, $alpha: -0.7);
-    margin: 1rem 0;
   }
   @include theme(default, light) {
   }

@@ -1,14 +1,14 @@
-@use "sass:color";
+@use 'sass:color';
 
-@use "../selector.scss" as *;
+@use '../selector.scss' as *;
 
-@use "./tokens" as *;
+@use './tokens' as *;
 
-@import "./scrollbar";
-@import "./tables";
-@import "./boxes";
-@import "./typography";
-@import "./buttons";
-@import "./checkboxes";
+@import './scrollbar';
+@import './tables';
+@import './boxes';
+@import './typography';
+@import './buttons';
+@import './checkboxes';
 
-@import "./backgrounds";
+@import './backgrounds';

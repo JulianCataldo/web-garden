@@ -9,10 +9,10 @@
   }
 
   .th {
-    font-weight: 700;
     padding: 1rem 0.5em;
-    background: color.adjust($fiery-rose, $alpha: -0.8);
     margin-bottom: 1rem;
+    font-weight: 700;
+    background: color.adjust($fiery-rose, $alpha: -0.8);
   }
 
   .td {
@@ -47,7 +47,7 @@
 }
 
 #toggle-changelog {
-  $all-after: "~ :global(ul:nth-of-type(1) ~ *:not(.invert))";
+  $all-after: '~ :global(ul:nth-of-type(1) ~ *:not(.invert))';
 
   display: none;
 
@@ -99,8 +99,8 @@
   .title {
     margin: 1rem 0 1rem 0;
     @include breakpoint(md) {
-      text-shadow: 0.09em 0.09em 0.09em color.adjust($rosewood, $alpha: -0.6);
       color: $lavender-blush;
+      text-shadow: 0.09em 0.09em 0.09em color.adjust($rosewood, $alpha: -0.6);
     }
 
     @include breakpoint(lg) {
@@ -109,9 +109,9 @@
   }
 
   ul {
-    list-style-type: none;
     display: flex;
     flex-wrap: wrap;
+    list-style-type: none;
 
     li {
       margin: 0.5em 0.5em;
