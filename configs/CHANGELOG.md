@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.18.0...@julian_cataldo/astro-configs@0.19.0) (2022-09-20)
+
+
+### Features
+
+* allow extra extensions for import in .astro ([6f0f87f](https://github.com/JulianCataldo/web-garden/commit/6f0f87fdf8d2f0d558097736a381cbf08208d484))
+
+
+### Bug Fixes
+
+* json to jsonc for snippets ([9968fc6](https://github.com/JulianCataldo/web-garden/commit/9968fc6824eb58b71989bbb4ef24b6560ba5e362))
+
+
+
 ## [0.18.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.17.0...@julian_cataldo/astro-configs@0.18.0) (2022-09-07)
 
 

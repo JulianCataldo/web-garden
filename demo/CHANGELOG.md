@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.7](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.12.6...@julian_cataldo/astro-demo@0.12.7) (2022-09-20)
+
+
+### Bug Fixes
+
+* initial line-height ([2a38f1e](https://github.com/JulianCataldo/web-garden/commit/2a38f1e891a1e3cf86bc999525c122c44a8708bb))
+* update mermaid and imagetools ([2a5642d](https://github.com/JulianCataldo/web-garden/commit/2a5642d217e3a3e84dbda72c95edaf095123ce3d))
+
+
+
 ## [0.12.6](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.12.5...@julian_cataldo/astro-demo@0.12.6) (2022-09-07)
 
 **Note:** Version bump only for package @julian_cataldo/astro-demo
