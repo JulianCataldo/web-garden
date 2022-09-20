@@ -7,6 +7,7 @@
  * Astro uses MJS for its config file.
  * (It seems that it support TS too, but it breaks some third-parties)
  *
+ * Also, this could be a separate remark plugin?
  */
 
 // TODO: Proper TypeScript rehaul for this file.
