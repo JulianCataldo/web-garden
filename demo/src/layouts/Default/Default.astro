@@ -14,6 +14,9 @@ import Head from './Head.astro';
 // FIXME: FOUT
 import '@fontsource/exo-2/variable.css';
 import '@fontsource/exo-2/variable-italic.css';
+/* ·········································································· */
+// TODO: importing globally here for HMR smoothness
+import './Default.global.scss';
 /* —————————————————————————————————————————————————————————————————————————— */
 
 export interface Props {
@@ -30,27 +33,27 @@ if (typeof props?.titles?.main !== 'string') {
 ---
 
 <Document
-  id='test-base-rootDoc'
-  data-theme='default'
+  id="test-base-rootDoc"
+  data-theme="default"
   data-color-mode={'light' /* FIXME: repair mixin for no JS support (themes/selector.scss) */}
-  data-is-top='true'
-  lang='en'
+  data-is-top="true"
+  lang="en"
   class:list={[
     `mode-${import.meta.env.MODE}`,
     'test-base-rootDoc-1',
     'test-base-rootDoc-2',
   ]}
-  data-test='scrollObserver-rootDoc base-rootDoc'
+  data-test="scrollObserver-rootDoc base-rootDoc"
 >
-  <Fragment slot='head'>
+  <Fragment slot="head">
     <Head titles={props.titles} />
   </Fragment>
 
   <Body
-    id='test-base-body'
+    id="test-base-body"
     slot={'body' /* NOTE: investigate why this works */}
     class:list={['test-base-body-1', 'test-base-body-2']}
-    data-test='base-body'
+    data-test="base-body"
   >
     <Breakpoints />
 
@@ -69,16 +72,17 @@ if (typeof props?.titles?.main !== 'string') {
     </header>
 
     <main>
-      <slot></slot>
+      <slot />
     </main>
 
     <Footer />
   </Body>
 </Document>
 
-<style lang='scss' is:global>
+<!-- Disabled here because HMR issues -->
+<!-- <style lang="scss" is:global>
   @import './Default.global';
-</style>
+</style> -->
 
 <script>
   import './Default.client.ts';

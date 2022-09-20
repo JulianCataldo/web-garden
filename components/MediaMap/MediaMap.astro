@@ -29,11 +29,11 @@ Object.entries(props).forEach(([key, val]) => {
 ---
 
 <div
+  class="leaflet-map"
   style={`z-index: 0; width: ${props.width}; height: ${props.height}; ` +
-    `--display: ${
-      props.attribution ? 'initial' : 'none'
-    }` /* NOTE: workaround as `define:vars` isn't working */}
-  id='map'
+  `--display: ${
+    props.attribution ? 'initial' : 'none'
+  }` /* NOTE: workaround as `define:vars` isn't working */}
   data-x={props.x}
   data-y={props.y}
   data-z={props.z}
@@ -43,16 +43,16 @@ Object.entries(props).forEach(([key, val]) => {
 
 <script>
   import Leaflet from 'leaflet';
-  // ONE MAP PER PAGE (for now)
-  const mapElem = document.getElementById('map');
 
-  if (mapElem) {
-    const map = Leaflet.map('map', {
+  const mapElems = document.querySelectorAll('.leaflet-map');
+
+  mapElems.forEach((elem: HTMLElement) => {
+    const map = Leaflet.map(elem, {
       center: [
-        parseFloat(mapElem.getAttribute('data-x')),
-        parseFloat(mapElem.getAttribute('data-y')),
+        parseFloat(elem.getAttribute('data-x')),
+        parseFloat(elem.getAttribute('data-y')),
       ],
-      zoom: parseFloat(mapElem.getAttribute('data-z')) || 14,
+      zoom: parseFloat(elem.getAttribute('data-z')) || 14,
       scrollWheelZoom: false,
     });
 
@@ -66,12 +66,14 @@ Object.entries(props).forEach(([key, val]) => {
 
     const layer = new Leaflet.TileLayer(url);
     map.addLayer(layer);
-  }
+  });
 </script>
 
 <!-- FIXME: `define:vars` not working in this component only -->
-<style lang='scss' is:global>
+<style lang="scss" is:global>
+  // Importing leaflet CSS here, not working in Astro frontmatter
   @import 'leaflet';
+
   .leaflet-control-attribution {
     display: var(--display, 'initial');
   }

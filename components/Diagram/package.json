@@ -1,7 +1,7 @@
 {
   "name": "@julian_cataldo/astro-diagram",
-  "version": "0.11.2",
-  "description": "Embed you Mermaid diagrams in no time inside your Astro templates. Features server-side rendering and smart caching.",
+  "version": "0.12.2",
+  "description": "Embed you Mermaid diagrams in no time inside your Astro templates.\nFeatures server-side rendering and smart caching.",
   "main": "dist/index.js",
   "type": "module",
   "publishConfig": {
@@ -18,7 +18,8 @@
     "directory": "components/Diagram"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build index.ts"
   },
   "keywords": [
     "astro",
@@ -34,10 +35,15 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "headless-mermaid": "^1.3.0",
+    "mermaid": "^9.1.6",
+    "puppeteer": "^18.0.2",
     "unist-util-visit": "^4.1.0"
   },
   "devDependencies": {
-    "@types/mermaid": "^8.2.9"
+    "@types/mermaid": "^8.2.9",
+    "parcel": "^2.7.0"
+  },
+  "peerDependencies": {
+    "mermaid": "^9.1.6"
   }
 }

@@ -1,3 +1,8 @@
-import Lightbox from './Lightbox.astro';
+/* ——————————————————————————————————————————————————————————————————————————— *
+ *              © Julian Cataldo — https://www.juliancataldo.com.              *
+ *                      See LICENSE in the project root.                       *
+/* —————————————————————————————————————————————————————————————————————————— */
 
-export default Lightbox;
+import LightBox from './LightBox.astro';
+
+export default LightBox;

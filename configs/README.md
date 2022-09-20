@@ -93,6 +93,7 @@ pnpm i -D \
 @typescript-eslint/parser \
 eslint-plugin-import \
 eslint-import-resolver-typescript \
+eslint-config-airbnb-typescript \
 eslint-plugin-tsdoc
 
 # v—————————————————————————————————— JSX / TSX (React)
@@ -119,6 +120,20 @@ eslint-plugin-mdx
 ### Configuration
 
 [See this ESLint config file for inspiration](https://github.com/JulianCataldo/web-garden/blob/develop/configs/.eslintrc.cjs)
+
+Or quick embed in `package.json`:
+
+```jsonc
+{
+  // …
+  "eslintConfig": {
+    // Prevent unwanted hoisting
+    "root": true,
+    // `node_modules` seems to be needed
+    "extends": ["./node_modules/@julian_cataldo/astro-configs/.eslintrc.cjs"]
+  }
+}
+```
 
 ---
 
@@ -183,6 +198,15 @@ postcss-html
 
 [See this Prettier config file for inspiration](https://github.com/JulianCataldo/web-garden/blob/develop/configs/.prettierrc.cjs)
 
+Or quick embed in `package.json`:
+
+```jsonc
+{
+  // …
+  "prettier": "@julian_cataldo/astro-configs/.prettierrc.cjs"
+}
+```
+
 ---
 
 Script command in `package.json`:
@@ -202,7 +226,7 @@ Script command in `package.json`:
 
 This is used locally with your IDE, in harmony with Prettier and for homogeneous display on GitHub etc.
 
-[See this the config file for inspiration](https://github.com/JulianCataldo/web-garden/blob/develop/configs/.editorconfig)
+[See this Editorconfig file for inspiration](https://github.com/JulianCataldo/web-garden/blob/develop/configs/.editorconfig)
 
 ---
 
@@ -271,7 +295,8 @@ pnpm i -D \
 stylelint \
 @types/stylelint \
 stylelint-config-standard \
-stylelint-config-recommended
+stylelint-config-recommended \
+stylelint-config-recess-order
 
 # v—————————————————————————————————— SCSS
 pnpm i -D \
@@ -295,6 +320,17 @@ stylelint-config-prettier
 ### Configuration
 
 [See this Stylelint config file for inspiration](https://github.com/JulianCataldo/web-garden/blob/develop/configs/.stylelintrc.cjs)
+
+Or quick embed in `package.json`:
+
+```jsonc
+{
+  // …
+  "stylelint": {
+    "extends": "@julian_cataldo/astro-configs/.stylelintrc.cjs"
+  }
+}
+```
 
 ---
 

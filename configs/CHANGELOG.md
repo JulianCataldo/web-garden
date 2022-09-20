@@ -3,6 +3,101 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.18.0...@julian_cataldo/astro-configs@0.19.0) (2022-09-20)
+
+
+### Features
+
+* allow extra extensions for import in .astro ([6f0f87f](https://github.com/JulianCataldo/web-garden/commit/6f0f87fdf8d2f0d558097736a381cbf08208d484))
+
+
+### Bug Fixes
+
+* json to jsonc for snippets ([9968fc6](https://github.com/JulianCataldo/web-garden/commit/9968fc6824eb58b71989bbb4ef24b6560ba5e362))
+
+
+
+## [0.18.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.17.0...@julian_cataldo/astro-configs@0.18.0) (2022-09-07)
+
+
+### Features
+
+* disable `prefer-default-export` ([14a6ce1](https://github.com/JulianCataldo/web-garden/commit/14a6ce187372e59685dd0b999ffa1d2fad4dc8c9))
+
+
+### Bug Fixes
+
+* move to mjs for vite errors ([0da3738](https://github.com/JulianCataldo/web-garden/commit/0da37385662676fb35e049cb88903a20f36c5e8c))
+
+
+
+## [0.17.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.16.1...@julian_cataldo/astro-configs@0.17.0) (2022-09-06)
+
+
+### Features
+
+* add stylelint ordering ([843aa0a](https://github.com/JulianCataldo/web-garden/commit/843aa0a4c4763ecf429a7065fac16073dde51092))
+* extract and divide all configs ([a269005](https://github.com/JulianCataldo/web-garden/commit/a269005d0a9f78d2744fa74e58432092a9e5495f))
+
+
+
+## [0.16.1](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.16.0...@julian_cataldo/astro-configs@0.16.1) (2022-08-26)
+
+
+### Bug Fixes
+
+* typescript eslint resolver ([bc021da](https://github.com/JulianCataldo/web-garden/commit/bc021da89dd366e07044a903efb3c6f1887a6fd8))
+
+
+
+## [0.16.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.15.0...@julian_cataldo/astro-configs@0.16.0) (2022-08-26)
+
+
+### Features
+
+* add prettier base preset ([afba847](https://github.com/JulianCataldo/web-garden/commit/afba8472c4b2b491fc0db6e3da65fa558297851d))
+
+
+
+## [0.15.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.14.0...@julian_cataldo/astro-configs@0.15.0) (2022-08-26)
+
+
+### Features
+
+* split js + ts eslint configs + add preset ([76f0631](https://github.com/JulianCataldo/web-garden/commit/76f0631d551773ed14f139fac1209587bc83e19e))
+
+
+
+## [0.14.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.13.0...@julian_cataldo/astro-configs@0.14.0) (2022-08-25)
+
+
+### Features
+
+* quick embed in package.json example ([704e000](https://github.com/JulianCataldo/web-garden/commit/704e000837be92e23bb0f11ca70490577a4bf266))
+
+
+### Bug Fixes
+
+* disable eslint extension check for tsx ([b360250](https://github.com/JulianCataldo/web-garden/commit/b360250ae2ffaf8207b12a0d6f2ccd1e673828f4))
+* re-enable react extension for current file ([83d1bf2](https://github.com/JulianCataldo/web-garden/commit/83d1bf29497c85d202239d7b9cbb315706c87fa2))
+
+
+
+## [0.13.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.12.3...@julian_cataldo/astro-configs@0.13.0) (2022-08-20)
+
+
+### Features
+
+* add `astroHTML` global for `.astro` files ([22b3d29](https://github.com/JulianCataldo/web-garden/commit/22b3d292f778fbb2b49fe1e6e8aaf64ca8786de0))
+
+
+### Bug Fixes
+
+* clean up + add ignore missing import rule ([4b39df6](https://github.com/JulianCataldo/web-garden/commit/4b39df6cbb63b0b4c8668fcebb33d7de068eaa27))
+* docs links, relative to absolute ([4737876](https://github.com/JulianCataldo/web-garden/commit/473787617df5692cea016d2efd985cd234a96c95))
+
+
+
 ## [0.12.3](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.12.2...@julian_cataldo/astro-configs@0.12.3) (2022-08-06)
 
 

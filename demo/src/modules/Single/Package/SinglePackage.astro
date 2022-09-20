@@ -1,11 +1,12 @@
 ---
+import Link from '@julian_cataldo/astro-link/Link.astro';
 import DemoLoader from 'src/components/Demo/DemoLoader.astro';
 import type { Package } from 'src/types';
 // BUG: THIS BREAK (https://github.com/withastro/prettier-plugin-astro/issues/232)
 // import { Code } from '___/components';
 import Table from 'src/components/Table/Table.astro';
-
 import LicensesReport from '@julian_cataldo/astro-licenses-report/LicensesReport.astro';
+/* —————————————————————————————————————————————————————————————————————————— */
 
 interface Props {
   content: Package;
@@ -21,88 +22,111 @@ if (typeof props?.content?.readme?.Content !== 'function') {
 const ReadMe = props?.content?.readme?.Content;
 ---
 
-<div class='single-package'>
-  {props.content ? (
-    <>
-      {props.content.pJson?.keywords.length && (
-        <section class="keywords">
-          <h2 class="title">Keywords:</h2>
-          <ul class="keywords-list">
-            {props.content.pJson.keywords.map((keyword) => (
-              <li class="keyword">{keyword}</li>
-            ))}
-          </ul>
-        </section>
-      )}
-      {props.content.hasDemo && (
-        <section id="live-demo" class="package-section article-body">
-          <h2>Component live demo</h2>
+<div class="single-package">
+  {
+    props.content ? (
+      <>
+        {props.content.pJson?.keywords.length && (
+          <section class="keywords">
+            <h2 class="title">Keywords:</h2>
+            <ul class="keywords-list">
+              {props.content.pJson.keywords.map((keyword) => (
+                <li class="keyword">{keyword}</li>
+              ))}
+            </ul>
+          </section>
+        )}
+        {props.content.hasDemo && (
+          <section id="live-demo" class="package-section article-body">
+            <h2>Component live demo</h2>
 
-          <DemoLoader name={props.content.shortname} />
-        </section>
-      )}
-      {props.content.video && (
-        <section id="test-video" class="package-section article-body">
-          <h2>Test x Demo : Video</h2>
+            <DemoLoader name={props.content.shortname} />
+          </section>
+        )}
+        {props.content.video && (
+          <section id="test-video" class="package-section article-body">
+            <h2>Test x Demo : Video</h2>
 
-          <div>
-            <video width="100%" height="100%" controls autoplay loop>
-              <source src={props.content.video} type="video/mp4" />
-            </video>
-          </div>
-        </section>
-      )}
-      {ReadMe && (
-        <section id="doc" class="package-section article-body">
-          <ReadMe />
-        </section>
-      )}
-      {props.content.api && (
-        <section id="ts-api" class="package-section article-body">
-          <h2>TypeScript API</h2>
+            <div>
+              <video width="100%" height="100%" controls autoplay loop>
+                <source src={props.content.video} type="video/mp4" />
+              </video>
+            </div>
+          </section>
+        )}
+        {ReadMe && (
+          <section id="doc" class="package-section article-body">
+            <ReadMe />
+          </section>
+        )}
+        {props.content.api && (
+          <section id="ts-api" class="package-section article-body">
+            <h2>TypeScript API</h2>
 
-          {props.content.api?.extends && (
-            <p>
-              Extends: <code>{props.content.api.extends}</code>
-            </p>
-          )}
+            {props.content.api?.extends && (
+              <p>
+                Extends: <code>{props.content.api.extends}</code>
+              </p>
+            )}
 
-          <hr />
-
-          <Table data={props.content.api.properties} class="api-props" />
-        </section>
-      )}
-      {props.content?.changelog?.Content && (
-        <section id="changelog" class="package-section article-body">
-          <h2>Changelog</h2>
-
-          <input type="checkbox" id="toggle-changelog" />
-
-          <props.content.changelog.Content />
-
-          <div class="invert">
-            <strong class="suspension ">...</strong>
             <hr />
-            <label for="toggle-changelog" class="button button-expand ">
-              Expand full history
-            </label>
-          </div>
+
+            <Table data={props.content.api.properties} class="api-props" />
+          </section>
+        )}
+        {props.content?.changelog?.Content && (
+          <section id="changelog" class="package-section article-body">
+            <h2>Changelog</h2>
+
+            <input type="checkbox" id="toggle-changelog" />
+
+            <props.content.changelog.Content />
+
+            <div class="invert">
+              <strong class="suspension ">...</strong>
+              <hr />
+              <label for="toggle-changelog" class="button button-expand ">
+                Expand full history
+              </label>
+            </div>
+          </section>
+        )}
+
+        {props.content.hasDependencies && (
+          <section id="licenses" class="package-section article-body">
+            <h2>Licenses</h2>
+
+            <LicensesReport
+              useDev={true}
+              depth={1}
+              packagePath={`../${props.content.pJson.repository.directory}`}
+            />
+          </section>
+        )}
+
+        <section id="issues" class="package-section article-body">
+          <h2>
+            ⚠️&nbsp;&nbsp;Having an issue? / 🗣&nbsp;&nbsp;
+            <small>Wanna share feedback or suggestion?</small>
+          </h2>
+          ✍️&nbsp;
+          <Link
+            href={props.content.pJson.bugs.url}
+            class="button button-expand"
+          >
+            Open an Issue or a Pull Request
+          </Link>
+          &nbsp; on GitHub -or- &nbsp;
+          <Link
+            href={'https://www.juliancataldo.com/contact'}
+            class="button button-expand"
+          >
+            Contact me
+          </Link>
+          &nbsp; on my Website.
         </section>
-      )}
 
-      {props.content.hasDependencies && (
-        <section id="licenses" class="package-section article-body">
-          <h2>Licenses</h2>
-
-          <LicensesReport
-            useDev={true}
-            depth={1}
-            packagePath={`../${props.content.pJson.repository.directory}`}
-          />
-        </section>
-      )}
-
-      {/* props.content.typescriptProps && (
+        {/* props.content.typescriptProps && (
         <section id="ts-api" class="package-section article-body">
       
           <h2>TypeScript API</h2>
@@ -110,12 +134,13 @@ const ReadMe = props?.content?.readme?.Content;
     
         </section>
       ) */}
-    </>
-  ) : (
-    <div>Empty content — No README.md found</div>
-  )}
+      </>
+    ) : (
+      <div>Empty content — No README.md found</div>
+    )
+  }
 </div>
 
-<style lang='scss'>
+<style lang="scss">
   @import './SinglePackage.scss';
 </style>

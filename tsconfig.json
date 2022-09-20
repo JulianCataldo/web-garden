@@ -26,8 +26,10 @@
     "noImplicitAny": true,
 
     "baseUrl": "./demo",
-    "paths": {}
+    "paths": {},
 
-    // "allowSyntheticDefaultImports": true
+    "importsNotUsedAsValues": "error",
+
+    "allowSyntheticDefaultImports": true
   }
 }

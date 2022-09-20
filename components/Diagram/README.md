@@ -2,20 +2,19 @@
 
 Embed you Mermaid diagrams in no time inside your Astro templates.  
 Features **server-side rendering** and **smart caching**.  
-Available as a stand-alone component or as an MDX plugin, replacing `mermaid` code blocks.
+Available as a stand-alone component or as an MDX plugin, replacing `mermaid` code blocks on-the-fly.
 
 ---
 
-Uses Muhammad Muzzammil' [`headless-mermaid`](https://github.com/muhammadmuzzammil1998/headless-mermaid) under the hood.  
-And of course, the [`mermaid`](https://github.com/mermaid-js/mermaid) library.
+Uses the [`mermaid`](https://github.com/mermaid-js/mermaid) library and puppeteer under the hood.
 
 > **Warning**  
-> 🚧  Work in progress.
+> 🚧  Still in **beta**.
 
 ## 📦  Installation
 
 ```sh
-pnpm i @julian_cataldo/astro-diagram headless-mermaid
+pnpm i @julian_cataldo/astro-diagram mermaid
 ```
 
 ## 🛠  Usage
@@ -99,7 +98,9 @@ Alice->John: Yes... John, how are you?
 
 ## To do
 
-- [ ] Improve Astro **MDX** integration  
+- [x] Offline / Node package import of mermaid instead of CDN (`headless-mermaid` related).
+      [See Issue #43](https://github.com/JulianCataldo/web-garden/issues/43)
+- [x] Improve Astro **MDX** integration  
        Refs.:  
        See https://github.com/sjwall/mdx-mermaid  
        Unist visit: https://github.com/sjwall/mdx-mermaid/blob/main/src/mdxast-mermaid.ts

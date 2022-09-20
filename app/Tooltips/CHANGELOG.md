@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-tooltips@0.10.17...@julian_cataldo/astro-tooltips@0.11.0) (2022-08-25)
+
+
+### Features
+
+* make component extendable to user ([94a174b](https://github.com/JulianCataldo/web-garden/commit/94a174b8a00cdb80f59c8ad18953323a0c9a3058))
+
+
+
+## [0.10.17](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-tooltips@0.10.16...@julian_cataldo/astro-tooltips@0.10.17) (2022-08-22)
+
+
+### Bug Fixes
+
+* unused scss style causing ssr crash ([0173508](https://github.com/JulianCataldo/web-garden/commit/0173508f04809a50af7a794186d3245d01088108))
+
+
+
+## [0.10.16](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-tooltips@0.10.15...@julian_cataldo/astro-tooltips@0.10.16) (2022-08-20)
+
+**Note:** Version bump only for package @julian_cataldo/astro-tooltips
+
+
+
+
+
 ## [0.10.15](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-tooltips@0.10.14...@julian_cataldo/astro-tooltips@0.10.15) (2022-07-31)
 
 **Note:** Version bump only for package @julian_cataldo/astro-tooltips

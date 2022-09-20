@@ -1,9 +1,9 @@
 /* ————————————————————————————————————————— Checkbox 1 ————————————————————— */
-input[type="checkbox"] {
+input[type='checkbox'] {
   all: unset;
+  display: inline-block;
   width: 0.7em;
   height: 0.7em;
-  display: inline-block;
   margin: 0 0.5em;
   margin-bottom: -0.14em;
   border-radius: 0.15em;

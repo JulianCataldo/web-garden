@@ -9,22 +9,23 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       # ————————————————————————————————————————————————————————————————————————
 
       - name: Use Node.js 17
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: 17
 
       - name: Setup PNPM 7
         uses: pnpm/action-setup@v2.2.2
         with:
-          version: 7.1.7
+          version: 7.9.0
 
       - name: Install Node dependencies
-        run: pnpm install --recursive
+        # `production` to exclude dev. dependencies
+        run: NODE_ENV=production pnpm install --recursive
 
       - name: Build Astro Website
         working-directory: ./demo

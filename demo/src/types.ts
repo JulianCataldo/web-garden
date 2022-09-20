@@ -9,6 +9,9 @@ export interface PJson {
     url: string;
     directory: string;
   };
+  bugs: {
+    url: string;
+  };
   version: string;
   keywords: string[];
 }

@@ -21,8 +21,8 @@
 /* ————————————————————————————————————————— Pill 1 ————————————————————————— */
 
 .main-content .single-package .keywords-list .keyword {
-  border-radius: 5em;
   padding: 0.3em 0.9em;
+  border-radius: 5em;
 
   @include theme(default, light) {
     color: $rosewood;

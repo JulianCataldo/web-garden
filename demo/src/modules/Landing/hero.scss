@@ -1,7 +1,12 @@
 .hero-wrapper {
   position: relative;
   z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  padding-top: calc(15rem - 12vw);
+  padding-bottom: 10rem;
   background: linear-gradient(
     to bottom,
     color.adjust(hsl(218, 74%, 27%), $lightness: -25%),
@@ -14,15 +19,18 @@
     color.adjust(white, $alpha: 0) calc(100% - 12rem),
     color.adjust(white, $alpha: -1) 100%
   );
-  padding-top: calc(15rem - 12vw);
-  padding-bottom: 10rem;
 
   & + * {
     margin-top: -35vh;
   }
 
   @include breakpoint(md) {
+    position: absolute;
+    top: 0;
+    left: 13%;
     max-width: calc(10vw + 33rem);
+    height: 100vh;
+    min-height: 52rem;
     padding-top: 0;
     padding-bottom: 0;
     background: none;
@@ -31,17 +39,7 @@
     & + * {
       margin-top: inherit;
     }
-
-    top: 0;
-    position: absolute;
-    left: 13%;
-    height: 100vh;
-    min-height: 52rem;
   }
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .hero {
@@ -64,15 +62,15 @@
   @include font-color-light;
 
   &::before {
-    content: "";
     position: absolute;
     inset: 0;
     z-index: -1;
-    transform: skewX(4deg);
+    content: '';
     background-color: color.adjust($rosewood, $lightness: -12%, $alpha: -0.3);
+    border-radius: 0.5rem;
     box-shadow: 3px 3px 10px
       color.adjust(hsl(218, 74%, 27%), $lightness: -12%, $alpha: -0.5);
-    border-radius: 0.5rem;
+    transform: skewX(4deg);
   }
 
   p {
@@ -80,16 +78,16 @@
   }
 
   .description {
-    white-space: pre-wrap;
     word-wrap: break-word;
+    white-space: pre-wrap;
   }
 
   .actions {
-    margin-top: 1.25rem;
     display: flex;
-    justify-content: flex-end;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: flex-end;
+    margin-top: 1.25rem;
 
     & > * {
       margin: 0.8rem 0.8rem;

@@ -2,7 +2,7 @@
 import { Icon } from 'astro-icon';
 import Link from '@julian_cataldo/astro-link/Link.astro';
 import DemoLoader from 'src/components/Demo/DemoLoader.astro';
-import { Package } from 'src/packages-loader';
+import type { Package } from 'src/types';
 
 interface Props {
   packages: Package[];
@@ -14,70 +14,72 @@ if (Array.isArray(props.packages) === false) {
 }
 ---
 
-{props.packages.map((pkg, index) => {
-  const name = pkg.pJson.name.replace('@julian_cataldo/', '')
-  const url = `/component/${name}`
+{
+  props.packages.map((pkg, index) => {
+    const name = pkg.pJson.name.replace('@julian_cataldo/', '');
+    const url = `/component/${name}`;
 
-  const id = `cb-${index}`
-  return (
-    <article id={pkg.readme.mainTitle.slug} class="article-body package">
-      <h1>{pkg.readme.mainTitle.text}</h1>
-      <div>
-        <p class="description">{pkg.pJson.description}</p>
-      </div>
+    const id = `cb-${index}`;
+    return (
+      <article id={pkg.readme.mainTitle.slug} class="article-body package">
+        <h1>{pkg.readme.mainTitle.text}</h1>
+        <div>
+          <p class="description">{pkg.pJson.description}</p>
+        </div>
 
-      {pkg.hasDemo && (
-        <section class="demo-section">
-          <h2>
-            <Icon name="system-uicons:hand" size={'1em'} class="icon" />
-            <span>Demonstration</span>
-          </h2>
-          <div class="demo">
-            <DemoLoader name={name} />
-          </div>
-        </section>
-      )}
+        {pkg.hasDemo && (
+          <section class="demo-section">
+            <h2>
+              <Icon name="system-uicons:hand" size={'1em'} class="icon" />
+              <span>Demonstration</span>
+            </h2>
+            <div class="demo">
+              <DemoLoader name={name} />
+            </div>
+          </section>
+        )}
 
-      <hr />
+        <hr />
 
-      <footer class="actions">
-        <Link class="button unstyled" href={url}>
-          See full documentation
-        </Link>
-
-        <div class="version">
-          <Icon name="mdi:npm" size={'4rem'} class="icon" />
-          <Link
-            class="button unstyled"
-            href={`https://www.npmjs.com/package/${pkg.pJson.name}`}
-          >
-            <span class="visually-hidden">Version:</span>
-            <span aria-hidden="true">v:</span>&nbsp;
-            <strong>{pkg.pJson.version}</strong>
+        <footer class="actions">
+          <Link class="button unstyled" href={url}>
+            See full documentation
           </Link>
-        </div>
 
-        <div class="package-install">
-          <code class="install-command" id={id}>
-            pnpm i {pkg.pJson.name}
-          </code>
-          <div
-            data-clipboard-target={`#${id}`}
-            title="Copy to clipboard"
-            data-tooltip-placement="right"
-          >
-            <Icon
-              name="system-uicons:clipboard-copy"
-              size="2.5rem"
-              class="cb-icon"
-            />
+          <div class="version">
+            <Icon name="mdi:npm" size={'4rem'} class="icon" />
+            <Link
+              class="button unstyled"
+              href={`https://www.npmjs.com/package/${pkg.pJson.name}`}
+            >
+              <span class="visually-hidden">Version:</span>
+              <span aria-hidden="true">v:</span>&nbsp;
+              <strong>{pkg.pJson.version}</strong>
+            </Link>
           </div>
-        </div>
-      </footer>
-    </article>
-  )
-})}
 
-<style lang='scss'>
+          <div class="package-install">
+            <code class="install-command" id={id}>
+              pnpm i {pkg.pJson.name}
+            </code>
+            <div
+              data-clipboard-target={`#${id}`}
+              title="Copy to clipboard"
+              data-tooltip-placement="right"
+            >
+              <Icon
+                name="system-uicons:clipboard-copy"
+                size="2.5rem"
+                class="cb-icon"
+              />
+            </div>
+          </div>
+        </footer>
+      </article>
+    );
+  })
+}
+
+<style lang="scss">
   @import './ComponentList.scss';
 </style>

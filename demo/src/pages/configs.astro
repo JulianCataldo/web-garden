@@ -8,9 +8,7 @@ const configPackage = (
   await loadPackages({
     pJsons: await Astro.glob('../../../configs/package.json'),
     readmes: await Astro.glob('/content/packages/configs/README.md'),
-    changelogs: await Astro.glob(
-      '/content/packages/{app,components}/{*/,*/*/}CHANGELOG.md',
-    ),
+    changelogs: await Astro.glob('/content/packages/configs/CHANGELOG.md'),
     anchorMode: false,
   })
 ).pop();
@@ -36,17 +34,20 @@ const actions = [
 ---
 
 <Layout titles={titles} actions={actions}>
-  <article class='main-content'>
+  <article class="main-content">
     <PageNavigation
-      title='Tooling'
+      title="Tooling"
       links={configPackage.readme.headers}
       anchorMode={true}
     />
 
-    <div class='content article'>
-      <div class='wrapper article-body'>
+    <div class="content article">
+      <div class="wrapper article-body">
         <configPackage.readme.Content />
       </div>
+      <!-- <footer>
+        <configPackage.changelog.Content />
+      </footer> -->
     </div>
   </article>
 </Layout>

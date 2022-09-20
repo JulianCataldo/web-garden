@@ -1,16 +1,16 @@
 .licenses-report {
+  max-height: 40vh;
+  overflow-x: auto;
   // max-width: calc(100vw - 50rem);
   overflow-y: scroll;
-  overflow-x: auto;
-  max-height: 40vh;
 }
 
 .table {
   .th {
     font-weight: 600;
-    background: color.adjust($raisin-black, $alpha: -0.95);
     font-variant: small-caps;
     text-align: center;
+    background: color.adjust($raisin-black, $alpha: -0.95);
   }
 
   .tr {
@@ -26,9 +26,9 @@
 
   .td,
   .th {
-    word-break: break-all;
-    overflow: hidden;
     padding: 0.5em;
+    overflow: hidden;
+    word-break: break-all;
     border-right: 1px solid color.adjust($raisin-black, $alpha: -0.85);
 
     &:last-of-type {

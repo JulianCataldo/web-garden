@@ -20,33 +20,35 @@ const siteName = "Julian's Web Garden";
 
 <!-- TODO: Dev / Prod mode for SEO image poster -->
 <SEO
-  image={'https://code.juliancataldo.com/poster.png'}
+  image={`${import.meta.env.SITE}poster.png`}
   title={comboTitle}
   description={props.description || description}
   siteName={siteName}
 />
 
 <!-- Extras -->
-<meta name='author' content='Julian Cataldo' />
-<meta name='copyright' content='ISC' />
+<meta name="author" content="Julian Cataldo" />
+<meta name="copyright" content="ISC" />
 <!-- NOTE: this thing is not official, just an experiment -->
-<meta name='generator' content={generator} />
+<meta name="generator" content={generator} />
 <!-- /Extras -->
 
 <Tooltips />
 
 <!-- Disabled for dev' (no accidental triggering of a broken page) -->
-{import.meta.env.MODE === 'production' && (
-  <>
-    <Prefetch max={3} />
-  </>
-)}
+{
+  import.meta.env.MODE === 'production' && (
+    <>
+      <Prefetch max={3} />
+    </>
+  )
+}
 
 <ColorMode />
 
 <ScrollObserver />
 
-<Analytics id='G-RW3VKT4PD3' />
+<Analytics id="G-RW3VKT4PD3" />
 
 <!-- FIXME: Disabled, breaks on vite build -->
 <!-- <Resets /> -->

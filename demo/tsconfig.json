@@ -23,6 +23,8 @@
       // "@layouts/*": ["./src/layouts/*"]
     },
 
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+
+    "importsNotUsedAsValues": "error"
   }
 }

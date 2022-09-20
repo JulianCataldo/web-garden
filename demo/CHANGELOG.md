@@ -3,6 +3,109 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.7](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.12.6...@julian_cataldo/astro-demo@0.12.7) (2022-09-20)
+
+
+### Bug Fixes
+
+* initial line-height ([2a38f1e](https://github.com/JulianCataldo/web-garden/commit/2a38f1e891a1e3cf86bc999525c122c44a8708bb))
+* update mermaid and imagetools ([2a5642d](https://github.com/JulianCataldo/web-garden/commit/2a5642d217e3a3e84dbda72c95edaf095123ce3d))
+
+
+
+## [0.12.6](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.12.5...@julian_cataldo/astro-demo@0.12.6) (2022-09-07)
+
+**Note:** Version bump only for package @julian_cataldo/astro-demo
+
+
+
+
+
+## [0.12.5](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.12.4...@julian_cataldo/astro-demo@0.12.5) (2022-09-06)
+
+
+### Bug Fixes
+
+* absolute url for poster image ([a056f19](https://github.com/JulianCataldo/web-garden/commit/a056f19ed623a81a60bb59cfce0a064b462fddeb))
+* disable cypress videos syncing ([e012bb7](https://github.com/JulianCataldo/web-garden/commit/e012bb704e1ad96aa0da60c92ddb6360e7ceda50))
+
+
+
+## [0.12.4](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.12.3...@julian_cataldo/astro-demo@0.12.4) (2022-08-26)
+
+**Note:** Version bump only for package @julian_cataldo/astro-demo
+
+
+
+
+
+## [0.12.3](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.12.2...@julian_cataldo/astro-demo@0.12.3) (2022-08-26)
+
+**Note:** Version bump only for package @julian_cataldo/astro-demo
+
+
+
+
+
+## [0.12.2](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.12.1...@julian_cataldo/astro-demo@0.12.2) (2022-08-26)
+
+**Note:** Version bump only for package @julian_cataldo/astro-demo
+
+
+
+
+
+## [0.12.1](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.12.0...@julian_cataldo/astro-demo@0.12.1) (2022-08-25)
+
+**Note:** Version bump only for package @julian_cataldo/astro-demo
+
+
+
+
+
+## [0.12.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.11.0...@julian_cataldo/astro-demo@0.12.0) (2022-08-22)
+
+
+### Features
+
+* add link to demo ([71f170b](https://github.com/JulianCataldo/web-garden/commit/71f170bd2d8b6989acd363c17ad69c342e23a1b6))
+
+
+
+## [0.11.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.10.0...@julian_cataldo/astro-demo@0.11.0) (2022-08-21)
+
+
+### Features
+
+* support multiple leaflet map embed per page ([295ea80](https://github.com/JulianCataldo/web-garden/commit/295ea80812f39c801580d209957b37be84b568bd))
+
+
+
+## [0.10.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.9.0...@julian_cataldo/astro-demo@0.10.0) (2022-08-21)
+
+
+### Features
+
+* issue / feedback for single package view ([ee1a996](https://github.com/JulianCataldo/web-garden/commit/ee1a9963fb500e47cfd2e7533c72bd103548ed28))
+
+
+
+## [0.9.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.8.0...@julian_cataldo/astro-demo@0.9.0) (2022-08-20)
+
+
+### Features
+
+* add astro version to main footer ([5c15abd](https://github.com/JulianCataldo/web-garden/commit/5c15abd8d3f4ce501b33c79df04a5f428bc6b094))
+
+
+### Bug Fixes
+
+* add import for astro version ([2103146](https://github.com/JulianCataldo/web-garden/commit/2103146de73a4fe9e9f92cee5e8ced51bd63f940))
+* correct changelog import for configs ([202d2fe](https://github.com/JulianCataldo/web-garden/commit/202d2fe95ede9b8d8adc0ab0f3bac1c0f0536fe7))
+* package typing path ([49c79ec](https://github.com/JulianCataldo/web-garden/commit/49c79ecbaabe7d3776e385703fa1afee9805fc3d))
+
+
+
 ## [0.8.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.7.1...@julian_cataldo/astro-demo@0.8.0) (2022-08-06)
 
 

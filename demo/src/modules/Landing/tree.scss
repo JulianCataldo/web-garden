@@ -1,20 +1,12 @@
 .tree {
+  position: absolute;
   top: 7rem;
   left: 1.5vw;
-  position: absolute;
   height: 100%;
   overflow: hidden;
-
-  transform: scaleX(0.66) scaleY(0.75) translateX(-25%) translateY(-15%);
-
-  @include theme(default, light, $scoped: true) {
-    color: color.adjust($red-pigment, $lightness: 30%);
-  }
-  @include theme(default, dark, $scoped: true) {
-    color: color.adjust($red-pigment, $lightness: 20%);
-  }
-
+  line-height: 1.25;
   filter: saturate(60%);
+  transform: scaleX(0.66) scaleY(0.75) translateX(-25%) translateY(-15%);
   -webkit-mask-image: linear-gradient(
     to bottom,
     transparent 1rem,
@@ -23,11 +15,18 @@
     transparent calc(100%)
   );
 
+  @include theme(default, light, $scoped: true) {
+    color: color.adjust($red-pigment, $lightness: 30%);
+  }
+  @include theme(default, dark, $scoped: true) {
+    color: color.adjust($red-pigment, $lightness: 20%);
+  }
+
   .code {
     animation-name: slide-up;
     animation-duration: 120s;
-    animation-iteration-count: infinite;
     animation-timing-function: linear;
+    animation-iteration-count: infinite;
 
     @include breakpoint(lg) {
       &:hover {

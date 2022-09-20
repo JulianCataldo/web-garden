@@ -3,7 +3,7 @@
 import type mermaidAPI from 'mermaid/mermaidAPI';
 /* ·········································································· */
 import renderDiagram from './render-diagram';
-import cache from './cache';
+import cache, { generateHash } from './cache';
 /* —————————————————————————————————————————————————————————————————————————— */
 import type { Props as baseProps } from './Props';
 
@@ -15,25 +15,7 @@ if (typeof props.config !== 'object') props.config = {};
 if (typeof props.code !== 'string') props.code = '';
 /* —————————————————————————————————————————————————————————————————————————— */
 
-/* We don't want to regenerate the diagram if nothing has changed */
-function generateHash(data: string) {
-  // Dark magic: https://stackoverflow.com/a/7616484/2890472
-  let hash = 0;
-  let i;
-  let chr;
-  if (data.length === 0) return hash;
-  for (i = 0; i < data.length; i += 1) {
-    chr = data.charCodeAt(i);
-    // eslint-disable-next-line no-bitwise
-    hash = (hash << 5) - hash + chr;
-    // eslint-disable-next-line no-bitwise
-    hash |= 0; // Convert to 32bit integer
-  }
-  return hash;
-}
-
-const userData = JSON.stringify({ code: props.code, config: props.config });
-const uniqueKey = generateHash(userData);
+const uniqueKey = generateHash([props.code, props.config]);
 
 if (cache[uniqueKey] === undefined) {
   /* Render the mermaid diagram */
@@ -48,11 +30,13 @@ if (cache[uniqueKey] === undefined) {
 }
 ---
 
-{cache[uniqueKey] && (
-  <div class="mermaid-diagram">
-    <Fragment set:html={cache[uniqueKey].result} data-test="mermaid" />
-  </div>
-)}
+{
+  cache[uniqueKey] && (
+    <div class="mermaid-diagram">
+      <Fragment set:html={cache[uniqueKey]} data-test="mermaid" />
+    </div>
+  )
+}
 
 <style>
   .mermaid-diagram {

@@ -1,12 +1,19 @@
 /** @type {import("@types/stylelint").Options} */
 
 module.exports = {
+  // TODO: Split config
+
   extends: [
     'stylelint-config-standard',
     'stylelint-config-standard-scss',
     'stylelint-config-prettier',
+    'stylelint-config-recess-order',
   ],
+
+  plugins: ['stylelint-order'],
+
   overrides: [
+    // NOTE: Too unstable for now
     // {
     //   files: ['*.astro', '**/*.astro'],
     //   customSyntax: 'postcss-html',
