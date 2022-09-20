@@ -36,7 +36,7 @@
   "license": "ISC",
   "dependencies": {
     "mermaid": "^9.1.6",
-    "puppeteer": "^16.2.0",
+    "puppeteer": "^18.0.2",
     "unist-util-visit": "^4.1.0"
   },
   "devDependencies": {
