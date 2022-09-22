@@ -1,6 +1,6 @@
 {
   "name": "@julian_cataldo/astro-breakpoints",
-  "version": "0.10.6",
+  "version": "0.10.7",
   "description": "Provides cross languages breakpoints handlers for your app. SCSS mixin, JS hook and a DOM data attribute, all share the same responsive scale you choose to feed in.",
   "main": "index.js",
   "type": "module",
