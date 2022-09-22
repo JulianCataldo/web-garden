@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.1](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.19.0...@julian_cataldo/astro-configs@0.19.1) (2022-09-22)
+
+
+### Bug Fixes
+
+* update recommended method for configs import ([3d83ea8](https://github.com/JulianCataldo/web-garden/commit/3d83ea8c741d8d5355ee9c2fee295cf717befc70))
+
+
+
 ## [0.19.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.18.0...@julian_cataldo/astro-configs@0.19.0) (2022-09-20)
 
 
