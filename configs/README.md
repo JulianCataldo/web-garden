@@ -119,20 +119,28 @@ eslint-plugin-mdx
 
 ### Configuration
 
-[See this ESLint config file for inspiration](https://github.com/JulianCataldo/web-garden/blob/develop/configs/.eslintrc.cjs)
+In `.eslintrc.cjs`:
 
-Or quick embed in `package.json`:
+```js
+/** @type {import("@types/eslint").Linter.Config} */
 
-```jsonc
-{
-  // …
-  "eslintConfig": {
-    // Prevent unwanted hoisting
-    "root": true,
-    // `node_modules` seems to be needed
-    "extends": ["./node_modules/@julian_cataldo/astro-configs/.eslintrc.cjs"]
-  }
-}
+module.exports = {
+  // Prevent cascading in contained folders
+  // root: true,
+
+  /**
+   * Reference:
+   *
+   * https://github.com/JulianCataldo/web-garden/blob/develop/configs/eslint-all.cjs
+   *
+   * */
+  extends: [
+    './node_modules/@julian_cataldo/astro-configs/eslint-all.cjs',
+
+    // Or cherry pick one or more LANG: astro | js | jsx | ts | tsx | vue
+    // './node_modules/@julian_cataldo/astro-configs/eslint-{LANG}.cjs',
+  ],
+};
 ```
 
 ---
@@ -196,15 +204,23 @@ postcss-html
 
 ### Configuration
 
-[See this Prettier config file for inspiration](https://github.com/JulianCataldo/web-garden/blob/develop/configs/.prettierrc.cjs)
+In `.prettierrc.cjs`:
 
-Or quick embed in `package.json`:
+```js
+/** @type {import("@types/prettier").Options} */
 
-```jsonc
-{
-  // …
-  "prettier": "@julian_cataldo/astro-configs/.prettierrc.cjs"
-}
+module.exports = {
+  /**
+   * Reference:
+   *
+   * https://github.com/JulianCataldo/web-garden/blob/develop/configs/prettier-astro.cjs
+   *
+   * */
+  ...require('@julian_cataldo/astro-configs/prettier-astro.cjs'),
+
+  // Or just the base, without Astro related stuff:
+  // ...require('@julian_cataldo/astro-configs/prettier-base.cjs'),
+};
 ```
 
 ---
@@ -319,17 +335,24 @@ stylelint-config-prettier
 
 ### Configuration
 
-[See this Stylelint config file for inspiration](https://github.com/JulianCataldo/web-garden/blob/develop/configs/.stylelintrc.cjs)
+In `stylelint.config.cjs`:
 
-Or quick embed in `package.json`:
+```js
+/** @type {import("@types/stylelint").Options} */
 
-```jsonc
-{
-  // …
-  "stylelint": {
-    "extends": "@julian_cataldo/astro-configs/.stylelintrc.cjs"
-  }
-}
+module.exports = {
+  /**
+   * Reference:
+   *
+   * https://github.com/JulianCataldo/web-garden/blob/develop/configs/stylelint-all.cjs
+   *
+   * */
+  extends: ['@julian_cataldo/astro-configs/stylelint-all.cjs'],
+
+  rules: {
+    /* Add some per-project rules here */
+  },
+};
 ```
 
 ---
