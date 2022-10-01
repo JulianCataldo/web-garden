@@ -51,7 +51,7 @@
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-react": "7.30.1",
     "eslint-plugin-react-hooks": "4.6.0",
-    "eslint-plugin-tsdoc": "0.2.16",
+    "eslint-plugin-tsdoc": "0.2.17",
     "eslint-plugin-vue": "9.3.0",
     "lerna": "5.4.3",
     "postcss": "8.4.16",
