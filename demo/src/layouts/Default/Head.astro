@@ -29,8 +29,9 @@ const siteName = "Julian's Web Garden";
 <!-- Extras -->
 <meta name="author" content="Julian Cataldo" />
 <meta name="copyright" content="ISC" />
-<!-- NOTE: this thing is not official, just an experiment -->
-<meta name="generator" content={generator} />
+
+<meta name="generator" content={Astro.generator} />
+<link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
 <!-- /Extras -->
 
 <Tooltips />
