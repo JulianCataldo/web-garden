@@ -46,6 +46,13 @@ module.exports = {
           'warn',
           { max: 150, skipComments: true, skipBlankLines: true },
         ],
+
+        'react/require-default-props': [
+          2,
+          {
+            functions: 'defaultArguments',
+          },
+        ],
       },
     },
   ],
