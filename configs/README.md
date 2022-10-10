@@ -51,7 +51,6 @@ This means aligning to Prettier defaults, air-bnb rules, etc.
   - [VSCode](#vscode-6)
     - [Languages](#languages)
       - [Astro](#astro)
-  - […To do](#to-do)
   - [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](#live-demo--documentation-website)
 
 ---
@@ -491,10 +490,7 @@ code --install-extension \
 astro-build.astro-vscode
 ```
 
-## …To do
-
-- [ ] Prettier settings in `.astro` files
-  - [ ] Nested code, doesn't keep defined settings
+<!-- ## …To do -->
 
 <div class="git-footer">
 
