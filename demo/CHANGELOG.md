@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.13.0...@julian_cataldo/astro-demo@0.14.0) (2022-10-10)
+
+
+### Features
+
+* add github videos remark embed ([57c7bf5](https://github.com/JulianCataldo/web-garden/commit/57c7bf5c390c0812a2795e7e168bed56fc9d162d))
+
+
+### Bug Fixes
+
+* add explicit remark gfm ([699a0dd](https://github.com/JulianCataldo/web-garden/commit/699a0dd2f7815d173e693adea68cfd8bcb9cfc21))
+* add mirror + hide demo link ([d0b7a51](https://github.com/JulianCataldo/web-garden/commit/d0b7a518e5119f94d2101be93457089cfe60b4c3))
+* hide playgrounds from build ([5a58ddb](https://github.com/JulianCataldo/web-garden/commit/5a58ddb350432a68ddce0e3d0feb2a2e726bd19b))
+* limit md embedded image size ([35c2337](https://github.com/JulianCataldo/web-garden/commit/35c23370c5728c00fb65630d308c8eaa0852af9c))
+* md video max height ([1a43f7d](https://github.com/JulianCataldo/web-garden/commit/1a43f7d6e0c4ca827fb7622f7b0dbb7c0528a9e7))
+* optional params for bare layout ([89a4d75](https://github.com/JulianCataldo/web-garden/commit/89a4d75cafc39acf2db5fbb7290e1f118edf5138))
+* remark gfm + github video embed clash ([7734aad](https://github.com/JulianCataldo/web-garden/commit/7734aad27b5ec064aa073dfb318ad41f8fdf2758))
+* remark plugin ordering for github videos ([55f0e3f](https://github.com/JulianCataldo/web-garden/commit/55f0e3f545502dac277955b043c63dae128a9f7b))
+
+
+
 ## [0.13.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.12.9...@julian_cataldo/astro-demo@0.13.0) (2022-10-10)
 
 
