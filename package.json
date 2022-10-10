@@ -76,6 +76,7 @@
   "packageManager": "pnpm@7.9.0",
   "dependencies": {
     "husky": "8.0.1",
-    "linkinator": "4.0.2"
+    "linkinator": "4.0.2",
+    "remark-gfm": "^3.0.1"
   }
 }

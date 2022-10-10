@@ -109,3 +109,8 @@ body {
 }
 
 /* —————————————————————————————————————————————————————————————————————————— */
+
+/* Hide from all ToC (in MD bodies and sidebar) */
+a[href='#live-demo--documentation-website'] {
+  display: none !important;
+}

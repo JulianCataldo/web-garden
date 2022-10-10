@@ -5,6 +5,7 @@ import sitemap from '@astrojs/sitemap';
 // import mdx from '@astrojs/mdx';
 import mdxMermaidPlugin from '@julian_cataldo/astro-diagram';
 import { visit } from 'unist-util-visit';
+import remarkGfm from 'remark-gfm';
 
 // import react from '@astrojs/react';
 
@@ -50,7 +51,9 @@ export default defineConfig({
     // react(),
   ],
 
-  markdown: { remarkPlugins: [mdxMermaidPlugin, oEmbedsRemarkPlugin] },
+  markdown: {
+    remarkPlugins: [remarkGfm, mdxMermaidPlugin, oEmbedsRemarkPlugin],
+  },
 
   vite: {
     // FIXME: Using `gather-content.sh` for now as this Vite option doesn't work
