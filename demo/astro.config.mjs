@@ -52,7 +52,7 @@ export default defineConfig({
   ],
 
   markdown: {
-    remarkPlugins: [remarkGfm, mdxMermaidPlugin, oEmbedsRemarkPlugin],
+    remarkPlugins: [oEmbedsRemarkPlugin, remarkGfm, mdxMermaidPlugin],
   },
 
   vite: {
