@@ -1,14 +1,14 @@
-@import "@julian_cataldo/astro-resets/styles";
+@import '@julian_cataldo/astro-resets/styles';
 /* —————————————————————————————————————————————————————————————————————————— */
-@import "src/themes/a11y";
-@import "src/themes/default";
+@import 'src/themes/a11y';
+@import 'src/themes/default';
 // @import 'src/themes/hacker';
 /* —————————————————————————————————————————————————————————————————————————— */
-@import "./article-body";
-@import "./body-background";
-@import "./content-navigation";
-@import "./back-to-top";
-@import "./footer";
+@import './article-body';
+@import './body-background';
+@import './content-navigation';
+@import './back-to-top';
+@import './footer';
 /* —————————————————————————————————————————————————————————————————————————— */
 
 .main-content {
