@@ -53,6 +53,7 @@
     "sass": "1.54.4",
     "tsparticles": "1.43.0",
     "tsparticles-preset-stars": "1.43.1",
+    "unist-util-visit": "^4.1.1",
     "unplugin-icons": "0.14.8"
   },
   "devDependencies": {
