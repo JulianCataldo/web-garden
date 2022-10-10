@@ -1,0 +1,37 @@
+---
+import { uid as createUid } from 'uid';
+import styles from './Testbed.module.scss';
+
+const uid = createUid();
+
+const tabs = [
+  { title: 'Props. 📐' },
+  { title: 'Controls 🕹' },
+  { title: 'Actions 🎞' },
+  { title: 'Presets 📦' },
+  { title: 'Code 📃' },
+  { title: 'Debug 🐞' },
+];
+---
+
+<div class:list={[styles[`tabs`]]}>
+  {
+    tabs.map((tab, key) => {
+      const index = key + 1;
+      return (
+        <>
+          <label class:list={[styles[`label-${index}`]]}>
+            <input
+              class:list={[styles[`radio`], styles[`radio-${index}`]]}
+              type="radio"
+              name={uid}
+              checked={index === 1}
+              hidden
+            />
+            {tab.title}
+          </label>
+        </>
+      );
+    })
+  }
+</div>

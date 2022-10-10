@@ -1,0 +1,147 @@
+---
+import { marked } from 'marked';
+import type { UiSchema } from '@rjsf/utils';
+import type { JSONSchema7 } from 'json-schema';
+import type { ComponentInstance } from 'astro';
+/* ·········································································· */
+import { Code } from 'astro/components';
+/* ·········································································· */
+import { getInfos } from './ts-extractor';
+/* ·········································································· */
+import Tabs from './Tabs.astro';
+import TestbedControl from './Testbed.control';
+/* ·········································································· */
+import styles from './Testbed.module.scss';
+import iconAstro from './assets/file-type-astro.svg?raw';
+import iconReact from './assets/file-type-reactjs.svg?raw';
+/* —————————————————————————————————————————————————————————————————————————— */
+
+interface Props extends astroHTML.JSX.HTMLAttributes {
+  /** Component path. Ex. `/src/components/MyComp.<jsx,tsx,astro>` */
+  component: string;
+
+  /** Props. further passed to the tested component */
+  props?: Record<string, unknown>;
+
+  /** Remove all testbed styles so you can apply you own */
+  headless?: boolean;
+
+  /** Override styling thanks to specificity, with parent scope class */
+  class?: string;
+
+  /**
+   * JSON schema to auto-generate controls
+   *
+   * See [`react-jsonschema-form` documentation](https://react-jsonschema-form.readthedocs.io/en/latest/)
+   * */
+  schema: JSONSchema7;
+  /** UI schema for auto-generated controls */
+  ui: UiSchema;
+}
+const {
+  component,
+  schema,
+  ui,
+  props,
+  headless = false,
+  class: className,
+} = Astro.props as Props;
+
+const isAstro = component.endsWith('.astro');
+
+/* ·········································································· */
+
+const allCompsRaw = import.meta.glob('/**/*.{jsx,tsx,astro}', { as: 'raw' });
+const compImport = import.meta.glob<ComponentInstance>('/**/*.{jsx,tsx,astro}');
+const compImportRaw = allCompsRaw[component];
+const compoFn = compImport[component];
+const mod = await compoFn();
+const componentRaw = await compImportRaw();
+const Component = mod?.default;
+
+/* ·········································································· */
+
+const infos = getInfos(component, componentRaw, isAstro);
+---
+
+<div class:list={[headless === false && styles[`control-panel`], className]}>
+  <div class:list={[styles[`component-infos`]]}>
+    <span
+      set:html={isAstro ? iconAstro : iconReact}
+      class:list={[styles['file-icon']]}></span>
+    -
+    <span>&nbsp;{component}</span>
+  </div>
+
+  <div class:list={[styles[`module-wrapper`]]}>
+    {
+      isAstro ? (
+        <div class:list={[styles['component-render']]}>
+          <Component {...props}>
+            <slot />
+          </Component>
+        </div>
+      ) : (
+        <TestbedControl
+          component={component}
+          schema={schema}
+          ui={ui}
+          {props}
+          defaultSlot={await Astro.slots.render('default')}
+          client:load
+        >
+          <Tabs component={component} />
+        </TestbedControl>
+      )
+    }
+    {isAstro && <Tabs component={component} />}
+
+    <div class:list={[styles['panel-1'], styles.panel]}>
+      <table>
+        <caption>
+          <div><div>{infos.heritage?.map((h) => <>{h.name}</>)}</div></div>
+        </caption>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Req.</th>
+            <th>Documentation</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            infos.props.map(({ name, type, docs, required }) => (
+              <tr>
+                <td>{name}</td>
+                <td>{type}</td>
+                <td>{infos.defaults[name] ?? '-'}</td>
+                <td>{required ? <strong>Yes</strong> : 'No'}</td>
+                <td set:html={marked.parse(docs ?? '')} />
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    {
+      isAstro && (
+        <div class:list={[styles['panel-2'], styles.panel]}>
+          No browser side controls for Astro components (SSR only).
+        </div>
+      )
+    }
+    <div class:list={[styles['panel-3'], styles.panel]}>No actions found.</div>
+
+    <div class:list={[styles['panel-4'], styles.panel]}>No presets found.</div>
+
+    <div class:list={[styles['panel-5'], styles.panel]}>
+      <Code code={componentRaw} lang={isAstro ? 'astro' : 'jsx'} />
+    </div>
+
+    <div class:list={[styles['panel-6'], styles.panel]}>
+      <Code code={JSON.stringify(infos, null, 2)} lang={'json'} />
+    </div>
+  </div>
+</div>
