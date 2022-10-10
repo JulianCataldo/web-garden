@@ -1,0 +1,66 @@
+{
+  "name": "astro-testbed",
+  "version": "0.1.1",
+  "description": "Complete toolbox for Astro / JSX component testing and analysis.\nFor design systems, storybooks, local dev. isolation, documentation…\n",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "@rjsf/core": "5.0.0-beta.10",
+    "@rjsf/utils": "5.0.0-beta.10",
+    "@rjsf/validator-ajv6": "5.0.0-beta.10",
+    "clsx": "^1.2.1",
+    "marked": "^4.1.1",
+    "react": "^18.2.0",
+    "ts-morph": "^16.0.0",
+    "uid": "^2.0.1"
+  },
+  "files": [
+    "assets/file-type-astro.svg",
+    "assets/file-type-reactjs.svg",
+    "pnpm-lock.yaml",
+    "Tabs.astro",
+    "Testbed.astro",
+    "Testbed.control.tsx",
+    "Testbed.module.scss",
+    "ts-extractor.ts",
+    "index.js"
+  ],
+  "devDependencies": {
+    "@types/marked": "^4.0.7",
+    "@types/react": "^18.0.21",
+    "json-schema": "^0.4.0"
+  },
+  "author": "Julian Cataldo",
+  "homepage": "https://code.juliancataldo.com/component/testbed",
+  "bugs": {
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianCataldo/web-garden",
+    "directory": "components/Testbed"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "astro",
+    "astro-component",
+    "testing",
+    "storybook",
+    "documentation",
+    "design-system",
+    "attributions",
+    "typescript",
+    "jsx",
+    "react",
+    "playground",
+    "demonstration",
+    "interactions",
+    "component"
+  ],
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -2,8 +2,10 @@ import { defineConfig } from 'astro/config';
 import { astroImageTools } from 'astro-imagetools';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import sitemap from '@astrojs/sitemap';
-import mdx from '@astrojs/mdx';
+// import mdx from '@astrojs/mdx';
 import mdxMermaidPlugin from '@julian_cataldo/astro-diagram';
+import { visit } from 'unist-util-visit';
+import remarkGfm from 'remark-gfm';
 
 // import react from '@astrojs/react';
 
@@ -19,6 +21,19 @@ const breakpoints = {
   xxl: '1840px',
 };
 
+const oEmbedsRemarkPlugin = () => async (ast) => {
+  visit(ast, 'text', (node) => {
+    const matcher = node.value.match(
+      /https:\/\/user-images.githubusercontent.com\/(.*).mp4/,
+    );
+    if (matcher?.length) {
+      console.log(node);
+      node.type = 'html';
+      node.value = `<video src="${node.value}" controls="controls" autoplay="autoplay" muted="muted"></video>`;
+    }
+  });
+};
+
 export default defineConfig({
   site: 'https://code.juliancataldo.com',
 
@@ -31,10 +46,14 @@ export default defineConfig({
   integrations: [
     sitemap(),
     astroImageTools,
-    mdx({ remarkPlugins: { extends: [mdxMermaidPlugin] } }),
+    // mdx({ remarkPlugins: { extends: [mdxMermaidPlugin] } }),
 
     // react(),
   ],
+
+  markdown: {
+    remarkPlugins: [remarkGfm, mdxMermaidPlugin, oEmbedsRemarkPlugin],
+  },
 
   vite: {
     // FIXME: Using `gather-content.sh` for now as this Vite option doesn't work

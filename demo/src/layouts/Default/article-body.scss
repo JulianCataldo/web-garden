@@ -30,6 +30,12 @@
     }
   }
 
+  img,
+  video {
+    max-width: 100%;
+    max-height: 70vh;
+  }
+
   pre {
     border-radius: 0.5em;
     padding: 1.5em;
@@ -99,7 +105,7 @@
       }
 
       &::before {
-        content: "🗒  ";
+        content: '🗒  ';
       }
     }
   }
@@ -123,7 +129,7 @@
         position: absolute;
         padding: 0 1em;
         font-size: 1em;
-        content: "\27B2";
+        content: '\27B2';
 
         @include theme(default, light) {
           color: color.adjust($rosewood, $lightness: 15%, $alpha: -0.5);
@@ -139,7 +145,7 @@
 
         li {
           &::before {
-            content: "\27A5";
+            content: '\27A5';
           }
         }
       }

@@ -1,0 +1,54 @@
+---
+interface Arthropoda {
+  foo?: string;
+}
+
+/**
+ * **Crab main features**: `antennas`, `abdomen`
+ */
+interface Props extends astroHTML.JSX.HTMLAttributes, Arthropoda {
+  /** Will it bite? `Maybe`  */
+  character?: string;
+
+  /**
+   * [_Crabology_](http://example.com/crab) code example:
+   *
+   * ```js
+   * console.log('Crab mode — ON')
+   * ````
+   */
+  shellColor: 'salmon' | 'seashell' | 'seagreen' | 'transparent';
+
+  /** From **1** to **10** */
+  clawsSize: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+}
+const {
+  character = 'gentle',
+  shellColor = 'seashell',
+  clawsSize = 5,
+} = Astro.props as Props;
+---
+
+<div>
+  <h2>
+    the 🦀 <code>&lt;Crab /&gt;</code> dummy component 🌊
+  </h2>
+
+  <ul>
+    <li>Character: <strong>{character}</strong></li>
+    <li>Shell color: <em style={`color: ${shellColor}`}>{shellColor}</em></li>
+    <li>Claws size: <button>{clawsSize}</button></li>
+  </ul>
+  <hr />
+
+  <fieldset>
+    <legend>The <strong>default</strong> slot child goes here</legend>
+
+    <slot />
+  </fieldset>
+
+  <p>
+    Crabs are generally covered with a thick exoskeleton, composed primarily of
+    highly mineralized chitin.
+  </p>
+</div>

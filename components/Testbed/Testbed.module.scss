@@ -1,0 +1,204 @@
+.control-panel {
+  margin: 2rem 0;
+
+  .module-wrapper {
+    padding: 0rem 0.75rem 0.75rem 0.75rem;
+    background: hsla(0, 0%, 15%, 1);
+    border: 1px solid hsla(0, 0%, 5%, 0.9);
+    border-radius: 0rem 0rem 0.75rem 0.75rem;
+    box-shadow: 2px 3px 7px hsla(0, 0%, 0%, 0.1),
+      2px 3px 20px hsla(0, 0%, 0%, 0.13);
+
+    @for $i from 1 through 8 {
+      &:has(.radio-#{$i}:checked) {
+        .panel-#{$i} {
+          display: block;
+        }
+        .label-#{$i} {
+          background: hsla(0, 0%, 25%, 1);
+          filter: initial;
+        }
+      }
+    }
+  }
+
+  .component-render {
+    max-height: calc(45vh - 2rem);
+    padding: 0.5rem 1.5rem;
+    margin-right: -0.75rem;
+    margin-left: -0.75rem;
+    overflow-y: auto;
+    border: 1px dashed hsla(0, 0%, 34%, 1);
+    box-shadow: 2px 3px 8px hsla(0, 0%, 0%, 0.15) inset;
+  }
+
+  .component-infos {
+    display: inline-flex;
+    align-items: flex-start;
+    padding: 0.5em 1em 0.25em 1em;
+    font-size: 85%;
+    color: hsla(0, 0%, 70%, 1);
+    background: hsla(0, 0%, 10%, 1);
+    border: 1px solid hsla(0, 0%, 5%, 0.9);
+    border-bottom: 0;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: flex-start;
+    margin: 1rem 0 0rem 0;
+    overflow-x: auto;
+
+    label {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.4em 1em 0.5em 1em;
+      font-size: 85%;
+      color: white;
+      cursor: pointer;
+      user-select: none;
+      background: hsla(0, 0%, 6%, 0.6);
+      filter: saturate(0%);
+      border: 1px solid hsla(0, 0%, 25%, 1);
+      border-right: 0px;
+      border-bottom: 0px;
+
+      $rad: 0.5rem;
+
+      &:last-of-type {
+        border-right: 1px solid hsla(0, 0%, 25%, 1);
+        border-radius: 0rem $rad 0rem 0rem;
+      }
+
+      &:first-of-type {
+        border-radius: $rad 0rem 0rem 0rem;
+      }
+
+      &:hover {
+        background: hsla(0, 0%, 35%, 1);
+        filter: initial;
+      }
+    }
+  }
+
+  .panel {
+    display: none;
+    min-height: calc(33vh - 2rem);
+    /* NOTE: Solve a weird bug with code panel (scrollbar thing) */
+    max-height: calc(33vh - 2rem);
+    padding: 1rem;
+    overflow-y: auto;
+    background: hsla(0, 0%, 12%, 1);
+    border: 1px solid hsla(0, 0%, 25%, 1);
+
+    &.panel-1 {
+      padding: 0.1rem 0.1rem 0.5rem 0.1rem;
+    }
+
+    &.panel-5,
+    &.panel-6 {
+      max-height: initial;
+      padding: 0rem;
+      overflow-y: initial;
+    }
+  }
+
+  form {
+    :global(.form-group fieldset) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3vw;
+      justify-content: space-between;
+      border: none;
+
+      & > * {
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        min-width: 10rem;
+        max-width: 15vw;
+      }
+    }
+  }
+
+  :global(pre.astro-code) {
+    max-height: 32vh;
+    margin: 0;
+    overflow-y: auto;
+    border: unset;
+  }
+
+  .file-icon {
+    svg {
+      width: 1.3em;
+      height: 1.3em;
+    }
+  }
+
+  table {
+    width: 100%;
+    font-size: calc(75% + 0.2vw);
+    line-height: calc(1.2rem + 0.4vh);
+    border-collapse: collapse;
+
+    thead {
+      position: sticky;
+      top: -3px;
+      background: hsla(0, 0%, 10%, 1);
+      box-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.05),
+        2px 2px 5px hsla(0, 0%, 0%, 0.1);
+    }
+
+    tbody tr {
+      &:nth-of-type(odd) {
+        background: hsla(0, 0%, 15%, 0.8);
+      }
+
+      &:nth-of-type(even) {
+        background: hsla(0, 0%, 17%, 0.8);
+      }
+    }
+
+    th {
+      padding: 0.5rem;
+    }
+
+    p {
+      margin: 0.5em 0;
+    }
+
+    td {
+      padding: 0.25vw 1.5vw;
+      border: 1px solid hsla(0, 0%, 25%, 1);
+
+      &:first-of-type {
+        border-left: 0;
+      }
+
+      &:last-of-type {
+        border-right: 0;
+      }
+    }
+
+    caption {
+      margin: 0.5rem 1rem 0 1rem;
+      font-size: 105%;
+      font-size: 100%;
+
+      div {
+        display: flex;
+        justify-content: center;
+
+        div {
+          padding: 0.3rem 1rem;
+          font-weight: 400 !important; /* Override default browser */
+          background: hsla(0, 0%, 16%, 1);
+          border: 1px solid hsla(0, 0%, 25%, 1);
+          border-bottom: none;
+          border-radius: 0.3rem 0.3rem 0 0;
+        }
+      }
+    }
+  }
+}

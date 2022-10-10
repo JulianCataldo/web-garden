@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.2](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.19.1...@julian_cataldo/astro-configs@0.19.2) (2022-10-10)
+
+
+### Bug Fixes
+
+* update default prop. rule to modern method ([f23f81a](https://github.com/JulianCataldo/web-garden/commit/f23f81aa17dab132af1ab0eec28fc6a0d222d741))
+
+
+
 ## [0.19.1](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.19.0...@julian_cataldo/astro-configs@0.19.1) (2022-09-22)
 
 

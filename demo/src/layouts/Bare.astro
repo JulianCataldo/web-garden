@@ -4,12 +4,12 @@ const { content } = Astro.props;
 
 <html>
   <head>
-    <title>{content.title}</title>
+    <title>{content?.title}</title>
   </head>
   <body>
-    <h1>{content.title} by {content.author}</h1>
+    <h1>{content?.title} by {content?.author}</h1>
 
     <slot />
-    <p>Written on: {content.date}</p>
+    <p>Written on: {content?.date}</p>
   </body>
 </html>

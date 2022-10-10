@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.7](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-link@0.12.6...@julian_cataldo/astro-link@0.12.7) (2022-10-06)
+
+
+### Bug Fixes
+
+* add inherited class:list beside class ([7b4be23](https://github.com/JulianCataldo/web-garden/commit/7b4be23b84a66bbf56118c69e2a2c89e419fbb7a))
+
+
+
 ## [0.12.6](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-link@0.12.5...@julian_cataldo/astro-link@0.12.6) (2022-09-22)
 
 **Note:** Version bump only for package @julian_cataldo/astro-link
