@@ -53,8 +53,7 @@ minuscule file sizes compared to "all-or-nothing" UI frameworks.
   - [🛠  Tooling configurations](#tooling-configurations)
 - [✅  Tests](#tests)
 - [🚧  To dos](#to-dos)
-- [🧫  Experimenting](#experimenting)
-- [🧑‍🚀  Development](#development)
+- [�‍🚀  Development](#development)
   - [🏁  Commands](#commands)
 
 ---
@@ -79,8 +78,6 @@ _[**Mirror** deployed on **`web-garden.netlify.app`**](https://web-garden.netlif
 [See **Branch** GitHub workflow](https://github.com/JulianCataldo/web-garden/blob/develop/.github/workflows/branch.yml)
 
 Deployed on Netlify via GitHub actions.
-
-<div class="git-only">
 
 <!-- TODO: integrate mermaid renderer into website / or pre-render SVG -->
 
@@ -126,8 +123,6 @@ Generic-->Layouts
 Layouts-->Pages
 
 ```
-
-</div>
 
 ---
 
@@ -208,13 +203,13 @@ Cypress:
   - [ ] Fix CSS theme not loading
 - [ ] Fix flash of unstyled text (critical font loading strategy)
 
-# 🧫  Experimenting
+<!-- # 🧫  Experimenting -->
 
-- Website full theme switcher, in addition to color dark / light variants.
-- Feature flag manager
-- Copy to clipboard
-- Algolia search
-- SSR Mermaid
+<!-- - Website full theme switcher, in addition to color dark / light variants. -->
+<!-- - Feature flag manager -->
+<!-- - Copy to clipboard -->
+<!-- - Algolia search -->
+<!-- - SSR Mermaid -->
   <!-- - Easy fonts integration -->
   <!-- - Easy iconify integration -->
 
