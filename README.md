@@ -71,10 +71,11 @@ minuscule file sizes compared to "all-or-nothing" UI frameworks.
 
 </div>
 
-_[**Production** deployed on **`code.juliancataldo.com`**](https://code.juliancataldo.com/)._  
+[**Production** deployed on **`code.juliancataldo.com`**](https://code.juliancataldo.com/).  
+_[**Mirror** deployed on **`web-garden.netlify.app`**](https://web-garden.netlify.app)._
 [See **Production** GitHub workflow](https://github.com/JulianCataldo/web-garden/blob/develop/.github/workflows/production.yml)
 
-_[**Develop** deployed on **`develop--web-garden.netlify.app`**](https://develop--web-garden.netlify.app)._  
+[**Develop** deployed on **`develop--web-garden.netlify.app`**](https://develop--web-garden.netlify.app).  
 [See **Branch** GitHub workflow](https://github.com/JulianCataldo/web-garden/blob/develop/.github/workflows/branch.yml)
 
 Deployed on Netlify via GitHub actions.
