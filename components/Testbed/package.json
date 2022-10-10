@@ -1,6 +1,6 @@
 {
   "name": "astro-testbed",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Complete toolbox for Astro / JSX component testing and analysis.\nFor design systems, storybooks, local dev. isolation, documentation…\n",
   "main": "index.js",
   "type": "module",
@@ -26,9 +26,9 @@
     "index.js"
   ],
   "devDependencies": {
-    "json-schema": "^0.4.0",
     "@types/marked": "^4.0.7",
-    "@types/react": "^18.0.21"
+    "@types/react": "^18.0.21",
+    "json-schema": "^0.4.0"
   },
   "author": "Julian Cataldo",
   "homepage": "https://code.juliancataldo.com/component/testbed",
