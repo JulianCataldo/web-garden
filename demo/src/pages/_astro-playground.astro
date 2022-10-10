@@ -1,0 +1,60 @@
+---
+import Layout from 'src/layouts/Bare.astro';
+// import ControlPanel from '../components-demo/ControlPanel';
+import Testbed from 'astro-testbed/Testbed.astro';
+// import Lala from '../components-demo/Lala.astro';
+// import type { JSONSchema7 } from 'json-schema';
+// import ThreeJuggler from '/src/components-demo/ThreeJuggler';
+---
+
+<Layout>
+  <Testbed
+    component="/src/components/Demo/demo/Button.tsx"
+    schema={{
+      properties: {
+        count: {
+          title: 'Object count',
+          default: 1,
+          type: 'number',
+          minimum: 1,
+          maximum: 20,
+        },
+        colorOffset: {
+          title: 'Color offset',
+          type: 'number',
+          minimum: 1,
+          maximum: 120,
+          multipleOf: 10,
+        },
+        mode: {
+          title: 'Scene mode',
+          type: 'string',
+          enum: ['juggler', 'lsd', 'sharkTeeth'],
+        },
+        hue: {
+          title: 'Color hue',
+          type: 'string',
+        },
+      },
+      required: ['count'],
+      additionalProperties: false,
+    }}
+    ui={{
+      count: {
+        'ui:widget': 'range',
+      },
+      colorOffset: {
+        'ui:widget': 'range',
+      },
+      hue: {
+        'ui:widget': 'color',
+      },
+    }}
+  >
+    <strong>Child</strong>
+  </Testbed>
+
+  <hr />
+
+  <!-- <Testbed component="/src/components/Demo/demo/Lala.astro">CHILLDDD</Testbed> -->
+</Layout>
