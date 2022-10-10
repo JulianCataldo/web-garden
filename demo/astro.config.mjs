@@ -22,14 +22,14 @@ const breakpoints = {
 };
 
 const oEmbedsRemarkPlugin = () => async (ast) => {
-  visit(ast, 'text', (node) => {
-    const matcher = node.value.match(
+  visit(ast, 'link', (node) => {
+    const matcher = node.children?.[0]?.value?.match(
       /https:\/\/user-images.githubusercontent.com\/(.*).mp4/,
     );
     if (matcher?.length) {
-      console.log(node);
       node.type = 'html';
-      node.value = `<video src="${node.value}" controls="controls" autoplay="autoplay" muted="muted"></video>`;
+      const value = node.children[0].value;
+      node.value = `<video src="${value}" controls="controls" autoplay="autoplay" muted="muted"></video>`;
     }
   });
 };
@@ -52,7 +52,7 @@ export default defineConfig({
   ],
 
   markdown: {
-    remarkPlugins: [oEmbedsRemarkPlugin, remarkGfm, mdxMermaidPlugin],
+    remarkPlugins: [remarkGfm, mdxMermaidPlugin, oEmbedsRemarkPlugin],
   },
 
   vite: {
