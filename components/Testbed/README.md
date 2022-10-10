@@ -12,6 +12,8 @@ https://user-images.githubusercontent.com/603498/194945339-f195406f-2268-42d4-b3
 See demo / **playground** on [astro-content.dev/\_\_content](https://astro-content.netlify.app/__content).  
 Then, go to 📍  Storybooks > **Testbeds**
 
+---
+
 - [🚀  Astro — Testbed 👩🏻‍🔬🧫](#astro--testbed-)
   - [📦  Installation](#installation)
   - [🛠  Usage](#usage)
@@ -22,6 +24,8 @@ Then, go to 📍  Storybooks > **Testbeds**
       - [React component testbed — with embedded settings](#react-component-testbed--with-embedded-settings)
   - [🎉  Result](#result)
   - [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](#live-demo--documentation-website)
+
+---
 
 ## 📦  Installation
 
@@ -86,7 +90,6 @@ Bring your own styles!
       },
       hue: {
         title: 'Color hue',
-        default: '#ababab',
         type: 'string',
       },
     },
@@ -167,6 +170,8 @@ MyReactComponent.testbed = {
 ![](https://res.cloudinary.com/dzfylx93l/image/upload/v1665426543/Screenshot_2022-10-10_at_20.28.59_ug0oav.png)
 
 ![](https://res.cloudinary.com/dzfylx93l/image/upload/v1665426579/Screenshot_2022-10-10_at_20.29.35_vczgdu.png)
+
+<div class="git-footer">
 
 ---
 
