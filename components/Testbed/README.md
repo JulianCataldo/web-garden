@@ -4,13 +4,24 @@ Component testing and analysis.
 For design systems, storybooks, local dev. isolation, documentation…  
 Works with Astro / React JSX.
 
-https://user-images.githubusercontent.com/603498/194942444-cb68238b-f349-4f64-bf32-780dcd2af4d1.mp4
+https://user-images.githubusercontent.com/603498/194945339-f195406f-2268-42d4-b32e-2c091b02f5b6.mp4
 
 > **Note**  
-> Current state is: _usable_, need more tests and refinements.
+> Current state is: _usable_, need more tests, features and refinements.
 
 See demo / **playground** on [astro-content.dev/\_\_content](https://astro-content.netlify.app/__content).  
 Then, go to 📍  Storybooks > **Testbeds**
+
+- [🚀  Astro — Testbed 👩🏻‍🔬🧫](#astro--testbed-)
+  - [📦  Installation](#installation)
+  - [🛠  Usage](#usage)
+    - [Astro component testbed](#astro-component-testbed)
+    - [Testbed, headless](#testbed-headless)
+    - [Testbed, with controls settings as props.](#testbed-with-controls-settings-as-props)
+    - [Embed controls in React JSX component](#embed-controls-in-react-jsx-component)
+      - [React component testbed — with embedded settings](#react-component-testbed--with-embedded-settings)
+  - [🎉  Result](#result)
+  - [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](#live-demo--documentation-website)
 
 ## 📦  Installation
 
@@ -20,43 +31,27 @@ pnpm i ts-morph astro-testbed
 
 ## 🛠  Usage
 
-### In Astro template / MDX file
+In Astro template / MDX file.
 
-```mdx
+### Astro component testbed
+
+```tsx
 import { Testbed } from 'astro-testbed';
-
-## Astro component testbed
 
 <Testbed
   component="/src/components-demo/Crab.astro"
-  props={{ character: 'friendly', shellColor: 'salmon' }}
->
-
-🏵 **I'm a default slotted content** 🤹🏻‍♂️
-
-</Testbed>
-```
-
-```mdx
-## React component testbed — with embedded settings
-
-<Testbed
-  component="/src/components-demo/ThreeJuggler.tsx"
   props={{
-    count: 7,
+    character: 'friendly',
+    shellColor: 'salmon',
   }}
 >
-
-    {/* This renders to the default `<ThreeJuggler />` slot. */}
-
-    > **With embedded testbed control schema**
-
-</Testbed>
+  🏵 I'm a default slotted content 🤹🏻‍♂️
+</Testbed>;
 ```
 
-```mdx
-## Testbed, headless
+### Testbed, headless
 
+```astro
 Bring your own styles!
 
 <details>
@@ -66,16 +61,14 @@ Bring your own styles!
     component="/src/components-demo/Crab.astro"
     props={{ character: 'aggressive', shellColor: 'seagreen' }}
   >
-
     oh no
-
   </Testbed>
 </details>
 ```
 
-```mdx
-## Testbed, with controls settings as props.
+### Testbed, with controls settings as props.
 
+```astro
 <Testbed
   component="/src/components-demo/ThreeJuggler.tsx"
   schema={{
@@ -112,11 +105,27 @@ Bring your own styles!
 />
 ```
 
-## Embed controls in React JSX component
+### Embed controls in React JSX component
+
+#### React component testbed — with embedded settings
+
+```astro
+<Testbed
+  component="/src/components-demo/ThreeJuggler.tsx"
+  props={{
+    count: 7,
+  }}
+>
+  <!-- This renders to the default `<ThreeJuggler />` slot. -->
+
+  With embedded testbed control schema
+</Testbed>
+```
 
 [Reference for form generation](https://react-jsonschema-form.readthedocs.io/en/latest/)
 
 ```tsx
+// MyReactComponent.<tsx,jsx>
 
 export default function MyReactComponent({
   return <div>{/* … */}</div>
