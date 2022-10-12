@@ -36,6 +36,9 @@ export default function Testbed({
   const [loaded, setLoaded] = useState(false);
   const [formData, setFormData] = useState<Record<string, unknown>>(props);
 
+  // NOTE: react json schema breaks SSR build, so client only render
+  const [isMounted, setMounted] = useState(false);
+
   useEffect(() => {
     async function loadComp(cc: string) {
       const compo = allComps[cc];
@@ -44,18 +47,20 @@ export default function Testbed({
       setLoaded(true);
     }
     loadComp(component).catch(() => null);
+
+    setMounted(true);
   }, []);
 
   const Component = mod?.default;
 
-  const formSchema = schema || Component?.testbed?.schema || {};
+  const formSchema = Component?.testbed?.schema || schema || {};
   const formUi = {
     'ui:submitButtonOptions': {
       norender: true,
     },
-    ...(ui || Component?.testbed?.ui || {}),
+    ...(Component?.testbed?.ui || ui || {}),
   };
-  const hasControls = schema || Component?.testbed?.schema;
+  const hasControls = schema;
 
   return (
     <>
@@ -63,7 +68,8 @@ export default function Testbed({
         <div className={styles['component-render']}>
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
           <Component {...formData}>
-            <astro-testbed-default-slot
+            <astro-slot
+              data-testbed-infos="slot:default"
               dangerouslySetInnerHTML={{ __html: defaultSlot }}
             />
           </Component>
@@ -73,7 +79,7 @@ export default function Testbed({
       {children}
 
       <div className={cx([styles['panel-2'], styles.panel])}>
-        {hasControls && (
+        {hasControls && isMounted && (
           <Form
             schema={formSchema}
             validator={validator}
