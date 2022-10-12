@@ -48,7 +48,9 @@ export interface Props {
    * */
   astroSitemap?: boolean;
   /**
-   * **Default**: `Astro.url` (with base from `site` in Astro root config.)
+   * **Default**: `Astro.url`
+   *
+   * (with base from `site` in Astro root config.)
    * */
   canonicalUrl?: string;
   /**
@@ -56,10 +58,10 @@ export interface Props {
    * */
   type?: string;
   /**
-   * **Default**: `true`
-   *
    * Adds
    * `<meta name="generator" content={Astro.generator} />`
+   *
+   * **Default**: `true`
    * */
   astroGenerator?: boolean;
 }
