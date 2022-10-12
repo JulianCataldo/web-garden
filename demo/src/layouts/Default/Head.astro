@@ -9,12 +9,10 @@ import Analytics from '@julian_cataldo/astro-analytics/Analytics.astro';
 import Favicons from 'src/components/Favicons.astro';
 /* —————————————————————————————————————————————————————————————————————————— */
 import { description } from '@julian_cataldo/astro/package.json';
-import { dependencies } from 'package.json';
 /* —————————————————————————————————————————————————————————————————————————— */
 const props = { ...Astro.props };
 /* —————————————————————————————————————————————————————————————————————————— */
 const comboTitle = `${props.titles.main} | ${props.titles.sub} | ${props.titles.main}`;
-const generator = `astro-${dependencies.astro}`;
 const siteName = "Julian's Web Garden";
 ---
 
@@ -24,15 +22,9 @@ const siteName = "Julian's Web Garden";
   title={comboTitle}
   description={props.description || description}
   siteName={siteName}
+  author="Julian Cataldo"
+  copyright="ISC"
 />
-
-<!-- Extras -->
-<meta name="author" content="Julian Cataldo" />
-<meta name="copyright" content="ISC" />
-
-<meta name="generator" content={Astro.generator} />
-<link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
-<!-- /Extras -->
 
 <Tooltips />
 

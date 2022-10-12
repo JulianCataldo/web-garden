@@ -1,6 +1,6 @@
 {
   "name": "astro-testbed",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Complete toolbox for Astro / JSX component testing and analysis.\nFor design systems, storybooks, local dev. isolation, documentation…\n",
   "main": "index.js",
   "type": "module",

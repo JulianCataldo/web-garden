@@ -31,6 +31,8 @@
 
     "importsNotUsedAsValues": "error",
 
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+
+    "strictNullChecks": true
   }
 }

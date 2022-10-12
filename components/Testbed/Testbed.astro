@@ -1,7 +1,5 @@
 ---
 import { marked } from 'marked';
-import type { UiSchema } from '@rjsf/utils';
-import type { JSONSchema7 } from 'json-schema';
 import type { ComponentInstance } from 'astro';
 /* ·········································································· */
 import { Code } from 'astro/components';
@@ -15,29 +13,10 @@ import styles from './Testbed.module.scss';
 import iconAstro from './assets/file-type-astro.svg?raw';
 import iconReact from './assets/file-type-reactjs.svg?raw';
 /* —————————————————————————————————————————————————————————————————————————— */
+import type { Props as BaseProps } from './Props';
 
-interface Props extends astroHTML.JSX.HTMLAttributes {
-  /** Component path. Ex. `/src/components/MyComp.<jsx,tsx,astro>` */
-  component: string;
+export interface Props extends BaseProps {}
 
-  /** Props. further passed to the tested component */
-  props?: Record<string, unknown>;
-
-  /** Remove all testbed styles so you can apply you own */
-  headless?: boolean;
-
-  /** Override styling thanks to specificity, with parent scope class */
-  class?: string;
-
-  /**
-   * JSON schema to auto-generate controls
-   *
-   * See [`react-jsonschema-form` documentation](https://react-jsonschema-form.readthedocs.io/en/latest/)
-   * */
-  schema: JSONSchema7;
-  /** UI schema for auto-generated controls */
-  ui: UiSchema;
-}
 const {
   component,
   schema,
