@@ -60,7 +60,7 @@ export default function Testbed({
     },
     ...(Component?.testbed?.ui || ui || {}),
   };
-  const hasControls = schema;
+  const hasControls = Component?.testbed?.schema || schema;
 
   return (
     <>
