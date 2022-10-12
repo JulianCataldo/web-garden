@@ -10,7 +10,11 @@ function extract(file) {
 
   // TODO: invert defaults and properties iterations and make defaults optional
 
-  defaults.forEach((def) => {
+  if (!defaults?.length) {
+    console.log(`Error in ${file}`);
+  }
+
+  defaults?.forEach((def) => {
     const defaultValue = def.match(/\*\*Default\*\*: `(.*)`/)[1];
     allProperties.push({ default: defaultValue });
   });
