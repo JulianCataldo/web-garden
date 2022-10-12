@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.1](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-seo@0.14.0...@julian_cataldo/astro-seo@0.14.1) (2022-10-12)
+
+
+### Bug Fixes
+
+* comment breaking extractor ([06dd4f1](https://github.com/JulianCataldo/web-garden/commit/06dd4f1278a4525c0dd2938bbadf2430b242d8be))
+
+
+
 ## [0.14.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-seo@0.13.3...@julian_cataldo/astro-seo@0.14.0) (2022-10-12)
 
 
