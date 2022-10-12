@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.0](https://github.com/JulianCataldo/web-garden/compare/astro-testbed@0.1.2...astro-testbed@0.2.0) (2022-10-12)
+
+
+### Features
+
+* copyright, sitemap, favicon, generator… ([b6baec4](https://github.com/JulianCataldo/web-garden/commit/b6baec430ba9c4e8693d6bdc22a7baae2667e710))
+
+
+### Bug Fixes
+
+* client only controls, slot name ([cdf834f](https://github.com/JulianCataldo/web-garden/commit/cdf834f394b2a92a87b4c9d529e0c61ea8823dc8))
+
+
+
 ## [0.1.2](https://github.com/JulianCataldo/web-garden/compare/astro-testbed@0.1.1...astro-testbed@0.1.2) (2022-10-10)
 
 

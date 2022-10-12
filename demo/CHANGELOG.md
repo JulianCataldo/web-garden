@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.14.0...@julian_cataldo/astro-demo@0.15.0) (2022-10-12)
+
+
+### Features
+
+* copyright, sitemap, favicon, generator… ([b6baec4](https://github.com/JulianCataldo/web-garden/commit/b6baec430ba9c4e8693d6bdc22a7baae2667e710))
+
+
+
 ## [0.14.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.13.0...@julian_cataldo/astro-demo@0.14.0) (2022-10-10)
 
 
