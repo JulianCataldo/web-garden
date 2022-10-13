@@ -4,6 +4,7 @@
   "description": "A tabs bar + panels component which works entirely without JS.\nSupports height equalization and automatic vertical scroll bar for tabs bar.",
   "main": "index.js",
   "type": "module",
+  "private": "true",
   "// publishConfig": {
     "// access": "public"
   },
