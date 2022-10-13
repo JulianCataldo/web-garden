@@ -1,5 +1,7 @@
 ---
 import { marked } from 'marked';
+import fs from 'fs/promises';
+import path from 'path';
 import type { ComponentInstance } from 'astro';
 /* ·········································································· */
 import { Code } from 'astro/components';
@@ -30,17 +32,23 @@ const isAstro = component.endsWith('.astro');
 
 /* ·········································································· */
 
-const allCompsRaw = import.meta.glob('/**/*.{jsx,tsx,astro}', { as: 'raw' });
+// FIXME: This is breaking Astro output on CI only because of `import.meta.env…`
+// const allCompsRaw = import.meta.glob('/**/*.{jsx,tsx,astro}', { as: 'raw' });
+// const compImportRaw = allCompsRaw[component];
+// const componentRaw = await compImportRaw();
+// NOTE: Alternative method
+const componentRaw = await fs
+  .readFile(path.join(process.cwd(), component), 'utf-8')
+  .catch((e) => console.log(e));
+
 const compImport = import.meta.glob<ComponentInstance>('/**/*.{jsx,tsx,astro}');
-const compImportRaw = allCompsRaw[component];
 const compoFn = compImport[component];
 const mod = await compoFn();
-const componentRaw = await compImportRaw();
 const Component = mod?.default;
 
 /* ·········································································· */
 
-const infos = getInfos(component, componentRaw, isAstro);
+const infos = getInfos(component, componentRaw ?? '', isAstro);
 ---
 
 <div class:list={[headless === false && styles[`control-panel`], className]}>
@@ -63,8 +71,8 @@ const infos = getInfos(component, componentRaw, isAstro);
       ) : (
         <TestbedControl
           component={component}
-          schema={schema}
-          ui={ui}
+          schema={schema ?? {}}
+          ui={ui ?? {}}
           {props}
           defaultSlot={await Astro.slots.render('default')}
           client:load
