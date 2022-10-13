@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/JulianCataldo/web-garden/compare/astro-testbed@0.2.1...astro-testbed@0.2.2) (2022-10-13)
+
+
+### Bug Fixes
+
+* add missing props export ([894fd7a](https://github.com/JulianCataldo/web-garden/commit/894fd7a1405400ae37867b7356d68c02653cf514))
+* raw astro import breaking on ci only ([d3cbfef](https://github.com/JulianCataldo/web-garden/commit/d3cbfef72d7827a86e2604061beb0ac8e063baa1))
+
+
+
 ## [0.2.1](https://github.com/JulianCataldo/web-garden/compare/astro-testbed@0.2.0...astro-testbed@0.2.1) (2022-10-12)
 
 

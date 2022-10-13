@@ -1,6 +1,6 @@
 {
   "name": "astro-tabs",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A tabs bar + panels component which works entirely without JS.\nSupports height equalization and automatic vertical scroll bar for tabs bar.",
   "main": "index.js",
   "type": "module",

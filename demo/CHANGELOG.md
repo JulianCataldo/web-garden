@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.2](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.15.1...@julian_cataldo/astro-demo@0.15.2) (2022-10-13)
+
+
+### Bug Fixes
+
+* hide github live demo list item bullet ([4928196](https://github.com/JulianCataldo/web-garden/commit/4928196ea4eaae713dd5b9f94c7f13f13956fb77))
+
+
+
 ## [0.15.1](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-demo@0.15.0...@julian_cataldo/astro-demo@0.15.1) (2022-10-12)
 
 **Note:** Version bump only for package @julian_cataldo/astro-demo

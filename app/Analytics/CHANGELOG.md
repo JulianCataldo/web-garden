@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.7](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-analytics@0.11.6...@julian_cataldo/astro-analytics@0.11.7) (2022-10-13)
+
+
+### Bug Fixes
+
+* add missing props importer ([68e68e9](https://github.com/JulianCataldo/web-garden/commit/68e68e94e3c4a97fbd1bd2782051c09e94c88301))
+
+
+
 ## [0.11.6](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-analytics@0.11.5...@julian_cataldo/astro-analytics@0.11.6) (2022-09-22)
 
 **Note:** Version bump only for package @julian_cataldo/astro-analytics
