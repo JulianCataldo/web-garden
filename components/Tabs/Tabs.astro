@@ -1,0 +1,89 @@
+---
+import { nanoid } from 'nanoid';
+/* ·········································································· */
+import styles from './Tabs.module.scss';
+/* —————————————————————————————————————————————————————————————————————————— */
+import type { Props as baseProps } from './Props';
+
+export interface Props extends baseProps {}
+
+const { class: className, 'class:list': classList } = Astro.props as Props;
+/* ·········································································· */
+const tabs: string[] = [];
+const panels: string[] = [];
+
+let inlineStyles = ``;
+
+{
+  let index = 0;
+  Object.entries(Astro.slots).forEach(([name]) => {
+    if (name.startsWith('tab')) {
+      index += 1;
+
+      tabs.push(name);
+
+      inlineStyles +=
+        `.${styles.tabs}:has(.${styles.radio}-${index}:checked) ` +
+        `.${styles.panel}-${index} {` +
+        `visibility: visible;` +
+        `display: inline-block;` +
+        `}`;
+    } else {
+      panels.push(name);
+    }
+  });
+}
+
+const uid = nanoid();
+---
+
+<div class:list={[styles.tabs, 'tabs', classList, className]}>
+  <style set:html={inlineStyles}>
+    /*  */
+  </style>
+  <nav class:list={[styles['tab-bar']]}>
+    {
+      tabs.map(async (name, idx) => {
+        const index = idx + 1;
+        if (name.startsWith('tab')) {
+          const render = await Astro.slots.render(name);
+          return (
+            <div class:list={['tab-wrapper', `tab-${index}`]}>
+              <input
+                class:list={[
+                  styles.radio,
+                  `${styles.radio}-${index}`,
+                  'tab-selector',
+                ]}
+                type="radio"
+                name={uid}
+                checked={index === 1}
+                id={`${uid}-${index}`}
+              />
+              <label class:list={['tab', styles.tab]} for={`${uid}-${index}`}>
+                <div set:html={render} />
+              </label>
+            </div>
+          );
+        }
+        return null;
+      })
+    }
+  </nav>
+
+  <div class:list={[styles.panels]}>
+    {
+      panels.map(async (name, index) => (
+        <div
+          class:list={[
+            styles.panel,
+            `${name.endsWith('tallest') && styles.tallest}`,
+            `${styles.panel}-${index + 1}`,
+            'panel',
+          ]}
+          set:html={await Astro.slots.render(name)}
+        />
+      ))
+    }
+  </div>
+</div>
