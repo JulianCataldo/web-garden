@@ -18,6 +18,7 @@
     "assets/file-type-astro.svg",
     "assets/file-type-reactjs.svg",
     "pnpm-lock.yaml",
+    "Props.ts",
     "Tabs.astro",
     "Testbed.astro",
     "Testbed.control.tsx",
