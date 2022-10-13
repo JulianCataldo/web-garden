@@ -7,7 +7,7 @@ Supports height equalization and automatic vertical scroll bar for tabs bar.
 
 ---
 
-https://user-images.githubusercontent.com/603498/195460072-e96990c7-2670-44ad-a824-be2f136ddc2e.mp4
+https://user-images.githubusercontent.com/603498/195471643-f5dac29e-f10c-4038-979b-53fbc977190e.mp4
 
 ---
 
