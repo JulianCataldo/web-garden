@@ -1,9 +1,13 @@
 ---
+import type { Props as BaseProps } from './Props';
+/* —————————————————————————————————————————————————————————————————————————— */
+export interface Props extends BaseProps {}
 const props = { ...Astro.props } as Props;
+/* ———————————————————————————————————————————— Typeguards + Fallbacks —————— */
 if (typeof props.id !== 'string') {
   props.id = 'G-XXXXXXXXXX';
 }
-
+/* —————————————————————————————————————————————————————————————————————————— */
 const url = `https://www.googletagmanager.com/gtag/js?id=${props.id}`;
 ---
 
