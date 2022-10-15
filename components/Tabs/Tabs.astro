@@ -1,5 +1,5 @@
 ---
-import { nanoid } from 'nanoid';
+import crypto from 'node:crypto';
 /* ·········································································· */
 import styles from './Tabs.module.scss';
 /* —————————————————————————————————————————————————————————————————————————— */
@@ -7,8 +7,9 @@ import type { Props as baseProps } from './Props';
 
 export interface Props extends baseProps {}
 
-const { class: className, 'class:list': classList } = Astro.props as Props;
+const props = Astro.props as Props;
 /* ·········································································· */
+
 const tabs: string[] = [];
 const panels: string[] = [];
 
@@ -34,12 +35,15 @@ let inlineStyles = ``;
   });
 }
 
-const uid = nanoid();
+const uid = crypto.randomUUID();
 ---
 
-<div class:list={[styles.tabs, 'tabs', classList, className]}>
+<div
+  {...props}
+  class:list={[styles.tabs, 'tabs', props['class:list'], props.class]}
+>
   <style set:html={inlineStyles}>
-    /*  */
+
   </style>
   <nav class:list={[styles['tab-bar']]}>
     {
