@@ -53,7 +53,7 @@ minuscule file sizes compared to "all-or-nothing" UI frameworks.
   - [🛠  Tooling configurations](#tooling-configurations)
 - [✅  Tests](#tests)
 - [🚧  To dos](#to-dos)
-- [�‍🚀  Development](#development)
+- [🧑‍🚀  Development](#development)
   - [🏁  Commands](#commands)
 
 ---
@@ -253,6 +253,15 @@ pnpm run release
 ---
 
 [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](https://code.juliancataldo.com/)
+
+---
+
+Other projects:
+
+- [astro-content](https://github.com/JulianCataldo/astro-content): A text based, structured content manager, for edition and consumption.
+- [remark-lint-frontmatter-schema](https://github.com/JulianCataldo/remark-lint-frontmatter-schema): Validate your Markdown **frontmatter** data against a **JSON schema**.
+- [retext-case-police](https://github.com/JulianCataldo/retext-case-police): Check popular names casing. Example: ⚠️ `github` → ✅ `GitHub`.
+- [remark-embed](https://github.com/JulianCataldo/remark-embed): A `remark` plugin for embedding remote / local Markdown or code snippets.
 
 ---
 
