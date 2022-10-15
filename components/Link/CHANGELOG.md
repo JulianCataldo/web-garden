@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.0 (2022-10-15)
+
+
+### Features
+
+* better defaults for link ([2c370d9](https://github.com/JulianCataldo/web-garden/commit/2c370d944ce577e5480a07108e81a078bc3200b5))
+* better defaults properties ([cc55aec](https://github.com/JulianCataldo/web-garden/commit/cc55aecd0ea8051ab268c391cb5a28372d7ca896))
+* init link component ([fc2afa1](https://github.com/JulianCataldo/web-garden/commit/fc2afa191cd34450df1f47812339c0a5b51915f0))
+* new name, import method, docs badges ([f44b9c7](https://github.com/JulianCataldo/web-garden/commit/f44b9c732977ed9fcee102f1a37f56ab574d2b94))
+* option to disable new window external url ([0adc608](https://github.com/JulianCataldo/web-garden/commit/0adc6088d5dc983aa8fb92f8e61bbb7f8a2c58c1))
+* support astro base url setting via env ([12ce9ae](https://github.com/JulianCataldo/web-garden/commit/12ce9ae07253eafe90ed06ca57e090ad1e1d8ee4))
+
+
+### Bug Fixes
+
+* add inherited class:list beside class ([7b4be23](https://github.com/JulianCataldo/web-garden/commit/7b4be23b84a66bbf56118c69e2a2c89e419fbb7a))
+* missing title attribute ([921f38c](https://github.com/JulianCataldo/web-garden/commit/921f38c88f7e41695ff0a6ba6f25cbe29103205c))
+* remove slash prefix for hash href ([a8cc89b](https://github.com/JulianCataldo/web-garden/commit/a8cc89bf26a3640095829089cba65b29d363a4b5))
+
+
+
 ## [0.12.7](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-link@0.12.6...@julian_cataldo/astro-link@0.12.7) (2022-10-06)
 
 
