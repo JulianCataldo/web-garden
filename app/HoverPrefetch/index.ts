@@ -5,6 +5,6 @@
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
-import { HoverPrefetch } from './HoverPrefetch.astro';
+import HoverPrefetch from './HoverPrefetch.astro';
 
 export { HoverPrefetch };
