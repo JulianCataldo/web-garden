@@ -22,7 +22,7 @@ function extract(file) {
   const properties = file.match(/.*: .*;/g);
   // console.log({ properties });
 
-  properties.forEach((prop, key) => {
+  properties?.forEach((prop, key) => {
     const propG = prop.match(/..(.*): (.*);/);
     const required = prop.match(/\?:/g) === null;
 
