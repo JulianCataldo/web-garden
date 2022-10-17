@@ -1,6 +1,6 @@
 {
   "name": "astro-licenses-report",
-  "version": "0.8.1",
+  "version": "0.8.0",
   "description": "Give credits to the awesome JS open-source community with this component. It will generate a table with important informations about packages used by your project.",
   "main": "index.ts",
   "type": "module",
@@ -35,5 +35,8 @@
     "developer",
     "credits"
   ],
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@wbmnky/license-report-generator": "^2.1.3"
+  }
 }
