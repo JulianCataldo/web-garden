@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.4](https://github.com/JulianCataldo/web-garden/compare/astro-hover-prefetch@1.0.3...astro-hover-prefetch@1.0.4) (2022-10-17)
+
+
+### Bug Fixes
+
+* correct astro component import ([2c5b896](https://github.com/JulianCataldo/web-garden/commit/2c5b8965086e342dbb17c72a67fb4c77bd5ef027))
+* licenses report scope ([3df8f4f](https://github.com/JulianCataldo/web-garden/commit/3df8f4f8ad3975868f1f8038f6da6634da1c4f02))
+
+
+
 ## 1.0.3 (2022-10-17)
 
 

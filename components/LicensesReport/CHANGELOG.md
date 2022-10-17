@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.1](https://github.com/JulianCataldo/web-garden/compare/astro-licenses-report@0.8.0...astro-licenses-report@0.8.1) (2022-10-17)
+
+
+### Bug Fixes
+
+* licenses report scope ([3df8f4f](https://github.com/JulianCataldo/web-garden/commit/3df8f4f8ad3975868f1f8038f6da6634da1c4f02))
+
+
+
 ## 0.8.0 (2022-10-17)
 
 

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/JulianCataldo/web-garden/compare/astro-tabs@0.1.2...astro-tabs@0.1.3) (2022-10-17)
+
+
+### Bug Fixes
+
+* import path, disable og image, tabs props ([cf4d2f5](https://github.com/JulianCataldo/web-garden/commit/cf4d2f59b8609c9e1c4db99d12f19f47850282b9))
+
+
+
 ## [0.1.2](https://github.com/JulianCataldo/web-garden/compare/astro-tabs@0.1.1...astro-tabs@0.1.2) (2022-10-17)
 
 

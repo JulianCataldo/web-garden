@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://github.com/JulianCataldo/web-garden/compare/astro-diagram@0.6.0...astro-diagram@0.6.1) (2022-10-17)
+
+**Note:** Version bump only for package astro-diagram
+
+
+
+
+
 ## 0.6.0 (2022-10-17)
 
 

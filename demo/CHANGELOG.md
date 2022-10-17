@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.16.1](https://github.com/JulianCataldo/web-garden/compare/@web-garden/astro-demo@0.16.0...@web-garden/astro-demo@0.16.1) (2022-10-17)
+
+
+### Bug Fixes
+
+* allow incorrect props to gather ([5d17559](https://github.com/JulianCataldo/web-garden/commit/5d17559f7285e1e7a79e9b24e3d1c0a33c2b8f10))
+* geo-map ([b438fa7](https://github.com/JulianCataldo/web-garden/commit/b438fa75ebf3fd6032939affa56be31d8c38cf0c))
+* import path, disable og image, tabs props ([cf4d2f5](https://github.com/JulianCataldo/web-garden/commit/cf4d2f59b8609c9e1c4db99d12f19f47850282b9))
+* licenses report scope ([3df8f4f](https://github.com/JulianCataldo/web-garden/commit/3df8f4f8ad3975868f1f8038f6da6634da1c4f02))
+
+
+### Performance Improvements
+
+* disable retina detection ([c7dc13c](https://github.com/JulianCataldo/web-garden/commit/c7dc13c1ac24d3ff1f9775da801c252752547bc0))
+
+
+
 ## 0.16.0 (2022-10-17)
 
 
