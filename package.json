@@ -18,6 +18,7 @@
     "cypress:open": "pnpm run demo & pnpm cypress open",
     "cypress:run": "pnpm run demo & pnpm cypress run",
     "test": "echo \"Skipping: no pre-commit test specified\" && exit 0",
+    "docgen": "pnpm tsx markdown-magic.ts",
     "prepare": "husky install"
   },
   "keywords": [],
@@ -30,6 +31,7 @@
     "@julian_cataldo/astro-configs": "link:configs",
     "@testing-library/cypress": "8.0.3",
     "@types/eslint": "8.4.5",
+    "@types/markdown-magic": "^1.0.1",
     "@types/node": "18.7.6",
     "@types/prettier": "2.7.0",
     "@typescript-eslint/eslint-plugin": "5.33.1",
@@ -54,6 +56,9 @@
     "eslint-plugin-tsdoc": "0.2.16",
     "eslint-plugin-vue": "9.3.0",
     "lerna": "5.4.3",
+    "markdown-magic": "^2.6.1",
+    "markdown-magic-directory-tree": "^1.2.4",
+    "markdown-magic-install-command": "^2.0.0",
     "postcss": "8.4.16",
     "postcss-html": "1.5.0",
     "prettier": "2.7.1",
@@ -78,6 +83,9 @@
     "@types/react": "^18.0.21",
     "husky": "8.0.1",
     "linkinator": "4.0.2",
+    "markdown-magic-package-json": "^2.0.2",
+    "markdown-magic-template": "^1.0.1",
+    "markdown-magic-version-badge": "^1.1.2",
     "remark-gfm": "^3.0.1"
   }
 }
