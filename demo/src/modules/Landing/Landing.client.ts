@@ -11,7 +11,9 @@ tsParticles
     preset: 'stars',
     fullScreen: false,
     background: { color: 'hsl(220, 87%, 7%)' },
+    retina_detect: false,
   })
   .then(() => {
     tsParticlesElem.setAttribute('data-is-loaded', '');
-  });
+  })
+  .catch(() => null);

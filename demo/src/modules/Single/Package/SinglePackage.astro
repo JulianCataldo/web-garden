@@ -1,13 +1,16 @@
 ---
-import Link from '@julian_cataldo/astro-link/Link.astro';
-import DemoLoader from 'src/components/Demo/DemoLoader.astro';
+import { Link } from 'astro-link';
+// import { TerminalPlayer } from 'astro-terminal-player';
+// import myRecordedCast from './astro-terminal-player-demo.cast?url';
+
+import { LicensesReport } from 'astro-licenses-report';
+/* —————————————————————————————————————————————————————————————————————————— */
 import type { Package } from 'src/types';
+import DemoLoader from 'src/components/Demo/DemoLoader.astro';
 // BUG: THIS BREAK (https://github.com/withastro/prettier-plugin-astro/issues/232)
 // import { Code } from '___/components';
 import Table from 'src/components/Table/Table.astro';
-import LicensesReport from '@julian_cataldo/astro-licenses-report/LicensesReport.astro';
 /* —————————————————————————————————————————————————————————————————————————— */
-
 interface Props {
   content: Package;
 }
@@ -23,6 +26,7 @@ const ReadMe = props?.content?.readme?.Content;
 ---
 
 <div class="single-package">
+  <!-- <TerminalPlayer src={myRecordedCast} aria-label="Terminal session player!" /> -->
   {
     props.content ? (
       <>
@@ -36,6 +40,7 @@ const ReadMe = props?.content?.readme?.Content;
             </ul>
           </section>
         )}
+
         {props.content.hasDemo && (
           <section id="live-demo" class="package-section article-body">
             <h2>Component live demo</h2>
@@ -43,6 +48,7 @@ const ReadMe = props?.content?.readme?.Content;
             <DemoLoader name={props.content.shortname} />
           </section>
         )}
+
         {props.content.video && (
           <section id="test-video" class="package-section article-body">
             <h2>Test x Demo : Video</h2>
@@ -54,11 +60,13 @@ const ReadMe = props?.content?.readme?.Content;
             </div>
           </section>
         )}
+
         {ReadMe && (
           <section id="doc" class="package-section article-body">
             <ReadMe />
           </section>
         )}
+
         {props.content.api && (
           <section id="ts-api" class="package-section article-body">
             <h2>TypeScript API</h2>
@@ -74,6 +82,7 @@ const ReadMe = props?.content?.readme?.Content;
             <Table data={props.content.api.properties} class="api-props" />
           </section>
         )}
+
         {props.content?.changelog?.Content && (
           <section id="changelog" class="package-section article-body">
             <h2>Changelog</h2>
@@ -125,7 +134,6 @@ const ReadMe = props?.content?.readme?.Content;
           </Link>
           &nbsp; on my Website.
         </section>
-
         {/* props.content.typescriptProps && (
         <section id="ts-api" class="package-section article-body">
       

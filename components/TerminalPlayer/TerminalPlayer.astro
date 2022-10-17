@@ -1,0 +1,104 @@
+---
+import { z } from 'zod';
+/* —————————————————————————————————————————————————————————————————————————— */
+import type { Props as BaseProps } from './Props';
+
+export interface Props extends BaseProps {}
+const { src, settings, ...props } = Astro.props as Props;
+/* ———————————————————————————————————————————— Typeguards + Fallbacks —————— */
+const asciinemaSettingsSchema = z.object({
+  cols: z.number().optional(),
+  rows: z.number().optional(),
+  autoPlay: z.boolean().optional(),
+  preload: z.boolean().optional(),
+  loop: z.union([z.boolean(), z.number()]).optional(),
+  startAt: z.union([z.number(), z.string()]).optional(),
+  speed: z.number().optional(),
+  idleTimeLimit: z.number().optional(),
+  theme: z.string().optional(),
+  poster: z.string().optional(),
+  fit: z.string().optional(),
+  terminalFontSize: z.string().optional(),
+  terminalFontFamily: z.string().optional(),
+  terminalLineHeight: z.number().optional(),
+});
+
+const propsSchema = z.object({
+  src: z.union([z.string(), z.undefined()]),
+  settings: asciinemaSettingsSchema.optional(),
+});
+
+const validProps = propsSchema.safeParse({ src, settings });
+
+if (!validProps.success) {
+  console.log(validProps.error);
+}
+/* ·········································································· */
+---
+
+{
+  src &&
+  validProps.success && (
+    <div
+      {...props}
+      data-astro-asciinema-src={src}
+      data-astro-asciinema-settings={JSON.stringify(settings)}
+    />
+  )
+}
+
+<script>
+  import * as AsciinemaPlayer from 'asciinema-player';
+  // FIXME: Typings for asciinema-player
+
+  const containerElements = document.querySelectorAll(
+    '[data-astro-asciinema-src]',
+  );
+
+  if (containerElements.length) {
+    const options = {
+      root: null,
+      rootMargin: '400px 0px',
+    };
+
+    const players: Map<Element, Record<string, unknown>> = new Map();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const player = players.get(entry.target);
+
+        if (player) {
+          if (entry.isIntersecting) {
+            player.play();
+          } else {
+            player.pause();
+          }
+        }
+      });
+    }, options);
+
+    containerElements.forEach((elem) => {
+      observer.observe(elem);
+
+      const url = elem.getAttribute('data-astro-asciinema-src');
+      const settings = elem.getAttribute('data-astro-asciinema-settings');
+
+      const player = AsciinemaPlayer.create(
+        url,
+        elem,
+        settings ? JSON.parse(settings) : undefined,
+      );
+
+      players.set(elem, player);
+    });
+  }
+</script>
+
+<style lang="scss">
+  /* Additional layer of scoping,
+     We are abusing the CSS toolchain in several ways here. */
+
+  [data-astro-asciinema-src] {
+    @import 'asciinema-player/dist/bundle/asciinema-player';
+  }
+</style>

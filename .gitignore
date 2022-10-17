@@ -5,6 +5,8 @@ logs
 .dev*
 .old
 
+design
+
 # build output
 dist/
 .output/

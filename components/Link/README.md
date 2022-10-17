@@ -1,5 +1,14 @@
 # 🚀  Astro — Link, with smart optimizations
 
+[![NPM](https://img.shields.io/npm/v/@julian_cataldo/astro-link)](https://www.npmjs.com/package/@julian_cataldo/astro-link)
+![Downloads](https://img.shields.io/npm/dt/@julian_cataldo/astro-link.svg)
+[![ISC License](https://img.shields.io/npm/l/@julian_cataldo/astro-link)](https://github.com/JulianCataldo/web-garden/blob/develop/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)  
+[![TypeScript](https://img.shields.io/badge/TypeScript-333333.svg?logo=typescript)](http://www.typescriptlang.org/)
+[![Prettier](https://img.shields.io/badge/Prettier-333333.svg?logo=prettier)](https://prettier.io)
+[![EditorConfig](https://img.shields.io/badge/EditorConfig-333333.svg?logo=editorconfig)](https://editorconfig.org)
+[![ESLint](https://img.shields.io/badge/ESLint-3A33D1?logo=eslint)](https://eslint.org)
+
 Supercharge your links.  
 This component detects external / anchor / same domain / mail / telephone
 **`href`**, and apply optimizations accordingly.
@@ -29,14 +38,14 @@ You can then style these globally with `:global(.link.is-mail)` for example.
 ## 📦  Installation
 
 ```sh
-pnpm i @julian_cataldo/astro-link
+pnpm i astro-link
 ```
 
 ## 🛠  Usage
 
 ```astro
 ---
-import Link from '@julian_cataldo/astro-link/Link.astro';
+import { Link } from 'astro-link';
 // ...
 ---
 ```
@@ -62,10 +71,10 @@ import Link from '@julian_cataldo/astro-link/Link.astro';
 
 ```astro
 <a
-  href='https://www.juliancataldo.com'
-  class='link is-external astro-H4CCARKM'
-  rel='noopener nofollow'
-  target='_blank'
+  href="https://www.juliancataldo.com"
+  class="link is-external astro-H4CCARKM"
+  rel="noopener nofollow"
+  target="_blank"
 >
   Some external link, loaded in a new tab
 </a>
@@ -83,7 +92,7 @@ Of course, as links are ubiquitous in any website, it's totally valid to style t
 Semi-scoped styles inside parent (it won't effect upstream, only downstream):
 
 ```astro
-<style lang='scss'>
+<style lang="scss">
   .my-parent-with-custom-links {
     // Use `:global` as a localized escape hatch:
 
@@ -106,7 +115,7 @@ Semi-scoped styles inside parent (it won't effect upstream, only downstream):
 Global styles (in your layout component, for example):
 
 ```astro
-<style lang='scss' is:global>
+<style lang="scss" is:global>
   a.link {
     font-weight: 700;
     color: green;
@@ -118,7 +127,6 @@ Global styles (in your layout component, for example):
 ## To do
 
 - [ ] Support Astro `base` option for prefixing `href`s.
-- [ ] Proper support for opening link in new tab (ctrl/cmd/middle-mouse + click)
 
 <div class="git-footer">
 

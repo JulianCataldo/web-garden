@@ -20,10 +20,10 @@ taking advantage of Astro strengths as much as possible.
 
 Focus is on common web patterns and progressive enhancements.
 
-> **Note**  
-> Astro is still in Beta, so is this collection.  
-> Components API might change a bit, though not drastically.  
-> Thanks for you understanding ✌️.
+<!-- > **Note**
+> Astro is still in Beta, so is this collection.
+> Components API might change a bit, though not drastically.
+> Thanks for you understanding ✌️. -->
 
 ## 🤷🏼‍♂️  Philosophy
 
@@ -51,9 +51,8 @@ minuscule file sizes compared to "all-or-nothing" UI frameworks.
   - [📦  Application-level components](#application-level-components)
   - [📦  Components](#components)
   - [🛠  Tooling configurations](#tooling-configurations)
-- [✅  Tests](#tests)
 - [🚧  To dos](#to-dos)
-- [�‍🚀  Development](#development)
+- [🧑‍🚀  Development](#development)
   - [🏁  Commands](#commands)
 
 ---
@@ -155,9 +154,40 @@ for live implementation examples.
 [These are global components](https://github.com/JulianCataldo/web-garden/tree/develop/app) which enhance or augment browser behavior and style,
 while providing useful utilities to developers, website-wide.
 
+<!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./app) -->
+```
+app/
+├── BaseDocument/
+├── Breakpoints/
+├── ColorMode/
+├── GoogleAnalytics/
+├── HoverPrefetch/
+├── Lightbox/
+├── Navigation/
+├── PageTransition/
+├── Resets/
+├── ScrollObserver/
+├── SEOMetadata/
+└── Tooltips/
+```
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ## [📦  Components](https://github.com/JulianCataldo/web-garden/tree/develop/components)
 
 Generic [extendables components](https://github.com/JulianCataldo/web-garden/tree/develop/components).
+
+<!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./components) -->
+```
+components/
+├── Diagram/
+├── GeoMap/
+├── LicensesReport/
+├── Link/
+├── Tabs/
+├── TerminalPlayer/
+└── Testbed/
+```
+<!-- AUTO-GENERATED-CONTENT:END -->
 
 ## [🛠  Tooling configurations](https://github.com/JulianCataldo/web-garden/tree/develop/configs)
 
@@ -165,7 +195,28 @@ Generic [extendables components](https://github.com/JulianCataldo/web-garden/tre
 Features ESLint, Prettier, Stylelint, Commitlint…  
 For Astro, React, Vue, SCSS, TS…
 
-# ✅  Tests
+<!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./configs) -->
+```
+configs/
+├── .vscode/
+├── .editorconfig-example
+├── commitlint-base.ts
+├── eslint-all.cjs
+├── eslint-astro.cjs
+├── eslint-js.cjs
+├── eslint-jsx.cjs
+├── eslint-ts.cjs
+├── eslint-tsx.cjs
+├── eslint-vue.cjs
+├── gather.sh
+├── index.mjs
+├── prettier-astro.cjs
+├── prettier-base.cjs
+└── stylelint-all.cjs
+```
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+<!-- # ✅  Tests
 
 Cypress:
 
@@ -186,17 +237,12 @@ Cypress:
 - [ ] Components/Link
   - [ ] External / contact links
 - [ ] Components/LicensesReport
-- [ ] …
+- [ ] … -->
 
 # 🚧  To dos
 
-- [ ] Fix default package import when possible, as client side JS breaks for now  
-       `import Tooltips from '@julian_cataldo/astro-tooltips/Tooltips.astro';`  
-       to  
-       `import Tooltips from '@julian_cataldo/astro-tooltips';`
 - [ ] Find a way to launch only necessary tests when versioning
 - [ ] Implement dev / prod mode for debugging outputs
-- [x] Rehaul demo website
 - [ ] Evaluate PNPM workspaces + tools for replacing Lerna version/publish?
 - [ ] Fix Lerna conventional commits not following breaking changes for versioning
 - [ ] Full no JS compatibility / fallbacks checks
@@ -252,7 +298,12 @@ pnpm run release
 
 ---
 
-[LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](https://code.juliancataldo.com/)
+Other projects:
+
+- [astro-content](https://github.com/JulianCataldo/astro-content): A text based, structured content manager, for edition and consumption.
+- [remark-lint-frontmatter-schema](https://github.com/JulianCataldo/remark-lint-frontmatter-schema): Validate your Markdown **frontmatter** data against a **JSON schema**.
+- [retext-case-police](https://github.com/JulianCataldo/retext-case-police): Check popular names casing. Example: ⚠️ `github` → ✅ `GitHub`.
+- [remark-embed](https://github.com/JulianCataldo/remark-embed): A `remark` plugin for embedding remote / local Markdown or code snippets.
 
 ---
 

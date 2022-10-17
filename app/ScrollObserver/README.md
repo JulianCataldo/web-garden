@@ -1,5 +1,15 @@
 # 🚀  Astro — Scroll observer
 
+[![NPM](https://img.shields.io/npm/v/@julian_cataldo/astro-scroll-observer)](https://www.npmjs.com/package/@julian_cataldo/astro-scroll-observer)
+![Downloads](https://img.shields.io/npm/dt/@julian_cataldo/astro-scroll-observer.svg)
+[![ISC License](https://img.shields.io/npm/l/@julian_cataldo/astro-scroll-observer)](https://github.com/JulianCataldo/web-garden/blob/develop/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)  
+[![Astro](https://img.shields.io/badge/Astro-333333.svg?logo=astro)](https://astro.build)
+[![TypeScript](https://img.shields.io/badge/TypeScript-333333.svg?logo=typescript)](http://www.typescriptlang.org/)
+[![Prettier](https://img.shields.io/badge/Prettier-333333.svg?logo=prettier)](https://prettier.io)
+[![EditorConfig](https://img.shields.io/badge/EditorConfig-333333.svg?logo=editorconfig)](https://editorconfig.org)
+[![ESLint](https://img.shields.io/badge/ESLint-3A33D1?logo=eslint)](https://eslint.org)
+
 Viewport scroll **position** and **direction** watcher.  
 Binds states data attributes to `HTML` for further JS/CSS usage.  
 Scroll event is throttled for performance economy.
@@ -22,14 +32,14 @@ https://user-images.githubusercontent.com/603498/174468167-4f3cdbe3-ec90-49f6-8c
 ## 📦  Installation
 
 ```sh
-pnpm i @julian_cataldo/astro-scroll-observer
+pnpm i astro-scroll-observer
 ```
 
 ## 🛠  Usage
 
 ```astro
 ---
-import ScrollObserver from '@julian_cataldo/astro-scroll-observer/ScrollObserver.astro';
+import { ScrollObserver } from 'astro-scroll-observer';
 // ...
 ---
 ```
@@ -59,7 +69,7 @@ export default defineConfig({
       preprocessorOptions: {
         scss: {
           additionalData: ` 
-            @use "@julian_cataldo/astro-scroll-observer/use-scroll-observer.scss" as *;
+            @use "astro-scroll-observer/use-scroll-observer.scss" as *;
           `,
         },
       },

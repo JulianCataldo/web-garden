@@ -1,0 +1,45 @@
+{
+  "name": "astro-base-document",
+  "version": "1.0.2",
+  "description": "Provide sensible defaults for HTML base document.  \nThe goal is to reduce boilerplate when using multiple layouts in Astro projects.",
+  "main": "index.ts",
+  "type": "module",
+  "files": [
+    "index.ts",
+    "Props.ts",
+    "Body.astro",
+    "Document.astro",
+    "CHANGELOG.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Julian Cataldo",
+  "homepage": "https://code.juliancataldo.com/component/astro-base",
+  "bugs": {
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianCataldo/web-garden",
+    "directory": "app/Base"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "astro",
+    "astro-component",
+    "boilerplate",
+    "app",
+    "base",
+    "wrapper",
+    "javascript",
+    "html",
+    "document"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "BaseDocument": "link:../app/BaseDocument"
+  }
+}

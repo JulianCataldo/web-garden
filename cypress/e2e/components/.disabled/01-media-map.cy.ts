@@ -1,4 +1,4 @@
-describe('Component — <MediaMap>', () => {
+describe('Component — <GeoMap>', () => {
   it('Open demo', () => {
     cy.visit('http://localhost:2424/');
   });

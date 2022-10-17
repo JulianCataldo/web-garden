@@ -48,13 +48,17 @@ export default async function loadPackages(
     props.readmes.map(async (readme, index) => {
       const headers = await readme.getHeadings();
 
+      if (!packages[index]) {
+        return;
+      }
+
       /* ———————————————————————————————————————— Readme ———————————————————— */
 
       packages[index].readme = {
         mainTitle: {
           slug: props.anchorMode
             ? headers[0].slug
-            : packages[index].pJson.name.replace('@julian_cataldo/', ''),
+            : packages[index]?.pJson.name.replace('@julian_cataldo/', ''),
           text: headers[0].text,
           depth: 0,
         },
@@ -86,10 +90,12 @@ export default async function loadPackages(
 
       const propsJson = `content/packages/${dir}/Props.json`;
 
-      packages[index].api = await fs
-        .readFile(propsJson, 'utf-8')
-        .then((file) => JSON.parse(file))
-        .catch(() => null);
+      if (existsSync(propsJson)) {
+        packages[index].api = await fs
+          .readFile(propsJson, 'utf-8')
+          .then((file) => JSON.parse(file))
+          .catch(() => undefined);
+      }
 
       /* ———————————————————————————————————————— Video ————————————————————— */
 

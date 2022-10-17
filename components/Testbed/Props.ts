@@ -8,18 +8,21 @@ export interface Props extends astroHTML.JSX.HTMLAttributes {
    * **Default**: `''`
    * */
   component: string;
+
   /**
    * Props. further passed to the tested component
    *
    * **Default**: `{}`
    * */
   props?: Record<string, unknown>;
+
   /**
    * Remove all testbed styles so you can apply you own
    *
    * **Default**: `false`
    * */
   headless?: boolean;
+
   /**
    * JSON schema to auto-generate controls
    *
@@ -28,6 +31,7 @@ export interface Props extends astroHTML.JSX.HTMLAttributes {
    * **Default**: `{}`
    * */
   schema?: JSONSchema7;
+
   /**
    * UI schema for auto-generated controls
    *

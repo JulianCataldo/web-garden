@@ -2,12 +2,14 @@
 // import AstroBreakpoints from './astro-breakpoints.astro';
 import AstroLicensesReport from './astro-licenses-report.astro';
 import AstroLink from './astro-link.astro';
-import AstroMediaMap from './astro-media-map.astro';
-import AstroPrefetch from './astro-prefetch.astro';
+import AstroGeoMap from './astro-geo-map.astro';
+import AstroHoverPrefetch from './astro-hover-prefetch.astro';
 // import AstroScrollObserver from './astro-scroll-observer.astro';
 import AstroTooltips from './astro-tooltips.astro';
+import AstroTerminalPlayer from './astro-terminal-player.astro';
 import AstroColorMode from './astro-color-mode.astro';
 import AstroDiagram from './astro-diagram.astro';
+import AstroTabs from './astro-tabs.astro';
 
 export interface Props {
   name: string;
@@ -29,10 +31,14 @@ if (typeof props.name !== 'string') {
       return <AstroDiagram />
     case 'astro-link':
       return <AstroLink />
-    case 'astro-media-map':
-      return <AstroMediaMap />
-    case 'astro-prefetch':
-      return <AstroPrefetch />
+    case 'astro-geo-map':
+      return <AstroGeoMap />
+    case 'astro-hover-prefetch':
+      return <AstroHoverPrefetch />
+    case 'astro-terminal-player':
+      return <AstroTerminalPlayer />
+    case 'astro-tabs':
+      return <AstroTabs />
     // case 'astro-scroll-observer':
     //   return <AstroScrollObserver />
     case 'astro-tooltips':

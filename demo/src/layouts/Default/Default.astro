@@ -1,10 +1,9 @@
 ---
-import Document from '@julian_cataldo/astro-base/Document.astro';
-import Body from '@julian_cataldo/astro-base/Body.astro';
+import { Document, Body } from 'astro-base-document';
 // import Resets from '@julian_cataldo/astro-resets/Resets.astro';
 // import LightBox from '@julian_cataldo/astro-lightbox/LightBox.astro';
-import Breakpoints from '@julian_cataldo/astro-breakpoints/Breakpoints.astro';
-import Transition from '@julian_cataldo/astro-transition/Transition.astro';
+import { Breakpoints } from 'astro-breakpoints';
+import { PageTransition } from 'astro-page-transition';
 /* ·········································································· */
 import Landing from 'src/modules/Landing/Landing.astro';
 import NavigationBar from 'src/components/NavigationBar/NavigationBar.astro';
@@ -57,7 +56,10 @@ if (typeof props?.titles?.main !== 'string') {
   >
     <Breakpoints />
 
-    <Transition speed={500} zIndex={99} background={'var(--app-overlay-color)'}
+    <PageTransition
+      speed={500}
+      zIndex={99}
+      background={'var(--app-overlay-color)'}
     />
     <!--—————————————————————————————————————————————————————————————————————-->
 

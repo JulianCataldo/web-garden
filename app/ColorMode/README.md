@@ -1,5 +1,15 @@
 # 🚀  Astro — Color mode, with user override
 
+[![NPM](https://img.shields.io/npm/v/@julian_cataldo/astro-color-mode)](https://www.npmjs.com/package/@julian_cataldo/astro-color-mode)
+![Downloads](https://img.shields.io/npm/dt/@julian_cataldo/astro-color-mode.svg)
+[![ISC License](https://img.shields.io/npm/l/@julian_cataldo/astro-color-mode)](https://github.com/JulianCataldo/web-garden/blob/develop/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)  
+[![Astro](https://img.shields.io/badge/Astro-333333.svg?logo=astro)](https://astro.build)
+[![TypeScript](https://img.shields.io/badge/TypeScript-333333.svg?logo=typescript)](http://www.typescriptlang.org/)
+[![Prettier](https://img.shields.io/badge/Prettier-333333.svg?logo=prettier)](https://prettier.io)
+[![EditorConfig](https://img.shields.io/badge/EditorConfig-333333.svg?logo=editorconfig)](https://editorconfig.org)
+[![ESLint](https://img.shields.io/badge/ESLint-3A33D1?logo=eslint)](https://eslint.org)
+
 Provides system or user-defined color scheme preference, with a toggle mechanism.  
 Settings are persisted, component is progressively enhanced and flash of mis-styled content avoided.  
 Also, this provides an easier way to target theme with CSS selector / SCSS mixins / JS DOM selector.
@@ -17,14 +27,14 @@ Also, this provides an easier way to target theme with CSS selector / SCSS mixin
 ## 📦  Installation
 
 ```sh
-pnpm i @julian_cataldo/astro-color-mode
+pnpm i astro-color-mode
 ```
 
 ## 🛠  Usage
 
 ```astro
 ---
-import ColorMode from '@julian_cataldo/astro-color-mode/ColorMode.astro';
+import { ColorMode } from 'astro-color-mode';
 // ...
 ---
 ```
@@ -74,7 +84,7 @@ export default defineConfig({
       preprocessorOptions: {
         scss: {
           additionalData: `
-            @use "@julian_cataldo/astro-color-mode/use-color-mode.scss" as *;
+            @use "astro-color-mode/use-color-mode.scss" as *;
           `,
         },
       },

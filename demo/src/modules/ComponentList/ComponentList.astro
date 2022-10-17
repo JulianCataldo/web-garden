@@ -1,6 +1,6 @@
 ---
 import { Icon } from 'astro-icon';
-import Link from '@julian_cataldo/astro-link/Link.astro';
+import { Link } from 'astro-link';
 import DemoLoader from 'src/components/Demo/DemoLoader.astro';
 import type { Package } from 'src/types';
 
@@ -16,7 +16,7 @@ if (Array.isArray(props.packages) === false) {
 
 {
   props.packages.map((pkg, index) => {
-    const name = pkg.pJson.name.replace('@julian_cataldo/', '');
+    const name = pkg.shortname;
     const url = `/component/${name}`;
 
     const id = `cb-${index}`;

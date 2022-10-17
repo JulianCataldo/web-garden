@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.4](https://github.com/JulianCataldo/web-garden/compare/astro-testbed@0.2.3...astro-testbed@0.2.4) (2022-10-17)
+
+**Note:** Version bump only for package astro-testbed
+
+
+
+
+
+## [0.2.3](https://github.com/JulianCataldo/web-garden/compare/astro-testbed@0.2.2...astro-testbed@0.2.3) (2022-10-17)
+
+
+### Bug Fixes
+
+* install deps., update configs, docs ([1ddf5a1](https://github.com/JulianCataldo/web-garden/commit/1ddf5a1db425cd2dc7c77ceb0f2c157b0e24c057))
+
+
+
+## [0.2.2](https://github.com/JulianCataldo/web-garden/compare/astro-testbed@0.2.1...astro-testbed@0.2.2) (2022-10-13)
+
+
+### Bug Fixes
+
+* add missing props export ([894fd7a](https://github.com/JulianCataldo/web-garden/commit/894fd7a1405400ae37867b7356d68c02653cf514))
+* raw astro import breaking on ci only ([d3cbfef](https://github.com/JulianCataldo/web-garden/commit/d3cbfef72d7827a86e2604061beb0ac8e063baa1))
+
+
+
+## [0.2.1](https://github.com/JulianCataldo/web-garden/compare/astro-testbed@0.2.0...astro-testbed@0.2.1) (2022-10-12)
+
+
+### Bug Fixes
+
+* has controls for embedded schema ([dd70c8d](https://github.com/JulianCataldo/web-garden/commit/dd70c8df420e554d554c81aeb5e3c2a2ece6883b))
+
+
+
 ## [0.2.0](https://github.com/JulianCataldo/web-garden/compare/astro-testbed@0.1.2...astro-testbed@0.2.0) (2022-10-12)
 
 

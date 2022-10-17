@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.1](https://github.com/JulianCataldo/web-garden/compare/astro-licenses-report@0.8.0...astro-licenses-report@0.8.1) (2022-10-17)
+
+
+### Bug Fixes
+
+* licenses report scope ([3df8f4f](https://github.com/JulianCataldo/web-garden/commit/3df8f4f8ad3975868f1f8038f6da6634da1c4f02))
+
+
+
+## 0.8.0 (2022-10-17)
+
+
+### Features
+
+* add more classes + fix html structure ([97edd0c](https://github.com/JulianCataldo/web-garden/commit/97edd0c8fff9510a60d121e34c9d91f84deaf6bc))
+* add package path option + extract prop types ([be90d05](https://github.com/JulianCataldo/web-garden/commit/be90d051850d804f4b73404ae231bc2eb2b4dbdf))
+* add smart cache capability ([f0df55b](https://github.com/JulianCataldo/web-garden/commit/f0df55b5493d1e0c0c02a313e7829d2294c29383))
+* better defaults for licenses report ([09e1e42](https://github.com/JulianCataldo/web-garden/commit/09e1e42609bbd082f3dec43f0a19ebbdd0b537b7))
+* init licenses report component ([ce3dbef](https://github.com/JulianCataldo/web-garden/commit/ce3dbefe5ebffbb100f8b91df024b950ae226bdf))
+* ts properties extractor for docs ([9a8e65e](https://github.com/JulianCataldo/web-garden/commit/9a8e65ed1b11f5ab70596fad34bd839cb41ee7dc))
+
+
+### Bug Fixes
+
+* auto-formatter bug with table dom ([bcfad42](https://github.com/JulianCataldo/web-garden/commit/bcfad42b30b5d25a6bc05e1ae84eef877926125b))
+* remove package prefix, simplify import method ([73bd31b](https://github.com/JulianCataldo/web-garden/commit/73bd31bf1f501624036a74a3f19c5bf83cc9c0a4))
+
+
+
 ## [0.14.2](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-licenses-report@0.14.1...@julian_cataldo/astro-licenses-report@0.14.2) (2022-09-22)
 
 **Note:** Version bump only for package @julian_cataldo/astro-licenses-report

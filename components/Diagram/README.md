@@ -1,5 +1,15 @@
 # 🚀  Astro — Diagrams with Mermaid JS 🧜🏻‍♀️
 
+[![NPM](https://img.shields.io/npm/v/astro-diagram)](https://www.npmjs.com/package/astro-diagram)
+![Downloads](https://img.shields.io/npm/dt/@julian_cataldo/astro-diagram.svg)
+[![ISC License](https://img.shields.io/npm/l/astro-diagram)](https://github.com/JulianCataldo/web-garden/blob/develop/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)  
+[![Astro](https://img.shields.io/badge/Astro-333333.svg?logo=astro)](https://astro.build)
+[![TypeScript](https://img.shields.io/badge/TypeScript-333333.svg?logo=typescript)](http://www.typescriptlang.org/)
+[![Prettier](https://img.shields.io/badge/Prettier-333333.svg?logo=prettier)](https://prettier.io)
+[![EditorConfig](https://img.shields.io/badge/EditorConfig-333333.svg?logo=editorconfig)](https://editorconfig.org)
+[![ESLint](https://img.shields.io/badge/ESLint-3A33D1?logo=eslint)](https://eslint.org)
+
 Embed you Mermaid diagrams in no time inside your Astro templates.  
 Features **server-side rendering** and **smart caching**.  
 Available as a stand-alone component or as an MDX plugin, replacing `mermaid` code blocks on-the-fly.
@@ -14,14 +24,14 @@ Uses the [`mermaid`](https://github.com/mermaid-js/mermaid) library and puppetee
 ## 📦  Installation
 
 ```sh
-pnpm i @julian_cataldo/astro-diagram mermaid
+pnpm i mermaid astro-diagram
 ```
 
 ## 🛠  Usage
 
 ```astro
 ---
-import Diagram, { Config } from '@julian_cataldo/astro-diagram/Diagram.astro';
+import { Diagram, type Config } from 'astro-diagram';
 
 const config = {
   theme: 'forest',
@@ -54,29 +64,34 @@ Alice->John: Yes... John, how are you?`;
 </body>
 ```
 
-### With MDX
+### With MD(X) code block
 
 > **Warning**  
 > This is still a work-in-progress.  
 > Some rendering bugs and inconsistencies remain.
 
-In your `astro.config.mjs`:
+In your `astro.config.{ts,mjs}`:
 
 ```js
-import mdxMermaidPlugin from '@julian_cataldo/astro-diagram';
+import remarkMermaid from 'astro-diagram/remark-mermaid';
 // ...
 
 export default defineConfig({
   // ...
-  integrations: [
-    mdx({ remarkPlugins: { extends: [mdxMermaidPlugin] } }),
-    // ...
-  ],
+  markdown: {
+    remarkPlugins: [
+      // remarkGfm,
+
+      remarkMermaid,
+
+      // ...
+    ],
+  },
   // ...
 });
 ```
 
-Then, in your MDX, use the `mermaid` language for your code fences, exactly like you would on GitHub flavored Markdown for example.
+Then, in your MD(X), use the `mermaid` language for your code fences, exactly like you would on GitHub flavored Markdown for example.
 
 <div class="git-only">
 
@@ -107,6 +122,7 @@ Alice->John: Yes... John, how are you?
 - [ ] Fix styling and layout bugs
 - [ ] Support dark / light color mode
 - [ ] Full TypeScript compliance
+- [ ] Test mermaid configs.
 
 <div class="git-footer">
 

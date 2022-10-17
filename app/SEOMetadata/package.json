@@ -1,0 +1,40 @@
+{
+  "name": "astro-seo-metadata",
+  "version": "0.5.2",
+  "description": "Bare minimum SEO meta tags to make most social networks and Google engine happy.",
+  "main": "index.ts",
+  "type": "module",
+  "files": [
+    "index.ts",
+    "Props.ts",
+    "SEOMetadata.astro",
+    "CHANGELOG.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Julian Cataldo",
+  "homepage": "https://code.juliancataldo.com/component/astro-seo",
+  "bugs": {
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianCataldo/web-garden",
+    "directory": "app/SEO"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "astro",
+    "astro-component",
+    "google",
+    "opengraph",
+    "search-engine",
+    "optimization",
+    "html",
+    "seo"
+  ],
+  "license": "ISC"
+}
