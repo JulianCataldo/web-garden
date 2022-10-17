@@ -17,6 +17,8 @@
 
     "baseUrl": ".",
 
+    "jsx": "react-jsx",
+
     "noImplicitAny": true,
 
     "paths": {

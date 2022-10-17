@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  tippy.js: ^6.3.7
+  tippy.js: 6.3.7
 
 dependencies:
   tippy.js: 6.3.7

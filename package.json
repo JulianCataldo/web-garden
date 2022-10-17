@@ -1,5 +1,5 @@
 {
-  "name": "@julian_cataldo/astro",
+  "name": "web-garden",
   "version": "1.0.0",
   "description": "Building blocks for making progressive and future-proof websites.\nComponents collection features Astro, HTML, SCSS, JS, TS…\nConfigurations features ESLint, Prettier, Stylelint…",
   "main": "index.js",
@@ -75,6 +75,7 @@
   },
   "packageManager": "pnpm@7.9.0",
   "dependencies": {
+    "@types/react": "^18.0.21",
     "husky": "8.0.1",
     "linkinator": "4.0.2",
     "remark-gfm": "^3.0.1"

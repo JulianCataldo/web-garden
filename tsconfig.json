@@ -19,7 +19,7 @@
     ],
 
     // "jsx": "preserve", // Resolve Vue linting import bug
-    "jsx": "react-jsx", // Resolve Vue linting import bug
+    "jsx": "react-jsx",
 
     "allowJs": true,
     "noEmit": true, // When `tsc` is for typechecking only, not for compilation
