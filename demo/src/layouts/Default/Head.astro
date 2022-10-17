@@ -1,14 +1,14 @@
 ---
-import SEO from '@julian_cataldo/astro-seo/SEO.astro';
-import Tooltips from '@julian_cataldo/astro-tooltips/Tooltips.astro';
-import ColorMode from '@julian_cataldo/astro-color-mode/ColorMode.astro';
-import Prefetch from '@julian_cataldo/astro-prefetch/Prefetch.astro';
-import ScrollObserver from '@julian_cataldo/astro-scroll-observer/ScrollObserver.astro';
-import Analytics from '@julian_cataldo/astro-analytics/Analytics.astro';
+import { SEOMetadata } from 'astro-seo-metadata';
+import { Tooltips } from 'astro-tooltips';
+import { ColorMode } from 'astro-color-mode';
+import { HoverPrefetch } from 'astro-hover-prefetch';
+import { ScrollObserver } from 'astro-scroll-observer';
+import { GoogleAnalytics } from 'astro-google-analytics';
 /* —————————————————————————————————————————————————————————————————————————— */
 import Favicons from 'src/components/Favicons.astro';
 /* —————————————————————————————————————————————————————————————————————————— */
-import { description } from '@julian_cataldo/astro/package.json';
+// import { description } from 'astro/package.json';
 /* —————————————————————————————————————————————————————————————————————————— */
 const props = { ...Astro.props };
 /* —————————————————————————————————————————————————————————————————————————— */
@@ -17,10 +17,10 @@ const siteName = "Julian's Web Garden";
 ---
 
 <!-- TODO: Dev / Prod mode for SEO image poster -->
-<SEO
+<SEOMetadata
   image={`${import.meta.env.SITE}poster.png`}
   title={comboTitle}
-  description={props.description || description}
+  description={props.description || '' /* description */}
   siteName={siteName}
   author="Julian Cataldo"
   copyright="ISC"
@@ -32,7 +32,7 @@ const siteName = "Julian's Web Garden";
 {
   import.meta.env.MODE === 'production' && (
     <>
-      <Prefetch max={3} />
+      <HoverPrefetch max={3} />
     </>
   )
 }
@@ -41,7 +41,7 @@ const siteName = "Julian's Web Garden";
 
 <ScrollObserver />
 
-<Analytics id="G-RW3VKT4PD3" />
+<GoogleAnalytics id="G-RW3VKT4PD3" />
 
 <!-- FIXME: Disabled, breaks on vite build -->
 <!-- <Resets /> -->

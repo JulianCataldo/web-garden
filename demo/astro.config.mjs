@@ -1,9 +1,10 @@
 import { defineConfig } from 'astro/config';
 import { astroImageTools } from 'astro-imagetools';
+import { astroOGImage } from './og-image-integration';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import sitemap from '@astrojs/sitemap';
 // import mdx from '@astrojs/mdx';
-import mdxMermaidPlugin from '@julian_cataldo/astro-diagram';
+import remarkMermaid from 'astro-diagram/remark-mermaid';
 import { visit } from 'unist-util-visit';
 import remarkGfm from 'remark-gfm';
 
@@ -49,10 +50,23 @@ export default defineConfig({
     // mdx({ remarkPlugins: { extends: [mdxMermaidPlugin] } }),
 
     // react(),
+    astroOGImage({
+      config: {
+        path: '/content/packages/components', // change this value to the folder where your posts are
+        // NOTE: index.md file will not get proccesed, so please avoid it
+      },
+    }),
   ],
 
   markdown: {
-    remarkPlugins: [remarkGfm, mdxMermaidPlugin, oEmbedsRemarkPlugin],
+    remarkPlugins: [
+      //
+      remarkGfm,
+
+      remarkMermaid,
+
+      oEmbedsRemarkPlugin,
+    ],
   },
 
   vite: {
@@ -76,7 +90,7 @@ export default defineConfig({
           additionalData: `
             @use "sass:color";
 
-            @use "@julian_cataldo/astro-breakpoints/use-breakpoints.scss" as * with (
+            @use "astro-breakpoints/use-breakpoints.scss" as * with (
               $breakpoints: (
                 "xs": ${breakpoints.xs},
                 "sm": ${breakpoints.sm},

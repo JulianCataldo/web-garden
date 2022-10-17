@@ -1,0 +1,15 @@
+---
+import { TerminalPlayer } from 'astro-terminal-player';
+import myRecordedCast from './astro-terminal-player-demo.cast?url';
+
+// FIXME: Is it because of Astro 1.0.6? Normally it's not needed
+import 'asciinema-player/dist/bundle/asciinema-player.css';
+---
+
+<div class="demo-wrapper">
+  <TerminalPlayer
+    src={myRecordedCast /* Required */}
+    settings={{ loop: true }}
+    aria-label="Terminal session player!"
+  />
+</div>

@@ -48,13 +48,17 @@ export default async function loadPackages(
     props.readmes.map(async (readme, index) => {
       const headers = await readme.getHeadings();
 
+      if (!packages[index]) {
+        return;
+      }
+
       /* ———————————————————————————————————————— Readme ———————————————————— */
 
       packages[index].readme = {
         mainTitle: {
           slug: props.anchorMode
             ? headers[0].slug
-            : packages[index].pJson.name.replace('@julian_cataldo/', ''),
+            : packages[index]?.pJson.name.replace('@julian_cataldo/', ''),
           text: headers[0].text,
           depth: 0,
         },
