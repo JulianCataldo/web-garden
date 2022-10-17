@@ -1,6 +1,6 @@
 {
   "name": "astro-color-mode",
-  "version": "0.5.3",
+  "version": "0.6.0",
   "description": "Provides system or user-defined color scheme preference, with a toggle mechanism. Settings are persisted, component is progressively enhanced and flash of unstyled content avoided. Also, it will provide an easier way to target theme with CSS / SCSS / JS.",
   "main": "index.ts",
   "type": "module",

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.10](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-lightbox@0.10.9...@julian_cataldo/astro-lightbox@0.10.10) (2022-10-17)
+
+
+### Bug Fixes
+
+* remove package prefix, simplify import method ([73bd31b](https://github.com/JulianCataldo/web-garden/commit/73bd31bf1f501624036a74a3f19c5bf83cc9c0a4))
+
+
+
 ## [0.10.9](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-lightbox@0.10.8...@julian_cataldo/astro-lightbox@0.10.9) (2022-09-22)
 
 **Note:** Version bump only for package @julian_cataldo/astro-lightbox

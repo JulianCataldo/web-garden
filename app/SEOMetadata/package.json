@@ -1,6 +1,6 @@
 {
   "name": "astro-seo-metadata",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Bare minimum SEO meta tags to make most social networks and Google engine happy.",
   "main": "index.ts",
   "type": "module",

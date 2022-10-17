@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/JulianCataldo/web-garden/compare/astro-testbed@0.2.2...astro-testbed@0.2.3) (2022-10-17)
+
+
+### Bug Fixes
+
+* install deps., update configs, docs ([1ddf5a1](https://github.com/JulianCataldo/web-garden/commit/1ddf5a1db425cd2dc7c77ceb0f2c157b0e24c057))
+
+
+
 ## [0.2.2](https://github.com/JulianCataldo/web-garden/compare/astro-testbed@0.2.1...astro-testbed@0.2.2) (2022-10-13)
 
 

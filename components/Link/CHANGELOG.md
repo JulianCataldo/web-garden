@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/JulianCataldo/web-garden/compare/astro-link@1.1.0...astro-link@1.1.1) (2022-10-17)
+
+
+### Bug Fixes
+
+* remove package prefix, simplify import method ([73bd31b](https://github.com/JulianCataldo/web-garden/commit/73bd31bf1f501624036a74a3f19c5bf83cc9c0a4))
+
+
+
 ## 1.1.0 (2022-10-15)
 
 

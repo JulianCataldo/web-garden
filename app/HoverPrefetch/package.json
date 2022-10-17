@@ -1,6 +1,6 @@
 {
   "name": "astro-hover-prefetch",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This component capture mouse hovering on links with internal URLs. Then, it will prefetch the HTML document beforehand.",
   "main": "index.ts",
   "type": "module",
