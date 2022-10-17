@@ -17,6 +17,7 @@
     "@astropub/flow": "0.2.2",
     "@fontsource/exo-2": "4.5.9",
     "@iconify-json/system-uicons": "1.1.4",
+    "@julian_cataldo/astro-lightbox": "link:../app/Lightbox",
     "@julian_cataldo/astro-resets": "link:../app/Resets",
     "@wbmnky/license-report-generator": "^2.1.3",
     "GoogleAnalytics": "link:../app/GoogleAnalytics",
