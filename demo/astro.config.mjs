@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 import { astroImageTools } from 'astro-imagetools';
-import { astroOGImage } from './og-image-integration';
+// import { astroOGImage } from './og-image-integration';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import sitemap from '@astrojs/sitemap';
 // import mdx from '@astrojs/mdx';
@@ -50,12 +50,12 @@ export default defineConfig({
     // mdx({ remarkPlugins: { extends: [mdxMermaidPlugin] } }),
 
     // react(),
-    astroOGImage({
-      config: {
-        path: '/content/packages/components', // change this value to the folder where your posts are
-        // NOTE: index.md file will not get proccesed, so please avoid it
-      },
-    }),
+    // astroOGImage({
+    //   config: {
+    //     path: '/content/packages/components', // change this value to the folder where your posts are
+    //     // NOTE: index.md file will not get proccesed, so please avoid it
+    //   },
+    // }),
   ],
 
   markdown: {

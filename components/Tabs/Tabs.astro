@@ -3,9 +3,8 @@ import crypto from 'node:crypto';
 /* ·········································································· */
 import styles from './Tabs.module.scss';
 /* —————————————————————————————————————————————————————————————————————————— */
-import type { Props as baseProps } from './Props';
 
-export interface Props extends baseProps {}
+export interface Props extends astroHTML.JSX.HTMLAttributes {}
 
 const props = Astro.props as Props;
 /* ·········································································· */

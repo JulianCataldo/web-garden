@@ -90,10 +90,12 @@ export default async function loadPackages(
 
       const propsJson = `content/packages/${dir}/Props.json`;
 
-      packages[index].api = await fs
-        .readFile(propsJson, 'utf-8')
-        .then((file) => JSON.parse(file))
-        .catch(() => null);
+      if (existsSync(propsJson)) {
+        packages[index].api = await fs
+          .readFile(propsJson, 'utf-8')
+          .then((file) => JSON.parse(file))
+          .catch(() => undefined);
+      }
 
       /* ———————————————————————————————————————— Video ————————————————————— */
 
