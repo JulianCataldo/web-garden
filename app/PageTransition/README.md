@@ -1,8 +1,8 @@
-# 🚀  Astro — Lightbox • Zoom image to fullscreen
+# 🚀  Astro — Full page transition overlay
 
-[![NPM](https://img.shields.io/npm/v/@julian_cataldo/astro-lightbox)](https://www.npmjs.com/package/@julian_cataldo/astro-lightbox)
-![Downloads](https://img.shields.io/npm/dt/@julian_cataldo/astro-lightbox.svg)
-[![ISC License](https://img.shields.io/npm/l/@julian_cataldo/astro-lightbox)](https://github.com/JulianCataldo/web-garden/blob/develop/LICENSE)
+[![NPM](https://img.shields.io/npm/v/@julian_cataldo/astro-transition)](https://www.npmjs.com/package/@julian_cataldo/astro-transition)
+![Downloads](https://img.shields.io/npm/dt/@julian_cataldo/astro-transition.svg)
+[![ISC License](https://img.shields.io/npm/l/@julian_cataldo/astro-transition)](https://github.com/JulianCataldo/web-garden/blob/develop/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)  
 [![Astro](https://img.shields.io/badge/Astro-333333.svg?logo=astro)](https://astro.build)
 [![TypeScript](https://img.shields.io/badge/TypeScript-333333.svg?logo=typescript)](http://www.typescriptlang.org/)
@@ -10,38 +10,35 @@
 [![EditorConfig](https://img.shields.io/badge/EditorConfig-333333.svg?logo=editorconfig)](https://editorconfig.org)
 [![ESLint](https://img.shields.io/badge/ESLint-3A33D1?logo=eslint)](https://eslint.org)
 
-Simple lightbox component.
+This component relies on the good old browser router, still, it will give to
+your website an SPA feel, without all the JS overhead.
+
+<!-- ## Demo
+
+https://user-images.githubusercontent.com/603498/174424456-edce69a7-adef-4e59-b2d8-cfc22414b8a4.mp4 -->
 
 ## 📦  Installation
 
 ```sh
-pnpm i @julian_cataldo/astro-lightbox
+pnpm i astro-page-transition
 ```
-
-> **Warning**  
-> 🚧  Work in progress
 
 ## 🛠  Usage
 
 ```astro
 ---
-import Lightbox from '@julian_cataldo/astro-lightbox/Lightbox.astro';
+import { PageTransition } from 'astro-page-transition';
 // ...
 ---
 ```
 
 ```astro
 <!-- ... -->
-<head>
-  <!-- ... -->
-  <Lightbox />
-</head>
 <body>
-  <!-- ... -->
+  <!-- Place component just after opening `BODY` tag (mandatory) -->
 
-  <div class="some-wrapper" data-lightbox="true">
-    <Image />
-  </div>
+  <!-- All properties are optional -->
+  <PageTransition speed={500} color="white" zIndex={99} />
 
   <!-- ... -->
 </body>

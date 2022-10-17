@@ -1,28 +1,28 @@
 {
-  "name": "astro-tooltips",
-  "version": "0.5.2",
-  "description": "Progressively enhanced. This component globally override regular `title` attributes on all links with Tippy.js tooltips.",
+  "name": "astro-page-transition",
+  "version": "0.5.3",
+  "description": "This component relies on the good old browser router, still, it will give to your website an SPA feel, without all the JS overhead.",
   "main": "index.ts",
   "type": "module",
   "files": [
     "index.ts",
     "Props.ts",
-    "Tooltips.astro",
-    "Tooltips.client.ts",
+    "PageTransition.astro",
+    "PageTransition.client.ts",
     "CHANGELOG.md"
   ],
   "publishConfig": {
     "access": "public"
   },
   "author": "Julian Cataldo",
-  "homepage": "https://code.juliancataldo.com/component/astro-tooltips",
+  "homepage": "https://code.juliancataldo.com/component/astro-transition",
   "bugs": {
     "url": "https://github.com/JulianCataldo/web-garden/issues"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/JulianCataldo/web-garden",
-    "directory": "app/Tooltips"
+    "directory": "app/Transition"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -30,15 +30,13 @@
   "keywords": [
     "astro",
     "astro-component",
-    "tooltips",
+    "transition",
     "native",
     "vanilla",
-    "progressive",
+    "raw",
     "javascript",
-    "links"
+    "links",
+    "animation"
   ],
-  "license": "ISC",
-  "dependencies": {
-    "tippy.js": "6.3.7"
-  }
+  "license": "ISC"
 }

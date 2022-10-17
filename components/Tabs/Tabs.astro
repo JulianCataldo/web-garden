@@ -39,12 +39,13 @@ const uid = crypto.randomUUID();
 ---
 
 <div
-  {...props}
+  {...{props, class: undefined, 'class-list': undefined}}
   class:list={[styles.tabs, 'tabs', props['class:list'], props.class]}
 >
   <style set:html={inlineStyles}>
 
   </style>
+
   <nav class:list={[styles['tab-bar']]}>
     {
       tabs.map(async (name, idx) => {

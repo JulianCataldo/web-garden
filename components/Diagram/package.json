@@ -1,9 +1,22 @@
 {
-  "name": "@julian_cataldo/astro-diagram",
-  "version": "0.12.3",
-  "description": "Embed you Mermaid diagrams in no time inside your Astro templates.\nFeatures server-side rendering and smart caching.",
-  "main": "dist/index.js",
+  "name": "astro-diagram",
+  "version": "0.5.2",
+  "description": "Embed you Mermaid diagrams inside your Astro templates.\nFeatures server-side rendering and smart caching.",
   "type": "module",
+  "files": [
+    "dist/*",
+    "index.ts",
+    "cache.ts",
+    "remark-mermaid.ts",
+    "render-diagram.ts",
+    "Props.ts",
+    "Diagram.astro",
+    "CHANGELOG.md"
+  ],
+  "exports": {
+    ".": "./index.ts",
+    "./remark-mermaid": "./dist/index.js"
+  },
   "publishConfig": {
     "access": "public"
   },

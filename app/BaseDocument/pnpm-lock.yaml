@@ -1,0 +1,7 @@
+lockfileVersion: 5.4
+
+specifiers:
+  BaseDocument: link:../app/BaseDocument
+
+dependencies:
+  BaseDocument: link:../app/BaseDocument

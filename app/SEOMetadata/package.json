@@ -1,28 +1,27 @@
 {
-  "name": "astro-tooltips",
-  "version": "0.5.2",
-  "description": "Progressively enhanced. This component globally override regular `title` attributes on all links with Tippy.js tooltips.",
+  "name": "astro-seo-metadata",
+  "version": "0.5.1",
+  "description": "Bare minimum SEO meta tags to make most social networks and Google engine happy.",
   "main": "index.ts",
   "type": "module",
   "files": [
     "index.ts",
     "Props.ts",
-    "Tooltips.astro",
-    "Tooltips.client.ts",
+    "SEOMetadata.astro",
     "CHANGELOG.md"
   ],
   "publishConfig": {
     "access": "public"
   },
   "author": "Julian Cataldo",
-  "homepage": "https://code.juliancataldo.com/component/astro-tooltips",
+  "homepage": "https://code.juliancataldo.com/component/astro-seo",
   "bugs": {
     "url": "https://github.com/JulianCataldo/web-garden/issues"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/JulianCataldo/web-garden",
-    "directory": "app/Tooltips"
+    "directory": "app/SEO"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -30,15 +29,12 @@
   "keywords": [
     "astro",
     "astro-component",
-    "tooltips",
-    "native",
-    "vanilla",
-    "progressive",
-    "javascript",
-    "links"
+    "google",
+    "opengraph",
+    "search-engine",
+    "optimization",
+    "html",
+    "seo"
   ],
-  "license": "ISC",
-  "dependencies": {
-    "tippy.js": "6.3.7"
-  }
+  "license": "ISC"
 }

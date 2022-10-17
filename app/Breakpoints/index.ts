@@ -5,6 +5,6 @@
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
-import Link from './Link.astro';
+import Breakpoints from './Breakpoints.astro';
 
-export { Link };
+export { Breakpoints };

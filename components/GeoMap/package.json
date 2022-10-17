@@ -1,0 +1,55 @@
+{
+  "name": "astro-geo-map",
+  "version": "1.0.1",
+  "description": "Embed an interactive map in your webpage. Using Leaflet.js under the hood.",
+  "main": "index.ts",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Julian Cataldo",
+  "homepage": "https://code.juliancataldo.com/component/astro-geo-map",
+  "bugs": {
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
+  },
+  "files": [
+    "index.ts",
+    "Props.ts",
+    "GeoMap.astro",
+    "CHANGELOG.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianCataldo/web-garden",
+    "directory": "components/GeoMap"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "astro",
+    "astro-component",
+    "leaflet",
+    "geographical",
+    "location",
+    "map",
+    "media",
+    "openstreetmap",
+    "maptiler",
+    "native",
+    "interactive",
+    "vanilla",
+    "javascript"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "leaflet": "^1.8.0"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.7.11"
+  },
+  "peerDependencies": {
+    "@types/leaflet": "^1.7.11",
+    "leaflet": "1.8"
+  }
+}

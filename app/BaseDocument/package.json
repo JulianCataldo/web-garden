@@ -1,28 +1,28 @@
 {
-  "name": "astro-tooltips",
-  "version": "0.5.2",
-  "description": "Progressively enhanced. This component globally override regular `title` attributes on all links with Tippy.js tooltips.",
+  "name": "astro-base-document",
+  "version": "1.0.1",
+  "description": "Provide sensible defaults for HTML base document.  \nThe goal is to reduce boilerplate when using multiple layouts in Astro projects.",
   "main": "index.ts",
   "type": "module",
   "files": [
     "index.ts",
     "Props.ts",
-    "Tooltips.astro",
-    "Tooltips.client.ts",
+    "Body.astro",
+    "Document.astro",
     "CHANGELOG.md"
   ],
   "publishConfig": {
     "access": "public"
   },
   "author": "Julian Cataldo",
-  "homepage": "https://code.juliancataldo.com/component/astro-tooltips",
+  "homepage": "https://code.juliancataldo.com/component/astro-base",
   "bugs": {
     "url": "https://github.com/JulianCataldo/web-garden/issues"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/JulianCataldo/web-garden",
-    "directory": "app/Tooltips"
+    "directory": "app/Base"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -30,15 +30,16 @@
   "keywords": [
     "astro",
     "astro-component",
-    "tooltips",
-    "native",
-    "vanilla",
-    "progressive",
+    "boilerplate",
+    "app",
+    "base",
+    "wrapper",
     "javascript",
-    "links"
+    "html",
+    "document"
   ],
   "license": "ISC",
   "dependencies": {
-    "tippy.js": "6.3.7"
+    "BaseDocument": "link:../app/BaseDocument"
   }
 }

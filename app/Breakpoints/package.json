@@ -1,9 +1,17 @@
 {
-  "name": "@julian_cataldo/astro-breakpoints",
-  "version": "0.10.7",
+  "name": "astro-breakpoints",
+  "version": "0.5.1",
   "description": "Provides cross languages breakpoints handlers for your app. SCSS mixin, JS hook and a DOM data attribute, all share the same responsive scale you choose to feed in.",
-  "main": "index.js",
+  "main": "index.ts",
   "type": "module",
+  "files": [
+    "index.ts",
+    "Props.ts",
+    "Breakpoints.astro",
+    "use-breakpoints.scss",
+    "use-breakpoints.ts",
+    "CHANGELOG.md"
+  ],
   "publishConfig": {
     "access": "public"
   },

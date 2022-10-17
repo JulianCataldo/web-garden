@@ -1,8 +1,8 @@
 {
-  "name": "astro-link",
-  "version": "1.1.0",
-  "description": "Supercharge your links. This component detects external / anchor / same domain / mail / telephone `href`, and apply optimizations accordingly.",
-  "main": "index.ts",
+  "name": "astro-google-analytics",
+  "version": "1.0.0",
+  "description": "Provides Google Analytics 4 snippet injection.",
+  "main": "index.js",
   "type": "module",
   "publishConfig": {
     "access": "public"
@@ -10,18 +10,18 @@
   "files": [
     "index.ts",
     "Props.ts",
-    "Link.astro",
+    "GoogleAnalytics.astro",
     "CHANGELOG.md"
   ],
   "author": "Julian Cataldo",
-  "homepage": "https://code.juliancataldo.com/component/astro-link",
+  "homepage": "https://code.juliancataldo.com/component/astro-analytics",
   "bugs": {
     "url": "https://github.com/JulianCataldo/web-garden/issues"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/JulianCataldo/web-garden",
-    "directory": "components/Link"
+    "directory": "app/Analytics"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -29,15 +29,10 @@
   "keywords": [
     "astro",
     "astro-component",
-    "link",
-    "href",
-    "anchor",
-    "external",
-    "badge",
-    "mailto",
-    "telephone",
-    "obfuscation",
-    "css",
+    "google",
+    "analytics",
+    "snippet",
+    "ga4",
     "javascript"
   ],
   "license": "ISC"

@@ -5,6 +5,9 @@
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
-import Link from './Link.astro';
+import Body from './Body.astro';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import Document from './Document.astro';
 
-export { Link };
+export { Body, Document };

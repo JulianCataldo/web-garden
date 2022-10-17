@@ -1,12 +1,22 @@
 # 🚀  Astro — Breakpoints handlers with (S)CSS / DOM / JS
 
+[![NPM](https://img.shields.io/npm/v/@julian_cataldo/astro-breakpoints)](https://www.npmjs.com/package/@julian_cataldo/astro-breakpoints)
+![Downloads](https://img.shields.io/npm/dt/@julian_cataldo/astro-breakpoints.svg)
+[![ISC License](https://img.shields.io/npm/l/@julian_cataldo/astro-breakpoints)](https://github.com/JulianCataldo/web-garden/blob/develop/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)  
+[![Astro](https://img.shields.io/badge/Astro-333333.svg?logo=astro)](https://astro.build)
+[![TypeScript](https://img.shields.io/badge/TypeScript-333333.svg?logo=typescript)](http://www.typescriptlang.org/)
+[![Prettier](https://img.shields.io/badge/Prettier-333333.svg?logo=prettier)](https://prettier.io)
+[![EditorConfig](https://img.shields.io/badge/EditorConfig-333333.svg?logo=editorconfig)](https://editorconfig.org)
+[![ESLint](https://img.shields.io/badge/ESLint-3A33D1?logo=eslint)](https://eslint.org)
+
 Provides cross languages breakpoints handlers for your app.  
 SCSS mixin, JS hook and a DOM data attribute, all share the same responsive scale you choose to feed in.
 
 ## 📦  Installation
 
 ```sh
-pnpm i @julian_cataldo/astro-breakpoints
+pnpm i astro-breakpoints
 ```
 
 ## 🛠  Usage
@@ -41,7 +51,7 @@ export default defineConfig({
       preprocessorOptions: {
         scss: {
           additionalData: `
-            @use "@julian_cataldo/astro-breakpoints/use-breakpoints.scss" as * with (
+            @use "astro-breakpoints/use-breakpoints.scss" as * with (
               $breakpoints: (
                 "xs": ${breakpoints.xs},
                 "sm": ${breakpoints.sm},

@@ -1,5 +1,15 @@
 # 🚀  Astro — Packages licenses report generator
 
+[![NPM](https://img.shields.io/npm/v/@julian_cataldo/astro-licenses-report)](https://www.npmjs.com/package/@julian_cataldo/astro-licenses-report)
+![Downloads](https://img.shields.io/npm/dt/@julian_cataldo/astro-licenses-report.svg)
+[![ISC License](https://img.shields.io/npm/l/@julian_cataldo/astro-licenses-report)](https://github.com/JulianCataldo/web-garden/blob/develop/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)  
+[![Astro](https://img.shields.io/badge/Astro-333333.svg?logo=astro)](https://astro.build)
+[![TypeScript](https://img.shields.io/badge/TypeScript-333333.svg?logo=typescript)](http://www.typescriptlang.org/)
+[![Prettier](https://img.shields.io/badge/Prettier-333333.svg?logo=prettier)](https://prettier.io)
+[![EditorConfig](https://img.shields.io/badge/EditorConfig-333333.svg?logo=editorconfig)](https://editorconfig.org)
+[![ESLint](https://img.shields.io/badge/ESLint-3A33D1?logo=eslint)](https://eslint.org)
+
 Give credits to the awesome JS open-source community with this component.  
 It will generate a table with important informations about packages used by your project.
 
@@ -9,14 +19,14 @@ Uses Sebastian Roming' `license-report-generator` under the hood
 ## 📦  Installation
 
 ```sh
-pnpm i @julian_cataldo/astro-licenses-report
+pnpm i @wbmnky/license-report-generator astro-licenses-report
 ```
 
 ## 🛠  Usage
 
 ```astro
 ---
-import LicensesReport from '@julian_cataldo/astro-licenses-report/LicensesReport.astro';
+import { LicensesReport } from 'astro-licenses-report';
 // ...
 ---
 ```

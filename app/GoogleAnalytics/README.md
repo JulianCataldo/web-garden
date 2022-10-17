@@ -1,8 +1,8 @@
-# 🚀  Astro — Lightbox • Zoom image to fullscreen
+# 🚀  Astro — Analytics
 
-[![NPM](https://img.shields.io/npm/v/@julian_cataldo/astro-lightbox)](https://www.npmjs.com/package/@julian_cataldo/astro-lightbox)
-![Downloads](https://img.shields.io/npm/dt/@julian_cataldo/astro-lightbox.svg)
-[![ISC License](https://img.shields.io/npm/l/@julian_cataldo/astro-lightbox)](https://github.com/JulianCataldo/web-garden/blob/develop/LICENSE)
+[![NPM](https://img.shields.io/npm/v/@julian_cataldo/astro-analytics)](https://www.npmjs.com/package/@julian_cataldo/astro-analytics)
+![Downloads](https://img.shields.io/npm/dt/@julian_cataldo/astro-analytics.svg)
+[![ISC License](https://img.shields.io/npm/l/@julian_cataldo/astro-analytics)](https://github.com/JulianCataldo/web-garden/blob/develop/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)  
 [![Astro](https://img.shields.io/badge/Astro-333333.svg?logo=astro)](https://astro.build)
 [![TypeScript](https://img.shields.io/badge/TypeScript-333333.svg?logo=typescript)](http://www.typescriptlang.org/)
@@ -10,22 +10,20 @@
 [![EditorConfig](https://img.shields.io/badge/EditorConfig-333333.svg?logo=editorconfig)](https://editorconfig.org)
 [![ESLint](https://img.shields.io/badge/ESLint-3A33D1?logo=eslint)](https://eslint.org)
 
-Simple lightbox component.
+Provides Google Analytics 4 snippet injection.
 
 ## 📦  Installation
 
 ```sh
-pnpm i @julian_cataldo/astro-lightbox
+pnpm i astro-google-analytics
 ```
-
-> **Warning**  
-> 🚧  Work in progress
 
 ## 🛠  Usage
 
 ```astro
 ---
-import Lightbox from '@julian_cataldo/astro-lightbox/Lightbox.astro';
+import { GoogleAnalytics } from 'astro-google-analytics';
+
 // ...
 ---
 ```
@@ -33,18 +31,12 @@ import Lightbox from '@julian_cataldo/astro-lightbox/Lightbox.astro';
 ```astro
 <!-- ... -->
 <head>
+  <!-- Place component inside `HEAD` tag -->
+
+  <Analytics id="G-XXXXXXXXXX" />
+
   <!-- ... -->
-  <Lightbox />
 </head>
-<body>
-  <!-- ... -->
-
-  <div class="some-wrapper" data-lightbox="true">
-    <Image />
-  </div>
-
-  <!-- ... -->
-</body>
 ```
 
 <div class="git-footer">

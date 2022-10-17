@@ -5,6 +5,6 @@
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
-import Link from './Link.astro';
+import Tooltips from './Tooltips.astro';
 
-export { Link };
+export { Tooltips };
