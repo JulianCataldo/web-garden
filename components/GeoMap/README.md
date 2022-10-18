@@ -8,7 +8,7 @@ Using [Leaflet.js](https://leafletjs.com) under the hood.
 <!-- Should investigate peerDeps auto-install, that way, only `pnpm i [package]` will suffice -->
 
 ```sh
-pnpm i leaflet@1.9.0 astro-geo-map
+pnpm i astro-geo-map
 
 # Optional
 pnpm i -D @types/leaflet
@@ -52,9 +52,11 @@ export default defineConfig({
 });
 ```
 
-So Leaflet will be loaded properly, instead of getting this error:
+So client-side, third-party JS will be loaded properly, instead of getting this error:
 
 `SyntaxError: Importing binding name 'default' cannot be resolved by star`
+
+If dependency issues persists, try installing `leaflet@1.9.0`.
 
 ## To do
 
