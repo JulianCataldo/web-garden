@@ -8,7 +8,7 @@ Using [Leaflet.js](https://leafletjs.com) under the hood.
 <!-- Should investigate peerDeps auto-install, that way, only `pnpm i [package]` will suffice -->
 
 ```sh
-pnpm i leaflet astro-geo-map
+pnpm i leaflet@1.9.0 astro-geo-map
 
 # Optional
 pnpm i -D @types/leaflet
