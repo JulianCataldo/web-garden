@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.5](https://github.com/JulianCataldo/web-garden/compare/astro-geo-map@1.0.4...astro-geo-map@1.0.5) (2022-10-18)
+
+
+### Bug Fixes
+
+* note + vite config for client side js error ([3a5c6d5](https://github.com/JulianCataldo/web-garden/commit/3a5c6d52a58623b49190f4988774024a4802b12a))
+
+
+
 ## [1.0.4](https://github.com/JulianCataldo/web-garden/compare/astro-geo-map@1.0.3...astro-geo-map@1.0.4) (2022-10-17)
 
 

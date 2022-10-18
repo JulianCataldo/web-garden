@@ -1,6 +1,6 @@
 {
   "name": "astro-geo-map",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Embed an interactive map in your webpage.\nUsing Leaflet.js under the hood.",
   "main": "index.ts",
   "type": "module",

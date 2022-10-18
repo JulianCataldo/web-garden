@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://github.com/JulianCataldo/web-garden/compare/astro-terminal-player@0.1.1...astro-terminal-player@0.1.2) (2022-10-18)
+
+
+### Bug Fixes
+
+* note + vite config for client side js error ([3a5c6d5](https://github.com/JulianCataldo/web-garden/commit/3a5c6d52a58623b49190f4988774024a4802b12a))
+
+
+
 ## [0.1.1](https://github.com/JulianCataldo/web-garden/compare/astro-terminal-player@0.1.0...astro-terminal-player@0.1.1) (2022-10-17)
 
 
