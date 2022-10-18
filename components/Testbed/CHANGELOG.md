@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.5](https://github.com/JulianCataldo/web-garden/compare/astro-testbed@0.2.4...astro-testbed@0.2.5) (2022-10-18)
+
+**Note:** Version bump only for package astro-testbed
+
+
+
+
+
 ## [0.2.4](https://github.com/JulianCataldo/web-garden/compare/astro-testbed@0.2.3...astro-testbed@0.2.4) (2022-10-17)
 
 **Note:** Version bump only for package astro-testbed
