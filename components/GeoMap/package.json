@@ -1,7 +1,7 @@
 {
   "name": "astro-geo-map",
   "version": "1.0.4",
-  "description": "Embed an interactive map in your webpage. Using Leaflet.js under the hood.",
+  "description": "Embed an interactive map in your webpage.\nUsing Leaflet.js under the hood.",
   "main": "index.ts",
   "type": "module",
   "publishConfig": {
@@ -41,5 +41,11 @@
     "vanilla",
     "javascript"
   ],
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/leaflet": "^1.9.0"
+  },
+  "dependencies": {
+    "leaflet": "1.9.0"
+  }
 }

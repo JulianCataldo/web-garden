@@ -1,4 +1,4 @@
-# 🚀  Astro — Terminal Player (Asciinema)
+# 🚀  Astro — Terminal player (Asciinema)
 
 [![NPM](https://img.shields.io/npm/v/astro-terminal-player)](https://www.npmjs.com/package/astro-terminal-player)
 ![Downloads](https://img.shields.io/npm/dt/astro-terminal-player.svg)

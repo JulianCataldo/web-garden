@@ -41,9 +41,23 @@ import { GeoMap } from 'astro-geo-map';
 </body>
 ```
 
+### Vite client-side fix
+
+You might want to add this to your `astro.config`:
+
+```js
+export default defineConfig({
+  /* ... */
+  vite: { optimizeDeps: { include: ['leaflet'] } },
+});
+```
+
+So Leaflet will be loaded properly, instead of getting this error:
+
+`SyntaxError: Importing binding name 'default' cannot be resolved by star`
+
 ## To do
 
-- [x] Multiple maps per page
 - [ ] SSR rendered placeholder, for when JS is unavailable
 
 <div class="git-footer">
