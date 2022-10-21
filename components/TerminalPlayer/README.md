@@ -21,8 +21,25 @@ Auto plays / pauses when player is visible.
 <!-- Should investigate peerDeps auto-install, that way, only `pnpm i [package]` will suffice -->
 
 ```sh
-pnpm i asciinema-player astro-terminal-player
+pnpm i astro-terminal-player
 ```
+
+### Vite client-side fix
+
+You might want to add this to your `astro.config`:
+
+```js
+export default defineConfig({
+  /* ... */
+  vite: { optimizeDeps: { include: ['asciinema-player'] } },
+});
+```
+
+So client-side, third-party JS will be loaded properly, instead of getting this error:
+
+`Uncaught SyntaxError: The requested module '.../@babel/runtime/regenerator/...' does not provide an export named 'default' ... `
+
+<!-- If some dependency issues persists, try installing ``. -->
 
 ## 🛠  Usage
 
