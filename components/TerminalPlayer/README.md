@@ -21,7 +21,7 @@ Auto plays / pauses when player is visible.
 <!-- Should investigate peerDeps auto-install, that way, only `pnpm i [package]` will suffice -->
 
 ```sh
-pnpm i astro-terminal-player
+pnpm i asciinema-player astro-terminal-player
 ```
 
 ### Vite client-side fix
@@ -40,6 +40,12 @@ So client-side, third-party JS will be loaded properly, instead of getting this 
 `Uncaught SyntaxError: The requested module '.../@babel/runtime/regenerator/...' does not provide an export named 'default' ... `
 
 <!-- If some dependency issues persists, try installing ``. -->
+
+Also importing asciinema-player CSS solve a discrepency between `dev` and `build` where the latter comes unstyled. To fix this, add this to your CSS:
+
+`@import 'asciinema-player/dist/bundle/asciinema-player.css';`
+
+Note that this component is already importing CSS bundle internally, so this is a temporary quick fix.
 
 ## 🛠  Usage
 
