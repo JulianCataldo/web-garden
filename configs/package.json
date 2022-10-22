@@ -1,6 +1,6 @@
 {
   "name": "webdev-configs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Here lies some re-usable tooling settings. Languages: JS, TS, Astro, Vue, JSX, TSX, SCSS, CSS. Tools: Prettier, ESlint, Stylelint, Editorconfig, TypeScript, Commitlint, VS Code.",
   "main": "index.mjs",
   "publishConfig": {

@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.0 (2022-10-22)
+
+
+### Features
+
+* add `astroHTML` global for `.astro` files ([22b3d29](https://github.com/JulianCataldo/web-garden/commit/22b3d292f778fbb2b49fe1e6e8aaf64ca8786de0))
+* add prettier base preset ([afba847](https://github.com/JulianCataldo/web-garden/commit/afba8472c4b2b491fc0db6e3da65fa558297851d))
+* add stylelint ordering ([843aa0a](https://github.com/JulianCataldo/web-garden/commit/843aa0a4c4763ecf429a7065fac16073dde51092))
+* allow extra extensions for import in .astro ([6f0f87f](https://github.com/JulianCataldo/web-garden/commit/6f0f87fdf8d2f0d558097736a381cbf08208d484))
+* convert commitlint config to typescript ([76bfead](https://github.com/JulianCataldo/web-garden/commit/76bfead3deaeb26106e1a61cc4fc807303859c1a))
+* disable `prefer-default-export` ([14a6ce1](https://github.com/JulianCataldo/web-garden/commit/14a6ce187372e59685dd0b999ffa1d2fad4dc8c9))
+* extract and divide all configs ([a269005](https://github.com/JulianCataldo/web-garden/commit/a269005d0a9f78d2744fa74e58432092a9e5495f))
+* init shareable configs package ([3590097](https://github.com/JulianCataldo/web-garden/commit/3590097d7bc41b52f0122adf4baecea22da40ee3))
+* max line length rule customization ([3fca513](https://github.com/JulianCataldo/web-garden/commit/3fca51387019e524da800da7030b1b55c2a6784a))
+* quick embed in package.json example ([704e000](https://github.com/JulianCataldo/web-garden/commit/704e000837be92e23bb0f11ca70490577a4bf266))
+* split js + ts eslint configs + add preset ([76f0631](https://github.com/JulianCataldo/web-garden/commit/76f0631d551773ed14f139fac1209587bc83e19e))
+
+
+### Bug Fixes
+
+* astro prettier new import ([d6b9b5f](https://github.com/JulianCataldo/web-garden/commit/d6b9b5f345996201e153cade5690be1258603f3a))
+* clean up + add ignore missing import rule ([4b39df6](https://github.com/JulianCataldo/web-garden/commit/4b39df6cbb63b0b4c8668fcebb33d7de068eaa27))
+* compact code a bit more + docs ellipses ([8936217](https://github.com/JulianCataldo/web-garden/commit/8936217aed17c3bacb900c47eb25de930986e8e2))
+* disable eslint extension check for tsx ([b360250](https://github.com/JulianCataldo/web-garden/commit/b360250ae2ffaf8207b12a0d6f2ccd1e673828f4))
+* docs links, relative to absolute ([4737876](https://github.com/JulianCataldo/web-garden/commit/473787617df5692cea016d2efd985cd234a96c95))
+* json to jsonc for snippets ([9968fc6](https://github.com/JulianCataldo/web-garden/commit/9968fc6824eb58b71989bbb4ef24b6560ba5e362))
+* move to mjs for vite errors ([0da3738](https://github.com/JulianCataldo/web-garden/commit/0da37385662676fb35e049cb88903a20f36c5e8c))
+* re-enable react extension for current file ([83d1bf2](https://github.com/JulianCataldo/web-garden/commit/83d1bf29497c85d202239d7b9cbb315706c87fa2))
+* typescript eslint resolver ([bc021da](https://github.com/JulianCataldo/web-garden/commit/bc021da89dd366e07044a903efb3c6f1887a6fd8))
+* typo typescript ([7d5be3c](https://github.com/JulianCataldo/web-garden/commit/7d5be3c5c2b977f1a3682ad8c8f1f26f83770564))
+* update default prop. rule to modern method ([f23f81a](https://github.com/JulianCataldo/web-garden/commit/f23f81aa17dab132af1ab0eec28fc6a0d222d741))
+* update recommended method for configs import ([3d83ea8](https://github.com/JulianCataldo/web-garden/commit/3d83ea8c741d8d5355ee9c2fee295cf717befc70))
+
+
+
 ## [0.19.3](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-configs@0.19.2...@julian_cataldo/astro-configs@0.19.3) (2022-10-10)
 
 **Note:** Version bump only for package @julian_cataldo/astro-configs
