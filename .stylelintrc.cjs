@@ -1,5 +1,5 @@
-/** @type {import("@types/stylelint").Options} */
+/** @type {import("stylelint").Config} */
 
 module.exports = {
-  extends: ['@julian_cataldo/astro-configs/stylelint-all.cjs'],
+  extends: ['webdev-configs/stylelint-all.cjs'],
 };
