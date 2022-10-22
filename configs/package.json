@@ -1,6 +1,6 @@
 {
-  "name": "@julian_cataldo/astro-configs",
-  "version": "0.19.3",
+  "name": "webdev-configs",
+  "version": "1.0.0",
   "description": "Here lies some re-usable tooling settings. Languages: JS, TS, Astro, Vue, JSX, TSX, SCSS, CSS. Tools: Prettier, ESlint, Stylelint, Editorconfig, TypeScript, Commitlint, VS Code.",
   "main": "index.mjs",
   "publishConfig": {
@@ -17,7 +17,6 @@
     "directory": "configs"
   },
   "scripts": {
-    "gather": "./gather.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
