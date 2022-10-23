@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.6](https://github.com/JulianCataldo/web-garden/compare/astro-tabs@0.1.5...astro-tabs@0.1.6) (2022-10-23)
+
+
+### Bug Fixes
+
+* class list prop. + remove extra div ([60318a9](https://github.com/JulianCataldo/web-garden/commit/60318a9e266daf3f0daa15a641b3e34a24a1609f))
+
+
+
 ## [0.1.5](https://github.com/JulianCataldo/web-garden/compare/astro-tabs@0.1.3...astro-tabs@0.1.5) (2022-10-23)
 
 
