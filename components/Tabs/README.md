@@ -123,82 +123,43 @@ Or use `:global(.tab)`,… in scoped styles.
 ## 🎉  Result
 
 ```html
-<div class="_tabs_1754q_15 tabs pass-your-class-list pass-your-own-class">
+<div class="_tabs_1il72_16 tabs">
   <style>
-    ._tabs_1754q_15:has(._radio_1754q_29-1:checked) ._panel_1754q_7-1 {
-      visibility: visible;
-      display: inline-block;
-    }
-    ._tabs_1754q_15:has(._radio_1754q_29-2:checked) ._panel_1754q_7-2 {
-      visibility: visible;
-      display: inline-block;
-    }
-    ._tabs_1754q_15:has(._radio_1754q_29-3:checked) ._panel_1754q_7-3 {
+    ._tabs_1il72_16:has(._radio_1il72_32-1:checked) ._panel_1il72_8-1,
+    ._tabs_1il72_16:has(._radio_1il72_32-2:checked) ._panel_1il72_8-2,
+    ._tabs_1il72_16:has(._radio_1il72_32-3:checked) ._panel_1il72_8-3 {
       visibility: visible;
       display: inline-block;
     }
   </style>
 
-  <nav class="_tab-bar_1754q_3">
+  <nav class="_tab-bar_1il72_3">
     <div class="tab-wrapper tab-1">
       <input
-        class="_radio_1754q_29 _radio_1754q_29-1 radio"
+        class="_radio_1il72_32 _radio_1il72_32-1 tab-selector"
         type="radio"
-        name="i8ZgJykDTKrqj1xg_epJe"
+        name="3af997a5-693f-40db-a0c6-ba63359e27a8"
         checked="true"
-        id="i8ZgJykDTKrqj1xg_epJe-1"
+        id="3af997a5-693f-40db-a0c6-ba63359e27a8-1"
       />
-      <label class="tab _tab_1754q_3" for="i8ZgJykDTKrqj1xg_epJe-1">
+      <label
+        class="tab _tab_1il72_3"
+        for="3af997a5-693f-40db-a0c6-ba63359e27a8-1"
+      >
         <div>Tab 1</div>
       </label>
     </div>
-    <div class="tab-wrapper tab-2">
-      <input
-        class="_radio_1754q_29 _radio_1754q_29-2 radio"
-        type="radio"
-        name="i8ZgJykDTKrqj1xg_epJe"
-        id="i8ZgJykDTKrqj1xg_epJe-2"
-      />
-      <label class="tab _tab_1754q_3" for="i8ZgJykDTKrqj1xg_epJe-2">
-        <div>Tab 2</div>
-      </label>
-    </div>
-    <div class="tab-wrapper tab-3">
-      <input
-        class="_radio_1754q_29 _radio_1754q_29-3 radio"
-        type="radio"
-        name="i8ZgJykDTKrqj1xg_epJe"
-        id="i8ZgJykDTKrqj1xg_epJe-3"
-      />
-      <label class="tab _tab_1754q_3" for="i8ZgJykDTKrqj1xg_epJe-3">
-        <div>Tab 3</div>
-      </label>
-    </div>
+
+    <!-- ... x3 -->
   </nav>
 
-  <div class="_panels_1754q_7">
-    <div class="_panel_1754q_7 _panel_1754q_7-1 panel">
+  <div class="_panels_1il72_8">
+    <div class="_panel_1il72_8 false _panel_1il72_8-1 panel">
       <h2>Panel 1</h2>
       <p>Hello world</p>
     </div>
-    <div class="_panel_1754q_7 _tallest_1754q_15 _panel_1754q_7-2 panel">
-      <h2>Panel 2</h2>
-      <img
-        height="400"
-        src="https://res.cloudinary.com/dzfylx93l/image/upload/v1664340439/astro-takeoff-1_ecdfxf.gif"
-      />
-    </div>
-    <div class="_panel_1754q_7 _panel_1754q_7-3 panel">
-      <h2>Panel 3</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque deserunt
-        quibusdam praesentium. Nobis consectetur, minima laboriosam doloremque.
-      </p>
-      <p>
-        enim perferendis fugit a porro. Corporis quis, tenetur maiores explicabo
-        ex nulla quo?
-      </p>
-    </div>
+
+    <!-- ... x3 -->
   </div>
 </div>
 ```
