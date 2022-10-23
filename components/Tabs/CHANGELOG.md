@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.5](https://github.com/JulianCataldo/web-garden/compare/astro-tabs@0.1.3...astro-tabs@0.1.5) (2022-10-23)
+
+
+### Bug Fixes
+
+* simplify inline styles + correct spread props ([a0e2f2b](https://github.com/JulianCataldo/web-garden/commit/a0e2f2b1414449cadc6bad101eb7d75daa777fae))
+
+
+
 ## [0.1.4](https://github.com/JulianCataldo/web-garden/compare/astro-tabs@0.1.3...astro-tabs@0.1.4) (2022-10-23)
 
 
