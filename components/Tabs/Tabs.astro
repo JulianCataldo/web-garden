@@ -46,7 +46,7 @@ const uid = crypto.randomUUID();
 ---
 
 <div
-  {...{...props, class: undefined, 'class-list': undefined}}
+  {...{...props, class: undefined, 'class:list': undefined}}
   class:list={[styles.tabs, 'tabs', props['class:list'], props.class]}
 >
   <style set:html={inlineStyles}>
@@ -73,7 +73,7 @@ const uid = crypto.randomUUID();
                 id={`${uid}-${index}`}
               />
               <label class:list={['tab', styles.tab]} for={`${uid}-${index}`}>
-                <div set:html={render} />
+                <Fragment set:html={render} />
               </label>
             </div>
           );
