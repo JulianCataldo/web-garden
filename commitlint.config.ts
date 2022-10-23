@@ -2,7 +2,7 @@
 import type { UserConfig } from '@commitlint/types';
 
 const Configuration: UserConfig = {
-  extends: ['webdev-configs/commitlint-base.ts'],
+  extends: ['./node_modules/webdev-configs/commitlint-base.ts'],
 };
 
 module.exports = Configuration;
