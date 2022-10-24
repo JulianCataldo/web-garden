@@ -2,31 +2,6 @@
   "name": "astro-tooltips",
   "version": "0.6.0",
   "description": "Progressively enhanced. This component globally override regular `title` attributes on all links with Tippy.js tooltips.",
-  "main": "index.ts",
-  "type": "module",
-  "files": [
-    "index.ts",
-    "Props.ts",
-    "Tooltips.astro",
-    "Tooltips.client.ts",
-    "CHANGELOG.md"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "author": "Julian Cataldo",
-  "homepage": "https://code.juliancataldo.com/component/astro-tooltips",
-  "bugs": {
-    "url": "https://github.com/JulianCataldo/web-garden/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JulianCataldo/web-garden",
-    "directory": "app/Tooltips"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "astro",
     "astro-component",
@@ -37,7 +12,29 @@
     "javascript",
     "links"
   ],
+  "homepage": "https://code.juliancataldo.com/component/astro-tooltips",
+  "bugs": {
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianCataldo/web-garden",
+    "directory": "app/Tooltips"
+  },
   "license": "ISC",
+  "author": "Julian Cataldo",
+  "type": "module",
+  "main": "index.ts",
+  "files": [
+    "index.ts",
+    "Props.ts",
+    "Tooltips.astro",
+    "Tooltips.client.ts",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "tippy.js": "6.3.7"
   }

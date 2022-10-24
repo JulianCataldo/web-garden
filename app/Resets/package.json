@@ -2,25 +2,6 @@
   "name": "@julian_cataldo/astro-resets",
   "version": "0.12.4",
   "description": "Common CSS resets in a configurable Astro component. Only needed CSS is injected into critical path.",
-  "main": "index.js",
-  "type": "module",
-  "publishConfig": {
-    "access": "public"
-  },
-  "author": "Julian Cataldo",
-  "homepage": "https://code.juliancataldo.com/component/astro-resets",
-  "bugs": {
-    "url": "https://github.com/JulianCataldo/web-garden/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JulianCataldo/web-garden",
-    "directory": "app/Resets"
-  },
-  "style": "index.scss",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "astro",
     "astro-component",
@@ -30,5 +11,21 @@
     "css",
     "resets"
   ],
-  "license": "ISC"
+  "homepage": "https://code.juliancataldo.com/component/astro-resets",
+  "bugs": {
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianCataldo/web-garden",
+    "directory": "app/Resets"
+  },
+  "license": "ISC",
+  "author": "Julian Cataldo",
+  "type": "module",
+  "main": "index.js",
+  "style": "index.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
