@@ -1,80 +1,107 @@
 ---
+import { createHash } from 'node:crypto';
+import leafletStylesUrl from 'leaflet/dist/leaflet.css?url';
+/* ·········································································· */
 import type { Props as baseProps } from './Props';
-
-export interface Props extends baseProps {}
-const props = { ...Astro.props } as Props;
-/* ———————————————————————————————————————————— Typeguards + Fallbacks —————— */
-const internalProps: string[] = [];
-
-if (typeof props.x !== 'number') props.x = 43.389636;
-internalProps.push('x');
-if (typeof props.y !== 'number') props.y = 5.3964332;
-internalProps.push('y');
-if (typeof props.z !== 'number') props.z = 10;
-internalProps.push('z');
-if (typeof props.height !== 'string') props.height = '12rem';
-internalProps.push('height');
-if (typeof props.width !== 'string') props.width = '100%';
-internalProps.push('width');
-if (typeof props.attribution !== 'boolean') props.attribution = true;
-internalProps.push('attribution');
-/* ············································ Extra HTML attributes ······· */
-const extraAttrs: { [key: string]: string } = {};
-Object.entries(props).forEach(([key, val]) => {
-  if (internalProps.includes(key) === false) {
-    extraAttrs[key] = `${val as string}`;
-  }
-});
 /* —————————————————————————————————————————————————————————————————————————— */
+export interface Props extends baseProps {}
+const {
+  ssr = true,
+  htmlAttributes = {},
+
+  width = '25rem',
+  height = '25rem',
+
+  url = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+
+  center = [43.389636, 5.3964332],
+  zoom = 10,
+  ...leafletOptions
+} = Astro.props as Props;
+
+const settings = {
+  url,
+  width,
+  height,
+  leafletOptions: { center, zoom, ...leafletOptions },
+};
+
+/* — SSR ONLY — */
+let src;
+async function getSrc(fPath: string) {
+  return import(`${fPath}?url`).then((r) => r.default).catch(() => null);
+}
+if (ssr) {
+  const { render } = await import('./render');
+
+  const hash = createHash('sha256')
+    .update(JSON.stringify(settings))
+    .digest('hex');
+  const cacheDir =
+    import.meta.env.GEO_MAP_CACHE_DIR ?? '/node_modules/.astro-geo-map';
+  const fPath = `${cacheDir}/${hash}.png`;
+
+  src = await getSrc(fPath);
+  if (src !== fPath) {
+    await render({ settings, hash, cacheDir });
+    src = await getSrc(fPath);
+  }
+}
 ---
 
-<div
-  class="leaflet-map"
-  style={`z-index: 0; width: ${props.width}; height: ${props.height}; ` +
-  `--display: ${
-    props.attribution ? 'initial' : 'none'
-  }` /* NOTE: workaround as `define:vars` isn't working */}
-  data-x={props.x}
-  data-y={props.y}
-  data-z={props.z}
-  {...extraAttrs}
+<astro-geo-map
+  {...htmlAttributes}
+  data-settings={JSON.stringify(settings)}
+  data-styles-href={leafletStylesUrl}
+  style={{ width, height, display: 'block' }}
 >
-</div>
+  {
+    ssr && src && (
+      <img
+        src={src}
+        alt="Geographical map"
+        style={{ position: 'absolute', width, height }}
+      />
+    )
+  }
+</astro-geo-map>
 
 <script>
   import Leaflet from 'leaflet';
 
-  const mapElems = document.querySelectorAll('.leaflet-map');
+  class AstroGeoMap extends HTMLElement {
+    constructor() {
+      super();
 
-  mapElems.forEach((elem: HTMLElement) => {
-    const map = Leaflet.map(elem, {
-      center: [
-        parseFloat(elem.getAttribute('data-x')),
-        parseFloat(elem.getAttribute('data-y')),
-      ],
-      zoom: parseFloat(elem.getAttribute('data-z')) || 14,
-      scrollWheelZoom: false,
-    });
+      const settings = JSON.parse(this.getAttribute('data-settings')!);
+      const styleUrl = this.getAttribute('data-styles-href')!;
 
-    // FUTURE OPTION : Choose map tiles provider
-    // const mapAccessToken = `import.meta.env.PUBLIC_MAP_TILER_ACCESS_TOKEN`;
-    // const mapId = 'topographique';
-    // const mapImgFormat = 'png';
-    // const url = `https://api.maptiler.com/maps/${mapId}/256/{z}/{x}/{y}{r}.${mapImgFormat}?key=${mapAccessToken}`;
-    // const url = 'http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png';
-    const url = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png';
+      const holder = this.appendChild(document.createElement('div'));
+      const holderShadow = holder.attachShadow({ mode: 'open' });
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = styleUrl;
+      holderShadow.appendChild(link);
 
-    const layer = new Leaflet.TileLayer(url);
-    map.addLayer(layer);
-  });
-</script>
+      const mapElem = holderShadow.appendChild(document.createElement('div'));
 
-<!-- FIXME: `define:vars` not working in this component only -->
-<style lang="scss" is:global>
-  // Importing leaflet CSS here, not working in Astro frontmatter
-  @import 'leaflet';
+      mapElem.style.width = settings.width;
+      mapElem.style.height = settings.height;
 
-  .leaflet-control-attribution {
-    display: var(--display, 'initial');
+      mapElem.style.pointerEvents = 'none';
+      mapElem.style.transition = 'opacity 0.3334s 0.1s';
+      mapElem.style.opacity = '0';
+
+      const mapInstance = Leaflet.map(mapElem, settings.leafletOptions);
+      const layer = new Leaflet.TileLayer(settings.url);
+      mapInstance.addLayer(layer);
+
+      layer.addEventListener('load', () => {
+        mapElem.style.opacity = '1';
+        mapElem.style.pointerEvents = 'initial';
+      });
+    }
   }
-</style>
+
+  window.customElements.define('astro-geo-map', AstroGeoMap);
+</script>

@@ -15,6 +15,8 @@
   "files": [
     "index.ts",
     "Props.ts",
+    "env.d.ts",
+    "render.ts",
     "GeoMap.astro",
     "CHANGELOG.md"
   ],
@@ -43,7 +45,8 @@
   ],
   "license": "ISC",
   "devDependencies": {
-    "@types/leaflet": "^1.9.0"
+    "@types/leaflet": "^1.9.0",
+    "puppeteer": "^19.1.0"
   },
   "dependencies": {
     "leaflet": "1.9.0"
