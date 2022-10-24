@@ -32,7 +32,7 @@
     "json-schema": "^0.4.0"
   },
   "author": "Julian Cataldo",
-  "homepage": "https://code.juliancataldo.com/component/testbed",
+  "homepage": "https://code.juliancataldo.com/component/astro-testbed",
   "bugs": {
     "url": "https://github.com/JulianCataldo/web-garden/issues"
   },
