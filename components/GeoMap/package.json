@@ -43,7 +43,7 @@
   ],
   "license": "ISC",
   "devDependencies": {
-    "@types/leaflet": "^1.9.0"
+    "@types/leaflet": "1.9.0"
   },
   "dependencies": {
     "leaflet": "1.9.0"

@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@types/lodash-es': ^4.17.6
+  '@types/lodash-es': 4.17.6
   lodash-es: ^4.17.21
 
 dependencies:

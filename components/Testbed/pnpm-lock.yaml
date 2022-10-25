@@ -4,10 +4,10 @@ specifiers:
   '@rjsf/core': 5.0.0-beta.10
   '@rjsf/utils': 5.0.0-beta.10
   '@rjsf/validator-ajv6': 5.0.0-beta.10
-  '@types/marked': ^4.0.7
-  '@types/react': ^18.0.21
+  '@types/marked': 4.0.7
+  '@types/react': 18.0.23
   clsx: ^1.2.1
-  json-schema: ^0.4.0
+  json-schema: 0.4.0
   marked: ^4.1.1
   react: ^18.2.0
   ts-morph: ^16.0.0
@@ -25,7 +25,7 @@ dependencies:
 
 devDependencies:
   '@types/marked': 4.0.7
-  '@types/react': 18.0.21
+  '@types/react': 18.0.23
   json-schema: 0.4.0
 
 packages:
@@ -114,8 +114,8 @@ packages:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
     dev: true
 
-  /@types/react/18.0.21:
-    resolution: {integrity: sha512-7QUCOxvFgnD5Jk8ZKlUAhVcRj7GuJRjnjjiY/IUBWKgOlnvDvTMLD4RTF7NPyVmbRhNrbomZiOepg7M/2Kj1mA==}
+  /@types/react/18.0.23:
+    resolution: {integrity: sha512-R1wTULtCiJkudAN2DJGoYYySbGtOdzZyUWAACYinKdiQC8auxso4kLDUhQ7AJ2kh3F6A6z4v69U6tNY39hihVQ==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2

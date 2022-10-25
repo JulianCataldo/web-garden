@@ -27,9 +27,9 @@
     "index.js"
   ],
   "devDependencies": {
-    "@types/marked": "^4.0.7",
-    "@types/react": "^18.0.21",
-    "json-schema": "^0.4.0"
+    "@types/marked": "4.0.7",
+    "@types/react": "18.0.23",
+    "json-schema": "0.4.0"
   },
   "author": "Julian Cataldo",
   "homepage": "https://code.juliancataldo.com/component/testbed",

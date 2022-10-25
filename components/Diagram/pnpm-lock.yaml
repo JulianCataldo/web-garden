@@ -1,9 +1,9 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@types/mermaid': ^8.2.9
+  '@types/mermaid': 8.2.9
   mermaid: ^9.1.6
-  parcel: ^2.7.0
+  parcel: 2.7.0
   puppeteer: ^18.0.2
   unist-util-visit: ^4.1.0
 
