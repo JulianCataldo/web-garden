@@ -16,7 +16,7 @@ interface Settings {
 }
 export interface Props {
   settings: Settings;
-  hash: string;
+  mapId: string;
   outputDir: string;
 }
 export async function render(props: Props) {
@@ -55,7 +55,7 @@ export async function render(props: Props) {
   await (
     await page.$('div')
   )?.screenshot({
-    path: path.join(base, `${props.hash}.png`),
+    path: path.join(base, `${props.mapId}.png`),
   });
 
   await browser.close();

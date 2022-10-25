@@ -1,32 +1,36 @@
 ---
-import { createHash } from 'node:crypto';
+import type { LatLngTuple } from 'leaflet';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
+import { paramCase } from 'change-case';
+
 // HACK: Vite is not resolving CSS URLs
 // import leafletStylesUrl from 'leaflet/dist/leaflet.css?url';
 /* ·········································································· */
 import type { Props as baseProps } from './Props';
 /* —————————————————————————————————————————————————————————————————————————— */
+
 export interface Props extends baseProps {}
 const {
   ssr = true,
   htmlAttributes = {},
 
-  address = null,
+  url = undefined,
+  address = undefined,
 
   width = '25rem',
   height = '25rem',
 
-  url = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
-
-  center = [43.389636, 5.3964332],
-  zoom = 10,
   ...leafletOptions
 } = Astro.props as Props;
 
+const defaultUrl = 'https://{s}.tile.osm.org/{z}/{x}/{y}.png';
+const defaultCenter: LatLngTuple = [43.389636, 5.3964332];
+const defaultZoom = 10;
+
 /* ·········································································· */
 
-let coordFromAddress = [0, 0];
+let coordFromAddress: LatLngTuple = [0, 0];
 if (address) {
   const locationApiUrl =
     'https://nominatim.openstreetmap.org/search?format=json&limit=3&q=';
@@ -37,14 +41,14 @@ if (address) {
     coordFromAddress = [parseFloat(res[0].lat), parseFloat(res[0].lon)];
   }
 }
+console.log(coordFromAddress);
 const settings = {
-  url,
   address,
   width,
   height,
+  url,
   leafletOptions: {
-    center: address ? coordFromAddress : center,
-    zoom,
+    center: address ? coordFromAddress : undefined,
     ...leafletOptions,
   },
 };
@@ -64,17 +68,36 @@ let src;
 if (ssr) {
   const { render } = await import('./render');
 
-  const hash = createHash('sha256')
-    .update(JSON.stringify(settings))
-    .digest('hex');
+  const mapId = paramCase(JSON.stringify(settings))
+    .replaceAll('http://', '')
+    .replaceAll('address-', '@')
+    .replaceAll('width', '@w')
+    .replaceAll('height', '@h')
+    .replaceAll('center', '@c')
+    .replaceAll('zoom', '@z')
+    .replace('-leaflet-options', '');
+  console.log({ mapId, d: JSON.stringify(settings) });
 
-  const fileName = `${hash}.png`;
+  const fileName = `${mapId}.png`;
   const fPath = path.join(outputDir, fileName);
   src = path.join(urlPath, fileName);
 
   const abs = path.join(process.cwd(), fPath);
   if (!existsSync(abs)) {
-    await render({ settings, hash, outputDir });
+    await render({
+      settings: {
+        ...settings,
+        url: settings.url || defaultUrl,
+        leafletOptions: {
+          ...settings.leafletOptions,
+          zoom: settings.leafletOptions.zoom || defaultZoom,
+          center: settings.leafletOptions.center || defaultCenter,
+        },
+      },
+
+      mapId,
+      outputDir,
+    });
   }
 }
 ---
@@ -123,7 +146,10 @@ if (ssr) {
       link.addEventListener('load', () => {
         holderShadow.appendChild(mapElem);
 
-        const mapInstance = Leaflet.map(mapElem, settings.leafletOptions);
+        const mapInstance = Leaflet.map(mapElem, {
+          attributionControl: false,
+          ...settings.leafletOptions,
+        });
         const layer = new Leaflet.TileLayer(settings.url, {
           // TODO: Proper support for retina
           // Actual problem: too small, why?
