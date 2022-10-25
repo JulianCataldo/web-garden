@@ -1,22 +1,12 @@
 import path from 'node:path';
 import fs from 'node:fs/promises';
-import type { PuppeteerNode } from 'puppeteer';
+import puppeteer from 'puppeteer';
 import type { MapOptions } from 'leaflet';
-
 /* —————————————————————————————————————————————————————————————————————————— */
 
 const ASSETS = path.join(process.cwd(), 'node_modules/leaflet/dist');
 const SCRIPT = await fs.readFile(path.join(ASSETS, 'leaflet.js'), 'utf8');
 const STYLES = await fs.readFile(path.join(ASSETS, 'leaflet.css'), 'utf8');
-
-// NOTE: Needed because static import is not working.
-// End-goal is to provide opt-out of SSR image w. puppeteer.
-const puppeteer = (await import(
-  path.join(
-    process.cwd(),
-    './node_modules/puppeteer/lib/esm/puppeteer/puppeteer.js',
-  )
-)) as PuppeteerNode;
 
 interface Settings {
   url: string;
@@ -27,7 +17,7 @@ interface Settings {
 export interface Props {
   settings: Settings;
   hash: string;
-  cacheDir: string;
+  outputDir: string;
 }
 export async function render(props: Props) {
   const browser = await puppeteer.launch();
@@ -59,7 +49,7 @@ export async function render(props: Props) {
 
   await page.waitForNetworkIdle();
 
-  const base = path.join(process.cwd(), props.cacheDir);
+  const base = props.outputDir;
   await fs.mkdir(base, { recursive: true });
 
   await (

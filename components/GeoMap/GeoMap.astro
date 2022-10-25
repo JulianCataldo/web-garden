@@ -1,6 +1,9 @@
 ---
 import { createHash } from 'node:crypto';
-import leafletStylesUrl from 'leaflet/dist/leaflet.css?url';
+import { existsSync } from 'node:fs';
+import path from 'node:path';
+// HACK: Vite is not resolving CSS URLs
+// import leafletStylesUrl from 'leaflet/dist/leaflet.css?url';
 /* ·········································································· */
 import type { Props as baseProps } from './Props';
 /* —————————————————————————————————————————————————————————————————————————— */
@@ -21,6 +24,7 @@ const {
   ...leafletOptions
 } = Astro.props as Props;
 
+/* ·········································································· */
 
 let coordFromAddress = [0, 0];
 if (address) {
@@ -45,25 +49,32 @@ const settings = {
   },
 };
 
+/* ·········································································· */
+
+// HACK: Workaround for Vite bug, we use this instead of a local CSS
+const leafletStylesUrl =
+  'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0/leaflet.min.css';
+
+const outputDir = import.meta.env.GEO_MAP_OUTPUT_DIR ?? 'public/assets/maps';
+const urlPath = import.meta.env.GEO_MAP_URL_PATH ?? '/assets/maps';
+
+/* ·········································································· */
 /* — SSR ONLY — */
 let src;
-async function getSrc(fPath: string) {
-  return import(`${fPath}?url`).then((r) => r.default).catch(() => null);
-}
 if (ssr) {
   const { render } = await import('./render');
 
   const hash = createHash('sha256')
     .update(JSON.stringify(settings))
     .digest('hex');
-  const cacheDir =
-    import.meta.env.GEO_MAP_CACHE_DIR ?? '/node_modules/.astro-geo-map';
-  const fPath = `${cacheDir}/${hash}.png`;
 
-  src = await getSrc(fPath);
-  if (src !== fPath) {
-    await render({ settings, hash, cacheDir });
-    src = await getSrc(fPath);
+  const fileName = `${hash}.png`;
+  const fPath = path.join(outputDir, fileName);
+  src = path.join(urlPath, fileName);
+
+  const abs = path.join(process.cwd(), fPath);
+  if (!existsSync(abs)) {
+    await render({ settings, hash, outputDir });
   }
 }
 ---
@@ -102,22 +113,30 @@ if (ssr) {
       link.href = styleUrl;
       holderShadow.appendChild(link);
 
-      const mapElem = holderShadow.appendChild(document.createElement('div'));
-
+      const mapElem = document.createElement('div');
       mapElem.style.width = settings.width;
       mapElem.style.height = settings.height;
-
       mapElem.style.pointerEvents = 'none';
       mapElem.style.transition = 'opacity 0.3334s 0.1s';
       mapElem.style.opacity = '0';
 
-      const mapInstance = Leaflet.map(mapElem, settings.leafletOptions);
-      const layer = new Leaflet.TileLayer(settings.url);
-      mapInstance.addLayer(layer);
+      link.addEventListener('load', () => {
+        holderShadow.appendChild(mapElem);
 
-      layer.addEventListener('load', () => {
-        mapElem.style.opacity = '1';
-        mapElem.style.pointerEvents = 'initial';
+        const mapInstance = Leaflet.map(mapElem, settings.leafletOptions);
+        const layer = new Leaflet.TileLayer(settings.url, {
+          // TODO: Proper support for retina
+          // Actual problem: too small, why?
+          // detectRetina: true,
+          //// tileSize: 64 * 2,
+          //// zoomOffset: 1,
+        });
+        mapInstance.addLayer(layer);
+
+        layer.addEventListener('load', () => {
+          mapElem.style.opacity = '1';
+          mapElem.style.pointerEvents = 'initial';
+        });
       });
     }
   }
