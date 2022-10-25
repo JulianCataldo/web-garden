@@ -9,6 +9,8 @@ const {
   ssr = true,
   htmlAttributes = {},
 
+  address = null,
+
   width = '25rem',
   height = '25rem',
 
@@ -19,11 +21,28 @@ const {
   ...leafletOptions
 } = Astro.props as Props;
 
+
+let coordFromAddress = [0, 0];
+if (address) {
+  const locationApiUrl =
+    'https://nominatim.openstreetmap.org/search?format=json&limit=3&q=';
+  const res = await fetch(
+    `${locationApiUrl}${encodeURIComponent(address)}`,
+  ).then((r) => r.json());
+  if (res.length) {
+    coordFromAddress = [parseFloat(res[0].lat), parseFloat(res[0].lon)];
+  }
+}
 const settings = {
   url,
+  address,
   width,
   height,
-  leafletOptions: { center, zoom, ...leafletOptions },
+  leafletOptions: {
+    center: address ? coordFromAddress : center,
+    zoom,
+    ...leafletOptions,
+  },
 };
 
 /* — SSR ONLY — */

@@ -14,6 +14,13 @@ export interface Props extends MapOptions {
   /* ————————————————————————————— */
 
   /**
+   * **Default**: `null`
+   * */
+  address?: null | string;
+
+  /* ————————————————————————————— */
+
+  /**
    * CSS Unit (fixed, no relative unit)
    *
    * **Default**: `'25rem'`
