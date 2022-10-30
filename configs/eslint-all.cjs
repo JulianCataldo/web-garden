@@ -9,5 +9,6 @@ module.exports = {
     './eslint-tsx.cjs',
     './eslint-astro.cjs',
     './eslint-vue.cjs',
+    './eslint-mdx.cjs',
   ],
 };

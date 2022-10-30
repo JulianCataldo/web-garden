@@ -136,7 +136,7 @@ module.exports = {
   extends: [
     './node_modules/webdev-configs/eslint-all.cjs',
 
-    // Or cherry pick one or more LANG: astro | js | jsx | ts | tsx | vue
+    // Or cherry pick one or more LANG: astro | js | jsx | ts | tsx | vue | mdx
     // './node_modules/webdev-configs/eslint-{LANG}.cjs',
   ],
 };
