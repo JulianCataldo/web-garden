@@ -35,6 +35,7 @@ module.exports = {
           'error',
           { max: 160, skipComments: true, skipBlankLines: true },
         ],
+        'no-unused-vars': ['error', { varsIgnorePattern: 'Props' }],
       },
       globals: {
         astroHTML: 'readonly',
