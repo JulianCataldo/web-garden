@@ -1,10 +1,17 @@
-@mixin color-mode($is: light) {
+@mixin color-mode($is: light, $scoped: false) {
   @media (prefers-color-scheme: '#{$is}') {
     @content;
   }
 
-  @at-root :global([data-color-mode="#{$is}"]) &,
-    &[data-color-mode="#{$is}"] {
-    @content;
+  @if $scoped {
+    @at-root :global([data-color-mode='#{$is}']) &,
+      :global(&[data-color-mode='#{$is}']) {
+      @content;
+    }
+  } @else {
+    @at-root [data-color-mode='#{$is}'] &,
+      &[data-color-mode='#{$is}'] {
+      @content;
+    }
   }
 }
