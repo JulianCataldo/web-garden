@@ -11,6 +11,7 @@
 
     mediaQueryDark.addEventListener('change', (event) => {
       colorMode = event.matches ? 'dark' : 'light';
+      localStorage.setItem('colorMode', colorMode);
       root.setAttribute('data-color-mode', colorMode);
     });
     const savedSetting = localStorage.getItem('colorMode');
@@ -21,16 +22,15 @@
 </script>
 
 <script>
-  const switches = document.querySelectorAll('[data-color-mode-switch]');
   const root = document.documentElement;
 
-  switches.forEach((switchElem) => {
-    switchElem.addEventListener('click', () => {
+  document.addEventListener('click', (event) => {
+    if (event.target.hasAttribute('data-color-mode-switch')) {
       const currentMode = root.getAttribute('data-color-mode');
       const colorMode = currentMode === 'light' ? 'dark' : 'light';
       root.setAttribute('data-color-mode', colorMode);
 
       localStorage.setItem('colorMode', colorMode);
-    });
+    }
   });
 </script>
