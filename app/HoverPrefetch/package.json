@@ -20,6 +20,12 @@
     "url": "https://github.com/JulianCataldo/web-garden",
     "directory": "app/HoverPrefetch"
   },
+  "files": [
+    "index.ts",
+    "HoverPrefetch.astro",
+    "Props.ts",
+    "CHANGELOG.md"
+  ],
   "license": "ISC",
   "author": "Julian Cataldo",
   "type": "module",
