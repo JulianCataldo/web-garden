@@ -20,6 +20,11 @@
     "url": "https://github.com/JulianCataldo/web-garden",
     "directory": "app/Resets"
   },
+  "files": [
+    "styles/*",
+    "Resets.astro",
+    "CHANGELOG.md"
+  ],
   "license": "ISC",
   "author": "Julian Cataldo",
   "type": "module",
