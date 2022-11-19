@@ -3,7 +3,7 @@
 ---
 
 <script is:inline>
-  function assignCurrentColorModeToRoot() {
+  {
     const root = document.documentElement;
     const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)');
 
@@ -18,7 +18,6 @@
 
     root.setAttribute('data-color-mode', savedSetting || colorMode);
   }
-  assignCurrentColorModeToRoot();
 </script>
 
 <script>
