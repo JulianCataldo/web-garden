@@ -1,13 +1,13 @@
 import throttle from 'lodash-es/throttle';
+/* ========================================================================== */
 
-// let accumulation = 0;
 let prevPos = 0;
 let isScrollingUp = false;
 
 const root = document.documentElement;
 
 function flip(attr: string, state: boolean) {
-  root.setAttribute(`data-${attr}`, `${state}`);
+  root.setAttribute(attr, String(state));
 }
 
 function scrollHandler() {
@@ -21,14 +21,12 @@ function scrollHandler() {
   if (delta < -15 || delta > 15) {
     isScrollingUp = scrollDirection;
   }
-  // console.log({ accumulation, delta });
 
-  flip('is-scrolling-up', isScrollingUp);
-  flip('is-bottom', isBottom);
-  flip('is-top', isTop);
+  flip('data-is-scrolling-up', isScrollingUp);
+  flip('data-is-bottom', isBottom);
+  flip('data-is-top', isTop);
 
   prevPos = pos;
-  // console.log({ pos });
 }
 
 document.addEventListener(
@@ -38,14 +36,12 @@ document.addEventListener(
 );
 
 window.addEventListener('load', () => {
-  // console.log({ event });
   const windowHeight = window.innerHeight;
   const documentHeight = document.body.getBoundingClientRect().height;
-  // console.log({ documentHeight, windowHeight });
 
   if (documentHeight / windowHeight > 2) {
-    flip('has-scroll', true);
+    flip('data-has-scroll', true);
   } else {
-    flip('has-scroll', false);
+    flip('data-has-scroll', false);
   }
 });

@@ -29,7 +29,22 @@
   "license": "ISC",
   "author": "Julian Cataldo",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./index.ts"
+    },
+    "./scss": {
+      "import": "./use-scroll-observer.scss"
+    }
+  },
   "main": "index.ts",
+  "files": [
+    "use-scroll-observer.scss",
+    "ScrollObserver.client.ts",
+    "ScrollObserver.astro",
+    "index.ts",
+    "CHANGELOG.md"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

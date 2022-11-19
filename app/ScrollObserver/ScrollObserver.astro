@@ -3,15 +3,12 @@
 ---
 
 <script is:inline>
-  const root = document.documentElement;
-
-  function flip(attr, state) {
-    root.setAttribute(`data-${attr}`, `${state}`);
+  {
+    const root = document.documentElement;
+    root.setAttribute('data-is-scrolling-up', 'false');
+    root.setAttribute('data-is-bottom', 'false');
+    root.setAttribute('data-is-top', 'true');
   }
-
-  flip('is-scrolling-up', false);
-  flip('is-bottom', false);
-  flip('is-top', true);
 </script>
 
 <script>

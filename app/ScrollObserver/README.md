@@ -69,7 +69,7 @@ export default defineConfig({
       preprocessorOptions: {
         scss: {
           additionalData: ` 
-            @use "astro-scroll-observer/use-scroll-observer.scss" as *;
+            @use "astro-scroll-observer/scss" as *;
           `,
         },
       },

@@ -1,10 +1,10 @@
-@use "sass:list";
+@use 'sass:list';
 
 @function g($enclosed, $scoped) {
   @if $scoped {
-    @return ":global([data-is-#{$enclosed}]) &";
+    @return ':global([data-is-#{$enclosed}]) &';
   } @else {
-    @return "[data-is-#{$enclosed}] &";
+    @return '[data-is-#{$enclosed}] &';
   }
 }
 
@@ -12,23 +12,23 @@
   $sels: ();
 
   @if $top {
-    $sels: list.append($sels, g("top=true", $scoped), comma);
+    $sels: list.append($sels, g('top=true', $scoped), comma);
   }
   @if $bottom {
-    $sels: list.append($sels, g("bottom=true", $scoped), comma);
+    $sels: list.append($sels, g('bottom=true', $scoped), comma);
   }
   @if $going-up {
-    $sels: list.append($sels, g("scrolling-up=true", $scoped), comma);
+    $sels: list.append($sels, g('scrolling-up=true', $scoped), comma);
   }
 
   @if $top == false {
-    $sels: list.append($sels, g("top=false", $scoped), comma);
+    $sels: list.append($sels, g('top=false', $scoped), comma);
   }
   @if $bottom == false {
-    $sels: list.append($sels, g("bottom=false", $scoped), comma);
+    $sels: list.append($sels, g('bottom=false', $scoped), comma);
   }
   @if $going-up == false {
-    $sels: list.append($sels, g("scrolling-up=false", $scoped), comma);
+    $sels: list.append($sels, g('scrolling-up=false', $scoped), comma);
   }
 
   @at-root #{$sels} {
@@ -38,11 +38,11 @@
 
 @mixin has-scroll($scoped: false) {
   @if $scoped {
-    @at-root :global([data-has-scroll="true"]) & {
+    @at-root :global([data-has-scroll='true']) & {
       @content;
     }
   } @else {
-    @at-root [data-has-scroll="true"] & {
+    @at-root [data-has-scroll='true'] & {
       @content;
     }
   }
