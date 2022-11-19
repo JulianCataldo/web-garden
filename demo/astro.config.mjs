@@ -61,6 +61,8 @@ export default defineConfig({
   ],
 
   markdown: {
+    // TODO: Implement
+    // extendDefaultPlugins: true,
     remarkPlugins: [
       //
       remarkGfm,
@@ -120,11 +122,4 @@ export default defineConfig({
       },
     },
   },
-
-  // markdown: {
-  //   remarkPlugins: [ ],
-  //   rehypePlugins: [],
-  // },
-
-  experimental: { integrations: true },
 });
