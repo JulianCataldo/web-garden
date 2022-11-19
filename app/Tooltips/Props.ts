@@ -1,11 +1,5 @@
 import type { Placement, Props as TippyProps } from 'tippy.js';
 
-declare global {
-  interface Window {
-    tooltipsOptions: TippyProps;
-  }
-}
-
 export interface Props extends Partial<TippyProps> {
   /**
    * **Default**: `true`

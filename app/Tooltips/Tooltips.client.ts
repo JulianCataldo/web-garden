@@ -3,7 +3,16 @@ import type { Props as TippyProps, Placement } from 'tippy.js';
 
 const elements = document.querySelectorAll('[title]');
 
-const globalOptions: TippyProps = {
+const optionsElem = document.querySelector('[data-tooltips-options]');
+let userOptions: Partial<TippyProps> = {};
+if (optionsElem) {
+  try {
+    userOptions = JSON.parse(optionsElem?.innerHTML);
+  } catch (e) {
+    throw new Error(e);
+  }
+}
+const globalOptions: Partial<TippyProps> = {
   /* Defaults */
   allowHTML: true,
   theme: 'default',
@@ -12,7 +21,7 @@ const globalOptions: TippyProps = {
   placement: 'auto',
   interactive: true,
   /* Global user override */
-  ...window.tooltipsOptions,
+  ...userOptions,
 };
 
 for (let i = 0, len = elements.length; i < len; i++) {

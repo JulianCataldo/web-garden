@@ -7,9 +7,15 @@ export interface Props extends baseProps {}
 const props = { ...Astro.props } as Props;
 ---
 
-<script define:vars={{ props }}>
-  window.tooltipsOptions = { ...props };
-</script>
+{
+  Object.entries(props).length > 0 && (
+    <script
+      type="application/json"
+      data-tooltips-options
+      set:html={JSON.stringify(props)}
+    />
+  )
+}
 
 <script>
   import './Tooltips.client.ts';
