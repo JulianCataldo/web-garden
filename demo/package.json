@@ -7,22 +7,19 @@
     "start": "astro dev",
     "build": "./gather-content.sh && astro build",
     "serve": "serve -p 2425 ./dist",
-    "build:serve": "pnpm run build && pnpm run serve",
+    "build:serve": "pnpm run build && pnpm run preview",
     "preview": "astro preview"
   },
   "dependencies": {
-    "@astrojs/mdx": "0.10.0",
-    "@astrojs/react": "1.0.0",
+    "@astrojs/mdx": "0.11.4",
+    "@astrojs/react": "1.2.1",
     "@astrojs/sitemap": "1.0.0",
-    "@astropub/flow": "0.2.2",
-    "@fontsource/exo-2": "4.5.9",
-    "@iconify-json/system-uicons": "1.1.4",
+    "@fontsource/exo-2": "4.5.10",
     "@julian_cataldo/astro-lightbox": "link:../app/Lightbox",
     "@julian_cataldo/astro-resets": "link:../app/Resets",
     "@wbmnky/license-report-generator": "^2.1.3",
-    "GoogleAnalytics": "link:../app/GoogleAnalytics",
     "asciinema-player": "^3.0.1",
-    "astro": "1.0.6",
+    "astro": "1.5.2",
     "astro-base-document": "link:../app/BaseDocument",
     "astro-breakpoints": "link:../app/Breakpoints",
     "astro-color-mode": "link:../app/ColorMode",
@@ -44,24 +41,21 @@
     "clipboard": "2.0.11",
     "glob": "8.0.3",
     "glob-promise": "5.0.0",
-    "heroicons": "1.0.6",
-    "leaflet": "1.8.0",
+    "leaflet": "1.9.2",
     "mermaid": "^9.1.7",
-    "puppeteer": "^18.0.2",
+    "puppeteer": "^19.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rehype-rewrite": "3.0.6",
     "remark-gfm": "3.0.1",
-    "sass": "1.54.4",
+    "sass": "1.55.0",
     "tsparticles": "1.43.0",
     "tsparticles-preset-stars": "1.43.1",
-    "unist-util-visit": "^4.1.1",
-    "unplugin-icons": "0.14.8"
+    "unist-util-visit": "^4.1.1"
   },
   "devDependencies": {
-    "@types/leaflet": "1.7.11",
-    "astro-parcel": "0.4.1",
-    "serve": "14.0.1"
+    "@types/leaflet": "1.9.0",
+    "astro-robots-txt": "^0.3.10"
   },
   "packageManager": "pnpm@7.9.0"
 }
