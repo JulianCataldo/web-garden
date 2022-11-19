@@ -10,7 +10,7 @@
     }
   } @else {
     @at-root [data-color-mode='#{$is}'] &,
-      &[data-color-mode='#{$is}'] {
+      [data-color-mode='#{$is}']#{&} {
       @content;
     }
   }

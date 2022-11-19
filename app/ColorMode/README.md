@@ -96,15 +96,30 @@ export default defineConfig({
 Then, use it like this in your stylesheets:
 
 ```scss
-span {
+.my-layout {
+  :is(.my-link, body) {
+    @include color-mode(light) {
+      color: black;
+      background-color: white;
+      // ...
+    }
+    @include color-mode(dark) {
+      color: white;
+      background-color: black;
+      // ...
+    }
+  }
+}
+
+.some-class {
   @include color-mode(light) {
-    color: black;
-    background-color: white;
+    color: blue;
+    background-color: yellow;
     // ...
   }
   @include color-mode(dark) {
-    color: white;
-    background-color: black;
+    color: yellow;
+    background-color: blue;
     // ...
   }
 }
