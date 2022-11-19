@@ -7,6 +7,7 @@ import sitemap from '@astrojs/sitemap';
 import remarkMermaid from 'astro-diagram/remark-mermaid';
 import { visit } from 'unist-util-visit';
 import remarkGfm from 'remark-gfm';
+import robotsTxt from 'astro-robots-txt';
 
 // import react from '@astrojs/react';
 
@@ -56,6 +57,7 @@ export default defineConfig({
     //     // NOTE: index.md file will not get proccesed, so please avoid it
     //   },
     // }),
+    robotsTxt(),
   ],
 
   markdown: {
