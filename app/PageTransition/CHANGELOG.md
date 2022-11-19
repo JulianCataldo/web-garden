@@ -3,46 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## 0.5.4 (2022-10-17)
+## [0.5.5](https://github.com/JulianCataldo/web-garden/compare/astro-page-transition@0.5.4...astro-page-transition@0.5.5) (2022-11-19)
 
+**Note:** Version bump only for package astro-page-transition
+
+## 0.5.4 (2022-10-17)
 
 ### Bug Fixes
 
-* remove package prefix, simplify import method ([73bd31b](https://github.com/JulianCataldo/web-garden/commit/73bd31bf1f501624036a74a3f19c5bf83cc9c0a4))
-
-
+- remove package prefix, simplify import method ([73bd31b](https://github.com/JulianCataldo/web-garden/commit/73bd31bf1f501624036a74a3f19c5bf83cc9c0a4))
 
 ## [0.11.5](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-transition@0.11.4...@julian_cataldo/astro-transition@0.11.5) (2022-09-22)
 
 **Note:** Version bump only for package @julian_cataldo/astro-transition
 
-
-
-
-
 ## [0.11.4](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-transition@0.11.3...@julian_cataldo/astro-transition@0.11.4) (2022-08-20)
 
 **Note:** Version bump only for package @julian_cataldo/astro-transition
-
-
-
-
 
 ## [0.11.3](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-transition@0.11.2...@julian_cataldo/astro-transition@0.11.3) (2022-07-31)
 
 **Note:** Version bump only for package @julian_cataldo/astro-transition
 
-
-
-
-
 ## [0.11.2](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-transition@0.11.1...@julian_cataldo/astro-transition@0.11.2) (2022-07-24)
 
 **Note:** Version bump only for package @julian_cataldo/astro-transition
-
-
-
-
 
 ## [0.11.1](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-transition@0.11.0...@julian_cataldo/astro-transition@0.11.1) (2022-07-18)
 

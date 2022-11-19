@@ -1,6 +1,6 @@
 {
   "name": "astro-google-analytics",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Provides Google Analytics 4 snippet injection.",
   "keywords": [
     "astro",

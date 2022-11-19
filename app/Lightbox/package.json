@@ -1,6 +1,6 @@
 {
   "name": "@julian_cataldo/astro-lightbox",
-  "version": "0.10.10",
+  "version": "0.10.11",
   "description": "Simple lightbox component.",
   "keywords": [
     "astro",

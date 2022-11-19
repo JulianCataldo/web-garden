@@ -1,6 +1,6 @@
 {
   "name": "astro-tooltips",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Progressively enhanced. This component globally override regular `title` attributes on all links with Tippy.js tooltips.",
   "keywords": [
     "astro",
