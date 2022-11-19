@@ -87,7 +87,12 @@ export default defineConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `
+          additionalData(source, filePath) {
+            // Exclude file, prevents module loop
+            if (filePath.includes('use-')) return source;
+            if (filePath.includes('src/themes/default/tokens')) return source;
+            if (filePath.includes('src/themes/selector')) return source;
+            return `
             @use "sass:color";
 
             @use "astro-breakpoints/use-breakpoints.scss" as * with (
@@ -100,9 +105,15 @@ export default defineConfig({
                 "xxl": ${breakpoints.xxl},
               )
             );
+            
+            @use 'astro-scroll-observer/use-scroll-observer.scss' as *;
 
-            @use "./src/themes" as *;
-          `,
+            @use './src/themes/default/tokens' as *;
+            @use './src/themes/selector' as *;
+
+            ${source}
+          `;
+          },
         },
       },
     },
