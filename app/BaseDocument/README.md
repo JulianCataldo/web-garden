@@ -1,32 +1,38 @@
 # 🚀  Astro — Base document enclosure
 
-[![NPM](https://img.shields.io/npm/v/@julian_cataldo/astro-base)](https://www.npmjs.com/package/@julian_cataldo/astro-base)
-![Downloads](https://img.shields.io/npm/dt/@julian_cataldo/astro-base.svg)
-[![ISC License](https://img.shields.io/npm/l/@julian_cataldo/astro-base)](https://github.com/JulianCataldo/web-garden/blob/develop/LICENSE)
+[![NPM](https://img.shields.io/npm/v/astro-base-document)](https://www.npmjs.com/package/astro-base-document)
+![Downloads](https://img.shields.io/npm/dt/astro-base-document.svg)
+[![ISC License](https://img.shields.io/npm/l/astro-base-document)](https://github.com/JulianCataldo/web-garden/blob/develop/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)
 
 <!-- AUTO-GENERATED-CONTENT:START (FILE:src=../../common.header.md) -->
 <!-- The below content is automatically added from ../../common.header.md -->
+
 [![Astro](https://img.shields.io/badge/Astro-333333.svg?logo=astro)](https://astro.build)
 [![TypeScript](https://img.shields.io/badge/TypeScript-333333.svg?logo=typescript)](http://www.typescriptlang.org/)
 [![Prettier](https://img.shields.io/badge/Prettier-333333.svg?logo=prettier)](https://prettier.io)
 [![EditorConfig](https://img.shields.io/badge/EditorConfig-333333.svg?logo=editorconfig)](https://editorconfig.org)
 [![ESLint](https://img.shields.io/badge/ESLint-3A33D1?logo=eslint)](https://eslint.org)
+
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 <!-- AUTO-GENERATED-CONTENT:START (PKGJSON:template=${description}) -->
+
 Provide sensible defaults for HTML base document.  
 The goal is to reduce boilerplate when using multiple layouts in Astro projects.
+
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ---
 
 <!-- AUTO-GENERATED-CONTENT:START (TOC) -->
-- [📦  Installation](#%C2%A0%C2%A0installation)
-- [🛠  Usage](#%C2%A0%C2%A0usage)
-- [🎉  Result](#%C2%A0%C2%A0result)
-- [💈  Interface](#%C2%A0%C2%A0interface)
-- [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](#live-demo-%C2%A0%C2%A0-documentation-website%C2%A0%E2%8E%8B)
+
+- [�  Astro — Base document enclosure](#astro--base-document-enclosure)
+  - [📦  Installation](#installation)
+  - [🛠  Usage](#usage)
+  - [🎉  Result](#result)
+  - [💈  Interface](#interface)
+  - [LIVE DEMO  🎭  DOCUMENTATION WEBSITE ⎋](#live-demo--documentation-website)
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ---
@@ -34,9 +40,11 @@ The goal is to reduce boilerplate when using multiple layouts in Astro projects.
 ## 📦  Installation
 
 <!-- AUTO-GENERATED-CONTENT:START (INSTALLCMD) -->
+
 ```sh
 pnpm i astro-base-document
 ```
+
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## 🛠  Usage
@@ -118,6 +126,7 @@ with **`.js &`** / **`:not(.js) &`** SCSS selectors.
 
 <!-- AUTO-GENERATED-CONTENT:START (CODE:src=./Props.ts) -->
 <!-- The below code snippet is automatically added from ./Props.ts -->
+
 ```ts
 /// <reference types="astro/astro-jsx" />
 
@@ -136,6 +145,7 @@ export interface Props extends astroHTML.JSX.HTMLAttributes {
   redirectTo?: string | null;
 }
 ```
+
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 <!-- AUTO-GENERATED-CONTENT:START (FILE:src=../../common.footer.md) -->

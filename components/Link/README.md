@@ -1,8 +1,8 @@
 # 🚀  Astro — Link, with smart optimizations
 
-[![NPM](https://img.shields.io/npm/v/@julian_cataldo/astro-link)](https://www.npmjs.com/package/@julian_cataldo/astro-link)
-![Downloads](https://img.shields.io/npm/dt/@julian_cataldo/astro-link.svg)
-[![ISC License](https://img.shields.io/npm/l/@julian_cataldo/astro-link)](https://github.com/JulianCataldo/web-garden/blob/develop/LICENSE)
+[![NPM](https://img.shields.io/npm/v/astro-link)](https://www.npmjs.com/package/astro-link)
+![Downloads](https://img.shields.io/npm/dt/astro-link.svg)
+[![ISC License](https://img.shields.io/npm/l/astro-link)](https://github.com/JulianCataldo/web-garden/blob/develop/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)  
 [![TypeScript](https://img.shields.io/badge/TypeScript-333333.svg?logo=typescript)](http://www.typescriptlang.org/)
 [![Prettier](https://img.shields.io/badge/Prettier-333333.svg?logo=prettier)](https://prettier.io)

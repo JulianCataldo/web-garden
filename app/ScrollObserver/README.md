@@ -1,8 +1,8 @@
 # 🚀  Astro — Scroll observer
 
-[![NPM](https://img.shields.io/npm/v/@julian_cataldo/astro-scroll-observer)](https://www.npmjs.com/package/@julian_cataldo/astro-scroll-observer)
-![Downloads](https://img.shields.io/npm/dt/@julian_cataldo/astro-scroll-observer.svg)
-[![ISC License](https://img.shields.io/npm/l/@julian_cataldo/astro-scroll-observer)](https://github.com/JulianCataldo/web-garden/blob/develop/LICENSE)
+[![NPM](https://img.shields.io/npm/v/astro-scroll-observer)](https://www.npmjs.com/package/astro-scroll-observer)
+![Downloads](https://img.shields.io/npm/dt/astro-scroll-observer.svg)
+[![ISC License](https://img.shields.io/npm/l/astro-scroll-observer)](https://github.com/JulianCataldo/web-garden/blob/develop/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)  
 [![Astro](https://img.shields.io/badge/Astro-333333.svg?logo=astro)](https://astro.build)
 [![TypeScript](https://img.shields.io/badge/TypeScript-333333.svg?logo=typescript)](http://www.typescriptlang.org/)
@@ -53,7 +53,6 @@ import { ScrollObserver } from 'astro-scroll-observer';
 
   <!-- ... -->
 </head>
-<!-- ... -->
 ```
 
 ### With SCSS

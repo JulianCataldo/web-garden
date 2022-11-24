@@ -1,7 +1,7 @@
 # 🚀  Astro — Diagrams with Mermaid JS 🧜🏻‍♀️
 
 [![NPM](https://img.shields.io/npm/v/astro-diagram)](https://www.npmjs.com/package/astro-diagram)
-![Downloads](https://img.shields.io/npm/dt/@julian_cataldo/astro-diagram.svg)
+![Downloads](https://img.shields.io/npm/dt/astro-diagram.svg)
 [![ISC License](https://img.shields.io/npm/l/astro-diagram)](https://github.com/JulianCataldo/web-garden/blob/develop/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)  
 [![Astro](https://img.shields.io/badge/Astro-333333.svg?logo=astro)](https://astro.build)
