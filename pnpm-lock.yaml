@@ -4,7 +4,7 @@ specifiers:
   '@commitlint/cli': 17.1.2
   '@commitlint/config-conventional': 17.1.0
   '@commitlint/types': 17.0.0
-  '@testing-library/cypress': 8.0.3
+  '@testing-library/cypress': 8.0.7
   '@types/eslint': 8.4.7
   '@types/markdown-magic': ^1.0.1
   '@types/node': 18.11.3
@@ -70,7 +70,7 @@ devDependencies:
   '@commitlint/cli': 17.1.2
   '@commitlint/config-conventional': 17.1.0
   '@commitlint/types': 17.0.0
-  '@testing-library/cypress': 8.0.3_cypress@10.10.0
+  '@testing-library/cypress': 8.0.7_cypress@10.10.0
   '@types/eslint': 8.4.7
   '@types/markdown-magic': 1.0.1
   '@types/node': 18.11.3
@@ -1952,11 +1952,11 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@testing-library/cypress/8.0.3_cypress@10.10.0:
-    resolution: {integrity: sha512-nY2YaSbmuPo5k6kL0iLj/pGPPfka3iwb3kpTx8QN/vOCns92Saz9wfACqB8FJzcR7+lfA4d5HUOWqmTddBzczg==}
+  /@testing-library/cypress/8.0.7_cypress@10.10.0:
+    resolution: {integrity: sha512-3HTV725rOS+YHve/gD9coZp/UcPK5xhr4H0GMnq/ni6USdtzVtSOG9WBFtd8rYnrXk8rrGD+0toRFYouJNIG0Q==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
-      cypress: ^2.1.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0
+      cypress: ^2.1.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0
     dependencies:
       '@babel/runtime': 7.19.4
       '@testing-library/dom': 8.19.0
