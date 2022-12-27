@@ -16,7 +16,7 @@ specifiers:
   astro-eslint-parser: 0.7.3
   cypress: 10.10.0
   cypress-highlight: 1.2.0
-  cypress-real-events: 1.7.2
+  cypress-real-events: 1.7.6
   eslint: 8.26.0
   eslint-config-airbnb: 19.0.4
   eslint-config-airbnb-base: 15.0.0
@@ -81,7 +81,7 @@ devDependencies:
   astro-eslint-parser: 0.7.3
   cypress: 10.10.0
   cypress-highlight: 1.2.0
-  cypress-real-events: 1.7.2_cypress@10.10.0
+  cypress-real-events: 1.7.6_cypress@10.10.0
   eslint: 8.26.0
   eslint-config-airbnb: 19.0.4_43j2huhpnx3hffntymctaqzhgq
   eslint-config-airbnb-base: 15.0.0_mynvxvmq5qtyojffiqgev4x7mm
@@ -3515,10 +3515,10 @@ packages:
     resolution: {integrity: sha512-2ABckz6lECbABVPWRIg10SzDxHA4mgFmG3JgS3slSsMB7llxd1eJL6CHbPv6bZpBB06YUF3G74GXGWIuZSdGcw==}
     dev: true
 
-  /cypress-real-events/1.7.2_cypress@10.10.0:
-    resolution: {integrity: sha512-tOANHbFRlqVL5Lu8OozvxTsrYgHwCnWmXAULGc1kdBF+k1gxrrvT/42uez3AhGoT+HcytyxieXAVt0jNP4yrvA==}
+  /cypress-real-events/1.7.6_cypress@10.10.0:
+    resolution: {integrity: sha512-yP6GnRrbm6HK5q4DH6Nnupz37nOfZu/xn1xFYqsE2o4G73giPWQOdu6375QYpwfU1cvHNCgyD2bQ2hPH9D7NMw==}
     peerDependencies:
-      cypress: ^4.x || ^5.x || ^6.x || ^7.x || ^8.x || ^9.x || ^10.x
+      cypress: ^4.x || ^5.x || ^6.x || ^7.x || ^8.x || ^9.x || ^10.x || ^11.x || ^12.x
     dependencies:
       cypress: 10.10.0
     dev: true

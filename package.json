@@ -39,7 +39,7 @@
     "astro-eslint-parser": "0.7.3",
     "cypress": "10.10.0",
     "cypress-highlight": "1.2.0",
-    "cypress-real-events": "1.7.2",
+    "cypress-real-events": "1.7.6",
     "eslint": "8.26.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-airbnb-base": "15.0.0",
