@@ -46,7 +46,7 @@ specifiers:
   prettier-plugin-astro: 0.6.0
   remark-gfm: ^3.0.1
   stylelint: 14.14.0
-  stylelint-config-prettier: 9.0.3
+  stylelint-config-prettier: 9.0.4
   stylelint-config-recess-order: ^3.0.0
   stylelint-config-recommended-scss: 7.0.0
   stylelint-config-recommended-vue: 1.4.0
@@ -105,7 +105,7 @@ devDependencies:
   prettier: 2.7.1
   prettier-plugin-astro: 0.6.0
   stylelint: 14.14.0
-  stylelint-config-prettier: 9.0.3_stylelint@14.14.0
+  stylelint-config-prettier: 9.0.4_stylelint@14.14.0
   stylelint-config-recess-order: 3.0.0_stylelint@14.14.0
   stylelint-config-recommended-scss: 7.0.0_mnalcscwzozovshmobozjae4pq
   stylelint-config-recommended-vue: 1.4.0_2wb2ag3ubchp7fdo72hd6rkeve
@@ -9650,8 +9650,8 @@ packages:
       stylelint: 14.14.0
     dev: true
 
-  /stylelint-config-prettier/9.0.3_stylelint@14.14.0:
-    resolution: {integrity: sha512-5n9gUDp/n5tTMCq1GLqSpA30w2sqWITSSEiAWQlpxkKGAUbjcemQ0nbkRvRUa0B1LgD3+hCvdL7B1eTxy1QHJg==}
+  /stylelint-config-prettier/9.0.4_stylelint@14.14.0:
+    resolution: {integrity: sha512-38nIGTGpFOiK5LjJ8Ma1yUgpKENxoKSOhbDNSemY7Ep0VsJoXIW9Iq/2hSt699oB9tReynfWicTAoIHiq8Rvbg==}
     engines: {node: '>= 12'}
     hasBin: true
     peerDependencies:
