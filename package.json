@@ -58,7 +58,7 @@
     "markdown-magic": "^2.6.1",
     "markdown-magic-directory-tree": "^1.2.4",
     "markdown-magic-install-command": "^2.0.0",
-    "postcss": "8.4.18",
+    "postcss": "8.4.20",
     "postcss-html": "1.5.0",
     "prettier": "2.7.1",
     "prettier-plugin-astro": "0.6.0",
