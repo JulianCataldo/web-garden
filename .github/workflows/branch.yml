@@ -44,7 +44,7 @@ jobs:
         id: get_netlify_alias
 
       - name: Deploy to Netlify (branch)
-        uses: nwtgck/actions-netlify@v1.2.3
+        uses: nwtgck/actions-netlify@v1.2.4
         with:
           publish-dir: './demo/dist'
           github-token: ${{ secrets.GITHUB_TOKEN }}
