@@ -1,6 +1,6 @@
 {
   "name": "astro-scroll-observer",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "Viewport scroll position and direction watcher.\nBinds states data attributes to `HTML` for further JS/CSS usage.\nScroll event is throttled for performance economy.",
   "keywords": [
     "astro",
@@ -29,7 +29,6 @@
   "license": "ISC",
   "author": "Julian Cataldo",
   "type": "module",
- 
   "main": "index.ts",
   "files": [
     "use-scroll-observer.scss",

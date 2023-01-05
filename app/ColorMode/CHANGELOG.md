@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://github.com/JulianCataldo/web-garden/compare/astro-color-mode@0.7.0...astro-color-mode@0.7.1) (2023-01-05)
+
+### Bug Fixes
+
+- color mode scoping for root html element ([7fbbd48](https://github.com/JulianCataldo/web-garden/commit/7fbbd48f7a1faa4a8d75cd2221607548ad4cd5e8))
+
 ## [0.7.0](https://github.com/JulianCataldo/web-garden/compare/astro-color-mode@0.6.0...astro-color-mode@0.7.0) (2022-11-19)
 
 ### Features

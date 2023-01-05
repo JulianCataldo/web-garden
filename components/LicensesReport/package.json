@@ -1,6 +1,6 @@
 {
   "name": "astro-licenses-report",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "Give credits to the awesome JS open-source community with this component. It will generate a table with important informations about packages used by your project.",
   "keywords": [
     "astro",

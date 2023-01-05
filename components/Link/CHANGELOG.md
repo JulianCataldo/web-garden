@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/JulianCataldo/web-garden/compare/astro-link@1.1.2...astro-link@1.1.3) (2023-01-05)
+
+**Note:** Version bump only for package astro-link
+
 ## [1.1.2](https://github.com/JulianCataldo/web-garden/compare/astro-link@1.1.1...astro-link@1.1.2) (2022-11-19)
 
 ### Bug Fixes

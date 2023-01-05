@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.4](https://github.com/JulianCataldo/web-garden/compare/astro-seo-metadata@0.5.3...astro-seo-metadata@0.5.4) (2023-01-05)
+
+**Note:** Version bump only for package astro-seo-metadata
+
 ## [0.5.3](https://github.com/JulianCataldo/web-garden/compare/astro-seo-metadata@0.5.2...astro-seo-metadata@0.5.3) (2022-11-19)
 
 ### Bug Fixes

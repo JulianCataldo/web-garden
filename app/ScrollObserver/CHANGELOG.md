@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.3](https://github.com/JulianCataldo/web-garden/compare/astro-scroll-observer@0.5.2...astro-scroll-observer@0.5.3) (2023-01-05)
+
+### Bug Fixes
+
+- remove npm exports (buggy inside astro conf) ([e888864](https://github.com/JulianCataldo/web-garden/commit/e888864e7c3304d75c070d9dae081cb835bea2ab))
+
 ## [0.5.2](https://github.com/JulianCataldo/web-garden/compare/astro-scroll-observer@0.5.1...astro-scroll-observer@0.5.2) (2022-11-19)
 
 **Note:** Version bump only for package astro-scroll-observer

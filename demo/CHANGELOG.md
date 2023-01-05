@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.16.12](https://github.com/JulianCataldo/web-garden/compare/@web-garden/astro-demo@0.16.11...@web-garden/astro-demo@0.16.12) (2023-01-05)
+
+### Bug Fixes
+
+- differenciate class ([bf22d44](https://github.com/JulianCataldo/web-garden/commit/bf22d4459cef71c84c0fe2628e09dae83ab5420a))
+- new scss behavior after astro upgrade ([dafa0d0](https://github.com/JulianCataldo/web-garden/commit/dafa0d0af622fcb7eb5ef082dbd94fb8df280d97))
+- remove npm exports (buggy inside astro conf) ([e888864](https://github.com/JulianCataldo/web-garden/commit/e888864e7c3304d75c070d9dae081cb835bea2ab))
+
 ## [0.16.11](https://github.com/JulianCataldo/web-garden/compare/@web-garden/astro-demo@0.16.10...@web-garden/astro-demo@0.16.11) (2022-11-19)
 
 **Note:** Version bump only for package @web-garden/astro-demo

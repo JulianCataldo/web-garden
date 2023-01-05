@@ -1,6 +1,6 @@
 {
   "name": "astro-code-editor",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Embed code editors for YAML, Markdown, JS / TS, JSON…\nSpecifically tailored for each language.\nPowered by the Monaco Editor and helpers.",
   "keywords": [
     "astro",

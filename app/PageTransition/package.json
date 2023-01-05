@@ -1,6 +1,6 @@
 {
   "name": "astro-page-transition",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "description": "This component relies on the good old browser router, still, it will give to your website an SPA feel, without all the JS overhead.",
   "keywords": [
     "astro",
