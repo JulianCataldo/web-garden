@@ -155,6 +155,7 @@ for live implementation examples.
 while providing useful utilities to developers, website-wide.
 
 <!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./app) -->
+
 ```
 app/
 ├── BaseDocument/
@@ -170,6 +171,7 @@ app/
 ├── SEOMetadata/
 └── Tooltips/
 ```
+
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## [📦  Components](https://github.com/JulianCataldo/web-garden/tree/develop/components)
@@ -177,8 +179,10 @@ app/
 Generic [extendables components](https://github.com/JulianCataldo/web-garden/tree/develop/components).
 
 <!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./components) -->
+
 ```
 components/
+├── CodeEditor/
 ├── Diagram/
 ├── GeoMap/
 ├── LicensesReport/
@@ -187,6 +191,7 @@ components/
 ├── TerminalPlayer/
 └── Testbed/
 ```
+
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## [🛠  Tooling configurations](https://github.com/JulianCataldo/web-garden/tree/develop/configs)
@@ -196,24 +201,26 @@ Features ESLint, Prettier, Stylelint, Commitlint…
 For Astro, React, Vue, SCSS, TS…
 
 <!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./configs) -->
+
 ```
 configs/
-├── .vscode/
+├── vscode/
 ├── .editorconfig-example
 ├── commitlint-base.ts
 ├── eslint-all.cjs
 ├── eslint-astro.cjs
 ├── eslint-js.cjs
 ├── eslint-jsx.cjs
+├── eslint-mdx.cjs
 ├── eslint-ts.cjs
 ├── eslint-tsx.cjs
 ├── eslint-vue.cjs
-├── gather.sh
 ├── index.mjs
 ├── prettier-astro.cjs
 ├── prettier-base.cjs
 └── stylelint-all.cjs
 ```
+
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 <!-- # ✅  Tests
