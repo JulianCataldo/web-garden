@@ -132,6 +132,11 @@ with **`.js &`** / **`:not(.js) &`** SCSS selectors.
 
 export interface Props extends astroHTML.JSX.HTMLAttributes {
   /**
+   * **Default**: `'en'`
+   * */
+  lang?: string;
+
+  /**
    * Provides early JS detection for further CSS use
    * by adding `js` class critically to HTML element.
    *
