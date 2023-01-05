@@ -38,7 +38,7 @@ Using `monaco-yaml` with YAML language server under the hood.
 
 [Monaco YAML live demo](https://monaco-yaml.js.org/) / [Repository](https://github.com/remcohaszing/monaco-yaml).
 
-Features **advanced JSON schema** validation / auto-completion, **far superior** to [` remark-lint-frontmatter-schema`](https://github.com/JulianCataldo/remark-lint-frontmatter-schema) (however this one has the advantage of working in VS Code etc.).
+Features **advanced JSON schema** validation / auto-completion, **far superior** to [`remark-lint-frontmatter-schema`](https://github.com/JulianCataldo/remark-lint-frontmatter-schema) (however this one has the advantage of working in VS Code etc.).
 
 Accepts **Markdown** input value with **front matter automatic extraction**.
 
@@ -60,9 +60,11 @@ See the [component interface](./YAMLEditor.Props.ts).
 
 ### YAML editor
 
+Full working example:
+
 ```astro
 ---
-// src/pages/edit-schema.astro
+// E.g. `src/pages/yaml-editor.astro`
 
 import YAMLEditor from 'astro-code-editor/YAMLEditor.astro';
 import Layout from '../layouts/Bare.astro';
@@ -73,7 +75,7 @@ const coreMetaSchemaUrl = 'http://json-schema.org/draft-07/schema#';
 /* —OR— from your Astro `public` folder */
 const mySchema = '/schemas/my-schema.yaml';
 
-/* You can use Markdown frontmatter as source too, not only pure YAML */
+/* You can use Markdown with frontmatter as source too, not only pure YAML */
 const initialValue = `---
 title: Hello
 description: World
@@ -111,14 +113,16 @@ description: World
 
   <footer>© {new Date().getFullYear()}</footer>
 </Layout>
+```
 
+```astro
 <script>
-  // Use YAMLEditor Web Component class definition, for type discrimination
+  // Use YAMLEditor Custom Elem. class definition, for type discrimination below
   import YAMLEditor from 'astro-code-editor/YAMLEditor.client.js';
 
   // Create a Custom Element for housing our demos (totally optional)
 
-  export class EditorDemos extends HTMLElement {
+  class EditorDemos extends HTMLElement {
     connectedCallback() {
       const clearButtonElement = this.querySelector('[data-clear]');
       if (!(clearButtonElement instanceof HTMLButtonElement)) return;
@@ -142,19 +146,21 @@ description: World
 
   customElements.define('editor-demos', EditorDemos);
 </script>
+```
 
+```astro
 <style lang="scss">
   editor-demos {
     display: block;
     width: 100%;
 
-    section {
+    & > section {
       max-width: 60vw;
       margin: 0 auto;
     }
 
     // Editors styles
-    // /!\ Don't forget to set dimensions /!\
+    // /!\ Don't forget to set editor dimensions /!\
 
     [data-yaml-demo-editor] {
       width: 800px;
