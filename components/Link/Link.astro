@@ -72,11 +72,9 @@ if (contact) {
   data-contact={dataContact}
   target={isExternal && props.externalInNewTab ? '_blank' : null}
   rel={isExternal ? 'noopener nofollow' : null}
-  {...extraAttrs}
+  {...extraAttrs}><slot />{/* */}</a
 >
-  <slot />
-</a>
-
+<!-- Force trim space —— ^ (prettier…) -->
 <script>
   const contactLinks = [
     ...document.querySelectorAll('.link.is-mail'),
