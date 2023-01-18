@@ -55,10 +55,16 @@ if (typeof props.type !== 'string') {
   )
 }
 
+{props.title && <title>{props.title}</title>}
+{
+  /* 
+    HACK: Bug w. Astro parser (1.9.0), we must put title outside the group below
+    It hangs even between JSX / HTML comments
+  */
+}
 {
   props.title && (
     <>
-      <title>{props.title}</title>
       <meta property="og:title" content={props.title} />
       <meta name="twitter:title" content={props.title} />
     </>
@@ -91,13 +97,13 @@ if (typeof props.type !== 'string') {
 
 {props.favicon && <link rel="icon" href={props.favicon} />}
 
-<!--  -->
+<!-- | -->
 
 {props.author && <meta name="author" content={props.author} />}
 
 {props.copyright && <meta name="copyright" content={props.copyright} />}
 
-<!--  -->
+<!-- | -->
 
 {
   props.astroSitemap && (
