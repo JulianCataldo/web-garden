@@ -64,7 +64,7 @@ Full working example:
 
 ```astro
 ---
-// E.g. `src/pages/yaml-editor.astro`
+// E.g. `src/pages/editor-demos.astro`
 
 import YAMLEditor from 'astro-code-editor/YAMLEditor.astro';
 import Layout from '../layouts/Bare.astro';
