@@ -33,7 +33,7 @@ import { SEOMetadata } from 'astro-seo-metadata';
   <!-- Place component inside `HEAD` tag -->
 
   <!-- All properties are optional -->
-  <SEO
+  <SEOMetadata
     siteName={'Le Website'}
     title={'Le cool title'}
     description={'Le insightful description'}
@@ -42,7 +42,7 @@ import { SEOMetadata } from 'astro-seo-metadata';
     author="Julian Cataldo"
     copyright="ISC"
     astroSitemap={true}
-    canonicalUrl={Astro.url}
+    canonicalUrl={Astro.url.toString()}
     type={'website'}
     astroGenerator={true}
   />
