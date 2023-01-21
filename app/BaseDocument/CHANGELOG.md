@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.0](https://github.com/JulianCataldo/web-garden/compare/astro-base-document@1.0.4...astro-base-document@1.1.0) (2023-01-21)
+
+### Features
+
+- base lang prop ([9ace05d](https://github.com/JulianCataldo/web-garden/commit/9ace05dec2830d39d60851f52e76726b82022493))
+
 ## [1.0.4](https://github.com/JulianCataldo/web-garden/compare/astro-base-document@1.0.3...astro-base-document@1.0.4) (2023-01-05)
 
 **Note:** Version bump only for package astro-base-document

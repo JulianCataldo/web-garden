@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.5](https://github.com/JulianCataldo/web-garden/compare/astro-seo-metadata@0.5.4...astro-seo-metadata@0.5.5) (2023-01-21)
+
+### Bug Fixes
+
+- parser bug, need to split group in braces ([36704f9](https://github.com/JulianCataldo/web-garden/commit/36704f9856772024abeb1fdf32f0d059af281948))
+
 ## [0.5.4](https://github.com/JulianCataldo/web-garden/compare/astro-seo-metadata@0.5.3...astro-seo-metadata@0.5.4) (2023-01-05)
 
 **Note:** Version bump only for package astro-seo-metadata
