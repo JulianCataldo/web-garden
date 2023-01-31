@@ -20,6 +20,7 @@ This means aligning to Prettier defaults, air-bnb rules, etc.
 <div class="git-only">
 
 - [🛠  Web developer tool belt](#web-developer-tool-belt)
+- [Installation](#installation)
   - [ESLint](#eslint)
     - [Installations](#installations)
     - [Configuration](#configuration)
@@ -57,13 +58,13 @@ This means aligning to Prettier defaults, air-bnb rules, etc.
 
 </div>
 
-<!-- # Installation
+# Installation
 
 ```sh
-pnpm i webdev-configs
+pnpm i -D webdev-configs
 ```
 
-[See the root package.json](https://github.com/JulianCataldo/web-garden/blob/develop/package.json) for this mono-repo.
+<!-- [See the root package.json](https://github.com/JulianCataldo/web-garden/blob/develop/package.json) for this mono-repo.
 
 Its `devDependencies` are mostly dedicated for meta-framework,
 developer's IDE experience.
@@ -110,6 +111,11 @@ eslint-plugin-astro
 # v—————————————————————————————————— Vue
 pnpm i -D \
 eslint-plugin-vue
+
+# v—————————————————————————————————— Lit
+pnpm i -D \
+eslint-plugin-lit \
+eslint-plugin-lit-a11y
 
 # v—————————————————————————————————— MDX
 pnpm i -D \
