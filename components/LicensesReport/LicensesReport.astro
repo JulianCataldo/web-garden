@@ -131,14 +131,17 @@ const report = cache[uniqueKey];
           </div>
 
           <div class:list={['td', props.class]} role="cell">
-            <a
-              class:list="[is-external]"
-              href={row.homepage || row.repository.url}
-              target="_blank"
-              rel="noopener nofollow"
-            >
-              {row.homepage || row.repository.url}
-            </a>
+            {row.homepage || row.repository.url
+              ? <a
+                class:list="[is-external]"
+                href={row.homepage || row.repository.url}
+                target="_blank"
+                rel="noopener nofollow"
+              >
+                {row.homepage || row.repository.url}
+              </a>
+              : '-'
+            }
           </div>
         </div>
       ))
