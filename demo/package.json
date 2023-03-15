@@ -51,11 +51,11 @@
     "sass": "1.55.0",
     "tsparticles": "1.43.0",
     "tsparticles-preset-stars": "1.43.1",
+    "astro-robots-txt": "^0.3.10",
     "unist-util-visit": "^4.1.1"
   },
   "devDependencies": {
-    "@types/leaflet": "1.9.0",
-    "astro-robots-txt": "^0.3.10"
+    "@types/leaflet": "1.9.0" 
   },
   "packageManager": "pnpm@7.9.0"
 }
