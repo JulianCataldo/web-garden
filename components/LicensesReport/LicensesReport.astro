@@ -114,37 +114,38 @@ const report = cache[uniqueKey];
   <div class:list={['tbody', props.class]} role="rowgroup">
     {
       report.length &&
-      report.map((row) => (
-        <div class:list={['tr', props.class]} role="row">
-          <div class:list={['td', props.class]} role="cell">
-            {row.name}
-          </div>
+        report.map((row) => (
+          <div class:list={['tr', props.class]} role="row">
+            <div class:list={['td', props.class]} role="cell">
+              {row.name}
+            </div>
 
-          <div class:list={['td', props.class]} role="cell">
-            {typeof row.author === 'string'
-              ? row.author
-              : row?.author?.name || '-'}
-          </div>
+            <div class:list={['td', props.class]} role="cell">
+              {typeof row.author === 'string'
+                ? row.author
+                : row?.author?.name || '-'}
+            </div>
 
-          <div class:list={['td', props.class]} role="cell">
-            {row.license}
-          </div>
+            <div class:list={['td', props.class]} role="cell">
+              {row.license}
+            </div>
 
-          <div class:list={['td', props.class]} role="cell">
-            {row.homepage || row.repository.url
-              ? <a
-                class:list="[is-external]"
-                href={row.homepage || row.repository.url}
-                target="_blank"
-                rel="noopener nofollow"
-              >
-                {row.homepage || row.repository.url}
-              </a>
-              : '-'
-            }
+            <div class:list={['td', props.class]} role="cell">
+              {row.homepage || row.repository.url ? (
+                <a
+                  class:list={['is-external']}
+                  href={row.homepage || row.repository.url}
+                  target="_blank"
+                  rel="noopener nofollow"
+                >
+                  {row.homepage || row.repository.url}
+                </a>
+              ) : (
+                '-'
+              )}
+            </div>
           </div>
-        </div>
-      ))
+        ))
     }
   </div>
 </div>
