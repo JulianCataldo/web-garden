@@ -1,31 +1,7 @@
 {
   "name": "astro-seo-metadata",
-  "version": "0.5.2",
+  "version": "0.5.5",
   "description": "Bare minimum SEO meta tags to make most social networks and Google engine happy.",
-  "main": "index.ts",
-  "type": "module",
-  "files": [
-    "index.ts",
-    "Props.ts",
-    "SEOMetadata.astro",
-    "CHANGELOG.md"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "author": "Julian Cataldo",
-  "homepage": "https://code.juliancataldo.com/component/astro-seo",
-  "bugs": {
-    "url": "https://github.com/JulianCataldo/web-garden/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JulianCataldo/web-garden",
-    "directory": "app/SEO"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "astro",
     "astro-component",
@@ -36,5 +12,26 @@
     "html",
     "seo"
   ],
-  "license": "ISC"
+  "homepage": "https://code.juliancataldo.com/component/astro-seo-metadata",
+  "bugs": {
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianCataldo/web-garden",
+    "directory": "app/SEO"
+  },
+  "license": "ISC",
+  "author": "Julian Cataldo",
+  "type": "module",
+  "main": "index.ts",
+  "files": [
+    "index.ts",
+    "Props.ts",
+    "SEOMetadata.astro",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }

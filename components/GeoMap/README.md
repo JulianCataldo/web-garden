@@ -8,7 +8,7 @@ Using [Leaflet.js](https://leafletjs.com) under the hood.
 <!-- Should investigate peerDeps auto-install, that way, only `pnpm i [package]` will suffice -->
 
 ```sh
-pnpm i leaflet astro-geo-map
+pnpm i astro-geo-map
 
 # Optional
 pnpm i -D @types/leaflet
@@ -41,9 +41,25 @@ import { GeoMap } from 'astro-geo-map';
 </body>
 ```
 
+### Vite client-side fix
+
+You might want to add this to your `astro.config`:
+
+```js
+export default defineConfig({
+  /* ... */
+  vite: { optimizeDeps: { include: ['leaflet'] } },
+});
+```
+
+So client-side, third-party JS will be loaded properly, instead of getting this error:
+
+`SyntaxError: Importing binding name 'default' cannot be resolved by star`
+
+If dependency issues persists, try installing `leaflet@1.9.0`.
+
 ## To do
 
-- [x] Multiple maps per page
 - [ ] SSR rendered placeholder, for when JS is unavailable
 
 <div class="git-footer">

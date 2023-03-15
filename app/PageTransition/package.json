@@ -1,32 +1,7 @@
 {
   "name": "astro-page-transition",
-  "version": "0.5.4",
+  "version": "0.5.6",
   "description": "This component relies on the good old browser router, still, it will give to your website an SPA feel, without all the JS overhead.",
-  "main": "index.ts",
-  "type": "module",
-  "files": [
-    "index.ts",
-    "Props.ts",
-    "PageTransition.astro",
-    "PageTransition.client.ts",
-    "CHANGELOG.md"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "author": "Julian Cataldo",
-  "homepage": "https://code.juliancataldo.com/component/astro-transition",
-  "bugs": {
-    "url": "https://github.com/JulianCataldo/web-garden/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JulianCataldo/web-garden",
-    "directory": "app/Transition"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "astro",
     "astro-component",
@@ -38,5 +13,27 @@
     "links",
     "animation"
   ],
-  "license": "ISC"
+  "homepage": "https://code.juliancataldo.com/component/astro-transition",
+  "bugs": {
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianCataldo/web-garden",
+    "directory": "app/Transition"
+  },
+  "license": "ISC",
+  "author": "Julian Cataldo",
+  "type": "module",
+  "main": "index.ts",
+  "files": [
+    "index.ts",
+    "Props.ts",
+    "PageTransition.astro",
+    "PageTransition.client.ts",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }

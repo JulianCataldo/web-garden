@@ -20,6 +20,7 @@ This means aligning to Prettier defaults, air-bnb rules, etc.
 <div class="git-only">
 
 - [🛠  Web developer tool belt](#web-developer-tool-belt)
+- [Installation](#installation)
   - [ESLint](#eslint)
     - [Installations](#installations)
     - [Configuration](#configuration)
@@ -57,13 +58,13 @@ This means aligning to Prettier defaults, air-bnb rules, etc.
 
 </div>
 
-<!-- # Installation
+# Installation
 
 ```sh
-pnpm i @julian_cataldo/astro-configs
+pnpm i -D webdev-configs
 ```
 
-[See the root package.json](https://github.com/JulianCataldo/web-garden/blob/develop/package.json) for this mono-repo.
+<!-- [See the root package.json](https://github.com/JulianCataldo/web-garden/blob/develop/package.json) for this mono-repo.
 
 Its `devDependencies` are mostly dedicated for meta-framework,
 developer's IDE experience.
@@ -111,6 +112,11 @@ eslint-plugin-astro
 pnpm i -D \
 eslint-plugin-vue
 
+# v—————————————————————————————————— Lit
+pnpm i -D \
+eslint-plugin-lit \
+eslint-plugin-lit-a11y
+
 # v—————————————————————————————————— MDX
 pnpm i -D \
 eslint-plugin-mdx
@@ -134,10 +140,10 @@ module.exports = {
    *
    * */
   extends: [
-    './node_modules/@julian_cataldo/astro-configs/eslint-all.cjs',
+    './node_modules/webdev-configs/eslint-all.cjs',
 
-    // Or cherry pick one or more LANG: astro | js | jsx | ts | tsx | vue
-    // './node_modules/@julian_cataldo/astro-configs/eslint-{LANG}.cjs',
+    // Or cherry pick one or more LANG: astro | js | jsx | ts | tsx | vue | mdx
+    // './node_modules/webdev-configs/eslint-{LANG}.cjs',
   ],
 };
 ```
@@ -215,10 +221,10 @@ module.exports = {
    * https://github.com/JulianCataldo/web-garden/blob/develop/configs/prettier-astro.cjs
    *
    * */
-  ...require('@julian_cataldo/astro-configs/prettier-astro.cjs'),
+  ...require('webdev-configs/prettier-astro.cjs'),
 
   // Or just the base, without Astro related stuff:
-  // ...require('@julian_cataldo/astro-configs/prettier-base.cjs'),
+  // ...require('webdev-configs/prettier-base.cjs'),
 };
 ```
 
@@ -346,7 +352,7 @@ module.exports = {
    * https://github.com/JulianCataldo/web-garden/blob/develop/configs/stylelint-all.cjs
    *
    * */
-  extends: ['@julian_cataldo/astro-configs/stylelint-all.cjs'],
+  extends: ['webdev-configs/stylelint-all.cjs'],
 
   rules: {
     /* Add some per-project rules here */

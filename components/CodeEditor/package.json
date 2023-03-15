@@ -1,0 +1,43 @@
+{
+  "name": "astro-code-editor",
+  "version": "0.1.1",
+  "description": "Embed code editors for YAML, Markdown, JS / TS, JSON…\nSpecifically tailored for each language.\nPowered by the Monaco Editor and helpers.",
+  "keywords": [
+    "astro",
+    "astro-component",
+    "monaco",
+    "yaml",
+    "markdown",
+    "typescript",
+    "javascript",
+    "worker",
+    "ide",
+    "language-server"
+  ],
+  "homepage": "https://code.juliancataldo.com/component/astro-code-editor",
+  "bugs": {
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianCataldo/web-garden",
+    "directory": "components/CodeEditor"
+  },
+  "license": "ISC",
+  "author": "Julian Cataldo",
+  "type": "module",
+  "files": [
+    "YAMLEditor.astro",
+    "YAMLEditor.client.ts",
+    "YAMLEditor.Props.ts",
+    "YAMLEditor.worker.js",
+    "utils/extract-markdown-frontmatter.ts"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "monaco-editor": "^0.34.1",
+    "monaco-yaml": "^4.0.2"
+  }
+}

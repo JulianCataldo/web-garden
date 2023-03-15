@@ -1,0 +1,40 @@
+---
+import type { Props as baseProps } from './YAMLEditor.Props';
+import { extractMarkdownFrontmatter as extractFm } from './utils/extract-markdown-frontmatter';
+
+export interface Props extends baseProps {}
+
+const {
+  value,
+  schemaObject,
+  schemaUrlRef,
+  extractMarkdownFrontmatter,
+  ...attrs
+} = Astro.props as baseProps;
+
+const initialValue = extractMarkdownFrontmatter
+  ? extractFm(value ?? '').rawFrontmatter
+  : value;
+---
+
+<div
+  is="code-editor"
+  data-value={initialValue}
+  data-schema-object={schemaObject}
+  data-schema-url-ref={schemaUrlRef}
+  {...attrs}
+>
+</div>
+
+<script>
+  import './YAMLEditor.client.js';
+</script>
+
+<style>
+  [is='code-editor'] {
+    /* Without those min. values, editor becomes invisible
+      if no CSS dimensions is set by user */
+    min-height: 150px;
+    min-width: 150px;
+  }
+</style>

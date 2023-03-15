@@ -1,8 +1,8 @@
 # 🚀  Astro — Tooltips
 
-[![NPM](https://img.shields.io/npm/v/@julian_cataldo/astro-tooltips)](https://www.npmjs.com/package/@julian_cataldo/astro-tooltips)
-![Downloads](https://img.shields.io/npm/dt/@julian_cataldo/astro-tooltips.svg)
-[![ISC License](https://img.shields.io/npm/l/@julian_cataldo/astro-tooltips)](https://github.com/JulianCataldo/web-garden/blob/develop/LICENSE)
+[![NPM](https://img.shields.io/npm/v/astro-tooltips)](https://www.npmjs.com/package/astro-tooltips)
+![Downloads](https://img.shields.io/npm/dt/astro-tooltips.svg)
+[![ISC License](https://img.shields.io/npm/l/astro-tooltips)](https://github.com/JulianCataldo/web-garden/blob/develop/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)  
 [![Astro](https://img.shields.io/badge/Astro-333333.svg?logo=astro)](https://astro.build)
 [![TypeScript](https://img.shields.io/badge/TypeScript-333333.svg?logo=typescript)](http://www.typescriptlang.org/)

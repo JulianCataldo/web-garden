@@ -40,7 +40,7 @@ function plugin() {
         parent.children.splice(index, 1, {
           type: 'html',
           // TODO: put CSS elsewhere
-          value: `<div style="${style}">${html}</div>`,
+          value: `<div class="mermaid-diagram" style="${style}">${html}</div>`,
           position: node.position,
         });
       }),

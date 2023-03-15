@@ -7,6 +7,7 @@ import sitemap from '@astrojs/sitemap';
 import remarkMermaid from 'astro-diagram/remark-mermaid';
 import { visit } from 'unist-util-visit';
 import remarkGfm from 'remark-gfm';
+import robotsTxt from 'astro-robots-txt';
 
 // import react from '@astrojs/react';
 
@@ -56,9 +57,12 @@ export default defineConfig({
     //     // NOTE: index.md file will not get proccesed, so please avoid it
     //   },
     // }),
+    robotsTxt(),
   ],
 
   markdown: {
+    // TODO: Implement
+    // extendDefaultPlugins: true,
     remarkPlugins: [
       //
       remarkGfm,
@@ -87,7 +91,12 @@ export default defineConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `
+          additionalData(source, filePath) {
+            // Exclude file, prevents module loop
+            if (filePath.includes('use-')) return source;
+            if (filePath.includes('src/themes/default/tokens')) return source;
+            if (filePath.includes('src/themes/selector')) return source;
+            return `
             @use "sass:color";
 
             @use "astro-breakpoints/use-breakpoints.scss" as * with (
@@ -100,18 +109,17 @@ export default defineConfig({
                 "xxl": ${breakpoints.xxl},
               )
             );
+            
+            @use 'astro-scroll-observer/use-scroll-observer.scss' as *;
 
-            @use "./src/themes" as *;
-          `,
+            @use './src/themes/default/tokens' as *;
+            @use './src/themes/selector' as *;
+
+            ${source}
+          `;
+          },
         },
       },
     },
   },
-
-  // markdown: {
-  //   remarkPlugins: [ ],
-  //   rehypePlugins: [],
-  // },
-
-  experimental: { integrations: true },
 });

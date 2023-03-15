@@ -1,7 +1,7 @@
 /** @type {import("@types/prettier").Options} */
 
 module.exports = {
-  ...require('@julian_cataldo/astro-configs/prettier-base.cjs'),
+  ...require('./prettier-base.cjs'),
 
   plugins: ['./node_modules/prettier-plugin-astro'],
 

@@ -1,31 +1,7 @@
 {
   "name": "astro-link",
-  "version": "1.1.1",
+  "version": "1.1.4",
   "description": "Supercharge your links. This component detects external / anchor / same domain / mail / telephone `href`, and apply optimizations accordingly.",
-  "main": "index.ts",
-  "type": "module",
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "index.ts",
-    "Props.ts",
-    "Link.astro",
-    "CHANGELOG.md"
-  ],
-  "author": "Julian Cataldo",
-  "homepage": "https://code.juliancataldo.com/component/astro-link",
-  "bugs": {
-    "url": "https://github.com/JulianCataldo/web-garden/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JulianCataldo/web-garden",
-    "directory": "components/Link"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "astro",
     "astro-component",
@@ -40,5 +16,26 @@
     "css",
     "javascript"
   ],
-  "license": "ISC"
+  "homepage": "https://code.juliancataldo.com/component/astro-link",
+  "bugs": {
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianCataldo/web-garden",
+    "directory": "components/Link"
+  },
+  "license": "ISC",
+  "author": "Julian Cataldo",
+  "type": "module",
+  "main": "index.ts",
+  "files": [
+    "index.ts",
+    "Props.ts",
+    "Link.astro",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }

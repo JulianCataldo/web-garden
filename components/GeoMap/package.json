@@ -1,31 +1,7 @@
 {
   "name": "astro-geo-map",
-  "version": "1.0.3",
-  "description": "Embed an interactive map in your webpage. Using Leaflet.js under the hood.",
-  "main": "index.ts",
-  "type": "module",
-  "publishConfig": {
-    "access": "public"
-  },
-  "author": "Julian Cataldo",
-  "homepage": "https://code.juliancataldo.com/component/astro-geo-map",
-  "bugs": {
-    "url": "https://github.com/JulianCataldo/web-garden/issues"
-  },
-  "files": [
-    "index.ts",
-    "Props.ts",
-    "GeoMap.astro",
-    "CHANGELOG.md"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JulianCataldo/web-garden",
-    "directory": "components/GeoMap"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "version": "2.0.0",
+  "description": "Embed an interactive map in your webpage.\nUsing Leaflet.js under the hood.",
   "keywords": [
     "astro",
     "astro-component",
@@ -41,15 +17,36 @@
     "vanilla",
     "javascript"
   ],
+  "homepage": "https://code.juliancataldo.com/component/astro-geo-map",
+  "bugs": {
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianCataldo/web-garden",
+    "directory": "components/GeoMap"
+  },
   "license": "ISC",
+  "author": "Julian Cataldo",
+  "type": "module",
+  "main": "index.ts",
+  "files": [
+    "index.ts",
+    "Props.ts",
+    "env.d.ts",
+    "render.ts",
+    "GeoMap.astro",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
-    "leaflet": "^1.8.0"
+    "change-case": "^4.1.2",
+    "leaflet": "1.9.0",
+    "puppeteer": "^19.1.0"
   },
   "devDependencies": {
-    "@types/leaflet": "^1.7.11"
-  },
-  "peerDependencies": {
-    "@types/leaflet": "^1.7.11",
-    "leaflet": "1.8"
+    "@types/leaflet": "^1.9.0"
   }
 }

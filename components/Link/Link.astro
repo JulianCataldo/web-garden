@@ -1,10 +1,11 @@
 ---
+import path from 'path';
 import type { Props as BaseProps } from './Props';
 
 export interface Props extends BaseProps {}
 const props = { ...Astro.props } as Props;
 /* ———————————————————————————————————————————— Typeguards + Fallbacks —————— */
-const internalProps: string[] = [];
+const internalProps: string[] = ['class', 'class:list'];
 
 if (typeof props.href !== 'string') props.href = '#';
 internalProps.push('href');
@@ -39,12 +40,10 @@ if (isMail) {
 let parsedUrl = props.href;
 if (isExternal === false && isHash === false) {
   const basePrefix = import.meta.env.BASE_URL;
-  /* Join relative paths */
-  parsedUrl = [...basePrefix.split('/'), ...props.href.split('/')]
-    .filter((e) => e !== '')
-    .join('/');
-  /* Prefix with root relative */
-  parsedUrl = `/${parsedUrl}`;
+
+  parsedUrl = path.isAbsolute(props.href)
+    ? `${path.join(import.meta.env.BASE_URL ?? '/', props.href)}`
+    : props.href;
 }
 
 let dataContact = null;
@@ -73,11 +72,9 @@ if (contact) {
   data-contact={dataContact}
   target={isExternal && props.externalInNewTab ? '_blank' : null}
   rel={isExternal ? 'noopener nofollow' : null}
-  {...extraAttrs}
+  {...extraAttrs}><slot />{/* */}</a
 >
-  <slot />
-</a>
-
+<!-- Force trim space —— ^ (prettier…) -->
 <script>
   const contactLinks = [
     ...document.querySelectorAll('.link.is-mail'),

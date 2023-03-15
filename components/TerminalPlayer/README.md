@@ -1,4 +1,4 @@
-# 🚀  Astro — Terminal Player (Asciinema)
+# 🚀  Astro — Terminal player (Asciinema)
 
 [![NPM](https://img.shields.io/npm/v/astro-terminal-player)](https://www.npmjs.com/package/astro-terminal-player)
 ![Downloads](https://img.shields.io/npm/dt/astro-terminal-player.svg)
@@ -23,6 +23,29 @@ Auto plays / pauses when player is visible.
 ```sh
 pnpm i asciinema-player astro-terminal-player
 ```
+
+### Vite client-side fix
+
+You might want to add this to your `astro.config`:
+
+```js
+export default defineConfig({
+  /* ... */
+  vite: { optimizeDeps: { include: ['asciinema-player'] } },
+});
+```
+
+So client-side, third-party JS will be loaded properly, instead of getting this error:
+
+`Uncaught SyntaxError: The requested module '.../@babel/runtime/regenerator/...' does not provide an export named 'default' ... `
+
+<!-- If some dependency issues persists, try installing ``. -->
+
+Also importing asciinema-player CSS solve a discrepency between `dev` and `build` where the latter comes unstyled. To fix this, add this to your CSS:
+
+`@import 'asciinema-player/dist/bundle/asciinema-player.css';`
+
+Note that this component is already importing CSS bundle internally, so this is a temporary quick fix.
 
 ## 🛠  Usage
 

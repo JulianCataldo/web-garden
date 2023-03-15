@@ -1,8 +1,8 @@
 # 🚀  Astro — Color mode, with user override
 
-[![NPM](https://img.shields.io/npm/v/@julian_cataldo/astro-color-mode)](https://www.npmjs.com/package/@julian_cataldo/astro-color-mode)
-![Downloads](https://img.shields.io/npm/dt/@julian_cataldo/astro-color-mode.svg)
-[![ISC License](https://img.shields.io/npm/l/@julian_cataldo/astro-color-mode)](https://github.com/JulianCataldo/web-garden/blob/develop/LICENSE)
+[![NPM](https://img.shields.io/npm/v/astro-color-mode)](https://www.npmjs.com/package/astro-color-mode)
+![Downloads](https://img.shields.io/npm/dt/astro-color-mode.svg)
+[![ISC License](https://img.shields.io/npm/l/astro-color-mode)](https://github.com/JulianCataldo/web-garden/blob/develop/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)  
 [![Astro](https://img.shields.io/badge/Astro-333333.svg?logo=astro)](https://astro.build)
 [![TypeScript](https://img.shields.io/badge/TypeScript-333333.svg?logo=typescript)](http://www.typescriptlang.org/)
@@ -96,15 +96,30 @@ export default defineConfig({
 Then, use it like this in your stylesheets:
 
 ```scss
-span {
+.my-layout {
+  :is(.my-link, body) {
+    @include color-mode(light) {
+      color: black;
+      background-color: white;
+      // ...
+    }
+    @include color-mode(dark) {
+      color: white;
+      background-color: black;
+      // ...
+    }
+  }
+}
+
+.some-class {
   @include color-mode(light) {
-    color: black;
-    background-color: white;
+    color: blue;
+    background-color: yellow;
     // ...
   }
   @include color-mode(dark) {
-    color: white;
-    background-color: black;
+    color: yellow;
+    background-color: blue;
     // ...
   }
 }

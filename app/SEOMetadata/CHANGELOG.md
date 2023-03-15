@@ -3,75 +3,64 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## 0.5.2 (2022-10-17)
-
+## [0.5.5](https://github.com/JulianCataldo/web-garden/compare/astro-seo-metadata@0.5.4...astro-seo-metadata@0.5.5) (2023-01-21)
 
 ### Bug Fixes
 
-* remove package prefix, simplify import method ([73bd31b](https://github.com/JulianCataldo/web-garden/commit/73bd31bf1f501624036a74a3f19c5bf83cc9c0a4))
+- parser bug, need to split group in braces ([36704f9](https://github.com/JulianCataldo/web-garden/commit/36704f9856772024abeb1fdf32f0d059af281948))
 
+## [0.5.4](https://github.com/JulianCataldo/web-garden/compare/astro-seo-metadata@0.5.3...astro-seo-metadata@0.5.4) (2023-01-05)
 
+**Note:** Version bump only for package astro-seo-metadata
+
+## [0.5.3](https://github.com/JulianCataldo/web-garden/compare/astro-seo-metadata@0.5.2...astro-seo-metadata@0.5.3) (2022-11-19)
+
+### Bug Fixes
+
+- pjson homepage links ([3c52fc6](https://github.com/JulianCataldo/web-garden/commit/3c52fc692feda650e6fbb227f30c7c170e514308))
+
+## 0.5.2 (2022-10-17)
+
+### Bug Fixes
+
+- remove package prefix, simplify import method ([73bd31b](https://github.com/JulianCataldo/web-garden/commit/73bd31bf1f501624036a74a3f19c5bf83cc9c0a4))
 
 ## [0.14.1](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-seo@0.14.0...@julian_cataldo/astro-seo@0.14.1) (2022-10-12)
 
-
 ### Bug Fixes
 
-* comment breaking extractor ([06dd4f1](https://github.com/JulianCataldo/web-garden/commit/06dd4f1278a4525c0dd2938bbadf2430b242d8be))
-
-
+- comment breaking extractor ([06dd4f1](https://github.com/JulianCataldo/web-garden/commit/06dd4f1278a4525c0dd2938bbadf2430b242d8be))
 
 ## [0.14.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-seo@0.13.3...@julian_cataldo/astro-seo@0.14.0) (2022-10-12)
 
-
 ### Features
 
-* copyright, sitemap, favicon, generator… ([b6baec4](https://github.com/JulianCataldo/web-garden/commit/b6baec430ba9c4e8693d6bdc22a7baae2667e710))
-
-
+- copyright, sitemap, favicon, generator… ([b6baec4](https://github.com/JulianCataldo/web-garden/commit/b6baec430ba9c4e8693d6bdc22a7baae2667e710))
 
 ## [0.13.3](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-seo@0.13.2...@julian_cataldo/astro-seo@0.13.3) (2022-09-22)
 
 **Note:** Version bump only for package @julian_cataldo/astro-seo
 
-
-
-
-
 ## [0.13.2](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-seo@0.13.1...@julian_cataldo/astro-seo@0.13.2) (2022-08-20)
 
 **Note:** Version bump only for package @julian_cataldo/astro-seo
-
-
-
-
 
 ## [0.13.1](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-seo@0.13.0...@julian_cataldo/astro-seo@0.13.1) (2022-07-31)
 
 **Note:** Version bump only for package @julian_cataldo/astro-seo
 
-
-
-
-
 ## [0.13.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-seo@0.12.1...@julian_cataldo/astro-seo@0.13.0) (2022-07-24)
-
 
 ### Features
 
-* remove mobile web capable ([87d1c22](https://github.com/JulianCataldo/web-garden/commit/87d1c22275381be50f6ba45f2cd8f3c528da04ec))
-
-
+- remove mobile web capable ([87d1c22](https://github.com/JulianCataldo/web-garden/commit/87d1c22275381be50f6ba45f2cd8f3c528da04ec))
 
 ## [0.12.1](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-seo@0.12.0...@julian_cataldo/astro-seo@0.12.1) (2022-07-24)
 
-
 ### Bug Fixes
 
-* correct meta keywords for seo ([e61291d](https://github.com/JulianCataldo/web-garden/commit/e61291d3c4f42ceda591f0ba9358de8db5608736))
-* making twitter compatible robots happy ([8eadeea](https://github.com/JulianCataldo/web-garden/commit/8eadeea23673ef029109b308def53ec9c38e714d))
-
-
+- correct meta keywords for seo ([e61291d](https://github.com/JulianCataldo/web-garden/commit/e61291d3c4f42ceda591f0ba9358de8db5608736))
+- making twitter compatible robots happy ([8eadeea](https://github.com/JulianCataldo/web-garden/commit/8eadeea23673ef029109b308def53ec9c38e714d))
 
 ## [0.12.0](https://github.com/JulianCataldo/web-garden/compare/@julian_cataldo/astro-seo@0.11.0...@julian_cataldo/astro-seo@0.12.0) (2022-07-18)
 

@@ -1,32 +1,7 @@
 {
   "name": "astro-color-mode",
-  "version": "0.6.0",
+  "version": "0.7.1",
   "description": "Provides system or user-defined color scheme preference, with a toggle mechanism. Settings are persisted, component is progressively enhanced and flash of unstyled content avoided. Also, it will provide an easier way to target theme with CSS / SCSS / JS.",
-  "main": "index.ts",
-  "type": "module",
-  "files": [
-    "index.ts",
-    "Props.ts",
-    "ColorMode.astro",
-    "use-color-mode.scss",
-    "CHANGELOG.md"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "author": "Julian Cataldo",
-  "homepage": "https://code.juliancataldo.com/component/astro-color-mode",
-  "bugs": {
-    "url": "https://github.com/JulianCataldo/web-garden/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JulianCataldo/web-garden",
-    "directory": "app/ColorMode"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "astro",
     "astro-component",
@@ -45,5 +20,27 @@
     "javascript",
     "vanilla"
   ],
-  "license": "ISC"
+  "homepage": "https://code.juliancataldo.com/component/astro-color-mode",
+  "bugs": {
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianCataldo/web-garden",
+    "directory": "app/ColorMode"
+  },
+  "license": "ISC",
+  "author": "Julian Cataldo",
+  "type": "module",
+  "main": "index.ts",
+  "files": [
+    "index.ts",
+    "Props.ts",
+    "ColorMode.astro",
+    "use-color-mode.scss",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }

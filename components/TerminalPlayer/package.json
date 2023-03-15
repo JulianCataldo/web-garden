@@ -1,22 +1,7 @@
 {
   "name": "astro-terminal-player",
-  "version": "0.1.1",
+  "version": "0.1.5",
   "description": "Embed player for terminal sessions (recorded with asciinema) in your Astro project.\nUsing asciinema player under the hood.\nComes with full asciinema player settings support, typings and docs hints.",
-  "main": "index.ts",
-  "type": "module",
-  "author": "Julian Cataldo",
-  "homepage": "https://code.juliancataldo.com/component/astro-terminal-player",
-  "bugs": {
-    "url": "https://github.com/JulianCataldo/web-garden/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JulianCataldo/web-garden",
-    "directory": "components/TerminalPlayer"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "astro",
     "astro-component",
@@ -29,12 +14,24 @@
     "javascript",
     "command-line"
   ],
+  "homepage": "https://code.juliancataldo.com/component/astro-terminal-player",
+  "bugs": {
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianCataldo/web-garden",
+    "directory": "components/TerminalPlayer"
+  },
   "license": "ISC",
+  "author": "Julian Cataldo",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "asciinema-player": "^3.0.1",
     "zod": "^3.19.1"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

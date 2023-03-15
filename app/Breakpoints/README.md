@@ -1,8 +1,8 @@
 # 🚀  Astro — Breakpoints handlers with (S)CSS / DOM / JS
 
-[![NPM](https://img.shields.io/npm/v/@julian_cataldo/astro-breakpoints)](https://www.npmjs.com/package/@julian_cataldo/astro-breakpoints)
-![Downloads](https://img.shields.io/npm/dt/@julian_cataldo/astro-breakpoints.svg)
-[![ISC License](https://img.shields.io/npm/l/@julian_cataldo/astro-breakpoints)](https://github.com/JulianCataldo/web-garden/blob/develop/LICENSE)
+[![NPM](https://img.shields.io/npm/v/astro-breakpoints)](https://www.npmjs.com/package/astro-breakpoints)
+![Downloads](https://img.shields.io/npm/dt/astro-breakpoints.svg)
+[![ISC License](https://img.shields.io/npm/l/astro-breakpoints)](https://github.com/JulianCataldo/web-garden/blob/develop/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)  
 [![Astro](https://img.shields.io/badge/Astro-333333.svg?logo=astro)](https://astro.build)
 [![TypeScript](https://img.shields.io/badge/TypeScript-333333.svg?logo=typescript)](http://www.typescriptlang.org/)
@@ -50,7 +50,11 @@ export default defineConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `
+          additionalData(source, filePath) {
+            // Exclude file, prevents module loop
+            if (filePath.includes('use-')) return source;
+            // if (filePath.includes('my-vars.scss')) return source;
+            return `
             @use "astro-breakpoints/use-breakpoints.scss" as * with (
               $breakpoints: (
                 "xs": ${breakpoints.xs},
@@ -61,7 +65,9 @@ export default defineConfig({
                 "xxl": ${breakpoints.xxl},
               )
             );
-          `,
+            ${source}
+          `;
+          },
         },
       },
     },
@@ -69,7 +75,14 @@ export default defineConfig({
 });
 ```
 
-Then, use it like this in your stylesheets:
+You can also use the bare helper with the default implicit breakpoints settings,
+inside `additionalData`:
+
+```js
+`@use "astro-breakpoints/use-breakpoints.scss" as *;`;
+```
+
+Then, use it like this in your SCSS stylesheets:
 
 ```scss
 .hippopotame {
@@ -83,6 +96,14 @@ Then, use it like this in your stylesheets:
     padding: calc(10vw + 3rem);
   }
 }
+```
+
+## 🎉  Result
+
+```html
+<html data-breakpoint="xxl">
+  <!-- ... -->
+</html>
 ```
 
 ## To do

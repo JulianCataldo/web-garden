@@ -12,33 +12,41 @@ const props = Astro.props as Props;
 const tabs: string[] = [];
 const panels: string[] = [];
 
-let inlineStyles = ``;
+let inlineStyles = '';
 
 {
   let index = 0;
+  const classes: string[] = [];
   Object.entries(Astro.slots).forEach(([name]) => {
     if (name.startsWith('tab')) {
       index += 1;
 
       tabs.push(name);
 
-      inlineStyles +=
-        `.${styles.tabs}:has(.${styles.radio}-${index}:checked) ` +
-        `.${styles.panel}-${index} {` +
-        `visibility: visible;` +
-        `display: inline-block;` +
-        `}`;
+      classes.push(
+        String(
+          `.${styles.tabs}:has(.${styles.radio}-${index}:checked) ` +
+            `.${styles.panel}-${index}`,
+        ),
+      );
     } else {
       panels.push(name);
     }
   });
+  inlineStyles += classes.join(',\n');
 }
+inlineStyles +=
+  ` {` +
+  //
+  `\n  visibility: visible;\n` +
+  `  display: inline-block;\n` +
+  `}`;
 
 const uid = crypto.randomUUID();
 ---
 
 <div
-  {...{props, class: undefined, 'class-list': undefined}}
+  {...{...props, class: undefined, 'class:list': undefined}}
   class:list={[styles.tabs, 'tabs', props['class:list'], props.class]}
 >
   <style set:html={inlineStyles}>
@@ -65,7 +73,7 @@ const uid = crypto.randomUUID();
                 id={`${uid}-${index}`}
               />
               <label class:list={['tab', styles.tab]} for={`${uid}-${index}`}>
-                <div set:html={render} />
+                <Fragment set:html={render} />
               </label>
             </div>
           );

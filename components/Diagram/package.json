@@ -1,39 +1,7 @@
 {
   "name": "astro-diagram",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "Embed you Mermaid diagrams inside your Astro templates.\nFeatures server-side rendering and smart caching.",
-  "type": "module",
-  "files": [
-    "dist/*",
-    "index.ts",
-    "cache.ts",
-    "remark-mermaid.ts",
-    "render-diagram.ts",
-    "Props.ts",
-    "Diagram.astro",
-    "CHANGELOG.md"
-  ],
-  "exports": {
-    ".": "./index.ts",
-    "./remark-mermaid": "./dist/index.js"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "author": "Julian Cataldo",
-  "homepage": "https://code.juliancataldo.com/component/astro-diagram",
-  "bugs": {
-    "url": "https://github.com/JulianCataldo/web-garden/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JulianCataldo/web-garden",
-    "directory": "components/Diagram"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build index.ts"
-  },
   "keywords": [
     "astro",
     "astro-component",
@@ -46,7 +14,36 @@
     "puppeteer",
     "headless"
   ],
+  "homepage": "https://code.juliancataldo.com/component/astro-diagram",
+  "bugs": {
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianCataldo/web-garden",
+    "directory": "components/Diagram"
+  },
   "license": "ISC",
+  "author": "Julian Cataldo",
+  "type": "module",
+  "exports": {
+    ".": "./index.ts",
+    "./remark-mermaid": "./dist/index.js"
+  },
+  "files": [
+    "dist/*",
+    "index.ts",
+    "cache.ts",
+    "remark-mermaid.ts",
+    "render-diagram.ts",
+    "Props.ts",
+    "Diagram.astro",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "parcel build index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "mermaid": "^9.1.6",
     "puppeteer": "^18.0.2",

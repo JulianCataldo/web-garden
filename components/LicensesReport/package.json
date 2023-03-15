@@ -1,25 +1,7 @@
 {
   "name": "astro-licenses-report",
-  "version": "0.8.0",
+  "version": "0.8.4",
   "description": "Give credits to the awesome JS open-source community with this component. It will generate a table with important informations about packages used by your project.",
-  "main": "index.ts",
-  "type": "module",
-  "publishConfig": {
-    "access": "public"
-  },
-  "author": "Julian Cataldo",
-  "homepage": "https://code.juliancataldo.com/component/astro-licenses-report",
-  "bugs": {
-    "url": "https://github.com/JulianCataldo/web-garden/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JulianCataldo/web-garden",
-    "directory": "components/LicensesReport"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "astro",
     "astro-component",
@@ -35,7 +17,22 @@
     "developer",
     "credits"
   ],
+  "homepage": "https://code.juliancataldo.com/component/astro-licenses-report",
+  "bugs": {
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianCataldo/web-garden",
+    "directory": "components/LicensesReport"
+  },
   "license": "ISC",
+  "author": "Julian Cataldo",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "@wbmnky/license-report-generator": "^2.1.3"
   }

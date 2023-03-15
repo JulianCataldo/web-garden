@@ -19,7 +19,7 @@ const { links = [], anchorMode = false, ...extraAttrs } = Astro.props as Props;
 
         return (
           <li class:list={`depth-${link.depth}`}>
-            <Link href={href} class="link unstyled">
+            <Link href={href} class="link-t unstyled">
               {title}
             </Link>
           </li>

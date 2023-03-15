@@ -1,49 +1,57 @@
-export interface Props extends astroHTML.JSX.HTMLAttributes {
+import type { MapOptions } from 'leaflet';
+
+export interface Props extends MapOptions {
+  /**
+   * **Default**: `true`
+   * */
+  ssr?: boolean;
+
+  /**
+   * **Default**: `{}`
+   * */
+  htmlAttributes?: astroHTML.JSX.HTMLAttributes;
+
   /* ————————————————————————————— */
 
   /**
-   * Longitude
-   *
-   * **Default**: `43.389636`
+   * **Default**: `null`
    * */
-  x: number;
-
-  /**
-   * Latitude
-   *
-   * **Default**: `5.3964332`
-   * */
-  y: number;
-
-  /**
-   * Zoom level
-   *
-   * **Default**: `10`
-   * */
-  z?: number;
+  address?: string;
 
   /* ————————————————————————————— */
 
   /**
    * CSS Unit (fixed, no relative unit)
    *
-   * **Default**: `'12rem'`
+   * **Default**: `'25rem'`
    * */
-  height: string;
+  height?: string;
 
   /**
    * CSS Unit
    *
-   * **Default**: `'100%'`
+   * **Default**: `'25rem'`
    * */
   width?: string;
 
   /* ————————————————————————————— */
 
   /**
-   * **Default**: `true`
+   * **Default**: `'http://{s}.tile.osm.org/{z}/{x}/{y}.png'`
+   *
+   * @example
+   * ```js
+   * const mapAccessToken = `import.meta.env.PUBLIC_MAP_TILER_ACCESS_TOKEN`;
+   * const mapId = 'topographique';
+   * const mapImgFormat = 'png';
+   * const urlMapTiler = `https://api.maptiler.com/maps/${mapId}/256/{z}/{x}/{y}{r}.${mapImgFormat}?key=${mapAccessToken}`;
+   * const urlOsmFr = 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png';
+   * ```
    * */
-  attribution?: boolean;
+  url?:
+    | 'https://{s}.tile.osm.org/{z}/{x}/{y}.png'
+    | 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png'
+    | string;
 
   /* ————————————————————————————— */
 }

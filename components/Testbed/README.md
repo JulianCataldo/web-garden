@@ -26,6 +26,7 @@ Then, go to 📍  Storybooks > **Testbeds**
 
 - [🚀  Astro — Testbed 👩🏻‍🔬🧫](#astro--testbed-)
   - [📦  Installation](#installation)
+    - [Vite client-side fix](#vite-client-side-fix)
   - [🛠  Usage](#usage)
     - [Astro component testbed](#astro-component-testbed)
     - [Testbed, headless](#testbed-headless)
@@ -40,8 +41,25 @@ Then, go to 📍  Storybooks > **Testbeds**
 ## 📦  Installation
 
 ```sh
-pnpm i ts-morph astro-testbed
+pnpm i astro-testbed
 ```
+
+### Vite client-side fix
+
+You might want to add this to your `astro.config`:
+
+```js
+export default defineConfig({
+  /* ... */
+  vite: { optimizeDeps: { include: ['@rjsf/core', '@rjsf/validator-ajv6'] } },
+});
+```
+
+So client-side, third-party JS will be loaded properly, instead of getting this error:
+
+`SyntaxError: Importing binding name 'default' cannot be resolved by star`
+
+If some dependency issues persists, try installing `ts-morph`, `@rjsf/core`, `@rjsf/validator-ajv6`.
 
 ## 🛠  Usage
 

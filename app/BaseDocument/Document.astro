@@ -10,6 +10,8 @@ if (typeof props.jsEnabledClass !== 'boolean') props.jsEnabledClass = true;
 internalProps.push('jsEnabledClass');
 if (typeof props.redirectTo !== 'string') props.redirectTo = null;
 internalProps.push('redirectTo');
+if (typeof props.lang !== 'string') props.lang = 'en';
+internalProps.push('lang');
 /* ·········································································· */
 const extraAttrs: { [key: string]: string } = {};
 Object.entries(props).forEach(([key, val]) => {
@@ -21,18 +23,15 @@ Object.entries(props).forEach(([key, val]) => {
 ---
 
 <!DOCTYPE html>
-<html {...extraAttrs} class:list={props['class:list']}>
+<html lang={props.lang} {...extraAttrs} class:list={props['class:list']}>
   <head>
-    <script define:vars={{ enabled: props.jsEnabledClass }} is:inline>
-      // CRITICAL
-      // This add 'js' class to HTML tag if JavaScript is enabled on browser
-      if (enabled) {
-        (() => {
-          const root = document.documentElement;
-          root.classList.add('js');
-        })();
-      }
-    </script>
+    <!-- CRITICAL:
+      This adds 'js' class to HTML tag if JavaScript is enabled on browser -->
+    {
+      props.jsEnabledClass && (
+        <script is:inline>document.documentElement.classList.add('js');</script>
+      )
+    }
 
     <meta charset="UTF-8" />
 

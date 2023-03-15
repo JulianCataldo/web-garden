@@ -1,0 +1,84 @@
+lockfileVersion: 5.4
+
+specifiers:
+  monaco-editor: ^0.34.1
+  monaco-yaml: ^4.0.2
+
+dependencies:
+  monaco-editor: 0.34.1
+  monaco-yaml: 4.0.2_monaco-editor@0.34.1
+
+packages:
+
+  /@types/json-schema/7.0.11:
+    resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
+    dev: false
+
+  /jsonc-parser/3.2.0:
+    resolution: {integrity: sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w==}
+    dev: false
+
+  /monaco-editor/0.34.1:
+    resolution: {integrity: sha512-FKc80TyiMaruhJKKPz5SpJPIjL+dflGvz4CpuThaPMc94AyN7SeC9HQ8hrvaxX7EyHdJcUY5i4D0gNyJj1vSZQ==}
+    dev: false
+
+  /monaco-marker-data-provider/1.1.1_monaco-editor@0.34.1:
+    resolution: {integrity: sha512-PGB7TJSZE5tmHzkxv/OEwK2RGNC2A7dcq4JRJnnj31CUAsfmw0Gl+1QTrH0W0deKhcQmQM0YVPaqgQ+0wCt8Mg==}
+    peerDependencies:
+      monaco-editor: '>=0.30.0'
+    dependencies:
+      monaco-editor: 0.34.1
+    dev: false
+
+  /monaco-worker-manager/2.0.1_monaco-editor@0.34.1:
+    resolution: {integrity: sha512-kdPL0yvg5qjhKPNVjJoym331PY/5JC11aPJXtCZNwWRvBr6jhkIamvYAyiY5P1AWFmNOy0aRDRoMdZfa71h8kg==}
+    peerDependencies:
+      monaco-editor: '>=0.30.0'
+    dependencies:
+      monaco-editor: 0.34.1
+    dev: false
+
+  /monaco-yaml/4.0.2_monaco-editor@0.34.1:
+    resolution: {integrity: sha512-Wxn6CblkQDLOUusfi0eZ3qZhkuKYIrK7fXlkJOOG+W18zgKePbuZW0XNWpczlxDC27D753dB18pMnx4U7MZ3yg==}
+    peerDependencies:
+      monaco-editor: '>=0.30'
+    dependencies:
+      '@types/json-schema': 7.0.11
+      jsonc-parser: 3.2.0
+      monaco-editor: 0.34.1
+      monaco-marker-data-provider: 1.1.1_monaco-editor@0.34.1
+      monaco-worker-manager: 2.0.1_monaco-editor@0.34.1
+      path-browserify: 1.0.1
+      prettier: 2.8.1
+      vscode-languageserver-textdocument: 1.0.8
+      vscode-languageserver-types: 3.17.2
+      vscode-uri: 3.0.7
+      yaml: 2.2.1
+    dev: false
+
+  /path-browserify/1.0.1:
+    resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==}
+    dev: false
+
+  /prettier/2.8.1:
+    resolution: {integrity: sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: false
+
+  /vscode-languageserver-textdocument/1.0.8:
+    resolution: {integrity: sha512-1bonkGqQs5/fxGT5UchTgjGVnfysL0O8v1AYMBjqTbWQTFn721zaPGDYFkOKtfDgFiSgXM3KwaG3FMGfW4Ed9Q==}
+    dev: false
+
+  /vscode-languageserver-types/3.17.2:
+    resolution: {integrity: sha512-zHhCWatviizPIq9B7Vh9uvrH6x3sK8itC84HkamnBWoDFJtzBf7SWlpLCZUit72b3os45h6RWQNC9xHRDF8dRA==}
+    dev: false
+
+  /vscode-uri/3.0.7:
+    resolution: {integrity: sha512-eOpPHogvorZRobNqJGhapa0JdwaxpjVvyBp0QIUMRMSf8ZAlqOdEquKuRmw9Qwu0qXtJIWqFtMkmvJjUZmMjVA==}
+    dev: false
+
+  /yaml/2.2.1:
+    resolution: {integrity: sha512-e0WHiYql7+9wr4cWMx3TVQrNwejKaEe7/rHNmQmqRjazfOP5W8PB6Jpebb5o6fIapbz9o9+2ipcaTM2ZwDI6lw==}
+    engines: {node: '>= 14'}
+    dev: false

@@ -1,25 +1,7 @@
 {
   "name": "astro-scroll-observer",
-  "version": "0.5.1",
+  "version": "0.5.3",
   "description": "Viewport scroll position and direction watcher.\nBinds states data attributes to `HTML` for further JS/CSS usage.\nScroll event is throttled for performance economy.",
-  "main": "index.ts",
-  "type": "module",
-  "publishConfig": {
-    "access": "public"
-  },
-  "author": "Julian Cataldo",
-  "homepage": "https://code.juliancataldo.com/component/astro-scroll-observer",
-  "bugs": {
-    "url": "https://github.com/JulianCataldo/web-garden/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JulianCataldo/web-garden",
-    "directory": "app/ScrollObserver"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "astro",
     "astro-component",
@@ -35,7 +17,29 @@
     "watch",
     "window"
   ],
+  "homepage": "https://code.juliancataldo.com/component/astro-scroll-observer",
+  "bugs": {
+    "url": "https://github.com/JulianCataldo/web-garden/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianCataldo/web-garden",
+    "directory": "app/ScrollObserver"
+  },
   "license": "ISC",
+  "author": "Julian Cataldo",
+  "type": "module",
+  "main": "index.ts",
+  "files": [
+    "use-scroll-observer.scss",
+    "ScrollObserver.client.ts",
+    "ScrollObserver.astro",
+    "index.ts",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "lodash-es": "^4.17.21"
   },
