@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.4](https://github.com/JulianCataldo/web-garden/compare/astro-licenses-report@0.8.3...astro-licenses-report@0.8.4) (2023-03-15)
+
+### Bug Fixes
+
+- **LicensesReport:** proper fallback if no URL is defined for a package ([1e6479b](https://github.com/JulianCataldo/web-garden/commit/1e6479b1a7bf110cfca59dcbfe43faf39f7c2c9f))
+
 ## [0.8.3](https://github.com/JulianCataldo/web-garden/compare/astro-licenses-report@0.8.2...astro-licenses-report@0.8.3) (2023-01-05)
 
 **Note:** Version bump only for package astro-licenses-report

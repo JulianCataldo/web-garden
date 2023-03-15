@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/JulianCataldo/web-garden/compare/webdev-configs@1.2.0...webdev-configs@1.3.0) (2023-03-15)
+
+### Features
+
+- lit config, disable import ext., install cmd ([f145588](https://github.com/JulianCataldo/web-garden/commit/f1455881130c5f26879b2e77faf933afd8e7d084))
+
 ## [1.2.0](https://github.com/JulianCataldo/web-garden/compare/webdev-configs@1.1.0...webdev-configs@1.2.0) (2022-11-19)
 
 ### Features

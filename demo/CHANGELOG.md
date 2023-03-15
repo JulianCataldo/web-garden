@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.16.14](https://github.com/JulianCataldo/web-garden/compare/@web-garden/astro-demo@0.16.13...@web-garden/astro-demo@0.16.14) (2023-03-15)
+
+**Note:** Version bump only for package @web-garden/astro-demo
+
 ## [0.16.13](https://github.com/JulianCataldo/web-garden/compare/@web-garden/astro-demo@0.16.12...@web-garden/astro-demo@0.16.13) (2023-01-21)
 
 **Note:** Version bump only for package @web-garden/astro-demo

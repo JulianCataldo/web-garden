@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.0](https://github.com/JulianCataldo/web-garden/compare/astro-diagram@0.6.3...astro-diagram@0.7.0) (2023-03-15)
+
+### Features
+
+- add css class to mdx rendered mermaid ([2c52960](https://github.com/JulianCataldo/web-garden/commit/2c529606fe47b72f32a1a69581e4bbef61d2ef7d)), closes [#73](https://github.com/JulianCataldo/web-garden/issues/73)
+
 ## [0.6.3](https://github.com/JulianCataldo/web-garden/compare/astro-diagram@0.6.2...astro-diagram@0.6.3) (2023-01-05)
 
 **Note:** Version bump only for package astro-diagram
