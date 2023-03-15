@@ -59,6 +59,7 @@ specifiers:
 
 dependencies:
   '@types/react': 18.0.21
+  husky: 8.0.1
   linkinator: 4.1.0
   markdown-magic-package-json: 2.0.2
   markdown-magic-template: 1.0.1_markdown-magic@2.6.1
@@ -95,7 +96,6 @@ devDependencies:
   eslint-plugin-react-hooks: 4.6.0_eslint@8.26.0
   eslint-plugin-tsdoc: 0.2.17
   eslint-plugin-vue: 9.6.0_eslint@8.26.0
-  husky: 8.0.1
   lerna: 6.0.1
   markdown-magic: 2.6.1
   markdown-magic-directory-tree: 1.2.4_markdown-magic@2.6.1
@@ -5877,7 +5877,7 @@ packages:
     resolution: {integrity: sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==}
     engines: {node: '>=14'}
     hasBin: true
-    dev: true
+    dev: false
 
   /iconv-lite/0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
