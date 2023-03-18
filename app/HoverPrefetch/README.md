@@ -17,7 +17,7 @@ The goal is to make further page loading snappier.
 It's useful with SSG but also with SSR in certain scenarios.
 
 It plays well with this page transition component:  
-[astro-page-transition](https://github.com/JulianCataldo/web-garden/tree/master/app/Transition)
+[astro-page-transition](https://github.com/JulianCataldo/web-garden/tree/master/app/PageTransition)
 
 <!-- ## Demo
 
