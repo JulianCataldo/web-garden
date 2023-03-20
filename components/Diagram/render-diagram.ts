@@ -13,11 +13,17 @@ import type { Props } from './Props';
 // const path = require.resolve('mermaid/dist/mermaid.js');
 
 export default async function renderDiagram({ config, code }: Props) {
-  const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
+  const browser = await puppeteer.launch({ args: [ "--disable-gpu",
+  "--disable-dev-shm-usage",
+  "--disable-setuid-sandbox",
+  "--no-first-run",
+  "--no-sandbox",
+  "--no-zygote",
+  "--single-process"] });
   const page = await browser.newPage();
 
   const content = await fs.readFile(
-    path.join(process.cwd(), 'node_modules/mermaid/dist/mermaid.js'),
+    path.join(process.cwd(), 'node_modules/mermaid/dist/mermaid.esm.min.mjs'),
     'utf8',
   );
 
