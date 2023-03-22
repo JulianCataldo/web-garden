@@ -45,7 +45,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "mermaid": "^9.1.6",
+    "mermaid": "^8.14.0",
     "puppeteer": "^18.0.2",
     "unist-util-visit": "^4.1.0"
   },
@@ -54,6 +54,6 @@
     "parcel": "^2.7.0"
   },
   "peerDependencies": {
-    "mermaid": "^9.1.6"
+    "mermaid": "^8.14.0"
   }
 }

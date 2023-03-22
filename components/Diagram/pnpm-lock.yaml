@@ -2,13 +2,13 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/mermaid': ^8.2.9
-  mermaid: ^9.1.6
+  mermaid: ^8.14.0
   parcel: ^2.7.0
   puppeteer: ^18.0.2
   unist-util-visit: ^4.1.0
 
 dependencies:
-  mermaid: 9.1.6
+  mermaid: 8.14.0
   puppeteer: 18.0.2
   unist-util-visit: 4.1.0
 
@@ -39,8 +39,9 @@ packages:
       js-tokens: 4.0.0
     dev: true
 
-  /@braintree/sanitize-url/6.0.0:
-    resolution: {integrity: sha512-mgmE7XBYY/21erpzhexk4Cj1cyTQ9LzvnTxtzM17BJ7ERMNE6W72mQRo0I1Ud8eFJ+RVVIcBNhLFZ3GX4XFz5w==}
+  /@braintree/sanitize-url/3.1.0:
+    resolution: {integrity: sha512-GcIY79elgB+azP74j8vqkiXz8xLFfIzbQJdlwOPisgbKT00tviJQuEghOXSMVxJ00HoYJbGswr4kcllUc4xCcg==}
+    deprecated: Potential XSS vulnerability patched in v6.0.0.
     dev: false
 
   /@jridgewell/gen-mapping/0.3.2:
@@ -1728,8 +1729,8 @@ packages:
       domelementtype: 2.3.0
     dev: true
 
-  /dompurify/2.3.10:
-    resolution: {integrity: sha512-o7Fg/AgC7p/XpKjf/+RC3Ok6k4St5F7Q6q6+Nnm3p2zGWioAY6dh0CbbuwOhH2UcSzKsdniE/YnE2/92JcsA+g==}
+  /dompurify/2.3.5:
+    resolution: {integrity: sha512-kD+f8qEaa42+mjdOpKeztu9Mfx5bv9gVLO6K9jRx4uGvh6Wv06Srn4jr1wPNY2OOUGGSKHNFN+A8MA3v0E0QAQ==}
     dev: false
 
   /domutils/2.8.0:
@@ -1976,8 +1977,8 @@ packages:
     hasBin: true
     dev: true
 
-  /khroma/2.0.0:
-    resolution: {integrity: sha512-2J8rDNlQWbtiNYThZRvmMv5yt44ZakX+Tz5ZIp/mN1pt4snn+m030Va5Z4v8xA0cQFDXBwO/8i42xL4QPsVk3g==}
+  /khroma/1.4.1:
+    resolution: {integrity: sha512-+GmxKvmiRuCcUYDgR7g5Ngo0JEDeOsGdNONdU2zsiBQaK4z19Y2NvXqfEDE0ZiIrg45GTZyAnPLVsLZZACYm3Q==}
     dev: false
 
   /lines-and-columns/1.2.4:
@@ -2010,16 +2011,16 @@ packages:
     resolution: {integrity: sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==}
     dev: true
 
-  /mermaid/9.1.6:
-    resolution: {integrity: sha512-oBuQk7s55wQgEgH/AK0GYY8U0kBqOIGK9QlJL+VYxh+1kZQtU9tNwoy0gWCfBJDaFIRdfpc/fm9PagaIXg6XFQ==}
+  /mermaid/8.14.0:
+    resolution: {integrity: sha512-ITSHjwVaby1Li738sxhF48sLTxcNyUAoWfoqyztL1f7J6JOLpHOuQPNLBb6lxGPUA0u7xP9IRULgvod0dKu35A==}
     dependencies:
-      '@braintree/sanitize-url': 6.0.0
+      '@braintree/sanitize-url': 3.1.0
       d3: 7.6.1
       dagre: 0.8.5
       dagre-d3: 0.6.4
-      dompurify: 2.3.10
+      dompurify: 2.3.5
       graphlib: 2.1.8
-      khroma: 2.0.0
+      khroma: 1.4.1
       moment-mini: 2.24.0
       stylis: 4.1.1
     dev: false
