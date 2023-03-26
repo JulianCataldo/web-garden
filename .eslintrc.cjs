@@ -1,4 +1,4 @@
-/** @type {import("@types/eslint").Linter.Config} */
+/** @type {import("eslint").Linter.Config} */
 
 module.exports = {
   // FIXME: ./node_modules/ prefix is required, why?

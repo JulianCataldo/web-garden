@@ -28,14 +28,14 @@ This means aligning to Prettier defaults, air-bnb rules, etc.
       - [Extension(s)](#extensions)
       - [Settings](#settings)
   - [Prettier](#prettier)
-    - [Installations](#installations-1)
+    - [Installation](#installation-1)
     - [Configuration](#configuration-1)
     - [Editorconfig](#editorconfig)
     - [VSCode](#vscode-1)
       - [Extension(s)](#extensions-1)
       - [Settings](#settings-1)
   - [Stylelint](#stylelint)
-    - [Installations](#installations-2)
+    - [Installations](#installations-1)
     - [Configuration](#configuration-2)
     - [VSCode](#vscode-2)
       - [Extension(s)](#extensions-2)
@@ -48,7 +48,6 @@ This means aligning to Prettier defaults, air-bnb rules, etc.
       - [Extension(s)](#extensions-4)
   - [TypeScript](#typescript)
     - [VSCode](#vscode-5)
-    - [Project settings boilerplate](#project-settings-boilerplate)
   - [VSCode](#vscode-6)
     - [Languages](#languages)
       - [Astro](#astro)
@@ -79,7 +78,6 @@ Atomic configs import is planned, as each project might not need the whole range
 # v—————————————————————————————————— Base
 pnpm i -D \
 eslint \
-@types/eslint \
 eslint-config-airbnb-base
 
 # v—————————————————————————————————— Prettier compat.
@@ -124,10 +122,12 @@ eslint-plugin-mdx
 
 ### Configuration
 
-In `.eslintrc.cjs`:
+```sh
+touch ./.eslintrc.cjs && code -r ./.eslintrc.cjs
+```
 
 ```js
-/** @type {import("@types/eslint").Linter.Config} */
+/** @type {import("eslint").Linter.Config} */
 
 module.exports = {
   // Prevent cascading in contained folders
@@ -193,26 +193,20 @@ In your `settings.json`:
 
 ## Prettier
 
-### Installations
+### Installation
 
 ```sh
-# v—————————————————————————————————— Base
-pnpm i -D \
-@types/prettier \
-prettier
-
-# v—————————————————————————————————— Astro
-pnpm i -D \
-prettier-plugin-astro \
-postcss-html
+pnpm i -D prettier
 ```
 
 ### Configuration
 
-In `.prettierrc.cjs`:
+```sh
+touch ./.prettierrc.cjs && code -r ./.prettierrc.cjs
+```
 
 ```js
-/** @type {import("@types/prettier").Options} */
+/** @type {import("prettier").Options} */
 
 module.exports = {
   /**
@@ -324,14 +318,14 @@ pnpm i -D \
 stylelint-config-standard-scss \
 stylelint-config-recommended-scss
 
+# v—————————————————————————————————— Astro / Vue / HTML…
+pnpm i -D \
+postcss-html \
+stylelint-config-html
+
 # v—————————————————————————————————— Vue
 pnpm i -D \
-stylelint-config-recommended-vue \
-postcss-html
-
-# v—————————————————————————————————— Astro
-pnpm i -D \
-postcss-html
+stylelint-config-recommended-vue
 
 # v—————————————————————————————————— Prettier compat.
 pnpm i -D \
@@ -340,7 +334,9 @@ stylelint-config-prettier
 
 ### Configuration
 
-In `stylelint.config.cjs`:
+```sh
+touch ./stylelint.config.cjs && code -r ./stylelint.config.cjs
+```
 
 ```js
 /** @type {import("@types/stylelint").Options} */
@@ -391,8 +387,24 @@ In your `settings.json`:
 ```jsonc
 {
   // …
-  "stylelint.validate": ["css", "postcss", "scss", "vue", "astro"],
-  "stylelint.snippet": ["css", "postcss", "scss", "vue", "astro"]
+  "stylelint.validate": [
+    //
+    "html",
+    "css",
+    "postcss",
+    "scss",
+    "vue",
+    "astro"
+  ],
+  "stylelint.snippet": [
+    //
+    "html",
+    "css",
+    "postcss",
+    "scss",
+    "vue",
+    "astro"
+  ]
   // …
 }
 ```
@@ -433,7 +445,9 @@ In your `settings.json`:
 }
 ```
 
-### Project settings boilerplate
+<!-- NOTE: Too specific, but can be nice to reference some tricks -->
+
+<!-- ### Project settings boilerplate
 
 In your `tsconfig.json`:
 
@@ -464,7 +478,7 @@ In your `tsconfig.json`:
     }
   }
 }
-```
+``` -->
 
 ## VSCode
 
