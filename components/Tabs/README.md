@@ -38,27 +38,27 @@ import { Tabs } from 'astro-tabs';
 ---
 
 <Tabs class="pass-your-own-class" class:list={['pass-your-class-list']}>
-  <Fragment slot="tab-1">Tab 1</Fragment>
-  <Fragment slot="tab-2">Tab 2</Fragment>
-  <Fragment slot="tab-3">Tab 3</Fragment>
+	<Fragment slot="tab-1">Tab 1</Fragment>
+	<Fragment slot="tab-2">Tab 2</Fragment>
+	<Fragment slot="tab-3">Tab 3</Fragment>
 
-  <Fragment slot="panel-1">
-    <h2>Panel 1</h2>
-    <p>Hello world</p>
-  </Fragment>
+	<Fragment slot="panel-1">
+		<h2>Panel 1</h2>
+		<p>Hello world</p>
+	</Fragment>
 
-  <Fragment slot="panel-2">
-    <h2>Panel 2</h2>
+	<Fragment slot="panel-2">
+		<h2>Panel 2</h2>
 
-    <img
-      height="400"
-      src="https://res.cloudinary.com/dzfylx93l/image/upload/v1664340439/astro-takeoff-1_ecdfxf.gif"
-    />
-  </Fragment>
+		<img
+			height="400"
+			src="https://res.cloudinary.com/dzfylx93l/image/upload/v1664340439/astro-takeoff-1_ecdfxf.gif"
+		/>
+	</Fragment>
 
-  <Fragment slot="panel-3">
-    <h2>Panel 3</h2>
-  </Fragment>
+	<Fragment slot="panel-3">
+		<h2>Panel 3</h2>
+	</Fragment>
 </Tabs>
 ```
 
@@ -66,28 +66,28 @@ WITH "tallest" panel equalization, use `panel-<n>-tallest`
 
 ```astro
 <Tabs>
-  <Fragment slot="tab-1">Tab 1</Fragment>
-  <Fragment slot="tab-2">Tab 2</Fragment>
-  <Fragment slot="tab-3">Tab 3</Fragment>
+	<Fragment slot="tab-1">Tab 1</Fragment>
+	<Fragment slot="tab-2">Tab 2</Fragment>
+	<Fragment slot="tab-3">Tab 3</Fragment>
 
-  <Fragment slot="panel-1">
-    <h2>Panel 1</h2>
-    <p>Hello world</p>
-  </Fragment>
+	<Fragment slot="panel-1">
+		<h2>Panel 1</h2>
+		<p>Hello world</p>
+	</Fragment>
 
-  <!-- v———————————————————————————————————— This is the tallest panel -->
-  <Fragment slot="panel-2-tallest">
-    <h2>Panel 2</h2>
-    <img
-      height="400"
-      src="https://res.cloudinary.com/dzfylx93l/image/upload/v1664340439/astro-takeoff-1_ecdfxf.gif"
-    />
-  </Fragment>
+	<!-- v———————————————————————————————————— This is the tallest panel -->
+	<Fragment slot="panel-2-tallest">
+		<h2>Panel 2</h2>
+		<img
+			height="400"
+			src="https://res.cloudinary.com/dzfylx93l/image/upload/v1664340439/astro-takeoff-1_ecdfxf.gif"
+		/>
+	</Fragment>
 
-  <Fragment slot="panel-3">
-    <h2>Panel 3</h2>
-    <p>Heya</p>
-  </Fragment>
+	<Fragment slot="panel-3">
+		<h2>Panel 3</h2>
+		<p>Heya</p>
+	</Fragment>
 </Tabs>
 ```
 
@@ -95,26 +95,26 @@ WITH "tallest" panel equalization, use `panel-<n>-tallest`
 
 ```scss
 .tab {
-  color: white;
-  padding: 1rem;
-  background-color: teal;
-  border: 1px solid cyan;
+	color: white;
+	padding: 1rem;
+	background-color: teal;
+	border: 1px solid cyan;
 
-  &:hover {
-    color: black;
-    background-color: cyan;
-  }
+	&:hover {
+		color: black;
+		background-color: cyan;
+	}
 }
 
 .tab-selector:checked ~ .tab {
-  color: black;
-  background: turquoise;
+	color: black;
+	background: turquoise;
 }
 
 .panel {
-  padding: 1rem;
-  background-color: lightcyan;
-  border: 3px solid darkcyan;
+	padding: 1rem;
+	background-color: lightcyan;
+	border: 3px solid darkcyan;
 }
 ```
 
@@ -124,43 +124,43 @@ Or use `:global(.tab)`,… in scoped styles.
 
 ```html
 <div class="_tabs_1il72_16 tabs">
-  <style>
-    ._tabs_1il72_16:has(._radio_1il72_32-1:checked) ._panel_1il72_8-1,
-    ._tabs_1il72_16:has(._radio_1il72_32-2:checked) ._panel_1il72_8-2,
-    ._tabs_1il72_16:has(._radio_1il72_32-3:checked) ._panel_1il72_8-3 {
-      visibility: visible;
-      display: inline-block;
-    }
-  </style>
+	<style>
+		._tabs_1il72_16:has(._radio_1il72_32-1:checked) ._panel_1il72_8-1,
+		._tabs_1il72_16:has(._radio_1il72_32-2:checked) ._panel_1il72_8-2,
+		._tabs_1il72_16:has(._radio_1il72_32-3:checked) ._panel_1il72_8-3 {
+			visibility: visible;
+			display: inline-block;
+		}
+	</style>
 
-  <nav class="_tab-bar_1il72_3">
-    <div class="tab-wrapper tab-1">
-      <input
-        class="_radio_1il72_32 _radio_1il72_32-1 tab-selector"
-        type="radio"
-        name="3af997a5-693f-40db-a0c6-ba63359e27a8"
-        checked="true"
-        id="3af997a5-693f-40db-a0c6-ba63359e27a8-1"
-      />
-      <label
-        class="tab _tab_1il72_3"
-        for="3af997a5-693f-40db-a0c6-ba63359e27a8-1"
-      >
-        <div>Tab 1</div>
-      </label>
-    </div>
+	<nav class="_tab-bar_1il72_3">
+		<div class="tab-wrapper tab-1">
+			<input
+				class="_radio_1il72_32 _radio_1il72_32-1 tab-selector"
+				type="radio"
+				name="3af997a5-693f-40db-a0c6-ba63359e27a8"
+				checked="true"
+				id="3af997a5-693f-40db-a0c6-ba63359e27a8-1"
+			/>
+			<label
+				class="tab _tab_1il72_3"
+				for="3af997a5-693f-40db-a0c6-ba63359e27a8-1"
+			>
+				<div>Tab 1</div>
+			</label>
+		</div>
 
-    <!-- ... x3 -->
-  </nav>
+		<!-- ... x3 -->
+	</nav>
 
-  <div class="_panels_1il72_8">
-    <div class="_panel_1il72_8 false _panel_1il72_8-1 panel">
-      <h2>Panel 1</h2>
-      <p>Hello world</p>
-    </div>
+	<div class="_panels_1il72_8">
+		<div class="_panel_1il72_8 _panel_1il72_8-1 panel">
+			<h2>Panel 1</h2>
+			<p>Hello world</p>
+		</div>
 
-    <!-- ... x3 -->
-  </div>
+		<!-- ... x3 -->
+	</div>
 </div>
 ```
 
