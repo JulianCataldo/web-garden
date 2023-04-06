@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.0](https://github.com/JulianCataldo/web-garden/compare/webdev-configs@1.3.0...webdev-configs@1.4.0) (2023-04-06)
+
+### Features
+
+- lit rule, use tabs, fix stylelint html 🥳 ([15e9dc0](https://github.com/JulianCataldo/web-garden/commit/15e9dc0edecae39b62098f9a00a051e3ea3f5389))
+
 ## [1.3.0](https://github.com/JulianCataldo/web-garden/compare/webdev-configs@1.2.0...webdev-configs@1.3.0) (2023-03-15)
 
 ### Features

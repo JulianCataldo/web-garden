@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.8](https://github.com/JulianCataldo/web-garden/compare/astro-tabs@0.1.7...astro-tabs@0.1.8) (2023-04-06)
+
+### Bug Fixes
+
+- "false" class for not tallest + reformat all ([5424036](https://github.com/JulianCataldo/web-garden/commit/542403615dc08df790799d5edb6191ad767b5c13))
+
 ## [0.1.7](https://github.com/JulianCataldo/web-garden/compare/astro-tabs@0.1.6...astro-tabs@0.1.7) (2022-11-19)
 
 **Note:** Version bump only for package astro-tabs
