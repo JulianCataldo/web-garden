@@ -16,7 +16,7 @@ if (typeof props.max !== 'number') {
     if (e.target.tagName === 'A' && prefetchList.length < max) {
       const url = e.target.getAttribute('href');
 
-      if (url.startsWith('/')) {
+      if (url.startsWith('/' && url !== window.location.pathname )) {
         if (prefetchList.includes(url) === false) {
           // console.log(`prefetching url ${url}`);
           const link = document.createElement('link');
