@@ -1,0 +1,81 @@
+---
+import { get, set } from 'lodash-es';
+import ChevronDoubleRight from '../assets/chevron-double-right.svg?raw';
+import Home from '../assets/home.svg?raw';
+import { Link } from 'astro-link';
+import { content } from '../app/content.js';
+import './BreadCrumbs.scss';
+
+interface Props {
+	pathParam?: string;
+}
+const { pathParam } = Astro.props;
+
+const breadCrumb = [];
+console.log('HELLO FROM BC');
+
+const pS = pathParam?.split('/');
+const acc = [];
+
+pS?.forEach((a, i) => {
+	if (acc.length > pS.length - 2) return;
+
+	// console.log({ a, i });
+
+	acc.push(a);
+
+	const p = acc.join('.');
+	const cur = get(content, p);
+
+	// console.log({ dss: pathParam?.split('/'), pathParam, content, cur, p });
+
+	// console.log({ cur });
+
+	if (a === 'learn') {
+		breadCrumb.push({ title: 'Learn' });
+		return;
+	}
+	if (a === 'reference') {
+		breadCrumb.push({ title: 'Reference' });
+	}
+	if (a === 'xyz') {
+		breadCrumb.push({ title: 'Reference' });
+	}
+	if (cur['__index']) {
+		console.log({ a });
+		breadCrumb.push({ ...cur['__index'], url: `/${acc.join('/')}` });
+	}
+	// breadCrumb.push({ ...cur, url: 'zss' });
+});
+---
+
+<nav class="c-breadcrumbs">
+	<div class="part">
+		<Link
+			href={import.meta.env.BASE_URL}
+			title="Back to Home"
+			data-tooltip-placement="left"
+		>
+			<Fragment set:html={Home} />
+		</Link>
+		<Fragment set:html={ChevronDoubleRight} />
+	</div>
+	{
+		breadCrumb.map((b, i) => {
+			return (
+				b.title && (
+					<div class="part">
+						{b.url ? (
+							<Link href={b.url}>{b.title}</Link>
+						) : (
+							<span>{b.title}</span>
+						)}
+
+						<Fragment set:html={ChevronDoubleRight} />
+					</div>
+				)
+			);
+		})
+	}
+</nav>
+<!-- {p} &gt; {JSON.stringify(content[p]?.title)} -->

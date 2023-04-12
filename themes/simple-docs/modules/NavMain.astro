@@ -1,0 +1,85 @@
+---
+import { content } from '../app/content.js';
+import { Tabs } from 'astro-tabs';
+import favicon from '/public/favicon.svg?raw';
+import NavLeft from '../modules/NavLeft.astro';
+import './NavMain.scss';
+import ArrowTopRightOnSquare from '../assets/arrow-top-right-on-square.svg?raw';
+import BookmarkSquare from '../assets/bookmark-square.svg?raw';
+import AcademicCap from '../assets/academic-cap.svg?raw';
+import MenuToggle from '../components/MenuToggle.astro';
+
+const {
+	pathParam,
+	siteTitle,
+	/* currentPageNavigation, pkg */
+} = Astro.props;
+---
+
+<MenuToggle>
+	<svg
+		fill="none"
+		stroke="currentColor"
+		stroke-width="1.5"
+		viewBox="0 0 24 24"
+		xmlns="http://www.w3.org/2000/svg"
+		aria-hidden="true"
+	>
+		<path
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+	</svg>
+</MenuToggle>
+
+<aside class="c-nav-main">
+	<a class="home link unstyled" href={import.meta.env.BASE_URL}>
+		<Fragment set:html={favicon} />
+		<div>
+			<span class="project-title">{siteTitle}</span> &nbsp;/&nbsp; <small
+				>docs</small
+			>
+		</div></a
+	>
+
+	{
+		pathParam && (
+			<Tabs>
+				<Fragment
+					slot={`tab-1${pathParam?.startsWith('learn') ? '-active' : ''}`}
+				>
+					<Fragment set:html={AcademicCap} />
+					Learn
+				</Fragment>
+				<Fragment
+					slot={`tab-2${pathParam?.startsWith('reference') ? '-active' : ''}`}
+				>
+					<Fragment set:html={BookmarkSquare} />
+					Reference
+				</Fragment>
+
+				<Fragment
+					slot={`tab-3${pathParam?.startsWith('xyz') ? '-active' : ''}`}
+				>
+					…more
+				</Fragment>
+
+				<Fragment slot="panel-1">
+					<NavLeft mainNavigation={content.learn} {pathParam} base="/learn" />
+				</Fragment>
+
+				<Fragment slot="panel-2">
+					<NavLeft
+						mainNavigation={content.reference}
+						{pathParam}
+						base="/reference"
+					/>
+				</Fragment>
+
+				<Fragment slot="panel-3">
+					<NavLeft mainNavigation={content.xyz} {pathParam} base="/xyz" />
+				</Fragment>
+			</Tabs>
+		)
+	}
+</aside>

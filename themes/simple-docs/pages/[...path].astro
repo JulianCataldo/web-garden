@@ -1,0 +1,17 @@
+---
+import { LayoutDocs, paths } from '../app';
+
+await import('/src/styles.scss').catch(() => null);
+
+export const getStaticPaths = () => [
+	// TODO: better exclusion at source
+	...paths.filter((p) => p.params.path !== '00-index'),
+	{ params: { path: undefined } },
+	{ params: { path: '404' } },
+];
+export const prerender = true;
+---
+
+<LayoutDocs>
+	<!--  -->
+</LayoutDocs>

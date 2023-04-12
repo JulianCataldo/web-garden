@@ -1,0 +1,46 @@
+@use 'astro-breakpoints/use-breakpoints.scss' as *;
+@use 'astro-color-mode/use-color-mode.scss' as *;
+@use '../app/vars.scss' as *;
+
+.c-color-mode-toggle {
+	display: flex;
+	gap: 0.8rem;
+	align-items: center;
+	padding: 1rem;
+	color: hsl($foreground);
+	cursor: pointer;
+	background: transparent;
+	isolation: isolate;
+	border: 1px solid transparent;
+	border-radius: 99em;
+
+	&:hover {
+		color: hsl($accent);
+		border: 1px solid #333;
+	}
+
+	.moon,
+	.sun {
+		pointer-events: none;
+	}
+
+	@include color-mode(dark) {
+		.moon {
+			opacity: 0.3;
+		}
+
+		.sun {
+			opacity: 0.9;
+		}
+	}
+
+	@include color-mode(light) {
+		.moon {
+			opacity: 0.9;
+		}
+
+		.sun {
+			opacity: 0.3;
+		}
+	}
+}

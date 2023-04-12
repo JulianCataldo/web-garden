@@ -1,0 +1,37 @@
+@use 'astro-breakpoints/use-breakpoints.scss' as *;
+@use 'astro-color-mode/use-color-mode.scss' as *;
+@use '../app/vars.scss' as *;
+
+.c-gfm-note {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin: 3em 0;
+	background: hsl($background-darker, 0.7);
+	border: 2px solid hsl($accent, 0.7);
+	border-radius: 1rem;
+	box-shadow: 0.3rem 0.6rem 0.7rem hsl($background-darker, 0.4);
+
+	svg {
+		width: 3ex;
+		height: 3ex;
+		margin-right: 0.6rem;
+		color: hsl($accent);
+	}
+
+	.label {
+		display: flex;
+		align-items: center;
+		padding: 2rem;
+		font-variant: small-caps;
+		color: hsl($foreground, 0.75);
+	}
+
+	&.warning {
+		border: 2px solid hsl($danger, 0.7);
+
+		svg {
+			color: hsl($danger);
+		}
+	}
+}

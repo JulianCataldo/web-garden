@@ -1,0 +1,36 @@
+@use 'astro-breakpoints/use-breakpoints.scss' as *;
+@use 'astro-color-mode/use-color-mode.scss' as *;
+@use '../app/vars.scss' as *;
+
+.not-found {
+	svg {
+		width: 10rem;
+		height: 10rem;
+	}
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 90vw;
+	height: 90vh;
+	margin: auto;
+
+	main {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		align-items: center;
+		justify-content: center;
+		font-size: large;
+		font-weight: bold;
+	}
+
+	header {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+}

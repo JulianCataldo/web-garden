@@ -1,0 +1,23 @@
+---
+import { Link } from 'astro-link';
+import { Markdown /* , Markup */ } from 'astro-remote';
+import TerminalPlayer from './TerminalPlayer.astro';
+import ProseHeading from '../components/ProseHeading.astro';
+import GfmNote from '../components/GfmNote.astro';
+import CodeBlock from '../components/CodeBlock.astro';
+
+const { content, ...attrs } = Astro.props;
+---
+
+<article class="prose" {...attrs}>
+	<Markdown
+		content={content}
+		components={{
+			Heading: ProseHeading,
+			Note: GfmNote,
+			CodeBlock,
+			a: Link,
+			'terminal-player': TerminalPlayer,
+		}}
+	/>
+</article>

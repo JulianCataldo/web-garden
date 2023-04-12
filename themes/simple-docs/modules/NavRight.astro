@@ -1,0 +1,52 @@
+---
+import type { MarkdownHeading } from 'astro';
+import { pkg } from '../app/content.js';
+
+import { Link } from 'astro-link';
+import SearchBar from '../components/SearchBar.astro';
+
+import NavOutline from '../components/NavOutline.astro';
+import ColorModeToggle from '../components/ColorModeToggle.astro';
+import QueueList from '../assets/queue-list.svg?raw';
+import GitHub from '../assets/github.svg?raw';
+import './NavRight.scss';
+import MenuToggle from '../components/MenuToggle.astro';
+
+interface Props {
+	currentPageNavigation: MarkdownHeading[];
+}
+const { currentPageNavigation } = Astro.props;
+---
+
+<MenuToggle position="right">
+	<Fragment set:html={QueueList} />
+</MenuToggle>
+<aside class="c-nav-right">
+	<SearchBar />
+
+	<div class="app-links">
+		<Link
+			title="Source code (GitHub)"
+			class="unstyled"
+			href={pkg?.repository?.url || pkg?.repository}
+			target="_blank"
+		>
+			<Fragment set:html={GitHub} />
+		</Link>
+
+		<ColorModeToggle />
+	</div>
+
+	{
+		currentPageNavigation && (
+			<div>
+				<h4 class="current-page-header">
+					<Fragment set:html={QueueList} />
+					On this page
+				</h4>
+
+				<NavOutline currentPageNavigation={currentPageNavigation} />
+			</div>
+		)
+	}
+</aside>

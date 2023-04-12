@@ -1,0 +1,37 @@
+@use 'astro-breakpoints/use-breakpoints.scss' as *;
+@use 'astro-color-mode/use-color-mode.scss' as *;
+@use '../app/vars.scss' as *;
+
+.c-menu-toggle {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	padding: 0.5rem;
+	color: hsl($foreground, 0.9);
+	// isolation: isolate;
+
+	background-color: hsl($background-darker, 1);
+	border: none;
+	border-radius: 0 0 1rem 0;
+	box-shadow: 0.1rem 0.1rem 0.3rem hsl($background-darker, 0.2);
+
+	&.right {
+		right: 0;
+		left: initial;
+		border-radius: 0 0 0 1rem;
+	}
+
+	svg {
+		width: 2rem;
+		height: 2rem;
+	}
+
+	.page-home & {
+		display: none;
+	}
+
+	@include breakpoint(xl) {
+		display: none;
+	}
+}

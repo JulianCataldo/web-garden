@@ -1,0 +1,154 @@
+@use 'astro-breakpoints/use-breakpoints.scss' as *;
+@use 'astro-color-mode/use-color-mode.scss' as *;
+@use '../app/vars.scss' as *;
+
+.c-nav-main {
+	position: fixed;
+	z-index: 1;
+	width: calc(100% - 1vw - 1.5rem);
+	height: 100%;
+	background: linear-gradient(
+		to right,
+		hsl($background-darker),
+		hsl($background)
+	);
+	isolation: isolate;
+	border-right: 1px solid hsl($foreground, 0.1);
+	box-shadow: 1rem 1rem 1rem hsl($background-darker, 0.2);
+	// display: none;
+	opacity: 0;
+	transition: opacity 0.334s, transform 0.334s;
+	transform: translateX(-100%);
+
+	&.is-visible {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	@include breakpoint(md) {
+		width: 47vw;
+	}
+	@include breakpoint(lg) {
+		width: 40vw;
+	}
+	@include breakpoint(xl) {
+		top: 0;
+		display: initial;
+		width: $main-nav-width;
+		isolation: initial;
+		opacity: 1;
+		transform: initial;
+	}
+
+	.toggle {
+		// all: unset;
+		padding: 1rem;
+	}
+
+	.page-home & {
+		position: absolute;
+		background: none;
+		border: none;
+		box-shadow: none;
+	}
+
+	.home {
+		position: relative;
+		left: 2rem;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		padding: 1rem;
+		margin: 0.75rem 1rem;
+
+		.project-title {
+			font-weight: 600;
+		}
+
+		color: hsl($foreground, 0.95);
+		isolation: isolate;
+		@include breakpoint(xl) {
+			left: initial;
+		}
+
+		svg {
+			g {
+				fill: hsl($foreground, 0.95);
+			}
+
+			width: 4ex;
+			height: 4ex;
+			margin: 0 calc(0.5em + 1vw) 0 0;
+		}
+
+		&:hover {
+			color: hsl($accent, 1);
+
+			svg {
+				g {
+					fill: hsl($accent, 0.95);
+				}
+			}
+		}
+	}
+
+	.tabs {
+		nav {
+			display: flex;
+			justify-content: center;
+			border-bottom: 1px solid hsla($foreground, 0.1);
+		}
+
+		.tab {
+			display: flex;
+			gap: 1ex;
+			align-items: center;
+			padding: calc(0.4em + 1px) 1.1em 0.4em 1.1em;
+			font-size: calc(0.75rem + 0.15vw);
+			border-top: 1px solid hsla($foreground, 0.1);
+			border-right: 1px solid hsla($foreground, 0.1);
+			border-bottom: 2px solid hsla($background-darker, 1);
+
+			@include breakpoint(xl) {
+				font-size: calc(0.6rem + 0.25vw);
+			}
+
+			&:hover {
+				background-color: hsla($accent, 0.25);
+				border-bottom: 2px solid hsla($accent, 0.7);
+			}
+
+			svg {
+				width: 2ex;
+				height: 2ex;
+			}
+		}
+
+		:first-child > .tab {
+			border-left: 1px solid hsla($foreground, 0.1);
+			border-top-left-radius: 0.25em;
+		}
+
+		:last-child > .tab {
+			border-top-right-radius: 0.25em;
+		}
+	}
+
+	.tab-selector:checked ~ .tab {
+		background: hsla($accent, 0.1);
+		border-bottom: 2px solid hsla($accent, 0.7);
+		box-shadow: 0 0.2rem 0.3334rem hsl($background-darker, 0.8) inset;
+	}
+
+	.panel {
+		@include breakpoint(xl) {
+			height: calc(100vh - 9rem);
+		}
+
+		overflow-y: hidden;
+
+		&:hover {
+			overflow-y: auto;
+		}
+	}
+}

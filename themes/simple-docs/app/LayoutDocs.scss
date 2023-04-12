@@ -1,0 +1,45 @@
+@use 'astro-breakpoints/use-breakpoints.scss' as *;
+@use 'astro-color-mode/use-color-mode.scss' as *;
+@use './vars.scss' as *;
+
+.layout-docs {
+	.content {
+		position: relative;
+		max-width: calc(22rem + 20vw);
+		min-height: 75vh;
+		padding: 0 5vw;
+
+		left: 0;
+		max-width: calc(100vw);
+		@include breakpoint(md) {
+		}
+
+		@include breakpoint(md) {
+			left: calc($main-nav-width - 24.4rem + 18vw);
+			max-width: calc(41rem + 20vw);
+			// padding: 0vw;
+		}
+
+		@include breakpoint(lg) {
+			// left: calc($main-nav-width - 24.4rem + 18vw);
+			// max-width: calc(41rem + 20vw);
+			// padding: 0vw;
+		}
+
+		@include breakpoint(xl) {
+			left: calc($main-nav-width - 8rem + 13.5vw);
+			max-width: calc(9rem + 36vw);
+			padding: 0vw;
+		}
+
+		@include breakpoint(xxl) {
+			left: calc($main-nav-width - 8rem + 14vw);
+			max-width: calc(28rem + 21vw);
+			padding: 0vw;
+		}
+	}
+
+	main > article {
+		min-height: 35vh;
+	}
+}

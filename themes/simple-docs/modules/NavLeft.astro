@@ -1,0 +1,77 @@
+---
+import type { MarkdownHeading } from 'astro';
+import { Link } from 'astro-link';
+import './NavLeft.scss';
+import ChevronRight from '../assets/chevron-right.svg?raw';
+
+interface Props {
+	mainNavigation: { url: string; title: string }[];
+	pathParam?: string;
+	base: string;
+}
+const { mainNavigation, pathParam, base } = Astro.props;
+---
+
+<div class="c-nav-left">
+	{
+		mainNavigation && (
+			<>
+				{Object.entries(mainNavigation).map(([e, i]) => (
+					<div class="section" data-expand>
+						{/* JSON.stringify({ e, i }) */}
+						{/* title={i?.['__index']?.description} */}
+						<Link
+							href={base + '/' + e}
+							class:list={[
+								'unstyled',
+								'section-title',
+								{
+									'is-expanded': pathParam?.split('/')[1] === e,
+									current:
+										pathParam?.split('/')?.[1] === e &&
+										pathParam?.split('/')?.length === 2,
+								},
+							]}
+						>
+							{i?.['__index']?.title}
+							<Fragment set:html={ChevronRight} />
+						</Link>
+
+						{/* pathParam?.split('/')[1] + '--' + e.split('/')[3] */}
+						{
+							<div
+								class:list={[
+									'children',
+									{
+										'is-expanded': pathParam?.split('/')[1] === e,
+									},
+								]}
+							>
+								{/* title={d?.description} */}
+								{Object.entries(i)?.map(
+									([b, d]) =>
+										b !== '__index' && (
+											<Link
+												class:list={[
+													'sub-link',
+													'unstyled',
+
+													{
+														current: pathParam?.split('/')?.[2] === b,
+													},
+												]}
+												href={base + '/' + e + '/' + b}
+											>
+												{d.title}
+												<Fragment set:html={ChevronRight} />
+											</Link>
+										),
+								)}
+							</div>
+						}
+					</div>
+				))}
+			</>
+		)
+	}
+</div>

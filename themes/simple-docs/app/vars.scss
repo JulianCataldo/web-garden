@@ -1,0 +1,35 @@
+@use 'astro-color-mode/use-color-mode.scss' as *;
+@use 'sass:color';
+
+$main-nav-width: calc(10rem + 10vw);
+
+// —
+
+$black: black;
+$white: white;
+$foreground: var(--foreground);
+$background: var(--background);
+$background-darker: var(--background-darker);
+$accent: var(--accent);
+$danger: var(--danger);
+
+.layout-docs {
+	@include color-mode(light) {
+		--foreground: 192, 15%, 13%;
+		--background: 192, 15%, 98%;
+		--background-darker: 192, 15%, 93%;
+		--accent: 192, 100%, 37%;
+		--danger: 0, 100%, 37%;
+	}
+	@include color-mode(dark) {
+		--foreground: 192, 15%, 95%;
+		--background: 199, 10%, 13%;
+		--background-darker: 192, 15%, 8%;
+		--accent: 192, 100%, 47%;
+		--danger: 0, 100%, 47%;
+	}
+}
+
+.d {
+	background-image: linear-gradient(0deg, rgb(20, 20, 20), hsl(0, 0%, 58%));
+}

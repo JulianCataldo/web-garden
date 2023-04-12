@@ -1,0 +1,40 @@
+---
+import './MenuToggle.scss';
+
+interface Props extends astroHTML.JSX.ButtonHTMLAttributes {
+	position?: 'left' | 'right';
+}
+const { position = 'left', ...attrs } = Astro.props;
+---
+
+<button
+	class="c-menu-toggle"
+	data-menu-toggle
+	class:list={['toggle', position]}
+	aria-label="Toggle menu"
+	{...attrs}
+>
+	<slot />
+</button>
+
+<script>
+	const c = 'is-visible';
+
+	const toggles =
+		document.querySelectorAll<HTMLButtonElement>('[data-menu-toggle]')!;
+
+	toggles?.forEach((t) => {
+		const menuPanel = t.nextElementSibling as HTMLElement;
+		t.addEventListener('click', () => {
+			const isVisible = menuPanel.classList.contains(c);
+
+			toggles?.forEach((tt) => {
+				const menuPanel = tt.nextElementSibling as HTMLElement;
+				menuPanel.classList.remove(c);
+			});
+
+			if (isVisible) menuPanel.classList.remove(c);
+			else menuPanel.classList.add(c);
+		});
+	});
+</script>

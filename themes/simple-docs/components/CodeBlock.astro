@@ -1,0 +1,24 @@
+---
+import { Code } from 'astro/components';
+import './CodeBlock.scss';
+
+const { lang, code, ...props } = Astro.props;
+
+const file = code.match(/(?:^\/{2} \.\/(.+)\n?)+/)?.[1].replace(/ \\$/, '');
+---
+
+<div class="c-code-block">
+	{
+		file && (
+			<header>
+				<span class="label">./{file}</span>
+			</header>
+		)
+	}
+
+	<Code
+		theme="css-variables"
+		lang={lang}
+		code={file ? code.split('\n').slice(1).join('\n') : code}
+	/>
+</div>

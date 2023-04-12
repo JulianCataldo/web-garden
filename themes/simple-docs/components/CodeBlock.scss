@@ -1,0 +1,57 @@
+@use 'astro-breakpoints/use-breakpoints.scss' as *;
+@use 'astro-color-mode/use-color-mode.scss' as *;
+@use '../app/vars.scss' as *;
+
+.c-code-block {
+	// NOTE: npx convert-sh-theme https://raw.githubusercontent.com/shikijs/shiki/main/packages/shiki/themes/github-{light,dark}.json
+
+	@include color-mode(light) {
+		--astro-code-color-text: #24292e;
+		--astro-code-color-background: #fff;
+		--astro-code-token-constant: #0550ae;
+		--astro-code-token-string: #032f62;
+		--astro-code-token-comment: #6a737d;
+		--astro-code-token-keyword: #d73a49;
+		--astro-code-token-parameter: #24292e;
+		--astro-code-token-function: #8250df;
+		--astro-code-token-string-expression: #0a3069;
+		--astro-code-token-punctuation: #24292e;
+		--astro-code-token-link: #24292e;
+	}
+	@include color-mode(dark) {
+		--astro-code-color-text: #e1e4e8;
+		--astro-code-color-background: #0d1117;
+		--astro-code-token-constant: #79b8ff;
+		--astro-code-token-string: #9ecbff;
+		--astro-code-token-comment: #6a737d;
+		--astro-code-token-keyword: #f97583;
+		--astro-code-token-parameter: #ffa657;
+		--astro-code-token-function: #d2a8ff;
+		--astro-code-token-string-expression: #a5d6ff;
+		--astro-code-token-punctuation: #e1e4e8;
+		--astro-code-token-link: #e1e4e8;
+	}
+
+	.astro-code {
+		padding: calc(0.5rem + 1vw);
+		margin: calc(2rem + 1vw) 0;
+		border: 1px solid hsl($foreground, 0.1);
+		border-radius: 0.5rem;
+		box-shadow: 0.3rem 0.6rem 0.7rem hsl($background-darker, 0.4);
+	}
+
+	header {
+		margin-top: 2.5rem;
+		margin-bottom: calc(-1.8rem - 1vw);
+	}
+
+	.label {
+		padding: 0.5rem 0.75rem;
+		margin-left: 2.5em;
+		font-size: 0.85em;
+		background-color: hsl($background-darker);
+		border: 1px solid hsl($accent, 0.3);
+		border-bottom: none;
+		border-radius: 0.5em 0.5em 0rem 0rem;
+	}
+}

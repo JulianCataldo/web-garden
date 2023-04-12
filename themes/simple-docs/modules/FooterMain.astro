@@ -1,0 +1,63 @@
+---
+import {
+	ISSUES_URL,
+	PKG_LICENSE,
+	PKG_RELEASE_URL,
+	PROJECT_AUTHORS,
+	REPO_URL,
+	ROOT_PKG_VERSION,
+	SITE_TITLE,
+	SITE_URL,
+	pkg,
+} from '../app/content.js';
+
+import { Link } from 'astro-link';
+import Signal from '../assets/signal.svg?raw';
+import Edit from '../assets/edit.svg?raw';
+import GitHub from '../assets/github.svg?raw';
+import Npm from '../assets/npm.svg?raw';
+import Heart from '../assets/heart.svg?raw';
+import Home from '../assets/home.svg?raw';
+
+import './FooterMain.scss';
+const { pathParam } = Astro.props;
+---
+
+<footer class="c-footer-main">
+	<div>
+		<Link href={ISSUES_URL}>
+			<Fragment set:html={Signal} />Give feedback
+		</Link>
+		<div class="sep">—</div>
+		<Link href={`${REPO_URL}/blob/main/${pathParam}.md`}>
+			<Fragment set:html={Edit} />
+			Edit this page
+		</Link>
+		<div class="sep">—</div>
+		<Link href={`https://github.com/sponsors/JulianCataldo`}>
+			<Fragment set:html={Heart} />
+			Support this project
+		</Link>
+	</div>
+
+	<div>
+		<Link href={SITE_URL} externalInNewTab={false}>
+			<Fragment set:html={Home} />
+			{SITE_TITLE}
+		</Link>
+		<div class="sep">—</div>
+		<Link href={REPO_URL}>
+			<Fragment set:html={GitHub} />Source repository
+		</Link>
+		<div class="sep">—</div>
+		<Link href={PKG_RELEASE_URL}>
+			<Fragment set:html={Npm} />Release {ROOT_PKG_VERSION}
+		</Link>
+	</div>
+	<div>
+		<small class="copyright"
+			>© {new Date().getFullYear()} — License {PKG_LICENSE} — {PROJECT_AUTHORS} —
+			Built&nbsp;with&nbsp;Simple&#8209;Docs</small
+		>
+	</div>
+</footer>

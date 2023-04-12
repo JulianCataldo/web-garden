@@ -1,0 +1,111 @@
+@use 'astro-breakpoints/use-breakpoints.scss' as *;
+@use 'astro-color-mode/use-color-mode.scss' as *;
+@use '../app/vars.scss' as *;
+
+.c-nav-left {
+	display: flex;
+	flex-direction: column;
+	padding-top: 1rem;
+	overflow-y: auto;
+	isolation: isolate;
+
+	a.link {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1em 1em 1em 1.5em;
+		border-bottom: 1px solid transparent;
+
+		svg {
+			width: 2ex;
+			opacity: 0;
+		}
+
+		&,
+		&:visited {
+			color: hsl($foreground, 0.9);
+		}
+
+		&.current {
+			color: hsl($accent, 1);
+
+			svg {
+				opacity: 1;
+			}
+		}
+
+		&:hover {
+			background: linear-gradient(
+				to bottom,
+				hsl($accent, 0.05),
+				hsl($foreground, 0.01),
+				hsl($background-darker)
+			);
+			border-bottom: 1px solid hsl($foreground, 0.05);
+
+			svg {
+				color: hsl($foreground, 0.9);
+				opacity: 1;
+			}
+		}
+
+		&:active {
+			color: hsl($foreground, 1);
+			background: transparent;
+			border-bottom: 1px solid hsl($foreground, 0.15);
+		}
+	}
+
+	.section {
+		.section-title {
+			// width: calc($main-nav-width - 3rem);
+			// padding: 1em;
+			font-weight: bold;
+
+			&.is-expanded {
+				background: linear-gradient(
+					to bottom,
+					hsl($background-darker),
+					hsl($foreground, 0.01),
+					hsl($background-darker)
+				);
+				border-bottom: 1px solid hsl($foreground, 0.05);
+				box-shadow: 0 0.3rem 0.4rem hsl($background-darker, 1);
+			}
+
+			&.current {
+				background: linear-gradient(
+					to bottom,
+					hsl($background-darker),
+					hsl($foreground, 0.01),
+					hsl($background-darker)
+				);
+			}
+		}
+
+		.children {
+			display: flex;
+			flex-direction: column;
+			height: 0;
+			overflow: hidden;
+
+			&.is-expanded {
+				height: initial;
+			}
+		}
+	}
+
+	.sub-link {
+		width: 100%;
+		padding: 0.5rem 0.5rem;
+
+		&.current {
+			background: linear-gradient(
+				to bottom,
+				hsl($background-darker),
+				hsl($foreground, 0.01),
+				hsl($background-darker)
+			);
+		}
+	}
+}

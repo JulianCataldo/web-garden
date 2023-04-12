@@ -1,0 +1,122 @@
+---
+// import path from 'node:path';
+// import type { MarkdownHeading } from 'astro';
+import { get } from 'lodash-es';
+
+import { content, ISSUES_URL, paths, pkg, SITE_TITLE } from '../app/content.js';
+
+import { Document, Body } from 'astro-base-document';
+
+import NavRight from '../modules/NavRight.astro';
+
+import FooterMain from '../modules/FooterMain.astro';
+
+import PaginationLinks from '../components/PaginationLinks.astro';
+import NavMain from '../modules/NavMain.astro';
+import BreadCrumbs from '../components/BreadCrumbs.astro';
+import ProseBlock from '../components/ProseBlock.astro';
+import PageNotFound from '../modules/PageNotFound.astro';
+import Head from './Head.astro';
+
+import HomePage from '../modules/HomePage.astro';
+
+import './global.scss';
+import './prose.scss';
+import './LayoutDocs.scss';
+
+export interface Props {}
+const {} = Astro.props;
+
+const pathParam = Astro.params.path;
+const isHome = !pathParam;
+const isNotFound = pathParam === '404';
+const isOgs = Astro.params.path === '_og';
+const p = pathParam?.replaceAll('/', '.');
+const current = get(content, p);
+// console.log({ current, pathParam, p });
+
+const rawContent =
+	current?.rawContent?.() ||
+	current?.['__index']?.rawContent?.() ||
+	content?.['__index']?.rawContent?.() ||
+	content?.['00-index']?.rawContent?.() ||
+	'# 404';
+
+// NOTE: Astro Markdown
+// const Content =
+// 	current?.Content || current?.['__index']?.Content || content['__index'].Content;
+const headings = current?.headings || current?.['__index']?.headings;
+
+const prev = current?.previous || current?.['__index']?.previous;
+const next = current?.next || current?.['__index']?.next;
+
+// console.log({ current });
+
+console.log(content);
+---
+
+<Document class:list={['layout-docs', pathParam || 'page-home']}>
+	<Head slot="head" current={current} />
+
+	<Body slot="body">
+		<!-- <slot /> -->
+
+		{
+			!isOgs && !isNotFound && (
+				<>
+					<NavMain pathParam={pathParam} siteTitle={SITE_TITLE} />
+					{isHome && (
+						<HomePage siteTitle={SITE_TITLE} rawContent={rawContent} />
+					)}
+					{!isHome && (
+						<main class:list={'content'}>
+							<BreadCrumbs pathParam={pathParam} />
+
+							<ProseBlock content={rawContent} data-pagefind-body />
+
+							<PaginationLinks next={next} prev={prev} />
+						</main>
+					)}
+
+					<NavRight currentPageNavigation={headings} />
+					<FooterMain pathParam={pathParam} />
+				</>
+			)
+		}
+
+		{isNotFound && <PageNotFound />}
+
+		{
+			isOgs && (
+				<div style="display: flex; flex-wrap: wrap; gap: 1rem; padding: 1rem;">
+					{paths.map((p) => {
+						const cur = get(content, p.params.path.replaceAll('/', '.'));
+						return p.params.path !== '00-index' ? (
+							<div>
+								<a href={`/${p.params.path}`}>
+									<img width="400" src={`/og/${p.params.path}.png`} />
+								</a>
+
+								<details>
+									<div>
+										<ul>
+											<li>{cur?.title}</li>
+											<li>
+												<pre set:html={cur?.description} />
+											</li>
+										</ul>
+									</div>
+									<details>
+										<pre>
+											<code set:html={JSON.stringify(cur, null, 2)} />
+										</pre>
+									</details>
+								</details>
+							</div>
+						) : null;
+					})}
+				</div>
+			)
+		}
+	</Body>
+</Document>

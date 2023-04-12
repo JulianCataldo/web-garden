@@ -1,0 +1,35 @@
+@use 'astro-breakpoints/use-breakpoints.scss' as *;
+@use 'astro-color-mode/use-color-mode.scss' as *;
+@use '../app/vars.scss' as *;
+
+.c-breadcrumbs {
+	display: flex;
+	gap: 1ch;
+	align-items: center;
+	padding: 1.25rem 4rem 0rem 4rem;
+	font-size: 1em;
+	opacity: 0.9;
+
+	@include breakpoint(xl) {
+		display: none;
+		padding: 3rem 3rem 0rem 0rem;
+		margin-bottom: -2ex;
+		font-size: 0.85em;
+	}
+
+	.part {
+		display: flex;
+		gap: 1ch;
+		align-items: center;
+	}
+
+	a {
+		display: flex;
+		align-items: center;
+	}
+
+	svg {
+		width: 2ex;
+		height: 2ex;
+	}
+}

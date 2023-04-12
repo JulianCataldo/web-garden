@@ -1,0 +1,70 @@
+{
+	"name": "simple-docs",
+	"version": "0.0.0",
+	"description": "",
+	"main": "index.ts",
+	"files": [],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"astro-integration",
+		"theme",
+		"docs",
+		"all-in-one",
+		"off-the-shelf",
+		"CoC"
+	],
+	"license": "ISC",
+	"author": "Julian Cataldo",
+	"dependencies": {
+		"@astrojs/prefetch": "^0.2.1",
+		"@astrojs/sitemap": "^1.2.2",
+		"@resvg/resvg-js": "^2.4.1",
+		"asciinema-player": "^3.2.0",
+		"astro-base-document": "^1.1.0",
+		"astro-breakpoints": "^0.6.2",
+		"astro-color-mode": "^0.7.1",
+		"astro-google-analytics": "^1.0.3",
+		"astro-icon": "^0.8.0",
+		"astro-link": "link:../../components/Link",
+		"astro-pagefind": "^1.0.1",
+		"astro-remote": "^0.2.3",
+		"astro-scroll-observer": "^0.5.3",
+		"astro-seo-metadata": "link:../../app/SEOMetadata",
+		"astro-tabs": "link:../../components/Tabs",
+		"astro-terminal-player": "^0.1.5",
+		"astro-tooltips": "^0.6.2",
+		"dotenv": "^16.0.3",
+		"execa": "^7.1.1",
+		"github-slugger": "^2.0.0",
+		"html-minifier-terser": "^7.1.0",
+		"lodash-es": "^4.17.21",
+		"pagefind": "^0.12.0",
+		"sass": "^1.60.0",
+		"satori": "^0.4.4",
+		"satori-html": "^0.3.2",
+		"sharp": "0.29.3",
+		"shiki": "^0.14.1",
+		"truncate-html": "^1.0.4"
+	},
+	"peerDependencies": {
+		"@astrojs/prefetch": "^0.2.1",
+		"@astrojs/sitemap": "^1.2.2",
+		"@resvg/resvg-js": "^2.4.1",
+		"astro-pagefind": "^1.0.1",
+		"execa": "^7.1.1",
+		"cheerio": "1.0.0-rc.12",
+		"dotenv": "^16.0.3",
+		"pagefind": "^0.12.0",
+		"satori": "^0.4.4",
+		"satori-html": "^0.3.2",
+		"sharp": "0.29.3",
+		"shiki": "^0.14.1"
+	},
+	"devDependencies": {
+		"@types/lodash-es": "^4.17.7",
+		"@types/node": "^18.15.11",
+		"astro": "^2.2.1"
+	}
+}

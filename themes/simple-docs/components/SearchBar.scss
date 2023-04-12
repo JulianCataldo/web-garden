@@ -1,0 +1,109 @@
+@use 'astro-breakpoints/use-breakpoints.scss' as *;
+@use 'astro-color-mode/use-color-mode.scss' as *;
+@use '../app/vars.scss' as *;
+
+.c-search-bar {
+	position: absolute;
+	top: 6.2rem;
+	right: 0rem;
+	left: 0rem;
+	z-index: 1;
+	width: 100%;
+	padding-right: 0.75rem;
+	padding-left: 0.75rem;
+
+	// .page-home & {
+	// }
+
+	@include color-mode(light) {
+		--pagefind-ui-primary: #152028;
+		--pagefind-ui-text: #152028;
+		--pagefind-ui-background: #eee;
+		--pagefind-ui-border: #eee;
+		--pagefind-ui-tag: #eee;
+	}
+
+	@include color-mode(dark) {
+		--pagefind-ui-primary: #eee;
+		--pagefind-ui-text: #eee;
+		--pagefind-ui-background: #152028;
+		--pagefind-ui-border: #152028;
+		--pagefind-ui-tag: #152028;
+	}
+
+	/* stylelint-disable-next-line selector-class-pattern */
+	.pagefind-ui__search-input {
+		// width: 17rem !important;
+
+		padding-right: 4em !important;
+
+		@include color-mode(light) {
+			background: hsl($background, 1);
+		}
+		@include color-mode(dark) {
+			background: hsl($background-darker, 1);
+		}
+
+		border-color: hsl($foreground, 0.1);
+
+		&:focus {
+			border-color: hsl($accent, 0.8);
+		}
+
+		// flex-direction: flex-end !important;
+	}
+
+	mark {
+		background: hsl($accent, 1);
+	}
+
+	/* stylelint-disable-next-line selector-class-pattern */
+	.pagefind-ui__drawer {
+		direction: rtl;
+
+		& > * {
+			direction: ltr;
+		}
+
+		/* stylelint-disable-next-line selector-class-pattern */
+		&:not(.pagefind-ui__hidden) {
+			max-height: calc(100vh - 11rem);
+			padding: 0 2rem 2rem 2rem;
+			margin-top: 0.5rem;
+			overflow-y: auto;
+
+			@include color-mode(light) {
+				background: hsl($background);
+			}
+			@include color-mode(dark) {
+				background: hsl($background-darker);
+			}
+
+			border-radius: 0.25rem !important;
+			box-shadow: 0.1rem 0.1rem 0.6rem hsl($accent, 0.1),
+				0.1rem 0.2rem 0.8rem hsl($background-darker, 0.9);
+		}
+	}
+
+	/* stylelint-disable-next-line selector-class-pattern */
+	.pagefind-ui__search-clear {
+		padding: 0 0.75rem;
+		border: 1px solid transparent;
+
+		&:hover {
+			background: hsl($accent, 0.2);
+		}
+	}
+
+	/* stylelint-disable-next-line selector-class-pattern */
+	.pagefind-ui__result-thumb {
+		display: none;
+	}
+
+	/* stylelint-disable-next-line selector-class-pattern */
+	.pagefind-ui__button {
+		&:hover {
+			border-color: hsl($accent);
+		}
+	}
+}

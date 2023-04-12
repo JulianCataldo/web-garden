@@ -1,0 +1,52 @@
+@use 'astro-breakpoints/use-breakpoints.scss' as *;
+@use 'astro-color-mode/use-color-mode.scss' as *;
+@use '../app/vars.scss' as *;
+
+.c-footer-main {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3vh;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 4vh 3rem 3vh 2rem;
+	margin: 5vh 0 0 0;
+	font-size: 0.85em;
+	// line-height: 250%;
+	text-align: center;
+	background-color: hsl($background-darker, 0.5);
+	border-top: 1px solid hsl($accent, 0.1);
+
+	@include breakpoint(xl) {
+		flex-direction: column;
+		font-size: 1em;
+	}
+
+	.copyright {
+		color: hsl($foreground, 0.5);
+	}
+
+	.sep {
+		opacity: 0.15;
+	}
+
+	& > div {
+		display: flex;
+		flex-wrap: wrap;
+		gap: calc(0.5rem + 0.5vw);
+		align-items: center;
+		justify-content: center;
+	}
+
+	a {
+		display: inline-flex;
+		align-items: center;
+	}
+
+	svg {
+		width: 2ex;
+		height: 2ex;
+		margin-right: 0.75ch;
+		// fill: currentColor;
+	}
+}

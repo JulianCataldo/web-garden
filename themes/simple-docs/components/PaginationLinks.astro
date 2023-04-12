@@ -1,0 +1,32 @@
+---
+import ArrowNext from '../assets/arrow-next.svg?raw';
+import ArrowPrev from '../assets/arrow-prev.svg?raw';
+import './PaginationLinks.scss';
+const { next, prev } = Astro.props;
+---
+
+<nav class="c-pagination-links">
+	{
+		prev?.path && (
+			<a href={`/${prev?.path}`} class="prev link unstyled">
+				<header>
+					<Fragment set:html={ArrowPrev} />
+					<span>Previous</span>
+				</header>
+				<div>{prev?.title}</div>
+			</a>
+		)
+	}
+
+	{
+		next?.path && (
+			<a href={`/${next?.path}`} class="next link unstyled">
+				<header>
+					<span>Next page</span>
+					<Fragment set:html={ArrowNext} />
+				</header>
+				<div>{next?.title}</div>
+			</a>
+		)
+	}
+</nav>

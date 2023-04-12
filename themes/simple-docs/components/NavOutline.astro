@@ -1,0 +1,109 @@
+---
+import type { MarkdownHeading } from 'astro';
+
+import './NavOutline.scss';
+import { Link } from 'astro-link';
+
+interface Props {
+	currentPageNavigation: MarkdownHeading[];
+}
+const { currentPageNavigation } = Astro.props;
+---
+
+<nav class="c-nav-outline">
+	<!-- id={`${h.slug}`} -->
+	{
+		currentPageNavigation.map((h) => (
+			<Link
+				href={`#${h.slug}`}
+				data-close-menu
+				class:list={['unstyled', `l-${h.depth}`, 'link']}
+			>
+				{h.text}
+			</Link>
+		))
+	}
+</nav>
+
+<!-- onclick={
+  `this.parentElement.querySelector('.current')?.classList.remove('current');` +
+  `this.classList.add('current');`
+} -->
+
+<script>
+	let clicked = false;
+	// document.querySelectorAll('#current-page-nav a').forEach((e) =>
+	// 	e.addEventListener('click', () => {
+	// 		document
+	// 			.querySelectorAll('#current-page-nav .active')
+	// 			.forEach((e) => e.classList.remove('active'));
+	// 		e.classList.add('active');
+
+	// 		clicked = true;
+
+	// 		setTimeout(() => {
+	// 			clicked = false;
+	// 		}, 10);
+	// 	}),
+	// );
+
+	const c = 'is-visible';
+
+	const closers =
+		document.querySelectorAll<HTMLButtonElement>('[data-close-menu]')!;
+
+	closers.forEach((cl) => {
+		cl.addEventListener('click', (t) => {
+			const w = cl.closest<HTMLElement>('.' + c);
+
+			w?.classList.remove(c);
+		});
+	});
+
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				const id = entry.target.getAttribute('id');
+				// console.log({ id, entry });
+				const sel = `.c-nav-outline a[href="#${id}"]`;
+
+				if (entry.isIntersecting) {
+					// if (entry.intersectionRatio > 0 && clicked === false) {
+					// setTimeout(() => {
+					// document
+					// 	.querySelectorAll('#current-page-nav .active')
+					// 	.forEach((e) => e.classList.remove('active'));
+					document.querySelector(sel)?.classList.add('active');
+					// });
+				} else {
+					// document
+					// 	.querySelectorAll('#current-page-nav .active')
+					// 	.forEach((e) => {
+					// 		if (
+					// 			document.querySelectorAll('#current-page-nav .active').length >
+					// 			0
+					// 		)
+					// 			e.classList.remove('active');
+					// 	});
+					document.querySelector(sel)?.classList.remove('active');
+					// if (!document.querySelectorAll('#current-page-nav .active').length) {
+					// }
+				}
+			});
+		},
+		{
+			// root: null,
+			// rootMargin: '49% 0px -49% 0px',
+			// threshold: 0.3,
+			// rootMargin: '-100px 0% -66%',
+			// threshold: 1,
+		},
+	);
+
+	// Track all sections that have an `id` applied
+	document
+		.querySelectorAll('article [id]:is(h1,h2,h3,h4,h5,h6)')
+		.forEach((section) => {
+			observer.observe(section);
+		});
+</script>

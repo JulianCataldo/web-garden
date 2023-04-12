@@ -1,0 +1,95 @@
+@use 'astro-breakpoints/use-breakpoints.scss' as *;
+@use 'astro-color-mode/use-color-mode.scss' as *;
+@use 'sass:color';
+@use './vars.scss' as *;
+
+html.layout-docs {
+	body {
+		margin: 0;
+		overflow-y: scroll;
+		font-family: system-ui;
+		font-size: calc(0.75em + 0.13vw + 0.13vh);
+		/* stylelint-disable-next-line property-no-unknown */
+		font-smooth: always;
+		line-height: calc(1em + 1ex);
+		color: hsl($foreground);
+		background: hsl($background);
+		-webkit-font-smoothing: auto;
+		-moz-font-smoothing: auto;
+		-moz-osx-font-smoothing: grayscale;
+		/* stylelint-disable-next-line property-no-unknown */
+		font-smoothing: auto;
+		text-rendering: optimizeLegibility;
+		-webkit-tap-highlight-color: transparent;
+		-webkit-touch-callout: none;
+	}
+
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+
+	@include breakpoint(lg) {
+		scroll-behavior: initial;
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: inherit;
+	}
+
+	*::-webkit-scrollbar {
+		width: 12px;
+		height: 12px;
+	}
+
+	*::-webkit-scrollbar-track {
+		background: hsl($background-darker);
+		border-radius: 6px;
+	}
+
+	*::-webkit-scrollbar-thumb {
+		background-color: hsl($foreground, 0.3);
+		border: 3px solid hsl($foreground, 0.1);
+		border-radius: 6px;
+	}
+
+	::-webkit-scrollbar-corner {
+		background-color: transparent;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background-color: hsl($foreground, 0.4);
+	}
+
+	::-webkit-scrollbar-thumb:active {
+		background-color: hsl($foreground, 0.2);
+		border: 3px solid hsl($foreground, 0.4);
+	}
+
+	// —
+
+	a.link {
+		text-decoration: none;
+
+		&:not(.unstyled) {
+			&:hover {
+				text-decoration: underline;
+			}
+
+			@include color-mode(light) {
+				&,
+				&:hover,
+				&:visited {
+					color: #222;
+				}
+			}
+			@include color-mode(dark) {
+				&,
+				&:hover,
+				&:visited {
+					color: hsl($accent);
+				}
+			}
+		}
+	}
+}

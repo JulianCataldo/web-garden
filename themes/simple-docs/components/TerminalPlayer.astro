@@ -1,0 +1,19 @@
+---
+import { TerminalPlayer /* , Markup */ } from 'astro-terminal-player';
+const { src, speed, 't-font-size': fontSize, theme } = Astro.props;
+
+import 'asciinema-player/dist/bundle/asciinema-player.css';
+import './TerminalPlayer.scss';
+---
+
+<TerminalPlayer
+	class="c-terminal-player"
+	src={src}
+	settings={{
+		loop: true,
+		speed: speed ? Number(speed) : 1.7,
+		theme: theme || 'asciinema',
+		// NOTE: not working anymore?
+		terminalFontSize: fontSize || 'big',
+	}}
+/>

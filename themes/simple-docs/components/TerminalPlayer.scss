@@ -1,0 +1,20 @@
+@use 'astro-breakpoints/use-breakpoints.scss' as *;
+@use 'astro-color-mode/use-color-mode.scss' as *;
+@use '../app/vars.scss' as *;
+
+.c-terminal-player {
+	.asciinema-player,
+	.asciinema-terminal {
+		border-radius: 0.5rem;
+
+		@include color-mode(dark) {
+			background: none;
+			border-color: transparent;
+		}
+
+		@include color-mode(light) {
+			background: hsl($foreground);
+			border-color: hsl($foreground);
+		}
+	}
+}

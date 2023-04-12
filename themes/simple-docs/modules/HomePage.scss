@@ -1,0 +1,229 @@
+@use 'astro-breakpoints/use-breakpoints.scss' as *;
+@use 'astro-color-mode/use-color-mode.scss' as *;
+@use '../app/vars.scss' as *;
+
+.home-hero {
+	@include color-mode(dark) {
+		--col1: hsl(205, 100%, 8%, 1);
+		--col2: hsl(196, 88%, 15%, 1);
+		--col3: hsl(197, 85%, 8%, 1);
+		--col4: hsl(180, 85%, 10%, 1);
+		--col5: hsl(210, 68%, 8%, 1);
+		--col6: hsl(198, 85%, 5%, 1);
+		--col7: hsl(204, 76%, 12%, 1);
+		--col8: hsl(192, 85%, 15%, 1);
+	}
+
+	@include color-mode(light) {
+		--col1: hsl(205, 100%, 87%, 1);
+		--col2: hsl(196, 94%, 90%, 1);
+		--col3: hsl(197, 91%, 93%, 1);
+		--col4: hsl(180, 91%, 96%, 1);
+		--col5: hsl(210, 74%, 92%, 1);
+		--col6: hsl(198, 91%, 88%, 1);
+		--col7: hsl(204, 82%, 92%, 1);
+		--col8: hsl(192, 95%, 96%, 1);
+	}
+
+	position: relative;
+	z-index: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 3rem;
+	text-align: center;
+	border-bottom: 2px solid hsl($accent, 0.15);
+	box-shadow: 0rem 0.4rem 2rem hsl($background-darker, 0.8);
+
+	.bg {
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+	}
+
+	.bg-grid {
+		filter: blur(0.5px);
+		mix-blend-mode: overlay;
+		opacity: 0.22;
+	}
+
+	.bg-noise {
+		filter: brightness(65%) contrast(1000%) blur(1px);
+		mix-blend-mode: soft-light;
+
+		@include color-mode(light) {
+			// NOTE: using "1" breaks Safari
+			opacity: 0.99;
+		}
+		@include color-mode(dark) {
+			opacity: 0.5;
+		}
+	}
+
+	@keyframes glow {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+
+	.bg-1 {
+		background-color: var(--col1);
+	}
+
+	.bg-2 {
+		background-image: radial-gradient(
+			at 34% 3%,
+			var(--col2) 0px,
+			transparent 50%
+		);
+		animation: glow 5s linear 0s infinite alternate;
+	}
+
+	.bg-3 {
+		background-image: radial-gradient(
+			at 55% 80%,
+			var(--col3) 0px,
+			transparent 50%
+		);
+		animation: glow 3s linear 0s infinite alternate;
+	}
+
+	.bg-4 {
+		background-image: radial-gradient(
+			at 58% 95%,
+			var(--col4) 0px,
+			transparent 50%
+		);
+		animation: glow 4s linear 0s infinite alternate;
+	}
+
+	.bg-5 {
+		background-image: radial-gradient(
+			at 59% 22%,
+			var(--col5) 0px,
+			transparent 50%
+		);
+		animation: glow 6s linear 0s infinite alternate;
+	}
+
+	.bg-6 {
+		background-image: radial-gradient(
+			at 41% 29%,
+			var(--col6) 0px,
+			transparent 50%
+		);
+		animation: glow 5s linear 0s infinite alternate;
+	}
+
+	.bg-7 {
+		background-image: radial-gradient(
+			at 77% 92%,
+			var(--col7) 0px,
+			transparent 50%
+		);
+		animation: glow 3s linear 0s infinite alternate;
+	}
+
+	.bg-8 {
+		background-image: radial-gradient(
+			at 5% 27%,
+			var(--col8) 0px,
+			transparent 50%
+		);
+		animation: glow 3s linear 0s infinite alternate;
+	}
+
+	h1 {
+		padding: 0;
+		margin: calc(4vw + 2vh) 0;
+
+		@include breakpoint(xl) {
+			padding: calc(1rem + 1vw) 3vw calc(0rem + 1vw) 3vw;
+			margin: calc(2vw + 1vh) 0;
+		}
+
+		font-size: calc(2rem + 2vw);
+		font-variant: small-caps;
+		line-height: 150%;
+		color: hsl($foreground, 0.9);
+
+		& + p {
+			max-width: 45rem;
+			padding: 2vw 4vw 4vw 4vw;
+			font-size: 133%;
+			line-height: 200%;
+		}
+	}
+
+	.ctas {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2rem;
+		align-items: center;
+		justify-content: space-evenly;
+		width: 100%;
+		padding: 3em;
+
+		a {
+			display: flex;
+			gap: 0 1ch;
+			align-items: center;
+			padding: 0.6em 1em;
+			font-size: 1.334em;
+			color: hsl($foreground, 1);
+			background: hsl($background-darker, 0.2);
+			border: 2px solid hsl($accent, 0.7);
+			border-radius: 99rem;
+			box-shadow: 0.1rem 0.1rem 0.4rem hsl($accent, 0.15),
+				0.1rem 0.2rem 0.6rem hsl($background-darker, 1);
+
+			&:hover {
+				text-decoration: none;
+
+				@include color-mode(light) {
+					background: hsl($background, 0.7);
+				}
+				@include color-mode(dark) {
+					background: hsl($background-darker, 0.7);
+				}
+
+				border: 2px solid hsl($accent, 1);
+			}
+		}
+
+		svg {
+			width: 1em;
+			height: 1em;
+		}
+	}
+}
+
+.page-home {
+	section {
+		&:nth-of-type(even) {
+			background: #cfcfcf46;
+		}
+	}
+
+	.c-prose-heading {
+		.heading-anchor {
+			display: none;
+		}
+	}
+
+	.prose {
+		img {
+			// margin: 1rem;
+		}
+
+		p {
+			// max-width: 75ch;
+		}
+	}
+}

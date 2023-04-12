@@ -1,0 +1,18 @@
+---
+const { as: Tag, href, text } = Astro.props;
+import Slugger from 'github-slugger';
+import Link from '../assets/link.svg?raw';
+
+const slugger = new Slugger();
+
+// NOTE: Aligned with: https://github.com/withastro/astro/blob/671a011d4f374c3f162b7fc6ba9aed5de7642fed/packages/markdown/remark/src/rehype-collect-headings.ts#L58
+let slug = slugger.slug(text);
+
+if (slug.endsWith('-')) slug = slug.slice(0, -1);
+---
+
+<Tag id={slug} class="c-prose-heading">
+	<!-- <a class="heading-anchor" href={`#${slug}`} set:html={Link} /> -->
+	<a class="heading-anchor" href={`#${slug}`}></a>
+	<span>{text}</span>
+</Tag>

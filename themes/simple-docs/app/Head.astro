@@ -1,0 +1,54 @@
+---
+import { SEOMetadata } from 'astro-seo-metadata';
+import { ColorMode } from 'astro-color-mode';
+import { Tooltips } from 'astro-tooltips';
+import { ScrollObserver } from 'astro-scroll-observer';
+import { GoogleAnalytics } from 'astro-google-analytics';
+
+import {
+	pkg,
+	PKG_LICENSE,
+	PROJECT_AUTHORS,
+	SITE_TITLE,
+	SITE_URL,
+} from '../app/content.js';
+
+const { current } = Astro.props;
+
+const isHome = !Astro.params.path;
+
+const title =
+	current?.title ||
+	current?.['__index']?.title ||
+	pkg.typedoc.displayName ||
+	pkg.name;
+const googleAnalyticsId = import.meta.env.GA_ID;
+const appTitle = `${SITE_TITLE} - Documentation`;
+const pageTitle = `${isHome ? '' : `${title} | `}${appTitle}`;
+const description =
+	current?.description || current?.['__index']?.description || pkg.description;
+
+const PROD_DEPLOY = import.meta.env.PROD_DEPLOY === 'true';
+
+const p = Astro.params.path || 'default';
+const poster = `${SITE_URL ?? ''}/og/${p}.png`;
+---
+
+<Tooltips />
+
+<ColorMode />
+
+<SEOMetadata
+	image={poster}
+	title={pageTitle}
+	description={description}
+	siteName={SITE_TITLE}
+	author={PROJECT_AUTHORS}
+	copyright={PKG_LICENSE}
+	favicon={'/favicon.svg'}
+	astroSitemap={PROD_DEPLOY}
+/>
+
+<ScrollObserver />
+
+{googleAnalyticsId && <GoogleAnalytics id={googleAnalyticsId} />}

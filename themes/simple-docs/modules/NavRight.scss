@@ -1,0 +1,151 @@
+@use 'astro-breakpoints/use-breakpoints.scss' as *;
+@use 'astro-color-mode/use-color-mode.scss' as *;
+@use '../app/vars.scss' as *;
+
+.c-nav-right {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: calc(100% - 1vw - 1.5rem);
+	height: 100%;
+	padding-right: calc(0.3rem + 0.5vw);
+	padding-left: calc(0.3rem + 0.5vw);
+	color: hsl($foreground, 1);
+	text-align: right;
+	background: linear-gradient(
+		to right,
+		hsl($background),
+		hsl($background-darker)
+	);
+	border-left: 1px solid hsl($foreground, 0.1);
+	box-shadow: -0.5rem 1rem 1rem hsl($background-darker, 0.25);
+	opacity: 0;
+	transition: opacity 0.334s, transform 0.334s;
+	transform: translateX(100%);
+
+	@include breakpoint(md) {
+		width: 47vw;
+	}
+	@include breakpoint(lg) {
+		width: 40vw;
+	}
+	@include breakpoint(xl) {
+		top: 0;
+		display: initial;
+		width: $main-nav-width;
+		isolation: initial;
+		opacity: 1;
+		transform: initial;
+	}
+
+	&.is-visible {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	.page-home & {
+		position: absolute;
+		background: none;
+		border: none;
+		box-shadow: none;
+	}
+
+	a {
+		padding: 0.334em 0.75em;
+		color: currentColor;
+
+		&:hover {
+			color: hsl($accent);
+		}
+
+		&.l-1 {
+			font-size: 1.1rem;
+		}
+
+		&.l-2 {
+			font-size: 1rem;
+		}
+
+		&.l-3 {
+			font-size: 0.9rem;
+		}
+
+		&.l-4 {
+			font-size: 0.8rem;
+		}
+
+		&.l-5 {
+			font-size: 0.7rem;
+		}
+
+		&.l-6 {
+			font-size: 0.6rem;
+		}
+	}
+
+	& > nav {
+		height: calc(100vh - 10rem);
+		overflow-y: hidden;
+		direction: rtl;
+
+		& > * {
+			direction: initial;
+		}
+
+		&:hover {
+			overflow-y: auto;
+		}
+	}
+
+	.app-links {
+		display: flex;
+		gap: 1em;
+		align-items: center;
+		justify-content: flex-end;
+		padding: 1rem 4rem 1rem 1rem;
+
+		@include breakpoint(xl) {
+			padding: 1rem 1rem 1rem 1rem;
+		}
+
+		svg {
+			width: 2em;
+			height: 2em;
+			fill: currentColor;
+		}
+
+		& > * {
+			display: flex;
+			align-items: center;
+			padding: 0.8rem;
+		}
+	}
+
+	.current-page-header {
+		display: flex;
+		gap: 1em;
+		align-items: center;
+		justify-content: flex-start;
+		margin: 1.25rem 0;
+		margin-top: 5.5rem;
+		opacity: 0.8;
+
+		svg {
+			width: 2ex;
+			height: 2ex;
+			margin-left: 1rem;
+		}
+	}
+
+	&:hover {
+		.current-page-header {
+			opacity: 1;
+		}
+
+		.c-nav-outline {
+			a {
+				opacity: 1;
+			}
+		}
+	}
+}

@@ -1,0 +1,133 @@
+@use 'astro-breakpoints/use-breakpoints.scss' as *;
+@use 'astro-color-mode/use-color-mode.scss' as *;
+@use 'sass:color';
+@use './vars.scss' as *;
+
+.layout-docs .prose {
+	.heading-anchor {
+		&::before {
+			content: '#';
+		}
+
+		position: absolute;
+		left: calc(-0.4rem - 1.1vw);
+		padding-left: 0rem;
+		font-weight: normal;
+		color: currentColor;
+		text-decoration: none;
+		opacity: 0.075;
+
+		// font-size: 1vw;
+
+		svg {
+			width: 2ex;
+			height: 2ex;
+		}
+
+		&:hover {
+			opacity: 1 !important;
+		}
+	}
+
+	:is(h1, h2, h3, h4, h5, h6) {
+		position: relative;
+		display: block;
+		padding-left: 1rem;
+		margin: 2em 0;
+		line-height: 1.5;
+
+		@include breakpoint(md) {
+			padding-left: initial;
+		}
+
+		&:hover {
+			.heading-anchor {
+				opacity: 0.5;
+			}
+		}
+	}
+
+	h1 {
+		font-size: 1.8em;
+	}
+
+	h2 {
+		font-size: 1.55em;
+	}
+
+	h3 {
+		font-size: 1.3em;
+	}
+
+	h4 {
+		font-size: 1.05em;
+	}
+
+	h5 {
+		font-size: 0.8em;
+	}
+
+	h6 {
+		font-size: 0.55em;
+	}
+
+	button {
+		padding: 1em;
+		color: hsl($foreground);
+		background: hsl($background);
+	}
+
+	input,
+	textarea,
+	button {
+		font-family: system-ui;
+	}
+
+	textarea {
+		padding: 1em;
+	}
+
+	.git-only {
+		display: none;
+	}
+
+	code {
+		padding: 0.125rem 0.4rem;
+		color: hsl($foreground);
+		background: hsl($background, 1);
+		border: 1px solid transparent;
+		border-color: hsl($foreground, 0.15);
+		border-radius: 0.5rem;
+	}
+
+	.astro-code {
+		code {
+			padding: initial;
+			background: initial;
+			border: initial;
+			border-radius: initial;
+			box-shadow: initial;
+		}
+	}
+
+	p:has(code) + .astro-code {
+		margin-top: -1.1em;
+	}
+
+	ul {
+		margin: 2em 0;
+
+		li {
+			margin: 0.5em 0;
+		}
+	}
+
+	hr {
+		margin: 3em 0;
+		border: 1px solid hsl($background-darker);
+	}
+
+	img {
+		max-width: 100%;
+	}
+}
