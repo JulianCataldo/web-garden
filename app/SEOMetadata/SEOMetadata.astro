@@ -33,7 +33,9 @@ if (typeof props.astroGenerator !== 'boolean') {
 	props.astroGenerator = true;
 }
 if (typeof props.canonicalUrl !== 'string') {
-	props.canonicalUrl = undefined;
+	props.canonicalUrl = import.meta.env.SITE
+		? import.meta.env.SITE + Astro.url.pathname.replace(/\.html$/, '')
+		: Astro.url.toString();
 }
 if (typeof props.type !== 'string') {
 	props.type = undefined;
@@ -42,7 +44,7 @@ if (typeof props.type !== 'string') {
 ---
 
 <!-- SEO -->
-<link rel="canonical" href={props.canonicalUrl || Astro.url} />
+<link rel="canonical" href={props.canonicalUrl} />
 
 <meta property="og:type" content={props.type || 'website'} />
 
