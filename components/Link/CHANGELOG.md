@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/JulianCataldo/web-garden/compare/astro-link@1.1.5...astro-link@1.2.0) (2023-04-12)
+
+### Features
+
+- add prefetching marker ([1cffc50](https://github.com/JulianCataldo/web-garden/commit/1cffc5087e9d67b8282521060bf54e5fe10df850))
+
 ## [1.1.5](https://github.com/JulianCataldo/web-garden/compare/astro-link@1.1.4...astro-link@1.1.5) (2023-04-06)
 
 ### Bug Fixes

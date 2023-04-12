@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.7](https://github.com/JulianCataldo/web-garden/compare/astro-hover-prefetch@1.0.6...astro-hover-prefetch@1.0.7) (2023-04-12)
+
+### Bug Fixes
+
+- Prevent adding current page as prefetch link ([8ff5923](https://github.com/JulianCataldo/web-garden/commit/8ff5923f2189da1c4db176067ded5e7cc25f738d))
+
 ## [1.0.6](https://github.com/JulianCataldo/web-garden/compare/astro-hover-prefetch@1.0.5...astro-hover-prefetch@1.0.6) (2023-01-05)
 
 **Note:** Version bump only for package astro-hover-prefetch
