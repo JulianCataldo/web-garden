@@ -1,6 +1,6 @@
 {
 	"name": "astro-link",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "Supercharge your links. This component detects external / anchor / same domain / mail / telephone `href`, and apply optimizations accordingly.",
 	"keywords": [
 		"astro",

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.0](https://github.com/JulianCataldo/web-garden/compare/astro-seo-metadata@0.5.5...astro-seo-metadata@0.6.0) (2023-04-18)
+
+### Features
+
+- support fallbacks for canonical url ([2200aff](https://github.com/JulianCataldo/web-garden/commit/2200aff8a39a6913a9d4dc0217958bafe5487044))
+
 ## [0.5.5](https://github.com/JulianCataldo/web-garden/compare/astro-seo-metadata@0.5.4...astro-seo-metadata@0.5.5) (2023-01-21)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.0](https://github.com/JulianCataldo/web-garden/compare/webdev-configs@1.4.0...webdev-configs@1.5.0) (2023-04-18)
+
+### Features
+
+- add config examples ([3c5452b](https://github.com/JulianCataldo/web-garden/commit/3c5452b5555ba4ad795507cbb66a011a1fba638a))
+
 ## [1.4.0](https://github.com/JulianCataldo/web-garden/compare/webdev-configs@1.3.0...webdev-configs@1.4.0) (2023-04-06)
 
 ### Features
