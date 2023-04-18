@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=https://json.schemastore.org/stylelintrc.json
+
+# Reference:
+# https://github.com/JulianCataldo/web-garden/blob/develop/configs/stylelint-all.cjs
+
+extends:
+  - webdev-configs/stylelint-all.cjs

@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://json.schemastore.org/lintstagedrc.schema.json
+
+'*.{ts,js,cjs,mts,mjs,cts,jsx,tsx,astro,vue}':
+  - eslint --fix
+
+'*.{scss,css,astro,vue}':
+  - stylelint --fix
+
+'*.{ts,js,cjs,mts,mjs,json,yaml,cts,jsx,tsx,astro,md,vue}':
+  - prettier -w
