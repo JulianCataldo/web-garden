@@ -30,24 +30,24 @@ import { SEOMetadata } from 'astro-seo-metadata';
 ```astro
 <!-- ... -->
 <head>
-  <!-- Place component inside `HEAD` tag -->
+	<!-- Place component inside `HEAD` tag -->
 
-  <!-- All properties are optional -->
-  <SEOMetadata
-    siteName={'Le Website'}
-    title={'Le cool title'}
-    description={'Le insightful description'}
-    image={'http://example.com/the_image_url-preferably_absolute.jpg'}
-    favicon={'/favicon.svg'}
-    author="Julian Cataldo"
-    copyright="ISC"
-    astroSitemap={true}
-    canonicalUrl={Astro.url.toString()}
-    type={'website'}
-    astroGenerator={true}
-  />
+	<!-- All properties are optional -->
+	<SEOMetadata
+		siteName={'Le Website'}
+		title={'Le cool title'}
+		description={'Le insightful description'}
+		image={'http://example.com/the_image_url-preferably_absolute.jpg'}
+		favicon={'/favicon.svg'}
+		author="Julian Cataldo"
+		copyright="ISC"
+		astroSitemap={true}
+		canonicalUrl={Astro.url.toString()}
+		type={'website'}
+		astroGenerator={true}
+	/>
 
-  <!-- ... -->
+	<!-- ... -->
 </head>
 ```
 
@@ -59,8 +59,8 @@ In `<head>`:
 <!-- SEO -->
 
 <link
-  rel="canonical"
-  href="https://code.juliancataldo.com/component/astro-seo"
+	rel="canonical"
+	href="https://code.juliancataldo.com/component/astro-seo"
 />
 
 <meta property="og:type" content="website" />
@@ -69,43 +69,43 @@ In `<head>`:
 <meta property="og:site_name" content="Julian's Web Garden" />
 
 <title>
-  🚀&nbsp;&nbsp;Astro — SEO | Bare minimum SEO meta tags to make most social
-  networks and Google engine happy. | 🚀&nbsp;&nbsp;Astro — SEO
+	🚀&nbsp;&nbsp;Astro — SEO | Bare minimum SEO meta tags to make most social
+	networks and Google engine happy. | 🚀&nbsp;&nbsp;Astro — SEO
 </title>
 
 <meta
-  property="og:title"
-  content="🚀&nbsp;&nbsp;Astro — SEO | Bare minimum SEO meta tags to make most social networks and Google engine happy. | 🚀&nbsp;&nbsp;Astro — SEO"
+	property="og:title"
+	content="🚀&nbsp;&nbsp;Astro — SEO | Bare minimum SEO meta tags to make most social networks and Google engine happy. | 🚀&nbsp;&nbsp;Astro — SEO"
 />
 <meta
-  name="twitter:title"
-  content="🚀&nbsp;&nbsp;Astro — SEO | Bare minimum SEO meta tags to make most social networks and Google engine happy. | 🚀&nbsp;&nbsp;Astro — SEO"
+	name="twitter:title"
+	content="🚀&nbsp;&nbsp;Astro — SEO | Bare minimum SEO meta tags to make most social networks and Google engine happy. | 🚀&nbsp;&nbsp;Astro — SEO"
 />
 
 <meta
-  property="og:image:alt"
-  content="Building blocks for making progressive and future-proof websites.
+	property="og:image:alt"
+	content="Building blocks for making progressive and future-proof websites.
 Components collection features Astro, HTML, SCSS, JS, TS…
 Configurations features ESLint, Prettier, Stylelint…"
 />
 <meta
-  name="description"
-  property="og:description"
-  content="Building blocks for making progressive and future-proof websites.
+	name="description"
+	property="og:description"
+	content="Building blocks for making progressive and future-proof websites.
 Components collection features Astro, HTML, SCSS, JS, TS…
 Configurations features ESLint, Prettier, Stylelint…"
 />
 <meta
-  name="twitter:description"
-  content="Building blocks for making progressive and future-proof websites.
+	name="twitter:description"
+	content="Building blocks for making progressive and future-proof websites.
 Components collection features Astro, HTML, SCSS, JS, TS…
 Configurations features ESLint, Prettier, Stylelint…"
 />
 
 <meta property="og:image" content="https://code.juliancataldo.com/poster.png" />
 <meta
-  name="twitter:image:src"
-  content="https://code.juliancataldo.com/poster.png"
+	name="twitter:image:src"
+	content="https://code.juliancataldo.com/poster.png"
 />
 <meta name="twitter:card" content="summary_large_image" />
 

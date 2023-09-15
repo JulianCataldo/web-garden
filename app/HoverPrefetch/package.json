@@ -1,36 +1,36 @@
 {
-  "name": "astro-hover-prefetch",
-  "version": "1.0.6",
-  "description": "This component capture mouse hovering on links with internal URLs. Then, it will prefetch the HTML document beforehand.",
-  "keywords": [
-    "astro",
-    "astro-component",
-    "native",
-    "vanilla",
-    "prefetch",
-    "javascript",
-    "links"
-  ],
-  "homepage": "https://code.juliancataldo.com/component/astro-hover-prefetch",
-  "bugs": {
-    "url": "https://github.com/JulianCataldo/web-garden/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JulianCataldo/web-garden",
-    "directory": "app/HoverPrefetch"
-  },
-  "files": [
-    "index.ts",
-    "HoverPrefetch.astro",
-    "Props.ts",
-    "CHANGELOG.md"
-  ],
-  "license": "ISC",
-  "author": "Julian Cataldo",
-  "type": "module",
-  "main": "index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+	"name": "astro-hover-prefetch",
+	"version": "1.0.7",
+	"description": "This component capture mouse hovering on links with internal URLs. Then, it will prefetch the HTML document beforehand.",
+	"keywords": [
+		"astro",
+		"astro-component",
+		"native",
+		"vanilla",
+		"prefetch",
+		"javascript",
+		"links"
+	],
+	"homepage": "https://code.juliancataldo.com/component/astro-hover-prefetch",
+	"bugs": {
+		"url": "https://github.com/JulianCataldo/web-garden/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/JulianCataldo/web-garden",
+		"directory": "app/HoverPrefetch"
+	},
+	"files": [
+		"index.ts",
+		"HoverPrefetch.astro",
+		"Props.ts",
+		"CHANGELOG.md"
+	],
+	"license": "ISC",
+	"author": "Julian Cataldo",
+	"type": "module",
+	"main": "index.ts",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	}
 }

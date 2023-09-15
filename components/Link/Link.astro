@@ -16,9 +16,9 @@ internalProps.push('externalInNewTab');
 /* ············································ Extra HTML attributes ······· */
 const extraAttrs: { [key: string]: string } = {};
 Object.entries(props).forEach(([key, val]) => {
-  if (internalProps.includes(key) === false) {
-    extraAttrs[key] = `${val as string}`;
-  }
+	if (internalProps.includes(key) === false) {
+		extraAttrs[key] = `${val as string}`;
+	}
 });
 /* —————————————————————————————————————————————————————————————————————————— */
 
@@ -27,71 +27,72 @@ const isExternal = props.href.startsWith('http');
 const isHash = props.href.startsWith('#');
 const isMail = props.href.startsWith('mailto:');
 const isTel = props.href.startsWith('tel:');
+const isInternal = !isExternal && !isHash && !isMail && !isTel;
 
 /* Get contact link data */
 let contact;
 if (isMail) {
-  contact = props.href.replace('mailto:', '');
+	contact = props.href.replace('mailto:', '');
 } else if (isTel) {
-  contact = props.href.replace('tel:', '');
+	contact = props.href.replace('tel:', '');
 }
 
 /* Pre-process `href` */
 let parsedUrl = props.href;
 if (isExternal === false && isHash === false) {
-  const basePrefix = import.meta.env.BASE_URL;
+	const basePrefix = import.meta.env.BASE_URL;
 
-  parsedUrl = path.isAbsolute(props.href)
-    ? `${path.join(import.meta.env.BASE_URL ?? '/', props.href)}`
-    : props.href;
+	parsedUrl = path.isAbsolute(props.href)
+		? `${path.join(basePrefix ?? '/', props.href)}`
+		: props.href;
 }
 
 let dataContact = null;
 if (contact) {
-  /* Hide contact link `href` */
-  parsedUrl = '#';
-  /* Inject contact data */
-  dataContact = btoa(props.href);
+	/* Hide contact link `href` */
+	parsedUrl = '#';
+	/* Inject contact data */
+	dataContact = btoa(props.href);
 }
 ---
 
 <a
-  href={parsedUrl}
-  title={props.title === '' ? undefined : props.title}
-  class:list={[
-    'link',
-    {
-      'is-external': isExternal,
-      'is-hash': isHash,
-      'is-mail': isMail,
-      'is-tel': isTel,
-    },
-    props.class,
-    props['class:list'],
-  ]}
-  data-contact={dataContact}
-  target={isExternal && props.externalInNewTab ? '_blank' : null}
-  rel={isExternal ? 'noopener nofollow' : null}
-  {...extraAttrs}><slot />{/* */}</a
+	href={parsedUrl}
+	title={props.title === '' ? undefined : props.title}
+	class:list={[
+		'link',
+		{
+			'is-external': isExternal,
+			'is-internal': isInternal,
+			'is-hash': isHash,
+			'is-mail': isMail,
+			'is-tel': isTel,
+		},
+		props.class,
+		props['class:list'],
+	]}
+	data-contact={dataContact}
+	target={isExternal && props.externalInNewTab ? '_blank' : null}
+	rel={isExternal ? 'noopener nofollow' : isInternal ? 'prefetch' : null}
+	{...extraAttrs}><slot /></a
 >
-<!-- Force trim space —— ^ (prettier…) -->
 <script>
-  const contactLinks = [
-    ...document.querySelectorAll('.link.is-mail'),
-    ...document.querySelectorAll('.link.is-tel'),
-  ];
+	const contactLinks = [
+		...document.querySelectorAll('.link.is-mail'),
+		...document.querySelectorAll('.link.is-tel'),
+	];
 
-  // TODO: refactor to global event listener
-  contactLinks.forEach((link) => {
-    // console.log(link);
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
+	// TODO: refactor to global event listener
+	contactLinks.forEach((link) => {
+		// console.log(link);
+		link.addEventListener('click', (e) => {
+			e.preventDefault();
 
-      const contactHrefRaw = link.getAttribute('data-contact');
-      if (contactHrefRaw) {
-        const contactHref = atob(contactHrefRaw);
-        window.location.href = contactHref;
-      }
-    });
-  });
+			const contactHrefRaw = link.getAttribute('data-contact');
+			if (contactHrefRaw) {
+				const contactHref = atob(contactHrefRaw);
+				window.location.href = contactHref;
+			}
+		});
+	});
 </script>

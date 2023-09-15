@@ -8,16 +8,24 @@ module.exports = {
     'stylelint-config-standard-scss',
     'stylelint-config-prettier',
     'stylelint-config-recess-order',
+
+    /* ALL */
+    // 'stylelint-config-html',
+    /* OR */
+    'stylelint-config-html/html',
+    'stylelint-config-html/astro',
+    'stylelint-config-html/vue',
+    'stylelint-config-html/xml',
+    // "stylelint-config-html/svelte",
+    // "stylelint-config-html/php"
   ],
 
-  plugins: ['stylelint-order'],
+  plugins: [
+    //
+    'stylelint-order',
+  ],
 
   overrides: [
-    // NOTE: Too unstable for now
-    // {
-    //   files: ['*.astro', '**/*.astro'],
-    //   customSyntax: 'postcss-html',
-    // },
     {
       files: ['*.vue', '**/*.vue'],
       extends: [

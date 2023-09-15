@@ -1,45 +1,44 @@
 {
-  "name": "webdev-configs",
-  "version": "1.3.0",
-  "description": "Here lies some re-usable tooling settings. Languages: JS, TS, Astro, Vue, JSX, TSX, SCSS, CSS. Tools: Prettier, ESlint, Stylelint, Editorconfig, TypeScript, Commitlint, VS Code.",
-  "main": "index.mjs",
-  "publishConfig": {
-    "access": "public"
-  },
-  "author": "Julian Cataldo",
-  "homepage": "https://code.juliancataldo.com/configs",
-  "bugs": {
-    "url": "https://github.com/JulianCataldo/web-garden/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JulianCataldo/web-garden",
-    "directory": "configs"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "astro",
-    "boilerplate",
-    "app",
-    "project",
-    "base",
-    "configs",
-    "prettier",
-    "eslint",
-    "stylelint",
-    "typescript",
-    "editorconfig",
-    "vscode",
-    "react",
-    "vue",
-    "vanilla",
-    "javascript"
-  ],
-  "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^18.7.6",
-    "prettier-plugin-astro": "0.5.0"
-  }
+	"name": "webdev-configs",
+	"version": "1.5.0",
+	"description": "Here lies some re-usable tooling settings. Languages: JS, TS, Astro, Vue, JSX, TSX, SCSS, CSS. Tools: Prettier, ESlint, Stylelint, Editorconfig, TypeScript, Commitlint, VS Code.",
+	"main": "index.mjs",
+	"publishConfig": {
+		"access": "public"
+	},
+	"author": "Julian Cataldo",
+	"homepage": "https://code.juliancataldo.com/configs",
+	"bugs": {
+		"url": "https://github.com/JulianCataldo/web-garden/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/JulianCataldo/web-garden",
+		"directory": "configs"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"astro",
+		"boilerplate",
+		"app",
+		"project",
+		"base",
+		"configs",
+		"prettier",
+		"eslint",
+		"stylelint",
+		"typescript",
+		"editorconfig",
+		"vscode",
+		"react",
+		"vue",
+		"vanilla",
+		"javascript"
+	],
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^18.7.6"
+	}
 }

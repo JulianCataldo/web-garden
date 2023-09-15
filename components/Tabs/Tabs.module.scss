@@ -1,37 +1,41 @@
 .tab-bar {
-  display: flex;
-  overflow-x: auto;
+	display: flex;
+	overflow-x: auto;
 }
 
 .panels {
-  position: relative;
+	position: relative;
 }
 
 .panel {
-  display: none;
-  width: 100%;
+	display: none;
+	width: 100%;
 
-  .tabs:has(.tallest) & {
-    display: inline-block;
-    visibility: hidden;
+	.tabs:has(.tallest) & {
+		display: inline-block;
+		visibility: hidden;
 
-    &:not(.tallest) {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-  }
+		&:not(.tallest) {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
 }
 
 .tab {
-  display: block;
-  white-space: nowrap;
-  cursor: pointer;
+	display: block;
+	white-space: nowrap;
+	cursor: pointer;
 }
 
 .radio {
-  width: 0;
-  height: 0;
-  margin: 0;
-  opacity: 0;
+	// visually hidden
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	white-space: nowrap;
 }

@@ -6,4 +6,8 @@ module.exports = {
     'plugin:lit/recommended',
     'plugin:lit-a11y/recommended',
   ],
+
+  rules: {
+    'class-methods-use-this': ['error', { exceptMethods: ['render'] }],
+  },
 };

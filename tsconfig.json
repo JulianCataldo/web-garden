@@ -26,8 +26,7 @@
 
     "noImplicitAny": true,
 
-    "baseUrl": "./demo",
-    "paths": {},
+		"paths": {},
 
     "importsNotUsedAsValues": "error",
 

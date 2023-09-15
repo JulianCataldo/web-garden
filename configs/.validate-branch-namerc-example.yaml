@@ -1,0 +1,4 @@
+# Example: `my-new-stuff/feat`
+
+pattern: ^(master|main|develop|next){1}$|^.+/(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test|main|master|next)$
+errorMsg: Branch name validate failed please rename your current branch

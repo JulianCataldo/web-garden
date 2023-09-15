@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/JulianCataldo/web-garden/compare/astro-link@1.2.0...astro-link@1.2.1) (2023-04-18)
+
+### Bug Fixes
+
+- wrong space after link ([be58848](https://github.com/JulianCataldo/web-garden/commit/be58848d4ca742dd5c9c58243c15e4090d9ca60f))
+
+## [1.2.0](https://github.com/JulianCataldo/web-garden/compare/astro-link@1.1.5...astro-link@1.2.0) (2023-04-12)
+
+### Features
+
+- add prefetching marker ([1cffc50](https://github.com/JulianCataldo/web-garden/commit/1cffc5087e9d67b8282521060bf54e5fe10df850))
+
+## [1.1.5](https://github.com/JulianCataldo/web-garden/compare/astro-link@1.1.4...astro-link@1.1.5) (2023-04-06)
+
+### Bug Fixes
+
+- exports instead of main ([70cd44e](https://github.com/JulianCataldo/web-garden/commit/70cd44e95629ab2c9dff1c875cd8013e5131dbd1))
+
 ## [1.1.4](https://github.com/JulianCataldo/web-garden/compare/astro-link@1.1.3...astro-link@1.1.4) (2023-01-21)
 
 ### Bug Fixes

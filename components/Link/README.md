@@ -20,7 +20,9 @@ This component detects external / anchor / same domain / mail / telephone
   - `target="_blank"` for opening link in a new tab
 - JS-based **obfuscation** for `mailto:` and `tel:` links
 - Applying CSS classes for specific link types
-- Internal links: auto prefix URLs with 'BASE_URL'
+- Internal links
+  - Auto prefix URLs with 'BASE_URL'
+  - Auto add the `rel=prefetch` marker (e.g. for `@astrojs/prefetch`)
 
 Some of these features can be disabled if needed.
 
@@ -28,6 +30,7 @@ Some of these features can be disabled if needed.
 
 - `link`
 - `is-external`
+- `is-internal`
 - `is-hash`
 - `is-mail`
 - `is-tel`
@@ -53,17 +56,17 @@ import { Link } from 'astro-link';
 ```astro
 <!-- ... -->
 <body>
-  <!-- Place component inside `BODY` tag -->
+	<!-- Place component inside `BODY` tag -->
 
-  <Link
-    href={'https://www.juliancataldo.com' /* Required */}
-    title={'Bonjour !'}
-    externalInNewTab={true}
-  >
-    Some <strong>external</strong> link, loaded in current tab
-  </Link>
+	<Link
+		href={'https://www.juliancataldo.com' /* Required */}
+		title={'Bonjour !'}
+		externalInNewTab={true}
+	>
+		Some <strong>external</strong> link, loaded in current tab
+	</Link>
 
-  <!-- ... -->
+	<!-- ... -->
 </body>
 ```
 
@@ -71,12 +74,12 @@ import { Link } from 'astro-link';
 
 ```astro
 <a
-  href="https://www.juliancataldo.com"
-  class="link is-external astro-H4CCARKM"
-  rel="noopener nofollow"
-  target="_blank"
+	href="https://www.juliancataldo.com"
+	class="link is-external astro-H4CCARKM"
+	rel="noopener nofollow"
+	target="_blank"
 >
-  Some external link, loaded in a new tab
+	Some external link, loaded in a new tab
 </a>
 ```
 
@@ -93,20 +96,20 @@ Semi-scoped styles inside parent (it won't effect upstream, only downstream):
 
 ```astro
 <style lang="scss">
-  .my-parent-with-custom-links {
-    // Use `:global` as a localized escape hatch:
+	.my-parent-with-custom-links {
+		// Use `:global` as a localized escape hatch:
 
-    & :global(.link) {
-      font-weight: 700;
-      color: green;
-    }
-    & :global(.link.is-tel) {
-      background: yellow;
-    }
-    & :global(.link.is-mail) {
-      color: red;
-    }
-  }
+		& :global(.link) {
+			font-weight: 700;
+			color: green;
+		}
+		& :global(.link.is-tel) {
+			background: yellow;
+		}
+		& :global(.link.is-mail) {
+			color: red;
+		}
+	}
 </style>
 ```
 
@@ -116,11 +119,11 @@ Global styles (in your layout component, for example):
 
 ```astro
 <style lang="scss" is:global>
-  a.link {
-    font-weight: 700;
-    color: green;
-  }
-  // ...
+	a.link {
+		font-weight: 700;
+		color: green;
+	}
+	// ...
 </style>
 ```
 

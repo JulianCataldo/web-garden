@@ -1,0 +1,9 @@
+# Reference:
+# https://github.com/JulianCataldo/web-garden/blob/develop/configs/eslint-all.cjs
+
+extends:
+  - './node_modules/webdev-configs/eslint-js.cjs'
+  - './node_modules/webdev-configs/eslint-ts.cjs'
+  - './node_modules/webdev-configs/eslint-jsx.cjs'
+  - './node_modules/webdev-configs/eslint-tsx.cjs'
+  - './node_modules/webdev-configs/eslint-astro.cjs'
