@@ -1,0 +1,107 @@
+.theme-switcher {
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+//   @include theme(default) {
+//     box-shadow: 2px 2px 12px color.adjust($fiery-rose, $alpha: -0.5) inset,
+//       2px 2px 2px color.adjust($raisin-black, $alpha: -0.9) inset;
+//   }
+//   @include theme(default, light) {
+//     background-color: color.adjust($lavender-blush, $lightness: 2%);
+//   }
+// }
+
+// .list {
+//   display: flex;
+//   align-items: center;
+// }
+
+.button {
+  display: flex;
+  align-items: center;
+  // padding: 0 2rem;
+  margin: 0 2vw;
+  // font-weight: 700;
+  cursor: pointer;
+
+  //   @include theme(default) {
+  //     font-variant: small-caps;
+  //     font-weight: 700;
+  //     font-size: 1.15rem;
+  //   }
+}
+
+// [data-theme-switch="default"] {
+//   padding: 0.3334rem 0.6667rem 0.2334rem 0.6667rem;
+//   border-radius: 1rem;
+//   color: color.adjust($rosewood, $alpha: -0.1);
+//   @include default-font-main;
+//   // background-color: color.adjust($fiery-rose, $alpha: -0.8);
+//   box-shadow: 2px 2px 12px color.adjust($fiery-rose, $alpha: -0.2),
+//     2px 2px 2px color.adjust($raisin-black, $alpha: -0.8) inset;
+
+//   &:hover {
+//     color: color.adjust($raisin-black, $alpha: 0);
+//     background-color: color.adjust($fiery-rose, $alpha: -0.5);
+//   }
+//   @include theme(default, light) {
+//     pointer-events: none;
+//   }
+// }
+
+[data-theme-switch="hacker"] {
+  //   // cursor: ne-resize;
+  //   @include hacker-font-main;
+  //   // font-weight: 700;
+
+  .normal,
+  .revealed {
+    // bottom: -0.3334rem;
+    // left: -0.6667rem;
+    padding-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    filter: drop-shadow(1px 1px 3px color.adjust(lightgreen, $alpha: -0.4));
+    transition: opacity 0.15s;
+  }
+
+  .revealed {
+    position: absolute;
+    opacity: 0;
+  }
+
+  //   &:hover {
+  //     .normal {
+  //       opacity: 0;
+  //     }
+
+  //     .revealed {
+  //       opacity: 1;
+  //     }
+  //   }
+  //   @include theme(default, light) {
+  //     &:hover {
+  //       // color: color.adjust(lightgreen, $alpha: -0.1);
+  //       // background-color: color.adjust($fiery-rose, $alpha: -0.8);
+  //       box-shadow: 2px 2px 12px color.adjust(lightgreen, $alpha: -0.4),
+  //         2px 2px 2px color.adjust($raisin-black, $alpha: -0.9) inset;
+  //       color: color.adjust($raisin-black, $alpha: 0);
+  //       background-color: color.adjust(lightgreen, $alpha: -0.5);
+  //     }
+  //   }
+  //   @include theme(default, dark) {
+  //     &:hover {
+  //       // color: color.adjust(lightgreen, $alpha: -0.1);
+  //       // background-color: color.adjust($fiery-rose, $alpha: -0.8);
+  //       box-shadow: 2px 2px 12px color.adjust(lightgreen, $alpha: -0.4),
+  //         2px 2px 2px color.adjust($raisin-black, $alpha: -0.9) inset;
+  //       color: color.adjust($raisin-black, $alpha: 0);
+  //       background-color: color.adjust(lightgreen, $alpha: -0.5);
+  //     }
+  //   }
+
+  //   @include theme(hacker) {
+  //     pointer-events: none;
+}

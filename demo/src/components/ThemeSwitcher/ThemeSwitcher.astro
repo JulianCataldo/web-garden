@@ -1,0 +1,57 @@
+---
+import { Picture } from 'astro-imagetools/components';
+---
+
+<div class='theme-switcher'>
+  <strong aria-hidden='true'>Themes:</strong>
+  <ul class='list' role='none' aria-label='Theme switcher'>
+    <li>
+      <div
+        data-theme-switch='default'
+        class='button'
+        role='button'
+        tabindex={0}
+      >
+        👩‍🚀&nbsp;Terraformers&nbsp;👨‍🚀
+      </div>
+    </li>
+
+    <li>
+      <div data-theme-switch='hacker' class='button' role='button' tabindex={0}>
+        <div class='normal'>
+          <!-- <Picture src='/graphics/exports/elite-hacker.png' alt='' height={100}
+          /> -->
+          <div aria-hidden='true'>
+            3|_337<br />&nbsp;&nbsp;<strong>|-|4XØȐ</strong>
+          </div>
+          <span class='visually-hidden'>Elite Hacker</span>
+        </div>
+        <div class='revealed' aria-hidden='true'>
+          <!-- <Picture
+            src='/graphics/exports/elite-hacker-yes.png'
+            alt=''
+            height={100}
+          /> -->
+          <strong>&lt;&nbsp;¥€$.</strong>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<script>
+  const switches = document.querySelectorAll('[data-theme-switch]');
+  const root = document.documentElement;
+
+  switches.forEach((sw) => {
+    const attr = sw.getAttribute('data-theme-switch');
+    sw.addEventListener('click', () => {
+      // console.log(attr);
+      root.setAttribute('data-theme', attr);
+    });
+  });
+</script>
+
+<style lang='scss'>
+  @import './style.scss';
+</style>
