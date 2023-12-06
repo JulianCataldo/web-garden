@@ -29,14 +29,14 @@ export default async function renderDiagram({ config, code }: Props) {
     message?: string;
     svgCode?: string;
   } = await page.evaluate(
-    (configB, codeB: string) => {
+    async (configB, codeB: string) => {
       // FIXME: `window.mermaid` global browser stubbing
       window.mermaid.initialize(configB);
 
       try {
         /* Render the mermaid diagram */
-        const svgCode = window.mermaid.mermaidAPI.render('diagram', codeB);
-        return { status: 'success', svgCode };
+        const svgCode = await window.mermaid.mermaidAPI.render('diagram', codeB);
+        return { status: 'success', svgCode: svgCode.svg };
       } catch (error) {
         return { status: 'error', error, message: error.message };
       }
