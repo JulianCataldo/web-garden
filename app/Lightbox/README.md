@@ -25,7 +25,7 @@ pnpm i @julian_cataldo/astro-lightbox
 
 ```astro
 ---
-import Lightbox from '@julian_cataldo/astro-lightbox/Lightbox.astro';
+import LightBox from '@julian_cataldo/astro-lightbox/LightBox.astro';
 // ...
 ---
 ```
@@ -34,7 +34,7 @@ import Lightbox from '@julian_cataldo/astro-lightbox/Lightbox.astro';
 <!-- ... -->
 <head>
   <!-- ... -->
-  <Lightbox />
+  <LightBox />
 </head>
 <body>
   <!-- ... -->
