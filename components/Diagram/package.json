@@ -1,7 +1,7 @@
 {
   "name": "astro-diagram",
   "version": "0.7.0",
-  "description": "Embed you Mermaid diagrams inside your Astro templates.\nFeatures server-side rendering and smart caching.",
+  "description": "Embed your Mermaid diagrams inside your Astro templates.\nFeatures server-side rendering and smart caching.",
   "keywords": [
     "astro",
     "astro-component",

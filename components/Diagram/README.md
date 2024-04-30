@@ -10,7 +10,7 @@
 [![EditorConfig](https://img.shields.io/badge/EditorConfig-333333.svg?logo=editorconfig)](https://editorconfig.org)
 [![ESLint](https://img.shields.io/badge/ESLint-3A33D1?logo=eslint)](https://eslint.org)
 
-Embed you Mermaid diagrams in no time inside your Astro templates.  
+Embed your Mermaid diagrams in no time inside your Astro templates.  
 Features **server-side rendering** and **smart caching**.  
 Available as a stand-alone component or as an MDX plugin, replacing `mermaid` code blocks on-the-fly.
 
