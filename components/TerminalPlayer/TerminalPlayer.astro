@@ -65,9 +65,8 @@ if (!validProps.success) {
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        const player = players.get(entry.target);
-
-        if (player) {
+        const settings = entry.target.getAttribute('data-astro-asciinema-settings');        
+        if (player && settings && JSON.parse(settings).autoPlay) {          
           if (entry.isIntersecting) {
             player.play();
           } else {
