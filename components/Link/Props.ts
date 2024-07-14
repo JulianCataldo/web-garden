@@ -8,6 +8,13 @@ export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
 	 * */
 	externalInNewTab?: boolean;
 
+  /**
+   * Open internal link in a new tab/window.
+   *
+   * **Default**: `false`
+   * */
+  internalInNewTab?: boolean;
+
 	/**
 	 * Prefetching marker (`rel=prefetch`)
 	 *

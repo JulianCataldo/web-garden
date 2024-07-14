@@ -13,6 +13,8 @@ if (typeof props.title !== 'string') props.title = null;
 internalProps.push('title');
 if (typeof props.externalInNewTab !== 'boolean') props.externalInNewTab = true;
 internalProps.push('externalInNewTab');
+if (typeof props.internalInNewTab !== 'boolean') props.internalInNewTab = false;
+internalProps.push('externalInNewTab');
 /* ············································ Extra HTML attributes ······· */
 const extraAttrs: { [key: string]: string } = {};
 Object.entries(props).forEach(([key, val]) => {
@@ -54,6 +56,16 @@ if (contact) {
 	/* Inject contact data */
 	dataContact = btoa(props.href);
 }
+let inNewTab = false;
+let linkTarget: astroHTML.JSX.HTMLAttributeAnchorTarget | null = null
+let linkRel = null
+if ( isExternal  ) {
+  linkTarget = props.externalInNewTab ? '_blank' : null;
+  linkRel = 'noopener nofollow';
+} else if (isInternal ) {
+  linkTarget = props.internalInNewTab ? '_blank' : null;
+  linkRel = props.internalInNewTab ? 'noopener noreferrer' : 'prefetch';
+}
 ---
 
 <a
@@ -63,7 +75,8 @@ if (contact) {
 		'link',
 		{
 			'is-external': isExternal,
-			'is-internal': isInternal,
+			'is-internal': isInternal, 
+      'is-new-tab': inNewTab,
 			'is-hash': isHash,
 			'is-mail': isMail,
 			'is-tel': isTel,
@@ -72,8 +85,8 @@ if (contact) {
 		props['class:list'],
 	]}
 	data-contact={dataContact}
-	target={isExternal && props.externalInNewTab ? '_blank' : null}
-	rel={isExternal ? 'noopener nofollow' : isInternal ? 'prefetch' : null}
+	target={linkTarget}
+	rel={linkRel}
 	{...extraAttrs}><slot /></a
 >
 <script>

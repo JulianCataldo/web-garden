@@ -23,6 +23,7 @@ This component detects external / anchor / same domain / mail / telephone
 - Internal links
   - Auto prefix URLs with 'BASE_URL'
   - Auto add the `rel=prefetch` marker (e.g. for `@astrojs/prefetch`)
+  - Can be forced open in a new tab with `target="_blank"` & `rel="noopener noreferrer"`params 
 
 Some of these features can be disabled if needed.
 
@@ -31,6 +32,7 @@ Some of these features can be disabled if needed.
 - `link`
 - `is-external`
 - `is-internal`
+- `is-new-tab`
 - `is-hash`
 - `is-mail`
 - `is-tel`
@@ -61,7 +63,8 @@ import { Link } from 'astro-link';
 	<Link
 		href={'https://www.juliancataldo.com' /* Required */}
 		title={'Bonjour !'}
-		externalInNewTab={true}
+		externalInNewTab={true /* Optional: true by default  */}
+		internalInNewTab={true /* Optional: false by default  */}
 	>
 		Some <strong>external</strong> link, loaded in current tab
 	</Link>
