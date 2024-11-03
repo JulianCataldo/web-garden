@@ -33,7 +33,7 @@ import { GoogleAnalytics } from 'astro-google-analytics';
 <head>
   <!-- Place component inside `HEAD` tag -->
 
-  <Analytics id="G-XXXXXXXXXX" />
+  <GoogleAnalytics id="G-XXXXXXXXXX" />
 
   <!-- ... -->
 </head>
