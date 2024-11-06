@@ -13,14 +13,14 @@
     "html",
     "document"
   ],
-  "homepage": "https://code.juliancataldo.com/component/astro-base",
+  "homepage": "https://code.juliancataldo.com/component/astro-base-document",
   "bugs": {
     "url": "https://github.com/JulianCataldo/web-garden/issues"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/JulianCataldo/web-garden",
-    "directory": "app/Base"
+    "directory": "app/BaseDocument"
   },
   "license": "ISC",
   "author": "Julian Cataldo",

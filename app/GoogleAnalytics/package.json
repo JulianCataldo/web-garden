@@ -11,14 +11,14 @@
     "ga4",
     "javascript"
   ],
-  "homepage": "https://code.juliancataldo.com/component/astro-analytics",
+  "homepage": "https://code.juliancataldo.com/component/astro-google-analytics",
   "bugs": {
     "url": "https://github.com/JulianCataldo/web-garden/issues"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/JulianCataldo/web-garden",
-    "directory": "app/Analytics"
+    "directory": "app/GoogleAnalytics"
   },
   "license": "ISC",
   "author": "Julian Cataldo",
